@@ -1,30 +1,33 @@
 {
-	"name": "whitenoise-web",
-	"private": true,
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^6.0.0",
-		"@sveltejs/adapter-vercel": "^5.7.1",
-		"@sveltejs/kit": "^2.16.0",
-		"@sveltejs/vite-plugin-svelte": "^5.0.0",
-		"@tailwindcss/vite": "^4.1.5",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"tailwindcss": "^4.1.5",
-		"typescript": "^5.0.0",
-		"vite": "^6.2.6"
-	},
-	"dependencies": {
-		"@biomejs/biome": "1.9.4",
-		"carbon-icons-svelte": "^13.3.0"
-	}
+    "name": "whitenoise-web",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "prepare": "svelte-kit sync || echo ''",
+        "lint": "biome check",
+        "lint:write": "biome check --write",
+        "format": "biome format --write",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^6.0.0",
+        "@sveltejs/adapter-vercel": "^5.7.1",
+        "@sveltejs/kit": "^2.16.0",
+        "@sveltejs/vite-plugin-svelte": "^5.0.0",
+        "@tailwindcss/vite": "^4.1.5",
+        "svelte": "^5.0.0",
+        "svelte-check": "^4.0.0",
+        "tailwindcss": "^4.1.5",
+        "typescript": "^5.0.0",
+        "vite": "^6.2.6"
+    },
+    "dependencies": {
+        "@biomejs/biome": "2.0.6",
+        "carbon-icons-svelte": "^13.3.0"
+    }
 }
