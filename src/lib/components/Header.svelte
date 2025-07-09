@@ -35,9 +35,8 @@ function toggleMenu() {
             <a href="/#faqs" class="px-4 py-2 hover:text-cyan-300">FAQs</a>
             <a href="https://habla.news/u/_@jeffg.fyi" class="px-4 py-2 hover:text-cyan-300">Updates</a>
             <a href="/contribute" class="px-4 py-2 hover:text-cyan-300">Contribute</a>
-            <a href="/" class="px-4 py-2 hover:text-cyan-300 border-1 border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center">
-                Coming Soon
-                <!-- <Download size={20} class="w-5 h-5" /> -->
+            <a href="/download" class="px-4 py-2 hover:text-cyan-300 border-1 border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center">
+                <Download size={20} class="w-5 h-5" /> Download
             </a>
         </nav>
     </div>
@@ -61,9 +60,8 @@ function toggleMenu() {
                     <a href="/contribute" class="px-4 py-2 hover:text-cyan-300" onclick={toggleMenu}>Contribute</a>
                 </div>
                 <div class="flex flex-col items-center gap-y-2 pb-10 px-4 w-full box-border max-w-full">
-                    <a href="/" class="w-full max-w-xs bg-cyan-400 text-glitch-950 text-lg font-medium px-4 py-2 flex flex-row gap-2 items-center justify-center hover:bg-cyan-300 transition-colors" onclick={toggleMenu}>
-                        Coming Soon
-                        <!-- <Download size={20} class="w-5 h-5" /> -->
+                    <a href="/download" class="w-full max-w-xs bg-cyan-400 text-glitch-950 text-lg font-medium px-4 py-2 flex flex-row gap-2 items-center justify-center hover:bg-cyan-300 transition-colors" onclick={toggleMenu}>
+                        <Download size={20} class="w-5 h-5" /> Download
                     </a>
                 </div>
             </div>
