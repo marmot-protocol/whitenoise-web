@@ -15,7 +15,7 @@ import Download from "carbon-icons-svelte/lib/Download.svelte";
                 <div class="text-center max-w-4xl">
                     <h1 class="text-5xl md:text-6xl font-bold text-glitch-50 mb-6">Download White Noise</h1>
                     <p class="text-xl md:text-2xl text-glitch-200 font-medium">
-                        A truly secure and private messenger that's lightning fast, infinitely scalable, and identity-free.
+                        A truly secure and private messenger that's<br />lightning fast, infinitely scalable, and identity-free.
                     </p>
                 </div>
             </div>
