@@ -33,7 +33,7 @@ const featureCards: FeatureCard[] = [
         imagePosition: "right",
         color: "dark",
         imageUrl: "/images/smoke.webp",
-        title: "Distributed & Unscensorable",
+        title: "Distributed & Uncensorable",
         description:
             "No single entity controls the network. Thousands of independent nodes worldwide ensure censorship resistance. Run your own relay in minutes, no corporate servers needed.",
     },
