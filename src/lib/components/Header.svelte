@@ -1,8 +1,8 @@
 <script lang="ts">
-import { page } from "$app/stores";
 import Close from "carbon-icons-svelte/lib/Close.svelte";
 import Download from "carbon-icons-svelte/lib/Download.svelte";
 import Menu from "carbon-icons-svelte/lib/Menu.svelte";
+import { page } from "$app/stores";
 
 let isMenuOpen = $state(false);
 

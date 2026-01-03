@@ -1,5 +1,5 @@
-import { BLOG_PUBKEY, decodeNaddr, fetchBlogPostCached, KIND_LONG_FORM } from "$lib/nostr";
 import { error } from "@sveltejs/kit";
+import { BLOG_PUBKEY, decodeNaddr, fetchBlogPostCached, KIND_LONG_FORM } from "$lib/nostr";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params }) => {
