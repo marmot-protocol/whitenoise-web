@@ -87,23 +87,30 @@ bun run lint:write
 # Format code
 bun run format
 
+# Run tests
+bun run test
+
+# Run tests in watch mode
+bun run test:watch
+
 # Build for production
 bun run build
 ```
 
 ## ⚠️ IMPORTANT: Before Finishing Work
 
-**Always run formatting and linting before completing any work session:**
+**Always run tests, formatting, and linting before completing any work session:**
 
 ```bash
-bun run lint:write && bun run format && bun run check
+bun run test && bun run lint:write && bun run format && bun run check
 ```
 
 This ensures:
-1. Imports are properly organized
-2. Code is formatted consistently (spaces, not tabs)
-3. No TypeScript errors
-4. No Svelte compilation issues
+1. All tests pass
+2. Imports are properly organized
+3. Code is formatted consistently (spaces, not tabs)
+4. No TypeScript errors
+5. No Svelte compilation issues
 
 ## Styling Guidelines
 
@@ -148,7 +155,49 @@ function formatDate(timestamp: number): string {
 
 ## Testing
 
-Currently no automated tests. Manual testing via the dev server is the primary method.
+This project uses **Vitest** for unit testing.
+
+### Running Tests
+
+```bash
+# Run all tests once
+bun run test
+
+# Run tests in watch mode (re-runs on file changes)
+bun run test:watch
+
+# Run tests with coverage report
+bun run test:coverage
+```
+
+### Test File Conventions
+
+- Test files are co-located with source files using the `.test.ts` extension
+- Example: `src/lib/nostr.ts` → `src/lib/nostr.test.ts`
+
+### Writing Tests
+
+```typescript
+import { describe, expect, it } from "vitest";
+import { myFunction } from "./my-module";
+
+describe("myFunction", () => {
+    it("should do something", () => {
+        expect(myFunction("input")).toBe("expected output");
+    });
+});
+```
+
+### What to Test
+
+- **Pure functions**: Functions that take inputs and return outputs without side effects (e.g., `eventToBlogPost`, `decodeNaddr`)
+- **Utility functions**: Date formatting, string manipulation, etc.
+- **Edge cases**: Empty inputs, invalid data, boundary conditions
+
+### What NOT to Test (or mock heavily)
+
+- Network requests to Nostr relays (these are integration tests)
+- Svelte components (use browser testing tools if needed)
 
 ## Deployment
 

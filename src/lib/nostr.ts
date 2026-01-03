@@ -235,14 +235,18 @@ export function decodeNaddr(naddr: string): {
     pubkey: string;
     kind: number;
 } | null {
-    const pointer = decodeAddressPointer(naddr);
-    if (!pointer) {
+    try {
+        const pointer = decodeAddressPointer(naddr);
+        if (!pointer) {
+            return null;
+        }
+
+        return {
+            dTag: pointer.identifier,
+            pubkey: pointer.pubkey,
+            kind: pointer.kind,
+        };
+    } catch {
         return null;
     }
-
-    return {
-        dTag: pointer.identifier,
-        pubkey: pointer.pubkey,
-        kind: pointer.kind,
-    };
 }
