@@ -41,7 +41,7 @@ function isActive(path: string): boolean {
         <!-- Navigation -->
         <nav class="hidden md:flex flex-row items-center gap-x-2 text-glitch-200 text-lg leading-snug font-medium">
             <a href="/privacy-matters" class="px-4 py-2 hover:text-cyan-300 {isActive('/privacy-matters') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">Privacy Matters</a>
-            <a href="/user-guide" class="px-4 py-2 hover:text-cyan-300 {isActive('/user-guide') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">User Guide</a>
+            <a href="/faq" class="px-4 py-2 hover:text-cyan-300 {isActive('/faq') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">FAQ</a>
             <a href="/blog" class="px-4 py-2 hover:text-cyan-300 {isActive('/blog') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">Blog</a>
             <a href="/contribute" class="px-4 py-2 hover:text-cyan-300 {isActive('/contribute') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">Contribute</a>
             <a href="/download" class="px-4 py-2 hover:text-cyan-300 border-1 border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center bg-cyan-400 text-glitch-950 hover:bg-cyan-300">
@@ -64,7 +64,7 @@ function isActive(path: string): boolean {
                 </div>
                 <div class="flex flex-col items-center justify-center flex-1 gap-y-10 text-2xl font-medium w-full px-4 overflow-y-auto box-border max-w-full">
                     <a href="/privacy-matters" class="px-4 py-2 hover:text-cyan-300" onclick={toggleMenu}>Privacy Matters</a>
-                    <a href="/user-guide" class="px-4 py-2 hover:text-cyan-300" onclick={toggleMenu}>User Guide</a>
+                    <a href="/faq" class="px-4 py-2 hover:text-cyan-300" onclick={toggleMenu}>FAQ</a>
                     <a href="/blog" class="px-4 py-2 hover:text-cyan-300" onclick={toggleMenu}>Blog</a>
                     <a href="/contribute" class="px-4 py-2 hover:text-cyan-300" onclick={toggleMenu}>Contribute</a>
                 </div>
