@@ -11,10 +11,10 @@ import DownloadButton from "./DownloadButton.svelte";
         </div>
         <div class="flex flex-col items-end gap-2 text-right text-base">
             <a href="/privacy-matters" class="hover:underline">Privacy Matters</a>
-            <a href="#faqs" class="hover:underline">FAQs</a>
-            <a href="https://habla.news/u/_@jeffg.fyi" class="hover:underline">Updates</a>
-            <a href="https://github.com/parres-hq/whitenoise?tab=readme-ov-file#contributing" class="hover:underline">Developers</a>
-            <a href="https://parres.org" class="text-xs text-glitch-400 mt-2">©2025 Parres</a>
+            <a href="/user-guide" class="hover:underline">User Guide</a>
+            <a href="/blog" class="hover:underline">Blog</a>
+            <a href="/contribute" class="hover:underline">Contribute</a>
+            <span class="text-xs text-glitch-400 mt-2">©2025 White Noise</span>
         </div>
     </div>
 </footer>
