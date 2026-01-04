@@ -42,7 +42,7 @@ function formatDate(timestamp: number): string {
 						</div>
 
 						<!-- Image -->
-						<div class="w-full md:w-48 aspect-video md:aspect-square flex-shrink-0 order-1 md:order-2 overflow-hidden rounded-lg">
+						<div class="w-full md:w-48 aspect-video md:aspect-square shrink-0 order-1 md:order-2 overflow-hidden rounded-lg">
 							<img
 								src={post.image || "/images/blocks-background.webp"}
 								alt={post.title}

@@ -44,7 +44,7 @@ function isActive(path: string): boolean {
             <a href="/faq" class="px-4 py-2 hover:text-cyan-300 {isActive('/faq') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">FAQ</a>
             <a href="/blog" class="px-4 py-2 hover:text-cyan-300 {isActive('/blog') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">Blog</a>
             <a href="/contribute" class="px-4 py-2 hover:text-cyan-300 {isActive('/contribute') ? 'text-glitch-50 border-b-2 border-glitch-50' : ''}">Contribute</a>
-            <a href="/download" class="px-4 py-2 hover:text-cyan-300 border-1 border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center bg-cyan-400 text-glitch-950 hover:bg-cyan-300">
+            <a href="/download" class="px-4 py-2 hover:text-cyan-300 border border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center bg-cyan-400 text-glitch-950 hover:bg-cyan-300">
                 Download <Download size={20} class="w-5 h-5" />
             </a>
         </nav>

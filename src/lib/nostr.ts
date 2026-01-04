@@ -19,8 +19,7 @@ async function ensureWebSocket() {
 }
 
 // The pubkey for blog posts from the White Noise account
-export const BLOG_PUBKEY = "1739d937dc8c0c7370aa27585938c119e25c41f6c441a5d34c6d38503e3136ef"; // Jeff for testing
-// "75d737c3472471029c44876b330d2284288a42779b591a2ed4daa1c6c07efaf7"; // White Noise account
+export const BLOG_PUBKEY = "75d737c3472471029c44876b330d2284288a42779b591a2ed4daa1c6c07efaf7"; // White Noise account
 
 // Relays to fetch from (including relays that specialize in long-form content)
 export const RELAYS = ["wss://relay.primal.net", "wss://relay.damus.io", "wss://nos.lol"];
@@ -43,6 +42,17 @@ export interface BlogPost {
 }
 
 /**
+ * Safely parse a timestamp string to a number, returning null if invalid
+ */
+function parseTimestamp(value: string | undefined): number | null {
+    if (!value) {
+        return null;
+    }
+    const parsed = Number.parseInt(value, 10);
+    return Number.isFinite(parsed) ? parsed : null;
+}
+
+/**
  * Convert a nostr event to a BlogPost
  */
 export function eventToBlogPost(event: NostrEvent): BlogPost {
@@ -59,7 +69,7 @@ export function eventToBlogPost(event: NostrEvent): BlogPost {
         title: getTagValue(event, "title") || "Untitled",
         image: getTagValue(event, "image") || null,
         summary: getTagValue(event, "summary") || null,
-        publishedAt: publishedAtStr ? Number.parseInt(publishedAtStr, 10) : null,
+        publishedAt: parseTimestamp(publishedAtStr),
         dTag,
         naddr: addressPointer ? naddrEncode(addressPointer) : "",
         tags: event.tags,

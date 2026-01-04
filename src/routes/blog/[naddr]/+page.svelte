@@ -1,4 +1,5 @@
 <script lang="ts">
+import DOMPurify from "isomorphic-dompurify";
 import { marked } from "marked";
 import type { PageData } from "./$types";
 
@@ -13,13 +14,14 @@ function formatDate(timestamp: number): string {
     });
 }
 
-// Configure marked for safe rendering
+// Configure marked for GitHub-flavored markdown
 marked.setOptions({
     gfm: true,
     breaks: true,
 });
 
-const renderedContent = $derived(marked.parse(data.post.content) as string);
+// Parse markdown and sanitize the HTML output to prevent XSS attacks
+const renderedContent = $derived(DOMPurify.sanitize(marked.parse(data.post.content) as string));
 </script>
 
 <svelte:head>
