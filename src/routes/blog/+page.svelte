@@ -20,7 +20,7 @@ function formatDate(timestamp: number): string {
 
 <div class="bg-glitch-50 min-h-screen">
 	<div class="max-w-4xl mx-auto px-6 md:px-12 py-12 md:py-16">
-		<h1 class="text-5xl md:text-6xl font-bold text-glitch-950 mb-12">Blog</h1>
+		<h1 class="text-5xl font-bold text-glitch-950 mb-12">Blog</h1>
 
 		<div class="flex flex-col gap-12">
 			{#each data.posts as post}
