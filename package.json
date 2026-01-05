@@ -12,22 +12,37 @@
         "lint:write": "biome check --write",
         "format": "biome format --write",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage"
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^6.0.0",
-        "@sveltejs/adapter-vercel": "^5.7.1",
-        "@sveltejs/kit": "^2.16.0",
-        "@sveltejs/vite-plugin-svelte": "^5.0.0",
-        "@tailwindcss/vite": "^4.1.5",
-        "svelte": "^5.0.0",
-        "svelte-check": "^4.0.0",
-        "tailwindcss": "^4.1.5",
-        "typescript": "^5.0.0",
-        "vite": "^6.2.6"
+        "@sveltejs/adapter-auto": "^6.1.1",
+        "@sveltejs/adapter-vercel": "^5.10.3",
+        "@sveltejs/kit": "^2.49.2",
+        "@sveltejs/vite-plugin-svelte": "^5.1.1",
+        "@tailwindcss/vite": "^4.1.18",
+        "@types/dompurify": "^3.2.0",
+        "@types/ws": "^8.18.1",
+        "svelte": "^5.46.1",
+        "svelte-check": "^4.3.5",
+        "tailwindcss": "^4.1.18",
+        "typescript": "^5.9.3",
+        "vite": "^6.4.1",
+        "vitest": "^4.0.16"
     },
     "dependencies": {
-        "@biomejs/biome": "2.0.6",
-        "carbon-icons-svelte": "^13.3.0"
+        "@biomejs/biome": "^2.3.11",
+        "applesauce-common": "^5.0.0",
+        "applesauce-core": "^5.0.0",
+        "applesauce-loaders": "^5.0.0",
+        "applesauce-relay": "^5.0.0",
+        "carbon-icons-svelte": "^13.8.0",
+        "isomorphic-dompurify": "^2.35.0",
+        "marked": "^17.0.1",
+        "nostr-tools": "^2.19.4",
+        "rxjs": "^7.8.2",
+        "ws": "^8.18.3"
     }
 }

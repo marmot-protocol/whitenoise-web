@@ -28,12 +28,12 @@
 		%sveltekit.head%
 		<script>
 			// Check if dark mode is preferred
-			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
 			  document.documentElement.classList.add('dark');
 			}
 
 			// Listen for changes in dark mode preference
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+			window.matchMedia?.('(prefers-color-scheme: dark)').addEventListener('change', e => {
 			  if (e.matches) {
 				document.documentElement.classList.add('dark');
 			  } else {
