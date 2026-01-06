@@ -147,6 +147,9 @@ function toggleFaq(index: number) {
         <a href="https://hrf.org" target="_blank" class="py-4 px-8 md:py-6 md:px-12 bg-glitch-950 flex items-center justify-center w-64 hover:bg-glitch-800 transition-colors">
             <img src="/images/hrf.svg" alt="Human Rights Foundation Logo" class="max-w-64" />
         </a>
+        <a href="https://andotherstuff.org" target="_blank" class="py-4 px-8 md:py-6 md:px-12 bg-glitch-950 flex items-center justify-center w-64 hover:bg-glitch-800 transition-colors">
+            <img src="/images/aos.svg" alt="And Other Stuff Logo" class="max-w-24 bg-transparent" />
+        </a>
     </div>
 </div>
 
