@@ -98,14 +98,14 @@ function getEventStore(): EventStore {
  * Fetch all blog posts for the configured pubkey
  */
 export async function fetchBlogPosts(): Promise<BlogPost[]> {
-    const relayPool = getPool();
-    const store = getEventStore();
-
     try {
         console.log("[nostr] Starting fetchBlogPosts...");
         await ensureWebSocket();
         console.log("[nostr] WebSocket ensured");
         
+        const relayPool = getPool();
+        const store = getEventStore();
+
         console.log("[nostr] Requesting from relays:", RELAYS);
 
         const filter = {
@@ -157,17 +157,17 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
  * Fetch a single blog post by its d-tag
  */
 export async function fetchBlogPostByDTag(dTag: string): Promise<BlogPost | null> {
-    const relayPool = getPool();
-    const store = getEventStore();
-
-    // First check the event store cache
-    const cached = store.getReplaceable(KIND_LONG_FORM, BLOG_PUBKEY, dTag);
-    if (cached) {
-        return eventToBlogPost(cached);
-    }
-
     try {
         await ensureWebSocket();
+        const relayPool = getPool();
+        const store = getEventStore();
+
+        // First check the event store cache
+        const cached = store.getReplaceable(KIND_LONG_FORM, BLOG_PUBKEY, dTag);
+        if (cached) {
+            return eventToBlogPost(cached);
+        }
+
         const events = await firstValueFrom(
             relayPool
                 .request(RELAYS, {
