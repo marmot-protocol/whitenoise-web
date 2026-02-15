@@ -1,0 +1,309 @@
+# White Noise
+
+> White Noise is a decentralized, end-to-end encrypted messenger built on the Marmot Protocol, which combines Nostr (decentralized messaging relays), Blossom (encrypted file storage), and MLS (group encryption). It requires no phone number, email, or account to use. It is open-source, non-profit, and community-driven.
+
+Website: https://whitenoise.chat
+Source Code: https://github.com/marmot-protocol/whitenoise
+Protocol: https://github.com/marmot-protocol/marmot
+
+## What is White Noise?
+
+An end-to-end encrypted, decentralized messenger. No phone number, no email, no account required.
+
+Supported by And Other Stuff, OpenSats, and the Human Rights Foundation.
+
+## Features
+
+### Privacy and Security
+
+White Noise secures conversations using strong cryptography, enforced by end-to-end encryption. With forward secrecy and post-compromise security, even if keys are exposed, your past and future messages stay hidden.
+
+### Identity Freedom
+
+Communicate without needing phone numbers or emails. Choose anonymity, a pseudonym, or your real name. Your identity, your rules.
+
+### Open and Decentralized
+
+Built on open standards (Nostr, Blossom, and MLS) via the Marmot Protocol, White Noise lets you take your identity, data, and contacts across platforms. Switch apps anytime without losing connections.
+
+### Distributed and Uncensorable
+
+No single entity controls the network. Thousands of independent nodes worldwide ensure censorship resistance. Run your own relay in minutes, no corporate servers needed.
+
+### Fast, Reliable, and Scalable
+
+Engineered for real-time performance, White Noise handles direct messages and group conversations with speed. Built for reliability at every scale.
+
+### Non-Profit and Community-Driven
+
+White Noise is a non-profit, community-driven project. It is not funded by any corporation and is not beholden to any government or organization. Development is supported by grants from And Other Stuff, OpenSats, and the Human Rights Foundation.
+
+## Frequently Asked Questions
+
+### What makes White Noise unique?
+
+White Noise merges Nostr's decentralized network with advanced encryption. Unlike traditional apps that rely on centralized servers, White Noise operates on Nostr, a system of independent relays anyone can run. This eliminates single points of failure, making the network resilient to censorship or shutdowns. It uses the Messaging Layer Security (MLS) protocol to ensure end-to-end encryption for both direct messages and groups, with key management that scales logarithmically with group size.
+
+### How does encryption work?
+
+White Noise encrypts every message using MLS, a protocol designed for dynamic security. If a private key is leaked, past messages remain private due to forward secrecy, and future messages automatically regain protection through rotating encryption keys. This process, called post-compromise security, ensures that even if a breach occurs, attackers cannot access ongoing conversations. All messages are encrypted before reaching Nostr relays, meaning no third party can read the content.
+
+### Can governments or ISPs block White Noise?
+
+Blocking White Noise is extremely difficult. Nostr's decentralized structure lets users switch relays instantly if one is censored or taken down. Relays can also be self-hosted, allowing communities to maintain their own servers beyond the reach of centralized control. Combined with MLS encryption, which scrambles messages into unreadable data, this makes surveillance or censorship nearly impossible. Even if an ISP intercepts traffic, they will see only encrypted metadata, revealing nothing about the message content.
+
+### How does White Noise handle large groups?
+
+MLS uses a tree-based key structure that scales logarithmically, reducing the computational load on devices compared to pairwise encryption schemes. Nostr relays handle message routing efficiently. The protocol is designed to support groups of meaningful size, though groups above ~150 members currently face relay-level constraints with Welcome messages. Work is underway to support larger groups through "light" Welcome flows.
+
+### Where does my data live?
+
+Messages in White Noise are encrypted end-to-end and temporarily relayed through several Nostr servers, which cannot read them and do not permanently store them. Relays act as transient delivery points, discarding data after transmission. Users can further prioritize privacy by selecting trusted relays or hosting their own, ensuring no single entity retains control over their communications.
+
+### What happens if a relay goes offline?
+
+White Noise connects to multiple relays simultaneously, so if one fails or is blocked, others take over automatically. This redundancy ensures messages are delivered reliably, and groups remain active as long as at least one relay is operational. Users experience minimal disruption, even during network outages or targeted censorship attempts.
+
+### Can admins remove or censor users in a group?
+
+Group admins can evict members using MLS's cryptographic tools. Once removed, a user loses access to future messages and cannot rejoin without a new invite. Future conversations remain secure because encryption keys are rotated, preventing expelled members from decrypting newer messages.
+
+### Is White Noise open source?
+
+Yes. White Noise is fully open source, allowing anyone to inspect its code and verify security claims. Transparency is core to its design, fostering trust in its encryption methods and ensuring accountability. Open-source development also encourages collaboration, enabling rapid improvements and community-driven audits.
+
+Source code: https://github.com/marmot-protocol/whitenoise
+
+### Can I use White Noise on multiple devices?
+
+White Noise supports multi-device access through MLS's "leaf nodes," which treat each device (phone, laptop, tablet) as a separate participant in the encryption process. This lets users join the same groups across devices without sacrificing security. Keys are stored locally on each device, ensuring synchronization while maintaining end-to-end encryption.
+
+### How does White Noise stay secure long-term?
+
+MLS's protocol agility allows White Noise to adopt new cryptographic standards, such as quantum-resistant algorithms, without overhauling the app. This future-proofs the app against evolving threats. Nostr's decentralized relay network can independently upgrade cryptographic tools, ensuring resilience against both technological advances and institutional interference.
+
+### What if I don't trust public relays?
+
+Users concerned about public relays can self-host their own servers or join private relays operated by trusted communities. This gives full control over where data travels, eliminating reliance on third-party infrastructure. Self-hosting also shields users from potential relay abuse or data retention policies.
+
+### How do I know my messages are private?
+
+MLS encryption ensures that only group members can decrypt messages. Relays receive only scrambled data, making it unreadable to operators or hackers. Even if a relay is compromised, attackers gain nothing but ciphertext.
+
+### What happens if my device gets stolen?
+
+Immediately remove the compromised device from your groups using another device. MLS's post-compromise security guarantees that future messages remain protected, as encryption keys are rotated. Stolen devices cannot access new messages without rejoining through an invite, which admins can block entirely.
+
+### Is it free to use?
+
+Yes. White Noise is free and open source. While running a private relay or using premium relays may incur minor costs, the core application and basic usage are entirely free.
+
+## Download
+
+White Noise is available on iOS and Android.
+
+- iOS: Available via TestFlight at https://testflight.apple.com/join/c6Z7PpxC
+- Android (Zapstore): Install via https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh
+- Android (APK): Direct download from https://github.com/marmot-protocol/whitenoise-archive/releases/latest
+
+## Privacy Matters: The Case for Secure Messaging
+
+In an age where digital communications are increasingly subject to surveillance, the right to private conversation stands as a cornerstone of human freedom. This is not merely a technical concern but a fundamental human right with profound implications for democracy, personal autonomy, and social progress.
+
+### The Foundations of Digital Liberty
+
+"Privacy is necessary for an open society in the electronic age. Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know. Privacy is the power to selectively reveal oneself to the world." -- Eric Hughes, A Cypherpunk's Manifesto
+
+The early internet pioneers envisioned a space free from centralized control. John Perry Barlow's Declaration of the Independence of Cyberspace proclaimed cyberspace as "a world that all may enter without privilege or prejudice" where anyone could "express their beliefs without fear of being coerced into silence or conformity." This vision recognized that true freedom requires the ability to communicate without surveillance.
+
+### Modern Threats to Digital Privacy
+
+Today, this vision faces unprecedented challenges. In Europe, the proposed Chat Control regulation threatens to implement mass surveillance of all internet communications, from emails to private chats to video calls. While ostensibly aimed at combating child abuse, such measures undermine the fundamental right to privacy guaranteed by Article 12 of the Universal Declaration of Human Rights.
+
+Under these proposals, and many others like them being proposed around the world, even encrypted messaging apps like WhatsApp and Signal would be required to scan all communications using AI algorithms against government databases. Once such infrastructure exists, its use can easily expand beyond its original purpose.
+
+The implementation of such surveillance mechanisms would severely weaken data security and compromise professional confidentiality for lawyers, journalists, and doctors who rely on secure communications to protect their clients and sources. This represents a profound threat to both individual rights and institutional safeguards in a democratic society.
+
+### The Human Cost of Surveillance
+
+In authoritarian regimes worldwide, the lack of secure communications has devastating consequences. When governments can monitor all communications, political dissidents face imprisonment, journalists cannot protect their sources, and ordinary citizens cannot freely express their opinions. The fundamental human rights of free speech and freedom of association become meaningless when every word is potentially monitored.
+
+"Cryptography will ineluctably spread over the whole globe, and with it the anonymous transactions systems that it makes possible. For privacy to be widespread it must be part of a social contract. People must come together and deploy these systems for the common good."
+
+### The Path Forward
+
+The solution lies not in weakening encryption but in strengthening it. End-to-end encrypted messaging represents a technological implementation of our fundamental right to private conversation. It ensures that only the intended recipients can read messages, protecting everyone from hackers, corporate surveillance, and government overreach.
+
+"A guarantee -- with physics and mathematics, not with laws -- that we can give ourselves real privacy of personal communications." -- John Gilmore
+
+Privacy is not opposed to security but is itself an essential form of security: protection from surveillance, manipulation, and control. As we move through an increasingly digital world, we must defend the right to communicate privately not as a luxury or a shield for wrongdoing, but as a fundamental requirement for human dignity and freedom.
+
+The battle for secure communications is about what kind of society we wish to build. Will we embrace a future where every thought and message is potentially scrutinized by algorithms and authorities? Or will we defend the right to private conversation that has sustained free societies throughout history?
+
+Privacy is not a personal preference. It is the foundation upon which all other freedoms rest.
+
+## Contribute
+
+Whether you write code, design interfaces, translate languages, document features, test for bugs, or simply care about freedom tech, you belong here. You can also contribute by donating funds to support the people building it.
+
+### Community Chat
+
+The team currently uses Signal for coordination. Join: https://signal.group/#CjQKICPlUduq29DjYD_EJQEBwu1EcEMR5QMZqcMlde026LBaEhCGS-kIM7uhNqtwtby57yQ1
+
+### Donate
+
+- Lightning Address: whitenoise@npub.cash
+- Bitcoin Silent Payment Address: sp1qqvp56mxcj9pz9xudvlch5g4ah5hrc8rj6neu25p34rc9gxhp38cwqqlmld28u57w2srgckr34dkyg3q02phu8tm05cyj483q026xedp0s5f5j40p
+
+### Source Code
+
+GitHub: https://github.com/marmot-protocol/whitenoise
+
+## Technical Architecture
+
+White Noise is built on the Marmot Protocol, which combines three protocols:
+
+1. **Nostr** (Notes and Other Stuff Transmitted by Relays): A decentralized protocol where clients connect to multiple independent relays. Messages are cryptographically signed by the sender. Anyone can run a relay. No registration is required.
+
+2. **Blossom** (Blobs Stored Simply on Mediaservers): A content-addressed file storage protocol for encrypted media. Files are encrypted client-side before upload, stored on Blossom servers, and referenced by SHA-256 hash. Used for images, videos, and other media shared in conversations.
+
+3. **MLS (Messaging Layer Security, RFC 9420)**: A group messaging encryption protocol that provides forward secrecy, post-compromise security, and key management that scales logarithmically with group size via a tree-based key structure.
+
+### The Marmot Protocol
+
+The Marmot Protocol defines how these three protocols work together for secure group messaging. It is specified through MIPs (Marmot Improvement Proposals):
+
+- MIP-00: Credentials and KeyPackages (how Nostr identity maps to MLS credentials)
+- MIP-01: Group Construction and the Marmot Group Data Extension
+- MIP-02: Welcome Events (secure group invitations via NIP-59 gift wrapping)
+- MIP-03: Group Messages (encrypted communication via kind:445 events)
+- MIP-04: Encrypted Media (ChaCha20-Poly1305 with Blossom storage)
+- MIP-05: Privacy-Preserving Push Notifications
+
+Specification: https://github.com/marmot-protocol/marmot
+
+### Repositories
+
+| Repository | Purpose | Language | License |
+|------------|---------|----------|---------|
+| whitenoise | Flutter mobile client | Dart | AGPL-3.0 |
+| whitenoise-rs | Rust backend library with OpenMLS | Rust | AGPL-3.0 |
+| marmot | Protocol specification (MIPs) | N/A | MIT |
+| mdk | Marmot Development Kit (modular Rust SDK) | Rust | MIT |
+| marmot-ts | TypeScript implementation (early stage) | TypeScript | - |
+
+All repositories: https://github.com/marmot-protocol
+
+### How It Fits Together
+
+The Flutter app (whitenoise) connects to the Rust backend (whitenoise-rs) via flutter_rust_bridge. The Rust backend uses MDK, which implements the Marmot Protocol on top of OpenMLS, rust-nostr, and Blossom. Messages flow through Nostr relays as encrypted events. Media is encrypted and stored on Blossom servers.
+
+### Encryption Details
+
+- Default ciphersuite: MLS_128_DHKEMX25519_AES128GCM_SHA256_Ed25519
+- MLS signing keys are distinct from Nostr identity keys (compromise of Nostr identity does not give access to group messages)
+- Group messages use ephemeral keypairs for metadata protection
+- Media encrypted with ChaCha20-Poly1305, keys derived from MLS exporter secrets via HKDF
+
+### Known Limitations
+
+- Welcome messages currently exceed relay size limits above approximately 150 group members. Work is underway on "light" Welcome support for larger groups.
+- The project is in beta. Protocol specifications are in review status.
+
+## Building with Marmot
+
+To build a Marmot-compatible client, use the MDK (Marmot Development Kit). Do not implement the protocol from scratch.
+
+### Getting Started (Rust)
+
+```bash
+git clone https://github.com/marmot-protocol/mdk.git
+cd mdk
+cargo build
+cargo test --features mip04
+```
+
+**Prerequisites:** Rust 1.90.0 or later, SQLite (for storage tests)
+
+### MDK Crate Structure
+
+| Crate | Purpose |
+|-------|---------|
+| `mdk-core` | Main library: MLS implementation, Nostr integration, group management |
+| `mdk-storage-traits` | Storage abstraction layer (implement this for custom backends) |
+| `mdk-memory-storage` | In-memory storage for development and testing |
+| `mdk-sqlite-storage` | SQLite-based persistent storage with encryption (production use) |
+
+### Getting Started (TypeScript)
+
+For web or Node.js applications, marmot-ts is an early-stage TypeScript implementation:
+
+```bash
+git clone https://github.com/marmot-protocol/marmot-ts.git
+```
+
+Note: marmot-ts is under active development and not yet feature-complete.
+
+### Nostr Event Kinds
+
+Marmot uses these Nostr event kinds. Clients must subscribe to and publish these:
+
+| Kind | Purpose | Notes |
+|------|---------|-------|
+| 443 | KeyPackage | Public "invitation card" for async group joins. Contains TLS-serialized KeyPackageBundle, base64 encoded. |
+| 444 | Welcome | Sent to new members when added to a group. Wrapped in NIP-59 gift wrap for privacy. |
+| 445 | Group Event | Encrypted group messages (proposals, commits, application messages). Uses ephemeral keypairs. |
+| 447 | Token Request | Push notification token exchange (MIP-05) |
+| 448 | Token List Response | Push notification token list (MIP-05) |
+| 449 | Token Removal | Remove push notification token (MIP-05) |
+| 10050 | Relay List | User's preferred relays for notifications |
+| 10051 | KeyPackage Relay List | Relays where user publishes KeyPackages |
+
+### Default Ciphersuite
+
+```
+MLS_128_DHKEMX25519_AES128GCM_SHA256_Ed25519
+```
+
+All Marmot clients must support this ciphersuite. It uses X25519 for key exchange, AES-128-GCM for encryption, SHA-256 for hashing, and Ed25519 for signatures.
+
+### Identity Model
+
+- Nostr keypairs are used for identity (32-byte public key as `BasicCredential`)
+- MLS signing keys are separate from Nostr identity keys
+- Compromise of a Nostr identity does not give access to MLS group messages
+- Each device is a separate MLS leaf node (multi-device support)
+
+### Basic Client Flow
+
+1. **Generate identity**: Create or import a Nostr keypair
+2. **Publish KeyPackage**: Create an MLS KeyPackage and publish it as a kind:443 event to relays listed in the user's kind:10051 event
+3. **Create a group**: Initialize an MLS group with the Marmot Group Data Extension (0xF2EE), then invite members by consuming their KeyPackages
+4. **Send Welcome**: After committing an Add proposal, send a Welcome message (kind:444) wrapped in NIP-59 gift wrap
+5. **Send messages**: Encrypt messages with MLS, derive Nostr encryption key from `exporter_secret`, apply NIP-44 encryption, publish as kind:445 with ephemeral keypair
+6. **Receive messages**: Subscribe to kind:445 events filtered by the group's `h` tag, decrypt NIP-44 layer, process MLS application message
+
+### MIP Status
+
+| MIP | Title | Status | Required |
+|-----|-------|--------|----------|
+| MIP-00 | Credentials and KeyPackages | Review | Yes |
+| MIP-01 | Group Construction and Marmot Group Data Extension | Review | Yes |
+| MIP-02 | Welcome Events | Review | Yes |
+| MIP-03 | Group Messages | Review | Yes |
+| MIP-04 | Encrypted Media (Blossom + ChaCha20-Poly1305) | Review | No |
+| MIP-05 | Push Notifications | Draft | No |
+
+Full specifications: https://github.com/marmot-protocol/marmot
+
+### Key Dependencies
+
+| Library | Purpose | URL |
+|---------|---------|-----|
+| OpenMLS | Rust MLS implementation | https://github.com/openmls/openmls |
+| rust-nostr | Nostr protocol support | https://github.com/rust-nostr/nostr |
+| Blossom | Content-addressed media storage | https://github.com/hzrd149/blossom |
+
+## Blog
+
+Blog posts are published as Nostr long-form content (NIP-23) and are available at https://whitenoise.chat/blog.

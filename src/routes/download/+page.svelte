@@ -1,10 +1,29 @@
 <script lang="ts">
 import Download from "carbon-icons-svelte/lib/Download.svelte";
+
+const downloadSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "White Noise",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "A secure and private messenger that's lightning fast, scalable, and identity-free.",
+    "url": "https://whitenoise.chat/download",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "downloadUrl": "https://github.com/marmot-protocol/whitenoise-archive/releases/latest",
+    "softwareVersion": "beta",
+    "isAccessibleForFree": true
+});
 </script>
 
 <svelte:head>
     <title>Download - White Noise</title>
-    <meta name="description" content="Download White Noise - A truly secure and private messenger that's lightning fast, infinitely scalable, and identity-free." />
+    <meta name="description" content="Download White Noise - A secure and private messenger that's lightning fast, scalable, and identity-free." />
+    {@html '<script type="application/ld+json">' + downloadSchema + '</script>'}
 </svelte:head>
 
 <!-- Hero Section -->
@@ -15,7 +34,7 @@ import Download from "carbon-icons-svelte/lib/Download.svelte";
                 <div class="text-center max-w-4xl">
                     <h1 class="text-5xl md:text-6xl font-bold text-glitch-50 mb-6">Download White Noise</h1>
                     <p class="text-xl md:text-2xl text-glitch-200 font-medium">
-                        A truly secure and private messenger that's<br />lightning fast, infinitely scalable, and identity-free.
+                        A secure and private messenger that's<br />lightning fast, scalable, and identity-free.
                     </p>
                 </div>
             </div>
@@ -42,7 +61,7 @@ import Download from "carbon-icons-svelte/lib/Download.svelte";
         <!-- Zapstore -->
         <div class="flex flex-col items-center text-center">
             <a
-                href="https://zapstore.dev/"
+                href="https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh"
                 target="_blank"
                 class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors duration-200 flex flex-row gap-3 items-center justify-center w-full"
             >
@@ -55,7 +74,7 @@ import Download from "carbon-icons-svelte/lib/Download.svelte";
         <!-- Android APK -->
         <div class="flex flex-col items-center text-center">
             <a
-                href="https://github.com/parres-hq/whitenoise_flutter/releases/latest"
+                href="https://github.com/marmot-protocol/whitenoise-archive/releases/latest"
                 target="_blank"
                 class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors duration-200 flex flex-row gap-3 items-center justify-center w-full"
             >

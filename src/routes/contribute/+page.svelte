@@ -144,7 +144,7 @@ function copyToClipboard(text: string) {
                     </p>
                 </div>
                 <a
-                    href="https://github.com/parres-hq/whitenoise"
+                    href="https://github.com/marmot-protocol/whitenoise"
                     class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors flex items-center gap-2"
                     target="_blank"
                     rel="noopener noreferrer"
