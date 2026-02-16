@@ -51,7 +51,7 @@ const blogPostSchemaObj: Record<string, unknown> = {
     "headline": data.post.title,
     "url": `https://whitenoise.chat/blog/${data.post.naddr}`,
     "datePublished": new Date((data.post.publishedAt || data.post.createdAt) * 1000).toISOString(),
-    "dateModified": new Date(Math.max(data.post.publishedAt || 0, data.post.createdAt) * 1000).toISOString(),
+    "dateModified": new Date(data.post.createdAt * 1000).toISOString(),
     "publisher": {
         "@type": "Organization",
         "name": "The Marmot Protocol",
