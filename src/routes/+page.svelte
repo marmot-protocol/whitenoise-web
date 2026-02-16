@@ -137,7 +137,8 @@ function stripHtmlEntities(text: string): string {
         .replace(/&quot;/g, '"')
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")
-        .replace(/&#\d+;/g, (match) => String.fromCharCode(Number.parseInt(match.slice(2, -1), 10)))
+        .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(Number.parseInt(dec, 10)))
+        .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)))
         .replace(/&amp;/g, "&");
 }
 

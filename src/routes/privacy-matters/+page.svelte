@@ -5,6 +5,11 @@ const articleSchema = {
     "headline": "Privacy Matters: The Case for Secure Messaging",
     "description": "An essay on digital privacy rights, surveillance threats, and the case for encrypted messaging.",
     "url": "https://whitenoise.chat/privacy-matters",
+    "author": {
+        "@type": "Organization",
+        "name": "The Marmot Protocol",
+        "url": "https://github.com/marmot-protocol"
+    },
     "publisher": {
         "@type": "Organization",
         "name": "The Marmot Protocol",

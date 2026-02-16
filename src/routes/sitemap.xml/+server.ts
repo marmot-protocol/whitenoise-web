@@ -12,6 +12,10 @@ export const GET: RequestHandler = async () => {
         { path: "/blog", changefreq: "weekly", priority: "0.8" },
     ];
 
+    function escapeXml(s: string): string {
+        return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+    }
+
     let blogEntries = "";
     try {
         const posts = await fetchBlogPostsCached();
@@ -22,7 +26,7 @@ export const GET: RequestHandler = async () => {
                 ).toISOString().split("T")[0];
                 blogEntries += `
   <url>
-    <loc>${baseUrl}/blog/${post.naddr}</loc>
+    <loc>${baseUrl}/blog/${escapeXml(post.naddr)}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
