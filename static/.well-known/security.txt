@@ -1,0 +1,4 @@
+Contact: https://github.com/marmot-protocol/whitenoise/security/advisories
+Expires: 2028-02-15T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://whitenoise.chat/.well-known/security.txt

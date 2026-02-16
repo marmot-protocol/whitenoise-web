@@ -27,7 +27,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/hands.webp",
         title: "Open & Decentralized",
         description:
-            "Built on open standards like Nostr and the Messaging Layer Security (MLS) protocol, White Noise lets you take your identity, data, and contacts across platforms. Switch apps anytime without losing connections.",
+            "Built on open standards (Nostr, Blossom, and MLS) via the Marmot Protocol, White Noise lets you take your identity, data, and contacts across platforms. Switch apps anytime without losing connections.",
     },
     {
         imagePosition: "right",
@@ -43,7 +43,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/race-car.webp",
         title: "Fast, Reliable, & Scalable",
         description:
-            "Engineered for real-time performance, White Noise handles direct messages to massive groups seamlessly. Built for speed, designed for reliability.",
+            "Engineered for real-time performance, White Noise handles direct messages and group conversations with speed. Built for reliability at every scale.",
     },
     {
         imagePosition: "right",
@@ -70,7 +70,7 @@ const faqs = [
     },
     {
         question: "How does White Noise handle large groups without lag?",
-        answer: "MLS streamlines encryption for large groups by optimizing key distribution, reducing the computational load on devices. Meanwhile, Nostr relays handle message routing efficiently, ensuring smooth performance even in groups with over 1,000 members. This combination of protocol efficiency and decentralized infrastructure eliminates lag, making large-scale conversations as responsive as one-on-one chats.",
+        answer: "MLS uses a tree-based key structure that scales logarithmically, reducing the computational load on devices as groups grow. Nostr relays handle message routing efficiently, so adding members does not linearly increase encryption cost. The result is responsive group conversations without the bottlenecks of pairwise encryption schemes.",
     },
     {
         question: "Where does my data live?",
@@ -78,7 +78,7 @@ const faqs = [
     },
     {
         question: "What happens if a relay goes offline?",
-        answer: "White Noise connects to multiple relays simultaneously, so if one fails or is blocked, others take over seamlessly. This redundancy ensures messages are delivered reliably, and groups remain active as long as at least one relay is operational. Users experience minimal disruption, even during network outages or targeted censorship attempts.",
+        answer: "White Noise connects to multiple relays simultaneously, so if one fails or is blocked, others take over automatically. This redundancy ensures messages are delivered reliably, and groups remain active as long as at least one relay is operational. Users experience minimal disruption, even during network outages or targeted censorship attempts.",
     },
     {
         question: "Can admins remove or censor users in a group?",
@@ -123,13 +123,48 @@ function toggleFaq(index: number) {
         openFaqIndices = [...openFaqIndices, index];
     }
 }
+
+function stripHtmlEntities(text: string): string {
+    return text
+        .replace(/&rsquo;/g, "'")
+        .replace(/&lsquo;/g, "'")
+        .replace(/&ldquo;/g, '"')
+        .replace(/&rdquo;/g, '"')
+        .replace(/&mdash;/g, "-")
+        .replace(/&ndash;/g, "-")
+        .replace(/&hellip;/g, "...")
+        .replace(/&nbsp;/g, " ")
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(Number.parseInt(dec, 10)))
+        .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)))
+        .replace(/&amp;/g, "&");
+}
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": stripHtmlEntities(faq.question),
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": stripHtmlEntities(faq.answer)
+        }
+    }))
+};
 </script>
+
+<svelte:head>
+    {@html '<script type="application/ld+json">' + JSON.stringify(faqSchema) + '</script>'}
+</svelte:head>
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">
     <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
         <div class="flex flex-col gap-4 max-w-xl flex-1 justify-center text-center md:text-left items-center md:items-start shrink-0">
             <h1 class="text-6xl font-bold text-glitch-50">White Noise</h1>
-            <p class="text-xl text-glitch-200 font-medium">A truly secure and private messenger that&rsquo;s lightning fast, infinitely scalable, and identity-free.</p>
+            <p class="text-xl text-glitch-200 font-medium">A secure and private messenger that&rsquo;s lightning fast, scalable, and identity-free.</p>
             <DownloadButton />
         </div>
         <div class="max-w-3xl shrink">

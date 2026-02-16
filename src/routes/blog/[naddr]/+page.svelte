@@ -45,14 +45,38 @@ const safeHtml = rawHtml
     .replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gim, "")
     .replace(/ on\w+="[^"]*"/g, "");
 
+const blogPostSchemaObj: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": data.post.title,
+    "url": `https://whitenoise.chat/blog/${data.post.naddr}`,
+    "datePublished": new Date((data.post.publishedAt || data.post.createdAt) * 1000).toISOString(),
+    "dateModified": new Date(data.post.createdAt * 1000).toISOString(),
+    "publisher": {
+        "@type": "Organization",
+        "name": "The Marmot Protocol",
+        "url": "https://github.com/marmot-protocol"
+    },
+    "isAccessibleForFree": true,
+    "inLanguage": "en"
+};
+if (data.post.summary) blogPostSchemaObj.description = data.post.summary;
+if (data.post.image) blogPostSchemaObj.image = data.post.image;
+const blogPostSchema = JSON.stringify(blogPostSchemaObj).replace(/</g, '\\u003c');
+
 </script>
 
 <svelte:head>
 	<title>{data.post.title} | White Noise Blog</title>
 	<meta name="description" content={data.post.summary || `Read ${data.post.title} on the White Noise blog`} />
+	<meta property="og:title" content={data.post.title + " | White Noise Blog"} />
+	<meta property="og:description" content={data.post.summary || `Read ${data.post.title} on the White Noise blog`} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={`https://whitenoise.chat/blog/${data.post.naddr}`} />
 	{#if data.post.image}
 		<meta property="og:image" content={data.post.image} />
 	{/if}
+	{@html '<script type="application/ld+json">' + blogPostSchema + '</script>'}
 </svelte:head>
 
 <div class="bg-glitch-50 min-h-screen">

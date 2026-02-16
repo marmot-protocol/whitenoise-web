@@ -1,0 +1,12 @@
+# White Noise - whitenoise.chat
+# All crawlers welcome, including AI agents
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://whitenoise.chat/sitemap.xml
+
+# LLM-friendly documentation
+# /llms.txt - structured navigation for LLMs
+# /llms-full.txt - complete site content in Markdown
