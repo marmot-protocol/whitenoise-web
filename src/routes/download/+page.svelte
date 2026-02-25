@@ -14,7 +14,7 @@ const downloadSchema = JSON.stringify({
         "price": "0",
         "priceCurrency": "USD"
     },
-    "downloadUrl": "https://github.com/marmot-protocol/whitenoise-archive/releases/latest",
+    "downloadUrl": "https://github.com/marmot-protocol/whitenoise/releases/latest",
     "softwareVersion": "beta",
     "isAccessibleForFree": true
 });
@@ -74,7 +74,7 @@ const downloadSchema = JSON.stringify({
         <!-- Android APK -->
         <div class="flex flex-col items-center text-center">
             <a
-                href="https://github.com/marmot-protocol/whitenoise-archive/releases/latest"
+                href="https://github.com/marmot-protocol/whitenoise/releases/latest"
                 target="_blank"
                 class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors duration-200 flex flex-row gap-3 items-center justify-center w-full"
             >
