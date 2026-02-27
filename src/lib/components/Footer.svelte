@@ -19,6 +19,7 @@
             <a href="/privacy-matters" class="hover:underline">Privacy Matters</a>
             <a href="/#faqs" class="hover:underline">FAQ</a>
             <a href="/blog" class="hover:underline">Blog</a>
+            <a href="/build" class="hover:underline">Build</a>
             <a href="/contribute" class="hover:underline">Contribute</a>
             <span class="text-xs text-glitch-400 mt-2">©2025 White Noise</span>
         </div>

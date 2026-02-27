@@ -154,10 +154,35 @@ const faqSchema = {
         }
     }))
 };
+
+const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "White Noise",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": ["iOS", "Android"],
+    "description": "A decentralized, end-to-end encrypted messenger built on the Marmot Protocol (Nostr + MLS + Blossom). No phone number, email, or account required. Open-source, non-profit, and community-driven.",
+    "url": "https://whitenoise.chat",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+    },
+    "downloadUrl": [
+        "https://testflight.apple.com/join/c6Z7PpxC",
+        "https://github.com/marmot-protocol/whitenoise/releases/latest"
+    ],
+    "softwareVersion": "beta",
+    "isAccessibleForFree": true,
+    "codeRepository": "https://github.com/marmot-protocol/whitenoise",
+    "license": "https://github.com/marmot-protocol/whitenoise/blob/master/LICENSE"
+};
 </script>
 
 <svelte:head>
+    <link rel="canonical" href="https://whitenoise.chat" />
     {@html '<script type="application/ld+json">' + JSON.stringify(faqSchema) + '</script>'}
+    {@html '<script type="application/ld+json">' + JSON.stringify(appSchema) + '</script>'}
 </svelte:head>
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">

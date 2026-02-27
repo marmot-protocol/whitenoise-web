@@ -1,6 +1,44 @@
 # White Noise - whitenoise.chat
-# All crawlers welcome, including AI agents
+# All crawlers welcome, including AI agents and LLM indexers
 
+# AI crawlers - explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# All other crawlers
 User-agent: *
 Allow: /
 
@@ -9,4 +47,4 @@ Sitemap: https://whitenoise.chat/sitemap.xml
 
 # LLM-friendly documentation
 # /llms.txt - structured navigation for LLMs
-# /llms-full.txt - complete site content in Markdown
+# /llms-full.txt - complete developer guide with Marmot Protocol details

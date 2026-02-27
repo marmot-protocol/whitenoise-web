@@ -2,15 +2,23 @@
 
 > White Noise is a decentralized, end-to-end encrypted messenger built on the Marmot Protocol, which combines Nostr (decentralized messaging relays), Blossom (encrypted file storage), and MLS (group encryption). It requires no phone number, email, or account to use. It is open-source, non-profit, and community-driven. Funded by And Other Stuff, OpenSats, and the Human Rights Foundation.
 
-White Noise provides forward secrecy and post-compromise security for both direct messages and large groups. Messages are encrypted before reaching Nostr relays, so relay operators cannot read them. Media is encrypted client-side and stored on Blossom servers. The network is censorship-resistant because it runs on thousands of independent relays worldwide. Users can self-host relays.
+White Noise provides forward secrecy and post-compromise security for both direct messages and large groups. Messages are encrypted before reaching Nostr relays, so relay operators cannot read them. Media is encrypted client-side and stored on Blossom servers. The network runs on thousands of independent relays worldwide. Users can self-host relays.
 
 ## Core Pages
 
 - [Home](https://whitenoise.chat/): Overview of White Noise features, supported-by section, and 14 frequently asked questions
 - [Privacy Matters](https://whitenoise.chat/privacy-matters): Essay on digital privacy rights, surveillance threats, and the case for encrypted messaging
 - [Download](https://whitenoise.chat/download): Download links for iOS (TestFlight), Android (Zapstore), and Android APK
+- [Build with Marmot](https://whitenoise.chat/build): Developer guide with MDK crate structure, Nostr event kinds, ciphersuite, identity model, and client flow
 - [Contribute](https://whitenoise.chat/contribute): How to contribute code, join the community chat, and donate via Bitcoin Lightning or silent payments
 - [Blog](https://whitenoise.chat/blog): Project updates and articles published via Nostr (NIP-23 long-form content)
+
+## Building with Marmot
+
+To build a Marmot-compatible client, use the MDK (Rust) or marmot-ts (TypeScript, early stage). The developer guide covers MDK crate structure, Nostr event kinds (443, 444, 445, 10050, 10051), default ciphersuite, identity model, client flow, and MIP status.
+
+- [Build with Marmot](https://whitenoise.chat/build): Human-readable developer documentation page
+- [Full Developer Reference](https://whitenoise.chat/llms-full.txt): Complete plain-text developer documentation
 
 ## Marmot Protocol Ecosystem
 
@@ -18,7 +26,7 @@ White Noise provides forward secrecy and post-compromise security for both direc
 - [White Noise App](https://github.com/marmot-protocol/whitenoise): Flutter mobile client (Dart, AGPL-3.0)
 - [whitenoise-rs](https://github.com/marmot-protocol/whitenoise-rs): Rust backend library with OpenMLS integration (AGPL-3.0)
 - [MDK (Marmot Development Kit)](https://github.com/marmot-protocol/mdk): Modular Rust SDK for building Marmot-compatible clients (MIT)
-- [marmot-ts](https://github.com/marmot-protocol/marmot-ts): TypeScript implementation of Marmot Protocol (early stage)
+- [marmot-ts](https://github.com/marmot-protocol/marmot-ts): TypeScript implementation of Marmot Protocol (early stage, not yet feature-complete)
 
 ## Underlying Protocols
 
@@ -27,12 +35,6 @@ White Noise provides forward secrecy and post-compromise security for both direc
 - [MLS RFC 9420](https://www.rfc-editor.org/rfc/rfc9420.html): Messaging Layer Security protocol specification
 - [OpenMLS](https://github.com/openmls/openmls): Rust implementation of MLS used by whitenoise-rs and MDK
 - [NIP-23](https://github.com/nostr-protocol/nips/blob/master/23.md): Long-form content on Nostr (used for the blog)
-
-## Building with Marmot
-
-To build a Marmot-compatible client, use the MDK (Rust) or marmot-ts (TypeScript). The full developer guide with MDK crate structure, Nostr event kinds (443, 444, 445, 10050, 10051), default ciphersuite, identity model, client flow, and MIP status is in the full site content file.
-
-- [Full Developer Guide](https://whitenoise.chat/llms-full.txt): Complete "Building with Marmot" section with event kinds, crate structure, and client flow
 
 ## Optional
 

@@ -76,6 +76,7 @@ const blogPostSchema = JSON.stringify(blogPostSchemaObj).replace(/</g, '\\u003c'
 	{#if data.post.image}
 		<meta property="og:image" content={data.post.image} />
 	{/if}
+	<link rel="canonical" href={`https://whitenoise.chat/blog/${data.post.naddr}`} />
 	{@html '<script type="application/ld+json">' + blogPostSchema + '</script>'}
 </svelte:head>
 

@@ -6,22 +6,28 @@ const downloadSchema = JSON.stringify({
     "@type": "SoftwareApplication",
     "name": "White Noise",
     "applicationCategory": "CommunicationApplication",
-    "operatingSystem": "iOS, Android",
-    "description": "A secure and private messenger that's lightning fast, scalable, and identity-free.",
+    "operatingSystem": ["iOS", "Android"],
+    "description": "A decentralized, end-to-end encrypted messenger built on the Marmot Protocol (Nostr + MLS + Blossom). No phone number, email, or account required.",
     "url": "https://whitenoise.chat/download",
     "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
     },
-    "downloadUrl": "https://github.com/marmot-protocol/whitenoise/releases/latest",
+    "downloadUrl": [
+        "https://testflight.apple.com/join/c6Z7PpxC",
+        "https://github.com/marmot-protocol/whitenoise/releases/latest"
+    ],
     "softwareVersion": "beta",
-    "isAccessibleForFree": true
+    "isAccessibleForFree": true,
+    "codeRepository": "https://github.com/marmot-protocol/whitenoise",
+    "license": "https://github.com/marmot-protocol/whitenoise/blob/master/LICENSE"
 });
 </script>
 
 <svelte:head>
     <title>Download - White Noise</title>
+    <link rel="canonical" href="https://whitenoise.chat/download" />
     <meta name="description" content="Download White Noise - A secure and private messenger that's lightning fast, scalable, and identity-free." />
     {@html '<script type="application/ld+json">' + downloadSchema + '</script>'}
 </svelte:head>

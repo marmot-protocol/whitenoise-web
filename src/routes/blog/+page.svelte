@@ -11,11 +11,36 @@ function formatDate(timestamp: number): string {
         year: "numeric",
     });
 }
+
+const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "White Noise Blog",
+    "description": "Project updates and articles about secure messaging, privacy, and the Marmot Protocol.",
+    "url": "https://whitenoise.chat/blog",
+    "inLanguage": "en",
+    "publisher": {
+        "@type": "Organization",
+        "name": "The Marmot Protocol",
+        "url": "https://github.com/marmot-protocol"
+    },
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": data.posts.map((post, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": `https://whitenoise.chat/blog/${post.naddr}`,
+            "name": post.title
+        }))
+    }
+};
 </script>
 
 <svelte:head>
 	<title>Blog | White Noise</title>
+	<link rel="canonical" href="https://whitenoise.chat/blog" />
 	<meta name="description" content="Latest updates and articles from the White Noise team about secure messaging, privacy, and the Nostr protocol." />
+	{@html '<script type="application/ld+json">' + JSON.stringify(blogSchema).replace(/</g, '\\u003c') + '</script>'}
 </svelte:head>
 
 <div class="bg-glitch-50 min-h-screen">

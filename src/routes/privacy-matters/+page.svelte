@@ -22,6 +22,7 @@ const articleSchema = {
 
 <svelte:head>
     <title>Privacy Matters - White Noise</title>
+    <link rel="canonical" href="https://whitenoise.chat/privacy-matters" />
     <meta name="description" content="The case for secure messaging. An essay on digital privacy rights, surveillance threats, and why encrypted communication is a fundamental human right." />
     {@html '<script type="application/ld+json">' + JSON.stringify(articleSchema) + '</script>'}
 </svelte:head>

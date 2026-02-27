@@ -9,6 +9,7 @@ export const GET: RequestHandler = async () => {
         { path: "/download", changefreq: "monthly", priority: "0.9" },
         { path: "/privacy-matters", changefreq: "yearly", priority: "0.7" },
         { path: "/contribute", changefreq: "monthly", priority: "0.8" },
+        { path: "/build", changefreq: "monthly", priority: "0.8" },
         { path: "/blog", changefreq: "weekly", priority: "0.8" },
     ];
 
