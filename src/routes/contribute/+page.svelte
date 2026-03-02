@@ -53,7 +53,7 @@ const contributeSchema = {
     <title>Contribute - White Noise</title>
     <link rel="canonical" href="https://whitenoise.chat/contribute" />
     <meta name="description" content="Join us in building a tool that defends freedom. Contribute to White Noise through donations, development, or community engagement." />
-    {@html '<script type="application/ld+json">' + JSON.stringify(contributeSchema) + '</script>'}
+    {@html '<script type="application/ld+json">' + JSON.stringify(contributeSchema).replace(/</g, '\\u003c') + '</script>'}
 </svelte:head>
 
 <!-- Hero Section -->

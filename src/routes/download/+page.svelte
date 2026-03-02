@@ -16,6 +16,7 @@ const downloadSchema = JSON.stringify({
     },
     "downloadUrl": [
         "https://testflight.apple.com/join/c6Z7PpxC",
+        "https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh",
         "https://github.com/marmot-protocol/whitenoise/releases/latest"
     ],
     "softwareVersion": "beta",
@@ -29,7 +30,7 @@ const downloadSchema = JSON.stringify({
     <title>Download - White Noise</title>
     <link rel="canonical" href="https://whitenoise.chat/download" />
     <meta name="description" content="Download White Noise - A secure and private messenger that's lightning fast, scalable, and identity-free." />
-    {@html '<script type="application/ld+json">' + downloadSchema + '</script>'}
+    {@html '<script type="application/ld+json">' + downloadSchema.replace(/</g, '\\u003c') + '</script>'}
 </svelte:head>
 
 <!-- Hero Section -->

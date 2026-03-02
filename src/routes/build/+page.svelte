@@ -40,7 +40,7 @@ const buildSchema = {
     <title>Build with Marmot Protocol | White Noise</title>
     <link rel="canonical" href="https://whitenoise.chat/build" />
     <meta name="description" content="Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, and client flow for building encrypted messaging apps." />
-    {@html '<script type="application/ld+json">' + JSON.stringify(buildSchema) + '</script>'}
+    {@html '<script type="application/ld+json">' + JSON.stringify(buildSchema).replace(/</g, '\\u003c') + '</script>'}
 </svelte:head>
 
 <div class="bg-glitch-50 min-h-screen">
@@ -208,31 +208,31 @@ cargo test --features mip04</code></pre>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">MIP-00</td>
                             <td class="py-3 pr-6">Credentials and KeyPackages</td>
-                            <td class="py-3 pr-6"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
+                            <td class="py-3 pr-6"><span class="bg-glitch-200 text-glitch-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
                             <td class="py-3">Yes</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">MIP-01</td>
                             <td class="py-3 pr-6">Group Construction and Marmot Group Data Extension</td>
-                            <td class="py-3 pr-6"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
+                            <td class="py-3 pr-6"><span class="bg-glitch-200 text-glitch-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
                             <td class="py-3">Yes</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">MIP-02</td>
                             <td class="py-3 pr-6">Welcome Events</td>
-                            <td class="py-3 pr-6"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
+                            <td class="py-3 pr-6"><span class="bg-glitch-200 text-glitch-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
                             <td class="py-3">Yes</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">MIP-03</td>
                             <td class="py-3 pr-6">Group Messages</td>
-                            <td class="py-3 pr-6"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
+                            <td class="py-3 pr-6"><span class="bg-glitch-200 text-glitch-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
                             <td class="py-3">Yes</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">MIP-04</td>
                             <td class="py-3 pr-6">Encrypted Media (Blossom + ChaCha20-Poly1305)</td>
-                            <td class="py-3 pr-6"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
+                            <td class="py-3 pr-6"><span class="bg-glitch-200 text-glitch-800 px-2 py-0.5 text-xs font-medium">Review</span></td>
                             <td class="py-3">No</td>
                         </tr>
                         <tr class="border-b border-glitch-200">

@@ -5,8 +5,6 @@ import type { PageData } from "./$types";
 
 const { data }: { data: PageData } = $props();
 
-let sanitizedContent = $state("");
-
 // On the server/SSR, we strip scripts more vaguely to avoid the JSDOM/ESM crash.
 // On the client, we can re-sanitize properly if needed, or just trust the initial stripped version
 // if we move sanitize logic to a safer server-only module.
