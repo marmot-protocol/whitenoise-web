@@ -9,6 +9,7 @@
             "!**/node_modules",
             "!build",
             "!.svelte-kit",
+            "!.vercel",
             "!package",
             "!coverage",
             "!**/.env",

@@ -1,29 +1,39 @@
 <script lang="ts">
 import Download from "carbon-icons-svelte/lib/Download.svelte";
 
-const downloadSchema = JSON.stringify({
+const downloadSchemaJson = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "White Noise",
-    "applicationCategory": "CommunicationApplication",
-    "operatingSystem": "iOS, Android",
-    "description": "A secure and private messenger that's lightning fast, scalable, and identity-free.",
-    "url": "https://whitenoise.chat/download",
-    "offers": {
+    name: "White Noise",
+    applicationCategory: "CommunicationApplication",
+    operatingSystem: ["iOS", "Android"],
+    description:
+        "A decentralized, end-to-end encrypted messenger built on the Marmot Protocol (Nostr + MLS + Blossom). No phone number, email, or account required.",
+    url: "https://whitenoise.chat/download",
+    offers: {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+        price: "0",
+        priceCurrency: "USD",
     },
-    "downloadUrl": "https://github.com/marmot-protocol/whitenoise/releases/latest",
-    "softwareVersion": "beta",
-    "isAccessibleForFree": true
-});
+    downloadUrl: [
+        "https://testflight.apple.com/join/c6Z7PpxC",
+        "https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh",
+        "https://github.com/marmot-protocol/whitenoise/releases/latest",
+    ],
+    softwareVersion: "beta",
+    isAccessibleForFree: true,
+    codeRepository: "https://github.com/marmot-protocol/whitenoise",
+    license: "https://github.com/marmot-protocol/whitenoise/blob/master/LICENSE",
+}).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Download - White Noise</title>
+    <link rel="canonical" href="https://whitenoise.chat/download" />
     <meta name="description" content="Download White Noise - A secure and private messenger that's lightning fast, scalable, and identity-free." />
-    {@html '<script type="application/ld+json">' + downloadSchema + '</script>'}
+    <script type="application/ld+json">
+        {downloadSchemaJson}
+    </script>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -85,4 +95,3 @@ const downloadSchema = JSON.stringify({
         </div>
     </div>
 </div>
-

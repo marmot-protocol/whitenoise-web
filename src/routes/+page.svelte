@@ -145,19 +145,54 @@ function stripHtmlEntities(text: string): string {
 const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    mainEntity: faqs.map((faq) => ({
         "@type": "Question",
-        "name": stripHtmlEntities(faq.question),
-        "acceptedAnswer": {
+        name: stripHtmlEntities(faq.question),
+        acceptedAnswer: {
             "@type": "Answer",
-            "text": stripHtmlEntities(faq.answer)
-        }
-    }))
+            text: stripHtmlEntities(faq.answer),
+        },
+    })),
 };
+
+const faqSchemaJson = JSON.stringify(faqSchema).replace(/</g, "\\u003c");
+
+const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "White Noise",
+    applicationCategory: "CommunicationApplication",
+    operatingSystem: ["iOS", "Android"],
+    description:
+        "A decentralized, end-to-end encrypted messenger built on the Marmot Protocol (Nostr + MLS + Blossom). No phone number, email, or account required. Open-source, non-profit, and community-driven.",
+    url: "https://whitenoise.chat",
+    offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+    },
+    downloadUrl: [
+        "https://testflight.apple.com/join/c6Z7PpxC",
+        "https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh",
+        "https://github.com/marmot-protocol/whitenoise/releases/latest",
+    ],
+    softwareVersion: "beta",
+    isAccessibleForFree: true,
+    codeRepository: "https://github.com/marmot-protocol/whitenoise",
+    license: "https://github.com/marmot-protocol/whitenoise/blob/master/LICENSE",
+};
+
+const appSchemaJson = JSON.stringify(appSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
-    {@html '<script type="application/ld+json">' + JSON.stringify(faqSchema) + '</script>'}
+    <link rel="canonical" href="https://whitenoise.chat" />
+    <script type="application/ld+json">
+        {faqSchemaJson}
+    </script>
+    <script type="application/ld+json">
+        {appSchemaJson}
+    </script>
 </svelte:head>
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">

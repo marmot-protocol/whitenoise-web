@@ -2,28 +2,34 @@
 const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Privacy Matters: The Case for Secure Messaging",
-    "description": "An essay on digital privacy rights, surveillance threats, and the case for encrypted messaging.",
-    "url": "https://whitenoise.chat/privacy-matters",
-    "author": {
+    headline: "Privacy Matters: The Case for Secure Messaging",
+    description:
+        "An essay on digital privacy rights, surveillance threats, and the case for encrypted messaging.",
+    url: "https://whitenoise.chat/privacy-matters",
+    author: {
         "@type": "Organization",
-        "name": "The Marmot Protocol",
-        "url": "https://github.com/marmot-protocol"
+        name: "The Marmot Protocol",
+        url: "https://github.com/marmot-protocol",
     },
-    "publisher": {
+    publisher: {
         "@type": "Organization",
-        "name": "The Marmot Protocol",
-        "url": "https://github.com/marmot-protocol"
+        name: "The Marmot Protocol",
+        url: "https://github.com/marmot-protocol",
     },
-    "inLanguage": "en",
-    "isAccessibleForFree": true
+    inLanguage: "en",
+    isAccessibleForFree: true,
 };
+
+const articleSchemaJson = JSON.stringify(articleSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Privacy Matters - White Noise</title>
+    <link rel="canonical" href="https://whitenoise.chat/privacy-matters" />
     <meta name="description" content="The case for secure messaging. An essay on digital privacy rights, surveillance threats, and why encrypted communication is a fundamental human right." />
-    {@html '<script type="application/ld+json">' + JSON.stringify(articleSchema) + '</script>'}
+    <script type="application/ld+json">
+        {articleSchemaJson}
+    </script>
 </svelte:head>
 
 <div class="max-w-4xl mx-auto px-8 py-16 text-glitch-950">

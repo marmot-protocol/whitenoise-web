@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { PageData } from "./$types";
 
-const { data }: { data: PageData } = $props();
+let { data }: { data: PageData } = $props();
 
 function formatDate(timestamp: number): string {
     const date = new Date(timestamp * 1000);
@@ -11,11 +11,41 @@ function formatDate(timestamp: number): string {
         year: "numeric",
     });
 }
+
+const blogSchemaJson = $derived.by(() =>
+    JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "White Noise Blog",
+        description:
+            "Project updates and articles about secure messaging, privacy, and the Marmot Protocol.",
+        url: "https://whitenoise.chat/blog",
+        inLanguage: "en",
+        publisher: {
+            "@type": "Organization",
+            name: "The Marmot Protocol",
+            url: "https://github.com/marmot-protocol",
+        },
+        mainEntity: {
+            "@type": "ItemList",
+            itemListElement: data.posts.map((post, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: `https://whitenoise.chat/blog/${post.naddr}`,
+                name: post.title,
+            })),
+        },
+    }).replace(/</g, "\\u003c")
+);
 </script>
 
 <svelte:head>
 	<title>Blog | White Noise</title>
+	<link rel="canonical" href="https://whitenoise.chat/blog" />
 	<meta name="description" content="Latest updates and articles from the White Noise team about secure messaging, privacy, and the Nostr protocol." />
+	<script type="application/ld+json">
+		{blogSchemaJson}
+	</script>
 </svelte:head>
 
 <div class="bg-glitch-50 min-h-screen">
@@ -59,4 +89,3 @@ function formatDate(timestamp: number): string {
 		</div>
 	</div>
 </div>
-

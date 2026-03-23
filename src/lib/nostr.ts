@@ -7,6 +7,7 @@ import {
 } from "applesauce-core/helpers/pointers";
 import { RelayPool } from "applesauce-relay";
 import { catchError, firstValueFrom, of, timeout, toArray } from "rxjs";
+import { createBlogPostCache } from "./blog-post-cache";
 
 const { getTagValue } = Helpers;
 
@@ -102,7 +103,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
         console.log("[nostr] Starting fetchBlogPosts...");
         await ensureWebSocket();
         console.log("[nostr] WebSocket ensured");
-        
+
         const relayPool = getPool();
         const store = getEventStore();
 
@@ -200,42 +201,23 @@ export async function fetchBlogPostByDTag(dTag: string): Promise<BlogPost | null
     }
 }
 
-// Simple in-memory cache for SSR
-const cache = new Map<string, { data: BlogPost[]; timestamp: number }>();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const blogPostCache = createBlogPostCache({
+    fetchBlogPostByDTag,
+    fetchBlogPosts,
+});
 
 /**
  * Fetch blog posts with caching
  */
 export async function fetchBlogPostsCached(): Promise<BlogPost[]> {
-    const cacheKey = "blog_posts";
-    const cached = cache.get(cacheKey);
-
-    if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-        return cached.data;
-    }
-
-    const posts = await fetchBlogPosts();
-    cache.set(cacheKey, { data: posts, timestamp: Date.now() });
-
-    return posts;
+    return blogPostCache.fetchBlogPostsCached();
 }
 
 /**
  * Fetch a single blog post with caching
  */
 export async function fetchBlogPostCached(dTag: string): Promise<BlogPost | null> {
-    // First check if it's in the posts cache
-    const cached = cache.get("blog_posts");
-    if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-        const post = cached.data.find((p) => p.dTag === dTag);
-        if (post) {
-            return post;
-        }
-    }
-
-    // Otherwise fetch it directly
-    return fetchBlogPostByDTag(dTag);
+    return blogPostCache.fetchBlogPostCached(dTag);
 }
 
 /**

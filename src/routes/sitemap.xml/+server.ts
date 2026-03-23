@@ -9,11 +9,17 @@ export const GET: RequestHandler = async () => {
         { path: "/download", changefreq: "monthly", priority: "0.9" },
         { path: "/privacy-matters", changefreq: "yearly", priority: "0.7" },
         { path: "/contribute", changefreq: "monthly", priority: "0.8" },
+        { path: "/build", changefreq: "monthly", priority: "0.8" },
         { path: "/blog", changefreq: "weekly", priority: "0.8" },
     ];
 
     function escapeXml(s: string): string {
-        return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+        return s
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&apos;");
     }
 
     let blogEntries = "";
@@ -21,9 +27,9 @@ export const GET: RequestHandler = async () => {
         const posts = await fetchBlogPostsCached();
         for (const post of posts) {
             if (post.naddr) {
-                const lastmod = new Date(
-                    (post.publishedAt || post.createdAt) * 1000,
-                ).toISOString().split("T")[0];
+                const lastmod = new Date((post.publishedAt || post.createdAt) * 1000)
+                    .toISOString()
+                    .split("T")[0];
                 blogEntries += `
   <url>
     <loc>${baseUrl}/blog/${escapeXml(post.naddr)}</loc>
@@ -48,7 +54,7 @@ ${staticPages
     <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`,
+  </url>`
     )
     .join("\n")}${blogEntries}
 </urlset>`;
