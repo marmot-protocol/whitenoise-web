@@ -8,24 +8,29 @@ const { children } = $props();
 const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "White Noise",
-    "url": "https://whitenoise.chat",
-    "description": "A secure and private messenger that's lightning fast, scalable, and identity-free.",
-    "inLanguage": "en",
-    "publisher": {
+    name: "White Noise",
+    url: "https://whitenoise.chat",
+    description:
+        "A secure and private messenger that's lightning fast, scalable, and identity-free.",
+    inLanguage: "en",
+    publisher: {
         "@type": "Organization",
-        "name": "The Marmot Protocol",
-        "url": "https://github.com/marmot-protocol",
-        "sameAs": [
+        name: "The Marmot Protocol",
+        url: "https://github.com/marmot-protocol",
+        sameAs: [
             "https://github.com/marmot-protocol/whitenoise",
-            "https://github.com/marmot-protocol/marmot"
-        ]
-    }
+            "https://github.com/marmot-protocol/marmot",
+        ],
+    },
 };
+
+const websiteSchemaJson = JSON.stringify(websiteSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
-    {@html '<script type="application/ld+json">' + JSON.stringify(websiteSchema) + '</script>'}
+    <script type="application/ld+json">
+        {websiteSchemaJson}
+    </script>
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">

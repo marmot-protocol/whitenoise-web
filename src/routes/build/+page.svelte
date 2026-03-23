@@ -2,45 +2,50 @@
 const buildSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "Build with the Marmot Protocol",
-    "description": "Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, client flow, and MIP status for building encrypted messaging apps.",
-    "url": "https://whitenoise.chat/build",
-    "inLanguage": "en",
-    "author": {
+    headline: "Build with the Marmot Protocol",
+    description:
+        "Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, client flow, and MIP status for building encrypted messaging apps.",
+    url: "https://whitenoise.chat/build",
+    inLanguage: "en",
+    author: {
         "@type": "Organization",
-        "name": "The Marmot Protocol",
-        "url": "https://github.com/marmot-protocol"
+        name: "The Marmot Protocol",
+        url: "https://github.com/marmot-protocol",
     },
-    "publisher": {
+    publisher: {
         "@type": "Organization",
-        "name": "The Marmot Protocol",
-        "url": "https://github.com/marmot-protocol"
+        name: "The Marmot Protocol",
+        url: "https://github.com/marmot-protocol",
     },
-    "isAccessibleForFree": true,
-    "about": [
+    isAccessibleForFree: true,
+    about: [
         {
             "@type": "SoftwareSourceCode",
-            "name": "MDK (Marmot Development Kit)",
-            "codeRepository": "https://github.com/marmot-protocol/mdk",
-            "programmingLanguage": "Rust",
-            "license": "https://opensource.org/licenses/MIT"
+            name: "MDK (Marmot Development Kit)",
+            codeRepository: "https://github.com/marmot-protocol/mdk",
+            programmingLanguage: "Rust",
+            license: "https://opensource.org/licenses/MIT",
         },
         {
             "@type": "SoftwareSourceCode",
-            "name": "marmot-ts",
-            "codeRepository": "https://github.com/marmot-protocol/marmot-ts",
-            "programmingLanguage": "TypeScript",
-            "description": "Early-stage TypeScript implementation of the Marmot Protocol"
-        }
-    ]
+            name: "marmot-ts",
+            codeRepository: "https://github.com/marmot-protocol/marmot-ts",
+            programmingLanguage: "TypeScript",
+            description: "Early-stage TypeScript implementation of the Marmot Protocol",
+        },
+    ],
 };
+
+const buildSchemaJson = JSON.stringify(buildSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Build with Marmot Protocol | White Noise</title>
     <link rel="canonical" href="https://whitenoise.chat/build" />
     <meta name="description" content="Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, and client flow for building encrypted messaging apps." />
-    {@html '<script type="application/ld+json">' + JSON.stringify(buildSchema).replace(/</g, '\\u003c') + '</script>'}
+    <script type="application/ld+json">
+        {buildSchemaJson}
+    </script>
 </svelte:head>
 
 <div class="bg-glitch-50 min-h-screen">
@@ -126,7 +131,7 @@ cargo test --features mip04</code></pre>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">445</td>
                             <td class="py-3 pr-6">Group Event</td>
-                            <td class="py-3">Encrypted group messages (proposals, commits, application messages). Uses ephemeral keypairs.</td>
+                            <td class="py-3">ChaCha20-Poly1305 encrypted group messages (proposals, commits, application messages) published with fresh ephemeral keypairs.</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-mono text-sm text-glitch-900">447</td>
@@ -185,8 +190,8 @@ cargo test --features mip04</code></pre>
                 <li><span class="font-medium text-glitch-900">Publish KeyPackage:</span> Create an MLS KeyPackage and publish it as a kind:443 event to relays listed in the user's kind:10051 event</li>
                 <li><span class="font-medium text-glitch-900">Create a group:</span> Initialize an MLS group with the Marmot Group Data Extension (0xF2EE), then invite members by consuming their KeyPackages</li>
                 <li><span class="font-medium text-glitch-900">Send Welcome:</span> After committing an Add proposal, send a Welcome message (kind:444) wrapped in NIP-59 gift wrap</li>
-                <li><span class="font-medium text-glitch-900">Send messages:</span> Encrypt with MLS, derive Nostr encryption key from <code class="bg-glitch-100 px-1 py-0.5 text-glitch-900 text-sm">exporter_secret</code>, apply NIP-44 encryption, publish as kind:445 with ephemeral keypair</li>
-                <li><span class="font-medium text-glitch-900">Receive messages:</span> Subscribe to kind:445 events filtered by the group's <code class="bg-glitch-100 px-1 py-0.5 text-glitch-900 text-sm">h</code> tag, decrypt NIP-44 layer, process MLS application message</li>
+                <li><span class="font-medium text-glitch-900">Send messages:</span> Derive the 32-byte group event key from <code class="bg-glitch-100 px-1 py-0.5 text-glitch-900 text-sm">exporter_secret</code>, encrypt the serialized MLS message with ChaCha20-Poly1305 using a random nonce, then publish <code class="bg-glitch-100 px-1 py-0.5 text-glitch-900 text-sm">base64(nonce || ciphertext)</code> as kind:445 with a fresh ephemeral keypair</li>
+                <li><span class="font-medium text-glitch-900">Receive messages:</span> Subscribe to kind:445 events filtered by the group's <code class="bg-glitch-100 px-1 py-0.5 text-glitch-900 text-sm">h</code> tag, decode <code class="bg-glitch-100 px-1 py-0.5 text-glitch-900 text-sm">base64(nonce || ciphertext)</code>, decrypt with ChaCha20-Poly1305, and process the MLS message</li>
             </ol>
         </section>
 
@@ -244,7 +249,7 @@ cargo test --features mip04</code></pre>
                     </tbody>
                 </table>
             </div>
-            <p class="text-glitch-700 mt-4">Full specifications: <a href="https://github.com/marmot-protocol/marmot" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">github.com/marmot-protocol/marmot</a></p>
+            <p class="text-glitch-700 mt-4">Full specifications: <a href="https://github.com/marmot-protocol/marmot" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">github.com/marmot-protocol/marmot</a></p>
         </section>
 
         <!-- Known Limitations -->
@@ -280,17 +285,17 @@ cargo test --features mip04</code></pre>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-medium text-glitch-900">OpenMLS</td>
                             <td class="py-3 pr-6">Rust MLS implementation</td>
-                            <td class="py-3"><a href="https://github.com/openmls/openmls" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">github.com/openmls/openmls</a></td>
+                            <td class="py-3"><a href="https://github.com/openmls/openmls" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">github.com/openmls/openmls</a></td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-medium text-glitch-900">rust-nostr</td>
                             <td class="py-3 pr-6">Nostr protocol support</td>
-                            <td class="py-3"><a href="https://github.com/rust-nostr/nostr" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">github.com/rust-nostr/nostr</a></td>
+                            <td class="py-3"><a href="https://github.com/rust-nostr/nostr" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">github.com/rust-nostr/nostr</a></td>
                         </tr>
                         <tr class="border-b border-glitch-200">
                             <td class="py-3 pr-6 font-medium text-glitch-900">Blossom</td>
                             <td class="py-3 pr-6">Content-addressed media storage</td>
-                            <td class="py-3"><a href="https://github.com/hzrd149/blossom" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">github.com/hzrd149/blossom</a></td>
+                            <td class="py-3"><a href="https://github.com/hzrd149/blossom" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">github.com/hzrd149/blossom</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -312,39 +317,39 @@ cargo test --features mip04</code></pre>
                     </thead>
                     <tbody class="text-glitch-700">
                         <tr class="border-b border-glitch-200">
-                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/whitenoise" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">whitenoise</a></td>
+                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/whitenoise" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">whitenoise</a></td>
                             <td class="py-3 pr-6">Flutter mobile client</td>
                             <td class="py-3 pr-6">Dart</td>
                             <td class="py-3">AGPL-3.0</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
-                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/whitenoise-rs" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">whitenoise-rs</a></td>
+                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/whitenoise-rs" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">whitenoise-rs</a></td>
                             <td class="py-3 pr-6">Rust backend library with OpenMLS</td>
                             <td class="py-3 pr-6">Rust</td>
                             <td class="py-3">AGPL-3.0</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
-                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/marmot" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">marmot</a></td>
+                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/marmot" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">marmot</a></td>
                             <td class="py-3 pr-6">Protocol specification (MIPs)</td>
                             <td class="py-3 pr-6">N/A</td>
                             <td class="py-3">MIT</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
-                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/mdk" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">mdk</a></td>
+                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/mdk" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">mdk</a></td>
                             <td class="py-3 pr-6">Marmot Development Kit (modular Rust SDK)</td>
                             <td class="py-3 pr-6">Rust</td>
                             <td class="py-3">MIT</td>
                         </tr>
                         <tr class="border-b border-glitch-200">
-                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/marmot-ts" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">marmot-ts</a></td>
+                            <td class="py-3 pr-6"><a href="https://github.com/marmot-protocol/marmot-ts" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">marmot-ts</a></td>
                             <td class="py-3 pr-6">TypeScript implementation (early stage)</td>
                             <td class="py-3 pr-6">TypeScript</td>
-                            <td class="py-3">-</td>
+                            <td class="py-3">MIT</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-glitch-700 mt-4">All repositories: <a href="https://github.com/marmot-protocol" class="text-cyan-600 hover:underline" target="_blank" rel="noopener noreferrer">github.com/marmot-protocol</a></p>
+            <p class="text-glitch-700 mt-4">All repositories: <a href="https://github.com/marmot-protocol" class="text-glitch-700 hover:underline" target="_blank" rel="noopener noreferrer">github.com/marmot-protocol</a></p>
         </section>
 
     </div>

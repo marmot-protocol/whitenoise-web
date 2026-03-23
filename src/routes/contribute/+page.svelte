@@ -13,47 +13,52 @@ function copyToClipboard(text: string) {
 const contributeSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Contribute to White Noise",
-    "description": "How to contribute to White Noise through code, design, documentation, bug testing, or financial support.",
-    "url": "https://whitenoise.chat/contribute",
-    "inLanguage": "en",
-    "publisher": {
+    name: "Contribute to White Noise",
+    description:
+        "How to contribute to White Noise through code, design, documentation, bug testing, or financial support.",
+    url: "https://whitenoise.chat/contribute",
+    inLanguage: "en",
+    publisher: {
         "@type": "Organization",
-        "name": "The Marmot Protocol",
-        "url": "https://github.com/marmot-protocol"
+        name: "The Marmot Protocol",
+        url: "https://github.com/marmot-protocol",
     },
-    "mainEntity": {
+    mainEntity: {
         "@type": "ItemList",
-        "name": "Ways to Contribute",
-        "itemListElement": [
+        name: "Ways to Contribute",
+        itemListElement: [
             {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Community Chat (Signal)",
-                "url": "https://signal.group/#CjQKICPlUduq29DjYD_EJQEBwu1EcEMR5QMZqcMlde026LBaEhCGS-kIM7uhNqtwtby57yQ1"
+                position: 1,
+                name: "Community Chat (Signal)",
+                url: "https://signal.group/#CjQKICPlUduq29DjYD_EJQEBwu1EcEMR5QMZqcMlde026LBaEhCGS-kIM7uhNqtwtby57yQ1",
             },
             {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Source Code (GitHub)",
-                "url": "https://github.com/marmot-protocol/whitenoise"
+                position: 2,
+                name: "Source Code (GitHub)",
+                url: "https://github.com/marmot-protocol/whitenoise",
             },
             {
                 "@type": "ListItem",
-                "position": 3,
-                "name": "Bitcoin Donation (Lightning)",
-                "url": "lightning:whitenoise@npub.cash"
-            }
-        ]
-    }
+                position: 3,
+                name: "Bitcoin Donation (Lightning)",
+                url: "lightning:whitenoise@npub.cash",
+            },
+        ],
+    },
 };
+
+const contributeSchemaJson = JSON.stringify(contributeSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Contribute - White Noise</title>
     <link rel="canonical" href="https://whitenoise.chat/contribute" />
     <meta name="description" content="Join us in building a tool that defends freedom. Contribute to White Noise through donations, development, or community engagement." />
-    {@html '<script type="application/ld+json">' + JSON.stringify(contributeSchema).replace(/</g, '\\u003c') + '</script>'}
+    <script type="application/ld+json">
+        {contributeSchemaJson}
+    </script>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -198,4 +203,3 @@ const contributeSchema = {
         </div>
     </div>
 </div>
-

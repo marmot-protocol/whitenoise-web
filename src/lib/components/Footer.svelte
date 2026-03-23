@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { page } from '$app/stores';
-    import { derived } from 'svelte/store';
-    import DownloadButton from "./DownloadButton.svelte";
+import { derived } from "svelte/store";
+import { page } from "$app/stores";
+import DownloadButton from "./DownloadButton.svelte";
 
-    const showDownloadButton = derived(page, $page => $page.url.pathname !== '/download');
+const showDownloadButton = derived(page, ($page) => $page.url.pathname !== "/download");
 </script>
 
 <footer class="bg-glitch-50 text-glitch-950">

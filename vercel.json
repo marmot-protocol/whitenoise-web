@@ -1,17 +1,17 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
+    "headers": [
         {
-          "key": "X-Robots-Tag",
-          "value": "all"
-        },
-        {
-          "key": "Link",
-          "value": "<https://whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"Complete developer documentation\""
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Robots-Tag",
+                    "value": "all"
+                },
+                {
+                    "key": "Link",
+                    "value": "<https://whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"Complete developer documentation\""
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
