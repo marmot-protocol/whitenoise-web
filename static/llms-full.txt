@@ -2,7 +2,7 @@
 
 > White Noise is a decentralized, end-to-end encrypted messenger built on the Marmot Protocol, which combines Nostr (decentralized messaging relays), Blossom (encrypted file storage), and MLS (group encryption). It requires no phone number, email, or account to use. It is open-source, non-profit, and community-driven.
 
-Website: https://whitenoise.chat
+Website: https://www.whitenoise.chat
 Source Code: https://github.com/marmot-protocol/whitenoise
 Protocol: https://github.com/marmot-protocol/marmot
 
@@ -306,4 +306,4 @@ Full specifications: https://github.com/marmot-protocol/marmot
 
 ## Blog
 
-Blog posts are published as Nostr long-form content (NIP-23) and are available at https://whitenoise.chat/blog.
+Blog posts are published as Nostr long-form content (NIP-23) and are available at https://www.whitenoise.chat/blog.

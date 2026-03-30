@@ -2,7 +2,7 @@ import { fetchBlogPostsCached } from "$lib/nostr";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async () => {
-    const baseUrl = "https://whitenoise.chat";
+    const baseUrl = "https://www.whitenoise.chat";
 
     const staticPages = [
         { path: "/", changefreq: "weekly", priority: "1.0" },

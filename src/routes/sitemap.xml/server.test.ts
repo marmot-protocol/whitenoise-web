@@ -49,8 +49,8 @@ describe("sitemap GET", () => {
 
         expect(response.headers.get("Content-Type")).toBe("application/xml");
         expect(response.headers.get("Cache-Control")).toBe("max-age=86400");
-        expect(xml).toContain("<loc>https://whitenoise.chat/build</loc>");
-        expect(xml).toContain("<loc>https://whitenoise.chat/blog/naddr1blog</loc>");
+        expect(xml).toContain("<loc>https://www.whitenoise.chat/build</loc>");
+        expect(xml).toContain("<loc>https://www.whitenoise.chat/blog/naddr1blog</loc>");
         expect(xml).toContain("<lastmod>2023-11-16</lastmod>");
     });
 
@@ -75,7 +75,7 @@ describe("sitemap GET", () => {
         const xml = await response.text();
 
         expect(xml).toContain(
-            "<loc>https://whitenoise.chat/blog/naddr&amp;&lt;&gt;&quot;&apos;</loc>"
+            "<loc>https://www.whitenoise.chat/blog/naddr&amp;&lt;&gt;&quot;&apos;</loc>"
         );
     });
 
@@ -86,7 +86,7 @@ describe("sitemap GET", () => {
         const xml = await response.text();
 
         expect(response.status).toBe(200);
-        expect(xml).toContain("<loc>https://whitenoise.chat/</loc>");
-        expect(xml).not.toContain("<loc>https://whitenoise.chat/blog/naddr");
+        expect(xml).toContain("<loc>https://www.whitenoise.chat/</loc>");
+        expect(xml).not.toContain("<loc>https://www.whitenoise.chat/blog/naddr");
     });
 });

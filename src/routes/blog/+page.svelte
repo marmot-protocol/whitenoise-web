@@ -19,7 +19,7 @@ const blogSchemaJson = $derived.by(() =>
         name: "White Noise Blog",
         description:
             "Project updates and articles about secure messaging, privacy, and the Marmot Protocol.",
-        url: "https://whitenoise.chat/blog",
+        url: "https://www.whitenoise.chat/blog",
         inLanguage: "en",
         publisher: {
             "@type": "Organization",
@@ -31,7 +31,7 @@ const blogSchemaJson = $derived.by(() =>
             itemListElement: data.posts.map((post, index) => ({
                 "@type": "ListItem",
                 position: index + 1,
-                url: `https://whitenoise.chat/blog/${post.naddr}`,
+                url: `https://www.whitenoise.chat/blog/${post.naddr}`,
                 name: post.title,
             })),
         },
@@ -41,7 +41,7 @@ const blogSchemaJson = $derived.by(() =>
 
 <svelte:head>
 	<title>Blog | White Noise</title>
-	<link rel="canonical" href="https://whitenoise.chat/blog" />
+	<link rel="canonical" href="https://www.whitenoise.chat/blog" />
 	<meta name="description" content="Latest updates and articles from the White Noise team about secure messaging, privacy, and the Nostr protocol." />
 	<script type="application/ld+json">
 		{blogSchemaJson}

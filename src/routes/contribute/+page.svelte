@@ -16,7 +16,7 @@ const contributeSchema = {
     name: "Contribute to White Noise",
     description:
         "How to contribute to White Noise through code, design, documentation, bug testing, or financial support.",
-    url: "https://whitenoise.chat/contribute",
+    url: "https://www.whitenoise.chat/contribute",
     inLanguage: "en",
     publisher: {
         "@type": "Organization",
@@ -54,7 +54,7 @@ const contributeSchemaJson = JSON.stringify(contributeSchema).replace(/</g, "\\u
 
 <svelte:head>
     <title>Contribute - White Noise</title>
-    <link rel="canonical" href="https://whitenoise.chat/contribute" />
+    <link rel="canonical" href="https://www.whitenoise.chat/contribute" />
     <meta name="description" content="Join us in building a tool that defends freedom. Contribute to White Noise through donations, development, or community engagement." />
     <script type="application/ld+json">
         {contributeSchemaJson}

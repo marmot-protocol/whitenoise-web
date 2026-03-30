@@ -9,7 +9,7 @@ const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "White Noise",
-    url: "https://whitenoise.chat",
+    url: "https://www.whitenoise.chat",
     description:
         "A secure and private messenger that's lightning fast, scalable, and identity-free.",
     inLanguage: "en",

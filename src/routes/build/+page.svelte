@@ -5,7 +5,7 @@ const buildSchema = {
     headline: "Build with the Marmot Protocol",
     description:
         "Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, client flow, and MIP status for building encrypted messaging apps.",
-    url: "https://whitenoise.chat/build",
+    url: "https://www.whitenoise.chat/build",
     inLanguage: "en",
     author: {
         "@type": "Organization",
@@ -41,7 +41,7 @@ const buildSchemaJson = JSON.stringify(buildSchema).replace(/</g, "\\u003c");
 
 <svelte:head>
     <title>Build with Marmot Protocol | White Noise</title>
-    <link rel="canonical" href="https://whitenoise.chat/build" />
+    <link rel="canonical" href="https://www.whitenoise.chat/build" />
     <meta name="description" content="Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, and client flow for building encrypted messaging apps." />
     <script type="application/ld+json">
         {buildSchemaJson}

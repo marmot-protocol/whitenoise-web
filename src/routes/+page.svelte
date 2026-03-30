@@ -165,7 +165,7 @@ const appSchema = {
     operatingSystem: ["iOS", "Android"],
     description:
         "A decentralized, end-to-end encrypted messenger built on the Marmot Protocol (Nostr + MLS + Blossom). No phone number, email, or account required. Open-source, non-profit, and community-driven.",
-    url: "https://whitenoise.chat",
+    url: "https://www.whitenoise.chat",
     offers: {
         "@type": "Offer",
         price: "0",
@@ -186,7 +186,7 @@ const appSchemaJson = JSON.stringify(appSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
-    <link rel="canonical" href="https://whitenoise.chat" />
+    <link rel="canonical" href="https://www.whitenoise.chat" />
     <script type="application/ld+json">
         {faqSchemaJson}
     </script>

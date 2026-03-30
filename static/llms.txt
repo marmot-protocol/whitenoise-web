@@ -6,19 +6,19 @@ White Noise provides forward secrecy and post-compromise security for both direc
 
 ## Core Pages
 
-- [Home](https://whitenoise.chat/): Overview of White Noise features, supported-by section, and 14 frequently asked questions
-- [Privacy Matters](https://whitenoise.chat/privacy-matters): Essay on digital privacy rights, surveillance threats, and the case for encrypted messaging
-- [Download](https://whitenoise.chat/download): Download links for iOS (TestFlight), Android (Zapstore), and Android APK
-- [Build with Marmot](https://whitenoise.chat/build): Developer guide with MDK crate structure, Nostr event kinds, ciphersuite, identity model, and client flow
-- [Contribute](https://whitenoise.chat/contribute): How to contribute code, join the community chat, and donate via Bitcoin Lightning or silent payments
-- [Blog](https://whitenoise.chat/blog): Project updates and articles published via Nostr (NIP-23 long-form content)
+- [Home](https://www.whitenoise.chat/): Overview of White Noise features, supported-by section, and 14 frequently asked questions
+- [Privacy Matters](https://www.whitenoise.chat/privacy-matters): Essay on digital privacy rights, surveillance threats, and the case for encrypted messaging
+- [Download](https://www.whitenoise.chat/download): Download links for iOS (TestFlight), Android (Zapstore), and Android APK
+- [Build with Marmot](https://www.whitenoise.chat/build): Developer guide with MDK crate structure, Nostr event kinds, ciphersuite, identity model, and client flow
+- [Contribute](https://www.whitenoise.chat/contribute): How to contribute code, join the community chat, and donate via Bitcoin Lightning or silent payments
+- [Blog](https://www.whitenoise.chat/blog): Project updates and articles published via Nostr (NIP-23 long-form content)
 
 ## Building with Marmot
 
 To build a Marmot-compatible client, use the MDK (Rust) or marmot-ts (TypeScript, early stage). The developer guide covers MDK crate structure, Nostr event kinds (443, 444, 445, 10050, 10051), default ciphersuite, identity model, client flow, and MIP status.
 
-- [Build with Marmot](https://whitenoise.chat/build): Human-readable developer documentation page
-- [Full Developer Reference](https://whitenoise.chat/llms-full.txt): Complete plain-text developer documentation
+- [Build with Marmot](https://www.whitenoise.chat/build): Human-readable developer documentation page
+- [Full Developer Reference](https://www.whitenoise.chat/llms-full.txt): Complete plain-text developer documentation
 
 ## Marmot Protocol Ecosystem
 
@@ -38,5 +38,5 @@ To build a Marmot-compatible client, use the MDK (Rust) or marmot-ts (TypeScript
 
 ## Optional
 
-- [Full Site Content](https://whitenoise.chat/llms-full.txt): Complete text content of all pages in Markdown format
-- [Sitemap](https://whitenoise.chat/sitemap.xml): XML sitemap with all pages and blog posts
+- [Full Site Content](https://www.whitenoise.chat/llms-full.txt): Complete text content of all pages in Markdown format
+- [Sitemap](https://www.whitenoise.chat/sitemap.xml): XML sitemap with all pages and blog posts

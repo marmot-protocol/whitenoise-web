@@ -17,7 +17,7 @@ const blogPostSchema = $derived.by(() => {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: data.post.title,
-        url: `https://whitenoise.chat/blog/${data.post.naddr}`,
+        url: `https://www.whitenoise.chat/blog/${data.post.naddr}`,
         datePublished: new Date(
             (data.post.publishedAt || data.post.createdAt) * 1000
         ).toISOString(),
@@ -44,11 +44,11 @@ const blogPostSchema = $derived.by(() => {
 	<meta property="og:title" content={data.post.title + " | White Noise Blog"} />
 	<meta property="og:description" content={data.post.summary || `Read ${data.post.title} on the White Noise blog`} />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content={`https://whitenoise.chat/blog/${data.post.naddr}`} />
+	<meta property="og:url" content={`https://www.whitenoise.chat/blog/${data.post.naddr}`} />
 	{#if data.post.image}
 		<meta property="og:image" content={data.post.image} />
 	{/if}
-	<link rel="canonical" href={`https://whitenoise.chat/blog/${data.post.naddr}`} />
+	<link rel="canonical" href={`https://www.whitenoise.chat/blog/${data.post.naddr}`} />
 	<script type="application/ld+json">
 		{blogPostSchema}
 	</script>

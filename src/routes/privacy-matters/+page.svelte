@@ -5,7 +5,7 @@ const articleSchema = {
     headline: "Privacy Matters: The Case for Secure Messaging",
     description:
         "An essay on digital privacy rights, surveillance threats, and the case for encrypted messaging.",
-    url: "https://whitenoise.chat/privacy-matters",
+    url: "https://www.whitenoise.chat/privacy-matters",
     author: {
         "@type": "Organization",
         name: "The Marmot Protocol",
@@ -25,7 +25,7 @@ const articleSchemaJson = JSON.stringify(articleSchema).replace(/</g, "\\u003c")
 
 <svelte:head>
     <title>Privacy Matters - White Noise</title>
-    <link rel="canonical" href="https://whitenoise.chat/privacy-matters" />
+    <link rel="canonical" href="https://www.whitenoise.chat/privacy-matters" />
     <meta name="description" content="The case for secure messaging. An essay on digital privacy rights, surveillance threats, and why encrypted communication is a fundamental human right." />
     <script type="application/ld+json">
         {articleSchemaJson}

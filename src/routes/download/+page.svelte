@@ -9,7 +9,7 @@ const downloadSchemaJson = JSON.stringify({
     operatingSystem: ["iOS", "Android"],
     description:
         "A decentralized, end-to-end encrypted messenger built on the Marmot Protocol (Nostr + MLS + Blossom). No phone number, email, or account required.",
-    url: "https://whitenoise.chat/download",
+    url: "https://www.whitenoise.chat/download",
     offers: {
         "@type": "Offer",
         price: "0",
@@ -29,7 +29,7 @@ const downloadSchemaJson = JSON.stringify({
 
 <svelte:head>
     <title>Download - White Noise</title>
-    <link rel="canonical" href="https://whitenoise.chat/download" />
+    <link rel="canonical" href="https://www.whitenoise.chat/download" />
     <meta name="description" content="Download White Noise - A secure and private messenger that's lightning fast, scalable, and identity-free." />
     <script type="application/ld+json">
         {downloadSchemaJson}

@@ -43,7 +43,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://whitenoise.chat/sitemap.xml
+Sitemap: https://www.whitenoise.chat/sitemap.xml
 
 # LLM-friendly documentation
 # /llms.txt - structured navigation for LLMs

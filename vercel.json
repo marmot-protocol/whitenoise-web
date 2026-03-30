@@ -9,7 +9,7 @@
                 },
                 {
                     "key": "Link",
-                    "value": "<https://whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"Complete developer documentation\""
+                    "value": "<https://www.whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://www.whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"Complete developer documentation\""
                 }
             ]
         }
