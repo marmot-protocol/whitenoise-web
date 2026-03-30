@@ -15,13 +15,17 @@ const showDownloadButton = derived(page, ($page) => $page.url.pathname !== "/dow
                 </div>
             {/if}
         </div>
-        <div class="flex flex-col items-end gap-2 text-right text-base">
-            <a href="/privacy-matters" class="hover:underline">Privacy Matters</a>
-            <a href="/#faqs" class="hover:underline">FAQ</a>
-            <a href="/blog" class="hover:underline">Blog</a>
-            <a href="/build" class="hover:underline">Build</a>
-            <a href="/contribute" class="hover:underline">Contribute</a>
-            <span class="text-xs text-glitch-400 mt-2">©2025 White Noise</span>
+        <div class="flex flex-col items-end gap-4 text-base">
+            <div class="grid grid-cols-2 gap-x-8 gap-y-2 text-left">
+                <a href="/privacy-matters" class="hover:underline">Privacy Matters</a>
+                <a href="/blog" class="hover:underline">Blog</a>
+                <a href="/#faqs" class="hover:underline">FAQ</a>
+                <a href="/build" class="hover:underline">Build</a>
+                <a href="/contribute" class="hover:underline">Contribute</a>
+                <a href="/privacy" class="hover:underline">Privacy Policy</a>
+                <a href="/canary" class="hover:underline">Canary</a>
+            </div>
+            <span class="text-xs text-glitch-400">©2026 White Noise</span>
         </div>
     </div>
 </footer>

@@ -19,14 +19,23 @@ async function ensureWebSocket() {
     }
 }
 
-// The pubkey for blog posts from the White Noise account
-export const BLOG_PUBKEY = "75d737c3472471029c44876b330d2284288a42779b591a2ed4daa1c6c07efaf7"; // White Noise account
+// The pubkey for blog posts and canary attestations from the White Noise account
+export const WHITE_NOISE_PUBKEY =
+    "75d737c3472471029c44876b330d2284288a42779b591a2ed4daa1c6c07efaf7";
+export const BLOG_PUBKEY = WHITE_NOISE_PUBKEY;
 
 // Relays to fetch from (including relays that specialize in long-form content)
 export const RELAYS = ["wss://relay.primal.net", "wss://relay.damus.io", "wss://nos.lol"];
+export const CANARY_RELAYS = [
+    "wss://relay.primal.net",
+    "wss://relay.damus.io",
+    "wss://nos.lol",
+    "wss://relay.ditto.pub",
+];
 
 // Long-form content kind (NIP-23)
 export const KIND_LONG_FORM = 30023;
+export const KIND_CANARY_ATTESTATION = 303;
 
 export interface BlogPost {
     id: string;
@@ -39,6 +48,16 @@ export interface BlogPost {
     publishedAt: number | null;
     dTag: string;
     naddr: string;
+    tags: string[][];
+}
+
+export interface CanaryAttestation {
+    id: string;
+    pubkey: string;
+    content: string;
+    createdAt: number;
+    publishedAt: number | null;
+    title: string;
     tags: string[][];
 }
 
@@ -73,6 +92,18 @@ export function eventToBlogPost(event: NostrEvent): BlogPost {
         publishedAt: parseTimestamp(publishedAtStr),
         dTag,
         naddr: addressPointer ? naddrEncode(addressPointer) : "",
+        tags: event.tags,
+    };
+}
+
+export function eventToCanaryAttestation(event: NostrEvent): CanaryAttestation {
+    return {
+        id: event.id,
+        pubkey: event.pubkey,
+        content: event.content,
+        createdAt: event.created_at,
+        publishedAt: parseTimestamp(getTagValue(event, "published_at")),
+        title: getTagValue(event, "title") || "White Noise Canary",
         tags: event.tags,
     };
 }
@@ -218,6 +249,49 @@ export async function fetchBlogPostsCached(): Promise<BlogPost[]> {
  */
 export async function fetchBlogPostCached(dTag: string): Promise<BlogPost | null> {
     return blogPostCache.fetchBlogPostCached(dTag);
+}
+
+/**
+ * Fetch published canary attestations from the White Noise account
+ */
+export async function fetchCanaryAttestations(): Promise<CanaryAttestation[]> {
+    try {
+        await ensureWebSocket();
+        const relayPool = getPool();
+
+        const events = await firstValueFrom(
+            relayPool
+                .request(CANARY_RELAYS, {
+                    kinds: [KIND_CANARY_ATTESTATION],
+                    authors: [WHITE_NOISE_PUBKEY],
+                    limit: 100,
+                })
+                .pipe(
+                    timeout(10000),
+                    toArray(),
+                    catchError((err) => {
+                        console.error("[nostr] Error fetching canary attestations:", err);
+                        return of([]);
+                    })
+                )
+        );
+
+        const dedupedEvents = Array.from(
+            new Map(events.map((event) => [event.id, event])).values()
+        );
+
+        const attestations = dedupedEvents.map(eventToCanaryAttestation);
+        attestations.sort((a, b) => {
+            const aTime = a.publishedAt || a.createdAt;
+            const bTime = b.publishedAt || b.createdAt;
+            return bTime - aTime;
+        });
+
+        return attestations;
+    } catch (err) {
+        console.error("[nostr] Error fetching canary attestations:", err);
+        return [];
+    }
 }
 
 /**
