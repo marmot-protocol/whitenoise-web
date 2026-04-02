@@ -1,4 +1,6 @@
 <script lang="ts">
+import JsonLd from "$lib/components/JsonLd.svelte";
+
 const buildSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
@@ -35,18 +37,15 @@ const buildSchema = {
         },
     ],
 };
-
-const buildSchemaJson = JSON.stringify(buildSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Build with Marmot Protocol | White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/build" />
     <meta name="description" content="Developer guide for the Marmot Protocol. MDK crate structure, Nostr event kinds, default ciphersuite, identity model, and client flow for building encrypted messaging apps." />
-    <script type="application/ld+json">
-        {buildSchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={buildSchema} />
 
 <div class="bg-glitch-50 min-h-screen">
     <!-- Hero -->

@@ -2,6 +2,7 @@
 import "../app.css";
 import Footer from "$lib/components/Footer.svelte";
 import Header from "$lib/components/Header.svelte";
+import JsonLd from "$lib/components/JsonLd.svelte";
 
 const { children } = $props();
 
@@ -23,15 +24,9 @@ const websiteSchema = {
         ],
     },
 };
-
-const websiteSchemaJson = JSON.stringify(websiteSchema).replace(/</g, "\\u003c");
 </script>
 
-<svelte:head>
-    <script type="application/ld+json">
-        {websiteSchemaJson}
-    </script>
-</svelte:head>
+<JsonLd schema={websiteSchema} />
 
 <div class="min-h-screen flex flex-col">
     <Header />

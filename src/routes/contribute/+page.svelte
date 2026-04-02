@@ -1,5 +1,6 @@
 <script lang="ts">
 import Copy from "carbon-icons-svelte/lib/Copy.svelte";
+import JsonLd from "$lib/components/JsonLd.svelte";
 
 let lightningAddress = $state("whitenoise@npub.cash");
 let bitcoinAddress = $state(
@@ -48,18 +49,15 @@ const contributeSchema = {
         ],
     },
 };
-
-const contributeSchemaJson = JSON.stringify(contributeSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Contribute - White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/contribute" />
     <meta name="description" content="Join us in building a tool that defends freedom. Contribute to White Noise through donations, development, or community engagement." />
-    <script type="application/ld+json">
-        {contributeSchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={contributeSchema} />
 
 <!-- Hero Section -->
 <div class="flex flex-col gap-12 py-16 md:py-24">

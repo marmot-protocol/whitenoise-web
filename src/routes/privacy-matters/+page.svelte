@@ -1,4 +1,6 @@
 <script lang="ts">
+import JsonLd from "$lib/components/JsonLd.svelte";
+
 const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -19,18 +21,15 @@ const articleSchema = {
     inLanguage: "en",
     isAccessibleForFree: true,
 };
-
-const articleSchemaJson = JSON.stringify(articleSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Privacy Matters - White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/privacy-matters" />
     <meta name="description" content="The case for secure messaging. An essay on digital privacy rights, surveillance threats, and why encrypted communication is a fundamental human right." />
-    <script type="application/ld+json">
-        {articleSchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={articleSchema} />
 
 <div class="max-w-4xl mx-auto px-8 py-16 text-glitch-950">
     <h1 class="text-5xl font-bold">Privacy Matters</h1>

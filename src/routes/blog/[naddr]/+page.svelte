@@ -1,4 +1,5 @@
 <script lang="ts">
+import JsonLd from "$lib/components/JsonLd.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -34,7 +35,7 @@ const blogPostSchema = $derived.by(() => {
     if (data.post.summary) blogPostSchemaObj.description = data.post.summary;
     if (data.post.image) blogPostSchemaObj.image = data.post.image;
 
-    return JSON.stringify(blogPostSchemaObj).replace(/</g, "\\u003c");
+    return blogPostSchemaObj;
 });
 </script>
 
@@ -49,10 +50,9 @@ const blogPostSchema = $derived.by(() => {
 		<meta property="og:image" content={data.post.image} />
 	{/if}
 	<link rel="canonical" href={`https://www.whitenoise.chat/blog/${data.post.naddr}`} />
-	<script type="application/ld+json">
-		{blogPostSchema}
-	</script>
 </svelte:head>
+
+<JsonLd schema={blogPostSchema} />
 
 <div class="bg-glitch-50 min-h-screen">
 	<article class="max-w-4xl mx-auto px-6 md:px-12 py-12 md:py-16">

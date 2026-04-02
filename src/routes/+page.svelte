@@ -2,6 +2,7 @@
 import Accordion from "$lib/components/Accordion.svelte";
 import DownloadButton from "$lib/components/DownloadButton.svelte";
 import FeatureSection from "$lib/components/FeatureSection.svelte";
+import JsonLd from "$lib/components/JsonLd.svelte";
 import type { FeatureCard } from "$lib/types";
 
 const featureCards: FeatureCard[] = [
@@ -155,8 +156,6 @@ const faqSchema = {
     })),
 };
 
-const faqSchemaJson = JSON.stringify(faqSchema).replace(/</g, "\\u003c");
-
 const appSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -181,19 +180,14 @@ const appSchema = {
     codeRepository: "https://github.com/marmot-protocol/whitenoise",
     license: "https://github.com/marmot-protocol/whitenoise/blob/master/LICENSE",
 };
-
-const appSchemaJson = JSON.stringify(appSchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <link rel="canonical" href="https://www.whitenoise.chat" />
-    <script type="application/ld+json">
-        {faqSchemaJson}
-    </script>
-    <script type="application/ld+json">
-        {appSchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={faqSchema} />
+<JsonLd schema={appSchema} />
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">
     <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12">

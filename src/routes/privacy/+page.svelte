@@ -1,4 +1,5 @@
 <script lang="ts">
+import JsonLd from "$lib/components/JsonLd.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -16,18 +17,15 @@ const privacySchema = {
         url: "https://ipf.dev",
     },
 };
-
-const privacySchemaJson = JSON.stringify(privacySchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Privacy Policy | White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/privacy" />
     <meta name="description" content="Privacy Policy for White Noise and the Internet Privacy Foundation." />
-    <script type="application/ld+json">
-        {privacySchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={privacySchema} />
 
 <div class="bg-glitch-50 min-h-screen">
     <article class="max-w-4xl mx-auto px-6 md:px-12 py-12 md:py-16">

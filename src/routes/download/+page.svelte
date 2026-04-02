@@ -1,7 +1,8 @@
 <script lang="ts">
 import Download from "carbon-icons-svelte/lib/Download.svelte";
+import JsonLd from "$lib/components/JsonLd.svelte";
 
-const downloadSchemaJson = JSON.stringify({
+const downloadSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "White Noise",
@@ -24,17 +25,16 @@ const downloadSchemaJson = JSON.stringify({
     isAccessibleForFree: true,
     codeRepository: "https://github.com/marmot-protocol/whitenoise",
     license: "https://github.com/marmot-protocol/whitenoise/blob/master/LICENSE",
-}).replace(/</g, "\\u003c");
+};
 </script>
 
 <svelte:head>
     <title>Download - White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/download" />
     <meta name="description" content="Download White Noise - A secure and private messenger that's lightning fast, scalable, and identity-free." />
-    <script type="application/ld+json">
-        {downloadSchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={downloadSchema} />
 
 <!-- Hero Section -->
 <div class="flex flex-col py-16 md:py-24">

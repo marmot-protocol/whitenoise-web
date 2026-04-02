@@ -1,4 +1,5 @@
 <script lang="ts">
+import JsonLd from "$lib/components/JsonLd.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -30,18 +31,15 @@ const canarySchema = {
         url: "https://ipf.dev",
     },
 };
-
-const canarySchemaJson = JSON.stringify(canarySchema).replace(/</g, "\\u003c");
 </script>
 
 <svelte:head>
     <title>Canary | White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/canary" />
     <meta name="description" content="Warrant canary and transparency statement for White Noise and the Internet Privacy Foundation." />
-    <script type="application/ld+json">
-        {canarySchemaJson}
-    </script>
 </svelte:head>
+
+<JsonLd schema={canarySchema} />
 
 <div class="bg-glitch-50 min-h-screen">
     <article class="max-w-4xl mx-auto px-6 md:px-12 py-12 md:py-16 text-glitch-900">
