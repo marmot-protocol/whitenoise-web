@@ -67,6 +67,18 @@ NOSTR_SECRET_KEY=<white-noise-nsec> bun run canary:publish -- "White Noise Canar
 
 The script generates the standard canary text automatically using the current date, publishes a kind `303` event to all configured relays, adds a single `relays` tag listing those relays, and includes the canonical `/canary` page in the `r` tag.
 
+To publish one or more events with historical dates, repeat `--date`. Historical events use noon UTC on the specified date for `created_at`. The script displays the dates and asks for confirmation before signing and publishing them:
+
+```bash
+NOSTR_SECRET_KEY=<white-noise-nsec> bun run canary:publish -- \
+  --date 2026-04-30 \
+  --date 2026-05-31 \
+  --date 2026-06-30 \
+  --date 2026-07-31
+```
+
+Pass `--yes` to skip the batch confirmation in an already-approved, non-interactive run. Before publishing, the script verifies that `NOSTR_SECRET_KEY` belongs to the White Noise pubkey. The secret is read from the environment and is not passed in the `nak` process arguments.
+
 ### Dry-run the event shape
 
 To inspect the exact unsigned event JSON before signing or publishing:
@@ -79,6 +91,14 @@ You can also provide a custom title:
 
 ```bash
 ./scripts/publish-canary.sh --dry-run "White Noise Canary — March 2026"
+```
+
+Dry-run historical events by repeating `--date`:
+
+```bash
+./scripts/publish-canary.sh --dry-run \
+  --date 2026-04-30 \
+  --date 2026-05-31
 ```
 
 This prints the event through `jq`, including:
