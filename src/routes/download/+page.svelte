@@ -61,7 +61,7 @@ const downloadSchema = {
                 iOS TestFlight
                 <Download size={20} class="w-5 h-5" />
             </a>
-            <p class="text-glitch-600 mt-4 text-base">Get the app for iOS via TestFlight</p>
+            <p class="text-glitch-600 mt-4 text-base">Get the beta app for iOS</p>
         </div>
 
         <!-- Android APK -->
