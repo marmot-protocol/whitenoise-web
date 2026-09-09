@@ -16,11 +16,7 @@ const downloadSchema = {
         price: "0",
         priceCurrency: "USD",
     },
-    downloadUrl: [
-        "https://testflight.apple.com/join/c6Z7PpxC",
-        "https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh",
-        "https://github.com/marmot-protocol/whitenoise/releases/latest",
-    ],
+    downloadUrl: ["https://testflight.apple.com/join/KrVBcjpA", "https://ipf.dev/android"],
     softwareVersion: "beta",
     isAccessibleForFree: true,
     codeRepository: "https://github.com/marmot-protocol/whitenoise",
@@ -54,11 +50,11 @@ const downloadSchema = {
 
 <!-- Download Options -->
 <div class="max-w-5xl mx-auto w-full px-6 md:px-12 pb-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- iOS TestFlight -->
         <div class="flex flex-col items-center text-center">
             <a
-                href="https://testflight.apple.com/join/c6Z7PpxC"
+                href="https://testflight.apple.com/join/KrVBcjpA"
                 target="_blank"
                 class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors duration-200 flex flex-row gap-3 items-center justify-center w-full"
             >
@@ -68,30 +64,17 @@ const downloadSchema = {
             <p class="text-glitch-600 mt-4 text-base">Get the app for iOS via TestFlight</p>
         </div>
 
-        <!-- Zapstore -->
-        <div class="flex flex-col items-center text-center">
-            <a
-                href="https://zapstore.dev/apps/naddr1qq2k7un89ecxzunjv4ejuamgd96x2mn0d9ek2q3qwhtn0s68y3cs98zysa4nxrfzss5g5snhndv35tk5m2sudsr7ltmsxpqqqplqk7t8ewh"
-                target="_blank"
-                class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors duration-200 flex flex-row gap-3 items-center justify-center w-full"
-            >
-                Zapstore
-                <Download size={20} class="w-5 h-5" />
-            </a>
-            <p class="text-glitch-600 mt-4 text-base">Install the app via Zapstore on Android</p>
-        </div>
-
         <!-- Android APK -->
         <div class="flex flex-col items-center text-center">
             <a
-                href="https://github.com/marmot-protocol/whitenoise/releases/latest"
+                href="https://ipf.dev/android"
                 target="_blank"
                 class="bg-glitch-950 hover:bg-glitch-800 text-glitch-50 px-8 py-4 text-xl font-medium transition-colors duration-200 flex flex-row gap-3 items-center justify-center w-full"
             >
                 Android APK
                 <Download size={20} class="w-5 h-5" />
             </a>
-            <p class="text-glitch-600 mt-4 text-base">Download APK directly for Android</p>
+            <p class="text-glitch-600 mt-4 text-base">Download the latest APK for Android</p>
         </div>
     </div>
 </div>
