@@ -32,6 +32,17 @@ body {
     overflow-x: hidden;
 }
 
+/* The site has a single light design. Paint the canvas explicitly so a browser
+   with a dark UA default does not render the dark body text on a dark ground. */
+html {
+    color-scheme: light;
+}
+
+body {
+    background-color: var(--color-glitch-50);
+    color: var(--color-glitch-950);
+}
+
 img,
 video {
     max-width: 100%;

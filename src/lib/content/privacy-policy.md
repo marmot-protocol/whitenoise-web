@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: March 30, 2026**
+**Last Updated: September 9, 2026**
 
 ---
 
@@ -36,6 +36,10 @@ This Privacy Policy applies only to information processed through IPF-controlled
 
 **"User content"** means any Nostr event, encrypted message, media, metadata, profile information, or other material submitted, published, or otherwise made available by a user through the Service.
 
+**"Usage and diagnostics"** means the optional sharing of product analytics and technical diagnostics described in Section 6. It is off by default and is controlled by a single choice in the app.
+
+**"Audit log"** means an optional local diagnostic file recording protocol-level group and message operations, used to investigate delivery or group-state problems. Audit logging is off by default, has its own separate consent, and is described in Section 7.
+
 ---
 
 ## 3. Non-Custodial Design
@@ -60,9 +64,13 @@ Media files fall into two categories with respect to privacy. Profile pictures a
 
 **Transponder (push notifications).** If you enable push notifications, the app connects to Transponder, a notification relay service operated by IPF. Transponder routes encrypted notification events to your device. Notification requests are sent using ephemeral Nostr keypairs, meaning IPF cannot link a notification request to your identity public key. IPF can decrypt notification tokens to obtain the underlying Apple or Google push token required for delivery, but has no way to associate that token with your Nostr identity. The content of notifications is encrypted and not readable by IPF.
 
-**Usage and crash reporting (opt-in only).** If you choose to opt in, the app may send anonymized usage data and crash reports to services operated or contracted by IPF. This data contains no message content, private keys, or individually identifying information. You can opt in or out at any time in the app settings.
+**Usage and diagnostics (opt-in only).** Usage and diagnostics sharing is off by default and requires an explicit, affirmative choice in the app. If you turn it on, the app sends two independent streams to servers IPF operates: product analytics to an IPF-hosted Aptabase instance (`aptabase.ipf.dev`), and technical diagnostics to an IPF-hosted OpenTelemetry collector (`otlp.ipf.dev`). IPF uses no third-party analytics, attribution, or advertising service for this purpose, and the app contains no advertising identifiers and no crash-reporting SDK. Both streams carry only bucketed counts, bucketed timings, and values drawn from a fixed catalogue of event and property names — never message content, contacts, account or group identifiers, public keys, filenames, or search terms. You can turn sharing off at any time in the app settings. Section 6 describes exactly what is collected, what our servers observe, and how long it is kept.
 
-IPF has no visibility into your messages, the groups you participate in, or the membership of those groups. Note that your Nostr contact list is a public event on the Nostr network and may be visible to anyone, including relay operators — this is a property of the Nostr protocol, not specific to White Noise. IPF also has no visibility into your activity on relays or Blossom servers it does not operate.
+**Diagnostic audit logs (opt-in only).** Audit logging is off by default and is a separate choice from usage and diagnostics. If you turn it on, the app writes a detailed diagnostic file locally, which stays on your device unless you deliberately send it to IPF. Audit logs are more sensitive than usage and diagnostics: they record group and message identifiers and the relay addresses involved, though never message content or key material. Section 7 describes this in detail.
+
+**Giphy (GIF search).** If you use the GIF picker, the app queries Giphy, a third-party service IPF does not operate. Your search terms and IP address are visible to Giphy and are handled under Giphy's own privacy policy. A GIF you send is delivered inside your encrypted conversation like any other media.
+
+IPF has no visibility into your messages, the groups you participate in, or the membership of those groups. Note that your Nostr contact list is a public event on the Nostr network and may be visible to anyone, including relay operators — this is a property of the Nostr protocol, not specific to White Noise. IPF also has no visibility into your activity on relays or Blossom servers it does not operate, with one disclosed exception: if you turn on usage and diagnostics, the diagnostics stream reports aggregate connection quality labeled by relay address, as described in Section 6.
 
 ---
 
@@ -72,19 +80,88 @@ IPF may collect and process limited categories of information in connection with
 
 **Information you provide directly:** Nostr profile metadata you choose to publish (such as display name, profile picture, and bio), communications with IPF support, and reports submitted through the Service.
 
-**Information collected automatically:** IPF collects only the minimum information necessary for the Service to function. When you connect to IPF-controlled infrastructure (such as relays or APIs), we collect IP address and connection logs required to operate those systems. This information is not used for tracking or analytics beyond what is necessary to maintain service reliability and security.
+**Information collected automatically:** IPF collects only the minimum information necessary for the Service to function. When you connect to IPF-controlled infrastructure (such as relays or APIs), we collect IP address and connection logs required to operate those systems. Apart from the website analytics described immediately below, this information is not used for tracking or analytics beyond what is necessary to maintain service reliability and security.
 
-If you opt in to anonymous usage reporting, we may additionally collect aggregated, anonymized information about how you use the Service, such as device and platform type and approximate location derived from network signals. This data contains no message content, private keys, or individually identifying information, and is used solely to improve the Service.
+**Website analytics:** The White Noise website uses a self-hosted, cookieless analytics service that IPF operates (`analytics.ipf.dev`) to count page views. It records the page visited, the referring page, browser and operating system, screen size, and an approximate country derived from your IP address. It sets no cookies and no cross-site tracking identifiers, and groups repeat visits using a rotating value derived from your IP address and browser rather than a persistent identifier. Website analytics are separate from the in-app usage and diagnostics described in Section 6 and are not linked to your use of the app.
+
+If you turn on usage and diagnostics, we additionally collect the bucketed feature-usage and reliability measurements described in Section 6, along with the app and device information, temporary session identifiers, and random installation identifier described there. Our analytics server also derives a daily device-grouping value and an approximate country or region from the IP address of the request. This information contains no message content, no private keys, and no identifier that links it to your Nostr identity, your account, or your groups.
 
 **Push notification tokens:** If you enable push notifications, the Service may transmit a notification token to IPF-controlled infrastructure (the Transponder service) to deliver notifications. These tokens are associated with your public key and are used solely to route notifications to your device. The content of notifications is encrypted and not readable by IPF.
 
-**Crash and diagnostic data:** If you opt in to crash reporting, the Service may collect anonymized crash reports and diagnostic information. No message content or private keys are included in crash reports.
+**Usage and diagnostics data (opt-in):** If you turn on usage and diagnostics, the Service collects the bucketed usage and reliability information described in Section 6. The Service does not collect crash reports and contains no crash-reporting SDK.
+
+**Audit log data (opt-in):** If you turn on audit logging and then choose to send a log to IPF, the Service transmits the protocol-level diagnostic information described in Section 7. Audit logs are never transmitted automatically.
 
 Providing certain information may be necessary to use specific features of the Service. If you choose not to provide such information, some features may not function as intended.
 
 ---
 
-## 6. Public, IPF-Controlled, and Third-Party Data
+## 6. Usage and Diagnostics (Opt-In)
+
+White Noise can optionally share information about how the app is used and how reliably it performs. This section describes that sharing in full.
+
+**It is off by default.** Nothing described in this section is collected or transmitted unless you make an explicit, affirmative choice to turn on usage and diagnostics in the app. Declining costs you no functionality. If the scope of what would be shared changes materially, the app asks again rather than carrying a previous choice forward.
+
+**One choice, two streams.** A single in-app setting controls two independent streams, both sent to servers IPF operates:
+
+- **Product analytics,** sent to an IPF-hosted Aptabase instance (`aptabase.ipf.dev`), recording which features are used and whether they succeed.
+- **Technical diagnostics,** sent to an IPF-hosted OpenTelemetry collector (`otlp.ipf.dev`), recording aggregate performance and reliability measurements.
+
+IPF uses no third-party analytics, attribution, or advertising service for this purpose. The app contains no advertising identifiers and no crash-reporting SDK, and sends no crash reports.
+
+**What product analytics contains.** Product analytics is limited to a fixed catalogue of event names and property values. Events cannot carry free-form text: every property is a value chosen from a predefined list, a true or false flag, a count bucket (for example `1`, `2`, `3–5`, `11–20`, `1001+`), or a duration bucket (for example "up to 250 ms" or "up to 5 seconds"). Exact counts, exact timings, and raw error text are not transmitted. A transmitted event carries:
+
+- The event name and its predefined property values — for example that a conversation screen was opened, that an onboarding step completed successfully, that a media upload failed, or that sending a message took under one second
+- The app version, the operating system name and major version, a device class ("phone" or "tablet"), the app surface, and whether the build is a development build
+- The version of the underlying Marmot development kit
+- A random temporary session identifier, which expires after 30 minutes of inactivity and no later than one hour
+- For aggregated measurements, a fresh random identifier for each 15-minute window
+
+**Product analytics never contains** message content or any part of it; your Nostr public key or private key; account, group, message, or event identifiers; contact lists or group membership; relay, server, or media addresses; media filenames or exact file sizes; search terms; emoji or reaction choices; push notification tokens; or raw error text.
+
+**What technical diagnostics contains.** Diagnostics consists of aggregate counters and fixed-bucket histograms accumulated on your device over a reporting interval — for example how many message publications succeeded, or the distribution of time between one relay delivering a message and another relay delivering the same message. It contains no per-message or per-event records. It is transmitted with:
+
+- A random installation identifier, created when you turn sharing on. It is not derived from your Nostr identity, your account, or your device, and it is discarded and replaced if you turn sharing off and later turn it on again.
+- The operating system type and version, and the device model identifier (for example the hardware model of your phone)
+- The app version and deployment environment
+
+Diagnostics also includes **relay addresses**, and this is a deliberate exception to the general rule that relay activity stays on your device. To choose good default relays and detect failing ones, relay performance measurements are labeled with the relay they describe. For an install with sharing turned on, this means IPF can see aggregate connection quality for the relays that install uses — but not which accounts, groups, or messages were involved, and not the content of anything sent through them. Diagnostics carries no account, member, device, group, subscription, or message identifier, no public key, and no IP-derived field.
+
+**What our servers observe.** Because these streams are ordinary network requests, our servers receive your IP address in transit, as does any server you connect to.
+
+Our analytics server runs Aptabase in its standard configuration, which means two things beyond the event contents described above. It derives a daily grouping value from the request's IP address and user agent, so that separate sessions from the same device on the same day can be counted as one active device. It also adds an approximate country and region derived from the IP address. The IP address itself is not stored as a field on the events; as with any server, ingestion infrastructure may record connection logs, which IPF minimizes and retains for a limited period.
+
+The practical effect is that our analytics server can group a day's activity from one device and can tell which country or region it came from. It cannot link that activity to your Nostr public key, your account, your groups, your contacts, or any message, because no such identifier is ever transmitted. These groupings are approximate measures of activity, not verified people. IPF does not attempt to reconstruct identities across sessions and does not combine this information with any other dataset.
+
+We are also deliberately clear about the limits of anonymization: temporary identifiers reduce, but do not eliminate, the possibility that a rare event, an unusual timing pattern, or infrastructure-level logs could distinguish one device from another.
+
+**Withdrawal and retention.** You can turn usage and diagnostics off at any time in the app settings. Doing so stops both streams, discards anything queued on your device that has not yet been sent, and rotates the diagnostics installation identifier. Data already transmitted cannot be recalled.
+
+Usage analytics records are scheduled for automatic deletion 180 days after collection. Aggregate diagnostics measurements are retained for a limited period for reliability and capacity analysis.
+
+IPF processes this information on the basis of your consent. Because these records contain no identifier that IPF can link to you, IPF generally cannot locate your individual records in response to an access, correction, or deletion request; turning sharing off is the effective way to exercise control over it. Questions may be directed to privacy@ipf.dev.
+
+---
+
+## 7. Diagnostic Audit Logs (Opt-In)
+
+Separately from usage and diagnostics, White Noise can record a detailed audit log to help investigate difficult protocol problems — messages that fail to arrive, or a group whose cryptographic state has diverged between devices.
+
+**Audit logging is off by default and has its own separate consent.** Turning on usage and diagnostics does not turn on audit logging, and turning on audit logging does not turn on usage and diagnostics.
+
+**Audit logs stay on your device unless you send them.** When enabled, the app writes an append-only file into its own local storage. Nothing is transmitted automatically. Sending a log to IPF requires a deliberate action on your part, normally at the request of IPF support while investigating a specific problem you have reported.
+
+**Audit logs are more sensitive than the information described in Section 6, and they are not anonymized.** For each protocol operation, a log may record the operation and its outcome, timestamps, group identifiers, message and event identifiers, group epoch numbers, the relay addresses and subscriptions involved, an identifier for the app installation, and a hashed reference derived from your account identifier rather than the account identifier itself.
+
+**Audit logs do not contain** the decrypted content of any message, plaintext group state values, your private key or any other key material, or your full account identity.
+
+If you choose to send an audit log to IPF, IPF can then see metadata about your groups: that particular groups and messages exist, when operations on them happened, and which relays were involved. IPF still cannot see what anyone said, and the log does not identify group members by name or public key. Uploaded audit logs are treated as sensitive, access is restricted to the personnel investigating the reported problem, and they are retained only as long as needed for that investigation.
+
+Turning audit logging off stops new recording but does not delete files already written. Existing audit files remain in the app's local storage until they are removed or you uninstall the app.
+
+---
+
+## 8. Public, IPF-Controlled, and Third-Party Data
 
 Because the Service operates on Nostr, it is important to understand how different categories of data are handled.
 
@@ -94,11 +171,11 @@ Because the Service operates on Nostr, it is important to understand how differe
 
 **IPF-controlled data:** Information processed or stored on IPF-controlled infrastructure, such as logs, notification tokens, and relay data, is subject to this Policy.
 
-**Third-party data:** The Service may display or link to externally hosted content stored on third-party servers, relays, or storage providers. IPF does not own or control those systems and is not responsible for their data handling practices.
+**Third-party data:** The Service may display or link to externally hosted content stored on third-party servers, relays, or storage providers. IPF does not own or control those systems and is not responsible for their data handling practices. For example, GIF search results are provided by Giphy, which receives your search terms and IP address when you use that feature.
 
 ---
 
-## 7. How We Use Information
+## 9. How We Use Information
 
 IPF processes information as reasonably necessary to operate, secure, maintain, and improve the Service. This includes:
 
@@ -107,26 +184,30 @@ IPF processes information as reasonably necessary to operate, secure, maintain, 
 - Maintaining the reliability, performance, and security of IPF-controlled infrastructure
 - Detecting and preventing abuse, fraud, or illegal activity
 - Responding to support inquiries
+- Understanding which features are used and where the app fails or performs poorly, where you have turned on usage and diagnostics
+- Investigating reported delivery or group-state problems from audit logs you choose to send
 - Complying with applicable law
+
+Usage and diagnostics information is used only to understand and improve how the Service works. It is never used for advertising, never sold or shared for cross-context behavioral advertising, and never used to build a profile of an individual user.
 
 IPF never has access to message content. Because all messages are end-to-end encrypted on your device before transmission, IPF cannot read, use, or process message content for any purpose.
 
 ---
 
-## 8. Legal Bases for Processing
+## 10. Legal Bases for Processing
 
 Where applicable under data protection law, IPF processes personal data on the following legal bases:
 
 - **To operate and provide the Service,** including transmitting Nostr events and delivering notifications: legitimate interests
 - **To maintain security and prevent abuse:** legitimate interests and legal obligations
 - **To comply with applicable law,** including responding to lawful requests: legal obligations
-- **Where required, based on user consent** (e.g., opt-in crash reporting): consent
+- **Where required, based on user consent** (e.g., turning on usage and diagnostics, or sending an audit log to IPF): consent
 
 Where IPF relies on legitimate interests, it does so after considering the potential impact on users and their rights. Because message content is end-to-end encrypted using MLS, IPF is technically unable to decrypt or provide the plaintext content of messages under any circumstances, including in response to legal requests.
 
 ---
 
-## 9. Disclosure of Information
+## 11. Disclosure of Information
 
 IPF may disclose information to service providers that process data on our behalf and under our instructions to support the operation of IPF-controlled infrastructure, to comply with legal obligations or lawful requests, or to protect the rights, safety, and integrity of the Service and its users.
 
@@ -138,23 +219,25 @@ IPF does not sell personal information.
 
 ---
 
-## 10. International Data Transfers
+## 12. International Data Transfers
 
 IPF operates globally, and information may be processed in jurisdictions outside your country of residence, including the United States. Where required, IPF relies on appropriate safeguards for international data transfers, such as standard contractual clauses or other lawful mechanisms.
 
 ---
 
-## 11. Data Retention
+## 13. Data Retention
 
 IPF retains information for as long as reasonably necessary to operate the Service, comply with legal obligations, and prevent abuse.
 
-Notification tokens are retained only as long as needed to deliver notifications and are deleted when you disable notifications or uninstall the app. Logs and diagnostic data are retained for a limited period for security and operational purposes.
+Notification tokens are retained only as long as needed to deliver notifications and are deleted when you disable notifications or uninstall the app. Server logs and other operational diagnostic data are retained for a limited period for security and operational purposes.
+
+Usage analytics records are scheduled for automatic deletion 180 days after collection. Aggregate technical diagnostics measurements are retained for a limited period for reliability and capacity analysis. Audit logs you send to IPF are retained only as long as needed to investigate the problem for which they were submitted.
 
 IPF has no obligation to retain user content and may remove or cease storing content at its discretion, subject to applicable law.
 
 ---
 
-## 12. Your Rights
+## 14. Your Rights
 
 Depending on your jurisdiction, you may have the right to:
 
@@ -168,19 +251,21 @@ Depending on your jurisdiction, you may have the right to:
 
 These rights may be limited in cases involving legal obligations or the decentralized nature of the Service. Because message content is end-to-end encrypted, IPF cannot access, correct, or delete message content on your behalf.
 
+Usage and diagnostics records are subject to a similar limit. They contain no identifier that IPF can link to you, so IPF generally cannot locate "your" records in order to provide access to them, correct them, or delete them individually. The property that protects your privacy also prevents us from identifying your data. You can withdraw consent at any time in the app settings, which stops all further collection.
+
 You also have the right to lodge a complaint with a supervisory authority in your jurisdiction if you believe your data has been processed in violation of applicable law.
 
 Requests may be submitted to: privacy@ipf.dev
 
 ---
 
-## 13. Automated Decision Making
+## 15. Automated Decision Making
 
 IPF does not engage in automated decision-making or profiling that produces legal or similarly significant effects on users within the meaning of applicable data protection law.
 
 ---
 
-## 14. Security
+## 16. Security
 
 IPF implements reasonable technical and organizational measures to protect information processed on IPF-controlled infrastructure. All message content is protected by end-to-end encryption using the MLS protocol (RFC 9420), which provides forward secrecy and post-compromise security. IPF has no ability to read message content.
 
@@ -188,7 +273,7 @@ However, no system is completely secure, and IPF does not guarantee that infrast
 
 ---
 
-## 15. Children
+## 17. Children
 
 The Service is intended for users aged 16 and older. Users under 16 may only use the Service with the involvement and consent of a parent or legal guardian, where required by applicable law.
 
@@ -200,7 +285,7 @@ Users and parents should be aware that the decentralized nature of the Service m
 
 ---
 
-## 16. Decentralized System Notice
+## 18. Decentralized System Notice
 
 Because the Service interacts with decentralized networks, certain data — including Nostr profile metadata and protocol-level key package events — may persist on independent relays, archives, or third-party systems even after removal from IPF-controlled infrastructure. IPF cannot guarantee deletion or control of such content.
 
@@ -208,13 +293,13 @@ Encrypted message ciphertexts stored on Nostr relays remain encrypted regardless
 
 ---
 
-## 17. Changes to This Policy
+## 19. Changes to This Policy
 
 IPF may update this Privacy Policy from time to time. Updated versions will be posted with a revised "Last Updated" date. For material changes, IPF will provide notice through the Service or via other appropriate means. Continued use of the Service after such notice constitutes acceptance of the updated policy.
 
 ---
 
-## 18. California Privacy Rights
+## 20. California Privacy Rights
 
 If you are a California resident, you may have certain rights under the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), subject to applicable thresholds and limitations.
 
@@ -228,7 +313,7 @@ Because the Service interacts with decentralized systems, some information may n
 
 ---
 
-## 19. Contact
+## 21. Contact
 
 For questions about this Privacy Policy, contact:
 

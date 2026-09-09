@@ -97,4 +97,17 @@ const articleSchema = {
             The choice is ours to make, but the stakes couldn&rsquo;t be higher. Privacy isn&rsquo;t just a personal preference&mdash;it&rsquo;s the foundation upon which all other freedoms rest.
         </p>
     </section>
+
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold mb-6">Holding Ourselves to It</h2>
+        <p class="mb-4">
+            An argument like this one is only worth as much as the practice behind it. White Noise has no accounts and no servers holding your conversations. Your keys are generated and stay on your device, every message is end-to-end encrypted before it leaves, and group messages are published under ephemeral keypairs so that even the relays carrying them cannot tell who sent what. We cannot read your messages, and we cannot see who you talk to.
+        </p>
+        <p class="mb-4">
+            We do want to know whether the app actually works&mdash;which features people use, and where things break. So we ask. Sharing usage and diagnostics is off until you turn it on, declining costs you nothing, and what we collect is deliberately built so it cannot identify you: bucketed counts and timings drawn from a fixed list of events, with no message content, no public keys, and no account, group, or contact information. We use our own servers for it rather than a third-party analytics company, and there are no advertising identifiers or trackers in the app at all.
+        </p>
+        <p>
+            Asking for permission is easy to claim and harder to document, so we wrote down exactly what leaves your device, what our servers can and cannot infer from it, and how long any of it is kept. You can read all of it in our <a href="/privacy" class="text-glitch-700 hover:underline">privacy policy</a>.
+        </p>
+    </section>
 </div>
