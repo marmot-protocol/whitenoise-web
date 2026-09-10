@@ -1,6 +1,6 @@
 <script lang="ts">
-import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
 import JsonLd from "$lib/components/JsonLd.svelte";
+import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
 
 const buildSchema = {
     "@context": "https://schema.org",

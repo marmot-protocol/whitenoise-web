@@ -62,3 +62,9 @@ This extraction preserves approved values and explicitly marks inherited inconsi
 ## Consolidation — September 10, 2026
 
 The user approved the smaller shared system, superseding earlier measured spacing and type values above. The catalog now has 91 tokens, down from 174: eight colors, seven size steps, four weights, four line heights, three tracking values, fourteen spacing steps and eight shared rhythm relationships. Typography has nine roles plus responsive overrides. Reading widths unify at 768px; content pairs are equal; text actions share a 56px minimum and automatically invert on dark surfaces. The pale hero gray remains the only review token. Source assets and destinations are unchanged. See the live reference and design-system README for current values.
+
+## Upstream rebase — September 10, 2026
+
+Rebased the two redesign commits onto `origin/master` at `04b010f`. Kept the upgraded dependencies and Vercel adapter configuration; added Manrope to the upstream manifest and regenerated the lockfile. Download now offers iOS TestFlight (`https://testflight.apple.com/join/KrVBcjpA`) and Android APK (`https://ipf.dev/android`) in the existing equal two-column grid. Zapstore and the obsolete GitHub APK destination were removed, including their metadata references. This supersedes the historical instruction to retain the old distribution destinations.
+
+The Build page retains all upstream documentation body text and links in the shared presentation. Privacy Matters retains the approved essay and adds the upstream “Holding Ourselves to It” disclosure using existing article styles. The policy Markdown and Vercel configuration match upstream exactly. No server loader or signed canary changes were introduced.

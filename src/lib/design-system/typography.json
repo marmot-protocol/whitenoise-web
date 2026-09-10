@@ -33,6 +33,17 @@
         }
     },
     {
+        "id": "ui",
+        "selectors": ".desktop-nav a, .mobile-nav a, .menu-toggle, .wn-button, .text-link, .faq-items summary, .canary-attestation h3",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16)",
+            "font-weight": "var(--weight-semibold)",
+            "line-height": "var(--leading-compact)",
+            "letter-spacing": "var(--tracking-normal)"
+        }
+    },
+    {
         "id": "title",
         "selectors": ".donation-label, .wn-site .prose h3",
         "media": null,
@@ -72,17 +83,6 @@
         "properties": {
             "font-size": "var(--type-size-16)",
             "font-weight": "var(--weight-regular)",
-            "line-height": "var(--leading-compact)",
-            "letter-spacing": "var(--tracking-normal)"
-        }
-    },
-    {
-        "id": "ui",
-        "selectors": ".desktop-nav a, .mobile-nav a, .menu-toggle, .wn-button, .text-link, .faq-items summary, .canary-attestation h3",
-        "media": null,
-        "properties": {
-            "font-size": "var(--type-size-16)",
-            "font-weight": "var(--weight-semibold)",
             "line-height": "var(--leading-compact)",
             "letter-spacing": "var(--tracking-normal)"
         }

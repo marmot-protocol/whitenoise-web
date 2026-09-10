@@ -170,10 +170,6 @@ body {
     overflow: hidden;
     filter: var(--artwork-filter);
 }
-.homepage .faq-section {
-    margin-top: 0;
-    padding-top: var(--space-112);
-}
 .feature-block {
     padding-block: var(--space-64);
 }
@@ -250,6 +246,10 @@ body {
     margin-top: var(--space-112);
 
     gap: var(--gap-columns);
+}
+.homepage .faq-section {
+    margin-top: 0;
+    padding-top: var(--space-112);
 }
 .faq-items details {
     border-bottom: var(--stroke-hairline) solid var(--color-rule);
@@ -351,7 +351,7 @@ body {
 }
 .download-options {
     display: grid;
-    grid-template-columns: var(--grid-thirds);
+    grid-template-columns: var(--grid-equal-pair);
     gap: var(--space-40);
     margin-block: var(--space-16) var(--space-96);
 }
@@ -680,9 +680,6 @@ body {
         width: calc(100% - var(--size-gutters-tablet));
     }
     .illustrated {
-        gap: var(--gap-columns);
-    }
-    .faq-section {
         gap: var(--gap-columns);
     }
     .download-options {

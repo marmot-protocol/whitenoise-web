@@ -41,3 +41,12 @@ Supersedes baseline sizes and counts above. 174 tokens reduced to 91; 28 font-si
 - A transient Vite HMR error occurred while removing the redundant LinkButton module. Subsequent full page loads and the production build use Action directly.
 
 41 tests pass, including the compact-scale and shared-dimension contracts. Lint, formatting, Svelte checks and production build pass. Existing optional Vercel dependency warnings remain unchanged. No commits or publishing; master remains at the recorded baseline.
+
+## Rebase validation — September 10, 2026
+
+- Replayed both website commits over upstream `04b010f`; the original state remains at `backup/website-rebuild-before-rebase`. Local `master` remains at `0a79a977b0af4e6d12b807ddb4f8a2a96413aafb`.
+- All 41 tests pass on Vitest 5. Lint, formatting, Svelte checking and the Vercel production build pass with the upstream dependency upgrades. Three new Biome selector-order warnings were resolved by ordering the UI recipe before the more specific article heading recipe, moving the homepage FAQ override after its base rule, and removing a redundant tablet gap declaration. No typography values changed.
+- Compared upstream Build body text and the new privacy disclosure after whitespace/markup normalization: identical. Policy Markdown and Vercel adapter configuration match upstream byte for byte.
+- Download visually checked at 1280px, 768px and 320px: two balanced desktop/tablet columns and stacked mobile options with updated destinations. Build and Privacy Matters checked at 320px. Blog listing, a full article and the signed canary loaded successfully with upgraded Nostr/Markdown dependencies.
+- Restarted the local dev server after the Vite major upgrade. Existing optional dependency tracing warnings (`bufferutil`, `utf-8-validate`, `supports-color`) remain in the successful Vercel build. Actual 200% browser zoom was not newly verified in this pass.
+- The rebase and follow-up fixes are local only; no push, merge into master or deployment was performed.

@@ -35,6 +35,19 @@
     line-height: var(--leading-heading);
     letter-spacing: var(--tracking-heading);
 }
+.desktop-nav a,
+.mobile-nav a,
+.menu-toggle,
+.wn-button,
+.text-link,
+.faq-items summary,
+.canary-attestation h3,
+.type-ui {
+    font-size: var(--type-size-16);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-compact);
+    letter-spacing: var(--tracking-normal);
+}
 .donation-label,
 .wn-site .prose h3,
 .type-title {
@@ -74,19 +87,6 @@
 .type-small {
     font-size: var(--type-size-16);
     font-weight: var(--weight-regular);
-    line-height: var(--leading-compact);
-    letter-spacing: var(--tracking-normal);
-}
-.desktop-nav a,
-.mobile-nav a,
-.menu-toggle,
-.wn-button,
-.text-link,
-.faq-items summary,
-.canary-attestation h3,
-.type-ui {
-    font-size: var(--type-size-16);
-    font-weight: var(--weight-semibold);
     line-height: var(--leading-compact);
     letter-spacing: var(--tracking-normal);
 }
