@@ -26,3 +26,18 @@ Contract checks cover generated CSS parity, token references, unique identifiers
 The baseline preserves inherited type scales, gray roles and off-grid spacing, marking exceptions for review. The pale hero gray remains below AA large-text contrast and is documented in the live reference. These are visible design decisions for the next consolidation pass, not silently resolved in this extraction.
 
 Branch: `codex/website-rebuild`. No commit, push or deployment. `master` remains `0a79a977b0af4e6d12b807ddb4f8a2a96413aafb`.
+
+## Consolidation QA — September 10, 2026
+
+Supersedes baseline sizes and counts above. 174 tokens reduced to 91; 28 font-size definitions to seven steps; 46 spacing values to fourteen; 16 colors to eight. Nine typography roles plus responsive rules replace the per-page recipes. One 768px reading measure and 56px minimum text-action height apply throughout.
+
+- Desktop 1280px: visually checked homepage and donation layout. Both Donate actions and the inverted footer Download measure 56px high with 16px text. Supporting band padding is 56/64px.
+- Tablet 768px: inspected the Contribute hero, equal contribution columns and heading wrapping; no text overflow.
+- Mobile 320px: checked Home, Contribute, Download, Privacy Matters, Privacy Policy, Canary, Build, Blog, an actual blog article and the reference page. No document overflow. A long-word overflow found in the initial hero pass was fixed through the shared responsive display role: 72/48/32px, not a page-specific size.
+- Real article loads with 18px body text and a 272px reading area at 320px; desktop reading area is 768px.
+- Native copy specimen changes to check immediately and resets after three seconds. Native disclosure responds to Enter with visible focus. Disabled action stays disabled. Menu opens, Escape closes it and restores focus.
+- 640×450 reflow fits; actual browser 200% zoom remains unverified, as in the baseline QA.
+- Nostr-backed Blog and Canary required longer initial loading after restarting the dev server; both subsequently rendered. Their loaders were not changed.
+- A transient Vite HMR error occurred while removing the redundant LinkButton module. Subsequent full page loads and the production build use Action directly.
+
+41 tests pass, including the compact-scale and shared-dimension contracts. Lint, formatting, Svelte checks and production build pass. Existing optional Vercel dependency warnings remain unchanged. No commits or publishing; master remains at the recorded baseline.

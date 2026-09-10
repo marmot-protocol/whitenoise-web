@@ -1,9 +1,11 @@
+.wn-site {
+    --action-background: var(--color-ink);
+    --action-foreground: var(--color-paper);
+    --action-hover: var(--color-action-hover);
+}
 /* Shared structural primitives. Type rules are generated from typography.json. */
 .system-text {
     font-family: var(--font-sans);
-}
-.type-hero {
-    font-weight: var(--weight-heavy);
 }
 .tone-ink {
     color: var(--color-ink);
@@ -41,16 +43,9 @@
     border: 0;
     border-radius: var(--radius-square);
 }
-.wn-button.inverse {
-    background: var(--color-paper);
-    color: var(--color-ink);
-}
-.wn-button.inverse:hover {
-    background: var(--color-rule);
-}
 .wn-button:disabled {
     background: var(--color-surface);
-    color: var(--color-secondary);
+    color: var(--color-muted);
     cursor: not-allowed;
 }
 .system-surface {
@@ -63,6 +58,9 @@
     --surface: var(--color-paper);
 }
 .surface-ink {
+    --action-background: var(--color-paper);
+    --action-foreground: var(--color-ink);
+    --action-hover: var(--color-rule);
     --surface: var(--color-ink);
     color: var(--color-paper);
 }
@@ -71,7 +69,7 @@
 }
 .system-grid {
     display: grid;
-    gap: var(--space-48) var(--space-80);
+    gap: var(--gap-columns);
 }
 .system-grid > * {
     min-width: 0;
@@ -91,7 +89,7 @@
 @media (max-width: 640px) {
     .system-grid {
         grid-template-columns: var(--grid-single);
-        gap: var(--space-36);
+        gap: var(--space-32);
     }
 }
 .footer-bottom {
@@ -126,7 +124,7 @@
     vertical-align: top;
 }
 .technical-content thead {
-    border-bottom: var(--stroke-focus) solid var(--color-rule-strong);
+    border-bottom: var(--stroke-focus) solid var(--color-rule);
 }
 .technical-content tbody tr {
     border-bottom: var(--stroke-hairline) solid var(--color-rule);
@@ -136,7 +134,7 @@
 }
 .technical-content :is(pre, code) {
     font-family: var(--font-mono);
-    font-size: var(--type-size-14px);
+    font-size: var(--type-size-14);
 }
 .technical-content pre {
     padding: var(--space-24);
@@ -152,5 +150,20 @@
 .technical-status {
     background: var(--color-surface);
     padding: var(--stroke-focus) var(--space-8);
-    font-size: var(--type-size-12px);
+    font-size: var(--type-size-14);
+}
+
+@media (max-width: 900px) {
+    :root {
+        --gap-columns: var(--space-32);
+    }
+}
+@media (max-width: 640px) {
+    :root {
+        --gap-section: var(--space-64);
+        --inset-page: var(--space-48);
+        --inset-hero: var(--space-80);
+        --inset-band-start: var(--space-40);
+        --inset-band-end: var(--space-48);
+    }
 }

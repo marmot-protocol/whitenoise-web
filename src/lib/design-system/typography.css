@@ -1,328 +1,149 @@
 /* Generated from typography.json. Existing selectors and Text share these recipes. */
-.desktop-nav a,
-.type-navigation {
-    font-size: var(--type-size-15px);
-    font-weight: var(--weight-semibold);
-}
 .hero-title,
-.type-hero {
-    font-size: var(--type-home-display);
-    line-height: var(--leading-1-08);
-    letter-spacing: var(--tracking-0-055em);
-}
-.home-hero h1 {
-    font-size: inherit;
+.home-hero h1,
+.page-intro h1,
+.legal-policy h1,
+.download-closing h2,
+.type-display {
+    font-size: var(--type-size-72);
     font-weight: var(--weight-heavy);
-    line-height: inherit;
-    letter-spacing: inherit;
-}
-.hero-tagline {
-    font-size: inherit;
-    font-weight: var(--weight-semibold);
-    line-height: inherit;
-    letter-spacing: inherit;
-}
-.wn-button,
-.type-action {
-    font-size: var(--type-size-15px);
-    font-weight: var(--weight-semibold);
+    line-height: var(--leading-display);
+    letter-spacing: var(--tracking-display);
 }
 .feature-block h2,
 .faq-section h2,
+.article-heading,
+.wn-site .prose h1,
 .type-section {
-    font-size: var(--type-feature-display);
-    line-height: var(--leading-1-08);
-    letter-spacing: var(--tracking-0-045em);
+    font-size: var(--type-size-48);
     font-weight: var(--weight-bold);
-}
-.feature-copy p {
-    font-size: var(--type-size-19px);
-    line-height: var(--leading-1-6);
-}
-.text-link {
-    font-size: var(--type-size-15px);
-    font-weight: var(--weight-link);
-}
-.supporters > p {
-    font-size: var(--type-size-18px);
-    line-height: var(--leading-1-5);
-}
-.faq-items summary {
-    font-weight: var(--weight-semibold);
-    font-size: var(--type-size-17px);
-}
-.faq-items details p {
-    font-size: var(--type-size-16px);
-    line-height: var(--leading-1-65);
-}
-.download-closing h2,
-.type-closing {
-    font-size: var(--type-closing-display);
-    line-height: var(--leading-1-04);
-    font-weight: var(--weight-display);
-    letter-spacing: var(--tracking-0-055em);
-}
-.muted {
-    font-weight: var(--weight-regular);
-}
-.footer-bottom,
-.type-caption {
-    font-size: var(--type-size-12px);
-}
-.eyebrow {
-    font-size: var(--type-size-13px);
-    font-weight: var(--weight-semibold);
-}
-.page-intro h1,
-.legal-policy h1,
-.type-page {
-    font-size: var(--type-page-display);
-    line-height: var(--leading-1-02);
-    letter-spacing: var(--tracking-0-06em);
-    font-weight: var(--weight-display);
-}
-.page-description,
-.type-lead {
-    font-size: var(--type-size-21px);
-    line-height: var(--leading-1-55);
-}
-.download-option h2 {
-    font-size: var(--type-size-30px);
-    font-weight: var(--weight-link);
-    letter-spacing: var(--tracking-0-035em);
-}
-.download-option p {
-    font-size: var(--type-size-16px);
-    line-height: var(--leading-1-6);
-}
-.download-help h2 {
-    font-size: var(--type-size-38px);
-    line-height: var(--leading-1-12);
-    font-weight: var(--weight-bold);
-    letter-spacing: var(--tracking-0-04em);
-}
-.download-help p {
-    font-size: var(--type-size-18px);
-    line-height: var(--leading-1-6);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
 }
 .article-body h2,
-.type-readingTitle {
-    font-size: var(--type-size-34px);
+.download-option h2,
+.download-help h2,
+.contribution-list h2,
+.donation-section h2,
+.blog-entry h2,
+.empty-blog h2,
+.technical-content h2,
+.wn-site .prose h2,
+.type-heading {
+    font-size: var(--type-size-32);
     font-weight: var(--weight-bold);
-    letter-spacing: var(--tracking-0-035em);
-    line-height: var(--leading-1-15);
-}
-.article-body p,
-.type-body {
-    font-size: var(--type-size-18px);
-    line-height: var(--leading-1-75);
-}
-.contribution-list h2 {
-    font-size: var(--type-size-30px);
-    letter-spacing: var(--tracking-0-035em);
-    font-weight: var(--weight-bold);
-}
-.contribution-list p {
-    font-size: var(--type-size-17px);
-    line-height: var(--leading-1-65);
-}
-.donation-section h2 {
-    font-size: var(--type-size-38px);
-    font-weight: var(--weight-bold);
-    letter-spacing: var(--tracking-0-04em);
-}
-.donation-intro p {
-    font-size: var(--type-size-18px);
-    line-height: var(--leading-1-7);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
 }
 .donation-label,
+.wn-site .prose h3,
 .type-title {
-    font-size: var(--type-size-24px);
+    font-size: var(--type-size-24);
     font-weight: var(--weight-bold);
-    line-height: var(--leading-1-2);
-    letter-spacing: var(--tracking-0-035em);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
 }
-.donation-address-text {
-    font-size: var(--type-size-16px);
-    line-height: var(--leading-1-5);
+.page-description,
+.article-summary,
+.type-lead {
+    font-size: var(--type-size-24);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-reading);
+    letter-spacing: var(--tracking-normal);
 }
-.blog-entry h2 {
-    font-size: var(--type-size-32px);
-    font-weight: var(--weight-link);
-    letter-spacing: var(--tracking-0-035em);
-    line-height: var(--leading-1-2);
+.feature-copy p,
+.supporters > p,
+.download-help p,
+.article-body p,
+.contribution-list p,
+.donation-intro p,
+.blog-entry p,
+.empty-blog p,
+.technical-content :is(p, li, td),
+.legal-policy :is(ul, ol),
+.wn-site .prose,
+.type-body {
+    font-size: var(--type-size-18);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-reading);
+    letter-spacing: var(--tracking-normal);
 }
-.blog-entry p {
-    font-size: var(--type-size-17px);
-    line-height: var(--leading-1-6);
+.faq-items details p,
+.download-option p,
+.donation-address-text,
+.type-small {
+    font-size: var(--type-size-16);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-compact);
+    letter-spacing: var(--tracking-normal);
 }
-.blog-entry time {
-    font-size: var(--type-size-13px);
-}
-.empty-blog h2 {
-    font-size: var(--type-size-30px);
+.desktop-nav a,
+.mobile-nav a,
+.menu-toggle,
+.wn-button,
+.text-link,
+.faq-items summary,
+.canary-attestation h3,
+.type-ui {
+    font-size: var(--type-size-16);
     font-weight: var(--weight-semibold);
+    line-height: var(--leading-compact);
+    letter-spacing: var(--tracking-normal);
 }
-.empty-blog p {
-    line-height: var(--leading-1-6);
-}
-.technical-content h2 {
-    font-size: var(--type-size-32px);
-    letter-spacing: var(--tracking-0-035em);
-    line-height: var(--leading-1-15);
-}
-.technical-content :is(p, li, td) {
-    line-height: var(--leading-1-65);
-}
-.legal-policy :is(ul, ol) {
-    font-size: var(--type-size-18px);
-    line-height: var(--leading-1-75);
-}
-.canary-attestation h3 {
-    font-size: var(--type-size-18px);
-    font-weight: var(--weight-semibold);
-    line-height: var(--leading-1-5);
-}
-.canary-attestation .text-link {
-    font-size: var(--type-size-16px);
-}
-.wn-site .prose {
-    font-size: var(--type-size-18px);
-    line-height: var(--leading-1-75);
-}
-.wn-site .prose h1 {
-    font-size: var(--type-rich-display);
-    line-height: var(--leading-1-04);
-    font-weight: var(--weight-display);
-    letter-spacing: var(--tracking-0-05em);
-}
-.wn-site .prose h2 {
-    font-size: var(--type-size-32px);
-    line-height: var(--leading-1-18);
-    font-weight: var(--weight-bold);
-    letter-spacing: var(--tracking-0-035em);
-}
-.wn-site .prose h3 {
-    font-size: var(--type-size-24px);
-    font-weight: var(--weight-link);
-}
-.article-heading {
-    font-size: var(--type-article-display);
-    line-height: var(--leading-1-06);
-    letter-spacing: var(--tracking-0-045em);
-    font-weight: var(--weight-display);
-}
-.article-summary {
-    font-size: var(--type-size-22px);
-    line-height: var(--leading-1-6);
+.footer-bottom,
+.eyebrow,
+.blog-entry time,
+.type-caption {
+    font-size: var(--type-size-14);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-compact);
+    letter-spacing: var(--tracking-normal);
 }
 @media (max-width: 900px) {
-    .feature-copy p {
-        font-size: var(--type-size-18px);
-    }
-}
-@media (max-width: 640px) {
-    .menu-toggle {
-        font-size: var(--type-size-14px);
-    }
-}
-@media (max-width: 640px) {
-    .mobile-nav a {
-        font-size: var(--type-size-19px);
+    .hero-title,
+    .home-hero h1,
+    .page-intro h1,
+    .legal-policy h1,
+    .download-closing h2,
+    .type-display {
+        font-size: var(--type-size-48);
+        font-weight: var(--weight-heavy);
+        line-height: var(--leading-display);
+        letter-spacing: var(--tracking-display);
     }
 }
 @media (max-width: 640px) {
     .hero-title,
-    .type-hero {
-        font-size: var(--type-home-display-mobile);
-        letter-spacing: var(--tracking-0-05em);
-        line-height: var(--leading-1-1);
+    .home-hero h1,
+    .page-intro h1,
+    .legal-policy h1,
+    .download-closing h2,
+    .type-display {
+        font-size: var(--type-size-32);
+        font-weight: var(--weight-heavy);
+        line-height: var(--leading-display);
+        letter-spacing: var(--tracking-display);
     }
 }
 @media (max-width: 640px) {
     .feature-block h2,
+    .faq-section h2,
+    .article-heading,
+    .wn-site .prose h1,
     .type-section {
-        font-size: var(--type-size-34px);
-    }
-}
-@media (max-width: 640px) {
-    .feature-copy p {
-        font-size: var(--type-size-17px);
-    }
-}
-@media (max-width: 640px) {
-    .faq-section h2 {
-        font-size: var(--type-size-36px);
-    }
-}
-@media (max-width: 640px) {
-    .faq-items summary {
-        font-size: var(--type-size-16px);
-    }
-}
-@media (max-width: 640px) {
-    .download-closing h2,
-    .type-closing {
-        font-size: var(--type-closing-display-mobile);
-    }
-}
-@media (max-width: 640px) {
-    .legal-policy :is(ul, ol) {
-        font-size: var(--type-size-17px);
-    }
-}
-@media (max-width: 640px) {
-    .page-intro h1,
-    .legal-policy h1,
-    .type-page {
-        font-size: var(--type-page-display-mobile);
+        font-size: var(--type-size-32);
+        font-weight: var(--weight-bold);
+        line-height: var(--leading-heading);
+        letter-spacing: var(--tracking-heading);
     }
 }
 @media (max-width: 640px) {
     .page-description,
+    .article-summary,
     .type-lead {
-        font-size: var(--type-size-18px);
-    }
-}
-@media (max-width: 640px) {
-    .download-help h2 {
-        font-size: var(--type-size-32px);
-    }
-}
-@media (max-width: 640px) {
-    .article-body h2,
-    .type-readingTitle {
-        font-size: var(--type-size-30px);
-    }
-}
-@media (max-width: 640px) {
-    .article-body p,
-    .type-body {
-        font-size: var(--type-size-17px);
-    }
-}
-@media (max-width: 640px) {
-    .donation-section h2 {
-        font-size: var(--type-size-32px);
-    }
-}
-@media (max-width: 640px) {
-    .donation-controls .wn-button {
-        font-size: var(--type-size-14px);
-    }
-}
-@media (max-width: 640px) {
-    .blog-entry h2 {
-        font-size: var(--type-size-27px);
-    }
-}
-@media (max-width: 640px) {
-    .technical-content h2 {
-        font-size: var(--type-size-28px);
-    }
-}
-@media (max-width: 640px) {
-    .wn-site .prose {
-        font-size: var(--type-size-17px);
+        font-size: var(--type-size-18);
+        font-weight: var(--weight-regular);
+        line-height: var(--leading-reading);
+        letter-spacing: var(--tracking-normal);
     }
 }

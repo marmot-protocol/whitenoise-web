@@ -58,3 +58,7 @@ All work remains local on `codex/website-rebuild`. No commit, push, merge, or pu
 The live reference is `/design-system`, linked temporarily from every footer. It documents colors and contrast, type specimens and all responsive recipes, spacing, grids, buttons and states, iconography, artwork, composed patterns and a searchable token catalog. It renders real shared components. See `src/lib/design-system/README.md` for source files, generation, component usage and governance.
 
 This extraction preserves approved values and explicitly marks inherited inconsistencies for review. It does not pretend the existing 28 font-size definitions or off-grid spacing already form a finalized scale. The next pass can consolidate those values centrally and compare affected pages.
+
+## Consolidation — September 10, 2026
+
+The user approved the smaller shared system, superseding earlier measured spacing and type values above. The catalog now has 91 tokens, down from 174: eight colors, seven size steps, four weights, four line heights, three tracking values, fourteen spacing steps and eight shared rhythm relationships. Typography has nine roles plus responsive overrides. Reading widths unify at 768px; content pairs are equal; text actions share a 56px minimum and automatically invert on dark surfaces. The pale hero gray remains the only review token. Source assets and destinations are unchanged. See the live reference and design-system README for current values.

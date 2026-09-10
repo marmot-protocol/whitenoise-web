@@ -10,6 +10,6 @@ let { eyebrow, title, description } = $props<{
 
 <header class="page-intro">
     {#if eyebrow}<p class="eyebrow">{eyebrow}</p>{/if}
-    <Text as="h1" role="page">{title}</Text>
+    <Text as="h1" role="display">{title}</Text>
     {#if description}<p class="page-description">{description}</p>{/if}
 </header>

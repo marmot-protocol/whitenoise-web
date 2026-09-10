@@ -2,16 +2,16 @@
 
 This file provides guidance for AI coding assistants working on the White Noise Web project.
 
-## Design system baseline — September 2026
+## Consolidated design system — September 10, 2026
 
-The user has expanded the rebuild to the full site and requested a documented design system. This supersedes the homepage-only scope and old proposed hardcoded typography values below.
+The user approved consolidation of the full-site design system. This supersedes historical per-page sizes, spacing and color values in the rebuild notes below.
 
-- Read `src/lib/design-system/README.md` before changing presentation. `/design-system` is the live visual reference.
-- Use the token catalogs, generated typography recipes and `src/lib/components/system` primitives. No arbitrary page-level colors, sizes, spacing or icon imports. Add new roles only with a concrete documented reason.
-- Preserve inherited values marked `review` until the deliberate consolidation pass; do not treat them as recommended defaults.
-- Every interaction is an immediate cut. No fades, movement, animated sizing or smooth scrolling. Copy confirmation changes icon for three seconds.
-- Shared footer remains on every page, including the temporary Design system link controlled by `src/lib/design-system/preview.ts`.
-- Branch and no-publish restrictions below still apply. Run the repository checks and inspect affected routes responsively.
+- Read `src/lib/design-system/README.md`. `/design-system` is the live reference.
+- Use the token catalogs, generated typography roles and system primitives. Seven type sizes, four weights, fourteen spacing steps and eight colors. No arbitrary page-level values or local icon imports.
+- Use shared relationship tokens for content gaps and surface insets. One 768px reading measure, equal content columns and 56px text actions. Primary actions inherit their light/dark colors from Surface.
+- The pale hero gray is the only remaining review token. Measured artwork and logo geometry stay intact.
+- Immediate state cuts only. Copy changes icon for three seconds. Shared footer and its temporary Design system link remain on every route.
+- Branch/no-publish restrictions and required checks below still apply. Verify changed composition responsively.
 
 ## Homepage Rebuild Brief — September 2026
 

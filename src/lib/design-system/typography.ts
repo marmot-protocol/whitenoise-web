@@ -2,17 +2,15 @@ import recipes from "./typography.json";
 
 export const typography = recipes;
 export const textRoles = {
-    hero: ".hero-title",
-    page: ".page-intro h1",
+    display: ".hero-title",
     section: ".feature-block h2",
-    readingTitle: ".article-body h2",
+    heading: ".article-body h2",
     title: ".donation-label",
-    body: ".article-body p",
     lead: ".page-description",
-    navigation: ".desktop-nav a",
+    body: ".article-body p",
+    small: ".donation-address-text",
+    ui: ".wn-button",
     caption: ".footer-bottom",
-    closing: ".download-closing h2",
-    action: ".wn-button",
 } as const;
 export type TextRole = keyof typeof textRoles;
 

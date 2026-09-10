@@ -90,12 +90,36 @@ describe("design system contract", () => {
         }
         for (const recipe of typography) if (recipe.media) expect(allowed).toContain(recipe.media);
     });
-    it("keeps the spacing foundation on four-pixel steps and identifies inherited exceptions", () => {
-        for (const token of tokens.filter((token) => token.category === "Spacing")) {
-            const pixels = Number.parseFloat(token.value) * 16;
-            if (token.status === "established") expect(pixels % 4, token.id).toBe(0);
-            else expect(token.id).toMatch(/^legacy-space-/);
-        }
+    it("keeps the approved compact scales closed to accidental additions", () => {
+        const spacing = tokens.filter((token) => token.category === "Spacing");
+        expect(spacing.map((token) => Number.parseFloat(token.value) * 16)).toEqual([
+            4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 144,
+        ]);
+        expect(
+            tokens
+                .filter((token) => token.id.startsWith("type-size-"))
+                .map((token) => Number.parseFloat(token.value) * 16)
+        ).toEqual([14, 16, 18, 24, 32, 48, 72]);
+        expect(
+            tokens.filter((token) => token.id.startsWith("weight-")).map((token) => token.value)
+        ).toEqual(["400", "600", "700", "800"]);
+        expect(tokens.filter((token) => token.category === "Color")).toHaveLength(8);
+        expect(
+            tokens.filter((token) => token.status === "review").map((token) => token.id)
+        ).toEqual(["color-hero-muted"]);
+        expect(tokens.some((token) => token.id.startsWith("legacy-"))).toBe(false);
+    });
+    it("uses shared reading and action dimensions without page variants", () => {
+        expect(tokenById["size-reading"].value).toBe("48rem");
+        expect(tokenById["size-action-min"].value).toBe("3.5rem");
+        for (const id of [
+            "size-article",
+            "size-technical",
+            "size-donation-action",
+            "grid-faq",
+            "grid-contribute-hero",
+        ])
+            expect(tokenById[id]).toBeUndefined();
     });
     it("computes contrast correctly and keeps the approved low-contrast exception visible", () => {
         expect(contrastRatio("#000", "#fff")).toBe(21);

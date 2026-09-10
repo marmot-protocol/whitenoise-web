@@ -10,7 +10,6 @@ import Icon from "$lib/components/system/Icon.svelte";
 import Surface from "$lib/components/system/Surface.svelte";
 import Text from "$lib/components/system/Text.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
-import baseline from "$lib/design-system/baseline.json";
 import { type IconName, iconMeanings, icons } from "$lib/design-system/icons";
 import {
     breakpoints,
@@ -43,73 +42,61 @@ const colors = tokens.filter((t) => t.category === "Color");
 const spacing = tokens
     .filter((t) => t.category === "Spacing" && t.status === "established")
     .sort((a, b) => Number.parseFloat(a.value) - Number.parseFloat(b.value));
-const inheritedSpacing = tokens.filter((t) => t.category === "Spacing" && t.status === "review");
+const rhythm = tokens.filter((t) => t.category === "Rhythm");
 const specimens: { role: TextRole; title: string; sample: string; use: string }[] = [
     {
-        role: "hero",
-        title: "Homepage masthead",
-        sample: "White Noise",
-        use: "Homepage title and inherited tagline scale. Heavy name; semibold tagline.",
-    },
-    {
-        role: "page",
-        title: "Page title",
-        sample: "Good things are built together.",
-        use: "Secondary-page introductions and Privacy Policy title.",
-    },
-    {
-        role: "closing",
-        title: "Closing statement",
+        role: "display",
+        title: "Display",
         sample: "A little more noise, a little more you.",
-        use: "The shared black footer uses this scale in white.",
+        use: "Homepage, page introductions and closing statement. 72px desktop, 48px tablet, 32px mobile.",
     },
     {
         role: "section",
-        title: "Feature heading",
+        title: "Section",
         sample: "Keep it between you.",
-        use: "Homepage feature sections. The FAQ has a retained mobile-size exception.",
+        use: "Feature sections, FAQ and article titles. 48px desktop, 32px mobile.",
     },
     {
-        role: "readingTitle",
+        role: "heading",
         title: "Reading heading",
         sample: "Room to be yourself.",
-        use: "Privacy Matters, legal sections and Canary headings.",
+        use: "32px across articles, policy, canary, contribution paths and download options.",
     },
     {
         role: "title",
         title: "Small heading",
         sample: "Lightning address",
-        use: "Donation method titles; black, strong, with tight space to the address.",
+        use: "24px bold for subsections and donation titles.",
     },
     {
         role: "lead",
         title: "Introduction",
         sample: "A conversation with a friend. An idea that needs room to grow.",
-        use: "Supporting copy below secondary-page titles.",
+        use: "24px regular introduction; 18px on mobile.",
     },
     {
         role: "body",
-        title: "Reading text",
+        title: "Body",
         sample: "Private spaces let us work things out, change our minds, and connect without performing for an audience.",
-        use: "The essay reading style. Other body variants remain in the captured recipe index below.",
+        use: "18px regular, 1.65 leading. Shared reading copy across every page, at every viewport.",
     },
     {
-        role: "navigation",
-        title: "Navigation",
-        sample: "Privacy Matters   Blog   Contribute   GitHub   Download",
-        use: "Desktop navigation. The live header above also demonstrates active, hover, focus and mobile menu behavior.",
+        role: "small",
+        title: "Compact copy",
+        sample: "whitenoise@npub.cash",
+        use: "16px regular for addresses, compact descriptions and disclosure answers.",
     },
     {
-        role: "action",
-        title: "Action label",
-        sample: "Download",
-        use: "Primary and secondary actions; the action component owns the surface and target geometry.",
+        role: "ui",
+        title: "Interface",
+        sample: "Privacy Matters · Contribute · Download",
+        use: "16px semibold for navigation, actions, text links and disclosure questions.",
     },
     {
         role: "caption",
         title: "Caption",
         sample: "© 2026 Internet Privacy Foundation",
-        use: "Copyright. Uses inverse muted gray on the actual footer.",
+        use: "14px regular for dates and copyright.",
     },
 ];
 const iconNames = Object.keys(icons) as IconName[];
@@ -130,9 +117,9 @@ function recipeFor(role: TextRole) {
     <meta name="description" content="Internal visual reference for White Noise design tokens, components, and current design decisions." />
 </svelte:head>
 <div class="site-width design-reference">
-    <PageIntro title="White Noise design system." description="A living reference for the site we have. Shared tokens, working components, and the decisions still to make." />
+    <PageIntro title="White Noise design system." description="One system for every page. Shared typography, a neutral palette, consistent spacing and working components." />
     <div class="ds-introduction article-body">
-        <p>This is the captured Plain design, not a claim that every inherited value belongs in the final system. The site and this page use the same token catalog and typography recipes. Review items remain visible until we agree how to consolidate them.</p>
+        <p>Eight colors. Seven type sizes. Four weights. Fourteen spacing steps. The site and this reference share the same catalogs and components. Related content uses the same rules wherever it appears.</p>
         <p>Manrope. Black on white. Left-aligned reading. A quiet grid. Whitespace carries the structure; rules have a functional job. Interactions are immediate cuts.</p>
     </div>
     <nav class="ds-index" aria-label="Design system contents">
@@ -156,7 +143,7 @@ function recipeFor(role: TextRole) {
         <h3 class="ds-subtitle">Text contrast</h3>
         <div class="ds-table-wrap"><table class="ds-table"><caption>Computed from the token values. AA requires 4.5:1 for normal text or 3:1 for large text.</caption>
             <thead><tr><th>Pair</th><th>Ratio</th><th>Current use</th></tr></thead><tbody>
-                {#each [["color-ink", "color-paper", "Primary text"], ["color-muted", "color-paper", "Supporting text"], ["color-muted", "color-surface", "Addresses on gray"], ["color-secondary", "color-paper", "Signed-event links"], ["color-hero-muted", "color-paper", "Hero tagline — below AA; decision pending"], ["color-inverse-muted", "color-ink", "Copyright"]] as [front, back, use]}
+                {#each [["color-ink", "color-paper", "Primary text"], ["color-muted", "color-paper", "Supporting text"], ["color-muted", "color-surface", "Addresses on gray"], ["color-muted", "color-paper", "Signed-event links"], ["color-hero-muted", "color-paper", "Hero tagline — below AA; decision pending"], ["color-inverse-muted", "color-ink", "Copyright"]] as [front, back, use]}
                     <tr><td>{front} / {back}</td><td>{contrastRatio(tokenById[front].value, tokenById[back].value).toFixed(2)}:1</td><td>{use}</td></tr>
                 {/each}
             </tbody></table></div>
@@ -164,8 +151,8 @@ function recipeFor(role: TextRole) {
 
     <section class="ds-section" id="ds-typography">
         <Text as="h2" role="section">Typography.</Text>
-        <p class="ds-lead">One self-hosted family: Manrope Variable. Font sizes are root-relative; fluid titles retain the current viewport interpolation. Semantic heading level and visual role are independent.</p>
-        <div class="ds-weights">{#each ["regular", "semibold", "link", "bold", "display", "heavy"] as weight}<p style:font-weight={`var(--weight-${weight})`}>Aa <span>{weight} · {tokenById[`weight-${weight}`].value}</span></p>{/each}</div>
+        <p class="ds-lead">One self-hosted family: Manrope Variable. Seven root-relative size steps: 14, 16, 18, 24, 32, 48 and 72px. Nine complete roles combine them with four weights, four line heights and three tracking values. Responsive headings move between the same steps; no separate mobile scale. Semantic heading level and visual role are independent.</p>
+        <div class="ds-weights">{#each ["regular", "semibold", "bold", "heavy"] as weight}<p style:font-weight={`var(--weight-${weight})`}>Aa <span>{weight} · {tokenById[`weight-${weight}`].value}</span></p>{/each}</div>
         {#each specimens as specimen}
             <article class="ds-type-specimen">
                 <div class="ds-meta"><h3>{specimen.title}</h3><code>Text role="{specimen.role}"</code></div>
@@ -176,18 +163,19 @@ function recipeFor(role: TextRole) {
                 </details>
             </article>
         {/each}
-        <details class="ds-details"><summary>All {typography.length} captured typography rules, including local variants</summary>
-            <p>These are the live rules, extracted from the site. Similar body and heading sizes are not silently merged in this baseline.</p>
+        <details class="ds-details"><summary>All shared recipes and responsive rules ({typography.length})</summary>
+            <p>These recipes style both the real pages and the specimens above. Page selectors select a role; they do not introduce their own size, weight or line height.</p>
             {#each typography as recipe}<div class="ds-recipe-record"><h3>{recipe.id}</h3><code>{recipe.selectors}</code><p>{recipe.media ? `≤ ${recipe.media}px` : "Default"}</p><dl class="ds-recipe">{#each Object.entries(recipe.properties) as [prop, val]}<dt>{prop}</dt><dd><code>{val}</code><br />{describeValue(val)}</dd>{/each}</dl></div>{/each}
         </details>
     </section>
 
     <section class="ds-section" id="ds-spacing">
         <Text as="h2" role="section">Spacing.</Text>
-        <p class="ds-lead">Four pixels at a 16px root is the base unit. The bars show existing on-grid distances. Small optical offsets and inherited off-grid values are listed separately, not promoted into the recommended scale.</p>
+        <p class="ds-lead">A four-pixel base with fourteen steps. Small distances are precise; larger gaps follow a restrained rhythm. Use the relationship tokens below for recurring composition rather than selecting a new distance on each page.</p>
         <div class="ds-spacing">{#each spacing as token}<div><code>{token.id}</code><span class="ds-space-bar" style:width={`var(--${token.id})`}></span><span>{token.value}</span></div>{/each}</div>
-        <details class="ds-details"><summary>{inheritedSpacing.length} inherited spacing exceptions to review</summary><div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Token</th><th>Value</th><th>Where it came from</th></tr></thead><tbody>{#each inheritedSpacing as token}<tr><td><code>{token.id}</code></td><td>{token.value}</td><td>{token.uses.join(", ")}</td></tr>{/each}</tbody></table></div></details>
-        <p class="ds-note">Examples: the supporter band’s unequal top/bottom padding is an approved optical adjustment. The 74px/76px page-intro pair is inherited and needs a spacing decision. Asset bounds, focus strokes and hit targets are geometry, not spacing-scale steps.</p>
+        <h3 class="ds-subtitle">Shared relationships</h3>
+        <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Relationship</th><th>Default</th><th>Purpose</th></tr></thead><tbody>{#each rhythm as token}<tr><td><code>{token.id}</code></td><td>{describeValue(token.value)}</td><td>{token.note}</td></tr>{/each}</tbody></table></div>
+        <p class="ds-note">Page introductions use equal top and bottom padding. Supporting bands share a slightly larger bottom inset for optical balance: 56/64px desktop, 40/48px mobile. Source artwork bounds and 44px interaction targets are geometry, not additional spacing choices.</p>
     </section>
 
     <section class="ds-section" id="ds-grids">
@@ -203,14 +191,14 @@ function recipeFor(role: TextRole) {
             <Grid><div><Text as="h3" role="title">First column</Text><p>Lightning, contribution paths and balanced content pairs.</p></div><div><Text as="h3" role="title">Second column</Text><p>Equal tracks. The gutter separates content without a visible rule.</p></div></Grid>
             <Grid columns={3}>{#each ["iPhone", "Android", "Direct download"] as label}<div><Text as="h3" role="title">{label}</Text><p>The same three-column primitive used by the download page.</p></div>{/each}</Grid>
         </div>
-        <p class="ds-note">Guides are documentation aids only. Homepage artwork, the FAQ and the Contribute hero retain their captured 1:1, 1:1.1 and 1.1:1 compositions. Reading measures: 740px essays, 800px blog articles, 850px technical content. These differences are documented for the next review.</p>
+        <p class="ds-note">Guides are documentation aids only. Features, FAQ, contribution paths, donations and the Contribute hero use equal columns. Essays, blog articles, policy, canary and technical content share one 768px reading width. The blog list keeps its thumbnail track because it serves a different structure.</p>
     </section>
 
     <section class="ds-section" id="ds-actions">
         <Text as="h2" role="section">Actions and feedback.</Text>
-        <p class="ds-lead">Native links navigate. Native buttons perform actions. Square corners, no elevation, and no animation. Tab through these real components to inspect focus.</p>
+        <p class="ds-lead">One 56px minimum height, 16px semibold label, 24px horizontal padding and 24px icon gap. Primary and secondary variants. The primary action automatically inverts on a dark Surface. Native links navigate; native buttons act. Focus and hover are immediate cuts.</p>
         <div class="ds-action-row"><Action href="/download" label="Download" icon="down" /><Action href="/contribute" label="Contribute" icon="right" variant="secondary" /><Action href="https://github.com/marmot-protocol" label="GitHub" icon="external" external /><Action label="Disabled" disabled /></div>
-        <Surface tone="ink" class="ds-surface-demo"><Text as="h3" role="title" tone="inverse">Inverse action</Text><Action href="/download" label="Download" icon="down" variant="inverse" /></Surface>
+        <Surface tone="ink" class="ds-surface-demo"><Text as="h3" role="title" tone="inverse">Primary action on dark</Text><Action href="/download" label="Download" icon="down" /></Surface>
         <div class="ds-action-row"><Action label="Try an action" onclick={() => { actionFeedback = "Action activated."; }} /><span role="status">{actionFeedback}</span><TextLink href="/privacy-matters">Text link</TextLink></div>
         <div class="ds-copy-demo"><span>example@white-noise.test</span><CopyButton value="example@white-noise.test" label="example address" /></div>
         <p class="ds-note">Copy uses a 44px target and a 20px icon. Success switches to a checkmark for three seconds; a screen reader receives status text. The address remains selectable if clipboard access fails. This specimen copies a harmless example, not a donation address.</p>
@@ -220,7 +208,7 @@ function recipeFor(role: TextRole) {
 <Action variant="secondary" label="Contribute" href="/contribute" />
 <CopyButton value={address} label="Lightning address" />
 <Disclosure title="Question">Answer content</Disclosure>
-<Text as="h2" role="readingTitle">Section title</Text>
+<Text as="h2" role="heading">Section title</Text>
 <Grid columns={2}>…</Grid>
 <Surface tone="muted">…</Surface>
 <Container>…</Container>`}</code></pre></details>
@@ -237,8 +225,8 @@ function recipeFor(role: TextRole) {
         <Text as="h2" role="section">Identity and artwork.</Text>
         <div class="ds-brand"><img src="/images/logomark.svg" width="48" height="37" alt="White Noise mark" /><p>Canonical mark. Black treatment, original proportions. 48px desktop width and 38px mobile width.</p></div>
         <p class="ds-lead">Four transparent Figma sculptures share measured visible-pixel bounds, rather than raw PNG dimensions. Their normalized viewports have the same visible height and center against the adjacent copy.</p>
-        <Grid>{#each artNames as name}<div class="ds-art"><Artwork {name} normalized /><h3>{name}</h3></div>{/each}</Grid>
-        <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: Figma Marketing file JnQBwAwtSteJR3NO0iVPyp. Original exports are 1200×1200. Shared viewport ratio 1103:939; current desktop visible-height target 400px. The slightly rounded 29.366rem viewport maximum is retained for comparison. Mobile maximum is 22rem wide. Exact bounds live in the artwork registry; source pixels are unchanged.</p><p>See REBUILD.md for node references. Brand assets remain at static/images; sculptures at static/images/rebuild.</p></details>
+        <Grid>{#each artNames as name}<div class="ds-art"><Artwork {name} /><h3>{name}</h3></div>{/each}</Grid>
+        <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: Figma Marketing file JnQBwAwtSteJR3NO0iVPyp. Original exports are 1200×1200. Shared viewport ratio 1103:939; current desktop visible-height target 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. Exact bounds live in the artwork registry; source pixels are unchanged.</p><p>See REBUILD.md for node references. Brand assets remain at static/images; sculptures at static/images/rebuild.</p></details>
         <div class="ds-supporter-demo"><Supporters /></div>
     </section>
 
@@ -258,25 +246,24 @@ function recipeFor(role: TextRole) {
     </section>
 
     <section class="ds-section" id="ds-review">
-        <Text as="h2" role="section">Decisions to make next.</Text>
-        <p class="ds-lead">Establish first, refine together. These are explicit exceptions, not suggestions to use more arbitrary values.</p>
+        <Text as="h2" role="section">Consolidation and exceptions.</Text>
+        <p class="ds-lead">The consolidation replaces near-duplicates across the entire site. Measured asset geometry remains intact.</p>
         <ol class="ds-review-list">
-            <li><strong>Type hierarchy.</strong> The captured stylesheet had {Object.keys(baseline["font-size"]).length} font-size definitions. Feature, article, donation and technical headings currently differ. Choose the final role hierarchy before merging them.</li>
-            <li><strong>Spacing rhythm.</strong> Consolidate off-grid distances. Retain documented optical corrections only where a visual comparison supports them.</li>
-            <li><strong>Neutral colors.</strong> The secondary action and code surfaces have a slight warm tint. Blog body gray differs from essay gray. Choose whether to collapse these onto the main neutral roles.</li>
-            <li><strong>Hero contrast.</strong> The approved {tokenById["color-hero-muted"].value} tagline is too light for AA. Its token is marked for review; its appearance has not been silently changed.</li>
-            <li><strong>Control sizing.</strong> General actions are 52px minimum; donation actions are 56px. Navigation and icon targets use 44px. Review the two action heights.</li>
-            <li><strong>Reading grids.</strong> Confirm the 740/800/850px measures and the unequal hero/FAQ ratios, then reduce variants if desired.</li>
+            <li><strong>Typography.</strong> 28 size definitions become seven steps. Six weights become four. Fifteen line heights become four. Six tracking values become three.</li>
+            <li><strong>Spacing.</strong> 46 distances become fourteen steps with eight shared relationship tokens. There are no legacy spacing exceptions in live styles.</li>
+            <li><strong>Colors.</strong> Sixteen colors become eight. Reading copy and secondary links share one gray; all light-gray surfaces share one neutral.</li>
+            <li><strong>Composition.</strong> One reading measure, equal content columns, and one text-action height replace page-specific variants.</li>
+            <li><strong>Hero contrast — open decision.</strong> The previously approved {tokenById["color-hero-muted"].value} tagline remains below AA. This is the only remaining review token. Its color is preserved pending that specific visual decision.</li>
         </ol>
-        <p class="ds-note">New styles should use existing tokens and components. An exception needs a named role, a reason, a specimen here, and a test update—not a new literal hidden in a page. The archived Glitch palette and unmounted legacy components are outside the active design system.</p>
+        <p class="ds-note">New presentation should use these roles and components. A new token needs a specific purpose and a live specimen; duplicating a value under a new name is not a new design decision. Historical measurements are archived in baseline.json and are not part of the live scale.</p>
     </section>
 
     <section class="ds-section" id="ds-tokens">
         <Text as="h2" role="section">Token reference.</Text>
-        <p class="ds-lead">Search the same catalog that generates the site’s CSS. Values and provenance are visible; “review” means captured and pending consolidation.</p>
+        <p class="ds-lead">Search the catalog that generates the site’s CSS. The only outstanding review item is the pale hero text color.</p>
         <div class="ds-filters"><label>Search<input type="search" bind:value={query} placeholder="Token, value, selector…" /></label><label>Category<select bind:value={category}>{#each categories as item}<option>{item}</option>{/each}</select></label><label class="ds-toggle"><input type="checkbox" bind:checked={showReviewOnly} /> Review only</label></div>
         <p class="ds-note" role="status">{filtered.length} of {tokens.length} tokens</p>
-        <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Token / value</th><th>Role and provenance</th><th>Status</th></tr></thead><tbody>{#each filtered as token}<tr><td><code>--{token.id}</code><br /><code>{token.value}</code></td><td>{token.note}<details><summary>Captured uses ({token.uses.length})</summary><p>{token.uses.join(", ") || "Shared primitive or documented foundation."}</p></details></td><td>{token.status}</td></tr>{/each}</tbody></table></div>
+        <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Token / value</th><th>Role and provenance</th><th>Status</th></tr></thead><tbody>{#each filtered as token}<tr><td><code>--{token.id}</code><br /><code>{token.value}</code></td><td>{token.note}<details><summary>Consumers ({token.uses.length})</summary><p>{token.uses.join(", ") || "Shared primitive or documented foundation."}</p></details></td><td>{token.status}</td></tr>{/each}</tbody></table></div>
         <p class="ds-note">Source: src/lib/design-system/tokens.json and typography.json. Regenerate with bun run tokens:generate. The test suite checks generated files, references, breakpoint consistency and new un-tokenized style values.</p>
     </section>
 </div>

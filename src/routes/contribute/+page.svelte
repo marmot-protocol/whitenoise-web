@@ -50,7 +50,7 @@ const schema = {
 <div class="site-width">
     <div class="contribute-hero">
         <PageIntro title="Good things are built together." />
-        <Artwork name="roots" normalized />
+        <Artwork name="roots" />
     </div>
     <Grid class="contribution-list">
         {#each ways as way}<section>

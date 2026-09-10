@@ -1,8 +1,8 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
 import Artwork from "$lib/components/rebuild/Artwork.svelte";
-import LinkButton from "$lib/components/rebuild/LinkButton.svelte";
 import Supporters from "$lib/components/rebuild/Supporters.svelte";
+import Action from "$lib/components/system/Action.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 
@@ -78,7 +78,7 @@ const faqSchema = {
             </div>
         </div>
         <div class="hero-action" id="hero-download">
-            <LinkButton label="Download" />
+            <Action href="/download" label="Download" icon="down" />
         </div>
     </section>
     <Supporters />
@@ -92,7 +92,7 @@ const faqSchema = {
                 </p>
                 <TextLink href="/privacy-matters">Why privacy matters</TextLink>
             </div>
-            <Artwork normalized />
+            <Artwork />
         </section>
         <section class="feature-block illustrated identity-feature">
             <div class="feature-copy">
@@ -102,7 +102,7 @@ const faqSchema = {
                     without handing over a phone number or email address.
                 </p>
             </div>
-            <Artwork normalized name="identity" />
+            <Artwork name="identity" />
         </section>
         <section class="feature-block illustrated open-feature">
             <div class="feature-copy">
@@ -113,7 +113,7 @@ const faqSchema = {
                 </p>
                 <TextLink href="/build">Look under the hood</TextLink>
             </div>
-            <Artwork normalized name="roots" />
+            <Artwork name="roots" />
         </section>
         <section class="feature-block illustrated community-feature">
             <div class="feature-copy">
@@ -124,7 +124,7 @@ const faqSchema = {
                 </p>
                 <TextLink href="/contribute">Find your way to contribute</TextLink>
             </div>
-            <Artwork normalized name="community" />
+            <Artwork name="community" />
         </section>
     </div>
     <section class="faq-section" id="faqs">

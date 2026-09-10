@@ -1,8 +1,8 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
 import Artwork from "$lib/components/rebuild/Artwork.svelte";
-import LinkButton from "$lib/components/rebuild/LinkButton.svelte";
 import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
+import Action from "$lib/components/system/Action.svelte";
 import Grid from "$lib/components/system/Grid.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 
@@ -54,7 +54,7 @@ const schema = {
         {#each options as option}<section class="download-option">
                 <h2>{option.name}</h2>
                 <p>{option.description}</p>
-                <LinkButton external href={option.href} label={option.method} />
+                <Action external href={option.href} label={option.method} icon="external" />
             </section>{/each}
     </Grid>
     <section class="download-help">
