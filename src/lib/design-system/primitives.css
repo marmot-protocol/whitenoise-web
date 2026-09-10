@@ -1,0 +1,156 @@
+/* Shared structural primitives. Type rules are generated from typography.json. */
+.system-text {
+    font-family: var(--font-sans);
+}
+.type-hero {
+    font-weight: var(--weight-heavy);
+}
+.tone-ink {
+    color: var(--color-ink);
+}
+.tone-muted {
+    color: var(--color-muted);
+}
+.tone-inverse {
+    color: var(--color-paper);
+}
+.system-icon {
+    display: inline-flex;
+    width: var(--icon-control);
+    height: var(--icon-control);
+    flex: none;
+}
+.system-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.icon-button {
+    display: inline-grid;
+    place-items: center;
+    min-width: var(--icon-target);
+    min-height: var(--icon-target);
+    border: 0;
+    background: transparent;
+    color: var(--color-muted);
+}
+.icon-button:hover {
+    color: var(--color-ink);
+}
+.wn-button {
+    border: 0;
+    border-radius: var(--radius-square);
+}
+.wn-button.inverse {
+    background: var(--color-paper);
+    color: var(--color-ink);
+}
+.wn-button.inverse:hover {
+    background: var(--color-rule);
+}
+.wn-button:disabled {
+    background: var(--color-surface);
+    color: var(--color-secondary);
+    cursor: not-allowed;
+}
+.system-surface {
+    --surface: var(--color-surface);
+    background: var(--surface);
+    box-shadow: 0 0 0 var(--full-bleed-extent) var(--surface);
+    clip-path: inset(0 calc(var(--full-bleed-extent) * -1));
+}
+.surface-paper {
+    --surface: var(--color-paper);
+}
+.surface-ink {
+    --surface: var(--color-ink);
+    color: var(--color-paper);
+}
+.wn-site .surface-ink :focus-visible {
+    outline-color: var(--color-paper);
+}
+.system-grid {
+    display: grid;
+    gap: var(--space-48) var(--space-80);
+}
+.system-grid > * {
+    min-width: 0;
+}
+.grid-2 {
+    grid-template-columns: var(--grid-equal-pair);
+}
+.grid-3 {
+    grid-template-columns: var(--grid-thirds);
+    gap: var(--space-40);
+}
+@media (max-width: 900px) {
+    .grid-3 {
+        gap: var(--space-24);
+    }
+}
+@media (max-width: 640px) {
+    .system-grid {
+        grid-template-columns: var(--grid-single);
+        gap: var(--space-36);
+    }
+}
+.footer-bottom {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-16) var(--space-32);
+}
+.design-system-link {
+    text-decoration: underline;
+    text-underline-offset: var(--space-4);
+}
+.design-system-link:hover {
+    color: var(--color-paper);
+}
+.wn-site .site-footer a:focus-visible {
+    outline-color: var(--color-paper);
+}
+.technical-scroll {
+    overflow-x: auto;
+}
+.technical-content table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.technical-content th {
+    font-weight: var(--weight-bold);
+}
+.technical-content :is(th, td) {
+    padding: var(--space-12) var(--space-24) var(--space-12) 0;
+    vertical-align: top;
+}
+.technical-content thead {
+    border-bottom: var(--stroke-focus) solid var(--color-rule-strong);
+}
+.technical-content tbody tr {
+    border-bottom: var(--stroke-hairline) solid var(--color-rule);
+}
+.technical-content :is(p, li, td) {
+    color: var(--color-muted);
+}
+.technical-content :is(pre, code) {
+    font-family: var(--font-mono);
+    font-size: var(--type-size-14px);
+}
+.technical-content pre {
+    padding: var(--space-24);
+    overflow-x: auto;
+}
+.technical-content ul {
+    list-style: disc;
+    padding-left: var(--space-24);
+}
+.technical-content li + li {
+    margin-top: var(--space-8);
+}
+.technical-status {
+    background: var(--color-surface);
+    padding: var(--stroke-focus) var(--space-8);
+    font-size: var(--type-size-12px);
+}

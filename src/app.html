@@ -2,9 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>White Noise</title>
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="shortcut icon" href="/favicon.ico" />
@@ -13,36 +11,9 @@
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site overview" />
 		<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete developer documentation" />
-		<meta name="description" content="A secure and private messenger that's lightning fast, scalable, and identity-free." />
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.whitenoise.chat" />
-		<meta property="og:title" content="White Noise - Secure Private Messenger" />
-		<meta property="og:description" content="A secure and private messenger that's lightning fast, scalable, and identity-free." />
-		<meta property="og:image" content="https://www.whitenoise.chat/images/og_preview@1x.png" />
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://www.whitenoise.chat" />
-		<meta property="twitter:title" content="White Noise - Secure Private Messenger" />
-		<meta property="twitter:description" content="A secure and private messenger that's lightning fast, scalable, and identity-free." />
-		<meta property="twitter:image" content="https://www.whitenoise.chat/images/og_preview@1x.png" />
 		<script defer src="https://analytics.ipf.dev/script.js" data-website-id="2ac5224d-9aa0-4aea-b576-c6e2d4eaa339"></script>
 		%sveltekit.head%
-		<script>
-			// Check if dark mode is preferred
-			if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
-			  document.documentElement.classList.add('dark');
-			}
 
-			// Listen for changes in dark mode preference
-			window.matchMedia?.('(prefers-color-scheme: dark)').addEventListener('change', e => {
-			  if (e.matches) {
-				document.documentElement.classList.add('dark');
-			  } else {
-				document.documentElement.classList.remove('dark');
-			  }
-			});
-		  </script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>

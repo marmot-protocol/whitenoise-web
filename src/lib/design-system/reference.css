@@ -1,0 +1,348 @@
+.design-reference {
+    padding-bottom: var(--space-48);
+}
+.ds-introduction,
+.ds-lead {
+    max-width: var(--size-reading);
+}
+.ds-section {
+    margin-top: var(--space-96);
+    scroll-margin-top: var(--space-104);
+}
+.ds-section > .system-text {
+    margin-bottom: var(--space-24);
+}
+.ds-lead {
+    font-size: var(--type-size-18px);
+    line-height: var(--leading-1-75);
+    color: var(--color-muted);
+    margin-bottom: var(--space-36);
+}
+.ds-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-16) var(--space-24);
+    margin-top: var(--space-40);
+    font-weight: var(--weight-semibold);
+}
+.ds-index a,
+.ds-details summary {
+    text-underline-offset: var(--space-4);
+}
+.ds-index a:hover {
+    text-decoration: underline;
+}
+.ds-colors {
+    display: grid;
+    grid-template-columns: var(--grid-thirds);
+    gap: var(--space-40) var(--space-32);
+}
+.ds-color {
+    min-width: 0;
+}
+.ds-swatch {
+    height: var(--space-80);
+    outline: var(--stroke-hairline) solid var(--color-rule);
+    outline-offset: calc(var(--stroke-hairline) * -1);
+    margin-bottom: var(--space-16);
+}
+.ds-color h3,
+.ds-icon-grid h3,
+.ds-meta h3,
+.ds-recipe-record h3 {
+    font-size: var(--type-size-16px);
+    font-weight: var(--weight-semibold);
+    overflow-wrap: anywhere;
+}
+.design-reference code {
+    font-family: var(--font-mono);
+    font-size: var(--type-size-13px);
+    overflow-wrap: anywhere;
+}
+.ds-color p,
+.ds-icon-grid p,
+.ds-grid-demo p,
+.ds-art h3 {
+    font-size: var(--type-size-16px);
+    line-height: var(--leading-1-6);
+    color: var(--color-muted);
+    margin-top: var(--space-8);
+}
+.ds-status {
+    display: inline-block;
+    font-size: var(--type-size-13px);
+    margin-top: var(--space-8);
+    font-weight: var(--weight-semibold);
+}
+.ds-subtitle {
+    font-size: var(--type-size-24px);
+    font-weight: var(--weight-bold);
+    margin-block: var(--space-48) var(--space-24);
+}
+.ds-table-wrap {
+    overflow-x: auto;
+}
+.ds-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: var(--type-size-14px);
+    line-height: var(--leading-1-6);
+}
+.ds-table :is(th, td) {
+    padding: var(--space-16) var(--space-24) var(--space-16) 0;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+.ds-table th {
+    font-weight: var(--weight-semibold);
+}
+.ds-table td {
+    color: var(--color-muted);
+}
+.ds-table caption {
+    text-align: left;
+    color: var(--color-muted);
+    margin-bottom: var(--space-16);
+}
+.ds-weights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-32);
+    margin-block: var(--space-40);
+}
+.ds-weights p {
+    font-size: var(--type-size-38px);
+}
+.ds-weights span {
+    display: block;
+    font-size: var(--type-size-13px);
+    font-weight: var(--weight-regular);
+    color: var(--color-muted);
+}
+.ds-type-specimen {
+    margin-block: var(--space-64);
+}
+.ds-type-specimen > .system-text {
+    overflow-wrap: anywhere;
+}
+.ds-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-8) var(--space-24);
+    margin-bottom: var(--space-24);
+}
+.ds-note {
+    color: var(--color-muted);
+    font-size: var(--type-size-14px);
+    line-height: var(--leading-1-65);
+    max-width: var(--size-reading);
+    margin-block: var(--space-24);
+}
+.ds-details {
+    margin-block: var(--space-24);
+    font-size: var(--type-size-14px);
+    line-height: var(--leading-1-65);
+}
+.ds-details > summary {
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+}
+.ds-details > :not(summary) {
+    margin-top: var(--space-16);
+}
+.ds-recipe {
+    display: grid;
+    grid-template-columns: var(--grid-recipe);
+    gap: var(--space-8) var(--space-24);
+    max-width: var(--size-reading);
+}
+.ds-recipe-record {
+    margin-block: var(--space-32);
+}
+.ds-spacing > div {
+    display: grid;
+    grid-template-columns: var(--grid-spacing-specimen);
+    align-items: center;
+    gap: var(--space-16);
+    margin-block: var(--space-12);
+    max-width: var(--size-reading);
+    font-size: var(--type-size-13px);
+}
+.ds-space-bar {
+    height: var(--space-12);
+    max-width: 100%;
+    background: var(--color-ink);
+}
+.ds-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-12);
+    min-height: var(--icon-target);
+    font-size: var(--type-size-14px);
+}
+.ds-toggle input {
+    accent-color: var(--color-ink);
+}
+.ds-grid-demo > .system-grid {
+    margin-block: var(--space-32);
+}
+.ds-grid-demo .system-grid > div {
+    padding-block: var(--space-24);
+}
+.ds-grid-demo.show-guides .system-grid > div {
+    background: var(--color-surface);
+    outline: var(--stroke-hairline) solid var(--color-rule);
+}
+.ds-action-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-24);
+    margin-block: var(--space-32);
+}
+.ds-action-row .text-link {
+    margin-top: 0;
+}
+.ds-surface-demo {
+    padding-block: var(--space-48);
+    margin-block: var(--space-48);
+}
+.ds-surface-demo .wn-button {
+    margin-top: var(--space-24);
+}
+.ds-copy-demo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-12);
+    padding-block: var(--space-24);
+    color: var(--color-muted);
+}
+.ds-copy-demo > span:first-child {
+    user-select: all;
+    overflow-wrap: anywhere;
+}
+.ds-details pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    padding: var(--space-24);
+    background: var(--color-surface);
+}
+.ds-icon-grid {
+    display: grid;
+    grid-template-columns: var(--grid-four);
+    gap: var(--space-40);
+}
+.ds-icon-grid article {
+    min-width: 0;
+}
+.ds-icon-grid h3 {
+    margin-top: var(--space-16);
+}
+.ds-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-32);
+    margin-block: var(--space-32);
+    max-width: var(--size-reading);
+}
+.ds-brand img {
+    width: var(--size-logo);
+    filter: brightness(0);
+}
+.ds-brand p {
+    color: var(--color-muted);
+    line-height: var(--leading-1-6);
+}
+.ds-art .artwork {
+    margin-inline: auto;
+}
+.ds-supporter-demo {
+    margin-top: var(--space-48);
+}
+.ds-supporter-demo .supporters {
+    margin-bottom: 0;
+}
+.ds-patterns {
+    display: grid;
+    grid-template-columns: var(--grid-definition);
+    gap: var(--space-24) var(--space-40);
+    line-height: var(--leading-1-65);
+}
+.ds-patterns dt {
+    font-weight: var(--weight-semibold);
+}
+.ds-patterns dd {
+    color: var(--color-muted);
+}
+.ds-review-list {
+    list-style: decimal;
+    padding-left: var(--space-24);
+    max-width: var(--size-reading);
+    line-height: var(--leading-1-75);
+}
+.ds-review-list li {
+    margin-block: var(--space-24);
+}
+.ds-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-24);
+    align-items: flex-end;
+    margin-block: var(--space-32);
+}
+.ds-filters label:not(.ds-toggle) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    font-size: var(--type-size-14px);
+    flex: 1;
+    min-width: 0;
+}
+.ds-filters :is(input[type="search"], select) {
+    padding: var(--space-12);
+    min-height: var(--icon-target);
+    background: var(--color-surface);
+    border: var(--stroke-hairline) solid var(--color-rule);
+    border-radius: var(--radius-square);
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .ds-colors {
+        grid-template-columns: var(--grid-equal-pair);
+    }
+    .ds-icon-grid {
+        grid-template-columns: var(--grid-thirds);
+    }
+}
+@media (max-width: 640px) {
+    .ds-section {
+        margin-top: var(--space-64);
+    }
+    .ds-colors {
+        grid-template-columns: var(--grid-single);
+    }
+    .ds-icon-grid {
+        grid-template-columns: var(--grid-equal-pair);
+        gap: var(--space-24);
+    }
+    .ds-patterns {
+        grid-template-columns: var(--grid-single);
+        gap: var(--space-8);
+    }
+    .ds-patterns dt {
+        margin-top: var(--space-24);
+    }
+    .ds-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .ds-table :is(th, td) {
+        padding-right: var(--space-12);
+    }
+    .ds-recipe {
+        grid-template-columns: var(--grid-single);
+    }
+}

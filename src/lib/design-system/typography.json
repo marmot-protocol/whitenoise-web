@@ -1,0 +1,593 @@
+[
+    {
+        "id": "desktop-nav-a",
+        "selectors": ".desktop-nav a",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-15px)",
+            "font-weight": "var(--weight-semibold)"
+        }
+    },
+    {
+        "id": "hero-title",
+        "selectors": ".hero-title",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-home-display)",
+            "line-height": "var(--leading-1-08)",
+            "letter-spacing": "var(--tracking-0-055em)"
+        }
+    },
+    {
+        "id": "home-hero-h1",
+        "selectors": ".home-hero h1",
+        "media": null,
+        "properties": {
+            "font-size": "inherit",
+            "font-weight": "var(--weight-heavy)",
+            "line-height": "inherit",
+            "letter-spacing": "inherit"
+        }
+    },
+    {
+        "id": "hero-tagline",
+        "selectors": ".hero-tagline",
+        "media": null,
+        "properties": {
+            "font-size": "inherit",
+            "font-weight": "var(--weight-semibold)",
+            "line-height": "inherit",
+            "letter-spacing": "inherit"
+        }
+    },
+    {
+        "id": "wn-button",
+        "selectors": ".wn-button",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-15px)",
+            "font-weight": "var(--weight-semibold)"
+        }
+    },
+    {
+        "id": "feature-block-h2",
+        "selectors": ".feature-block h2,\n.faq-section h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-feature-display)",
+            "line-height": "var(--leading-1-08)",
+            "letter-spacing": "var(--tracking-0-045em)",
+            "font-weight": "var(--weight-bold)"
+        }
+    },
+    {
+        "id": "feature-copy-p",
+        "selectors": ".feature-copy p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-19px)",
+            "line-height": "var(--leading-1-6)"
+        }
+    },
+    {
+        "id": "text-link",
+        "selectors": ".text-link",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-15px)",
+            "font-weight": "var(--weight-link)"
+        }
+    },
+    {
+        "id": "supporters-p",
+        "selectors": ".supporters > p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "line-height": "var(--leading-1-5)"
+        }
+    },
+    {
+        "id": "faq-items-summary",
+        "selectors": ".faq-items summary",
+        "media": null,
+        "properties": {
+            "font-weight": "var(--weight-semibold)",
+            "font-size": "var(--type-size-17px)"
+        }
+    },
+    {
+        "id": "faq-items-details-p",
+        "selectors": ".faq-items details p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16px)",
+            "line-height": "var(--leading-1-65)"
+        }
+    },
+    {
+        "id": "download-closing-h2",
+        "selectors": ".download-closing h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-closing-display)",
+            "line-height": "var(--leading-1-04)",
+            "font-weight": "var(--weight-display)",
+            "letter-spacing": "var(--tracking-0-055em)"
+        }
+    },
+    {
+        "id": "muted",
+        "selectors": ".muted",
+        "media": null,
+        "properties": {
+            "font-weight": "var(--weight-regular)"
+        }
+    },
+    {
+        "id": "footer-bottom",
+        "selectors": ".footer-bottom",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-12px)"
+        }
+    },
+    {
+        "id": "eyebrow",
+        "selectors": ".eyebrow",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-13px)",
+            "font-weight": "var(--weight-semibold)"
+        }
+    },
+    {
+        "id": "page-intro-h1",
+        "selectors": ".page-intro h1,\n.legal-policy h1",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-page-display)",
+            "line-height": "var(--leading-1-02)",
+            "letter-spacing": "var(--tracking-0-06em)",
+            "font-weight": "var(--weight-display)"
+        }
+    },
+    {
+        "id": "page-description",
+        "selectors": ".page-description",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-21px)",
+            "line-height": "var(--leading-1-55)"
+        }
+    },
+    {
+        "id": "download-option-h2",
+        "selectors": ".download-option h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-30px)",
+            "font-weight": "var(--weight-link)",
+            "letter-spacing": "var(--tracking-0-035em)"
+        }
+    },
+    {
+        "id": "download-option-p",
+        "selectors": ".download-option p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16px)",
+            "line-height": "var(--leading-1-6)"
+        }
+    },
+    {
+        "id": "download-help-h2",
+        "selectors": ".download-help h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-38px)",
+            "line-height": "var(--leading-1-12)",
+            "font-weight": "var(--weight-bold)",
+            "letter-spacing": "var(--tracking-0-04em)"
+        }
+    },
+    {
+        "id": "download-help-p",
+        "selectors": ".download-help p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "line-height": "var(--leading-1-6)"
+        }
+    },
+    {
+        "id": "article-body-h2",
+        "selectors": ".article-body h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-34px)",
+            "font-weight": "var(--weight-bold)",
+            "letter-spacing": "var(--tracking-0-035em)",
+            "line-height": "var(--leading-1-15)"
+        }
+    },
+    {
+        "id": "article-body-p",
+        "selectors": ".article-body p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "line-height": "var(--leading-1-75)"
+        }
+    },
+    {
+        "id": "contribution-list-h2",
+        "selectors": ".contribution-list h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-30px)",
+            "letter-spacing": "var(--tracking-0-035em)",
+            "font-weight": "var(--weight-bold)"
+        }
+    },
+    {
+        "id": "contribution-list-p",
+        "selectors": ".contribution-list p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-17px)",
+            "line-height": "var(--leading-1-65)"
+        }
+    },
+    {
+        "id": "donation-section-h2",
+        "selectors": ".donation-section h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-38px)",
+            "font-weight": "var(--weight-bold)",
+            "letter-spacing": "var(--tracking-0-04em)"
+        }
+    },
+    {
+        "id": "donation-intro-p",
+        "selectors": ".donation-intro p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "line-height": "var(--leading-1-7)"
+        }
+    },
+    {
+        "id": "donation-label",
+        "selectors": ".donation-label",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-24px)",
+            "font-weight": "var(--weight-bold)",
+            "line-height": "var(--leading-1-2)",
+            "letter-spacing": "var(--tracking-0-035em)"
+        }
+    },
+    {
+        "id": "donation-address-text",
+        "selectors": ".donation-address-text",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16px)",
+            "line-height": "var(--leading-1-5)"
+        }
+    },
+    {
+        "id": "blog-entry-h2",
+        "selectors": ".blog-entry h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-32px)",
+            "font-weight": "var(--weight-link)",
+            "letter-spacing": "var(--tracking-0-035em)",
+            "line-height": "var(--leading-1-2)"
+        }
+    },
+    {
+        "id": "blog-entry-p",
+        "selectors": ".blog-entry p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-17px)",
+            "line-height": "var(--leading-1-6)"
+        }
+    },
+    {
+        "id": "blog-entry-time",
+        "selectors": ".blog-entry time",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-13px)"
+        }
+    },
+    {
+        "id": "empty-blog-h2",
+        "selectors": ".empty-blog h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-30px)",
+            "font-weight": "var(--weight-semibold)"
+        }
+    },
+    {
+        "id": "empty-blog-p",
+        "selectors": ".empty-blog p",
+        "media": null,
+        "properties": {
+            "line-height": "var(--leading-1-6)"
+        }
+    },
+    {
+        "id": "technical-content-h2",
+        "selectors": ".technical-content h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-32px)",
+            "letter-spacing": "var(--tracking-0-035em)",
+            "line-height": "var(--leading-1-15)"
+        }
+    },
+    {
+        "id": "technical-content-is-p",
+        "selectors": ".technical-content :is(p, li, td)",
+        "media": null,
+        "properties": {
+            "line-height": "var(--leading-1-65)"
+        }
+    },
+    {
+        "id": "legal-policy-is-ul",
+        "selectors": ".legal-policy :is(ul, ol)",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "line-height": "var(--leading-1-75)"
+        }
+    },
+    {
+        "id": "canary-attestation-h3",
+        "selectors": ".canary-attestation h3",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "font-weight": "var(--weight-semibold)",
+            "line-height": "var(--leading-1-5)"
+        }
+    },
+    {
+        "id": "canary-attestation-text-link",
+        "selectors": ".canary-attestation .text-link",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16px)"
+        }
+    },
+    {
+        "id": "prose",
+        "selectors": ".wn-site .prose",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18px)",
+            "line-height": "var(--leading-1-75)"
+        }
+    },
+    {
+        "id": "prose-h1",
+        "selectors": ".wn-site .prose h1",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-rich-display)",
+            "line-height": "var(--leading-1-04)",
+            "font-weight": "var(--weight-display)",
+            "letter-spacing": "var(--tracking-0-05em)"
+        }
+    },
+    {
+        "id": "prose-h2",
+        "selectors": ".wn-site .prose h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-32px)",
+            "line-height": "var(--leading-1-18)",
+            "font-weight": "var(--weight-bold)",
+            "letter-spacing": "var(--tracking-0-035em)"
+        }
+    },
+    {
+        "id": "prose-h3",
+        "selectors": ".wn-site .prose h3",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-24px)",
+            "font-weight": "var(--weight-link)"
+        }
+    },
+    {
+        "id": "article-heading",
+        "selectors": ".article-heading",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-article-display)",
+            "line-height": "var(--leading-1-06)",
+            "letter-spacing": "var(--tracking-0-045em)",
+            "font-weight": "var(--weight-display)"
+        }
+    },
+    {
+        "id": "article-summary",
+        "selectors": ".article-summary",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-22px)",
+            "line-height": "var(--leading-1-6)"
+        }
+    },
+    {
+        "id": "feature-copy-p-tablet",
+        "selectors": ".feature-copy p",
+        "media": 900,
+        "properties": {
+            "font-size": "var(--type-size-18px)"
+        }
+    },
+    {
+        "id": "menu-toggle",
+        "selectors": ".menu-toggle",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-14px)"
+        }
+    },
+    {
+        "id": "mobile-nav-a",
+        "selectors": ".mobile-nav a",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-19px)"
+        }
+    },
+    {
+        "id": "hero-title-mobile",
+        "selectors": ".hero-title",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-home-display-mobile)",
+            "letter-spacing": "var(--tracking-0-05em)",
+            "line-height": "var(--leading-1-1)"
+        }
+    },
+    {
+        "id": "feature-block-h2-mobile",
+        "selectors": ".feature-block h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-34px)"
+        }
+    },
+    {
+        "id": "feature-copy-p-mobile",
+        "selectors": ".feature-copy p",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-17px)"
+        }
+    },
+    {
+        "id": "faq-section-h2",
+        "selectors": ".faq-section h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-36px)"
+        }
+    },
+    {
+        "id": "faq-items-summary-mobile",
+        "selectors": ".faq-items summary",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-16px)"
+        }
+    },
+    {
+        "id": "download-closing-h2-mobile",
+        "selectors": ".download-closing h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-closing-display-mobile)"
+        }
+    },
+    {
+        "id": "legal-policy-is-ul-mobile",
+        "selectors": ".legal-policy :is(ul, ol)",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-17px)"
+        }
+    },
+    {
+        "id": "page-intro-h1-mobile",
+        "selectors": ".page-intro h1,\n    .legal-policy h1",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-page-display-mobile)"
+        }
+    },
+    {
+        "id": "page-description-mobile",
+        "selectors": ".page-description",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-18px)"
+        }
+    },
+    {
+        "id": "download-help-h2-mobile",
+        "selectors": ".download-help h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-32px)"
+        }
+    },
+    {
+        "id": "article-body-h2-mobile",
+        "selectors": ".article-body h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-30px)"
+        }
+    },
+    {
+        "id": "article-body-p-mobile",
+        "selectors": ".article-body p",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-17px)"
+        }
+    },
+    {
+        "id": "donation-section-h2-mobile",
+        "selectors": ".donation-section h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-32px)"
+        }
+    },
+    {
+        "id": "donation-controls-wn-button",
+        "selectors": ".donation-controls .wn-button",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-14px)"
+        }
+    },
+    {
+        "id": "blog-entry-h2-mobile",
+        "selectors": ".blog-entry h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-27px)"
+        }
+    },
+    {
+        "id": "technical-content-h2-mobile",
+        "selectors": ".technical-content h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-28px)"
+        }
+    },
+    {
+        "id": "prose-mobile",
+        "selectors": ".wn-site .prose",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-17px)"
+        }
+    }
+]

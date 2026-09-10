@@ -1,16 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-    font-family: "OverusedGrotesk";
-    src: url("/fonts/OverusedGrotesk-VF.woff2") format("woff2-variations");
-    font-weight: 100 200 300 400 500 600 700 800 900;
-    font-style: normal;
-    font-display: swap;
-    font-variation-settings:
-        "wght" 100 900,
-        "slnt" 0 -10;
-}
-
 @theme {
     /* Glitch */
     --color-glitch-50: hsl(0 0% 98%);
@@ -62,5 +51,5 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    font-family: "OverusedGrotesk", sans-serif;
+    font-family: var(--font-sans);
 }

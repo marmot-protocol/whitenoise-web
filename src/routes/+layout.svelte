@@ -1,37 +1,41 @@
 <script lang="ts">
+import "@fontsource-variable/manrope";
 import "../app.css";
-import Footer from "$lib/components/Footer.svelte";
-import Header from "$lib/components/Header.svelte";
+import "$lib/design-system/tokens.css";
+import "$lib/design-system/primitives.css";
+import "../rebuild.css";
+import "$lib/design-system/typography.css";
 import JsonLd from "$lib/components/JsonLd.svelte";
+import DownloadClosing from "$lib/components/rebuild/DownloadClosing.svelte";
+import Footer from "$lib/components/rebuild/Footer.svelte";
+import Header from "$lib/components/rebuild/Header.svelte";
+import Container from "$lib/components/system/Container.svelte";
 
 const { children } = $props();
-
 const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "White Noise",
     url: "https://www.whitenoise.chat",
     description:
-        "A secure and private messenger that's lightning fast, scalable, and identity-free.",
+        "A private, open-source messenger. End-to-end encrypted conversations without a phone number or email.",
     inLanguage: "en",
     publisher: {
         "@type": "Organization",
         name: "The Marmot Protocol",
         url: "https://github.com/marmot-protocol",
-        sameAs: [
-            "https://github.com/marmot-protocol/whitenoise",
-            "https://github.com/marmot-protocol/marmot",
-        ],
     },
 };
 </script>
 
+<svelte:head><meta name="theme-color" content="#ffffff" /></svelte:head>
 <JsonLd schema={websiteSchema} />
-
-<div class="min-h-screen flex flex-col">
+<div class="wn-site">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <Header />
-    <main class="flex-1">
+    <main id="main-content" tabindex="-1">
         {@render children()}
+        <Container><DownloadClosing /></Container>
     </main>
     <Footer />
 </div>
