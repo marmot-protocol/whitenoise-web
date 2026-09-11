@@ -26,6 +26,7 @@
         "@sveltejs/kit": "^2.70.3",
         "@sveltejs/vite-plugin-svelte": "^7.3.0",
         "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^22",
         "@types/sanitize-html": "^2.16.1",
         "@vitest/coverage-v8": "5.0.0",
         "carbon-icons-svelte": "^13.14.0",
