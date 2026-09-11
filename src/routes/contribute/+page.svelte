@@ -1,7 +1,7 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
-import Artwork from "$lib/components/rebuild/Artwork.svelte";
-import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
+import Artwork from "$lib/components/site/Artwork.svelte";
+import PageIntro from "$lib/components/site/PageIntro.svelte";
 import CopyButton from "$lib/components/system/CopyButton.svelte";
 import Grid from "$lib/components/system/Grid.svelte";
 import Surface from "$lib/components/system/Surface.svelte";

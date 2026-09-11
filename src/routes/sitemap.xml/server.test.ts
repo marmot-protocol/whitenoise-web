@@ -4,7 +4,7 @@ const { fetchBlogPostsCachedMock } = vi.hoisted(() => ({
     fetchBlogPostsCachedMock: vi.fn(),
 }));
 
-vi.mock("$lib/nostr", () => ({
+vi.mock("$lib/server/nostr", () => ({
     fetchBlogPostsCached: fetchBlogPostsCachedMock,
 }));
 
@@ -51,7 +51,7 @@ describe("sitemap GET", () => {
         expect(response.headers.get("Cache-Control")).toBe("max-age=86400");
         expect(xml).toContain("<loc>https://www.whitenoise.chat/build</loc>");
         expect(xml).toContain("<loc>https://www.whitenoise.chat/blog/naddr1blog</loc>");
-        expect(xml).toContain("<lastmod>2023-11-16</lastmod>");
+        expect(xml).toContain("<lastmod>2023-11-14</lastmod>");
     });
 
     it("escapes blog urls in the generated xml", async () => {
@@ -79,14 +79,9 @@ describe("sitemap GET", () => {
         );
     });
 
-    it("still returns a sitemap when fetching blog posts fails", async () => {
+    it("returns a retryable failure instead of publishing an incomplete sitemap", async () => {
         fetchBlogPostsCachedMock.mockRejectedValue(new Error("relay down"));
 
-        const response = await GET(createRequestEvent());
-        const xml = await response.text();
-
-        expect(response.status).toBe(200);
-        expect(xml).toContain("<loc>https://www.whitenoise.chat/</loc>");
-        expect(xml).not.toContain("<loc>https://www.whitenoise.chat/blog/naddr");
+        await expect(GET(createRequestEvent())).rejects.toMatchObject({ status: 503 });
     });
 });

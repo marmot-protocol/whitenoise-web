@@ -12,3 +12,5 @@ export const load: PageServerLoad = ({ params, url }) => {
     if (canonical !== url.pathname) redirect(307, canonical);
     redirect(307, `https://github.com/marmot-protocol/${repo}/blob/master/${path}`);
 };
+
+export const prerender = false;

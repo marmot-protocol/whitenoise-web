@@ -22,7 +22,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Which devices can I use?",
                 featured: true,
-                answer: "Our download page currently offers the iPhone beta through TestFlight and a direct Android APK. White Noise is in beta, so installation options and features may change between releases.",
+                answer: "Our download page currently offers Android through Zapstore and a direct APK. App Store and Google Play links are not available yet. White Noise is in beta, so installation options and features may change between releases.",
                 link: { label: "See download options", href: "/download" },
             },
             {

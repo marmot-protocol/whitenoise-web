@@ -35,3 +35,7 @@ export function pixels(id: string) {
 export function describeValue(value: string): string {
     return value.replace(/var\(--([\w-]+)\)/g, (_, id: string) => tokenById[id]?.value ?? id);
 }
+
+export function renderRuntime() {
+    return `// Generated from the design-system catalog. Run bun run tokens:generate.\nexport const breakpoints = { mobile: ${breakpoints.mobile}, tablet: ${breakpoints.tablet} } as const;\nexport const copyFeedbackMs = ${motion.copyFeedbackMs};\n`;
+}

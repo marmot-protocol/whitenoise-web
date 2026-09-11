@@ -1,7 +1,7 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
-import Artwork from "$lib/components/rebuild/Artwork.svelte";
-import Supporters from "$lib/components/rebuild/Supporters.svelte";
+import Artwork from "$lib/components/site/Artwork.svelte";
+import Supporters from "$lib/components/site/Supporters.svelte";
 import Action from "$lib/components/system/Action.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";

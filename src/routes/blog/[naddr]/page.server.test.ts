@@ -10,8 +10,9 @@ vi.mock("$lib/nostr", () => ({
     BLOG_PUBKEY: "expected-pubkey",
     KIND_LONG_FORM: 30023,
     decodeNaddr: decodeNaddrMock,
-    fetchBlogPostCached: fetchBlogPostCachedMock,
 }));
+
+vi.mock("$lib/server/nostr", () => ({ fetchBlogPostCached: fetchBlogPostCachedMock }));
 
 vi.mock("$lib/server/blog-markdown", () => ({
     renderBlogHtml: renderBlogHtmlMock,
@@ -80,6 +81,14 @@ describe("blog post page load", () => {
         expect(fetchBlogPostCachedMock).toHaveBeenCalledWith("post");
     });
 
+    it("reports a relay outage as retryable instead of not found", async () => {
+        decodeNaddrMock.mockReturnValue({ dTag: "post", kind: 30023, pubkey: "expected-pubkey" });
+        fetchBlogPostCachedMock.mockRejectedValue(new Error("offline"));
+        const log = vi.spyOn(console, "error").mockImplementation(() => {});
+        await expect(load(createLoadEvent())).rejects.toMatchObject({ status: 503 });
+        log.mockRestore();
+    });
+
     it("returns the post and sanitized html for valid requests", async () => {
         const post = {
             content: "# Hello",
@@ -104,7 +113,14 @@ describe("blog post page load", () => {
         renderBlogHtmlMock.mockReturnValue("<h1>Hello</h1>");
 
         await expect(load(createLoadEvent())).resolves.toEqual({
-            post,
+            post: {
+                title: post.title,
+                summary: post.summary,
+                image: post.image,
+                naddr: post.naddr,
+                publishedAt: post.publishedAt,
+                createdAt: post.createdAt,
+            },
             safeHtml: "<h1>Hello</h1>",
         });
         expect(renderBlogHtmlMock).toHaveBeenCalledWith("# Hello");

@@ -4,12 +4,13 @@ The live reference is `/design-system`. It uses the same tokens and components a
 
 ## Sources of truth
 
+- `runtime.ts`: generated browser constants for breakpoints and copy feedback; avoids shipping token documentation on ordinary pages.
 - `tokens.json`: named colors, typography values, spacing, widths, grids, geometry, layers, icon sizes and motion. Each token records its purpose, consumers, and status. CSS dimensions use rem; documentation converts to pixels at the default 16px root. There are eight colors, eight size steps, four weights, four line heights, three tracking values, fourteen spacing steps and eight composition relationships.
 - `typography.json`: nine complete shared type roles plus their responsive overrides. `typography.ts` adds semantic Text roles to these same rules. Element semantics and visual role are independent.
 - `tokens.css` and `typography.css`: generated outputs. Edit the catalogs, then run `bun run tokens:generate`. Do not hand-edit these files.
 - `icons.ts`: the only active Carbon icon imports, plus the shared two-line `MenuIcon.svelte` glyph. Icons inherit text color; Icon supplies the shared size. Icons are decorative inside controls with accessible names.
 - `artwork.ts`: measured visible-pixel bounds of the source sculptures. Image geometry is source data, not a spacing scale. Artwork normalizes the transparent assets without modifying their pixels or logo geometry.
-- `primitives.css`: shared component structure and states. `src/rebuild.css` composes the existing pages using tokens. `reference.css` styles only the reference page.
+- `primitives.css`: shared component structure and states. `src/site.css` composes the existing pages using tokens. `reference.css` styles only the reference page.
 
 ## Composition and components
 
@@ -27,7 +28,7 @@ Use `src/lib/components/system` for new work:
 | Grid | Equal two/three-column grids; stacks at the mobile breakpoint. |
 | Surface | Paper, muted or ink full-width background while content retains the shared alignment. |
 
-Existing Header, PageIntro, Artwork, Supporters, DocumentationLayout and DownloadClosing remain composed patterns under `components/rebuild`. The root layout provides the same Header, closing statement and Footer on every route. The closing statement keeps one phrase per line with no wrapping, using container-relative type and the measured longest-line geometry to fit the available width. The hero tagline uses the same user-approved fitting approach at 900px and below, with fixed breaks after “identity-free” and “private”, capped at the 48px display step. Desktop keeps its natural wrapping. Other typography roles retain their existing steps. The document canvas matches the ink footer so overscroll and browser-filled bottom insets do not expose white; the site content and sticky header retain their paper surfaces. Footer bottom padding respects the device safe area. The redundant LinkButton wrapper and unnormalized Artwork branch have been removed. Existing page selectors consume the generated typography recipes; changing a recipe updates both its live page and its visual specimen.
+Existing Header, PageIntro, Artwork, Supporters, DocumentationLayout and DownloadClosing remain composed patterns under `components/site`. The root layout provides the same Header, closing statement and Footer on every route. The closing statement keeps one phrase per line with no wrapping, using container-relative type and the measured longest-line geometry to fit the available width. The hero tagline uses the same user-approved fitting approach at 900px and below, with fixed breaks after “identity-free” and “private”, capped at the 48px display step. Desktop keeps its natural wrapping. Other typography roles retain their existing steps. The document canvas matches the ink footer so overscroll and browser-filled bottom insets do not expose white; the site content and sticky header retain their paper surfaces. Footer bottom padding respects the device safe area. The redundant LinkButton wrapper and unnormalized Artwork branch have been removed. Existing page selectors consume the generated typography recipes; changing a recipe updates both its live page and its visual specimen.
 
 Full-bleed surfaces extend the shared container using shadow and clipping. Place them inside the site container, not inside a scroll-clipped wrapper. No page-specific copy of a button, icon or footer is needed.
 
@@ -71,7 +72,7 @@ At 900px and below, the September 11 user-approved section disclosure sits insid
 
 ## Remaining exception
 
-The user-selected pale hero gray (#9e9e9e) has approximately 2.68:1 contrast on white, below the 3:1 large-text AA threshold. It is the only review token and remains unchanged pending that specific visual decision. Inverse supporting text has a distinct contrast role on black.
+The user-selected pale hero gray (#9e9e9e) has approximately 2.68:1 contrast on white, below the 3:1 large-text AA threshold. It is the only review token and remains unchanged as an accepted exception after the user explicitly chose to retain it on September 11, 2026. Inverse supporting text has a distinct contrast role on black.
 
 ## Validation and reference access
 

@@ -4,8 +4,10 @@ Marketing and documentation site for White Noise, built with SvelteKit.
 
 ## Development
 
+Use Node 22 and Bun 1.4.2, matching CI and the Vercel runtime.
+
 ```bash
-bun install
+bun install --frozen-lockfile
 bun run dev
 ```
 
@@ -22,12 +24,26 @@ bun run build
 
 ## Site structure and maintenance
 
-- Shared navigation and the closing Download section live in `src/lib/components/rebuild` and are rendered once by the root layout. Shared UI primitives live in `src/lib/components/system`.
-- `src/lib/design-system/README.md` documents the active tokens, typography and component contracts. `/design-system` is the noindex reference, omitted from navigation and the sitemap. Run `bun run tokens:generate` after editing a catalog and commit its generated CSS with the source.
+- Shared navigation and the closing Download section live in `src/lib/components/site` and are rendered once by the root layout. Shared UI primitives live in `src/lib/components/system`.
+- `src/lib/design-system/README.md` documents the active tokens, typography and component contracts. `/design-system` is the noindex reference, omitted from navigation and the sitemap. Run `bun run tokens:generate` after editing a catalog and include its generated CSS and runtime constants with the source.
 - Homepage and FAQ copy share `src/lib/content/homepage.ts`. The short Agents, Build and Marmot guides use local Markdown in `src/lib/content`; full upstream documentation remains on GitHub. Legacy documentation URLs retain their redirects.
 - Blog posts and canary attestations come from Nostr. Keep their loaders, sanitization, cache behavior and signed data intact. The privacy policy source is `src/lib/content/privacy-policy.md`.
 - Generated exports and temporary browser evidence belong in ignored `output/` or `tmp/` directories. They are not production assets. Superseded design explorations and screenshots remain recoverable from Git history.
 - The site uses the Vercel adapter. `bun run ci` runs the release checks locally; publishing still requires explicit authorization.
+
+## Production behavior
+
+Marketing pages and local FAQ/guide text are pre-rendered. Blog articles, canary attestations, dynamic documentation redirects and the sitemap remain server-rendered. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
+
+Relay transport lives under `src/lib/server`. It verifies signatures, author, kind and filters, chooses the newest replaceable event, and closes requests within ten seconds. Requests retain verified partial results. List and article caches coalesce concurrent reads, expire after five minutes, and allow at most one hour of stale blog content after refresh failures. Expired missing-post results are never served as stale content during an outage. Caches are process-local and bounded; they are not persistent storage. Canary data is cached for one minute with no stale-on-error fallback. The page renders the signed statement verbatim, escaped as text.
+
+The content security policy permits same-origin code and the existing `analytics.ipf.dev` service. Inline style attributes remain allowed for measured artwork and the live design reference; inline executable scripts require SvelteKit's generated hashes/nonces. Blog images may use HTTP(S) origins. Framing is denied, content sniffing is disabled, and cross-origin referrers are limited. Vercel applies the static-asset headers as well. Keep deployment policy in sync with the local server hooks.
+
+`/llms.txt` and `/llms-full.txt` retain their public URLs and are generated from the overview, FAQ and guide sources. They no longer claim to contain full upstream documentation. The sitemap reports article modification dates and does not invent fresh modification dates for static pages.
+
+The cookie dependency override applies the upstream 0.7.x validation fix for [GHSA-pxg6-pf52-xh8x](https://github.com/advisories/GHSA-pxg6-pf52-xh8x) while SvelteKit declares the older range. Recheck this override when updating SvelteKit; remove it once the framework resolves a fixed version itself.
+
+Existing `/images/rebuild/` paths are stable public asset URLs retained for compatibility. Site components and styles use durable `site` naming. The design system's documentation catalog is isolated from normal page runtime imports; small generated constants supply breakpoint and copy-feedback behavior.
 
 ## Artwork sources
 
@@ -49,6 +65,8 @@ The website copy is editable, but security and availability claims need source v
 Do not equate identity-key reuse with synchronized message history, claim guaranteed anonymity or connectivity, or imply that encrypted agent transport makes a cloud model run locally. Preserve donation addresses, payment URIs and download destinations unless an update is explicitly approved.
 
 Responsive release review should cover desktop, tablet, 320px, keyboard navigation and actual browser 200% zoom. A narrower viewport alone is not proof of a completed browser-zoom check.
+
+The security contact in `static/.well-known/security.txt` uses the [published IPF security address](https://raw.githubusercontent.com/marmot-protocol/marmot/master/dependency_reqs.md), replacing the archived app repository. Confirm that mailbox ownership remains current during release review.
 
 ## Canary attestations
 
@@ -137,3 +155,17 @@ This prints the event through `jq`, including:
 - `kind`
 - `content`
 - the full `tags` array
+
+## Release review — September 11, 2026
+
+The local hardening pass covers server/client boundaries, relay verification and failure handling, bounded caching, sanitization, dependency updates, CSP, static rendering, metadata, shared UI, and the active route/asset graph. CI passes under Node 22. The policy source, payment values and existing download URLs remain unchanged.
+
+Validation: 69 tests pass across 14 test files; lint, formatting, type checks and the Node 22 production build pass. The local production scan covers 29 pages (including 17 articles), referenced local assets and all 69 emitted client assets, plus legacy redirects and error responses. Browser checks cover 320, 640, 900, 901 and 1280px layouts, menus, sticky anchors, FAQ disclosure, address copying and its reset. Native Safari checks include actual 200% page zoom, compact navigation, guide disclosure/anchor positioning, and the continuous footer background. The blog listing response is approximately 39 KB after removing unused article bodies from page data.
+
+Remaining decisions before claiming full release readiness:
+
+- App Store and Google Play destination URLs have not been supplied. Their existing slots are disabled and availability copy is explicit; Zapstore and the APK link remain active.
+- The user explicitly retained the pale hero gray despite its sub-AA large-text contrast. This is an accepted visual exception, not a passed accessibility check.
+- “Holding Ourselves to It” on Privacy Matters contains absolute privacy/anonymization claims that conflict with the policy's stated limitations. Approval to align that paragraph is pending; the published policy itself is not changed.
+
+Vercel's build tracer still notes the optional `supports-color` dependency of `debug`; production builds and the tested routes work without it. No deployment, push or merge was performed. Release review should verify deployed headers/domain redirects and verify mobile Safari on a physical device before publishing.

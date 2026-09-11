@@ -1,7 +1,7 @@
 {
     "name": "White Noise",
     "short_name": "White Noise",
-    "description": "A secure and private messenger that's lightning fast, scalable, and identity-free.",
+    "description": "The identity-free messenger for private communication.",
     "icons": [
         {
             "src": "/web-app-manifest-192x192.png",
@@ -16,8 +16,8 @@
             "purpose": "maskable"
         }
     ],
-    "theme_color": "#0a0a0a",
-    "background_color": "#0a0a0a",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone",
     "start_url": "/",
     "scope": "/"

@@ -68,7 +68,6 @@
 .download-help p,
 .article-body p,
 .contribution-list p,
-.donation-intro p,
 .blog-entry p,
 .empty-blog p,
 .technical-content :is(p, li, td),
@@ -90,7 +89,6 @@
     letter-spacing: var(--tracking-normal);
 }
 .footer-bottom,
-.eyebrow,
 .blog-entry time,
 .type-caption {
     font-size: var(--type-size-14);
@@ -107,20 +105,6 @@
     .article-heading,
     .type-display {
         font-size: var(--type-size-48);
-        font-weight: var(--weight-heavy);
-        line-height: var(--leading-display);
-        letter-spacing: var(--tracking-display);
-    }
-}
-@media (max-width: 640px) {
-    .page-intro h1,
-    .legal-policy h1,
-    .article-heading,
-    .type-display {
-        font-size: var(--type-size-48);
-        font-weight: var(--weight-heavy);
-        line-height: var(--leading-display);
-        letter-spacing: var(--tracking-display);
     }
 }
 @media (max-width: 900px) {
@@ -130,9 +114,6 @@
     .blog-entry h2,
     .type-section {
         font-size: var(--type-size-36);
-        font-weight: var(--weight-bold);
-        line-height: var(--leading-heading);
-        letter-spacing: var(--tracking-heading);
     }
 }
 @media (max-width: 640px) {
@@ -141,9 +122,6 @@
     .wn-site .prose h1,
     .type-section {
         font-size: var(--type-size-24);
-        font-weight: var(--weight-bold);
-        line-height: var(--leading-heading);
-        letter-spacing: var(--tracking-heading);
     }
 }
 @media (max-width: 640px) {
@@ -151,9 +129,7 @@
     .article-summary,
     .type-lead {
         font-size: var(--type-size-18);
-        font-weight: var(--weight-regular);
         line-height: var(--leading-compact);
-        letter-spacing: var(--tracking-normal);
     }
 }
 @media (max-width: 640px) {
@@ -162,17 +138,13 @@
     .download-help p,
     .article-body p,
     .contribution-list p,
-    .donation-intro p,
     .blog-entry p,
     .empty-blog p,
     .technical-content :is(p, li, td),
     .legal-policy :is(ul, ol),
     .wn-site .prose,
     .type-body {
-        font-size: var(--type-size-18);
-        font-weight: var(--weight-regular);
         line-height: var(--leading-compact);
-        letter-spacing: var(--tracking-normal);
     }
 }
 @media (max-width: 900px) {
@@ -196,9 +168,6 @@
     .wn-site .prose h2,
     .type-heading {
         font-size: var(--type-size-24);
-        font-weight: var(--weight-bold);
-        line-height: var(--leading-heading);
-        letter-spacing: var(--tracking-heading);
     }
 }
 @media (max-width: 640px) {
@@ -206,8 +175,5 @@
     .documentation-body :is(h3, h4, h5, h6),
     .type-title {
         font-size: var(--type-size-18);
-        font-weight: var(--weight-bold);
-        line-height: var(--leading-heading);
-        letter-spacing: var(--tracking-heading);
     }
 }

@@ -1,46 +1,9 @@
 import { Marked } from "marked";
 import sanitizeHtml from "sanitize-html";
-import { type DocSource, docUrl, validDocSource } from "$lib/documentation";
 
-export function documentationLink(href: string, source: DocSource, known: Set<string>): string {
-    if (href.startsWith("#")) return href;
-    const base = `https://github.com/marmot-protocol/${source.repo}/blob/master/${source.path}`;
-    let url: URL;
-    try {
-        url = new URL(href, base);
-    } catch {
-        return href;
-    }
-    const parts = url.pathname.split("/").filter(Boolean);
-    let repo = "";
-    let path = "";
-    if (url.hostname === "github.com" && parts[0] === "marmot-protocol") {
-        repo = parts[1];
-        if (parts.length === 2) path = "README.md";
-        else if (["blob", "tree"].includes(parts[2]) && /^(master|[a-f0-9]{40})$/.test(parts[3]))
-            path = parts.slice(4).join("/");
-    } else if (
-        url.hostname === "raw.githubusercontent.com" &&
-        parts[0] === "marmot-protocol" &&
-        /^(master|[a-f0-9]{40})$/.test(parts[2])
-    ) {
-        repo = parts[1];
-        path = parts.slice(3).join("/");
-    }
-    if (path && !path.endsWith(".md") && known.has(`${repo}/${path.replace(/\/$/, "")}/README.md`))
-        path = `${path.replace(/\/$/, "")}/README.md`;
-    if (validDocSource(repo, path)) return docUrl({ repo, path }) + url.hash;
-    return url.href;
-}
-
-export function renderDocumentation(
-    markdown: string,
-    source: DocSource,
-    known: Set<string>,
-    options: { keepExternalLinks?: boolean } = {}
-) {
+export function renderDocumentation(markdown: string) {
     const headings: { id: string; text: string; depth: number }[] = [];
-    const slugs = new Map<string, number>();
+    const slugs = new Set<string>();
     let title = "Documentation";
     let foundTitle = false;
     const parser = new Marked({ gfm: true, breaks: false });
@@ -58,9 +21,10 @@ export function renderDocumentation(
                     .toLowerCase()
                     .replace(/[^\p{L}\p{N}_\s-]/gu, "")
                     .replace(/\s/g, "-");
-                const count = slugs.get(base) || 0;
-                slugs.set(base, count + 1);
-                const id = count ? `${base}-${count}` : base;
+                let id = base || "section";
+                let count = 1;
+                while (slugs.has(id)) id = `${base || "section"}-${count++}`;
+                slugs.add(id);
                 if (depth === 1 && !foundTitle) {
                     foundTitle = true;
                     title = text;
@@ -115,6 +79,7 @@ export function renderDocumentation(
             img: ["src", "alt", "title", "loading"],
         },
         allowedSchemes: ["https", "http", "mailto"],
+        allowedSchemesByTag: { img: ["https", "http"] },
         allowProtocolRelative: false,
         transformTags: {
             pre: () => ({
@@ -127,27 +92,16 @@ export function renderDocumentation(
                     ...attributes,
                     ...(attributes.href
                         ? {
-                              href: options.keepExternalLinks
-                                  ? attributes.href
-                                  : documentationLink(attributes.href, source, known),
+                              href: attributes.href,
                               rel: "noopener noreferrer",
                           }
                         : {}),
                 },
             }),
-            img: (_tag, attributes) => {
-                let src = "";
-                try {
-                    if (attributes.src)
-                        src = new URL(
-                            attributes.src,
-                            `https://raw.githubusercontent.com/marmot-protocol/${source.repo}/master/${source.path}`
-                        ).href;
-                } catch {
-                    /* Invalid source is omitted. */
-                }
-                return { tagName: "img", attribs: { ...attributes, src, loading: "lazy" } };
-            },
+            img: (_tag, attributes) => ({
+                tagName: "img",
+                attribs: { ...attributes, loading: "lazy" },
+            }),
         },
     })
         .replace(

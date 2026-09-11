@@ -1,7 +1,7 @@
 <script lang="ts">
 import { nestArticleHeadings } from "$lib/article";
 import JsonLd from "$lib/components/JsonLd.svelte";
-import BlogImage from "$lib/components/rebuild/BlogImage.svelte";
+import BlogImage from "$lib/components/site/BlogImage.svelte";
 import Icon from "$lib/components/system/Icon.svelte";
 import type { PageData } from "./$types";
 
@@ -14,6 +14,7 @@ function formatDate(timestamp: number): string {
         day: "numeric",
         month: "short",
         year: "numeric",
+        timeZone: "UTC",
     });
 }
 
@@ -24,7 +25,7 @@ const blogPostSchema = $derived.by(() => {
         headline: data.post.title,
         url: `https://www.whitenoise.chat/blog/${data.post.naddr}`,
         datePublished: new Date(
-            (data.post.publishedAt || data.post.createdAt) * 1000
+            (data.post.publishedAt ?? data.post.createdAt) * 1000
         ).toISOString(),
         dateModified: new Date(data.post.createdAt * 1000).toISOString(),
         publisher: {
@@ -71,7 +72,7 @@ const blogPostSchema = $derived.by(() => {
     <header>
         <h1 class="article-heading">{data.post.title}</h1>
         <p class="small-note">
-            Published on {formatDate(data.post.publishedAt || data.post.createdAt)}
+            Published on {formatDate(data.post.publishedAt ?? data.post.createdAt)}
         </p>
     </header>
     <BlogImage src={data.post.image} variant="article" />

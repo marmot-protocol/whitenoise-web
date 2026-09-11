@@ -1,3 +1,10 @@
+import type { BlogPost } from "$lib/nostr";
+
+/** Only the fields needed by page UI cross the server/client boundary. */
+export function blogMetadata({ title, summary, image, naddr, publishedAt, createdAt }: BlogPost) {
+    return { title, summary, image, naddr, publishedAt, createdAt };
+}
+
 /** Local editorial presentation for the May 22 release post.
  * Preserve the signed source event and leave changed upstream footer shapes alone.
  * Input must already have passed through renderBlogHtml.

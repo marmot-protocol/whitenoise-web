@@ -1,7 +1,7 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
-import Artwork from "$lib/components/rebuild/Artwork.svelte";
-import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
+import Artwork from "$lib/components/site/Artwork.svelte";
+import PageIntro from "$lib/components/site/PageIntro.svelte";
 import Action from "$lib/components/system/Action.svelte";
 import Grid from "$lib/components/system/Grid.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
@@ -13,12 +13,13 @@ const options: {
 }[] = [
     {
         name: "iPhone",
-        description: "Get White Noise for your iPhone.",
+        description: "The App Store link is not available yet.",
         downloads: [{ label: "App Store" }],
     },
     {
         name: "Android",
-        description: "Choose a store or download the APK directly.",
+        description:
+            "Use Zapstore or download the APK directly. The Google Play link is not available yet.",
         downloads: [
             { label: "Google Play" },
             {
@@ -55,14 +56,14 @@ const schema = {
         href="https://www.whitenoise.chat/download"
     /><meta
         name="description"
-        content="Get White Noise for your iPhone or Android phone. Find store options and a direct Android APK download."
+        content="Find available White Noise downloads, including Zapstore and a direct Android APK."
     /></svelte:head
 >
 <JsonLd {schema} />
 <div class="site-width">
     <PageIntro
         title="Download White Noise"
-        description="Get White Noise for iPhone or Android. Choose your preferred store or download the Android APK directly."
+        description="Find available downloads below. You can install White Noise for Android through Zapstore or download the APK directly."
     />
     <Grid columns={2} class="download-options">
         {#each options as option}<section class="download-option">
@@ -70,7 +71,7 @@ const schema = {
                 <p>{option.description}</p>
                 <div class="download-actions">
                     {#each option.downloads as download}
-                        <Action external href={download.href} label={download.label} variant={download.variant} icon="down" />
+                        <Action external disabled={!download.href} href={download.href} label={download.label} variant={download.variant} icon="down" />
                     {/each}
                 </div>
             </section>{/each}

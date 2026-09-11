@@ -1,6 +1,6 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
-import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
+import PageIntro from "$lib/components/site/PageIntro.svelte";
 import Surface from "$lib/components/system/Surface.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
@@ -12,13 +12,14 @@ function formatDate(timestamp: number): string {
         day: "numeric",
         month: "long",
         year: "numeric",
+        timeZone: "UTC",
     });
 }
 
 const pastAttestations = $derived(data.attestations.slice(1));
 const latestAttestation = $derived(data.attestations[0] || null);
 const latestTimestamp = $derived(
-    latestAttestation ? latestAttestation.publishedAt || latestAttestation.createdAt : null
+    latestAttestation ? (latestAttestation.publishedAt ?? latestAttestation.createdAt) : null
 );
 
 const canarySchema = {
@@ -63,18 +64,11 @@ const canarySchema = {
                     No published attestation yet
                 {/if}
             </h2>
-            {#if latestTimestamp}
+            {#if latestAttestation}
                 <div>
-                    <p>
-                        As of {formatDate(latestTimestamp)}, Internet Privacy Foundation has not
-                        received any national security letters, FISA court orders, or gagged legal
-                        demands requiring us to conceal their existence.
-                    </p>
-                    <p>
-                        As of {formatDate(latestTimestamp)}, Internet Privacy Foundation has not
-                        been compelled to install backdoors, weaken encryption, or modify White
-                        Noise to facilitate surveillance.
-                    </p>
+                    {#each latestAttestation.content.split(/\n\s*\n/) as paragraph}
+                        <p>{paragraph}</p>
+                    {/each}
                 </div>
             {:else}
                 <div>

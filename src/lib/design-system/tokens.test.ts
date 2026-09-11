@@ -2,7 +2,15 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { type ArtworkName, artworkGeometry, artworkViewBox } from "./artwork";
-import { breakpoints, contrastRatio, motion, renderTokens, tokenById, tokens } from "./tokens";
+import {
+    breakpoints,
+    contrastRatio,
+    motion,
+    renderRuntime,
+    renderTokens,
+    tokenById,
+    tokens,
+} from "./tokens";
 import { renderTypography, typography } from "./typography";
 
 const read = (file: string) => readFileSync(file, "utf8");
@@ -13,11 +21,11 @@ const walk = (directory: string): string[] =>
     );
 const components = [
     ...walk("src/routes"),
-    ...walk("src/lib/components/rebuild"),
+    ...walk("src/lib/components/site"),
     ...walk("src/lib/components/system"),
 ].filter((file) => file.endsWith(".svelte"));
 const styles = [
-    "src/rebuild.css",
+    "src/site.css",
     ...walk("src/lib/design-system").filter(
         (file) =>
             file.endsWith(".css") &&
@@ -41,6 +49,7 @@ describe("design system contract", () => {
         expect(compact(read("src/lib/design-system/typography.css"))).toBe(
             compact(renderTypography())
         );
+        expect(compact(read("src/lib/design-system/runtime.ts"))).toBe(compact(renderRuntime()));
         expect(new Set(tokens.map((token) => token.id)).size).toBe(tokens.length);
         expect(new Set(typography.map((recipe) => recipe.id)).size).toBe(typography.length);
     });

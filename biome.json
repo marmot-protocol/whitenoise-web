@@ -19,8 +19,6 @@
             "!**/.env",
             "!**/.env.*",
             "!**/bun.lockb",
-            "!src-tauri/gen",
-            "!src-tauri/target",
             "!static/**/*.svg",
             "!output",
             "!tmp"

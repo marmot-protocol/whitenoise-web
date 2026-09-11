@@ -7,3 +7,5 @@ export const load: PageServerLoad = ({ params }) => {
         error(404, "Agent guide not found");
     redirect(307, `/agents#${params.runtime}`);
 };
+
+export const prerender = false;

@@ -1,8 +1,9 @@
 <script lang="ts">
 import { afterNavigate } from "$app/navigation";
 import { page } from "$app/state";
-import GuideNavigation from "$lib/components/rebuild/GuideNavigation.svelte";
+import GuideNavigation from "$lib/components/site/GuideNavigation.svelte";
 import Icon from "$lib/components/system/Icon.svelte";
+import { breakpoints } from "$lib/design-system/runtime";
 import { guideInfo } from "$lib/documentation-navigation";
 
 let open = $state(false);
@@ -73,7 +74,7 @@ function outsideMenu(event: MouseEvent | FocusEvent) {
     if (open && !path.includes(headerElement)) closeMenu();
 }
 function resized() {
-    if (window.innerWidth > 900) closeMenu();
+    if (window.innerWidth > breakpoints.tablet) closeMenu();
 }
 </script>
 

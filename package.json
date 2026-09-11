@@ -7,7 +7,7 @@
         "dev": "vite dev",
         "build": "vite build",
         "preview": "vite preview",
-        "prepare": "svelte-kit sync || echo ''",
+        "prepare": "svelte-kit sync",
         "ci": "biome ci . && bun run test && bun run check && bun run build",
         "lint": "biome check",
         "lint:write": "biome check --write",
@@ -27,7 +27,7 @@
         "@sveltejs/vite-plugin-svelte": "^7.3.0",
         "@tailwindcss/vite": "^4.3.3",
         "@types/sanitize-html": "^2.16.1",
-        "@types/ws": "^8.18.1",
+        "@vitest/coverage-v8": "5.0.0",
         "carbon-icons-svelte": "^13.14.0",
         "svelte": "^5.56.10",
         "svelte-check": "^4.7.6",
@@ -43,7 +43,14 @@
         "marked": "^18.0.11",
         "nostr-tools": "^2.25.0",
         "rxjs": "^7.8.2",
-        "sanitize-html": "^2.17.7",
-        "ws": "^8.21.3"
+        "sanitize-html": "^2.17.7"
+    },
+    "packageManager": "bun@1.4.2",
+    "engines": {
+        "node": ">=22.12.0 <23",
+        "bun": ">=1.4.2"
+    },
+    "overrides": {
+        "cookie": "^0.7.2"
     }
 }

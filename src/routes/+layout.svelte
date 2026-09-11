@@ -3,12 +3,12 @@ import "@fontsource-variable/manrope";
 import "../app.css";
 import "$lib/design-system/tokens.css";
 import "$lib/design-system/primitives.css";
-import "../rebuild.css";
+import "../site.css";
 import "$lib/design-system/typography.css";
 import JsonLd from "$lib/components/JsonLd.svelte";
-import DownloadClosing from "$lib/components/rebuild/DownloadClosing.svelte";
-import Footer from "$lib/components/rebuild/Footer.svelte";
-import Header from "$lib/components/rebuild/Header.svelte";
+import DownloadClosing from "$lib/components/site/DownloadClosing.svelte";
+import Footer from "$lib/components/site/Footer.svelte";
+import Header from "$lib/components/site/Header.svelte";
 import Container from "$lib/components/system/Container.svelte";
 
 const { children } = $props();

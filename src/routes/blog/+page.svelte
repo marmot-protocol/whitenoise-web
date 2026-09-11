@@ -1,6 +1,6 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
-import BlogImage from "$lib/components/rebuild/BlogImage.svelte";
+import BlogImage from "$lib/components/site/BlogImage.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
 
@@ -12,6 +12,7 @@ function formatDate(timestamp: number): string {
         day: "numeric",
         month: "short",
         year: "numeric",
+        timeZone: "UTC",
     });
 }
 
@@ -61,8 +62,8 @@ const blogSchema = $derived.by(() => ({
                     {#if post.summary}<p>{post.summary}</p>{/if}
                     <time
                         datetime={new Date(
-                            (post.publishedAt || post.createdAt) * 1000,
-                        ).toISOString()}>{formatDate(post.publishedAt || post.createdAt)}</time
+                            (post.publishedAt ?? post.createdAt) * 1000,
+                        ).toISOString()}>{formatDate(post.publishedAt ?? post.createdAt)}</time
                     >
                 </article>
                 <BlogImage src={post.image} /></a

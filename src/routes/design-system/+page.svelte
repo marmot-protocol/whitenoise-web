@@ -1,7 +1,7 @@
 <script lang="ts">
-import Artwork from "$lib/components/rebuild/Artwork.svelte";
-import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
-import Supporters from "$lib/components/rebuild/Supporters.svelte";
+import Artwork from "$lib/components/site/Artwork.svelte";
+import PageIntro from "$lib/components/site/PageIntro.svelte";
+import Supporters from "$lib/components/site/Supporters.svelte";
 import Action from "$lib/components/system/Action.svelte";
 import CopyButton from "$lib/components/system/CopyButton.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
@@ -189,7 +189,7 @@ function recipeFor(role: TextRole) {
         <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Viewport</th><th>Side margin</th><th>Behavior</th></tr></thead><tbody>
             <tr><td>Above {breakpoints.tablet}px</td><td>{pixels("size-gutters-desktop") / 2}px minimum</td><td>{pixels("size-page")}px maximum content width</td></tr>
             <tr><td>{breakpoints.mobile + 1}–{breakpoints.tablet}px</td><td>{pixels("size-gutters-tablet") / 2}px</td><td>Stacked features and homepage FAQ; compact navigation; two-column utility content</td></tr>
-            <tr><td>≤ {breakpoints.mobile}px</td><td>{pixels("size-gutters-mobile") / 2}px</td><td>Single-column content; 18px / 1.5 body text; compact navigation with visible Download</td></tr>
+            <tr><td>≤ {breakpoints.mobile}px</td><td>{pixels("size-gutters-mobile") / 2}px</td><td>Single-column content; 18px / 1.5 body text; compact navigation with Download in the menu</td></tr>
         </tbody></table></div>
         <label class="ds-toggle"><input type="checkbox" bind:checked={guides} /> Show demonstration guides</label>
         <div class="ds-grid-demo" class:show-guides={guides}>
@@ -229,7 +229,7 @@ function recipeFor(role: TextRole) {
     <section class="ds-section" id="ds-artwork">
         <Text as="h2" role="section">Identity and artwork.</Text>
         <div class="ds-brand"><img src="/images/logomark.svg" width="48" height="37" alt="White Noise mark" /><p>Canonical mark. Black treatment, original proportions. 48px desktop width and 38px mobile width.</p></div>
-        <p class="ds-lead">Four transparent Figma sculptures share measured visible-pixel bounds, rather than raw PNG dimensions. Their normalized viewports have the same visible height and center against the adjacent copy.</p>
+        <p class="ds-lead">Six transparent Figma sculptures share measured visible-pixel bounds, rather than raw PNG dimensions. Their normalized viewports have the same visible height and center against the adjacent copy.</p>
         <Grid>{#each artNames as name}<div class="ds-art"><Artwork {name} /><h3>{name}</h3></div>{/each}</Grid>
         <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: Figma Marketing file JnQBwAwtSteJR3NO0iVPyp. Original exports are 1200×1200. Shared viewport ratio 1103:939; current desktop visible-height target 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. Exact bounds live in the artwork registry; source pixels are unchanged.</p><p>See README.md for node references. Brand assets remain at static/images; sculptures at static/images/rebuild.</p></details>
         <div class="ds-supporter-demo"><Supporters /></div>

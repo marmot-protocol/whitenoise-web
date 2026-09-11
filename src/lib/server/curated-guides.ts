@@ -6,7 +6,5 @@ import { renderDocumentation } from "./docs-markdown";
 
 const markdown = { agents, builders, marmot };
 export function curatedGuide(area: GuideArea) {
-    return renderDocumentation(markdown[area], { repo: "mdk", path: "README.md" }, new Set(), {
-        keepExternalLinks: true,
-    });
+    return renderDocumentation(markdown[area]);
 }

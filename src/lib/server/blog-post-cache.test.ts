@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
+import type { BlogPost } from "$lib/nostr";
 import { createBlogPostCache } from "./blog-post-cache";
-import type { BlogPost } from "./nostr";
 
 function createPost(overrides: Partial<BlogPost> = {}): BlogPost {
     return {
@@ -20,6 +20,51 @@ function createPost(overrides: Partial<BlogPost> = {}): BlogPost {
 }
 
 describe("createBlogPostCache", () => {
+    it("does not report an expired missing post as absent during an outage", async () => {
+        let now = 0;
+        const published = createPost();
+        const fetchBlogPostByDTag = vi
+            .fn()
+            .mockResolvedValueOnce(null)
+            .mockRejectedValueOnce(new Error("offline"))
+            .mockResolvedValueOnce(published);
+        const cache = createBlogPostCache({
+            fetchBlogPosts: vi.fn(),
+            fetchBlogPostByDTag,
+            ttlMs: 100,
+            now: () => now,
+        });
+        expect(await cache.fetchBlogPostCached("hello")).toBeNull();
+        now = 99;
+        expect(await cache.fetchBlogPostCached("hello")).toBeNull();
+        expect(fetchBlogPostByDTag).toHaveBeenCalledTimes(1);
+        now = 100;
+        await expect(cache.fetchBlogPostCached("hello")).rejects.toThrow("offline");
+        expect(await cache.fetchBlogPostCached("hello")).toEqual(published);
+    });
+
+    it("still serves a previously fetched post during a temporary outage", async () => {
+        let now = 0;
+        const post = createPost();
+        const cache = createBlogPostCache({
+            fetchBlogPosts: vi.fn(),
+            fetchBlogPostByDTag: vi
+                .fn()
+                .mockResolvedValueOnce(post)
+                .mockRejectedValue(new Error("offline")),
+            ttlMs: 100,
+            now: () => now,
+        });
+        const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+        try {
+            expect(await cache.fetchBlogPostCached("hello")).toEqual(post);
+            now = 100;
+            expect(await cache.fetchBlogPostCached("hello")).toEqual(post);
+        } finally {
+            warn.mockRestore();
+        }
+    });
+
     it("reuses cached blog posts within the ttl", async () => {
         const fetchBlogPosts = vi
             .fn<() => Promise<BlogPost[]>>()

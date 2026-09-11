@@ -1,4 +1,4 @@
-/* Plain: the selected White Noise presentation. */
+/* Site composition. Values and typography come from the shared design system. */
 :root {
     color-scheme: light;
 }
@@ -12,12 +12,9 @@ body {
     overflow-x: clip;
 }
 .wn-site {
-    --ink: var(--color-ink);
-    --muted: var(--color-muted);
-    --paper: var(--color-paper);
     font-family: var(--font-sans);
-    color: var(--ink);
-    background: var(--paper);
+    color: var(--color-ink);
+    background: var(--color-paper);
     min-height: var(--viewport-height);
 }
 .wn-site a,
@@ -25,7 +22,7 @@ body {
 .wn-site summary {
     -webkit-tap-highlight-color: transparent;
 }
-.wn-site :is(a, button, summary, input, select):focus-visible {
+.wn-site :where(a, button, summary, input, select):focus-visible {
     outline: var(--stroke-focus) solid var(--color-ink);
     outline-offset: var(--space-4);
 }
@@ -152,7 +149,6 @@ body {
 .hero-tagline {
     margin-top: var(--space-12);
     color: var(--color-hero-muted);
-
     font-size: inherit;
     font-weight: var(--weight-semibold);
     line-height: inherit;
@@ -163,26 +159,22 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-12);
-
     margin-top: var(--gap-copy-action);
 }
 .wn-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: var(--size-action-min);
-
     text-decoration: none;
     width: fit-content;
-
     padding: var(--space-16) var(--space-24);
     gap: var(--space-24);
     background: var(--action-background);
     color: var(--action-foreground);
     max-width: 100%;
 }
-.wn-button:hover {
+.wn-button:not(:disabled):hover {
     background: var(--action-hover);
 }
 .wn-button svg {
@@ -192,18 +184,18 @@ body {
     background: var(--color-surface);
     color: var(--color-ink);
 }
-.wn-button.secondary:hover {
+.wn-button.secondary:not(:disabled):hover {
     background: var(--color-rule);
 }
 
-.artwork.normalized {
+.artwork {
     width: 100%;
     max-width: var(--size-artwork);
     aspect-ratio: var(--artwork-ratio);
     justify-self: center;
     margin-top: 0;
 }
-.artwork.normalized svg {
+.artwork svg {
     display: block;
     width: 100%;
     height: 100%;
@@ -221,8 +213,7 @@ body {
     max-width: var(--size-reading);
 }
 .feature-copy p {
-    color: var(--muted);
-
+    color: var(--color-muted);
     margin-top: var(--gap-heading-body);
 }
 .text-link {
@@ -230,28 +221,19 @@ body {
     text-decoration: underline;
     text-underline-offset: var(--space-4);
     text-decoration-thickness: var(--stroke-hairline);
-
     padding-block: var(--space-4);
-
     margin-top: var(--gap-copy-action);
 }
 .text-link:hover {
     color: var(--color-ink);
 }
-.docs-resources .text-link,
 .repository-list .text-link {
     margin-top: 0;
-}
-.docs-resources .text-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: var(--icon-target);
 }
 .illustrated {
     display: grid;
     grid-template-columns: var(--grid-equal-pair);
     align-items: center;
-
     gap: var(--gap-columns);
 }
 .artwork {
@@ -259,17 +241,14 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 0;
-    aspect-ratio: 1;
 }
 
 .supporters {
     display: grid;
     grid-template-rows: auto auto;
     row-gap: var(--space-24);
-
     margin-bottom: var(--gap-section);
     color: var(--color-ink);
-
     padding-block: var(--inset-band-start) var(--inset-band-end);
 }
 .supporters > p {
@@ -292,9 +271,7 @@ body {
 .faq-section {
     display: grid;
     grid-template-columns: var(--grid-equal-pair);
-
     margin-top: var(--space-112);
-
     gap: var(--gap-columns);
 }
 .homepage .faq-section {
@@ -338,7 +315,7 @@ body {
     transform: var(--disclosure-open-transform);
 }
 .faq-items details p {
-    color: var(--muted);
+    color: var(--color-muted);
     margin-top: var(--space-16);
 }
 .download-closing {
@@ -353,18 +330,10 @@ body {
 .site-footer {
     background: var(--color-ink);
     color: var(--color-paper);
-}
-.site-footer {
     position: relative;
     margin-top: calc(var(--stroke-hairline) * -1);
-    padding-block: var(--space-40) var(--space-32);
-    padding-bottom: max(var(--space-32), env(safe-area-inset-bottom, 0));
-}
-.wn-site:has(.download-closing) .site-footer {
     padding-top: var(--stroke-hairline);
-}
-.muted {
-    color: var(--muted);
+    padding-bottom: max(var(--space-32), env(safe-area-inset-bottom, 0));
 }
 .footer-bottom {
     color: var(--color-inverse-muted);
@@ -387,18 +356,14 @@ body {
 .page-intro {
     padding-block: var(--inset-page);
 }
-.eyebrow {
-    margin-bottom: var(--space-24);
-}
 .page-intro h1,
 .legal-policy h1 {
     max-width: var(--size-page);
     text-wrap: balance;
 }
 .page-description {
-    color: var(--muted);
+    color: var(--color-muted);
     max-width: var(--size-reading);
-
     margin-top: var(--gap-heading-body);
 }
 
@@ -406,9 +371,7 @@ body {
     display: grid;
     grid-template-columns: var(--grid-equal-pair);
     align-items: center;
-
     gap: var(--gap-columns);
-
     padding-block: var(--inset-page);
 }
 .contribute-hero .page-intro {
@@ -427,7 +390,7 @@ body {
     padding-top: var(--space-24);
 }
 .download-option p {
-    color: var(--muted);
+    color: var(--color-muted);
     margin-block: var(--space-8) var(--space-24);
 }
 .download-actions {
@@ -437,21 +400,17 @@ body {
 .download-option .wn-button {
     margin-top: 0;
     width: 100%;
-
     justify-content: space-between;
 }
 .download-help {
     display: grid;
     grid-template-columns: var(--grid-equal-pair);
     align-items: center;
-
     margin-block: var(--space-56) var(--gap-section);
-
     gap: var(--gap-columns);
 }
 .download-help p {
-    color: var(--muted);
-
+    color: var(--color-muted);
     margin-top: var(--gap-heading-body);
 }
 
@@ -473,20 +432,17 @@ body {
     min-width: 0;
 }
 .article-body p {
-    color: var(--muted);
+    color: var(--color-muted);
 }
 
 .contribution-list {
     display: grid;
     grid-template-columns: var(--grid-equal-pair);
-
     margin-bottom: var(--gap-section);
-
     gap: var(--gap-columns);
 }
 .contribution-list p {
-    color: var(--muted);
-
+    color: var(--color-muted);
     margin-top: var(--gap-heading-body);
 }
 .donation-section {
@@ -495,10 +451,8 @@ body {
 .donation-methods {
     display: grid;
     grid-template-columns: var(--grid-equal-pair);
-
     gap: var(--gap-columns);
     row-gap: var(--space-32);
-
     padding-block: var(--inset-band-start) var(--inset-band-end);
 }
 .donation-methods-intro {
@@ -526,7 +480,7 @@ body {
 }
 .donation-label {
     margin-block: 0 var(--space-4);
-    color: var(--ink);
+    color: var(--color-ink);
 }
 .donation-controls {
     display: flex;
@@ -542,7 +496,7 @@ body {
     max-width: var(--size-reading);
 }
 .donation-address-text {
-    color: var(--muted);
+    color: var(--color-muted);
     min-width: 0;
     overflow-wrap: anywhere;
     user-select: all;
@@ -557,11 +511,10 @@ body {
     flex-shrink: 0;
 }
 .donation-address button:hover {
-    color: var(--ink);
+    color: var(--color-ink);
 }
 .donation-controls .text-link {
     margin-top: 0;
-
     flex-shrink: 0;
 }
 .blog-list,
@@ -603,12 +556,12 @@ body {
     text-decoration-thickness: var(--stroke-hairline);
 }
 .blog-entry p {
-    color: var(--muted);
+    color: var(--color-muted);
 }
 .blog-entry time {
     display: block;
     margin-top: var(--space-16);
-    color: var(--muted);
+    color: var(--color-muted);
 }
 .blog-image {
     width: 100%;
@@ -649,7 +602,7 @@ body {
     margin-bottom: var(--space-16);
 }
 .empty-blog p {
-    color: var(--muted);
+    color: var(--color-muted);
 }
 .technical-content {
     max-width: var(--size-reading);
@@ -663,8 +616,7 @@ body {
     text-decoration: underline;
     text-underline-offset: var(--space-4);
 }
-.repository-section,
-.protocol-resource {
+.repository-section {
     margin-bottom: var(--gap-section);
 }
 .repository-groups {
@@ -682,20 +634,6 @@ body {
     display: inline-flex;
     align-items: center;
     gap: var(--space-8);
-}
-.protocol-resource > p {
-    max-width: var(--size-reading);
-    margin-top: var(--gap-heading-body);
-}
-.docs-resources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-16) var(--space-24);
-    margin-bottom: var(--gap-copy-action);
-}
-:where(.protocol-resource) .docs-resources {
-    margin-top: var(--gap-copy-action);
-    margin-bottom: 0;
 }
 .documentation-body {
     overflow-wrap: anywhere;
@@ -745,7 +683,8 @@ body {
     margin-block: var(--gap-heading-body);
 }
 .technical-scroll:focus-visible,
-.documentation-body pre:focus-visible {
+.documentation-body pre:focus-visible,
+.wn-site .prose pre:focus-visible {
     outline: var(--stroke-focus) solid var(--color-ink);
     outline-offset: var(--space-4);
 }
@@ -857,9 +796,6 @@ body {
 .faq-page {
     padding-bottom: var(--gap-copy-action);
 }
-.faq-more {
-    margin-top: var(--gap-copy-action);
-}
 .legal-policy {
     padding-block: var(--inset-page) var(--gap-section);
 }
@@ -873,9 +809,7 @@ body {
     display: none;
 }
 .legal-policy :is(ul, ol) {
-    color: var(--muted);
-}
-.legal-policy :is(ul, ol) {
+    color: var(--color-muted);
     padding-left: var(--space-24);
 }
 .legal-policy ul {
@@ -995,7 +929,7 @@ body {
     margin-block: var(--space-40);
 }
 .article-summary {
-    color: var(--muted);
+    color: var(--color-muted);
     margin-block: var(--space-32);
 }
 @media (max-width: 900px) {
@@ -1131,10 +1065,6 @@ body {
         width: 100%;
         align-self: center;
     }
-    .artwork.normalized {
-        max-width: var(--size-artwork-mobile);
-        max-height: none;
-    }
     .supporters > div {
         display: grid;
         grid-template-columns: var(--grid-thirds);
@@ -1177,9 +1107,6 @@ body {
     .documentation-body pre,
     .wn-site .prose pre {
         padding: var(--space-16);
-    }
-    .docs-resources {
-        gap: var(--space-8) var(--space-24);
     }
 }
 .blog-entry > article {

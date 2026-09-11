@@ -1,23 +1,28 @@
 <script lang="ts">
 import { onDestroy } from "svelte";
-import { motion } from "$lib/design-system/tokens";
+import { copyFeedbackMs } from "$lib/design-system/runtime";
 import Icon from "./Icon.svelte";
 
 let { value, label }: { value: string; label: string } = $props();
 let copied = $state(false);
 let status = $state("");
 let timer: ReturnType<typeof setTimeout> | undefined;
-onDestroy(() => clearTimeout(timer));
+let disposed = false;
+onDestroy(() => {
+    disposed = true;
+    clearTimeout(timer);
+});
 async function copy() {
     try {
         await navigator.clipboard.writeText(value);
+        if (disposed) return;
         copied = true;
         status = `${label} copied.`;
         clearTimeout(timer);
         timer = setTimeout(() => {
             copied = false;
             status = "";
-        }, motion.copyFeedbackMs);
+        }, copyFeedbackMs);
     } catch {
         clearTimeout(timer);
         copied = false;

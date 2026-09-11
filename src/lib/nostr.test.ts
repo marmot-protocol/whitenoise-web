@@ -54,6 +54,34 @@ describe("nostr utilities", () => {
             expect(post.tags).toEqual(event.tags);
         });
 
+        it("rejects malformed publication timestamps and unsafe image schemes", () => {
+            for (const value of [
+                "1704067200junk",
+                "-1",
+                "1e9",
+                "9007199254740992",
+                "8640000000001",
+            ]) {
+                expect(
+                    eventToBlogPost(createMockEvent({ tags: [["published_at", value]] }))
+                        .publishedAt
+                ).toBeNull();
+            }
+            expect(
+                eventToBlogPost(createMockEvent({ tags: [["published_at", "0"]] })).publishedAt
+            ).toBe(0);
+            for (const value of [
+                "javascript:alert(1)",
+                "data:text/html,test",
+                "//example.com/image.png",
+                "not-a-url",
+            ]) {
+                expect(
+                    eventToBlogPost(createMockEvent({ tags: [["image", value]] })).image
+                ).toBeNull();
+            }
+        });
+
         it("should handle missing title with 'Untitled' default", () => {
             const event = createMockEvent({
                 tags: [["d", "no-title-post"]],

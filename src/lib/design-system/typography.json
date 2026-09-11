@@ -67,7 +67,7 @@
     },
     {
         "id": "body",
-        "selectors": ".feature-copy p, .supporters > p, .download-help p, .article-body p, .contribution-list p, .donation-intro p, .blog-entry p, .empty-blog p, .technical-content :is(p, li, td), .legal-policy :is(ul, ol), .wn-site .prose",
+        "selectors": ".feature-copy p, .supporters > p, .download-help p, .article-body p, .contribution-list p, .blog-entry p, .empty-blog p, .technical-content :is(p, li, td), .legal-policy :is(ul, ol), .wn-site .prose",
         "media": null,
         "properties": {
             "font-size": "var(--type-size-18)",
@@ -89,7 +89,7 @@
     },
     {
         "id": "caption",
-        "selectors": ".footer-bottom, .eyebrow, .blog-entry time",
+        "selectors": ".footer-bottom, .blog-entry time",
         "media": null,
         "properties": {
             "font-size": "var(--type-size-14)",
@@ -103,21 +103,7 @@
         "selectors": ".hero-title, .home-hero h1, .page-intro h1, .legal-policy h1, .download-closing h2, .article-heading",
         "media": 900,
         "properties": {
-            "font-size": "var(--type-size-48)",
-            "font-weight": "var(--weight-heavy)",
-            "line-height": "var(--leading-display)",
-            "letter-spacing": "var(--tracking-display)"
-        }
-    },
-    {
-        "id": "display-mobile",
-        "selectors": ".page-intro h1, .legal-policy h1, .article-heading",
-        "media": 640,
-        "properties": {
-            "font-size": "var(--type-size-48)",
-            "font-weight": "var(--weight-heavy)",
-            "line-height": "var(--leading-display)",
-            "letter-spacing": "var(--tracking-display)"
+            "font-size": "var(--type-size-48)"
         }
     },
     {
@@ -125,10 +111,7 @@
         "selectors": ".feature-block h2, .faq-section h2, .wn-site .prose h1, .blog-entry h2",
         "media": 900,
         "properties": {
-            "font-size": "var(--type-size-36)",
-            "font-weight": "var(--weight-bold)",
-            "line-height": "var(--leading-heading)",
-            "letter-spacing": "var(--tracking-heading)"
+            "font-size": "var(--type-size-36)"
         }
     },
     {
@@ -136,10 +119,7 @@
         "selectors": ".feature-block h2, .faq-section h2, .wn-site .prose h1",
         "media": 640,
         "properties": {
-            "font-size": "var(--type-size-24)",
-            "font-weight": "var(--weight-bold)",
-            "line-height": "var(--leading-heading)",
-            "letter-spacing": "var(--tracking-heading)"
+            "font-size": "var(--type-size-24)"
         }
     },
     {
@@ -148,20 +128,15 @@
         "media": 640,
         "properties": {
             "font-size": "var(--type-size-18)",
-            "font-weight": "var(--weight-regular)",
-            "line-height": "var(--leading-compact)",
-            "letter-spacing": "var(--tracking-normal)"
+            "line-height": "var(--leading-compact)"
         }
     },
     {
         "id": "body-mobile",
-        "selectors": ".feature-copy p, .supporters > p, .download-help p, .article-body p, .contribution-list p, .donation-intro p, .blog-entry p, .empty-blog p, .technical-content :is(p, li, td), .legal-policy :is(ul, ol), .wn-site .prose",
+        "selectors": ".feature-copy p, .supporters > p, .download-help p, .article-body p, .contribution-list p, .blog-entry p, .empty-blog p, .technical-content :is(p, li, td), .legal-policy :is(ul, ol), .wn-site .prose",
         "media": 640,
         "properties": {
-            "font-size": "var(--type-size-18)",
-            "font-weight": "var(--weight-regular)",
-            "line-height": "var(--leading-compact)",
-            "letter-spacing": "var(--tracking-normal)"
+            "line-height": "var(--leading-compact)"
         }
     },
     {
@@ -188,10 +163,7 @@
         "selectors": ".article-body h2, .download-option h2, .download-help h2, .contribution-list h2, .empty-blog h2, .technical-content h2, .wn-site .prose h2",
         "media": 640,
         "properties": {
-            "font-size": "var(--type-size-24)",
-            "font-weight": "var(--weight-bold)",
-            "line-height": "var(--leading-heading)",
-            "letter-spacing": "var(--tracking-heading)"
+            "font-size": "var(--type-size-24)"
         }
     },
     {
@@ -199,10 +171,7 @@
         "selectors": ".wn-site .prose h3, .documentation-body :is(h3, h4, h5, h6)",
         "media": 640,
         "properties": {
-            "font-size": "var(--type-size-18)",
-            "font-weight": "var(--weight-bold)",
-            "line-height": "var(--leading-heading)",
-            "letter-spacing": "var(--tracking-heading)"
+            "font-size": "var(--type-size-18)"
         }
     }
 ]

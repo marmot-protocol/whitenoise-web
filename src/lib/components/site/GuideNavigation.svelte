@@ -2,6 +2,7 @@
 import { afterNavigate } from "$app/navigation";
 import { page } from "$app/state";
 import Icon from "$lib/components/system/Icon.svelte";
+import { breakpoints } from "$lib/design-system/runtime";
 import {
     activeGuide,
     type GuideArea,
@@ -31,7 +32,7 @@ function escapeMenu(event: KeyboardEvent) {
     }
 }
 function resize() {
-    if (window.innerWidth > 900) open = false;
+    if (window.innerWidth > breakpoints.tablet) open = false;
 }
 const links = $derived(guideLinks[area]);
 const navigationLabel = $derived(guideInfo[area].navigationLabel);
@@ -45,7 +46,7 @@ $effect(() => {
     if (!localLinks.some((link) => link.href.includes("#"))) return;
     let frame = 0;
     const update = () => {
-        const compactViewport = window.innerWidth <= 900;
+        const compactViewport = window.innerWidth <= breakpoints.tablet;
         if (compact !== compactViewport) return;
         const sections = localLinks
             .flatMap((link) => {

@@ -1,6 +1,6 @@
 <script lang="ts">
-import DocumentationLayout from "$lib/components/rebuild/DocumentationLayout.svelte";
-import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
+import DocumentationLayout from "$lib/components/site/DocumentationLayout.svelte";
+import PageIntro from "$lib/components/site/PageIntro.svelte";
 import Grid from "$lib/components/system/Grid.svelte";
 import Icon from "$lib/components/system/Icon.svelte";
 import Text from "$lib/components/system/Text.svelte";

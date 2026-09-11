@@ -137,11 +137,6 @@
 .technical-content li + li {
     margin-top: var(--space-8);
 }
-.technical-status {
-    background: var(--color-surface);
-    padding: var(--stroke-focus) var(--space-8);
-    font-size: var(--type-size-14);
-}
 
 @media (max-width: 900px) {
     :root {
