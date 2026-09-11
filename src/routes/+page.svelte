@@ -5,25 +5,8 @@ import Supporters from "$lib/components/rebuild/Supporters.svelte";
 import Action from "$lib/components/system/Action.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
+import { agentsGuide, faqSchema, homepageFaqs } from "$lib/content/homepage";
 
-const faqs = [
-    {
-        question: "What is White Noise?",
-        answer: "White Noise is a private messenger for iOS and Android. It uses end-to-end encryption and the decentralized Nostr network to connect people.",
-    },
-    {
-        question: "Do I need a phone number?",
-        answer: "No phone number or email is required. You create an identity in the app using a cryptographic keypair.",
-    },
-    {
-        question: "Is it free?",
-        answer: "White Noise is free to download and open source. You can explore the code, report a bug, or help improve the app.",
-    },
-    {
-        question: "Where can I get it?",
-        answer: "Visit the download page for the available iOS and Android installation options. White Noise is in beta, so features and availability may change.",
-    },
-];
 const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -31,18 +14,9 @@ const schema = {
     applicationCategory: "CommunicationApplication",
     operatingSystem: ["iOS", "Android"],
     description:
-        "A private, open-source messenger with end-to-end encrypted conversations. No phone number or email required.",
+        "A private, open-source messenger for direct messages, groups, and connected agents. End-to-end encrypted conversations. No phone number or email required.",
     url: "https://www.whitenoise.chat/",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-};
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
 };
 </script>
 
@@ -51,7 +25,7 @@ const faqSchema = {
     <link rel="canonical" href="https://www.whitenoise.chat/" />
     <meta
         name="description"
-        content="White Noise is a private, open-source messenger. End-to-end encrypted conversations. No phone number. No email. Download for iOS and Android."
+        content="Private messages, groups, and connected agents. White Noise is an open-source messenger with end-to-end encryption. No phone number or email required."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.whitenoise.chat/" />
@@ -60,15 +34,15 @@ const faqSchema = {
     <meta property="og:title" content="White Noise — The identity-free messenger for private communication." />
     <meta
         property="og:description"
-        content="A private, open-source messenger. No phone number. No email. Just a conversation."
+        content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
     />
     <meta property="twitter:title" content="White Noise — The identity-free messenger for private communication." />
     <meta
         property="twitter:description"
-        content="A private, open-source messenger. No phone number. No email. Just a conversation."
+        content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
     />
 </svelte:head>
-<JsonLd {schema} /><JsonLd schema={faqSchema} />
+<JsonLd {schema} /><JsonLd schema={faqSchema(homepageFaqs)} />
 <div class="homepage site-width">
     <section class="home-hero">
         <div class="hero-identity">
@@ -85,10 +59,9 @@ const faqSchema = {
     <div class="home-features" id="features">
         <section class="feature-block illustrated">
             <div class="feature-copy">
-                <h2>Keep it<br />between you.</h2>
+                <h2>Private messages.<br />Private groups.</h2>
                 <p>
-                    Some things belong in a conversation. White Noise uses end-to-end encryption to
-                    keep your messages between you and the people you choose.
+                    Talk one to one or bring a group together. End-to-end encryption keeps your messages private between the people in the conversation.
                 </p>
                 <TextLink href="/privacy-matters">Why privacy matters</TextLink>
             </div>
@@ -98,42 +71,63 @@ const faqSchema = {
             <div class="feature-copy">
                 <h2>No phone number.<br />No email.</h2>
                 <p>
-                    Your identity starts with a key, not a form. Create it in the app and connect
-                    without handing over a phone number or email address.
+                    Choose a name and start connecting. No phone number or email address needed.
                 </p>
             </div>
             <Artwork name="identity" />
         </section>
-        <section class="feature-block illustrated open-feature">
+        <section class="feature-block illustrated" id="agents">
             <div class="feature-copy">
-                <h2>Open by design.</h2>
+                <h2>An agent is just<br />another contact.</h2>
                 <p>
-                    Open-source software. A decentralized network. Built on Nostr and the Marmot
-                    Protocol, so the conversation can happen beyond a single company’s servers.
+                    Connect an AI agent running on your computer and chat with it from White Noise, just like another contact.
                 </p>
-                <TextLink href="/build">Look under the hood</TextLink>
+                <TextLink href={agentsGuide}>Connect your agent</TextLink>
+            </div>
+            <Artwork name="agents" />
+        </section>
+        <section class="feature-block illustrated relay-feature">
+            <div class="feature-copy">
+                <h2>An independent<br />network.</h2>
+                <p>
+                    White Noise uses a network of independent servers to deliver messages, reducing reliance on any one provider.
+                </p>
             </div>
             <Artwork name="roots" />
         </section>
+        <section class="feature-block illustrated open-feature">
+            <div class="feature-copy">
+                <h2>Open source.<br />Open standards.</h2>
+                <p>
+                    Anyone can see how White Noise works, suggest improvements, or build on it. The code is open to everyone.
+                </p>
+                <TextLink href="/build">Explore the code</TextLink>
+            </div>
+            <Artwork name="open" />
+        </section>
         <section class="feature-block illustrated community-feature">
             <div class="feature-copy">
-                <h2>Better, together.</h2>
+                <h2>Built with<br />the community.</h2>
                 <p>
-                    Good tools grow with the people who use them. Help shape White Noise by writing
-                    code, improving the design, translating, or telling us what could work better.
+                    Help make White Noise better. Share feedback, test new releases, translate, or contribute code and design.
                 </p>
-                <TextLink href="/contribute">Find your way to contribute</TextLink>
+                <TextLink href="/contribute">Get involved</TextLink>
             </div>
             <Artwork name="community" />
         </section>
     </div>
     <section class="faq-section" id="faqs">
         <h2>Few things<br />you might ask.</h2>
-        <div class="faq-items">
-            {#each faqs as faq}<Disclosure title={faq.question}>
-                    <p>{faq.answer}</p>
-                    {#if faq.question === "Where can I get it?"}<TextLink href="/download">Go to downloads</TextLink>{/if}
-                </Disclosure>{/each}
+        <div>
+            <div class="faq-items">
+                {#each homepageFaqs as faq}
+                    <Disclosure title={faq.question}>
+                        <p>{faq.answer}</p>
+                        {#if faq.link}<TextLink href={faq.link.href} external={faq.link.external}>{faq.link.label}</TextLink>{/if}
+                    </Disclosure>
+                {/each}
+            </div>
+            <TextLink href="/faq">See all questions</TextLink>
         </div>
     </section>
 </div>

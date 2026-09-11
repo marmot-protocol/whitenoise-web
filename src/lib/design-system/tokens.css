@@ -42,7 +42,7 @@
     --space-96: 6rem;
     --space-112: 7rem;
     --space-144: 9rem;
-    --size-table-cell-min: 6.875rem;
+    --size-table-cell-min: 12rem;
     --size-supporter-height-mobile: 2.0125rem;
     --size-supporter-width-mobile: 7.1875rem;
     --size-artwork-mobile: 22rem;
@@ -66,7 +66,7 @@
     --full-bleed-extent: 100vmax;
     --artwork-ratio: 1103 / 939;
     --artwork-filter: grayscale(1) brightness(0.92);
-    --disclosure-open-transform: rotate(45deg);
+    --disclosure-open-transform: rotate(180deg);
     --layer-header: 50;
     --layer-skip: 100;
     --duration-copy: 3000ms;
@@ -82,7 +82,7 @@
     --grid-recipe: minmax(0, 1fr) minmax(0, 2fr);
     --grid-definition: minmax(0, 1fr) minmax(0, 3fr);
     --grid-spacing-specimen: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
-    --viewport-height: 100vh;
+    --viewport-height: 100dvh;
     --gap-heading-body: var(--space-24);
     --gap-copy-action: var(--space-32);
     --gap-columns: var(--space-64);

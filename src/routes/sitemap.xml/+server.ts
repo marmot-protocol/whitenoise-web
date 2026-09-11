@@ -11,6 +11,11 @@ export const GET: RequestHandler = async () => {
         { path: "/contribute", changefreq: "monthly", priority: "0.8" },
         { path: "/build", changefreq: "monthly", priority: "0.8" },
         { path: "/blog", changefreq: "weekly", priority: "0.8" },
+        { path: "/agents", changefreq: "weekly", priority: "0.8" },
+        { path: "/faq", changefreq: "monthly", priority: "0.8" },
+        { path: "/privacy", changefreq: "yearly", priority: "0.5" },
+        { path: "/canary", changefreq: "monthly", priority: "0.5" },
+        { path: "/docs/marmot/README.md", changefreq: "weekly", priority: "0.7" },
     ];
 
     function escapeXml(s: string): string {

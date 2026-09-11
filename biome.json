@@ -17,7 +17,8 @@
             "!**/bun.lockb",
             "!src-tauri/gen",
             "!src-tauri/target",
-            "!static/**/*.svg"
+            "!static/**/*.svg",
+            "!src/lib/server/docs-snapshot.json"
         ]
     },
     "css": {

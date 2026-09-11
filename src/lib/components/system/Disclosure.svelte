@@ -8,4 +8,4 @@ let {
     open = false,
 }: { title: string; children: Snippet; open?: boolean } = $props();
 </script>
-<div class="faq-items system-disclosure"><details {open}><summary>{title}<Icon name="add" /></summary>{@render children()}</details></div>
+<div class="faq-items system-disclosure"><details {open}><summary>{title}<Icon name="chevron" /></summary>{@render children()}</details></div>

@@ -1,6 +1,7 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
 import PageIntro from "$lib/components/rebuild/PageIntro.svelte";
+import Text from "$lib/components/system/Text.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 
 const schema = {
@@ -75,13 +76,15 @@ const schema = {
             We do want to know whether the app actually works&mdash;which features people use, and where things break. So we ask. Sharing usage and diagnostics is off until you turn it on, declining costs you nothing, and what we collect is deliberately built so it cannot identify you: bucketed counts and timings drawn from a fixed list of events, with no message content, no public keys, and no account, group, or contact information. We use our own servers for it rather than a third-party analytics company, and there are no advertising identifiers or trackers in the app at all.
         </p>
         <p>
-            Asking for permission is easy to claim and harder to document, so we wrote down exactly what leaves your device, what our servers can and cannot infer from it, and how long any of it is kept. You can read all of it in our <TextLink href="/privacy">privacy policy</TextLink>.
+            Asking for permission is easy to claim and harder to document, so we wrote down exactly what leaves your device, what our servers can and cannot infer from it, and how long any of it is kept.
         </p>
     </section>
-            <nav class="privacy-resources" aria-label="Privacy documents">
-                <TextLink href="/canary">Canary</TextLink>
-                <TextLink href="/privacy">Privacy Policy</TextLink>
-            </nav>
         </article>
+        <section class="privacy-resources" aria-labelledby="privacy-policy-link">
+            <h2 id="privacy-policy-link">
+                <TextLink href="/privacy"><Text as="span" role="heading">Read our Privacy Policy</Text></TextLink>
+            </h2>
+            <Text tone="muted">See how White Noise handles your data, what information is collected, and the privacy choices available to you.</Text>
+        </section>
     </div>
 </div>

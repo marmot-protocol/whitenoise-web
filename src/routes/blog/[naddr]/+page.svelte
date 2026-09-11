@@ -1,7 +1,8 @@
 <script lang="ts">
 import { nestArticleHeadings } from "$lib/article";
 import JsonLd from "$lib/components/JsonLd.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
+import BlogImage from "$lib/components/rebuild/BlogImage.svelte";
+import Icon from "$lib/components/system/Icon.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -66,16 +67,15 @@ const blogPostSchema = $derived.by(() => {
 
 <div class="site-width">
 <article class="blog-article">
-    <TextLink href="/blog">Back to the journal</TextLink>
+    <a class="blog-back type-ui" href="/blog"><Icon name="back" /><span>Back to blog</span></a>
     <header>
         <h1 class="article-heading">{data.post.title}</h1>
         <p class="small-note">
             Published on {formatDate(data.post.publishedAt || data.post.createdAt)}
         </p>
     </header>
-    {#if data.post.image}<img class="article-image" src={data.post.image} alt="" />{/if}
+    <BlogImage src={data.post.image} variant="article" />
     {#if data.post.summary}<p class="article-summary">{data.post.summary}</p>{/if}
     <div class="prose">{@html articleHtml}</div>
-    <TextLink href="/blog">Back to the journal</TextLink>
 </article>
 </div>

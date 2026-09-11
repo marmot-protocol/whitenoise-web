@@ -156,6 +156,9 @@
 @media (max-width: 900px) {
     :root {
         --gap-columns: var(--space-32);
+        --gap-section: var(--space-80);
+        --inset-page: var(--space-64);
+        --inset-hero: var(--space-112);
     }
 }
 @media (max-width: 640px) {

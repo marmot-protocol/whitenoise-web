@@ -24,7 +24,6 @@
 .download-option h2,
 .download-help h2,
 .contribution-list h2,
-.donation-section h2,
 .blog-entry h2,
 .empty-blog h2,
 .technical-content h2,
@@ -48,8 +47,8 @@
     line-height: var(--leading-compact);
     letter-spacing: var(--tracking-normal);
 }
-.donation-label,
 .wn-site .prose h3,
+.documentation-body :is(h3, h4, h5, h6),
 .type-title {
     font-size: var(--type-size-24);
     font-weight: var(--weight-bold);
@@ -143,7 +142,34 @@
     .type-lead {
         font-size: var(--type-size-18);
         font-weight: var(--weight-regular);
-        line-height: var(--leading-reading);
+        line-height: var(--leading-compact);
         letter-spacing: var(--tracking-normal);
+    }
+}
+@media (max-width: 640px) {
+    .feature-copy p,
+    .supporters > p,
+    .download-help p,
+    .article-body p,
+    .contribution-list p,
+    .donation-intro p,
+    .blog-entry p,
+    .empty-blog p,
+    .technical-content :is(p, li, td),
+    .legal-policy :is(ul, ol),
+    .wn-site .prose,
+    .type-body {
+        font-size: var(--type-size-18);
+        font-weight: var(--weight-regular);
+        line-height: var(--leading-compact);
+        letter-spacing: var(--tracking-normal);
+    }
+}
+@media (max-width: 640px) {
+    .hero-tagline {
+        font-size: var(--type-size-24);
+        font-weight: var(--weight-semibold);
+        line-height: var(--leading-heading);
+        letter-spacing: var(--tracking-heading);
     }
 }

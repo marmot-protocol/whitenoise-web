@@ -68,3 +68,71 @@ The user approved the smaller shared system, superseding earlier measured spacin
 Rebased the two redesign commits onto `origin/master` at `04b010f`. Kept the upgraded dependencies and Vercel adapter configuration; added Manrope to the upstream manifest and regenerated the lockfile. Download now offers iOS TestFlight (`https://testflight.apple.com/join/KrVBcjpA`) and Android APK (`https://ipf.dev/android`) in the existing equal two-column grid. Zapstore and the obsolete GitHub APK destination were removed, including their metadata references. This supersedes the historical instruction to retain the old distribution destinations.
 
 The Build page retains all upstream documentation body text and links in the shared presentation. Privacy Matters retains the approved essay and adds the upstream “Holding Ourselves to It” disclosure using existing article styles. The policy Markdown and Vercel configuration match upstream exactly. No server loader or signed canary changes were introduced.
+
+## Homepage content expansion — September 10, 2026
+
+The user approved six concrete feature explanations: private messages and groups, phone-number-free identity, connected agents, independent relays, open source and standards, and community contributions. The original four sculptures remain normalized and unchanged; agents and open standards use text-only equal columns. Product screenshots/showcases and “Sign up with nothing” were explicitly excluded. The approved hero and root closing section remain intact.
+
+Sixteen native FAQ disclosures are grouped into Getting started, Privacy and identity, Groups and the network, and Agents. Editable FAQ copy lives in `src/lib/content/homepage.ts`; the page derives FAQ structured data from those same answers. The FAQ uses the shared 768px reading measure, with the existing `#faqs` anchor and a new relay-section anchor. No new design tokens, dependencies, server behavior, download destinations or policy changes were needed.
+
+Source review for this pass:
+
+- Original homepage at baseline `0a79a97` and https://www.whitenoise.chat/ supplied topics, not proof of historical security or availability claims.
+- https://github.com/marmot-protocol/marmot describes identity, MLS encryption, redundant relay delivery and metadata limitations.
+- https://www.rfc-editor.org/rfc/rfc9420.html describes the MLS group-encryption standard.
+- https://github.com/marmot-protocol/whitenoise-ios describes public profile links, QR codes, identity flows and relay editing. The Android store description at https://github.com/marmot-protocol/whitenoise-android/blob/master/fastlane/metadata/android/en-US/full_description.txt confirms direct/group messaging and encrypted conversation media. These are source/documentation checks, not installation tests of the released native apps.
+- https://github.com/marmot-protocol/mdk/blob/master/integrations/README.md documents Hermes, OpenClaw, Codex, OpenCode and Pi integrations, local connectors and invite authorization. The homepage links directly to that maintained guide without copying versioned installer commands.
+- https://github.com/marmot-protocol/marmot/blob/master/features/multi-device.md is explicitly a branch draft and excludes history synchronization. The FAQ does not advertise seamless multi-device chat sync or recovery using only an identity key.
+- The existing `src/lib/content/privacy-policy.md`, dated September 9, supplies the published key-recovery, server-storage, public-profile and optional diagnostics disclosures. The policy was not edited. Current local Download destinations remain the authority for the platform FAQ.
+
+Do not restore claims of guaranteed anonymity, uncensorability, unlimited scale, automatic chat-history portability, transient-only relay storage or automatic recovery after theft. Agent transport encryption is described separately from model-provider processing and logging.
+
+## Six illustrated feature sections — September 10, 2026
+
+The user requested the community section's layout for every homepage feature: complete text block on the left, sculpture on the right, vertically centered in equal columns. This supersedes the text-only agents and open-standards compositions above. All six sections now use the same `illustrated` composition; mobile stacks artwork after copy with the existing 32px relationship. The hero, supporters, FAQ and footer keep their existing compositions.
+
+Two additional transparent source images were downloaded from the same Figma file, resized from 4096×4096 to 1200×1200 with transparency preserved, and saved as optimized RGBA PNGs:
+
+- `static/images/rebuild/agents.png`: [Mailman 1, node 25:303](https://www.figma.com/design/JnQBwAwtSteJR3NO0iVPyp/05.-Marketing?node-id=25-303). Measured alpha bounds: `[362, 43, 509, 1117]` (x, y, width, height).
+- `static/images/rebuild/open.png`: [Hand 1, node 35:21](https://www.figma.com/design/JnQBwAwtSteJR3NO0iVPyp/05.-Marketing?node-id=35-21). Measured alpha bounds: `[113, 127, 990, 723]`.
+
+The shared artwork viewBox now fits both width and height to the existing 1103:939 viewport, centering the measured visible bounds. This preserves the previous four sculptures' framing while containing the wider open hand without clipping. No source artwork was retouched or regenerated. Both additions appear in the live design-system artwork reference.
+
+## Discoverable pages and on-site documentation — September 10, 2026
+
+- Main navigation now includes Agents, For builders, FAQ, Privacy Matters, Blog, Contribute, More, and Download. For builders replaces GitHub and preserves `/build`. More exposes Privacy Policy and Canary; the tablet/mobile menu lists every destination directly. Repository exploration from Contribute and the empty Blog state also goes through the builders page.
+- The builders page begins with seven repository links. Actual repositories remain on GitHub, while setup, architecture, and protocol Markdown is readable on this site. `/agents` offers the shared quickstart and five runtime guides. `/docs/[repo]/[...path]` serves additional MDK and Marmot guides, with canonical redirects for their overview/runtime aliases. Relative guide links are rewritten locally, while code snippets, source-file links, and non-documentation destinations retain their meaning.
+- `src/lib/server/documentation.ts` refreshes a visited guide from public GitHub raw content, caches it for one hour per server process, coalesces concurrent requests, and revalidates with ETags. On upstream errors it serves a dated saved copy and retries after five minutes. An explicit upstream 404 remains a 404. The page displays source provenance and freshness. This is request-driven server behavior; no scheduled job or deployment was created.
+- `bun run docs:sync` updates the bundled outage fallback. Initial snapshot: 111 MDK documents at `117004714d4e0d6687c0bd3d4a16a7a76b1fd205` and 50 Marmot documents at `4a2bc65f8db5866cec3b2a127dedb37818eaf207`. The 2.4 MiB generated server-only JSON is excluded from Biome's 1 MiB file limit. Only approved repository Markdown paths are fetched; assistant instruction files are excluded. Upstream content is sanitized before rendering, with scripts, handlers, and unsafe URL schemes removed. Source instructions are displayed as documentation, never executed.
+- The homepage restores “Few things / you might ask.” with four questions and See all questions. `/faq` holds all sixteen questions in four topics and has its own metadata and matching FAQ structured data. The existing homepage `#faqs` anchor remains. Relay and multi-device links now reach the relevant on-site answers/guides.
+- Shared design tokens and typography govern the new pages. Repository pairs stack on mobile; code and tables scroll inside the reading column, with keyboard-focusable regions. Navigation switches to the compact menu at the existing 900px breakpoint and supports short-screen scrolling. Legal text, signed canary data, download destinations, donation values, and the shared closing/footer remain intact.
+
+## Responsive refinement — September 10, 2026
+
+- Preserved the selected desktop homepage: the before/after 1280×900 captures have no differing pixels. Tablet feature sections and the homepage FAQ now stack at the existing 900px breakpoint, giving copy its reading width and allowing normalized artwork to remain substantial. Other useful pairs (downloads, repositories, contributions, donations and the Contribute hero) stack at 640px.
+- The compact header keeps Download visible and moves Menu to the right. Its panel overlays content without layout shift, uses two columns in tablet/landscape layouts, one on phones, and scrolls within the dynamic visible viewport. Added outside-click/focus dismissal and desktop-resize dismissal alongside the existing Escape and route-selection behavior. Links use at least 44px touch targets on compact layouts; menu rows are 48px.
+- Centralized tablet spacing at 80px section gaps, 64px page insets and 112px hero insets. Existing mobile values remain 64/48/80px. Removed fixed desktop bottom margins where shared section gaps apply. Mobile body copy stays 18px with 1.5 leading; the homepage tagline uses the existing 24px type step below its 32px title. No color, font family, animation or source artwork changes.
+- Removed inherited standalone-link margins from documentation navigation, repository lists and the article back link. Tablet blog thumbnails use a 144px track, and image-free entries use the reading measure. Mobile technical table columns now have a 192px minimum so paths and prose stay readable within the horizontally scrolling table region. Code blocks retain their own scrolling area and keyboard focus.
+- Updated `/design-system`, its README and generated catalogs to document the responsive compositions, dynamic viewport and mobile tagline recipe. No new type sizes, spacing steps, weights or colors were added. Screenshot evidence and the final 120-case viewport measurements live in `design/responsive-qa/`.
+
+## Navigation grouping — September 10, 2026
+
+The approved main order is now Privacy Matters, Blog, Contribute, More, Download. More contains Agents, For builders, FAQ, then a fine divider before Privacy Policy and Canary. The compact menu groups its primary links (including Download), resources, and legal links with the same separators; Download also remains visible in the compact header. Routes and keyboard dismissal behavior are unchanged.
+
+Navigation now places Contribute before Blog: Privacy Matters, Contribute, Blog, More, Download. More and all shared disclosures use the registered downward chevron, pointing upward when open with an immediate 180-degree state cut. This replaces the former plus icon and also keeps guide contents disclosures consistent.
+
+### Build page purpose restored — September 10, 2026
+
+The user identified the replacement Build page as confusing because it mixed repository browsing, agent setup, and the full MDK README. `/build` is again a curated “Build with Marmot” developer guide, grounded in the current live `/build` page and current MDK/Marmot sources. It covers a Rust quick start, library layers, Nostr event kinds, ciphersuite, identity, the basic client flow, TypeScript, dependencies and implementation limits. The grouped Libraries/Apps repositories and contextual Marmot specification section remain.
+
+`src/lib/content/build.md` owns the editorial guide. The existing Build server loader renders that local content through the shared sanitized documentation renderer; visiting the overview no longer fetches or embeds the MDK root README. Detailed MDK documentation is available at `/docs/mdk/README.md`; documentation URL mapping no longer redirects it to `/build`. Agent setup stays on `/agents`.
+
+Technical references checked on September 10: the live White Noise Build page, MDK README and rust-toolchain.toml, marmot-ts README, and Marmot foundation identity/registries/MLS, Nostr transport, protocol-core overview and joining documents. The web index returned older Build copy than the live browser; the live page and current repositories took precedence. No Rust or TypeScript SDK build was run: the listed commands were checked against upstream documentation, while website validation ran locally.
+
+### Short, self-contained guides — September 10
+
+The latest review supersedes the embedded full-documentation approach. Agents, For builders, and Marmot Protocol now use a shared `GuidePage` with concise, locally edited Markdown. All sidebar entries are local section anchors with scroll tracking. Full documentation links explicitly go to GitHub and bypass the raw renderer's internal-link rewriting; prose contains no navigation to other hosted documentation pages.
+
+The three public entry points remain `/agents`, `/build`, and `/docs/marmot/README.md`. Legacy agent runtime URLs redirect to the matching `/agents` section; the MDK root README redirects to `/build#mdk`. Other valid deep documentation URLs redirect to their exact GitHub source. Redirected runtime pages are no longer in the sitemap. The snapshot/sync utilities remain available for reference, but these three guide pages do not embed or fetch upstream READMEs.
+
+Content was shortened using the existing documentation and checked against the Marmot, MDK, integrations, and marmot-ts GitHub sources. Installer scripts, architecture inventories, event registries and detailed protocol requirements belong in the linked full docs. Build retains a short Rust quick start, TypeScript overview, client flow, protocol basics, and separate Libraries/Apps repository columns.

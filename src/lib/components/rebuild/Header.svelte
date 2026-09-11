@@ -1,33 +1,67 @@
 <script lang="ts">
+import { afterNavigate } from "$app/navigation";
 import { page } from "$app/state";
 import Icon from "$lib/components/system/Icon.svelte";
 
 let open = $state(false);
+let moreOpen = $state(false);
 let menuButton: HTMLButtonElement;
+let moreMenu: HTMLDetailsElement;
+let moreSummary: HTMLElement;
+let headerElement: HTMLElement;
 const links = [
     { label: "Privacy Matters", href: "/privacy-matters" },
-    { label: "Blog", href: "/blog" },
     { label: "Contribute", href: "/contribute" },
-    { label: "GitHub", href: "https://github.com/marmot-protocol" },
-    { label: "Download", href: "/download" },
+    { label: "Blog", href: "/blog" },
 ];
+const moreLinks = [
+    { label: "Agents", href: "/agents" },
+    { label: "For developers", href: "/build" },
+    { label: "Marmot Protocol", href: "/docs/marmot/README.md" },
+    { label: "FAQ", href: "/faq" },
+];
+const legalLinks = [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Canary", href: "/canary" },
+];
+const download = { label: "Download", href: "/download" };
+const active = (href: string) =>
+    page.url.pathname === href ||
+    page.url.pathname.startsWith(`${href}/`) ||
+    (href === "/build" && page.url.pathname.startsWith("/docs/mdk/")) ||
+    (href === "/docs/marmot/README.md" && page.url.pathname.startsWith("/docs/marmot/"));
+const activeMoreLink = $derived([...moreLinks, ...legalLinks].find((link) => active(link.href)));
 
 function closeMenu() {
     open = false;
+    moreOpen = false;
 }
+afterNavigate(closeMenu);
 function escapeMenu(event: KeyboardEvent) {
+    if (event.key === "Escape" && moreOpen) {
+        moreOpen = false;
+        moreSummary?.focus();
+    }
     if (event.key === "Escape" && open) {
         closeMenu();
         menuButton?.focus();
     }
 }
+function outsideMenu(event: MouseEvent | FocusEvent) {
+    const path = event.composedPath();
+    if (moreOpen && !path.includes(moreMenu)) moreOpen = false;
+    if (open && !path.includes(headerElement)) closeMenu();
+}
+function resized() {
+    if (window.innerWidth > 900) closeMenu();
+}
 </script>
 
-<svelte:window onkeydown={escapeMenu} />
-<header class="site-header">
+<svelte:window onkeydown={escapeMenu} onclick={outsideMenu} onfocusin={outsideMenu} onresize={resized} />
+<header class="site-header" bind:this={headerElement}>
     <div class="header-inner site-width">
         <div class="header-logo-slot">
-            <a class="header-logo" href="/" aria-label="White Noise home" onclick={closeMenu}>
+            <a class="header-logo" href="/" aria-label="White Noise home">
                 <img src="/images/logomark.svg" alt="" width="48" height="37" />
             </a>
         </div>
@@ -35,33 +69,47 @@ function escapeMenu(event: KeyboardEvent) {
             {#each links as link}
                 <a
                     href={link.href}
-                    aria-current={page.url.pathname === link.href ? "page" : undefined}
+                    aria-current={active(link.href) ? "page" : undefined}
                     >{link.label}</a
                 >
             {/each}
+            <details class="nav-more" bind:this={moreMenu} bind:open={moreOpen}>
+                <summary bind:this={moreSummary} class="type-ui" aria-current={activeMoreLink ? "true" : undefined}>{activeMoreLink ? `More / ${activeMoreLink.label}` : "More"}<Icon name="chevron" /></summary>
+                <div class="nav-more-links">
+                    {#each moreLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
+                    <hr class="nav-divider" />
+                    {#each legalLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
+                </div>
+            </details>
+            <a href={download.href} aria-current={active(download.href) ? "page" : undefined}>{download.label}</a>
         </nav>
+        <div class="compact-header-actions">
         <button
             bind:this={menuButton}
             class="menu-toggle"
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-navigation"
             onclick={() => (open = !open)}
         >
-            {open ? "Close" : "Menu"}{#if open}<Icon name="close" />{:else}<Icon name="menu" />{/if}
+            {#if open}<Icon name="close" />{:else}<Icon name="menu" />{/if}
         </button>
-    </div>
+        </div>
     <nav
         id="mobile-navigation"
-        class="mobile-nav site-width"
+        class="mobile-nav nav-more-links"
         hidden={!open}
         aria-label="Mobile navigation"
     >
-        {#each links as link}
+        {#each [...links, ...moreLinks, ...legalLinks, download] as link, index}
+            {#if index === links.length || index === links.length + moreLinks.length || index === links.length + moreLinks.length + legalLinks.length}
+                <hr class="nav-divider" />
+            {/if}
             <a
                 href={link.href}
-                aria-current={page.url.pathname === link.href ? "page" : undefined}
-                onclick={closeMenu}>{link.label}</a
+                aria-current={active(link.href) ? "page" : undefined}>{link.label}</a
             >
         {/each}
     </nav>
+    </div>
 </header>

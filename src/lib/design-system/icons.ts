@@ -1,14 +1,16 @@
-import Add from "carbon-icons-svelte/lib/Add.svelte";
 import ArrowDown from "carbon-icons-svelte/lib/ArrowDown.svelte";
 import ArrowRight from "carbon-icons-svelte/lib/ArrowRight.svelte";
 import ArrowUpRight from "carbon-icons-svelte/lib/ArrowUpRight.svelte";
 import Checkmark from "carbon-icons-svelte/lib/Checkmark.svelte";
+import ChevronDown from "carbon-icons-svelte/lib/ChevronDown.svelte";
+import ChevronLeft from "carbon-icons-svelte/lib/ChevronLeft.svelte";
 import Close from "carbon-icons-svelte/lib/Close.svelte";
 import Copy from "carbon-icons-svelte/lib/Copy.svelte";
-import Menu from "carbon-icons-svelte/lib/Menu.svelte";
+import Menu from "./MenuIcon.svelte";
 
 export const icons = {
-    add: Add,
+    chevron: ChevronDown,
+    back: ChevronLeft,
     down: ArrowDown,
     right: ArrowRight,
     external: ArrowUpRight,
@@ -19,7 +21,8 @@ export const icons = {
 };
 export type IconName = keyof typeof icons;
 export const iconMeanings: Record<IconName, string> = {
-    add: "Open disclosure",
+    chevron: "Expand disclosure; points up when open",
+    back: "Return to the blog listing",
     down: "Download destination",
     right: "Continue to a page",
     external: "Open an external destination",

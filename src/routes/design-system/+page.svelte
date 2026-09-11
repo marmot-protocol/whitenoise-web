@@ -100,7 +100,7 @@ const specimens: { role: TextRole; title: string; sample: string; use: string }[
     },
 ];
 const iconNames = Object.keys(icons) as IconName[];
-const artNames = ["lantern", "identity", "roots", "community"] as const;
+const artNames = ["lantern", "identity", "agents", "roots", "open", "community"] as const;
 function recipeFor(role: TextRole) {
     return typography.filter((recipe) =>
         recipe.selectors
@@ -163,6 +163,11 @@ function recipeFor(role: TextRole) {
                 </details>
             </article>
         {/each}
+        <article class="ds-type-specimen">
+            <div class="ds-meta"><h3>Hero tagline</h3><code>hero-tagline-mobile</code></div>
+            <div class="hero-title"><p class="hero-tagline">The identity-free messenger for private communication.</p></div>
+            <p class="ds-note">Inherits the display size on desktop and tablet. On phones, the tagline uses the existing 24px step below the 32px title, with balanced wrapping. The pale gray remains the existing contrast review item.</p>
+        </article>
         <details class="ds-details"><summary>All shared recipes and responsive rules ({typography.length})</summary>
             <p>These recipes style both the real pages and the specimens above. Page selectors select a role; they do not introduce their own size, weight or line height.</p>
             {#each typography as recipe}<div class="ds-recipe-record"><h3>{recipe.id}</h3><code>{recipe.selectors}</code><p>{recipe.media ? `≤ ${recipe.media}px` : "Default"}</p><dl class="ds-recipe">{#each Object.entries(recipe.properties) as [prop, val]}<dt>{prop}</dt><dd><code>{val}</code><br />{describeValue(val)}</dd>{/each}</dl></div>{/each}
@@ -183,15 +188,15 @@ function recipeFor(role: TextRole) {
         <p class="ds-lead">A {tokenById["size-page"].value} outer container, centered on the viewport; content aligns to its left edge. Reading columns stay left-aligned inside it. Full-width bands extend the background without moving the content.</p>
         <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Viewport</th><th>Side margin</th><th>Behavior</th></tr></thead><tbody>
             <tr><td>Above {breakpoints.tablet}px</td><td>{pixels("size-gutters-desktop") / 2}px minimum</td><td>{pixels("size-page")}px maximum content width</td></tr>
-            <tr><td>{breakpoints.mobile + 1}–{breakpoints.tablet}px</td><td>{pixels("size-gutters-tablet") / 2}px</td><td>Tablet gutters, reduced column gaps</td></tr>
-            <tr><td>≤ {breakpoints.mobile}px</td><td>{pixels("size-gutters-mobile") / 2}px</td><td>Single-column content, mobile navigation</td></tr>
+            <tr><td>{breakpoints.mobile + 1}–{breakpoints.tablet}px</td><td>{pixels("size-gutters-tablet") / 2}px</td><td>Stacked features and homepage FAQ; compact navigation; two-column utility content</td></tr>
+            <tr><td>≤ {breakpoints.mobile}px</td><td>{pixels("size-gutters-mobile") / 2}px</td><td>Single-column content; 18px / 1.5 body text; compact navigation with visible Download</td></tr>
         </tbody></table></div>
         <label class="ds-toggle"><input type="checkbox" bind:checked={guides} /> Show demonstration guides</label>
         <div class="ds-grid-demo" class:show-guides={guides}>
             <Grid><div><Text as="h3" role="title">First column</Text><p>Lightning, contribution paths and balanced content pairs.</p></div><div><Text as="h3" role="title">Second column</Text><p>Equal tracks. The gutter separates content without a visible rule.</p></div></Grid>
             <Grid columns={3}>{#each ["iPhone", "Android", "Direct download"] as label}<div><Text as="h3" role="title">{label}</Text><p>The same three-column primitive used by the download page.</p></div>{/each}</Grid>
         </div>
-        <p class="ds-note">Guides are documentation aids only. Features, FAQ, contribution paths, donations and the Contribute hero use equal columns. Essays, blog articles, policy, canary and technical content share one 768px reading width. The blog list keeps its thumbnail track because it serves a different structure.</p>
+        <p class="ds-note">Guides are documentation aids only. Features and the homepage FAQ use equal columns on desktop and stack at 900px. Contribution paths, downloads, donations and the Contribute hero keep their pair until 640px. Essays, blog articles, policy, canary and technical content share one 768px reading width. Blog thumbnails use a smaller track on tablets; entries without an image use the reading width.</p>
     </section>
 
     <section class="ds-section" id="ds-actions">

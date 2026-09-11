@@ -5,7 +5,7 @@ export const textRoles = {
     display: ".hero-title",
     section: ".feature-block h2",
     heading: ".article-body h2",
-    title: ".donation-label",
+    title: ".wn-site .prose h3",
     lead: ".page-description",
     body: ".article-body p",
     small: ".donation-address-text",

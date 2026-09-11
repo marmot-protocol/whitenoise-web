@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { artworkGeometry } from "./artwork";
+import { type ArtworkName, artworkGeometry, artworkViewBox } from "./artwork";
 import { breakpoints, contrastRatio, motion, renderTokens, tokenById, tokens } from "./tokens";
 import { renderTypography, typography } from "./typography";
 
@@ -141,6 +141,21 @@ describe("design system contract", () => {
         for (const [x, y, width, height] of Object.values(artworkGeometry.bounds)) {
             expect(x + width).toBeLessThanOrEqual(artworkGeometry.sourceSize);
             expect(y + height).toBeLessThanOrEqual(artworkGeometry.sourceSize);
+        }
+    });
+    it("contains and centers every sculpture, including wide artwork, without cropping", () => {
+        for (const name of Object.keys(artworkGeometry.bounds) as ArtworkName[]) {
+            const [x, y, width, height] = artworkGeometry.bounds[name];
+            const [left, top, viewportWidth, viewportHeight] = artworkViewBox(name);
+            expect(left).toBeLessThanOrEqual(x);
+            expect(top).toBeLessThanOrEqual(y);
+            expect(left + viewportWidth).toBeGreaterThanOrEqual(x + width);
+            expect(top + viewportHeight).toBeGreaterThanOrEqual(y + height);
+            expect(left + viewportWidth / 2).toBeCloseTo(x + width / 2);
+            expect(top + viewportHeight / 2).toBeCloseTo(y + height / 2);
+            expect(viewportWidth / viewportHeight).toBeCloseTo(
+                artworkGeometry.ratioWidth / artworkGeometry.ratioHeight
+            );
         }
     });
 });

@@ -1,5 +1,6 @@
 <script lang="ts">
 import JsonLd from "$lib/components/JsonLd.svelte";
+import BlogImage from "$lib/components/rebuild/BlogImage.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
 
@@ -54,7 +55,7 @@ const blogSchema = $derived.by(() => ({
     <h1 class="sr-only">White Noise Blog</h1>
     <div class="blog-list">
         {#each data.posts as post}
-            <a class="blog-entry" href={`/blog/${post.naddr}`}
+            <a class="blog-entry" href={`/blog/${post.naddr}`} aria-label={post.title}
                 ><article>
                     <h2>{post.title}</h2>
                     {#if post.summary}<p>{post.summary}</p>{/if}
@@ -64,23 +65,16 @@ const blogSchema = $derived.by(() => ({
                         ).toISOString()}>{formatDate(post.publishedAt || post.createdAt)}</time
                     >
                 </article>
-                {#if post.image}<img
-                        src={post.image}
-                        alt=""
-                        width="440"
-                        height="360"
-                        loading="lazy"
-                    />{/if}</a
+                <BlogImage src={post.image} /></a
             >
         {:else}
             <section class="empty-blog">
                 <h2>A quiet moment.</h2>
                 <p>
                     No articles are available from the network right now. You can check back later
-                    or follow development on GitHub.
+                    or explore the developer guides and repositories.
                 </p>
-                <TextLink href="https://github.com/marmot-protocol"
-                    external>Follow the project</TextLink>
+                <TextLink href="/build">For developers</TextLink>
             </section>
         {/each}
     </div>

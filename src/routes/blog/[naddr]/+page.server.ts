@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
 import { BLOG_PUBKEY, decodeNaddr, fetchBlogPostCached, KIND_LONG_FORM } from "$lib/nostr";
 import { renderBlogHtml } from "$lib/server/blog-markdown";
+import { formatBlogPresentation } from "$lib/server/blog-presentation";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params }) => {
@@ -30,6 +31,6 @@ export const load: PageServerLoad = async ({ params }) => {
 
     return {
         post,
-        safeHtml: renderBlogHtml(post.content),
+        safeHtml: formatBlogPresentation(post.dTag, renderBlogHtml(post.content)),
     };
 };

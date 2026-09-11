@@ -1,12 +1,8 @@
 <script lang="ts">
-import { type ArtworkName, artworkGeometry } from "$lib/design-system/artwork";
+import { type ArtworkName, artworkGeometry, artworkViewBox } from "$lib/design-system/artwork";
 
 let { name = "lantern" }: { name?: ArtworkName } = $props();
-const viewBox = $derived.by(() => {
-    const [x, y, width, height] = artworkGeometry.bounds[name];
-    const viewportWidth = height * (artworkGeometry.ratioWidth / artworkGeometry.ratioHeight);
-    return `${x - (viewportWidth - width) / 2} ${y} ${viewportWidth} ${height}`;
-});
+const viewBox = $derived(artworkViewBox(name).join(" "));
 </script>
 
 <figure class="artwork normalized" aria-hidden="true">
