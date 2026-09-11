@@ -4,7 +4,7 @@ This repository is the production White Noise marketing and documentation site. 
 
 ## Scope and delivery
 
-- Work on `website-rebuild` for the current release preparation. Do not switch to or create a `codex/` branch for this work. Preserve unrelated changes.
+- Use the current branch, `website-rebuild`. Never create, recreate, or switch to a `codex/` branch automatically. Do not create or switch branches or create a separate worktree unless the user explicitly requests it. This repository-specific instruction overrides default branch-prefix conventions. Preserve unrelated changes.
 - Do not commit to, merge into, push, or publish the default branch without explicit authorization. Publishing and pushing remain outside the current task.
 - The default branch is `master`; its protected baseline is `0a79a977b0af4e6d12b807ddb4f8a2a96413aafb`. Confirm it remains unchanged before delivery.
 - Preserve public route URLs, legacy redirects, donation addresses and payment URIs, download destinations, privacy-policy wording, and signed canary data unless a specific change is authorized.
