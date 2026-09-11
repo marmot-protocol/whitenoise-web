@@ -1,7 +1,6 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { docUrl, validDocSource } from "$lib/documentation";
 import { documentationLink, renderDocumentation } from "./docs-markdown";
-import { createDocumentationReader } from "./documentation";
 
 const source = { repo: "mdk", path: "integrations/README.md" } as const;
 const known = new Set(["mdk/integrations/hermes/marmot/README.md"]);
@@ -77,40 +76,7 @@ describe("on-site documentation rendering", () => {
     });
 });
 
-describe("documentation refresh and fallback", () => {
-    const fallback = {
-        "mdk/integrations/README.md": {
-            markdown: "# Saved guide",
-            checkedAt: "2026-09-01T00:00:00.000Z",
-            revision: "abc123",
-        },
-    };
-
-    it("coalesces requests, caches for an hour, and revalidates using ETag", async () => {
-        let now = 0;
-        const fetcher = vi
-            .fn<typeof fetch>()
-            .mockResolvedValueOnce(new Response("# Fresh guide", { headers: { etag: '"first"' } }))
-            .mockResolvedValueOnce(new Response(null, { status: 304 }))
-            .mockResolvedValueOnce(new Response("# Updated upstream guide"));
-        const read = createDocumentationReader(fetcher, fallback, () => now);
-        const [first, second] = await Promise.all([read(source), read(source)]);
-        expect(first.title).toBe("Fresh guide");
-        expect(second.savedCopy).toBe(false);
-        expect(fetcher).toHaveBeenCalledTimes(1);
-        now = 3_599_000;
-        await read(source);
-        expect(fetcher).toHaveBeenCalledTimes(1);
-        now = 3_600_000;
-        const refreshed = await read(source);
-        expect(fetcher).toHaveBeenCalledTimes(2);
-        expect(fetcher.mock.calls[1][1]?.headers).toEqual({ "If-None-Match": '"first"' });
-        expect(refreshed.title).toBe("Fresh guide");
-        expect(refreshed.checkedAt).toBe(new Date(now).toISOString());
-        now = 7_200_000;
-        expect((await read(source)).title).toBe("Updated upstream guide");
-    });
-
+describe("documentation sources", () => {
     it("resolves Markdown and HTML images relative to the source document", () => {
         const result = renderDocumentation(
             '![Diagram](../diagram.png)\n<img src="../other.svg" alt="Other">',
@@ -125,35 +91,7 @@ describe("documentation refresh and fallback", () => {
         );
     });
 
-    it("serves a dated saved copy on source failure and retries after five minutes", async () => {
-        let now = 0;
-        const fetcher = vi
-            .fn<typeof fetch>()
-            .mockRejectedValueOnce(new Error("Network unavailable"))
-            .mockResolvedValueOnce(new Response("# Recovered guide"));
-        const read = createDocumentationReader(fetcher, fallback, () => now);
-        const saved = await read(source);
-        expect(saved.savedCopy).toBe(true);
-        expect(saved.title).toBe("Saved guide");
-        expect(saved.sourceUrl).toContain("/blob/abc123/");
-        now = 299_000;
-        await read(source);
-        expect(fetcher).toHaveBeenCalledTimes(1);
-        now = 300_000;
-        expect((await read(source)).title).toBe("Recovered guide");
-    });
-
-    it("does not silently resurrect a guide deleted upstream", async () => {
-        const read = createDocumentationReader(
-            vi.fn<typeof fetch>().mockResolvedValue(new Response(null, { status: 404 })),
-            fallback
-        );
-        await expect(read(source)).rejects.toMatchObject({ status: 404 });
-    });
-
-    it("rejects invalid sources before fetching and reports unavailable uncached guides", async () => {
-        const fetcher = vi.fn<typeof fetch>().mockRejectedValue(new Error("Offline"));
-        const read = createDocumentationReader(fetcher, {});
+    it("rejects invalid source paths", () => {
         for (const path of [
             "../README.md",
             "/README.md",
@@ -163,9 +101,6 @@ describe("documentation refresh and fallback", () => {
             "a//b.md",
         ]) {
             expect(validDocSource("mdk", path)).toBe(false);
-            await expect(read({ repo: "mdk", path })).rejects.toMatchObject({ status: 404 });
         }
-        expect(fetcher).not.toHaveBeenCalled();
-        await expect(read(source)).rejects.toMatchObject({ status: 503 });
     });
 });

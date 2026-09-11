@@ -7,7 +7,7 @@ type Faq = {
 
 export const agentsGuide = "/agents";
 
-// Copy sources and release limitations are recorded in REBUILD.md.
+// Copy sources and verification requirements are recorded in README.md.
 // Keep the visible answers and FAQ structured data on the same source.
 export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
     {

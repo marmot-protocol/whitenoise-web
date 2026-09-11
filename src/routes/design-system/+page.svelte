@@ -48,25 +48,25 @@ const specimens: { role: TextRole; title: string; sample: string; use: string }[
         role: "display",
         title: "Display",
         sample: "A little more noise, a little more you.",
-        use: "Homepage, page introductions and closing statement. 72px desktop, 48px tablet, 32px mobile.",
+        use: "Page introductions, article and legal titles: 72px desktop, 48px tablet and mobile. The homepage hero also retains 48px on mobile. The shared closing statement fits two fixed lines to its container, capped at 72px.",
     },
     {
         role: "section",
         title: "Section",
         sample: "Keep it between you.",
-        use: "Feature sections, FAQ and article titles. 48px desktop, 32px mobile.",
+        use: "Feature sections and FAQ: 48px desktop, 36px tablet, 24px mobile. Blog listing titles use this section scale and retain 36px on mobile.",
     },
     {
         role: "heading",
         title: "Reading heading",
         sample: "Room to be yourself.",
-        use: "32px across articles, policy, canary, contribution paths and download options.",
+        use: "32px desktop/tablet and 24px mobile across articles, policy, canary, contribution paths and download options.",
     },
     {
         role: "title",
         title: "Small heading",
         sample: "Lightning address",
-        use: "24px bold for subsections and donation titles.",
+        use: "24px bold desktop/tablet and 18px mobile for subsections and donation titles.",
     },
     {
         role: "lead",
@@ -119,7 +119,7 @@ function recipeFor(role: TextRole) {
 <div class="site-width design-reference">
     <PageIntro title="White Noise design system." description="One system for every page. Shared typography, a neutral palette, consistent spacing and working components." />
     <div class="ds-introduction article-body">
-        <p>Eight colors. Seven type sizes. Four weights. Fourteen spacing steps. The site and this reference share the same catalogs and components. Related content uses the same rules wherever it appears.</p>
+        <p>Eight colors. Eight type sizes. Four weights. Fourteen spacing steps. The site and this reference share the same catalogs and components. Related content uses the same rules wherever it appears.</p>
         <p>Manrope. Black on white. Left-aligned reading. A quiet grid. Whitespace carries the structure; rules have a functional job. Interactions are immediate cuts.</p>
     </div>
     <nav class="ds-index" aria-label="Design system contents">
@@ -151,7 +151,7 @@ function recipeFor(role: TextRole) {
 
     <section class="ds-section" id="ds-typography">
         <Text as="h2" role="section">Typography.</Text>
-        <p class="ds-lead">One self-hosted family: Manrope Variable. Seven root-relative size steps: 14, 16, 18, 24, 32, 48 and 72px. Nine complete roles combine them with four weights, four line heights and three tracking values. Responsive headings move between the same steps; no separate mobile scale. Semantic heading level and visual role are independent.</p>
+        <p class="ds-lead">One self-hosted family: Manrope Variable. Eight root-relative size steps: 14, 16, 18, 24, 32, 36, 48 and 72px. Nine complete roles combine them with four weights, four line heights and three tracking values. Responsive headings move between the same steps; no separate mobile scale. Semantic heading level and visual role are independent.</p>
         <div class="ds-weights">{#each ["regular", "semibold", "bold", "heavy"] as weight}<p style:font-weight={`var(--weight-${weight})`}>Aa <span>{weight} · {tokenById[`weight-${weight}`].value}</span></p>{/each}</div>
         {#each specimens as specimen}
             <article class="ds-type-specimen">
@@ -164,9 +164,9 @@ function recipeFor(role: TextRole) {
             </article>
         {/each}
         <article class="ds-type-specimen">
-            <div class="ds-meta"><h3>Hero tagline</h3><code>hero-tagline-mobile</code></div>
-            <div class="hero-title"><p class="hero-tagline">The identity-free messenger for private communication.</p></div>
-            <p class="ds-note">Inherits the display size on desktop and tablet. On phones, the tagline uses the existing 24px step below the 32px title, with balanced wrapping. The pale gray remains the existing contrast review item.</p>
+            <div class="ds-meta"><h3>Hero tagline</h3><code>hero-tagline-fit</code></div>
+            <div class="hero-title"><p class="hero-tagline"><span>The identity-free</span> <span>messenger for private</span> <span>communication.</span></p></div>
+            <p class="ds-note">Desktop retains its display size and natural wrapping. At 900px and below, the tagline scales to fit three fixed lines, breaking after “identity-free” and “private”, capped at 48px. The mobile title stays 48px. The pale gray remains the existing contrast review item.</p>
         </article>
         <details class="ds-details"><summary>All shared recipes and responsive rules ({typography.length})</summary>
             <p>These recipes style both the real pages and the specimens above. Page selectors select a role; they do not introduce their own size, weight or line height.</p>
@@ -231,7 +231,7 @@ function recipeFor(role: TextRole) {
         <div class="ds-brand"><img src="/images/logomark.svg" width="48" height="37" alt="White Noise mark" /><p>Canonical mark. Black treatment, original proportions. 48px desktop width and 38px mobile width.</p></div>
         <p class="ds-lead">Four transparent Figma sculptures share measured visible-pixel bounds, rather than raw PNG dimensions. Their normalized viewports have the same visible height and center against the adjacent copy.</p>
         <Grid>{#each artNames as name}<div class="ds-art"><Artwork {name} /><h3>{name}</h3></div>{/each}</Grid>
-        <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: Figma Marketing file JnQBwAwtSteJR3NO0iVPyp. Original exports are 1200×1200. Shared viewport ratio 1103:939; current desktop visible-height target 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. Exact bounds live in the artwork registry; source pixels are unchanged.</p><p>See REBUILD.md for node references. Brand assets remain at static/images; sculptures at static/images/rebuild.</p></details>
+        <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: Figma Marketing file JnQBwAwtSteJR3NO0iVPyp. Original exports are 1200×1200. Shared viewport ratio 1103:939; current desktop visible-height target 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. Exact bounds live in the artwork registry; source pixels are unchanged.</p><p>See README.md for node references. Brand assets remain at static/images; sculptures at static/images/rebuild.</p></details>
         <div class="ds-supporter-demo"><Supporters /></div>
     </section>
 
@@ -239,14 +239,14 @@ function recipeFor(role: TextRole) {
         <Text as="h2" role="section">Patterns in use.</Text>
         <p class="ds-lead">The reusable primitives are used on real pages, including this one. Existing composition classes bind them into page patterns.</p>
         <dl class="ds-patterns">
-            <dt>Header</dt><dd>Permanent WN mark, native route links, current-page underline, white sticky surface. Mobile Menu closes with Escape and restores focus.</dd>
+            <dt>Header</dt><dd>Permanent WN mark, native route links, current-page underline, white sticky surface. Compact navigation includes the muted page name beside Menu. Guides add a full-width section disclosure below it, inside the sticky header. Both menus use square edges and fine rules; Escape closes and restores focus.</dd>
             <dt>Page introduction</dt><dd>PageIntro uses the shared Text title role; description measure and spacing remain centralized.</dd>
             <dt>Full-width band</dt><dd>Surface is shared by Supporters, donation methods, latest canary and the closing footer. Functional focus outlines remain visible.</dd>
             <dt>Content grids</dt><dd>Grid powers contribution paths and download options; single-column reflow uses the same mobile breakpoint.</dd>
             <dt>FAQ</dt><dd>Disclosure owns native open/close behavior and the shared Add icon. A rule separates interactive questions only.</dd>
             <dt>Donation</dt><dd>Black small headings, gray selectable addresses, shared CopyButton and Action. Two columns on desktop, stacked on mobile.</dd>
             <dt>Articles and legal text</dt><dd>Sanitized content keeps semantic headings, lists and links. Typography recipes style generated markup; legal content is unchanged.</dd>
-            <dt>Footer</dt><dd>One shared root-layout closing statement, Download action and Internet Privacy Foundation copyright. The temporary Design system link is controlled by preview.ts.</dd>
+            <dt>Footer</dt><dd>One shared root-layout closing statement, Download action and Internet Privacy Foundation copyright.</dd>
         </dl>
     </section>
 
@@ -254,13 +254,13 @@ function recipeFor(role: TextRole) {
         <Text as="h2" role="section">Consolidation and exceptions.</Text>
         <p class="ds-lead">The consolidation replaces near-duplicates across the entire site. Measured asset geometry remains intact.</p>
         <ol class="ds-review-list">
-            <li><strong>Typography.</strong> 28 size definitions become seven steps. Six weights become four. Fifteen line heights become four. Six tracking values become three.</li>
+            <li><strong>Typography.</strong> 28 size definitions were consolidated into seven steps; the approved 36px mobile tagline adds an eighth. Six weights become four. Fifteen line heights become four. Six tracking values become three.</li>
             <li><strong>Spacing.</strong> 46 distances become fourteen steps with eight shared relationship tokens. There are no legacy spacing exceptions in live styles.</li>
             <li><strong>Colors.</strong> Sixteen colors become eight. Reading copy and secondary links share one gray; all light-gray surfaces share one neutral.</li>
             <li><strong>Composition.</strong> One reading measure, equal content columns, and one text-action height replace page-specific variants.</li>
             <li><strong>Hero contrast — open decision.</strong> The previously approved {tokenById["color-hero-muted"].value} tagline remains below AA. This is the only remaining review token. Its color is preserved pending that specific visual decision.</li>
         </ol>
-        <p class="ds-note">New presentation should use these roles and components. A new token needs a specific purpose and a live specimen; duplicating a value under a new name is not a new design decision. Historical measurements are archived in baseline.json and are not part of the live scale.</p>
+        <p class="ds-note">New presentation should use these roles and components. A new token needs a specific purpose and a live specimen; duplicating a value under a new name is not a new design decision.</p>
     </section>
 
     <section class="ds-section" id="ds-tokens">

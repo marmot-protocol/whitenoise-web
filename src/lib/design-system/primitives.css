@@ -98,16 +98,6 @@
     flex-wrap: wrap;
     gap: var(--space-16) var(--space-32);
 }
-.design-system-link {
-    text-decoration: underline;
-    text-underline-offset: var(--space-4);
-}
-.design-system-link:hover {
-    color: var(--color-paper);
-}
-.wn-site .site-footer a:focus-visible {
-    outline-color: var(--color-paper);
-}
 .technical-scroll {
     overflow-x: auto;
 }

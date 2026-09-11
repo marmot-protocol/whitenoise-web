@@ -2,7 +2,7 @@ import recipes from "./typography.json";
 
 export const typography = recipes;
 export const textRoles = {
-    display: ".hero-title",
+    display: ".page-intro h1",
     section: ".feature-block h2",
     heading: ".article-body h2",
     title: ".wn-site .prose h3",

@@ -48,7 +48,7 @@ const schema = {
         <div class="hero-identity">
             <div class="hero-title">
                 <h1>White Noise</h1>
-                <p class="hero-tagline">The identity-free messenger for private communication.</p>
+                <p class="hero-tagline"><span>The identity-free</span> <span>messenger for private</span> <span>communication.</span></p>
             </div>
         </div>
         <div class="hero-action" id="hero-download">

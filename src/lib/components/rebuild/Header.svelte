@@ -1,7 +1,9 @@
 <script lang="ts">
 import { afterNavigate } from "$app/navigation";
 import { page } from "$app/state";
+import GuideNavigation from "$lib/components/rebuild/GuideNavigation.svelte";
 import Icon from "$lib/components/system/Icon.svelte";
+import { guideInfo } from "$lib/documentation-navigation";
 
 let open = $state(false);
 let moreOpen = $state(false);
@@ -31,6 +33,24 @@ const active = (href: string) =>
     (href === "/build" && page.url.pathname.startsWith("/docs/mdk/")) ||
     (href === "/docs/marmot/README.md" && page.url.pathname.startsWith("/docs/marmot/"));
 const activeMoreLink = $derived([...moreLinks, ...legalLinks].find((link) => active(link.href)));
+
+const currentPageLabel = $derived(
+    [...links, ...moreLinks, ...legalLinks, download].find((link) => active(link.href))?.label ??
+        (page.url.pathname === "/"
+            ? "Home"
+            : page.url.pathname === "/design-system"
+              ? "Design system"
+              : "")
+);
+const currentGuideArea = $derived(
+    page.url.pathname === guideInfo.agents.path
+        ? "agents"
+        : page.url.pathname === guideInfo.builders.path
+          ? "builders"
+          : page.url.pathname === guideInfo.marmot.path
+            ? "marmot"
+            : undefined
+);
 
 function closeMenu() {
     open = false;
@@ -84,6 +104,7 @@ function resized() {
             <a href={download.href} aria-current={active(download.href) ? "page" : undefined}>{download.label}</a>
         </nav>
         <div class="compact-header-actions">
+        <span class="compact-page-name type-ui">{currentPageLabel}</span>
         <button
             bind:this={menuButton}
             class="menu-toggle"
@@ -101,6 +122,7 @@ function resized() {
         hidden={!open}
         aria-label="Mobile navigation"
     >
+        <a href="/" aria-current={page.url.pathname === "/" ? "page" : undefined}>Home</a>
         {#each [...links, ...moreLinks, ...legalLinks, download] as link, index}
             {#if index === links.length || index === links.length + moreLinks.length || index === links.length + moreLinks.length + legalLinks.length}
                 <hr class="nav-divider" />
@@ -112,4 +134,5 @@ function resized() {
         {/each}
     </nav>
     </div>
+    {#if currentGuideArea}<GuideNavigation area={currentGuideArea} compact onopen={closeMenu} />{/if}
 </header>

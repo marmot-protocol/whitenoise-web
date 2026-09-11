@@ -15,6 +15,7 @@
     --type-size-18: 1.125rem;
     --type-size-24: 1.5rem;
     --type-size-32: 2rem;
+    --type-size-36: 2.25rem;
     --type-size-48: 3rem;
     --type-size-72: 4.5rem;
     --weight-regular: 400;
@@ -83,7 +84,7 @@
     --grid-definition: minmax(0, 1fr) minmax(0, 3fr);
     --grid-spacing-specimen: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
     --viewport-height: 100dvh;
-    --gap-heading-body: var(--space-24);
+    --gap-heading-body: var(--space-12);
     --gap-copy-action: var(--space-32);
     --gap-columns: var(--space-64);
     --gap-section: var(--space-96);
@@ -91,4 +92,6 @@
     --inset-hero: var(--space-144);
     --inset-band-start: var(--space-56);
     --inset-band-end: var(--space-64);
+    --size-closing-line-em: 8.12;
+    --size-hero-tagline-line-em: 9.26;
 }

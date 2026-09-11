@@ -44,7 +44,7 @@ The user approved consolidation of the full-site design system. This supersedes 
 - Blog listing: omit the introductory hero and post separators. Each post remains a single clickable entry; omit “Read the story” and place the publication date below its title and summary. Include the shared black closing Download section.
 - Privacy Matters: omit the introductory eyebrow, essay sidebar/illustration, pull quote, and “Build it with us” link. Add restrained links to the existing Canary (`/canary`) and Privacy Policy (`/privacy`) pages after the essay. Preserve policy content and signed canary data.
 - Navigation uses ordinary route URLs. Do not restore layout query parameters or variant controls.
-- Figma source illustrations exported from file `JnQBwAwtSteJR3NO0iVPyp`, nodes `25:18` (lantern) and `112:2` (roots), are stored as transparent optimized PNGs in `static/images/rebuild/`. See `REBUILD.md` for asset provenance and content verification notes.
+- Figma source illustrations exported from file `JnQBwAwtSteJR3NO0iVPyp`, nodes `25:18` (lantern) and `112:2` (roots), are stored as transparent optimized PNGs in `static/images/rebuild/`. See `README.md` for asset provenance and content verification requirements.
 - Publishing, pushing, and merging remain outside the authorized milestone. All work remains on `codex/website-rebuild`.
 
 ### Branch and delivery
@@ -117,8 +117,8 @@ The user approved consolidation of the full-site design system. This supersedes 
 ## Current exploration handoff
 
 - Plain is the sole selected layout. Gallery, Study, the switcher, variant CSS, and URL-selection helpers have been removed.
-- Figma source images are in `static/images/rebuild/`; provenance, preview instructions, content caveats, and implementation notes are in `REBUILD.md`.
-- `design-qa.md` records the visual comparison, fixes, browser evidence, and validation limits. Do not treat the equivalent 640px reflow check as a completed actual-browser 200% zoom test.
+- Figma source images are in `static/images/rebuild/`; provenance, development commands and content verification requirements are in `README.md`.
+- Historical design explorations, review logs, screenshot evidence and the unused documentation snapshot were removed in the September 11 production cleanup. Do not recreate them as tracked deliverables. Keep transient exports under ignored `output/` or `tmp/`. Do not treat a 640px reflow check as a completed actual-browser 200% zoom test.
 - Keep existing download destinations until the user chooses updated distribution channels; the old Flutter repository is archived.
 
 ## Project Overview
@@ -234,7 +234,7 @@ This ensures:
 ## Styling Guidelines
 
 - Use Tailwind CSS utility classes
-- Custom colors use the `glitch-*` palette (defined in app.css)
+- Colors and dimensions use the shared design-system catalogs; the retired `glitch-*` theme was removed.
 - Mobile-first responsive design (`md:` breakpoint for desktop)
 - Prefer `aspect-*` over fixed heights for images
 

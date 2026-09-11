@@ -45,15 +45,6 @@ export const repositoryGroups = [
 export const agentRuntimes = ["hermes", "openclaw", "codex", "opencode", "pi"] as const;
 export type DocsRepo = "mdk" | "marmot";
 export type DocSource = { repo: DocsRepo; path: string };
-export type Documentation = {
-    title: string;
-    html: string;
-    headings: { id: string; text: string; depth: number }[];
-    source: DocSource;
-    sourceUrl: string;
-    checkedAt: string;
-    savedCopy: boolean;
-};
 
 export function docUrl({ repo, path }: DocSource): string {
     if (repo === "mdk" && path === "integrations/README.md") return "/agents";

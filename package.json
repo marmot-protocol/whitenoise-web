@@ -18,8 +18,7 @@
         "test:watch": "vitest",
         "test:coverage": "vitest run --coverage",
         "canary:publish": "./scripts/publish-canary.sh",
-        "tokens:generate": "bun scripts/generate-tokens.ts",
-        "docs:sync": "bun scripts/sync-docs.ts"
+        "tokens:generate": "bun scripts/generate-tokens.ts"
     },
     "devDependencies": {
         "@biomejs/biome": "^2.5.10",

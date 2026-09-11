@@ -99,7 +99,7 @@ describe("design system contract", () => {
             tokens
                 .filter((token) => token.id.startsWith("type-size-"))
                 .map((token) => Number.parseFloat(token.value) * 16)
-        ).toEqual([14, 16, 18, 24, 32, 48, 72]);
+        ).toEqual([14, 16, 18, 24, 32, 36, 48, 72]);
         expect(
             tokens.filter((token) => token.id.startsWith("weight-")).map((token) => token.value)
         ).toEqual(["400", "600", "700", "800"]);

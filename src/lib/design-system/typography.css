@@ -4,6 +4,7 @@
 .page-intro h1,
 .legal-policy h1,
 .download-closing h2,
+.article-heading,
 .type-display {
     font-size: var(--type-size-72);
     font-weight: var(--weight-heavy);
@@ -12,8 +13,8 @@
 }
 .feature-block h2,
 .faq-section h2,
-.article-heading,
 .wn-site .prose h1,
+.blog-entry h2,
 .type-section {
     font-size: var(--type-size-48);
     font-weight: var(--weight-bold);
@@ -24,7 +25,6 @@
 .download-option h2,
 .download-help h2,
 .contribution-list h2,
-.blog-entry h2,
 .empty-blog h2,
 .technical-content h2,
 .wn-site .prose h2,
@@ -104,6 +104,7 @@
     .page-intro h1,
     .legal-policy h1,
     .download-closing h2,
+    .article-heading,
     .type-display {
         font-size: var(--type-size-48);
         font-weight: var(--weight-heavy);
@@ -112,25 +113,34 @@
     }
 }
 @media (max-width: 640px) {
-    .hero-title,
-    .home-hero h1,
     .page-intro h1,
     .legal-policy h1,
-    .download-closing h2,
+    .article-heading,
     .type-display {
-        font-size: var(--type-size-32);
+        font-size: var(--type-size-48);
         font-weight: var(--weight-heavy);
         line-height: var(--leading-display);
         letter-spacing: var(--tracking-display);
     }
 }
+@media (max-width: 900px) {
+    .feature-block h2,
+    .faq-section h2,
+    .wn-site .prose h1,
+    .blog-entry h2,
+    .type-section {
+        font-size: var(--type-size-36);
+        font-weight: var(--weight-bold);
+        line-height: var(--leading-heading);
+        letter-spacing: var(--tracking-heading);
+    }
+}
 @media (max-width: 640px) {
     .feature-block h2,
     .faq-section h2,
-    .article-heading,
     .wn-site .prose h1,
     .type-section {
-        font-size: var(--type-size-32);
+        font-size: var(--type-size-24);
         font-weight: var(--weight-bold);
         line-height: var(--leading-heading);
         letter-spacing: var(--tracking-heading);
@@ -165,10 +175,38 @@
         letter-spacing: var(--tracking-normal);
     }
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
     .hero-tagline {
-        font-size: var(--type-size-24);
+        font-size: min(var(--type-size-48), calc(100cqi / var(--size-hero-tagline-line-em)));
         font-weight: var(--weight-semibold);
+        line-height: var(--leading-display);
+        letter-spacing: var(--tracking-display);
+    }
+}
+.download-closing h2 {
+    font-size: min(var(--type-size-72), calc(100cqi / var(--size-closing-line-em)));
+}
+@media (max-width: 640px) {
+    .article-body h2,
+    .download-option h2,
+    .download-help h2,
+    .contribution-list h2,
+    .empty-blog h2,
+    .technical-content h2,
+    .wn-site .prose h2,
+    .type-heading {
+        font-size: var(--type-size-24);
+        font-weight: var(--weight-bold);
+        line-height: var(--leading-heading);
+        letter-spacing: var(--tracking-heading);
+    }
+}
+@media (max-width: 640px) {
+    .wn-site .prose h3,
+    .documentation-body :is(h3, h4, h5, h6),
+    .type-title {
+        font-size: var(--type-size-18);
+        font-weight: var(--weight-bold);
         line-height: var(--leading-heading);
         letter-spacing: var(--tracking-heading);
     }
