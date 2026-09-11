@@ -1,10 +1,10 @@
 # White Noise website — contributor instructions
 
-This repository is the production White Noise marketing and documentation site. Changes on `codex/website-rebuild` are intended as a release candidate, not an experimental alternate website. The branch name is retained to preserve the existing review history.
+This repository is the production White Noise marketing and documentation site. Changes on `website-rebuild` are intended as a release candidate, not an experimental alternate website.
 
 ## Scope and delivery
 
-- Work on `codex/website-rebuild` for the current release preparation. Preserve unrelated changes.
+- Work on `website-rebuild` for the current release preparation. Do not switch to or create a `codex/` branch for this work. Preserve unrelated changes.
 - Do not commit to, merge into, push, or publish the default branch without explicit authorization. Publishing and pushing remain outside the current task.
 - The default branch is `master`; its protected baseline is `0a79a977b0af4e6d12b807ddb4f8a2a96413aafb`. Confirm it remains unchanged before delivery.
 - Preserve public route URLs, legacy redirects, donation addresses and payment URIs, download destinations, privacy-policy wording, and signed canary data unless a specific change is authorized.
