@@ -1,14 +1,11 @@
 /* Site composition. Values and typography come from the shared design system. */
-:root {
-    color-scheme: light;
-}
 html {
     scroll-behavior: auto;
     scroll-padding-top: var(--space-96);
 }
 html,
 body {
-    background: var(--color-ink);
+    background: var(--color-inverse-surface);
     overflow-x: clip;
 }
 .wn-site {
@@ -71,7 +68,7 @@ body {
 .header-logo img {
     width: var(--size-logo);
     height: auto;
-    filter: brightness(0);
+    filter: var(--brand-filter);
 }
 
 .desktop-nav {
@@ -127,9 +124,26 @@ body {
     text-decoration: underline;
     text-underline-offset: var(--space-4);
 }
-.compact-header-actions,
+.compact-page-name,
+.menu-toggle,
 .mobile-nav {
     display: none;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+    margin-left: auto;
+    padding-left: var(--space-16);
+    min-width: 0;
+}
+.theme-toggle {
+    flex: none;
+    color: var(--color-ink);
+}
+.theme-toggle-icon {
+    filter: var(--brand-filter);
 }
 
 .home-hero {
@@ -230,7 +244,7 @@ body {
     max-width: 100%;
     object-fit: contain;
     object-position: left;
-    filter: brightness(0);
+    filter: var(--brand-filter);
 }
 .faq-section {
     display: grid;
@@ -262,10 +276,10 @@ body {
     padding-top: 0;
 }
 .faq-items summary {
+    justify-content: space-between;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: var(--space-24);
     min-height: var(--size-disclosure-min);
 }
@@ -292,8 +306,8 @@ body {
     white-space: nowrap;
 }
 .site-footer {
-    background: var(--color-ink);
-    color: var(--color-paper);
+    background: var(--color-inverse-surface);
+    color: var(--color-inverse-text);
     position: relative;
     margin-top: calc(var(--stroke-hairline) * -1);
     padding-top: var(--stroke-hairline);
@@ -301,6 +315,9 @@ body {
 }
 .footer-bottom {
     color: var(--color-inverse-muted);
+}
+.wn-site .site-footer :focus-visible {
+    outline-color: var(--color-inverse-text);
 }
 
 .skip-link {
@@ -362,9 +379,9 @@ body {
     gap: var(--space-16);
 }
 .download-option .wn-button {
+    justify-content: space-between;
     margin-top: 0;
     width: 100%;
-    justify-content: space-between;
 }
 .download-help {
     display: grid;
@@ -548,7 +565,7 @@ body {
     display: grid;
     place-items: center;
     aspect-ratio: 1.2;
-    background-color: var(--color-ink);
+    background-color: var(--color-inverse-surface);
 }
 .blog-image-placeholder .blog-placeholder-logo {
     width: var(--space-96);
@@ -635,9 +652,9 @@ body {
     background: var(--color-surface);
 }
 .agent-prompt-controls {
+    justify-content: space-between;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: var(--space-16);
 }
 .documentation-body .agent-prompt-text {
@@ -754,9 +771,9 @@ body {
         border-top: var(--stroke-hairline) solid var(--color-rule);
     }
     .compact-guide-nav summary {
+        justify-content: space-between;
         min-height: var(--size-action-min);
         padding-block: var(--space-12);
-        justify-content: space-between;
         white-space: normal;
     }
     .guide-menu-links {
@@ -921,14 +938,19 @@ body {
     margin-block: var(--space-32);
 }
 @media (max-width: 900px) {
-    .desktop-nav {
+    .desktop-nav,
+    .header-actions > .theme-toggle {
         display: none;
     }
-    .compact-header-actions {
-        display: flex;
-        align-items: center;
-        gap: var(--space-24);
-        margin-left: auto;
+    .header-actions {
+        padding-left: 0;
+    }
+    .compact-page-name {
+        display: block;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .menu-toggle {
         display: inline-flex;
@@ -952,6 +974,21 @@ body {
         max-height: calc(var(--viewport-height) - var(--size-header));
         overflow-y: auto;
         overscroll-behavior: contain;
+    }
+    .mobile-nav > .theme-toggle {
+        align-self: flex-start;
+    }
+    .mobile-more summary {
+        justify-content: space-between;
+        min-height: var(--icon-target);
+        white-space: normal;
+    }
+    .mobile-more-links {
+        display: flex;
+        flex-direction: column;
+        padding-left: var(--space-24);
+        border-left: var(--stroke-hairline) solid var(--color-rule);
+        margin-bottom: var(--space-12);
     }
     .mobile-nav a {
         padding-block: var(--space-12);

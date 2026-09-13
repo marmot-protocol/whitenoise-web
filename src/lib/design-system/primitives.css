@@ -14,7 +14,7 @@
     color: var(--color-muted);
 }
 .tone-inverse {
-    color: var(--color-paper);
+    color: var(--color-inverse-text);
 }
 .system-icon {
     display: inline-flex;
@@ -94,14 +94,14 @@
     --surface: var(--color-paper);
 }
 .surface-ink {
-    --action-background: var(--color-paper);
-    --action-foreground: var(--color-ink);
-    --action-hover: var(--color-rule);
-    --surface: var(--color-ink);
-    color: var(--color-paper);
+    --action-background: var(--color-inverse-text);
+    --action-foreground: var(--color-inverse-surface);
+    --action-hover: var(--color-inverse-hover);
+    --surface: var(--color-inverse-surface);
+    color: var(--color-inverse-text);
 }
 .wn-site .surface-ink :focus-visible {
-    outline-color: var(--color-paper);
+    outline-color: var(--color-inverse-text);
 }
 .system-grid {
     display: grid;

@@ -2,6 +2,7 @@
 import { afterNavigate } from "$app/navigation";
 import { page } from "$app/state";
 import GuideNavigation from "$lib/components/site/GuideNavigation.svelte";
+import ThemeToggle from "$lib/components/site/ThemeToggle.svelte";
 import Icon from "$lib/components/system/Icon.svelte";
 import { breakpoints } from "$lib/design-system/runtime";
 import {
@@ -11,13 +12,15 @@ import {
     isActiveDestination,
     legalLinks,
     mainLinks,
-    mobileLinkGroups,
     moreLinks,
     moreMenuLinks,
 } from "$lib/navigation";
 
 let open = $state(false);
 let moreOpen = $state(false);
+let mobileMoreOpen = $state(false);
+let mobileMoreMenu: HTMLDetailsElement;
+let mobileMoreSummary: HTMLElement;
 let menuButton: HTMLButtonElement;
 let moreMenu: HTMLDetailsElement;
 let moreSummary: HTMLElement;
@@ -28,11 +31,17 @@ const pageLabel = $derived(currentPageLabel(page.url.pathname));
 const guideArea = $derived(currentGuideArea(page.url.pathname));
 
 function closeMenu() {
+    mobileMoreOpen = false;
     open = false;
     moreOpen = false;
 }
 afterNavigate(closeMenu);
 function escapeMenu(event: KeyboardEvent) {
+    if (event.key === "Escape" && mobileMoreOpen) {
+        mobileMoreOpen = false;
+        mobileMoreSummary?.focus();
+        return;
+    }
     if (event.key === "Escape" && moreOpen) {
         moreOpen = false;
         moreSummary?.focus();
@@ -45,6 +54,7 @@ function escapeMenu(event: KeyboardEvent) {
 function outsideMenu(event: MouseEvent | FocusEvent) {
     const path = event.composedPath();
     if (moreOpen && !path.includes(moreMenu)) moreOpen = false;
+    if (mobileMoreOpen && !path.includes(mobileMoreMenu)) mobileMoreOpen = false;
     if (open && !path.includes(headerElement)) closeMenu();
 }
 function resized() {
@@ -78,7 +88,8 @@ function resized() {
             </details>
             <a href={downloadLink.href} aria-current={active(downloadLink.href) ? "page" : undefined}>{downloadLink.label}</a>
         </nav>
-        <div class="compact-header-actions">
+        <div class="header-actions">
+        <ThemeToggle />
         <span class="compact-page-name type-ui">{pageLabel}</span>
         <button
             bind:this={menuButton}
@@ -86,7 +97,7 @@ function resized() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-navigation"
-            onclick={() => (open = !open)}
+            onclick={() => open ? closeMenu() : (open = true)}
         >
             {#if open}<Icon name="close" />{:else}<Icon name="menu" />{/if}
         </button>
@@ -98,12 +109,22 @@ function resized() {
         aria-label="Mobile navigation"
     >
         <a href="/" aria-current={page.url.pathname === "/" ? "page" : undefined}>Home</a>
-        {#each mobileLinkGroups as group, index}
-            {#if index > 0}<hr class="nav-divider" />{/if}
-            {#each group as link}
-                <a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>
-            {/each}
+        {#each mainLinks as link}
+            <a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>
         {/each}
+        <details class="nav-more mobile-more" bind:this={mobileMoreMenu} bind:open={mobileMoreOpen}>
+            <summary bind:this={mobileMoreSummary} class="type-ui" aria-current={activeMoreLink ? "true" : undefined}>
+                <span>{activeMoreLink ? `More / ${activeMoreLink.label}` : "More"}</span><Icon name="chevron" />
+            </summary>
+            <div class="mobile-more-links">
+                {#each moreLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
+                <hr class="nav-divider" />
+                {#each legalLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
+            </div>
+        </details>
+        <a href={downloadLink.href} aria-current={active(downloadLink.href) ? "page" : undefined}>{downloadLink.label}</a>
+        <hr class="nav-divider" />
+        <ThemeToggle />
     </nav>
     </div>
     {#if guideArea}<GuideNavigation area={guideArea} compact onopen={closeMenu} />{/if}

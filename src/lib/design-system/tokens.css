@@ -1,5 +1,6 @@
 /* Generated from src/lib/design-system/tokens.json. Run bun run tokens:generate. */
 :root {
+    color-scheme: light;
     --color-ink: #111;
     --color-paper: #fff;
     --color-muted: #5d5d5d;
@@ -8,6 +9,9 @@
     --color-rule: #ddd;
     --color-inverse-muted: #aaa;
     --color-action-hover: #3d3d3d;
+    --color-inverse-surface: #111;
+    --color-inverse-text: #fff;
+    --color-inverse-hover: #ddd;
     --font-sans: "Manrope Variable", Manrope, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
     --type-size-14: 0.875rem;
@@ -95,4 +99,27 @@
     --inset-band-end: var(--space-64);
     --size-closing-line-em: 9.9;
     --size-hero-tagline-line-em: 9.26;
+    --brand-filter: brightness(0);
+}
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-ink: #f2f2f2;
+    --color-paper: #181818;
+    --color-muted: #aaa;
+    --color-surface: #242424;
+    --color-rule: #3d3d3d;
+    --color-action-hover: #ddd;
+    --brand-filter: brightness(0) invert(1);
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        color-scheme: dark;
+        --color-ink: #f2f2f2;
+        --color-paper: #181818;
+        --color-muted: #aaa;
+        --color-surface: #242424;
+        --color-rule: #3d3d3d;
+        --color-action-hover: #ddd;
+        --brand-filter: brightness(0) invert(1);
+    }
 }

@@ -250,7 +250,7 @@
 }
 .ds-brand img {
     width: var(--size-logo);
-    filter: brightness(0);
+    filter: var(--brand-filter);
 }
 .ds-brand p {
     color: var(--color-muted);

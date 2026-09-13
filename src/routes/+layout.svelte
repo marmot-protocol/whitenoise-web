@@ -28,7 +28,6 @@ const websiteSchema = {
 };
 </script>
 
-<svelte:head><meta name="theme-color" content="#ffffff" /></svelte:head>
 <JsonLd schema={websiteSchema} />
 <div class="wn-site">
     <a class="skip-link" href="#main-content">Skip to content</a>

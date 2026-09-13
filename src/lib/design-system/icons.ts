@@ -7,6 +7,7 @@ import ChevronLeft from "carbon-icons-svelte/lib/ChevronLeft.svelte";
 import Close from "carbon-icons-svelte/lib/Close.svelte";
 import Copy from "carbon-icons-svelte/lib/Copy.svelte";
 import Menu from "./MenuIcon.svelte";
+import ThemeToggleIcon from "./ThemeToggleIcon.svelte";
 
 export const icons = {
     chevron: ChevronDown,
@@ -18,6 +19,7 @@ export const icons = {
     close: Close,
     copy: Copy,
     menu: Menu,
+    "theme-toggle-icon": ThemeToggleIcon,
 };
 export type IconName = keyof typeof icons;
 export const iconMeanings: Record<IconName, string> = {
@@ -30,4 +32,5 @@ export const iconMeanings: Record<IconName, string> = {
     close: "Close navigation",
     copy: "Copy the full address",
     menu: "Open navigation",
+    "theme-toggle-icon": "Switch between light and dark appearance",
 };

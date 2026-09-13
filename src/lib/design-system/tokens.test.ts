@@ -112,7 +112,7 @@ describe("design system contract", () => {
         expect(
             tokens.filter((token) => token.id.startsWith("weight-")).map((token) => token.value)
         ).toEqual(["400", "600", "700", "800"]);
-        expect(tokens.filter((token) => token.category === "Color")).toHaveLength(8);
+        expect(tokens.filter((token) => token.category === "Color")).toHaveLength(11);
         expect(
             tokens.filter((token) => token.status === "review").map((token) => token.id)
         ).toEqual(["color-hero-muted"]);
@@ -140,6 +140,43 @@ describe("design system contract", () => {
             contrastRatio(tokenById["color-hero-muted"].value, tokenById["color-paper"].value)
         ).toBeLessThan(3);
         expect(tokenById["color-hero-muted"].status).toBe("review");
+    });
+    it("keeps text and action contrast accessible in both palettes", () => {
+        const pairs = [
+            ["color-ink", "color-paper"],
+            ["color-muted", "color-paper"],
+            ["color-muted", "color-surface"],
+            ["color-paper", "color-ink"],
+            ["color-paper", "color-action-hover"],
+            ["color-inverse-text", "color-inverse-surface"],
+            ["color-inverse-muted", "color-inverse-surface"],
+            ["color-inverse-surface", "color-inverse-hover"],
+        ];
+        for (const theme of ["light", "dark"]) {
+            const value = (id: string) =>
+                (theme === "dark" ? tokenById[id].darkValue : undefined) ?? tokenById[id].value;
+            for (const [front, back] of pairs) {
+                expect(
+                    contrastRatio(value(front), value(back)),
+                    `${theme}: ${front} / ${back}`
+                ).toBeGreaterThanOrEqual(4.5);
+            }
+        }
+        expect(
+            contrastRatio(
+                tokenById["color-hero-muted"].value,
+                tokenById["color-paper"].darkValue ?? tokenById["color-paper"].value
+            )
+        ).toBeGreaterThanOrEqual(3);
+    });
+    it("keeps pre-script browser chrome colors aligned with the page palettes", () => {
+        const head = read("src/app.html");
+        expect(head).toContain(
+            `media="(prefers-color-scheme: light)" content="${tokenById["color-paper"].value}"`
+        );
+        expect(head).toContain(
+            `media="(prefers-color-scheme: dark)" content="${tokenById["color-paper"].darkValue}"`
+        );
     });
     it("keeps motion and measured artwork geometry consistent across components", () => {
         expect(motion.copyFeedbackMs).toBe(3000);

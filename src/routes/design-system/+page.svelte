@@ -127,8 +127,8 @@ function recipeFor(role: TextRole) {
 <div class="site-width design-reference">
     <PageIntro title="White Noise design system." description="One system for every page. Shared typography, a neutral palette, consistent spacing and working components." />
     <div class="ds-introduction article-body">
-        <p>Eight colors. Eight type sizes. Four weights. Fourteen spacing steps. The site and this reference share the same catalogs and components. Related content uses the same rules wherever it appears.</p>
-        <p>Manrope. Black on white. Left-aligned reading. A quiet grid. Whitespace carries the structure; rules have a functional job. Interactions are immediate cuts.</p>
+        <p>Eleven color roles. Light and dark palettes. Eight type sizes. Four weights. Fourteen spacing steps. The site and this reference share the same catalogs and components. Related content uses the same rules wherever it appears.</p>
+        <p>Manrope. Neutral colors. Left-aligned reading. A quiet grid. Whitespace carries the structure; rules have a functional job. Interactions are immediate cuts.</p>
     </div>
     <nav class="ds-index" aria-label="Design system contents">
         {#each ["Foundations", "Typography", "Spacing", "Grids", "Actions", "Icons", "Artwork", "Patterns", "Review", "Tokens"] as item}<a href={`#ds-${item.toLowerCase()}`}>{item}</a>{/each}
@@ -136,13 +136,13 @@ function recipeFor(role: TextRole) {
 
     <section class="ds-section" id="ds-foundations">
         <Text as="h2" role="section">Foundations.</Text>
-        <p class="ds-lead">A neutral palette with semantic roles. The swatches below are live CSS variables, not copied colors.</p>
+        <p class="ds-lead">A neutral palette with semantic roles. The swatches below follow the selected appearance. Switch light and dark using the icon in the top navigation; light and dark values are listed together.</p>
         <div class="ds-colors">
             {#each colors as token}
                 <article class="ds-color">
-                    <div class="ds-swatch" style:background={`var(--${token.id})`} aria-label={token.value}></div>
+                    <div class="ds-swatch" style:background={`var(--${token.id})`} aria-label={`${token.value}${token.darkValue ? ` light / ${token.darkValue} dark` : ""}`}></div>
                     <h3>{token.id}</h3>
-                    <code>{token.value}</code>
+                    <code>{token.value}{#if token.darkValue} light / {token.darkValue} dark{/if}</code>
                     <p>{token.note}</p>
                     {#if token.status === "review"}<span class="ds-status">Review</span>{/if}
                 </article>
@@ -150,9 +150,9 @@ function recipeFor(role: TextRole) {
         </div>
         <h3 class="ds-subtitle">Text contrast</h3>
         <div class="ds-table-wrap"><table class="ds-table"><caption>Computed from the token values. AA requires 4.5:1 for normal text or 3:1 for large text.</caption>
-            <thead><tr><th>Pair</th><th>Ratio</th><th>Current use</th></tr></thead><tbody>
-                {#each [["color-ink", "color-paper", "Primary text"], ["color-muted", "color-paper", "Supporting text"], ["color-muted", "color-surface", "Addresses on gray"], ["color-muted", "color-paper", "Signed-event links"], ["color-hero-muted", "color-paper", "Hero tagline — accepted contrast exception"], ["color-inverse-muted", "color-ink", "Copyright"]] as [front, back, use]}
-                    <tr><td>{front} / {back}</td><td>{contrastRatio(tokenById[front].value, tokenById[back].value).toFixed(2)}:1</td><td>{use}</td></tr>
+            <thead><tr><th>Pair</th><th>Light</th><th>Dark</th><th>Current use</th></tr></thead><tbody>
+                {#each [["color-ink", "color-paper", "Primary text"], ["color-muted", "color-paper", "Supporting text"], ["color-muted", "color-surface", "Addresses on gray"], ["color-muted", "color-paper", "Signed-event links"], ["color-hero-muted", "color-paper", "Hero tagline — accepted contrast exception"], ["color-inverse-muted", "color-inverse-surface", "Copyright"]] as [front, back, use]}
+                    <tr><td>{front} / {back}</td><td>{contrastRatio(tokenById[front].value, tokenById[back].value).toFixed(2)}:1</td><td>{contrastRatio(tokenById[front].darkValue ?? tokenById[front].value, tokenById[back].darkValue ?? tokenById[back].value).toFixed(2)}:1</td><td>{use}</td></tr>
                 {/each}
             </tbody></table></div>
     </section>
@@ -236,7 +236,7 @@ function recipeFor(role: TextRole) {
 
     <section class="ds-section" id="ds-artwork">
         <Text as="h2" role="section">Identity and artwork.</Text>
-        <div class="ds-brand"><img src="/images/logomark.svg" width="48" height="37" alt="White Noise mark" /><p>Canonical mark. Black treatment, original proportions. 48px desktop width and 38px mobile width.</p></div>
+        <div class="ds-brand"><img src="/images/logomark.svg" width="48" height="37" alt="White Noise mark" /><p>Canonical mark. Black in light mode, white in dark mode, original proportions. 48px desktop width and 38px mobile width.</p></div>
         <p class="ds-lead">Seven production sculptures start from equal measured visual mass on the homepage. Opacity and contrast against white determine scale and center, including the shared grayscale and brightness treatment. Center guides below mark the common alignment target. Reviewed optical corrections enlarge the children with the plant by another 5% and the woman with the balloon by 5% followed by another 2.5%. Smith and chain shifts left from the original measured center by 5% of the frame width on desktop and 10% at 900px and below. Vertical centers stay aligned. At every viewport, the whole normalized frame is enlarged by the shared 1.2× scale, preserving the same relative balance on desktop, tablet and mobile.</p>
         <Grid>{#each artNames as name}<div class="ds-art ds-art--balanced"><Artwork {name} normalization="visual-mass" /><h3>{name}</h3></div>{/each}</Grid>
         <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: user-approved production WebPs from the September 13, 2026 half-size export set. Each asset retains its original WebP dimensions and transparency. Shared viewport ratio 1103:939; desktop frame height 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. A 16px inset at the desktop reference size scales proportionally with the frame. The talking pair sets the weight ceiling; the most constrained subject limits the common target so none clips. Scale = square root of target mass divided by source mass. The baseline contrast-weighted center sits on the crosshair; the reviewed smith offset moves it left while keeping the same vertical center. Desktop frames center against the complete adjacent copy including its link; stacked layouts retain the same relative scales. Contribute and Download retain bounds-based sizing. Measurements are reproducible with bun run artwork:measure; source pixels are unchanged.</p><p>See README.md for the source files and section mapping. Brand assets remain at static/images; current sculptures are at static/images/artwork. Legacy asset URLs are preserved.</p></details>
@@ -276,7 +276,7 @@ function recipeFor(role: TextRole) {
         <p class="ds-lead">Search the catalog that generates the site’s CSS. The pale hero color retains a review marker for its accepted contrast exception.</p>
         <div class="ds-filters"><label>Search<input type="search" bind:value={query} placeholder="Token, value, selector…" /></label><label>Category<select bind:value={category}>{#each categories as item}<option>{item}</option>{/each}</select></label><label class="ds-toggle"><input type="checkbox" bind:checked={showReviewOnly} /> Review only</label></div>
         <p class="ds-note" role="status">{filtered.length} of {tokens.length} tokens</p>
-        <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Token / value</th><th>Role and provenance</th><th>Status</th></tr></thead><tbody>{#each filtered as token}<tr><td><code>--{token.id}</code><br /><code>{token.value}</code></td><td>{token.note}<details><summary>Consumers ({token.uses.length})</summary><p>{token.uses.join(", ") || "Shared primitive or documented foundation."}</p></details></td><td>{token.status}</td></tr>{/each}</tbody></table></div>
+        <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Token / value</th><th>Role and provenance</th><th>Status</th></tr></thead><tbody>{#each filtered as token}<tr><td><code>--{token.id}</code><br /><code>{token.value}{#if token.darkValue} light / {token.darkValue} dark{/if}</code></td><td>{token.note}<details><summary>Consumers ({token.uses.length})</summary><p>{token.uses.join(", ") || "Shared primitive or documented foundation."}</p></details></td><td>{token.status}</td></tr>{/each}</tbody></table></div>
         <p class="ds-note">Source: src/lib/design-system/tokens.json and typography.json. Regenerate with bun run tokens:generate. The test suite checks generated files, references, breakpoint consistency and new un-tokenized style values.</p>
     </section>
 </div>

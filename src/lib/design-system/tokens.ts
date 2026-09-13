@@ -10,7 +10,26 @@ export const motion = {
 
 /** Generated CSS and the reference page consume this same catalog. */
 export function renderTokens() {
-    return `/* Generated from src/lib/design-system/tokens.json. Run bun run tokens:generate. */\n:root {\n${tokens.map(({ id, value }) => `    --${id}: ${value};`).join("\n")}\n}\n`;
+    const dark = tokens
+        .filter((token) => token.darkValue)
+        .map(({ id, darkValue }) => `    --${id}: ${darkValue};`)
+        .join("\n");
+    return `/* Generated from src/lib/design-system/tokens.json. Run bun run tokens:generate. */
+:root {
+    color-scheme: light;
+${tokens.map(({ id, value }) => `    --${id}: ${value};`).join("\n")}
+}
+:root[data-theme="dark"] {
+    color-scheme: dark;
+${dark}
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        color-scheme: dark;
+${dark}
+    }
+}
+`;
 }
 
 export function contrastRatio(foreground: string, background: string) {

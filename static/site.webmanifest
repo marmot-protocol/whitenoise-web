@@ -4,13 +4,19 @@
     "description": "The identity-free messenger for private communication.",
     "icons": [
         {
-            "src": "/web-app-manifest-192x192.png",
+            "src": "/favicon-light.svg?v=2",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/web-app-manifest-192x192.png?v=2",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "/web-app-manifest-512x512.png",
+            "src": "/web-app-manifest-512x512.png?v=2",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
