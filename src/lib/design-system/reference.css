@@ -346,3 +346,27 @@
         grid-template-columns: var(--grid-single);
     }
 }
+
+/* Reference-only center guides for the approved visual-mass normalization. */
+.ds-art--balanced .artwork {
+    position: relative;
+    outline: var(--stroke-hairline) solid var(--color-rule);
+}
+.ds-art--balanced .artwork::before,
+.ds-art--balanced .artwork::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+.ds-art--balanced .artwork::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: var(--stroke-hairline) solid var(--color-rule);
+}
+.ds-art--balanced .artwork::after {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-left: var(--stroke-hairline) solid var(--color-rule);
+}

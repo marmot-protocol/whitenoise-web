@@ -15,14 +15,14 @@ const ways = [
     {
         title: "Build with us.",
         description:
-            "Explore the code behind White Noise, connect an agent, or build on the Marmot Protocol. Find the repositories and documentation to get started.",
+            "There’s plenty to work on in White Noise and Marmot, and we’d love your help. Fix a bug, contribute a feature, improve the libraries, or build your own app on the protocol. Explore the repositories and developer documentation to get started.",
         label: "For developers",
         href: "/build",
     },
     {
         title: "Join the community.",
         description:
-            "Help with design, illustration, writing, or translation. Bring your perspective to the things people use every day.",
+            "Help by testing new releases, sharing feedback, or contributing design, illustration, writing, or translation. You don’t need technical skills to make a difference. Bring your perspective to the things people use every day.",
         label: "Join on Signal",
         href: "https://signal.group/#CjQKICPlUduq29DjYD_EJQEBwu1EcEMR5QMZqcMlde026LBaEhCGS-kIM7uhNqtwtby57yQ1",
     },
@@ -50,7 +50,7 @@ const schema = {
 <div class="site-width">
     <div class="contribute-hero">
         <PageIntro title="Good things are built together." />
-        <Artwork name="roots" />
+        <Artwork name="children-plant" />
     </div>
     <Grid class="contribution-list">
         {#each ways as way}<section>

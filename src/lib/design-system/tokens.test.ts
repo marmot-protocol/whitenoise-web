@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { type ArtworkName, artworkGeometry, artworkViewBox } from "./artwork";
+import { type ArtworkName, artworkGeometry, artworkSourceSize, artworkViewBox } from "./artwork";
 import {
     breakpoints,
     contrastRatio,
@@ -147,9 +147,11 @@ describe("design system contract", () => {
         expect(tokenById["artwork-ratio"].value).toBe(
             `${artworkGeometry.ratioWidth} / ${artworkGeometry.ratioHeight}`
         );
-        for (const [x, y, width, height] of Object.values(artworkGeometry.bounds)) {
-            expect(x + width).toBeLessThanOrEqual(artworkGeometry.sourceSize);
-            expect(y + height).toBeLessThanOrEqual(artworkGeometry.sourceSize);
+        for (const name of Object.keys(artworkGeometry.bounds) as ArtworkName[]) {
+            const [x, y, width, height] = artworkGeometry.bounds[name];
+            const [sourceWidth, sourceHeight] = artworkSourceSize(name);
+            expect(x + width).toBeLessThanOrEqual(sourceWidth);
+            expect(y + height).toBeLessThanOrEqual(sourceHeight);
         }
     });
     it("contains and centers every sculpture, including wide artwork, without cropping", () => {

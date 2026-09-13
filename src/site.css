@@ -140,12 +140,6 @@ body {
     min-width: 0;
     overflow-wrap: anywhere;
 }
-.hero-identity {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-32);
-}
 .hero-tagline {
     margin-top: var(--space-12);
     color: var(--color-hero-muted);
@@ -161,32 +155,6 @@ body {
     gap: var(--space-12);
     margin-top: var(--gap-copy-action);
 }
-.wn-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: var(--size-action-min);
-    text-decoration: none;
-    width: fit-content;
-    padding: var(--space-16) var(--space-24);
-    gap: var(--space-24);
-    background: var(--action-background);
-    color: var(--action-foreground);
-    max-width: 100%;
-}
-.wn-button:not(:disabled):hover {
-    background: var(--action-hover);
-}
-.wn-button svg {
-    flex-shrink: 0;
-}
-.wn-button.secondary {
-    background: var(--color-surface);
-    color: var(--color-ink);
-}
-.wn-button.secondary:not(:disabled):hover {
-    background: var(--color-rule);
-}
 
 .artwork {
     width: 100%;
@@ -196,11 +164,21 @@ body {
     margin-top: 0;
 }
 .artwork svg {
+    --artwork-compact-offset: 0%;
     display: block;
     width: 100%;
     height: 100%;
     overflow: hidden;
     filter: var(--artwork-filter);
+}
+.artwork--balanced {
+    transform: scale(var(--artwork-scale));
+    transform-origin: center;
+}
+@media (max-width: 900px) {
+    .artwork--balanced svg {
+        transform: translateX(var(--artwork-compact-offset));
+    }
 }
 .feature-block {
     padding-block: var(--space-64);
@@ -215,20 +193,6 @@ body {
 .feature-copy p {
     color: var(--color-muted);
     margin-top: var(--gap-heading-body);
-}
-.text-link {
-    display: inline-block;
-    text-decoration: underline;
-    text-underline-offset: var(--space-4);
-    text-decoration-thickness: var(--stroke-hairline);
-    padding-block: var(--space-4);
-    margin-top: var(--gap-copy-action);
-}
-.text-link:hover {
-    color: var(--color-ink);
-}
-.repository-list .text-link {
-    margin-top: 0;
 }
 .illustrated {
     display: grid;
@@ -631,6 +595,7 @@ body {
     margin-top: var(--space-8);
 }
 .repository-list .text-link {
+    margin-top: 0;
     display: inline-flex;
     align-items: center;
     gap: var(--space-8);
@@ -661,6 +626,26 @@ body {
 }
 .documentation-body code {
     font-family: var(--font-mono);
+}
+.agent-prompt {
+    display: grid;
+    gap: var(--space-16);
+    padding: var(--space-24);
+    margin-top: var(--gap-heading-body);
+    background: var(--color-surface);
+}
+.agent-prompt-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-16);
+}
+.documentation-body .agent-prompt-text {
+    padding: 0;
+    margin: 0;
+    color: var(--color-muted);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 .documentation-body :is(th, td) code {
     white-space: nowrap;
@@ -908,7 +893,10 @@ body {
     :is(.article-body, .documentation-body, .prose)
     :is(h2, h3, h4, h5, h6):first-child,
 :where(.wn-site) :is(.article-body, .documentation-body, .prose) > :first-child,
-:where(.wn-site) .documentation-body > span:first-child:empty + :is(h2, h3, h4, h5, h6, p) {
+:where(.wn-site)
+    :is(.documentation-body, .documentation-body section)
+    > span:first-child:empty
+    + :is(h2, h3, h4, h5, h6, p) {
     margin-top: 0;
 }
 :where(.wn-site)
@@ -933,13 +921,6 @@ body {
     margin-block: var(--space-32);
 }
 @media (max-width: 900px) {
-    .text-link {
-        min-height: var(--icon-target);
-        display: inline-flex;
-        align-items: center;
-        max-width: 100%;
-        overflow-wrap: anywhere;
-    }
     .desktop-nav {
         display: none;
     }
@@ -985,10 +966,6 @@ body {
     }
     .hero-title {
         container-type: inline-size;
-    }
-    .hero-tagline span {
-        display: block;
-        white-space: nowrap;
     }
     .illustrated,
     .contribute-hero,
@@ -1046,14 +1023,8 @@ body {
         padding-inline: var(--space-24);
         max-height: calc(var(--viewport-height) - var(--size-header-mobile));
     }
-    .hero-identity {
-        gap: var(--space-24);
-    }
     .hero-tagline {
         margin-top: var(--space-8);
-    }
-    .hero-action {
-        gap: var(--space-12);
     }
     .feature-block {
         --gap-heading-body: var(--space-8);
@@ -1104,6 +1075,7 @@ body {
     .technical-content :is(th, td) {
         min-width: var(--size-table-cell-min);
     }
+    .agent-prompt,
     .documentation-body pre,
     .wn-site .prose pre {
         padding: var(--space-16);

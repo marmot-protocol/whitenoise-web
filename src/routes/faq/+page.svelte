@@ -4,7 +4,7 @@ import PageIntro from "$lib/components/site/PageIntro.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
 import Text from "$lib/components/system/Text.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
-import { faqGroups, faqSchema } from "$lib/content/homepage";
+import { faqGroups, faqSchema } from "$lib/content/faqs";
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 import agents from "$lib/content/agents.md?raw";
 import build from "$lib/content/build.md?raw";
-import { faqGroups } from "$lib/content/homepage";
+import { faqGroups } from "$lib/content/faqs";
 import marmot from "$lib/content/marmot.md?raw";
 import overview from "$lib/content/overview.md?raw";
 

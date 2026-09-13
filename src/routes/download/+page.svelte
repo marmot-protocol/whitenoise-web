@@ -9,19 +9,23 @@ import TextLink from "$lib/components/system/TextLink.svelte";
 const options: {
     name: string;
     description: string;
-    downloads: { label: string; href?: string; variant?: "primary" | "secondary" }[];
+    downloads: {
+        label: string;
+        href: string;
+        placeholder?: boolean;
+        variant?: "primary" | "secondary";
+    }[];
 }[] = [
     {
         name: "iPhone",
-        description: "The App Store link is not available yet.",
-        downloads: [{ label: "App Store" }],
+        description: "Get White Noise for iPhone.",
+        downloads: [{ label: "App Store", href: "#", placeholder: true }],
     },
     {
         name: "Android",
-        description:
-            "Use Zapstore or download the APK directly. The Google Play link is not available yet.",
+        description: "Get White Noise for Android.",
         downloads: [
-            { label: "Google Play" },
+            { label: "Google Play", href: "#", placeholder: true },
             {
                 label: "Zapstore",
                 variant: "secondary",
@@ -45,7 +49,7 @@ const schema = {
     url: "https://www.whitenoise.chat/download",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     downloadUrl: options.flatMap((option) =>
-        option.downloads.flatMap(({ href }) => (href ? [href] : []))
+        option.downloads.flatMap(({ href, placeholder }) => (placeholder ? [] : [href]))
     ),
 };
 </script>
@@ -56,14 +60,14 @@ const schema = {
         href="https://www.whitenoise.chat/download"
     /><meta
         name="description"
-        content="Find available White Noise downloads, including Zapstore and a direct Android APK."
+        content="Download White Noise for iPhone and Android."
     /></svelte:head
 >
 <JsonLd {schema} />
 <div class="site-width">
     <PageIntro
         title="Download White Noise"
-        description="Find available downloads below. You can install White Noise for Android through Zapstore or download the APK directly."
+        description="Get White Noise for iPhone or Android. Choose your download below."
     />
     <Grid columns={2} class="download-options">
         {#each options as option}<section class="download-option">
@@ -71,7 +75,7 @@ const schema = {
                 <p>{option.description}</p>
                 <div class="download-actions">
                     {#each option.downloads as download}
-                        <Action external disabled={!download.href} href={download.href} label={download.label} variant={download.variant} icon="down" />
+                        <Action external={!download.placeholder} href={download.href} onclick={download.placeholder ? (event) => event.preventDefault() : undefined} label={download.label} variant={download.variant} icon="down" />
                     {/each}
                 </div>
             </section>{/each}
@@ -85,6 +89,6 @@ const schema = {
             </p>
             <TextLink href="/contribute">Share feedback or get involved</TextLink>
         </div>
-        <Artwork />
+        <Artwork name="smith-chain" />
     </section>
 </div>

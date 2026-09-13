@@ -11,6 +11,8 @@ bun install --frozen-lockfile
 bun run dev
 ```
 
+Development and production preview servers listen on the local network for phone testing. Open the Network URL printed by Vite on a phone connected to the same Wi-Fi. Keep the server running during review and use the default scripts rather than overriding the host with `127.0.0.1`.
+
 ## Quality checks
 
 ```bash
@@ -24,16 +26,16 @@ bun run build
 
 ## Site structure and maintenance
 
-- Shared navigation and the closing Download section live in `src/lib/components/site` and are rendered once by the root layout. Shared UI primitives live in `src/lib/components/system`.
+- Navigation destinations and active-page rules live in `src/lib/navigation.ts`, with guide paths and sections in `src/lib/documentation-navigation.ts`. The header and closing Download section live in `src/lib/components/site` and are rendered once by the root layout. Shared UI primitives live in `src/lib/components/system`.
 - `src/lib/design-system/README.md` documents the active tokens, typography and component contracts. `/design-system` is the noindex reference, omitted from navigation and the sitemap. Run `bun run tokens:generate` after editing a catalog and include its generated CSS and runtime constants with the source.
-- Homepage and FAQ copy share `src/lib/content/homepage.ts`. The short Agents, Build and Marmot guides use local Markdown in `src/lib/content`; full upstream documentation remains on GitHub. Legacy documentation URLs retain their redirects.
+- Homepage features live in `src/lib/content/homepage.ts`; FAQ pages, structured data and text exports share `src/lib/content/faqs.ts`. The short Agents, Build and Marmot guides use local Markdown in `src/lib/content`; full upstream documentation remains on GitHub. Legacy documentation URLs retain their redirects.
 - Blog posts and canary attestations come from Nostr. Keep their loaders, sanitization, cache behavior and signed data intact. The privacy policy source is `src/lib/content/privacy-policy.md`.
 - Generated exports and temporary browser evidence belong in ignored `output/` or `tmp/` directories. They are not production assets. Superseded design explorations and screenshots remain recoverable from Git history.
 - The site uses the Vercel adapter. `bun run ci` runs the release checks locally; publishing still requires explicit authorization.
 
 ## Production behavior
 
-Marketing pages and local FAQ/guide text are pre-rendered. Blog articles, canary attestations, dynamic documentation redirects and the sitemap remain server-rendered. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
+Marketing pages, the FAQ, and the Agents and Build guides are pre-rendered. Blog content, canary attestations, the Marmot guide, documentation redirects and the sitemap use server routes. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
 
 Relay transport lives under `src/lib/server`. It verifies signatures, author, kind and filters, chooses the newest replaceable event, and closes requests within ten seconds. Requests retain verified partial results. List and article caches coalesce concurrent reads, expire after five minutes, and allow at most one hour of stale blog content after refresh failures. Expired missing-post results are never served as stale content during an outage. Caches are process-local and bounded; they are not persistent storage. Canary data is cached for one minute with no stale-on-error fallback. The page renders the signed statement verbatim, escaped as text.
 
@@ -41,22 +43,31 @@ The content security policy permits same-origin code and the existing `analytics
 
 `/llms.txt` and `/llms-full.txt` retain their public URLs and are generated from the overview, FAQ and guide sources. They no longer claim to contain full upstream documentation. The sitemap reports article modification dates and does not invent fresh modification dates for static pages.
 
+Agent setup prompts live in `agent-setup` fences in `src/lib/content/agents.md`; the guide's visible prompt containers, copy controls and text export share this source. Guide Markdown is rendered once per server instance; page data contains either one article or sections with prompts, without a duplicate full article. Keep the runtime-specific prerequisites and installation-approval step when updating them.
+
 The cookie dependency override applies the upstream 0.7.x validation fix for [GHSA-pxg6-pf52-xh8x](https://github.com/advisories/GHSA-pxg6-pf52-xh8x) while SvelteKit declares the older range. Recheck this override when updating SvelteKit; remove it once the framework resolves a fixed version itself.
 
 Existing `/images/rebuild/` paths are stable public asset URLs retained for compatibility. Site components and styles use durable `site` naming. The design system's documentation catalog is isolated from normal page runtime imports; small generated constants supply breakpoint and copy-feedback behavior.
 
+Public availability copy describes the intended launch state, when both iPhone and Android apps are available. The App Store and Google Play buttons are user-approved active placeholders: clicking stays on the Download page. They are excluded from structured download URLs. Zapstore and the direct APK retain their real destinations. Replace the placeholders only when store URLs are supplied.
+
 ## Artwork sources
 
-Manrope is self-hosted through `@fontsource-variable/manrope`. The canonical WN mark, supporter logos, social preview and application icons remain in `static/`. The transparent 1200px sculptures in `static/images/rebuild/` come from the [Figma Marketing file](https://www.figma.com/design/JnQBwAwtSteJR3NO0iVPyp/05.-Marketing?node-id=25-2). Visible bounds and normalization live in `src/lib/design-system/artwork.ts`; preserve source pixels and logo geometry.
+Manrope is self-hosted through `@fontsource-variable/manrope`. The canonical WN mark, supporter logos, social preview and application icons remain in `static/`.
 
-| Asset | Figma source node |
-| --- | --- |
-| `lantern.png` | `25:18` |
-| `roots.png` | `112:2` |
-| `identity.png` | `25:187` |
-| `community.png` | `120:17` |
-| `agents.png` | `25:303` |
-| `open.png` | `35:21` |
+Current illustrations in `static/images/artwork/` are the user-approved WebPs from `/Users/vladimirkrstic/Workspaces/ffmpeg-tools/output/half-size-webp-2026-09-13`, supplied September 13, 2026. Copy these files unchanged; do not re-encode them. Source dimensions and visible alpha bounds (above 16, excluding near-transparent export noise) live in `src/lib/design-system/artwork.ts`. The shared viewport preserves proportions and uses the approved artwork layout.
+
+| Site asset | Supplied file | Placement |
+| --- | --- | --- |
+| `conversation.webp` | `Private Conversation-half.webp` | Private messages. Private groups. |
+| `identity-balloon.webp` | `Woman With A Balloon-half.webp` | No phone number. No email. |
+| `agent-contact.webp` | `Agent-half.webp` | All your AI in a single app |
+| `network-flower.webp` | `Girl With A Flower-half.webp` | No central server. No lock-in. |
+| `band.webp` | `Band-half.webp` | We can’t lock you in. |
+| `children-plant.webp` | `Children Holding Plant-half.webp` | Open source. Open standards.; Contribute introduction |
+| `smith-chain.webp` | `Smith & Chain-half.webp` | Built with the community.; Download feedback section |
+
+The seven distinct active illustrations total 1.97 MB. `Explorer Boy-half.webp` is not used in the selected composition. Earlier `/images/rebuild/` URLs remain available for compatibility. Original Figma exports came from the [Marketing file](https://www.figma.com/design/JnQBwAwtSteJR3NO0iVPyp/05.-Marketing?node-id=25-2): lantern `25:18`, roots `112:2`, identity `25:187`, community `120:17`, agents `25:303`, open `35:21`.
 
 ## Content verification
 
@@ -156,16 +167,11 @@ This prints the event through `jq`, including:
 - `content`
 - the full `tags` array
 
-## Release review — September 11, 2026
+## Release considerations
 
-The local hardening pass covers server/client boundaries, relay verification and failure handling, bounded caching, sanitization, dependency updates, CSP, static rendering, metadata, shared UI, and the active route/asset graph. CI passes under Node 22. The policy source, payment values and existing download URLs remain unchanged.
+- App Store and Google Play URLs have not been supplied. The Download page keeps the user-approved active placeholders described above; Zapstore and the APK have real destinations.
+- The pale hero gray is an accepted exception to large-text AA contrast, recorded in the design system.
+- “Holding Ourselves to It” on Privacy Matters contains absolute privacy/anonymization claims that conflict with the policy's stated limitations. That copy still needs a separate content review; the canonical policy is unchanged.
+- Vercel's build tracer reports the optional `supports-color` dependency of `debug`. Local production builds and tested routes work without it.
 
-Validation: 69 tests pass across 14 test files; lint, formatting, type checks and the Node 22 production build pass. The local production scan covers 29 pages (including 17 articles), referenced local assets and all 69 emitted client assets, plus legacy redirects and error responses. Browser checks cover 320, 640, 900, 901 and 1280px layouts, menus, sticky anchors, FAQ disclosure, address copying and its reset. Native Safari checks include actual 200% page zoom, compact navigation, guide disclosure/anchor positioning, and the continuous footer background. The blog listing response is approximately 39 KB after removing unused article bodies from page data.
-
-Remaining decisions before claiming full release readiness:
-
-- App Store and Google Play destination URLs have not been supplied. Their existing slots are disabled and availability copy is explicit; Zapstore and the APK link remain active.
-- The user explicitly retained the pale hero gray despite its sub-AA large-text contrast. This is an accepted visual exception, not a passed accessibility check.
-- “Holding Ourselves to It” on Privacy Matters contains absolute privacy/anonymization claims that conflict with the policy's stated limitations. Approval to align that paragraph is pending; the published policy itself is not changed.
-
-Vercel's build tracer still notes the optional `supports-color` dependency of `debug`; production builds and the tested routes work without it. No deployment, push or merge was performed. Release review should verify deployed headers/domain redirects and verify mobile Safari on a physical device before publishing.
+Before publishing, verify deployed headers and domain redirects, check mobile Safari on a physical device, and resolve the outstanding content and store-destination decisions. Keep dated test results and browser evidence in ignored `tmp/` or `output/`, rather than maintaining a second release log here.

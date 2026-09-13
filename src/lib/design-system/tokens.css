@@ -58,6 +58,7 @@
     --size-supporter-height: 2.5875rem;
     --size-supporter-width: 10.35rem;
     --size-artwork: calc(25rem * 1103 / 939);
+    --artwork-scale: 1.2;
     --size-action-min: 3.5rem;
     --size-logo: 3rem;
     --size-header: 5.5rem;
@@ -92,6 +93,6 @@
     --inset-hero: var(--space-144);
     --inset-band-start: var(--space-56);
     --inset-band-end: var(--space-64);
-    --size-closing-line-em: 8.12;
+    --size-closing-line-em: 9.9;
     --size-hero-tagline-line-em: 9.26;
 }

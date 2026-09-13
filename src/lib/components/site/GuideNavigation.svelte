@@ -41,22 +41,22 @@ const selected = $derived(scrolledGuide ?? activeGuide(area, page.url.pathname, 
 let sidebar = $state<HTMLElement>();
 $effect(() => {
     const pathname = page.url.pathname;
-    const localLinks = links.filter((link) => link.href.split("#")[0] === pathname);
     scrolledGuide = undefined;
-    if (!localLinks.some((link) => link.href.includes("#"))) return;
+    if (pathname !== guideInfo[area].path) return;
+    const targets = links.flatMap(({ id }) => {
+        const element = window.document.getElementById(id);
+        return element ? [{ id, element }] : [];
+    });
+    if (!targets.length) return;
     let frame = 0;
     const update = () => {
         const compactViewport = window.innerWidth <= breakpoints.tablet;
         if (compact !== compactViewport) return;
-        const sections = localLinks
-            .flatMap((link) => {
-                const target = window.document.getElementById(
-                    link.href.split("#")[1] || "getting-started"
-                );
-                return target
-                    ? [{ id: link.id, top: Math.round(target.getBoundingClientRect().top) }]
-                    : [];
-            })
+        const sections = targets
+            .map(({ id, element }) => ({
+                id,
+                top: Math.round(element.getBoundingClientRect().top),
+            }))
             .sort((a, b) => a.top - b.top);
         const readingLine = compact
             ? Number.parseFloat(getComputedStyle(window.document.documentElement).scrollPaddingTop)
@@ -65,6 +65,9 @@ $effect(() => {
     };
     const schedule = () => {
         cancelAnimationFrame(frame);
+        // Both presentations exist in the DOM; only the visible one tracks scrolling.
+        const compactViewport = window.innerWidth <= breakpoints.tablet;
+        if (compact !== compactViewport) return;
         frame = requestAnimationFrame(update);
     };
     const observer = new ResizeObserver(schedule);

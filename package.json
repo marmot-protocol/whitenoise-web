@@ -4,9 +4,9 @@
     "version": "0.0.1",
     "type": "module",
     "scripts": {
-        "dev": "vite dev",
+        "dev": "vite dev --host 0.0.0.0",
         "build": "vite build",
-        "preview": "vite preview",
+        "preview": "vite preview --host 0.0.0.0",
         "prepare": "svelte-kit sync",
         "ci": "biome ci . && bun run test && bun run check && bun run build",
         "lint": "biome check",
@@ -18,7 +18,8 @@
         "test:watch": "vitest",
         "test:coverage": "vitest run --coverage",
         "canary:publish": "./scripts/publish-canary.sh",
-        "tokens:generate": "bun scripts/generate-tokens.ts"
+        "tokens:generate": "bun scripts/generate-tokens.ts",
+        "artwork:measure": "${ARTWORK_PYTHON:-python3} scripts/measure-artwork.py"
     },
     "devDependencies": {
         "@biomejs/biome": "^2.5.10",

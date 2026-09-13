@@ -1,128 +1,76 @@
-type Faq = {
-    featured?: boolean;
-    question: string;
-    answer: string;
-    link?: { label: string; href: string; external?: boolean };
+import type { ArtworkName } from "$lib/design-system/artwork";
+
+type HomepageFeature = {
+    title: string[];
+    description: string;
+    artwork: ArtworkName;
+    id?: string;
+    link?: { label: string; href: string };
 };
 
-export const agentsGuide = "/agents";
-
-// Copy sources and verification requirements are recorded in README.md.
-// Keep the visible answers and FAQ structured data on the same source.
-export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
+export const homepageFeatures: HomepageFeature[] = [
     {
-        id: "getting-started",
-        title: "Getting started",
-        items: [
-            {
-                question: "Is White Noise free?",
-                featured: true,
-                answer: "Yes. White Noise is free to download and open source. Running your own relay or choosing a paid relay service can have separate costs, but you do not need to run a server to get started.",
-            },
-            {
-                question: "Which devices can I use?",
-                featured: true,
-                answer: "Our download page currently offers Android through Zapstore and a direct APK. App Store and Google Play links are not available yet. White Noise is in beta, so installation options and features may change between releases.",
-                link: { label: "See download options", href: "/download" },
-            },
-            {
-                question: "How do I find and add someone?",
-                answer: "Exchange White Noise profiles using a profile link, QR code, or public key, then start a conversation in the app. Your public key identifies you and is safe to share. Your private key controls your identity: keep it secret and never send it to a contact.",
-            },
-            {
-                question: "Can I use the same identity on multiple devices?",
-                answer: "Linked-device support is still being developed in the Marmot protocol. Importing the same identity key on another device does not by itself transfer your conversations or their encryption state. Do not rely on a second installation as a synchronized backup of your chats.",
-                link: {
-                    label: "Read about multi-device development",
-                    href: "/docs/marmot/features/multi-device.md",
-                },
-            },
-        ],
+        title: ["Private messages.", "Private groups."],
+        description:
+            "Talk one to one or bring a group together. End-to-end encryption keeps your messages private between the people in the conversation. Even White Noise can’t read what you send.",
+        artwork: "conversation",
+        link: {
+            label: "Why privacy matters",
+            href: "/privacy-matters",
+        },
     },
     {
-        id: "privacy-and-identity",
-        title: "Privacy and identity",
-        items: [
-            {
-                question: "Who can read my messages?",
-                featured: true,
-                answer: "Messages are end-to-end encrypted for the participants in your conversation. White Noise and the relays carrying those messages cannot read their content. Participants can still copy or share what they receive, and someone with access to an unlocked or compromised device may be able to read messages on it.",
-            },
-            {
-                question: "Does using White Noise make me anonymous?",
-                answer: "No phone number or email is required, but that is not a guarantee of anonymity. Your public profile, the information you share, and network information such as your IP address can reveal things about you. You can choose a display name, including a pseudonym, while deciding what to share with others.",
-            },
-            {
-                question: "Where are my messages and files stored?",
-                answer: "Conversation data is stored on your device. Independent relays also store and forward encrypted message events; their retention policies vary. Media shared in encrypted conversations is encrypted before upload to media servers. Public profile information and profile pictures are public, and copies on independent servers may persist.",
-                link: { label: "Read the privacy policy", href: "/privacy" },
-            },
-            {
-                question: "What happens if I lose my phone or private key?",
-                answer: "White Noise cannot reset or recover your private key for you. Keep a secure backup of your identity key, but remember that the key alone is not a backup of your message history. If a device or key is stolen, treat that identity as compromised and tell your contacts through another trusted channel. Encryption cannot erase messages already stored on the stolen device.",
-            },
-            {
-                question: "What information does White Noise collect?",
-                answer: "In-app usage and diagnostics sharing is off by default. If you enable it, it sends limited usage and reliability measurements, without message content, contacts, or account and group identifiers. Audit logs are a separate opt-in choice. Push notifications, public profiles, and services you connect to have their own data flows, all explained in the privacy policy.",
-                link: { label: "See what is shared and when", href: "/privacy" },
-            },
-        ],
+        title: ["No phone number.", "No email."],
+        description:
+            "Choose a name and start connecting. No phone number, email address, or real name required. Create as many identities as you like. Use one for friends, another for work, or start fresh with people you’ve just met. You decide how you’re known.",
+        artwork: "identity-balloon",
     },
     {
-        id: "groups-and-network",
-        title: "Groups and the network",
-        items: [
-            {
-                question: "What is a relay?",
-                answer: "A relay is a server that receives, stores, and forwards messages across the Nostr network. White Noise encrypts conversation content before sending it to relays. A relay operator can still observe connection information, such as your IP address, even though it cannot read the encrypted messages.",
-            },
-            {
-                question: "What happens when a relay goes offline?",
-                answer: "Marmot supports delivery through multiple relays so a conversation does not depend on one server. Other reachable relays shared by the conversation can continue carrying messages. Delivery can still be delayed if participants cannot reach a suitable relay or lose their internet connection.",
-            },
-            {
-                question: "Can I choose my relays or run my own?",
-                answer: "Yes. White Noise lets you configure relays, and you can run a compatible Nostr relay yourself. People in a conversation need a shared way to exchange messages, so relay choices must work for the group. Operating your own relay gives you control over that server, but does not give you control over copies held elsewhere.",
-                link: { label: "Explore the protocol and tools", href: "/build" },
-            },
-            {
-                question: "Can White Noise be blocked?",
-                answer: "Yes. A network provider or government can block particular servers or restrict internet access. Independent relays reduce reliance on one operator and can provide alternative routes, but White Noise cannot guarantee connectivity. Encryption protects message content; it does not make network traffic invisible or impossible to block.",
-            },
-            {
-                question: "What can group admins do?",
-                answer: "Admins manage group membership, including adding and removing members under the group’s rules. Once a removal takes effect in the group’s encryption state, the removed member cannot decrypt new messages with their old keys. Removal does not erase messages they already received, saved, or shared.",
-            },
-        ],
-    },
-    {
+        title: ["All your AI", "in a single app"],
+        description:
+            "An agent is just another contact. Connect Hermes, OpenClaw, Codex, OpenCode or Pi and talk to them from your phone. They sit in the same list as everyone else, and they work before any of your friends are here.",
+        artwork: "agent-contact",
         id: "agents",
-        title: "Agents",
-        items: [
-            {
-                question: "Which agents can I connect?",
-                featured: true,
-                answer: "MDK provides integrations for Hermes, OpenClaw, Codex, OpenCode, and Pi. Run the connector alongside your existing agent on a supported Mac or Linux computer, add its White Noise identity, and invite it to a conversation. The setup guide covers installation and which accounts are allowed to message it.",
-                link: { label: "Connect your agent", href: agentsGuide },
-            },
-            {
-                question: "What does encryption protect when I message an agent?",
-                answer: "It protects the messages exchanged between White Noise and the agent’s connector from being read by the relays carrying them. The agent receives the message so it can respond. Its model provider, tools, and logging settings determine what happens after that; connecting through White Noise does not make a cloud model run locally.",
-            },
-        ],
+        link: {
+            label: "Connect your agent",
+            href: "/agents",
+        },
+    },
+    {
+        title: ["No central server.", "No lock-in."],
+        description:
+            "White Noise delivers messages through independent servers called relays. Your identity isn’t tied to any one of them. Connect to multiple relays and switch whenever you want, keeping the same identity and contacts. You can even run your own relay and choose who you share it with.",
+        artwork: "network-flower",
+    },
+    {
+        title: ["We can’t lock you in."],
+        description:
+            "White Noise is built on Marmot, a free, open-source messaging protocol anyone can use or build on without asking permission. That opens the door to different apps with different styles and features. You can chat with people using other Marmot-compatible apps or switch to one yourself. Everyone gets to choose what suits them and still stay connected.",
+        artwork: "band",
+        id: "interoperability",
+        link: {
+            label: "Explore Marmot",
+            href: "/docs/marmot/README.md",
+        },
+    },
+    {
+        title: ["Open source.", "Open standards."],
+        description:
+            "White Noise’s code is open for anyone to inspect, improve, or build on. You don’t have to take our word for how it works. Developers can check the code, help fix problems, or use it to create something of their own. Open standards let others build apps that work with it.",
+        artwork: "children-plant",
+        link: {
+            label: "Explore the code",
+            href: "/build",
+        },
+    },
+    {
+        title: ["Built with", "the community."],
+        description:
+            "Help make White Noise better. Share feedback, test new releases, translate, or contribute code and design. You don’t need to be a developer to make a difference. Simply telling us what feels confusing or what you wish worked better is a good place to start.",
+        artwork: "smith-chain",
+        link: {
+            label: "Get involved",
+            href: "/contribute",
+        },
     },
 ];
-
-export const homepageFaqs = faqGroups.flatMap((group) => group.items).filter((faq) => faq.featured);
-
-export function faqSchema(items: Faq[]) {
-    return {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: items.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: { "@type": "Answer", text: faq.answer },
-        })),
-    };
-}

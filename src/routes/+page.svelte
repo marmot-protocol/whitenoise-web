@@ -5,7 +5,8 @@ import Supporters from "$lib/components/site/Supporters.svelte";
 import Action from "$lib/components/system/Action.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
-import { agentsGuide, faqSchema, homepageFaqs } from "$lib/content/homepage";
+import { faqSchema, homepageFaqs } from "$lib/content/faqs";
+import { homepageFeatures } from "$lib/content/homepage";
 
 const schema = {
     "@context": "https://schema.org",
@@ -45,11 +46,9 @@ const schema = {
 <JsonLd {schema} /><JsonLd schema={faqSchema(homepageFaqs)} />
 <div class="homepage site-width">
     <section class="home-hero">
-        <div class="hero-identity">
-            <div class="hero-title">
-                <h1>White Noise</h1>
-                <p class="hero-tagline"><span>The identity-free</span> <span>messenger for private</span> <span>communication.</span></p>
-            </div>
+        <div class="hero-title">
+            <h1>White Noise</h1>
+            <p class="hero-tagline">The private messenger you can start using in seconds. No phone number, no email.</p>
         </div>
         <div class="hero-action" id="hero-download">
             <Action href="/download" label="Download" icon="down" />
@@ -57,64 +56,16 @@ const schema = {
     </section>
     <Supporters />
     <div class="home-features" id="features">
-        <section class="feature-block illustrated">
-            <div class="feature-copy">
-                <h2>Private messages.<br />Private groups.</h2>
-                <p>
-                    Talk one to one or bring a group together. End-to-end encryption keeps your messages private between the people in the conversation.
-                </p>
-                <TextLink href="/privacy-matters">Why privacy matters</TextLink>
-            </div>
-            <Artwork />
-        </section>
-        <section class="feature-block illustrated identity-feature">
-            <div class="feature-copy">
-                <h2>No phone number.<br />No email.</h2>
-                <p>
-                    Choose a name and start connecting. No phone number or email address needed.
-                </p>
-            </div>
-            <Artwork name="identity" />
-        </section>
-        <section class="feature-block illustrated" id="agents">
-            <div class="feature-copy">
-                <h2>An agent is just<br />another contact.</h2>
-                <p>
-                    Connect an AI agent running on your computer and chat with it from White Noise, just like another contact.
-                </p>
-                <TextLink href={agentsGuide}>Connect your agent</TextLink>
-            </div>
-            <Artwork name="agents" />
-        </section>
-        <section class="feature-block illustrated relay-feature">
-            <div class="feature-copy">
-                <h2>An independent<br />network.</h2>
-                <p>
-                    White Noise uses a network of independent servers to deliver messages, reducing reliance on any one provider.
-                </p>
-            </div>
-            <Artwork name="roots" />
-        </section>
-        <section class="feature-block illustrated open-feature">
-            <div class="feature-copy">
-                <h2>Open source.<br />Open standards.</h2>
-                <p>
-                    Anyone can see how White Noise works, suggest improvements, or build on it. The code is open to everyone.
-                </p>
-                <TextLink href="/build">Explore the code</TextLink>
-            </div>
-            <Artwork name="open" />
-        </section>
-        <section class="feature-block illustrated community-feature">
-            <div class="feature-copy">
-                <h2>Built with<br />the community.</h2>
-                <p>
-                    Help make White Noise better. Share feedback, test new releases, translate, or contribute code and design.
-                </p>
-                <TextLink href="/contribute">Get involved</TextLink>
-            </div>
-            <Artwork name="community" />
-        </section>
+        {#each homepageFeatures as feature}
+            <section class="feature-block illustrated" id={feature.id}>
+                <div class="feature-copy">
+                    <h2>{#each feature.title as line, index}{#if index > 0}<br />{/if}{line}{/each}</h2>
+                    <p>{feature.description}</p>
+                    {#if feature.link}<TextLink href={feature.link.href}>{feature.link.label}</TextLink>{/if}
+                </div>
+                <Artwork normalization="visual-mass" name={feature.artwork} />
+            </section>
+        {/each}
     </div>
     <section class="faq-section" id="faqs">
         <h2>Few things<br />you might ask.</h2>

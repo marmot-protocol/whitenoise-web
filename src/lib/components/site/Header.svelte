@@ -4,7 +4,17 @@ import { page } from "$app/state";
 import GuideNavigation from "$lib/components/site/GuideNavigation.svelte";
 import Icon from "$lib/components/system/Icon.svelte";
 import { breakpoints } from "$lib/design-system/runtime";
-import { guideInfo } from "$lib/documentation-navigation";
+import {
+    currentGuideArea,
+    currentPageLabel,
+    downloadLink,
+    isActiveDestination,
+    legalLinks,
+    mainLinks,
+    mobileLinkGroups,
+    moreLinks,
+    moreMenuLinks,
+} from "$lib/navigation";
 
 let open = $state(false);
 let moreOpen = $state(false);
@@ -12,46 +22,10 @@ let menuButton: HTMLButtonElement;
 let moreMenu: HTMLDetailsElement;
 let moreSummary: HTMLElement;
 let headerElement: HTMLElement;
-const links = [
-    { label: "Privacy Matters", href: "/privacy-matters" },
-    { label: "Contribute", href: "/contribute" },
-    { label: "Blog", href: "/blog" },
-];
-const moreLinks = [
-    { label: "Agents", href: "/agents" },
-    { label: "For developers", href: "/build" },
-    { label: "Marmot Protocol", href: "/docs/marmot/README.md" },
-    { label: "FAQ", href: "/faq" },
-];
-const legalLinks = [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Canary", href: "/canary" },
-];
-const download = { label: "Download", href: "/download" };
-const active = (href: string) =>
-    page.url.pathname === href ||
-    page.url.pathname.startsWith(`${href}/`) ||
-    (href === "/build" && page.url.pathname.startsWith("/docs/mdk/")) ||
-    (href === "/docs/marmot/README.md" && page.url.pathname.startsWith("/docs/marmot/"));
-const activeMoreLink = $derived([...moreLinks, ...legalLinks].find((link) => active(link.href)));
-
-const currentPageLabel = $derived(
-    [...links, ...moreLinks, ...legalLinks, download].find((link) => active(link.href))?.label ??
-        (page.url.pathname === "/"
-            ? "Home"
-            : page.url.pathname === "/design-system"
-              ? "Design system"
-              : "")
-);
-const currentGuideArea = $derived(
-    page.url.pathname === guideInfo.agents.path
-        ? "agents"
-        : page.url.pathname === guideInfo.builders.path
-          ? "builders"
-          : page.url.pathname === guideInfo.marmot.path
-            ? "marmot"
-            : undefined
-);
+const active = (href: string) => isActiveDestination(page.url.pathname, href);
+const activeMoreLink = $derived(moreMenuLinks.find((link) => active(link.href)));
+const pageLabel = $derived(currentPageLabel(page.url.pathname));
+const guideArea = $derived(currentGuideArea(page.url.pathname));
 
 function closeMenu() {
     open = false;
@@ -87,7 +61,7 @@ function resized() {
             </a>
         </div>
         <nav class="desktop-nav" aria-label="Main navigation">
-            {#each links as link}
+            {#each mainLinks as link}
                 <a
                     href={link.href}
                     aria-current={active(link.href) ? "page" : undefined}
@@ -102,10 +76,10 @@ function resized() {
                     {#each legalLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
                 </div>
             </details>
-            <a href={download.href} aria-current={active(download.href) ? "page" : undefined}>{download.label}</a>
+            <a href={downloadLink.href} aria-current={active(downloadLink.href) ? "page" : undefined}>{downloadLink.label}</a>
         </nav>
         <div class="compact-header-actions">
-        <span class="compact-page-name type-ui">{currentPageLabel}</span>
+        <span class="compact-page-name type-ui">{pageLabel}</span>
         <button
             bind:this={menuButton}
             class="menu-toggle"
@@ -124,16 +98,13 @@ function resized() {
         aria-label="Mobile navigation"
     >
         <a href="/" aria-current={page.url.pathname === "/" ? "page" : undefined}>Home</a>
-        {#each [...links, ...moreLinks, ...legalLinks, download] as link, index}
-            {#if index === links.length || index === links.length + moreLinks.length || index === links.length + moreLinks.length + legalLinks.length}
-                <hr class="nav-divider" />
-            {/if}
-            <a
-                href={link.href}
-                aria-current={active(link.href) ? "page" : undefined}>{link.label}</a
-            >
+        {#each mobileLinkGroups as group, index}
+            {#if index > 0}<hr class="nav-divider" />{/if}
+            {#each group as link}
+                <a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>
+            {/each}
         {/each}
     </nav>
     </div>
-    {#if currentGuideArea}<GuideNavigation area={currentGuideArea} compact onopen={closeMenu} />{/if}
+    {#if guideArea}<GuideNavigation area={guideArea} compact onopen={closeMenu} />{/if}
 </header>

@@ -47,7 +47,7 @@ const specimens: { role: TextRole; title: string; sample: string; use: string }[
     {
         role: "display",
         title: "Display",
-        sample: "A little more noise, a little more you.",
+        sample: "Keep the conversation to the people in it.",
         use: "Page introductions, article and legal titles: 72px desktop, 48px tablet and mobile. The homepage hero also retains 48px on mobile. The shared closing statement fits two fixed lines to its container, capped at 72px.",
     },
     {
@@ -100,7 +100,15 @@ const specimens: { role: TextRole; title: string; sample: string; use: string }[
     },
 ];
 const iconNames = Object.keys(icons) as IconName[];
-const artNames = ["lantern", "identity", "agents", "roots", "open", "community"] as const;
+const artNames = [
+    "conversation",
+    "identity-balloon",
+    "agent-contact",
+    "network-flower",
+    "band",
+    "children-plant",
+    "smith-chain",
+] as const;
 function recipeFor(role: TextRole) {
     return typography.filter((recipe) =>
         recipe.selectors
@@ -143,7 +151,7 @@ function recipeFor(role: TextRole) {
         <h3 class="ds-subtitle">Text contrast</h3>
         <div class="ds-table-wrap"><table class="ds-table"><caption>Computed from the token values. AA requires 4.5:1 for normal text or 3:1 for large text.</caption>
             <thead><tr><th>Pair</th><th>Ratio</th><th>Current use</th></tr></thead><tbody>
-                {#each [["color-ink", "color-paper", "Primary text"], ["color-muted", "color-paper", "Supporting text"], ["color-muted", "color-surface", "Addresses on gray"], ["color-muted", "color-paper", "Signed-event links"], ["color-hero-muted", "color-paper", "Hero tagline — below AA; decision pending"], ["color-inverse-muted", "color-ink", "Copyright"]] as [front, back, use]}
+                {#each [["color-ink", "color-paper", "Primary text"], ["color-muted", "color-paper", "Supporting text"], ["color-muted", "color-surface", "Addresses on gray"], ["color-muted", "color-paper", "Signed-event links"], ["color-hero-muted", "color-paper", "Hero tagline — accepted contrast exception"], ["color-inverse-muted", "color-ink", "Copyright"]] as [front, back, use]}
                     <tr><td>{front} / {back}</td><td>{contrastRatio(tokenById[front].value, tokenById[back].value).toFixed(2)}:1</td><td>{use}</td></tr>
                 {/each}
             </tbody></table></div>
@@ -165,8 +173,8 @@ function recipeFor(role: TextRole) {
         {/each}
         <article class="ds-type-specimen">
             <div class="ds-meta"><h3>Hero tagline</h3><code>hero-tagline-fit</code></div>
-            <div class="hero-title"><p class="hero-tagline"><span>The identity-free</span> <span>messenger for private</span> <span>communication.</span></p></div>
-            <p class="ds-note">Desktop retains its display size and natural wrapping. At 900px and below, the tagline scales to fit three fixed lines, breaking after “identity-free” and “private”, capped at 48px. The mobile title stays 48px. The pale gray remains the existing contrast review item.</p>
+            <div class="hero-title"><p class="hero-tagline">The private messenger you can start using in seconds. No phone number, no email.</p></div>
+            <p class="ds-note">Desktop retains its display size and natural wrapping. At 900px and below, the tagline retains its fluid size, capped at 48px. The updated copy wraps naturally at every width. The mobile title stays 48px. The pale gray is the accepted September 11 contrast exception.</p>
         </article>
         <details class="ds-details"><summary>All shared recipes and responsive rules ({typography.length})</summary>
             <p>These recipes style both the real pages and the specimens above. Page selectors select a role; they do not introduce their own size, weight or line height.</p>
@@ -229,9 +237,9 @@ function recipeFor(role: TextRole) {
     <section class="ds-section" id="ds-artwork">
         <Text as="h2" role="section">Identity and artwork.</Text>
         <div class="ds-brand"><img src="/images/logomark.svg" width="48" height="37" alt="White Noise mark" /><p>Canonical mark. Black treatment, original proportions. 48px desktop width and 38px mobile width.</p></div>
-        <p class="ds-lead">Six transparent Figma sculptures share measured visible-pixel bounds, rather than raw PNG dimensions. Their normalized viewports have the same visible height and center against the adjacent copy.</p>
-        <Grid>{#each artNames as name}<div class="ds-art"><Artwork {name} /><h3>{name}</h3></div>{/each}</Grid>
-        <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: Figma Marketing file JnQBwAwtSteJR3NO0iVPyp. Original exports are 1200×1200. Shared viewport ratio 1103:939; current desktop visible-height target 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. Exact bounds live in the artwork registry; source pixels are unchanged.</p><p>See README.md for node references. Brand assets remain at static/images; sculptures at static/images/rebuild.</p></details>
+        <p class="ds-lead">Seven production sculptures start from equal measured visual mass on the homepage. Opacity and contrast against white determine scale and center, including the shared grayscale and brightness treatment. Center guides below mark the common alignment target. Reviewed optical corrections enlarge the children with the plant by another 5% and the woman with the balloon by 5% followed by another 2.5%. Smith and chain shifts left from the original measured center by 5% of the frame width on desktop and 10% at 900px and below. Vertical centers stay aligned. At every viewport, the whole normalized frame is enlarged by the shared 1.2× scale, preserving the same relative balance on desktop, tablet and mobile.</p>
+        <Grid>{#each artNames as name}<div class="ds-art ds-art--balanced"><Artwork {name} normalization="visual-mass" /><h3>{name}</h3></div>{/each}</Grid>
+        <details class="ds-details"><summary>Asset sizing and provenance</summary><p>Sources: user-approved production WebPs from the September 13, 2026 half-size export set. Each asset retains its original WebP dimensions and transparency. Shared viewport ratio 1103:939; desktop frame height 400px. The viewport width is derived from that height and the measured source ratio. Mobile maximum is 22rem wide. A 16px inset at the desktop reference size scales proportionally with the frame. The talking pair sets the weight ceiling; the most constrained subject limits the common target so none clips. Scale = square root of target mass divided by source mass. The baseline contrast-weighted center sits on the crosshair; the reviewed smith offset moves it left while keeping the same vertical center. Desktop frames center against the complete adjacent copy including its link; stacked layouts retain the same relative scales. Contribute and Download retain bounds-based sizing. Measurements are reproducible with bun run artwork:measure; source pixels are unchanged.</p><p>See README.md for the source files and section mapping. Brand assets remain at static/images; current sculptures are at static/images/artwork. Legacy asset URLs are preserved.</p></details>
         <div class="ds-supporter-demo"><Supporters /></div>
     </section>
 
@@ -254,18 +262,18 @@ function recipeFor(role: TextRole) {
         <Text as="h2" role="section">Consolidation and exceptions.</Text>
         <p class="ds-lead">The consolidation replaces near-duplicates across the entire site. Measured asset geometry remains intact.</p>
         <ol class="ds-review-list">
-            <li><strong>Typography.</strong> 28 size definitions were consolidated into seven steps; the approved 36px mobile tagline adds an eighth. Six weights become four. Fifteen line heights become four. Six tracking values become three.</li>
-            <li><strong>Spacing.</strong> 46 distances become fourteen steps with eight shared relationship tokens. There are no legacy spacing exceptions in live styles.</li>
-            <li><strong>Colors.</strong> Sixteen colors become eight. Reading copy and secondary links share one gray; all light-gray surfaces share one neutral.</li>
+            <li><strong>Typography.</strong> Eight size steps, four weights, four line heights and shared tracking roles keep type consistent. The hero tagline uses the approved fluid size recipe.</li>
+            <li><strong>Spacing.</strong> Spacing steps and shared relationship tokens separate content within and between sections. There are no legacy spacing exceptions in live styles.</li>
+            <li><strong>Colors.</strong> Semantic color roles cover text, surfaces, rules and interactions. Reading copy and secondary links share one gray; all light-gray surfaces share one neutral.</li>
             <li><strong>Composition.</strong> One reading measure, equal content columns, and one text-action height replace page-specific variants.</li>
-            <li><strong>Hero contrast — open decision.</strong> The previously approved {tokenById["color-hero-muted"].value} tagline remains below AA. This is the only remaining review token. Its color is preserved pending that specific visual decision.</li>
+            <li><strong>Hero contrast — accepted exception.</strong> The {tokenById["color-hero-muted"].value} tagline remains below large-text AA. The user explicitly chose to retain it on September 11, 2026; the review marker records this accepted exception.</li>
         </ol>
         <p class="ds-note">New presentation should use these roles and components. A new token needs a specific purpose and a live specimen; duplicating a value under a new name is not a new design decision.</p>
     </section>
 
     <section class="ds-section" id="ds-tokens">
         <Text as="h2" role="section">Token reference.</Text>
-        <p class="ds-lead">Search the catalog that generates the site’s CSS. The only outstanding review item is the pale hero text color.</p>
+        <p class="ds-lead">Search the catalog that generates the site’s CSS. The pale hero color retains a review marker for its accepted contrast exception.</p>
         <div class="ds-filters"><label>Search<input type="search" bind:value={query} placeholder="Token, value, selector…" /></label><label>Category<select bind:value={category}>{#each categories as item}<option>{item}</option>{/each}</select></label><label class="ds-toggle"><input type="checkbox" bind:checked={showReviewOnly} /> Review only</label></div>
         <p class="ds-note" role="status">{filtered.length} of {tokens.length} tokens</p>
         <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Token / value</th><th>Role and provenance</th><th>Status</th></tr></thead><tbody>{#each filtered as token}<tr><td><code>--{token.id}</code><br /><code>{token.value}</code></td><td>{token.note}<details><summary>Consumers ({token.uses.length})</summary><p>{token.uses.join(", ") || "Shared primitive or documented foundation."}</p></details></td><td>{token.status}</td></tr>{/each}</tbody></table></div>

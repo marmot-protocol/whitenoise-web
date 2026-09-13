@@ -4,6 +4,6 @@ import Surface from "$lib/components/system/Surface.svelte";
 </script>
 
 <Surface class="download-closing" tone="ink">
-    <h2>A little more noise,<br />a little more you.</h2>
+    <h2>Keep the conversation<br />to the people in it.</h2>
     <Action href="/download" label="Download" icon="down" />
 </Surface>
