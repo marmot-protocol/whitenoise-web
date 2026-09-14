@@ -8,7 +8,7 @@ export const textRoles = {
     title: ".wn-site .prose h3",
     lead: ".page-description",
     body: ".article-body p",
-    small: ".donation-address-text",
+    small: ".download-option p",
     ui: ".wn-button",
     caption: ".footer-bottom",
 } as const;

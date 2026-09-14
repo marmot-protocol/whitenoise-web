@@ -2,20 +2,17 @@
 import JsonLd from "$lib/components/JsonLd.svelte";
 import Artwork from "$lib/components/site/Artwork.svelte";
 import PageIntro from "$lib/components/site/PageIntro.svelte";
-import CopyButton from "$lib/components/system/CopyButton.svelte";
+import Action from "$lib/components/system/Action.svelte";
 import Grid from "$lib/components/system/Grid.svelte";
 import Surface from "$lib/components/system/Surface.svelte";
 import Text from "$lib/components/system/Text.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 
-const lightningAddress = "whitenoise@npub.cash";
-const bitcoinAddress =
-    "sp1qqvp56mxcj9pz9xudvlch5g4ah5hrc8rj6neu25p34rc9gxhp38cwqqlmld28u57w2srgckr34dkyg3q02phu8tm05cyj483q026xedp0s5f5j40p";
 const ways = [
     {
         title: "Build with us.",
         description:
-            "There’s plenty to work on in White Noise and Marmot, and we’d love your help. Fix a bug, contribute a feature, improve the libraries, or build your own app on the protocol. Explore the repositories and developer documentation to get started.",
+            "There’s plenty to work on in White Noise and Marmot, and we’d love your help. Fix a bug, contribute a feature, improve the libraries, or build your own app on the protocol. Explore the repositories and developer documentation and start.",
         label: "For developers",
         href: "/build",
     },
@@ -60,8 +57,8 @@ const schema = {
             </section>{/each}
     </Grid>
     <section class="donation-section">
-        <Surface class="donation-methods" label="Donation methods">
-        <header class="donation-methods-intro">
+        <Surface class="donation-content" label="Support White Noise">
+        <header class="donation-intro">
             <Text as="h2" role="section">Support the work.</Text>
             <Text role="body" tone="muted">
                 Building a private messenger takes ongoing care: writing and reviewing code,
@@ -69,18 +66,7 @@ const schema = {
                 supports the people doing that work and the continued development of White Noise.
             </Text>
         </header>
-        {#each [{ title: "Lightning", label: "Lightning address", id: "lightning", address: lightningAddress, scheme: "lightning" }, { title: "Bitcoin", label: "Bitcoin silent payment address", id: "bitcoin", address: bitcoinAddress, scheme: "bitcoin" }] as method}
-            <div class="donation-field">
-                <h3 class="donation-label type-heading" id={`${method.id}-label`}>{method.title}</h3>
-                <div class="donation-controls" role="group" aria-labelledby={`${method.id}-label`}>
-                    <div class="donation-address">
-                        <span class="donation-address-text">{method.address}</span>
-                        <CopyButton value={method.address} label={method.label} />
-                    </div>
-                    <TextLink href={`${method.scheme}:${method.address}`} ariaLabel={`Donate with ${method.title}`}>Donate</TextLink>
-                </div>
-            </div>
-        {/each}
+        <Action href="https://ipf.dev/donate/" label="Donate" icon="external" external />
         </Surface>
     </section>
 </div>

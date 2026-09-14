@@ -78,7 +78,7 @@
     },
     {
         "id": "small",
-        "selectors": ".faq-items details p, .download-option p, .donation-address-text",
+        "selectors": ".faq-items details p, .download-option p",
         "media": null,
         "properties": {
             "font-size": "var(--type-size-16)",

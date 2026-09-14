@@ -81,7 +81,6 @@
 }
 .faq-items details p,
 .download-option p,
-.donation-address-text,
 .type-small {
     font-size: var(--type-size-16);
     font-weight: var(--weight-regular);

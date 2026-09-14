@@ -266,7 +266,7 @@ body {
     scroll-margin-top: var(--space-24);
 }
 .faq-group > div:first-child {
-    margin-bottom: var(--gap-heading-body);
+    margin-bottom: var(--space-24);
 }
 .faq-items details {
     border-bottom: var(--stroke-hairline) solid var(--color-rule);
@@ -429,74 +429,16 @@ body {
 .donation-section {
     margin-bottom: var(--gap-section);
 }
-.donation-methods {
+.donation-content {
     display: grid;
-    grid-template-columns: var(--grid-equal-pair);
-    gap: var(--gap-columns);
-    row-gap: var(--space-32);
+    grid-template-columns: var(--grid-single);
+    gap: var(--gap-copy-action);
     padding-block: var(--inset-band-start) var(--inset-band-end);
 }
-.donation-methods-intro {
-    grid-column: 1 / -1;
+.donation-intro {
     display: grid;
     gap: var(--gap-heading-body);
     max-width: var(--size-reading);
-}
-.donation-field {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    align-self: start;
-    padding-inline-start: calc(var(--space-4) + var(--space-24));
-    padding-block: var(--space-8);
-}
-.donation-field::before {
-    content: "";
-    position: absolute;
-    inset-block: var(--space-8);
-    inset-inline-start: 0;
-    width: var(--space-4);
-    background: var(--color-ink);
-}
-.donation-label {
-    margin-block: 0 var(--space-4);
-    color: var(--color-ink);
-}
-.donation-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-8);
-}
-.donation-address {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-4);
-    min-width: 0;
-    max-width: var(--size-reading);
-}
-.donation-address-text {
-    color: var(--color-muted);
-    min-width: 0;
-    overflow-wrap: anywhere;
-    user-select: all;
-}
-.donation-address > .donation-address-text {
-    display: flex;
-    align-items: center;
-    min-height: var(--icon-target);
-    padding-block: var(--space-12);
-}
-.donation-address button {
-    flex-shrink: 0;
-}
-.donation-address button:hover {
-    color: var(--color-ink);
-}
-.donation-controls .text-link {
-    margin-top: 0;
-    flex-shrink: 0;
 }
 .blog-list,
 .blog-article {
@@ -1093,13 +1035,9 @@ body {
         gap: var(--space-40);
         margin-block: var(--space-8) var(--gap-section);
     }
-    .contribution-list,
-    .donation-methods {
+    .contribution-list {
         grid-template-columns: var(--grid-single);
         gap: var(--space-48);
-    }
-    .donation-methods {
-        gap: var(--space-32);
     }
     .blog-entry {
         grid-template-columns: var(--grid-single);
