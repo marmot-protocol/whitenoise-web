@@ -36,7 +36,7 @@ bun run build
 
 ## Production behavior
 
-Marketing pages, the FAQ, and the Agents and Build guides are pre-rendered. Blog content, canary attestations, the Marmot guide, documentation redirects and the sitemap use server routes. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
+Marketing pages, the FAQ, and the Agents, Build and Marmot guides are pre-rendered. The shared docs route uses an explicit Marmot README entry with `prerender = "auto"`; other documentation URLs remain server redirects and do not initialize the guide renderer. The legacy `.md` page URL explicitly serves HTML on Vercel; the preview middleware maps it to the generated `.html` file because SvelteKit preview otherwise infers Markdown MIME from the URL. Blog content, canary attestations and the sitemap also use server routes. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
 
 Relay transport lives under `src/lib/server`. It verifies signatures, author, kind and filters, chooses the newest replaceable event, and closes requests within ten seconds. Requests retain verified partial results. List and article caches coalesce concurrent reads, expire after five minutes, and allow at most one hour of stale blog content after refresh failures. Expired missing-post results are never served as stale content during an outage. Caches are process-local and bounded; they are not persistent storage. Canary data is cached for one minute with no stale-on-error fallback. The page renders the signed statement verbatim, escaped as text.
 
