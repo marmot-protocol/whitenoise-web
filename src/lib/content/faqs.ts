@@ -102,7 +102,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Which agents can I connect?",
                 featured: true,
-                answer: "MDK provides integrations for Hermes, OpenClaw, Codex, OpenCode, and Pi. Run the connector alongside your existing agent on a supported Mac or Linux computer, add its White Noise identity, and invite it to a conversation. The setup guide covers installation and which accounts are allowed to message it.",
+                answer: "MDK provides integrations for Hermes, OpenClaw, Codex, Claude Code, OpenCode, and Pi. Run the connector alongside your existing agent on a supported Mac or Linux computer, add its White Noise identity, and invite it to a conversation. The setup guide covers installation and which accounts are allowed to message it.",
                 link: { label: "Connect your agent", href: guideInfo.agents.path },
             },
             {

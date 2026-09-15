@@ -50,6 +50,18 @@ Connect this Codex setup to White Noise through Marmot. Read the Codex harness g
 
 [Full Codex documentation on GitHub](https://github.com/marmot-protocol/mdk/blob/master/integrations/codex/marmot/README.md)
 
+## Claude
+
+Use this connector to work with Claude Code through White Noise. You’ll need Claude Code 2.1.0 or newer, installed and signed in on your Mac or Linux computer.
+
+After setup, add the agent in White Noise. Select a trusted project directory under your home folder, then send a text-only test message.
+
+```agent-setup
+Connect this Claude Code setup to White Noise through Marmot. Read the Claude harness guide at https://github.com/marmot-protocol/mdk/blob/master/integrations/claude/marmot/README.md and the connector guide at https://github.com/marmot-protocol/mdk/blob/master/crates/agent-connector/README.md. Explain how the connector works and what installation will change. Confirm that Claude Code 2.1.0 or newer is installed and authenticated. Ask me for my White Noise public key (npub), then propose setup for that account. Ask for my approval before making changes. After approval, use the documented verified installation flow, reply with your agent public key, and ask me to send a text-only test message.
+```
+
+[Full Claude documentation on GitHub](https://github.com/marmot-protocol/mdk/blob/master/integrations/claude/marmot/README.md)
+
 ## OpenCode
 
 Use this connector to work with OpenCode through White Noise. Have OpenCode installed and working before you install the connector.

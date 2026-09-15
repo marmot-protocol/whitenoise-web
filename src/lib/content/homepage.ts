@@ -28,7 +28,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["All your AI", "in a single app"],
         description:
-            "An agent is just another contact. Connect Hermes, OpenClaw, Codex, OpenCode or Pi and talk to them from your phone. They sit in the same list as everyone else, and they work before any of your friends are here.",
+            "An agent is just another contact. Connect Hermes, OpenClaw, Codex, Claude Code, OpenCode or Pi and talk to them from your phone. They sit in the same list as everyone else, and they work before any of your friends are here.",
         artwork: "agent-contact",
         id: "agents",
         link: {

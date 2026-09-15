@@ -16,6 +16,12 @@ describe("legacy documentation routes", () => {
         ["mdk", "README.md", "/build#mdk"],
         ["mdk", "integrations/README.md", "/agents"],
         ["mdk", "integrations/hermes/marmot/README.md", "/agents/hermes"],
+        ["mdk", "integrations/claude/marmot/README.md", "/agents/claude"],
+        [
+            "mdk",
+            "integrations/claude/marmot/INSTALL.md",
+            "https://github.com/marmot-protocol/mdk/blob/master/integrations/claude/marmot/INSTALL.md",
+        ],
         [
             "mdk",
             "crates/mdk/README.md",

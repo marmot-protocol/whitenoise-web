@@ -30,6 +30,7 @@ const sections = {
         ["hermes", "Hermes"],
         ["openclaw", "OpenClaw"],
         ["codex", "Codex"],
+        ["claude", "Claude"],
         ["opencode", "OpenCode"],
         ["pi", "Pi"],
     ],
