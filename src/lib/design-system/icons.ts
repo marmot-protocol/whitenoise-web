@@ -1,0 +1,36 @@
+import ArrowDown from "carbon-icons-svelte/lib/ArrowDown.svelte";
+import ArrowRight from "carbon-icons-svelte/lib/ArrowRight.svelte";
+import ArrowUpRight from "carbon-icons-svelte/lib/ArrowUpRight.svelte";
+import Checkmark from "carbon-icons-svelte/lib/Checkmark.svelte";
+import ChevronDown from "carbon-icons-svelte/lib/ChevronDown.svelte";
+import ChevronLeft from "carbon-icons-svelte/lib/ChevronLeft.svelte";
+import Close from "carbon-icons-svelte/lib/Close.svelte";
+import Copy from "carbon-icons-svelte/lib/Copy.svelte";
+import Menu from "./MenuIcon.svelte";
+import ThemeToggleIcon from "./ThemeToggleIcon.svelte";
+
+export const icons = {
+    chevron: ChevronDown,
+    back: ChevronLeft,
+    down: ArrowDown,
+    right: ArrowRight,
+    external: ArrowUpRight,
+    check: Checkmark,
+    close: Close,
+    copy: Copy,
+    menu: Menu,
+    "theme-toggle-icon": ThemeToggleIcon,
+};
+export type IconName = keyof typeof icons;
+export const iconMeanings: Record<IconName, string> = {
+    chevron: "Expand disclosure; points up when open",
+    back: "Return to the blog listing",
+    down: "Download destination",
+    right: "Continue to a page",
+    external: "Open an external destination",
+    check: "Copy succeeded; resets after 3 seconds",
+    close: "Close navigation",
+    copy: "Copy the full address",
+    menu: "Open navigation",
+    "theme-toggle-icon": "Switch between light and dark appearance",
+};

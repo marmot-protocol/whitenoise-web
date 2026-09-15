@@ -8,5 +8,10 @@ export const handle: Handle = async ({ event, resolve }) => {
         redirect(308, canonicalRedirect);
     }
 
-    return resolve(event);
+    const response = await resolve(event);
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+    response.headers.set("X-Frame-Options", "DENY");
+    if (response.status === 503) response.headers.set("Retry-After", "60");
+    return response;
 };

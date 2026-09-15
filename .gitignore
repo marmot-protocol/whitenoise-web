@@ -21,3 +21,11 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Local exports and review artifacts
+/output/
+/tmp/
+/design/responsive-qa/
+
+# Test coverage
+/coverage/

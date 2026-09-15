@@ -4,14 +4,44 @@
             "source": "/(.*)",
             "headers": [
                 {
-                    "key": "X-Robots-Tag",
-                    "value": "all"
+                    "key": "Link",
+                    "value": "<https://www.whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://www.whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"White Noise FAQ and guides\""
                 },
                 {
-                    "key": "Link",
-                    "value": "<https://www.whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://www.whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"Complete developer documentation\""
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "Referrer-Policy",
+                    "value": "strict-origin-when-cross-origin"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "DENY"
                 }
             ]
+        },
+        {
+            "source": "/docs/marmot/README.md",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "text/html; charset=utf-8"
+                }
+            ]
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "whitenoise.chat"
+                }
+            ],
+            "destination": "https://www.whitenoise.chat/:path*",
+            "permanent": true
         }
     ]
 }

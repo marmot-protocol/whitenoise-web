@@ -1,4 +1,5 @@
-import { fetchBlogPostsCached } from "$lib/nostr";
+import { error } from "@sveltejs/kit";
+import { fetchBlogPostsCached } from "$lib/server/nostr";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async () => {
@@ -11,6 +12,11 @@ export const GET: RequestHandler = async () => {
         { path: "/contribute", changefreq: "monthly", priority: "0.8" },
         { path: "/build", changefreq: "monthly", priority: "0.8" },
         { path: "/blog", changefreq: "weekly", priority: "0.8" },
+        { path: "/agents", changefreq: "weekly", priority: "0.8" },
+        { path: "/faq", changefreq: "monthly", priority: "0.8" },
+        { path: "/privacy", changefreq: "yearly", priority: "0.5" },
+        { path: "/canary", changefreq: "monthly", priority: "0.5" },
+        { path: "/docs/marmot/README.md", changefreq: "weekly", priority: "0.7" },
     ];
 
     function escapeXml(s: string): string {
@@ -27,9 +33,7 @@ export const GET: RequestHandler = async () => {
         const posts = await fetchBlogPostsCached();
         for (const post of posts) {
             if (post.naddr) {
-                const lastmod = new Date((post.publishedAt || post.createdAt) * 1000)
-                    .toISOString()
-                    .split("T")[0];
+                const lastmod = new Date(post.createdAt * 1000).toISOString().split("T")[0];
                 blogEntries += `
   <url>
     <loc>${baseUrl}/blog/${escapeXml(post.naddr)}</loc>
@@ -41,9 +45,8 @@ export const GET: RequestHandler = async () => {
         }
     } catch (err) {
         console.error("[sitemap] Error fetching blog posts:", err);
+        error(503, "Sitemap is temporarily unavailable");
     }
-
-    const today = new Date().toISOString().split("T")[0];
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -51,7 +54,6 @@ ${staticPages
     .map(
         (page) => `  <url>
     <loc>${baseUrl}${page.path}</loc>
-    <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`
@@ -66,3 +68,5 @@ ${staticPages
         },
     });
 };
+
+export const prerender = false;

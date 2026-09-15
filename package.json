@@ -4,10 +4,10 @@
     "version": "0.0.1",
     "type": "module",
     "scripts": {
-        "dev": "vite dev",
+        "dev": "vite dev --host 0.0.0.0",
         "build": "vite build",
-        "preview": "vite preview",
-        "prepare": "svelte-kit sync || echo ''",
+        "preview": "vite preview --host 0.0.0.0",
+        "prepare": "svelte-kit sync",
         "ci": "biome ci . && bun run test && bun run check && bun run build && bun run test:deployment",
         "lint": "biome check",
         "lint:write": "biome check --write",
@@ -18,7 +18,9 @@
         "test:deployment": "node --no-experimental-require-module scripts/smoke-vercel.mjs",
         "test:watch": "vitest",
         "test:coverage": "vitest run --coverage",
-        "canary:publish": "./scripts/publish-canary.sh"
+        "canary:publish": "./scripts/publish-canary.sh",
+        "tokens:generate": "bun scripts/generate-tokens.ts",
+        "artwork:measure": "${ARTWORK_PYTHON:-python3} scripts/measure-artwork.py"
     },
     "devDependencies": {
         "@biomejs/biome": "^2.5.10",
@@ -26,8 +28,9 @@
         "@sveltejs/kit": "^2.70.3",
         "@sveltejs/vite-plugin-svelte": "^7.3.0",
         "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^22",
         "@types/sanitize-html": "^2.16.1",
-        "@types/ws": "^8.18.1",
+        "@vitest/coverage-v8": "5.0.0",
         "carbon-icons-svelte": "^13.14.0",
         "svelte": "^5.56.10",
         "svelte-check": "^4.7.6",
@@ -37,12 +40,20 @@
         "vitest": "^5.0.0"
     },
     "dependencies": {
+        "@fontsource-variable/manrope": "^5.3.0",
         "applesauce-core": "^6.2.0",
         "applesauce-relay": "^6.2.1",
         "marked": "^18.0.11",
         "nostr-tools": "^2.25.0",
         "rxjs": "^7.8.2",
-        "sanitize-html": "^2.17.7",
-        "ws": "^8.21.3"
+        "sanitize-html": "^2.17.7"
+    },
+    "packageManager": "bun@1.4.2",
+    "engines": {
+        "node": ">=22.12.0 <23",
+        "bun": ">=1.4.2"
+    },
+    "overrides": {
+        "cookie": "^0.7.2"
     }
 }

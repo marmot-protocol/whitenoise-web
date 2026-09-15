@@ -41,7 +41,9 @@ describe("renderBlogHtml", () => {
             ].join("\n")
         );
 
-        expect(html).toContain('<pre><code class="language-ts">');
+        expect(html).toContain(
+            '<pre tabindex="0" role="region" aria-label="Code example"><code class="language-ts">'
+        );
         expect(html).toContain("<table>");
         expect(html).toContain("<td>443</td>");
     });

@@ -1,6 +1,10 @@
 {
     "$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
-    "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+    "vcs": {
+        "enabled": false,
+        "clientKind": "git",
+        "useIgnoreFile": false
+    },
     "files": {
         "ignoreUnknown": false,
         "includes": [
@@ -15,9 +19,9 @@
             "!**/.env",
             "!**/.env.*",
             "!**/bun.lockb",
-            "!src-tauri/gen",
-            "!src-tauri/target",
-            "!static/**/*.svg"
+            "!static/**/*.svg",
+            "!output",
+            "!tmp"
         ]
     },
     "css": {
@@ -37,7 +41,13 @@
         "attributePosition": "auto",
         "bracketSpacing": true
     },
-    "assist": { "actions": { "source": { "organizeImports": "on" } } },
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": "on"
+            }
+        }
+    },
     "linter": {
         "enabled": true,
         "rules": {

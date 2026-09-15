@@ -1,0 +1,177 @@
+[
+    {
+        "id": "display",
+        "selectors": ".hero-title, .home-hero h1, .page-intro h1, .legal-policy h1, .download-closing h2, .article-heading",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-72)",
+            "font-weight": "var(--weight-heavy)",
+            "line-height": "var(--leading-display)",
+            "letter-spacing": "var(--tracking-display)"
+        }
+    },
+    {
+        "id": "section",
+        "selectors": ".feature-block h2, .faq-section h2, .wn-site .prose h1, .blog-entry h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-48)",
+            "font-weight": "var(--weight-bold)",
+            "line-height": "var(--leading-heading)",
+            "letter-spacing": "var(--tracking-heading)"
+        }
+    },
+    {
+        "id": "heading",
+        "selectors": ".article-body h2, .download-option h2, .download-help h2, .contribution-list h2, .empty-blog h2, .technical-content h2, .wn-site .prose h2",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-32)",
+            "font-weight": "var(--weight-bold)",
+            "line-height": "var(--leading-heading)",
+            "letter-spacing": "var(--tracking-heading)"
+        }
+    },
+    {
+        "id": "ui",
+        "selectors": ".desktop-nav a, .mobile-nav a, .menu-toggle, .wn-button, .text-link, .faq-items summary, .canary-attestation h3",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16)",
+            "font-weight": "var(--weight-semibold)",
+            "line-height": "var(--leading-compact)",
+            "letter-spacing": "var(--tracking-normal)"
+        }
+    },
+    {
+        "id": "title",
+        "selectors": ".wn-site .prose h3, .documentation-body :is(h3, h4, h5, h6)",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-24)",
+            "font-weight": "var(--weight-bold)",
+            "line-height": "var(--leading-heading)",
+            "letter-spacing": "var(--tracking-heading)"
+        }
+    },
+    {
+        "id": "lead",
+        "selectors": ".page-description, .article-summary",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-24)",
+            "font-weight": "var(--weight-regular)",
+            "line-height": "var(--leading-reading)",
+            "letter-spacing": "var(--tracking-normal)"
+        }
+    },
+    {
+        "id": "body",
+        "selectors": ".feature-copy p, .supporters > p, .download-help p, .article-body p, .contribution-list p, .blog-entry p, .empty-blog p, .technical-content :is(p, li, td), .legal-policy :is(ul, ol), .wn-site .prose",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-18)",
+            "font-weight": "var(--weight-regular)",
+            "line-height": "var(--leading-reading)",
+            "letter-spacing": "var(--tracking-normal)"
+        }
+    },
+    {
+        "id": "small",
+        "selectors": ".faq-items details p, .download-option p",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-16)",
+            "font-weight": "var(--weight-regular)",
+            "line-height": "var(--leading-compact)",
+            "letter-spacing": "var(--tracking-normal)"
+        }
+    },
+    {
+        "id": "caption",
+        "selectors": ".footer-bottom, .blog-entry time",
+        "media": null,
+        "properties": {
+            "font-size": "var(--type-size-14)",
+            "font-weight": "var(--weight-regular)",
+            "line-height": "var(--leading-compact)",
+            "letter-spacing": "var(--tracking-normal)"
+        }
+    },
+    {
+        "id": "display-tablet",
+        "selectors": ".hero-title, .home-hero h1, .page-intro h1, .legal-policy h1, .download-closing h2, .article-heading",
+        "media": 900,
+        "properties": {
+            "font-size": "var(--type-size-48)"
+        }
+    },
+    {
+        "id": "section-tablet",
+        "selectors": ".feature-block h2, .faq-section h2, .wn-site .prose h1, .blog-entry h2",
+        "media": 900,
+        "properties": {
+            "font-size": "var(--type-size-36)"
+        }
+    },
+    {
+        "id": "section-mobile",
+        "selectors": ".feature-block h2, .faq-section h2, .wn-site .prose h1",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-24)"
+        }
+    },
+    {
+        "id": "lead-mobile",
+        "selectors": ".page-description, .article-summary",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-18)",
+            "line-height": "var(--leading-compact)"
+        }
+    },
+    {
+        "id": "body-mobile",
+        "selectors": ".feature-copy p, .supporters > p, .download-help p, .article-body p, .contribution-list p, .blog-entry p, .empty-blog p, .technical-content :is(p, li, td), .legal-policy :is(ul, ol), .wn-site .prose",
+        "media": 640,
+        "properties": {
+            "line-height": "var(--leading-compact)"
+        }
+    },
+    {
+        "id": "hero-tagline-fit",
+        "selectors": ".hero-tagline",
+        "media": 900,
+        "properties": {
+            "font-size": "min(var(--type-size-48), calc(100cqi / var(--size-hero-tagline-line-em)))",
+            "font-weight": "var(--weight-semibold)",
+            "line-height": "var(--leading-display)",
+            "letter-spacing": "var(--tracking-display)"
+        }
+    },
+    {
+        "id": "closing-fit",
+        "selectors": ".download-closing h2",
+        "media": null,
+        "properties": {
+            "font-size": "min(var(--type-size-72), calc(100cqi / var(--size-closing-line-em)))"
+        }
+    },
+    {
+        "id": "heading-mobile",
+        "selectors": ".article-body h2, .download-option h2, .download-help h2, .contribution-list h2, .empty-blog h2, .technical-content h2, .wn-site .prose h2",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-24)"
+        }
+    },
+    {
+        "id": "title-mobile",
+        "selectors": ".wn-site .prose h3, .documentation-body :is(h3, h4, h5, h6)",
+        "media": 640,
+        "properties": {
+            "font-size": "var(--type-size-18)"
+        }
+    }
+]
