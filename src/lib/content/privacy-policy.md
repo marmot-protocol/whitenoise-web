@@ -135,7 +135,7 @@ IPF uses no third-party analytics, attribution, or advertising service for this 
 - The operating system type and version, and the device model identifier (for example the hardware model of your phone)
 - The app version and deployment environment
 
-Diagnostics also includes **relay addresses**, and this is a deliberate exception to the general rule that relay activity stays on your device. To choose good default relays and detect failing ones, relay performance measurements are labeled with the relay they describe. For an install with sharing turned on, this means IPF can see aggregate connection quality for the relays that install uses — but not which accounts, groups, or messages were involved, and not the content of anything sent through them. Diagnostics carries no account, member, device, group, subscription, or message identifier, no public key, and no IP-derived field.
+Diagnostics also includes **relay addresses**, and this is a deliberate exception to the general rule that relay activity stays on your device. To choose good default relays and detect failing ones, relay performance measurements are labeled with the relay they describe. For an install with sharing turned on, this means IPF can see aggregate connection quality for the relays that install uses — but not which accounts, groups, or messages were involved, and not the content of anything sent through them. Diagnostics carries no account, member, group, subscription, or message identifier, no public key, and no IP-derived field.
 
 **What our servers observe.** Because these streams are ordinary network requests, our servers receive your IP address in transit, as does any server you connect to.
 
