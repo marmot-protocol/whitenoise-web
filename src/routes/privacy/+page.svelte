@@ -30,7 +30,16 @@ const privacySchema = {
 <div class="bg-glitch-50 min-h-screen">
     <article class="max-w-4xl mx-auto px-6 md:px-12 py-12 md:py-16">
         <div class="prose prose-lg max-w-none prose-headings:text-glitch-950 prose-p:text-glitch-800 prose-a:text-cyan-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-glitch-900 prose-code:text-glitch-900 prose-code:bg-glitch-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-glitch-900 prose-pre:text-glitch-100 prose-blockquote:border-glitch-300 prose-blockquote:text-glitch-600 prose-li:text-glitch-800 prose-hr:border-glitch-200">
-            {@html data.safeHtml}
+            {@html data.introductionHtml}
+            <nav aria-label="Table of contents" class="my-8 rounded-xl border border-glitch-200 p-5 md:p-6">
+                <p class="!mt-0 font-semibold text-glitch-950">On this page</p>
+                <ul class="!m-0 grid list-none gap-y-1 !p-0">
+                    {#each data.sections as section (section.id)}
+                        <li><a href={`#${section.id}`}>{section.title}</a></li>
+                    {/each}
+                </ul>
+            </nav>
+            {@html data.sectionsHtml}
         </div>
     </article>
 </div>
@@ -45,6 +54,7 @@ const privacySchema = {
     }
 
     :global(.prose h2) {
+        scroll-margin-top: 6rem;
         font-size: 2rem;
         font-weight: 700;
         color: hsl(120 2% 13%);
