@@ -8,7 +8,7 @@ import Surface from "$lib/components/system/Surface.svelte";
             src="/images/ipf.svg"
             class="supporter-ipf"
             alt="Internet Privacy Foundation"
-            width="64"
+            width="56.936"
             height="56"
             loading="lazy"
         /><img

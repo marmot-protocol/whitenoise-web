@@ -222,6 +222,9 @@ body {
 }
 
 .supporters {
+    --supporter-height: var(--size-supporter-height);
+    --supporter-width: var(--size-supporter-width);
+    --supporter-responsive-scale: 1;
     display: grid;
     grid-template-rows: auto auto;
     row-gap: var(--space-24);
@@ -236,27 +239,37 @@ body {
     display: flex;
     min-width: 0;
     align-items: center;
+    justify-content: flex-start;
     gap: var(--space-56);
     flex-wrap: nowrap;
 }
 .supporters img {
+    --supporter-optical-scale: 1;
+    flex: 0 1 auto;
     width: auto;
-    height: var(--size-supporter-height);
-    max-width: var(--size-supporter-width);
+    height: calc(
+        var(--supporter-height) *
+        var(--supporter-optical-scale) *
+        var(--supporter-responsive-scale)
+    );
+    max-width: calc(
+        var(--supporter-width) *
+        var(--supporter-optical-scale) *
+        var(--supporter-responsive-scale)
+    );
     min-width: 0;
     object-fit: contain;
     object-position: left;
     filter: var(--brand-filter);
-    transform-origin: left center;
 }
 .supporters .supporter-ipf {
-    transform: scale(var(--ipf-logo-scale));
+    --supporter-optical-scale: var(--ipf-logo-scale);
 }
 .supporters .supporter-hrf {
-    transform: scale(var(--hrf-logo-scale));
+    --supporter-optical-scale: var(--hrf-logo-scale);
 }
 .supporters .supporter-aos {
-    transform: scale(var(--aos-logo-scale));
+    --supporter-optical-scale: var(--aos-logo-scale);
 }
 .faq-section {
     display: grid;
@@ -1027,12 +1040,13 @@ body {
         width: 100%;
         align-self: center;
     }
+    .supporters {
+        --supporter-height: var(--size-supporter-height-mobile);
+        --supporter-width: var(--size-supporter-width-mobile);
+        --supporter-responsive-scale: var(--supporter-scale-mobile);
+    }
     .supporters > div {
         gap: var(--space-16);
-    }
-    .supporters img {
-        max-width: var(--size-supporter-width-mobile);
-        height: var(--size-supporter-height-mobile);
     }
     .page-intro h1,
     .legal-policy h1 {
