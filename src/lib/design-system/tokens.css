@@ -61,6 +61,9 @@
     --size-disclosure-min: var(--icon-target);
     --size-supporter-height: 2.5875rem;
     --size-supporter-width: 10.35rem;
+    --ipf-logo-scale: 1.3225;
+    --hrf-logo-scale: 0.88;
+    --aos-logo-scale: 0.95;
     --size-artwork: calc(25rem * 1103 / 939);
     --artwork-scale: 1.2;
     --size-action-min: 3.5rem;

@@ -56,6 +56,8 @@ Public availability copy describes the intended launch state, when both iPhone a
 
 Manrope is self-hosted through `@fontsource-variable/manrope`. The canonical WN mark, supporter logos, social preview and application icons remain in `static/`.
 
+The IPF supporter lettermark was adapted from the [official IPF favicon](https://ipf.dev/favicon.svg) on September 15, 2026: its straight-edged letter contours were traced into SVG, the square background removed, and the letters made black as requested. Its optical frame and the OpenSats frame are documented in the design-system README; original letter shapes and proportions are preserved.
+
 Current illustrations in `static/images/artwork/` are the user-approved WebPs from `/Users/vladimirkrstic/Workspaces/ffmpeg-tools/output/half-size-webp-2026-09-13`, supplied September 13, 2026. Copy these files unchanged; do not re-encode them. Source dimensions and visible alpha bounds (above 16, excluding near-transparent export noise) live in `src/lib/design-system/artwork.ts`. The shared viewport preserves proportions and uses the approved artwork layout.
 
 | Site asset | Supplied file | Placement |

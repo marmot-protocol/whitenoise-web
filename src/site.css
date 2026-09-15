@@ -234,17 +234,29 @@ body {
 }
 .supporters > div {
     display: flex;
+    min-width: 0;
     align-items: center;
     gap: var(--space-56);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .supporters img {
-    width: var(--size-supporter-width);
+    width: auto;
     height: var(--size-supporter-height);
-    max-width: 100%;
+    max-width: var(--size-supporter-width);
+    min-width: 0;
     object-fit: contain;
     object-position: left;
     filter: var(--brand-filter);
+    transform-origin: left center;
+}
+.supporters .supporter-ipf {
+    transform: scale(var(--ipf-logo-scale));
+}
+.supporters .supporter-hrf {
+    transform: scale(var(--hrf-logo-scale));
+}
+.supporters .supporter-aos {
+    transform: scale(var(--aos-logo-scale));
 }
 .faq-section {
     display: grid;
@@ -1016,13 +1028,9 @@ body {
         align-self: center;
     }
     .supporters > div {
-        display: grid;
-        grid-template-columns: var(--grid-thirds);
-        align-items: center;
         gap: var(--space-16);
     }
     .supporters img {
-        width: 100%;
         max-width: var(--size-supporter-width-mobile);
         height: var(--size-supporter-height-mobile);
     }
