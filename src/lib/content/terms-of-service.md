@@ -2,6 +2,8 @@
 
 **Last Updated: September 16, 2026**
 
+**Effective Date: September 16, 2026**
+
 ---
 
 ## 1. Overview
@@ -256,7 +258,9 @@ Nothing in these Terms requires arbitration, waives a class action by default, o
 
 IPF may update these Terms from time to time.
 
-If IPF makes a material change, IPF will provide reasonable notice through the Service, on an IPF-controlled website, or by another appropriate means where practical. Changes will apply prospectively from the effective date of the updated Terms.
+We will publish updates to these Terms on this website with a revised "Last updated" date and an effective date. For existing users, material changes will take effect no earlier than 14 days after publication. We may also provide notice within White Noise where available. Because White Noise does not require an email address or a traditional account, we generally cannot notify users individually.
+
+Where applicable law requires additional notice, a longer notice period, or affirmative agreement, we will follow those requirements. Changes reasonably necessary to comply with law or address an urgent security risk may take effect sooner, with an explanation. Changes will not apply retroactively.
 
 If you continue to use the Service after the updated Terms take effect, you agree to the updated Terms. If you do not agree, you must stop accessing IPF-operated services under these Terms. Your rights under applicable open-source licenses remain unaffected. Changes to these Terms do not replace separate consent required for optional data sharing.
 
