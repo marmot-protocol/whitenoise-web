@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: September 15, 2026**
+**Last Updated: September 16, 2026**
 
 ---
 
@@ -32,7 +32,7 @@ This Privacy Policy applies only to information processed through IPF-controlled
 
 **"Nostr keypair"** means the cryptographic public/private keypair used to create, sign, and authenticate Nostr events. The public key functions as a user identifier across the Nostr protocol, and the private key is required to sign events and prove authorship.
 
-**"Relay"** means any independently operated server implementing the Nostr protocol for receiving, storing, indexing, or redistributing Nostr events. Unless expressly stated otherwise, relays are not operated by IPF.
+**"Relay"** means a server implementing the Nostr protocol for receiving, storing, indexing, or redistributing Nostr events. Some relays are operated by IPF; others are operated by independent third parties.
 
 **"User content"** means any Nostr event, encrypted message, media, metadata, profile information, or other material submitted, published, or otherwise made available by a user through the Service.
 
@@ -56,7 +56,7 @@ All group messages are end-to-end encrypted using the Marmot Protocol. IPF canno
 
 White Noise runs locally on your device. Your private keys never leave your device, and all message encryption and decryption happens on-device. The app communicates with the following external systems:
 
-**Nostr relays.** The app ships with a set of default relays but you can add, remove, or replace these at any time. Relays are independently operated servers that store and forward Nostr events. IPF does not operate any Nostr relays. When you connect to a relay, that relay operator may observe your IP address and the encrypted events you publish or retrieve. Message content is end-to-end encrypted and unreadable by relay operators. Furthermore, group message events are published using ephemeral Nostr keypairs rather than your identity keypair, meaning relay operators typically cannot determine who sent a given message even from metadata.
+**Nostr relays.** The app ships with a set of default relays but you can add, remove, or replace these at any time. Relays store and forward Nostr events. IPF operates relays that accept only the event kinds needed for White Noise to function. Other relays are operated by independent third parties. Public events published to IPF-operated relays are publicly accessible; private communications are stored and transmitted as encrypted events. When you connect to a relay, its operator, including IPF for relays it operates, may observe your IP address, connection information, event metadata, and the public events or encrypted events you publish or retrieve. Message content is end-to-end encrypted and unreadable by relay operators. Furthermore, group message events are published using ephemeral Nostr keypairs rather than your identity keypair, which reduces direct linkage to your identity public key but does not eliminate information available from connection metadata.
 
 **Blossom servers.** The app uses Blossom servers to host media files (such as images and attachments). You can configure your own Blossom server or use any publicly available one. IPF does not operate any Blossom servers. When you upload or retrieve media, the Blossom server operator may observe your IP address.
 
@@ -67,6 +67,8 @@ Media files fall into two categories with respect to privacy. Profile pictures a
 **Usage and telemetry (opt-in only).** Usage and telemetry sharing is off by default and requires an explicit, affirmative choice in the app. If you turn it on, the app sends two independent streams to servers IPF operates: product analytics to an IPF-hosted Aptabase instance (`aptabase.ipf.dev`), and telemetry to an IPF-hosted OpenTelemetry collector (`otlp.ipf.dev`). IPF uses no third-party analytics, attribution, or advertising service for this purpose, and the app contains no advertising identifiers and no crash-reporting SDK. Product analytics uses predefined events and bucketed values. Telemetry reports aggregate performance measurements and includes a resettable installation identifier, app and device information, and relay addresses. Neither stream includes message content, contacts, account or group identifiers, public keys, filenames, or search terms. You can turn sharing off at any time in the app settings. Section 6 describes exactly what is collected, what our servers observe, and how long it is kept.
 
 **Group diagnostic logs (opt-in only).** Group diagnostic logging is off by default and is a separate choice from usage and telemetry. On iOS, **Share group diagnostic logs** records and automatically uploads logs for every profile on the device, including eligible logs already stored locally. On Android, **Share technical logs** records diagnostic files locally and automatically uploads eligible files, with an additional confirmation before enabling sharing. Both send logs to IPF’s Goggles service; automatic sharing does not require approval for each file. Other clients may offer local recording and a separate manual export; follow the controls and disclosure shown in your client. Group diagnostic logs are more sensitive than usage and telemetry: they record group and message identifiers and the relay addresses involved, though never message content or key material. Section 7 describes this in detail.
+
+**Blocking and group moderation.** White Noise uses Nostr mute lists to hide messages and invitations from users you block. Blocking does not prevent those users from publishing events to relays or contacting you through another identity or application. In-group message reports, including their reasons and identifiers, remain entirely within the encrypted group and are visible to all group members. Only group administrators can act on those reports through group moderation controls. IPF cannot read these reports or the reported message contents. Administrator deletion hides a message in cooperating clients; it does not remove the encrypted event from relays or guarantee erasure of copies retained by recipients.
 
 **Android dictation and read-aloud.** Dictation is optional. Your selected Android speech-recognition service receives microphone audio and may send it to its provider for transcription, under that provider’s policy. White Noise shows a disclosure before external recognition is enabled and inserts the returned text into your draft; automatic sending is a separate explicit option. Android read-aloud uses installed offline voices and does not select voices marked as requiring a network connection. These optional features are separate from usage analytics and diagnostic-log sharing.
 
@@ -82,7 +84,7 @@ IPF cannot read your messages. If you share group diagnostic logs, IPF can see t
 
 IPF may collect and process limited categories of information in connection with the Service.
 
-**Information you provide directly:** Nostr profile metadata you choose to publish (such as display name, profile picture, and bio), communications with IPF support, and reports submitted through the Service.
+**Information you provide directly:** Public events you publish to IPF-operated relays, including Nostr profile metadata (such as display name, profile picture, and bio), and communications or support reports you send directly to IPF. In-group message reports are different: their reasons and identifiers remain inside the encrypted group and are not submitted to IPF for review.
 
 **Information collected automatically:** IPF collects only the minimum information necessary for the Service to function. When you connect to IPF-controlled infrastructure (such as relays or APIs), we collect IP address and connection logs required to operate those systems. Apart from the website analytics described immediately below, this information is not used for tracking or analytics beyond what is necessary to maintain service reliability and security.
 
@@ -129,7 +131,7 @@ IPF uses no third-party analytics, attribution, or advertising service for this 
 - The operating system type and version, and the device model identifier (for example the hardware model of your phone)
 - The app version and deployment environment
 
-Telemetry also includes **relay addresses**, and this is a deliberate exception to the general rule that relay activity stays on your device. To choose good default relays and detect failing ones, relay performance measurements are labeled with the relay they describe. For an install with sharing turned on, this means IPF can see aggregate connection quality for the relays that install uses — but not which accounts, groups, or messages were involved, and not the content of anything sent through them. Telemetry carries no account, member, group, subscription, or message identifier, no public key, and no IP-derived field.
+Telemetry also includes **relay addresses**, allowing IPF to receive aggregate performance information about the relays you use, including third-party relays. This is separate from the connection information and events IPF observes when you use its own relays. To choose good default relays and detect failing ones, relay performance measurements are labeled with the relay they describe. For an install with sharing turned on, this means IPF can see aggregate connection quality for the relays that install uses — but not which accounts, groups, or messages were involved, and not the content of anything sent through them. Telemetry carries no account, member, group, subscription, or message identifier, no public key, and no IP-derived field.
 
 **What our servers observe.** Because these streams are ordinary network requests, our servers receive your IP address in transit, as does any server you connect to.
 
@@ -293,11 +295,11 @@ However, no system is completely secure, and IPF does not guarantee that infrast
 
 ## 17. Children
 
-The Service is intended for users aged 16 and older. Users under 16 may only use the Service with the involvement and consent of a parent or legal guardian, where required by applicable law.
+You must be at least 13 years old to use White Noise. Users aged 13 through 15 must have the involvement and consent of a parent or legal guardian. All users must also satisfy any additional requirements under applicable law.
 
-IPF's ability to enforce this restriction is limited by the decentralized, non-custodial architecture of the Service. Because IPF does not issue accounts, does not control Nostr relays, and does not store user data centrally, IPF cannot verify user ages, suspend individual users, or delete data held on infrastructure it does not operate.
+IPF's ability to enforce these restrictions is limited by the decentralized, non-custodial architecture of the Service. IPF does not issue traditional accounts or verify users' ages. IPF can restrict access to infrastructure it operates, including its relays, where technically possible, but cannot impose a network-wide ban or delete data held on infrastructure it does not operate.
 
-Where IPF becomes aware that a user under 16 is using the Service without required parental consent, IPF may take action within the scope of infrastructure it controls — specifically, removing or restricting access to the Service through app store distribution channels where permitted.
+Where IPF becomes aware of use by someone under 13, or by someone aged 13 through 15 without parental involvement and consent, IPF may take action within the scope of infrastructure it controls, including restricting access to IPF-operated services where technically possible.
 
 Users and parents should be aware that the decentralized nature of the Service means that Nostr events published through the app may persist on independent relays outside IPF's control and cannot be deleted by IPF. This architectural property applies equally to all users and is a deliberate privacy protection, not a limitation specific to minors.
 
@@ -313,7 +315,7 @@ Encrypted message ciphertexts stored on Nostr relays remain encrypted regardless
 
 ## 19. Changes to This Policy
 
-IPF may update this Privacy Policy from time to time. Updated versions will be posted with a revised "Last Updated" date. For material changes, IPF will provide notice through the Service or via other appropriate means. Continued use of the Service after such notice constitutes acceptance of the updated policy.
+IPF may update this Privacy Policy from time to time. Updated versions will be posted with a revised "Last Updated" date. For material changes, IPF will provide notice through the Service or via other appropriate means. Updates to this Policy do not replace any separate consent required for optional usage and telemetry or group diagnostic-log sharing.
 
 ---
 

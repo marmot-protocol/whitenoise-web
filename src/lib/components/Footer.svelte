@@ -23,6 +23,7 @@ const showDownloadButton = derived(page, ($page) => $page.url.pathname !== "/dow
                 <a href="/build" class="hover:underline">Build</a>
                 <a href="/contribute" class="hover:underline">Contribute</a>
                 <a href="/privacy" class="hover:underline">Privacy Policy</a>
+                <a href="/terms" class="hover:underline">Terms of Service</a>
                 <a href="/canary" class="hover:underline">Canary</a>
             </div>
             <span class="text-xs text-glitch-400">©2026 White Noise</span>
