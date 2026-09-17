@@ -2,6 +2,13 @@ import { describe, expect, it } from "vitest";
 import { getCanonicalRedirect } from "./canonical-url";
 
 describe("getCanonicalRedirect", () => {
+    it("upgrades only the production hostname to HTTPS", () => {
+        expect(getCanonicalRedirect(new URL("http://whitenoise.chat/blog"))).toBe(
+            "https://www.whitenoise.chat/blog"
+        );
+        expect(getCanonicalRedirect(new URL("http://localhost:4175/blog"))).toBeNull();
+    });
+
     it("redirects the apex host to the primary hostname", () => {
         expect(getCanonicalRedirect(new URL("https://whitenoise.chat/build"))).toBe(
             "https://www.whitenoise.chat/build"

@@ -1,6 +1,8 @@
 import { error } from "@sveltejs/kit";
-import { BLOG_PUBKEY, decodeNaddr, fetchBlogPostCached, KIND_LONG_FORM } from "$lib/nostr";
+import { BLOG_PUBKEY, decodeNaddr, KIND_LONG_FORM } from "$lib/nostr";
 import { renderBlogHtml } from "$lib/server/blog-markdown";
+import { blogMetadata, formatBlogPresentation } from "$lib/server/blog-presentation";
+import { fetchBlogPostCached } from "$lib/server/nostr";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params }) => {
@@ -22,14 +24,19 @@ export const load: PageServerLoad = async ({ params }) => {
         error(400, "Invalid blog post type");
     }
 
-    const post = await fetchBlogPostCached(decoded.dTag);
+    const post = await fetchBlogPostCached(decoded.dTag).catch((cause: unknown) => {
+        console.error("[content] Content request failed", cause);
+        error(503, "Content is temporarily unavailable. Please try again shortly.");
+    });
 
     if (!post) {
         error(404, "Blog post not found");
     }
 
     return {
-        post,
-        safeHtml: renderBlogHtml(post.content),
+        post: blogMetadata(post),
+        safeHtml: formatBlogPresentation(post.dTag, renderBlogHtml(post.content)),
     };
 };
+
+export const prerender = false;

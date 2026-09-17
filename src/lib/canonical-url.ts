@@ -26,6 +26,11 @@ export function getCanonicalRedirect(url: URL): string | null {
         shouldRedirect = true;
     }
 
+    if (redirectUrl.hostname === PRIMARY_HOSTNAME && redirectUrl.protocol !== "https:") {
+        redirectUrl.protocol = "https:";
+        shouldRedirect = true;
+    }
+
     if (redirectUrl.pathname.length > 1 && redirectUrl.pathname.endsWith("/")) {
         redirectUrl.pathname = redirectUrl.pathname.replace(/\/+$/, "");
         shouldRedirect = true;

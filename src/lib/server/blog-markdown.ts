@@ -1,7 +1,7 @@
-import { marked } from "marked";
+import { Marked } from "marked";
 import sanitizeHtml from "sanitize-html";
 
-marked.setOptions({
+const parser = new Marked({
     gfm: true,
     breaks: true,
 });
@@ -39,6 +39,7 @@ const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
     allowedAttributes: {
         a: ["href", "rel", "title"],
         code: ["class"],
+        pre: ["tabindex", "role", "aria-label"],
         img: ["alt", "src", "title"],
         td: ["align"],
         th: ["align"],
@@ -50,6 +51,10 @@ const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
     allowProtocolRelative: false,
     disallowedTagsMode: "discard",
     transformTags: {
+        pre: () => ({
+            tagName: "pre",
+            attribs: { tabindex: "0", role: "region", "aria-label": "Code example" },
+        }),
         a: (tagName, attribs) => ({
             tagName,
             attribs: attribs.href ? { ...attribs, rel: "noopener noreferrer nofollow" } : attribs,
@@ -58,6 +63,11 @@ const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
 };
 
 export function renderBlogHtml(markdown: string): string {
-    const html = marked.parse(markdown) as string;
-    return sanitizeHtml(html, SANITIZE_OPTIONS);
+    const html = parser.parse(markdown) as string;
+    return sanitizeHtml(html, SANITIZE_OPTIONS)
+        .replace(
+            /<table>/g,
+            '<div class="technical-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table>'
+        )
+        .replace(/<\/table>/g, "</table></div>");
 }
