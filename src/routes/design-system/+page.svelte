@@ -89,7 +89,7 @@ const specimens: { role: TextRole; title: string; sample: string; use: string }[
     {
         role: "ui",
         title: "Interface",
-        sample: "Privacy Matters · Contribute · Download",
+        sample: "Privacy Matters · Contribute · Blog",
         use: "16px semibold for navigation, actions, text links and disclosure questions.",
     },
     {
@@ -197,7 +197,7 @@ function recipeFor(role: TextRole) {
         <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Viewport</th><th>Side margin</th><th>Behavior</th></tr></thead><tbody>
             <tr><td>Above {breakpoints.tablet}px</td><td>{pixels("size-gutters-desktop") / 2}px minimum</td><td>{pixels("size-page")}px maximum content width</td></tr>
             <tr><td>{breakpoints.mobile + 1}–{breakpoints.tablet}px</td><td>{pixels("size-gutters-tablet") / 2}px</td><td>Stacked features and homepage FAQ; compact navigation; two-column utility content</td></tr>
-            <tr><td>≤ {breakpoints.mobile}px</td><td>{pixels("size-gutters-mobile") / 2}px</td><td>Single-column content; 18px / 1.5 body text; compact navigation with Download in the menu</td></tr>
+            <tr><td>≤ {breakpoints.mobile}px</td><td>{pixels("size-gutters-mobile") / 2}px</td><td>Single-column content; 18px / 1.5 body text; compact navigation</td></tr>
         </tbody></table></div>
         <label class="ds-toggle"><input type="checkbox" bind:checked={guides} /> Show demonstration guides</label>
         <div class="ds-grid-demo" class:show-guides={guides}>
@@ -210,13 +210,13 @@ function recipeFor(role: TextRole) {
     <section class="ds-section" id="ds-actions">
         <Text as="h2" role="section">Actions and feedback.</Text>
         <p class="ds-lead">One 56px minimum height, 16px semibold label, 24px horizontal padding and 24px icon gap. Primary and secondary variants. The primary action automatically inverts on a dark Surface. Native links navigate; native buttons act. Focus and hover are immediate cuts.</p>
-        <div class="ds-action-row"><Action href="/download" label="Download" icon="down" /><Action href="/contribute" label="Contribute" icon="right" variant="secondary" /><Action href="https://github.com/marmot-protocol" label="GitHub" icon="external" external /><Action label="Disabled" disabled /></div>
-        <Surface tone="ink" class="ds-surface-demo"><Text as="h3" role="title" tone="inverse">Primary action on dark</Text><Action href="/download" label="Download" icon="down" /></Surface>
+        <div class="ds-action-row"><Action href="/contribute" label="Contribute" icon="right" /><Action href="/contribute" label="Contribute" icon="right" variant="secondary" /><Action href="https://github.com/marmot-protocol" label="GitHub" icon="external" external /><Action label="Disabled" disabled /></div>
+        <Surface tone="ink" class="ds-surface-demo"><Text as="h3" role="title" tone="inverse">Primary action on dark</Text><Action href="/contribute" label="Contribute" icon="right" /></Surface>
         <div class="ds-action-row"><Action label="Try an action" onclick={() => { actionFeedback = "Action activated."; }} /><span role="status">{actionFeedback}</span><TextLink href="/privacy-matters">Text link</TextLink></div>
         <div class="ds-copy-demo"><span>example@white-noise.test</span><CopyButton value="example@white-noise.test" label="example address" /></div>
         <p class="ds-note">Copy uses a 44px target and a 20px icon. Success switches to a checkmark for three seconds; a screen reader receives status text. The address remains selectable if clipboard access fails. This specimen copies a harmless example, not a donation address.</p>
         <Disclosure title="What does an open disclosure look like?"><p>This is the same native details component used by the homepage FAQ. Enter or Space opens it. The glyph changes instantly; the answer stays in normal document flow.</p></Disclosure>
-        <details class="ds-details"><summary>Component APIs</summary><pre><code>{`<Action href="/download" label="Download" icon="down" />
+        <details class="ds-details"><summary>Component APIs</summary><pre><code>{`<Action href="/contribute" label="Contribute" icon="right" />
 <Action label="Copy" onclick={handler} />
 <Action variant="secondary" label="Contribute" href="/contribute" />
 <CopyButton value={address} label="Lightning address" />
@@ -254,7 +254,7 @@ function recipeFor(role: TextRole) {
             <dt>FAQ</dt><dd>Disclosure owns native open/close behavior and the shared Add icon. A rule separates interactive questions only.</dd>
             <dt>Donation</dt><dd>Black small headings, gray selectable addresses, shared CopyButton and Action. Two columns on desktop, stacked on mobile.</dd>
             <dt>Articles and legal text</dt><dd>Sanitized content keeps semantic headings, lists and links. Typography recipes style generated markup; legal content is unchanged.</dd>
-            <dt>Footer</dt><dd>One shared root-layout closing statement, Download action and Internet Privacy Foundation copyright.</dd>
+            <dt>Footer</dt><dd>One shared root-layout closing statement and Internet Privacy Foundation copyright.</dd>
         </dl>
     </section>
 

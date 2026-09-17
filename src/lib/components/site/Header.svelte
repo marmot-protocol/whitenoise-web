@@ -8,7 +8,6 @@ import { breakpoints } from "$lib/design-system/runtime";
 import {
     currentGuideArea,
     currentPageLabel,
-    downloadLink,
     isActiveDestination,
     legalLinks,
     mainLinks,
@@ -86,7 +85,6 @@ function resized() {
                     {#each legalLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
                 </div>
             </details>
-            <a href={downloadLink.href} aria-current={active(downloadLink.href) ? "page" : undefined}>{downloadLink.label}</a>
         </nav>
         <div class="header-actions">
         <ThemeToggle />
@@ -122,7 +120,6 @@ function resized() {
                 {#each legalLinks as link}<a href={link.href} aria-current={active(link.href) ? "page" : undefined}>{link.label}</a>{/each}
             </div>
         </details>
-        <a href={downloadLink.href} aria-current={active(downloadLink.href) ? "page" : undefined}>{downloadLink.label}</a>
         <hr class="nav-divider" />
         <ThemeToggle />
     </nav>

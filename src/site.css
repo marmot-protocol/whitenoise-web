@@ -327,7 +327,7 @@ body {
     padding-block: var(--gap-section);
 }
 .download-closing h2 {
-    margin-bottom: var(--gap-copy-action);
+    margin-bottom: 0;
     white-space: nowrap;
 }
 .site-footer {

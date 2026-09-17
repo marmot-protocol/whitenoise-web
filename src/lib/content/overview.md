@@ -2,12 +2,11 @@
 
 > The identity-free messenger for private communication.
 
-White Noise is an open-source messenger for private messages, groups, and connected agents. No phone number or email address is needed. See the Download page for current beta installation options.
+White Noise is an open-source messenger for private messages, groups, and connected agents. No phone number or email address is needed.
 
 ## Pages
 
 - [Home](https://www.whitenoise.chat/): Features and project supporters
-- [Download](https://www.whitenoise.chat/download): Current installation options
 - [Privacy Matters](https://www.whitenoise.chat/privacy-matters): Why private conversations matter
 - [Contribute](https://www.whitenoise.chat/contribute): Repositories, community, and donations
 - [Blog](https://www.whitenoise.chat/blog): Project updates published on Nostr
@@ -25,4 +24,4 @@ White Noise is an open-source messenger for private messages, groups, and connec
 - [Sitemap](https://www.whitenoise.chat/sitemap.xml)
 - [Marmot repositories](https://github.com/marmot-protocol)
 
-For current features and limitations, use the FAQ and guides. For distribution links, privacy disclosures, and signed statements, use their canonical pages above.
+For current features and limitations, use the FAQ and guides. For privacy disclosures and signed statements, use their canonical pages above.

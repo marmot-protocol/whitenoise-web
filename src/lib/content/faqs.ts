@@ -22,8 +22,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Which devices can I use?",
                 featured: true,
-                answer: "White Noise is available for iPhone and Android. Download it from the App Store or Google Play, or get the Android app through Zapstore or as a direct APK.",
-                link: { label: "See download options", href: "/download" },
+                answer: "White Noise is built for iPhone and Android.",
             },
             {
                 question: "How do I find and add someone?",
