@@ -9,6 +9,7 @@ describe("site navigation", () => {
         expect(isActiveDestination("/privacy-matters", "/privacy")).toBe(false);
         expect(currentPageLabel("/privacy-matters")).toBe("Privacy Matters");
         expect(currentPageLabel("/privacy")).toBe("Privacy Policy");
+        expect(currentPageLabel("/terms")).toBe("Terms of Service");
     });
 
     it("recognizes legacy documentation destinations and runtime pages", () => {

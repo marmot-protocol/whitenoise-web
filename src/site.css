@@ -1089,3 +1089,28 @@ body {
     transition: none;
     animation: none;
 }
+
+.legal-contents {
+    margin-block: var(--gap-copy-action);
+    padding-block: var(--space-24);
+    border-block: var(--stroke-hairline) solid var(--color-rule);
+}
+.legal-policy .legal-contents ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: var(--space-8);
+}
+.legal-policy h2[id] {
+    scroll-margin-top: var(--space-112);
+}
+.footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-24);
+    margin-bottom: var(--space-24);
+}
+.footer-legal-links a {
+    text-decoration: underline;
+    text-underline-offset: var(--space-4);
+}

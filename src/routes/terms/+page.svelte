@@ -5,12 +5,12 @@ import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
 
-const privacySchema = {
+const termsSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Privacy Policy",
-    description: "Privacy Policy for White Noise and the Internet Privacy Foundation.",
-    url: "https://www.whitenoise.chat/privacy",
+    name: "Terms of Service",
+    description: "Terms of Service for White Noise and the Internet Privacy Foundation.",
+    url: "https://www.whitenoise.chat/terms",
     inLanguage: "en",
     publisher: {
         "@type": "Organization",
@@ -21,11 +21,11 @@ const privacySchema = {
 </script>
 
 <svelte:head>
-    <title>Privacy Policy | White Noise</title>
-    <link rel="canonical" href="https://www.whitenoise.chat/privacy" />
-    <meta name="description" content="Privacy Policy for White Noise and the Internet Privacy Foundation." />
+    <title>Terms of Service | White Noise</title>
+    <link rel="canonical" href="https://www.whitenoise.chat/terms" />
+    <meta name="description" content="Terms of Service for White Noise and the Internet Privacy Foundation." />
 </svelte:head>
 
-<JsonLd schema={privacySchema} />
+<JsonLd schema={termsSchema} />
 
 <LegalPage {...data} />

@@ -1,10 +1,10 @@
-import privacyPolicyMarkdown from "$lib/content/privacy-policy.md?raw";
+import termsMarkdown from "$lib/content/terms-of-service.md?raw";
 import { renderBlogHtml } from "$lib/server/blog-markdown";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {
     const sections: { id: string; title: string }[] = [];
-    const safeHtml = renderBlogHtml(privacyPolicyMarkdown).replace(
+    const safeHtml = renderBlogHtml(termsMarkdown).replace(
         /<h2>(\d+)\. ([^<]+)<\/h2>/g,
         (_heading, number: string, title: string) => {
             const id = `section-${number}`;

@@ -63,7 +63,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             },
             {
                 question: "What information does White Noise collect?",
-                answer: "In-app usage and diagnostics sharing is off by default. If you enable it, it sends limited usage and reliability measurements, without message content, contacts, or account and group identifiers. Audit logs are a separate opt-in choice. Push notifications, public profiles, and services you connect to have their own data flows, all explained in the privacy policy.",
+                answer: "Usage and telemetry sharing is off by default. If enabled, product analytics sends predefined events and bucketed values; telemetry includes performance measurements, a resettable installation identifier, app and device information, and relay addresses. Neither includes message content, contacts, or account and group identifiers. Group diagnostic logs are a separate opt-in choice and include group and message identifiers. On iOS and Android, enabling log sharing automatically uploads eligible logs to IPF. Push notifications, public profiles, and connected services have their own data flows, explained in the privacy policy.",
                 link: { label: "See what is shared and when", href: "/privacy" },
             },
         ],

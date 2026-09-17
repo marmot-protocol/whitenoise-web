@@ -15,6 +15,7 @@ White Noise is an open-source messenger for private messages, groups, and connec
 - [Agents](https://www.whitenoise.chat/agents): Connect an agent running on your computer
 - [For developers](https://www.whitenoise.chat/build): Build with Marmot
 - [Marmot Protocol](https://www.whitenoise.chat/docs/marmot/README.md): Protocol guide
+- [Terms of Service](https://www.whitenoise.chat/terms): Terms for using White Noise
 - [Privacy Policy](https://www.whitenoise.chat/privacy): Website and app privacy disclosures
 - [Canary](https://www.whitenoise.chat/canary): Signed transparency statements
 

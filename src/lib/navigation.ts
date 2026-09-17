@@ -13,6 +13,7 @@ export const moreLinks: NavigationLink[] = [
 ];
 export const legalLinks: NavigationLink[] = [
     { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
     { label: "Canary", href: "/canary" },
 ];
 export const downloadLink = { label: "Download", href: "/download" };
