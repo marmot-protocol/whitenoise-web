@@ -37,15 +37,15 @@ export const homepageFeatures: HomepageFeature[] = [
         },
     },
     {
-        title: ["No central server.", "No lock-in."],
+        title: ["No central server."],
         description:
-            "White Noise delivers messages through independent servers called relays. Your identity isn’t tied to any one of them. Connect to multiple relays and switch whenever you want, keeping the same identity and contacts. You can even run your own relay and choose who you share it with.",
+            "White Noise delivers messages through independent servers called relays. You choose which ones to use, and your identity and contacts stay yours when you change them. You can even run your own relay and choose who you share it with.",
         artwork: "network-flower",
     },
     {
         title: ["We can’t lock you in."],
         description:
-            "White Noise is built on Marmot, a free, open-source messaging protocol anyone can use or build on without asking permission. That opens the door to different apps with different styles and features. You can chat with people using other Marmot-compatible apps or switch to one yourself. Everyone gets to choose what suits them and still stay connected.",
+            "White Noise is built on Marmot, an open messaging protocol anyone can build on without asking permission. That means other developers can create compatible apps, giving you more choice in how you connect.",
         artwork: "band",
         id: "interoperability",
         link: {
