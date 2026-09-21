@@ -27,7 +27,7 @@ const options: {
     },
     {
         name: "Android",
-        description: "Get White Noise from Zapstore or download the latest GitHub release.",
+        description: "Get White Noise from Zapstore or GitHub.",
         downloads: [
             {
                 label: "Zapstore",
