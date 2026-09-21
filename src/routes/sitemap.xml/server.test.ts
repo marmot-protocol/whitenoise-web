@@ -51,7 +51,7 @@ describe("sitemap GET", () => {
         expect(response.headers.get("Cache-Control")).toBe("max-age=86400");
         expect(xml).toContain("<loc>https://www.whitenoise.chat/build</loc>");
         expect(xml).toContain("<loc>https://www.whitenoise.chat/terms</loc>");
-        expect(xml).not.toContain("<loc>https://www.whitenoise.chat/download</loc>");
+        expect(xml).toContain("<loc>https://www.whitenoise.chat/download</loc>");
         expect(xml).toContain("<loc>https://www.whitenoise.chat/blog/naddr1blog</loc>");
         expect(xml).toContain("<lastmod>2023-11-14</lastmod>");
     });

@@ -22,7 +22,8 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Which devices can I use?",
                 featured: true,
-                answer: "White Noise is built for iPhone and Android.",
+                answer: "White Noise is available as a beta for iPhone through TestFlight and for Android through GitHub Releases.",
+                link: { label: "See download options", href: "/download" },
             },
             {
                 question: "How do I find and add someone?",

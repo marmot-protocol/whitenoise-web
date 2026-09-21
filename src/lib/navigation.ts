@@ -16,8 +16,9 @@ export const legalLinks: NavigationLink[] = [
     { label: "Terms of Service", href: "/terms" },
     { label: "Canary", href: "/canary" },
 ];
+export const downloadLink: NavigationLink = { label: "Download", href: "/download" };
 export const moreMenuLinks = [...moreLinks, ...legalLinks];
-const pageLinks = [...mainLinks, ...moreMenuLinks];
+const pageLinks = [...mainLinks, ...moreMenuLinks, downloadLink];
 
 /** Match a destination and its descendants without matching unrelated path prefixes. */
 export function isActiveDestination(pathname: string, href: string) {

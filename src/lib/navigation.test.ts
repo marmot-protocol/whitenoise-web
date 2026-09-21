@@ -10,6 +10,7 @@ describe("site navigation", () => {
         expect(currentPageLabel("/privacy-matters")).toBe("Privacy Matters");
         expect(currentPageLabel("/privacy")).toBe("Privacy Policy");
         expect(currentPageLabel("/terms")).toBe("Terms of Service");
+        expect(currentPageLabel("/download")).toBe("Download");
     });
 
     it("recognizes legacy documentation destinations and runtime pages", () => {

@@ -2,6 +2,7 @@
 import JsonLd from "$lib/components/JsonLd.svelte";
 import Artwork from "$lib/components/site/Artwork.svelte";
 import Supporters from "$lib/components/site/Supporters.svelte";
+import Action from "$lib/components/system/Action.svelte";
 import Disclosure from "$lib/components/system/Disclosure.svelte";
 import TextLink from "$lib/components/system/TextLink.svelte";
 import { faqSchema, homepageFaqs } from "$lib/content/faqs";
@@ -48,6 +49,9 @@ const schema = {
         <div class="hero-title">
             <h1>White Noise</h1>
             <p class="hero-tagline">The private messenger you can start using in seconds. No phone number, no email.</p>
+        </div>
+        <div class="hero-action" id="hero-download">
+            <Action href="/download" label="Download" icon="down" />
         </div>
     </section>
     <Supporters />
