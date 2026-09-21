@@ -22,7 +22,7 @@ const schema = {
 </script>
 
 <svelte:head>
-    <title>White Noise — The identity-free messenger for private communication.</title>
+    <title>White Noise — The private messenger you can start using in seconds. No phone number, no email.</title>
     <link rel="canonical" href="https://www.whitenoise.chat/" />
     <meta
         name="description"
@@ -32,12 +32,12 @@ const schema = {
     <meta property="og:url" content="https://www.whitenoise.chat/" />
     <meta property="og:image" content="https://www.whitenoise.chat/images/og_preview@1x.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="White Noise — The identity-free messenger for private communication." />
+    <meta property="og:title" content="White Noise — The private messenger you can start using in seconds. No phone number, no email." />
     <meta
         property="og:description"
         content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
     />
-    <meta property="twitter:title" content="White Noise — The identity-free messenger for private communication." />
+    <meta property="twitter:title" content="White Noise — The private messenger you can start using in seconds. No phone number, no email." />
     <meta
         property="twitter:description"
         content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
