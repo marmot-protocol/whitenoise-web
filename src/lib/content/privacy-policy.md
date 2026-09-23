@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: September 16, 2026**
+**Last Updated: September 23, 2026**
 
 ---
 
@@ -76,6 +76,8 @@ Media files fall into two categories with respect to privacy. Profile pictures a
 
 **Web image search on iOS.** When you use web image search for a profile or group picture, your search terms are sent to DuckDuckGo. In the profile-picture picker, searches run as you type after a short pause; the group-picture picker searches when you submit a query. Loading result thumbnails, previews, or a selected image also contacts the providers hosting those images. DuckDuckGo and any image providers contacted can see your IP address and handle requests under their own privacy policies. Loading a direct image URL also contacts its host. These requests are separate from usage and telemetry consent and diagnostic-log sharing.
 
+**Apple Pay donations on iOS.** If you choose to donate within the iOS app, Apple Pay presents the payment for your authorization and Stripe processes it for IPF. This donation flow is optional and separate from using White Noise for messaging. Section 5 describes the donor information involved.
+
 IPF cannot read your messages. If you share group diagnostic logs, IPF can see the limited group and message metadata described in Section 7, but not the contents of your messages or group membership by name or public key. Note that your Nostr contact list is a public event on the Nostr network and may be visible to anyone, including relay operators — this is a property of the Nostr protocol, not specific to White Noise. IPF also has no visibility into your activity on relays or Blossom servers it does not operate, except for the information you opt to share: aggregate connection quality labeled by relay address in Section 6, and the more detailed group diagnostic metadata in Section 7.
 
 ---
@@ -97,6 +99,10 @@ If you turn on usage and telemetry, we additionally collect the bucketed feature
 **Usage and telemetry data (opt-in):** If you turn on usage and telemetry, the Service collects the bucketed usage and reliability information described in Section 6. The Service does not collect crash reports and contains no crash-reporting SDK.
 
 **Group diagnostic log data (opt-in):** If you enable automatic group diagnostic-log sharing on iOS or technical-log sharing on Android, or manually send a log to IPF from a client that supports export, the Service transmits the protocol-level diagnostic information described in Section 7. Automatic technical-log sharing is a separate choice from usage and telemetry.
+
+**Apple Pay donation information (iOS only):** If you authorize a donation in the iOS app, IPF collects the name and email address you provide for that donation. IPF also receives a record of the donation, including its amount, currency, date, status, and transaction reference. Stripe, our payment provider, receives the payment and transaction information needed to process the donation. This may include your name and email address, depending on the payment details provided through the donation flow. Stripe handles payment information under its [Privacy Policy](https://stripe.com/privacy).
+
+We use donor information to process and acknowledge donations, provide receipts, respond to donation or payment questions, handle refunds or disputes, and meet accounting and legal obligations. A name and email address are not required to use White Noise for messaging, and making a donation does not create a messaging account or grant access to paid features. This donation flow does not depend on the separate choices to share usage, telemetry, or group diagnostic logs.
 
 Providing certain information may be necessary to use specific features of the Service. If you choose not to provide such information, some features may not function as intended.
 
@@ -196,6 +202,7 @@ IPF processes information as reasonably necessary to operate, secure, maintain, 
 - Responding to support inquiries
 - Understanding which features are used and where the app fails or performs poorly, where you have turned on usage and telemetry
 - Investigating delivery or group-state problems from group diagnostic logs you explicitly agree to share
+- Processing optional donations and providing receipts and donor support
 - Complying with applicable law
 
 Usage and telemetry information is used only to understand and improve how the Service works. It is never used for advertising, never sold or shared for cross-context behavioral advertising, and never used to build a profile of an individual user.
@@ -210,6 +217,7 @@ Where applicable under data protection law, IPF processes personal data on the f
 
 - **To operate and provide the Service,** including transmitting Nostr events and delivering notifications: legitimate interests
 - **To maintain security and prevent abuse:** legitimate interests and legal obligations
+- **To process an optional donation you request and provide a receipt:** performance of the donation transaction
 - **To comply with applicable law,** including responding to lawful requests: legal obligations
 - **Where required, based on user consent** (e.g., turning on usage and telemetry, enabling automatic technical-log sharing, or manually sending a group diagnostic log to IPF): consent
 
@@ -220,6 +228,8 @@ Where IPF relies on legitimate interests, it does so after considering the poten
 ## 11. Disclosure of Information
 
 IPF may disclose information to service providers that process data on our behalf and under our instructions to support the operation of IPF-controlled infrastructure, to comply with legal obligations or lawful requests, or to protect the rights, safety, and integrity of the Service and its users.
+
+For Apple Pay donations in the iOS app, Stripe processes payments for IPF. Stripe receives payment and transaction information as described in Section 5. Stripe may also use this information for its own security, fraud-prevention, compliance, and dispute-handling purposes, as described in [Stripe's Privacy Policy](https://stripe.com/privacy).
 
 Because message content is end-to-end encrypted using MLS, IPF is technically unable to decrypt or provide the plaintext content of messages to any third party under any circumstances, including in response to legal process.
 
@@ -243,6 +253,8 @@ Notification tokens are retained only as long as needed for delivery. Disabling 
 
 Usage analytics records are scheduled for automatic deletion 180 days after collection. Telemetry is retained for 90 days. Uploaded group diagnostic logs are deleted from our servers after 30 days. Clearing local logs or removing a profile from your device does not delete these server-side records; you can request deletion as described in [Section 14](#section-14).
 
+Donation records, including donor contact information, are kept for as long as needed to provide receipts, handle refunds and disputes, maintain financial records, and meet applicable accounting and legal obligations. Deleting the app or a local profile does not delete donation records. You can request deletion as described in [Section 14](#section-14), although we may need to retain records required by law or needed to resolve a payment dispute. Stripe's retention and deletion practices are described in its [Privacy Policy](https://stripe.com/privacy).
+
 IPF has no obligation to retain user content and may remove or cease storing content at its discretion, subject to applicable law.
 
 ---
@@ -251,7 +263,7 @@ IPF has no obligation to retain user content and may remove or cease storing con
 
 ### Request data deletion or remove a profile
 
-To request deletion of White Noise data held by the Internet Privacy Foundation, email [privacy@ipf.dev](mailto:privacy@ipf.dev) with the subject “White Noise data deletion”. Describe the data or support interaction you want deleted. You can make this request without reinstalling the app. Never send your private key, recovery secret, or message contents. We will explain any information needed to locate the records and any records that must be retained for security or legal reasons.
+To request deletion of White Noise data held by the Internet Privacy Foundation, email [privacy@ipf.dev](mailto:privacy@ipf.dev) with the subject “White Noise data deletion”. Describe the data, donation, or support interaction you want deleted. If your request concerns a donation, include the email address used for it so we can locate the record; do not send payment card details. You can make this request without reinstalling the app. Never send your private key, recovery secret, or message contents. We will explain any information needed to locate the records and any records that must be retained for security or legal reasons.
 
 To remove an identity from the Android app, open its account settings and choose **Sign Out & Wipe**, then follow the confirmation. This removes that identity’s local message database, cryptographic group state, and stored key from that installation, and attempts to remove its published key packages. Save any backup you intend to keep before wiping. Signing back in does not restore the deleted local history.
 
