@@ -27,15 +27,15 @@ const options: {
     },
     {
         name: "Android",
-        description: "Get White Noise from Google Play, Zapstore or GitHub.",
+        description: "Get White Noise from Zapstore, Google Play or GitHub.",
         downloads: [
-            {
-                label: "Google Play",
-                href: "https://play.google.com/store/apps/details?id=dev.ipf.whitenoise.android",
-            },
             {
                 label: "Zapstore",
                 href: "https://zapstore.dev/apps/dev.ipf.whitenoise.android",
+            },
+            {
+                label: "Google Play",
+                href: "https://play.google.com/store/apps/details?id=dev.ipf.whitenoise.android",
                 variant: "secondary",
             },
             {
