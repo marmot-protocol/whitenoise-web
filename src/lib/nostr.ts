@@ -12,13 +12,14 @@ export const WHITE_NOISE_PUBKEY =
 export const BLOG_PUBKEY = WHITE_NOISE_PUBKEY;
 
 // Relays to fetch from (including relays that specialize in long-form content)
-export const RELAYS = ["wss://relay.primal.net", "wss://relay.damus.io", "wss://nos.lol"];
-export const CANARY_RELAYS = [
+export const RELAYS = [
     "wss://relay.primal.net",
-    "wss://relay.damus.io",
     "wss://nos.lol",
-    "wss://relay.ditto.pub",
+    "wss://relay.eu.whitenoise.chat",
+    "wss://relay.us.whitenoise.chat",
+    "wss://relay.jeffg.fyi",
 ];
+export const CANARY_RELAYS = [...RELAYS, "wss://relay.ditto.pub"];
 
 // Long-form content kind (NIP-23)
 export const KIND_LONG_FORM = 30023;

@@ -3,9 +3,11 @@ set -euo pipefail
 
 RELAYS=(
   "wss://relay.primal.net"
-  "wss://relay.damus.io"
   "wss://nos.lol"
   "wss://relay.ditto.pub"
+  "wss://relay.eu.whitenoise.chat"
+  "wss://relay.us.whitenoise.chat"
+  "wss://relay.jeffg.fyi"
 )
 
 DRY_RUN=false
@@ -155,10 +157,7 @@ As of ${human_date}, Internet Privacy Foundation has not been compelled to insta
       --arg content "$content" \
       --arg title "$title" \
       --arg canary_url "$CANARY_URL" \
-      --arg relay_1 "${RELAYS[0]}" \
-      --arg relay_2 "${RELAYS[1]}" \
-      --arg relay_3 "${RELAYS[2]}" \
-      --arg relay_4 "${RELAYS[3]}" \
+      --argjson relays "$(printf '%s\n' "${RELAYS[@]}" | jq -R . | jq -s .)" \
       '{
         kind: 303,
         created_at: $created_at,
@@ -168,7 +167,7 @@ As of ${human_date}, Internet Privacy Foundation has not been compelled to insta
           ["t", "canary"],
           ["t", "attestation"],
           ["r", $canary_url],
-          ["relays", $relay_1, $relay_2, $relay_3, $relay_4]
+          (["relays"] + $relays)
         ]
       }'
   done

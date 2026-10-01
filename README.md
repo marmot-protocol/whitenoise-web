@@ -91,9 +91,11 @@ Current setup:
 - author pubkey: `75d737c3472471029c44876b330d2284288a42779b591a2ed4daa1c6c07efaf7`
 - relays:
   - `wss://relay.primal.net`
-  - `wss://relay.damus.io`
   - `wss://nos.lol`
   - `wss://relay.ditto.pub`
+  - `wss://relay.eu.whitenoise.chat`
+  - `wss://relay.us.whitenoise.chat`
+  - `wss://relay.jeffg.fyi`
 
 Recommended event shape for published canary events:
 - `kind: 303`
@@ -112,7 +114,7 @@ Example tag set:
 ["t", "canary"]
 ["t", "attestation"]
 ["r", "https://www.whitenoise.chat/canary"]
-["relays", "wss://relay.primal.net", "wss://relay.damus.io", "wss://nos.lol", "wss://relay.ditto.pub"]
+["relays", "wss://relay.primal.net", "wss://nos.lol", "wss://relay.ditto.pub", "wss://relay.eu.whitenoise.chat", "wss://relay.us.whitenoise.chat", "wss://relay.jeffg.fyi"]
 ```
 
 ### Publishing a canary with `nak`
