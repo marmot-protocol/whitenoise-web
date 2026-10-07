@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import publicStaticPages from "../src/lib/content/agent-pages.json" with { type: "json" };
 
 export { publicStaticPages };
@@ -59,6 +60,6 @@ export async function buildMarkdownRouting(output) {
     await writeFile(path, `${JSON.stringify(withMarkdownRouting(config), null, 4)}\n`);
 }
 
-if (process.argv[1] === new URL(import.meta.url).pathname) {
-    await buildMarkdownRouting(new URL("../.vercel/output/", import.meta.url).pathname);
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+    await buildMarkdownRouting(fileURLToPath(new URL("../.vercel/output/", import.meta.url)));
 }

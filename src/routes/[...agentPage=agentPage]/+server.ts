@@ -10,7 +10,12 @@ import type { RequestHandler } from "./$types";
 let pages: Promise<Record<string, string>> | undefined;
 export const GET: RequestHandler = async ({ url }) => {
     if (!publicStaticPages.includes(url.pathname)) error(404, "Page not found");
-    pages ??= readFile(join(process.cwd(), "agent-pages.json"), "utf8").then(JSON.parse);
+    pages ??= readFile(join(process.cwd(), "agent-pages.json"), "utf8")
+        .then(JSON.parse)
+        .catch((failure) => {
+            pages = undefined;
+            throw failure;
+        });
     const snapshots = await pages;
     const html = Object.hasOwn(snapshots, url.pathname) ? snapshots[url.pathname] : undefined;
     if (html === undefined) error(404, "Page not found");

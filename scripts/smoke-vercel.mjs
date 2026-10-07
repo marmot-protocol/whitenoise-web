@@ -136,6 +136,20 @@ try {
     assert.equal(head.headers.get("Content-Type"), "text/markdown; charset=utf-8");
     assert.equal(await head.text(), "");
 
+    for (const method of ["GET", "POST"]) {
+        const missing = await handler.fetch(
+            new Request("https://www.whitenoise.chat/unknown-agent-page", {
+                method,
+                headers: { Accept: "text/html" },
+            })
+        );
+        assert.equal(missing.status, 404, "Unknown paths must retain their 404 status");
+        assert.match(missing.headers.get("Content-Type"), /text\/html/);
+        const missingHtml = await missing.text();
+        assert.ok(missingHtml.includes("Page not found."), "Unknown paths retain the styled error");
+        assert.ok(missingHtml.includes("<main"), "The error keeps the existing page shell");
+    }
+
     const index = JSON.parse(
         await readFile(
             new URL(
