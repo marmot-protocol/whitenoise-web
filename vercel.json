@@ -27,15 +27,6 @@
             ]
         },
         {
-            "source": "/(download|privacy-matters|contribute|build|agents|faq|privacy|terms)?",
-            "headers": [
-                {
-                    "key": "Vary",
-                    "value": "Accept"
-                }
-            ]
-        },
-        {
             "source": "/.well-known/(.*)",
             "headers": [
                 {

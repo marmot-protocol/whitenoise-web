@@ -4,7 +4,7 @@ import { cp, mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { withMarkdownRouting } from "./markdown-routing.mjs";
+import { publicStaticPages, withMarkdownRouting } from "./markdown-routing.mjs";
 
 // Keep the function outside the checkout so missing dependencies cannot resolve
 // from the project's node_modules. Run with require(ESM) disabled, as on Vercel.
@@ -54,18 +54,39 @@ try {
     );
     const route = outputConfig.routes[markdownRoute];
     assert.equal(route.dest, "/![-]/catchall", "Negotiation must use the existing SSR function");
-    for (const path of [
-        "/",
-        "/download",
-        "/agents",
-        "/privacy",
-        "/terms",
-        "/build",
-        "/faq",
-        "/contribute",
-        "/privacy-matters",
-        "/docs/marmot/README.md",
-    ]) {
+    for (const path of publicStaticPages) {
+        for (const earlier of outputConfig.routes.slice(0, markdownRoute)) {
+            if (earlier.src && new RegExp(earlier.src).test(path)) {
+                assert.equal(
+                    earlier.continue,
+                    true,
+                    `${path} must reach negotiation before any terminating alias or redirect`
+                );
+            }
+        }
+        const firstTerminal = (accept) =>
+            outputConfig.routes
+                .slice(0, filesystem)
+                .find(
+                    (rule) =>
+                        rule.src &&
+                        new RegExp(rule.src).test(path) &&
+                        rule.continue !== true &&
+                        (!rule.methods || rule.methods.includes("GET")) &&
+                        (!rule.has ||
+                            rule.has.every(
+                                (condition) =>
+                                    condition.type === "header" &&
+                                    condition.key === "accept" &&
+                                    new RegExp(`^(?:${condition.value})$`).test(accept)
+                            ))
+                );
+        assert.equal(
+            firstTerminal("text/markdown"),
+            route,
+            `${path} routes Markdown to the function`
+        );
+        assert.notEqual(firstTerminal("text/html"), route, `${path} keeps HTML on static routing`);
         assert.ok(new RegExp(route.src).test(path), `${path} must negotiate before CDN serving`);
         const markdown = await handler.fetch(
             new Request(`https://www.whitenoise.chat${path}`, {
@@ -149,6 +170,24 @@ try {
         assert.ok(missingHtml.includes("Page not found."), "Unknown paths retain the styled error");
         assert.ok(missingHtml.includes("<main"), "The error keeps the existing page shell");
     }
+
+    const writeAttempt = await handler.fetch(
+        new Request("https://www.whitenoise.chat/download", { method: "POST" })
+    );
+    assert.equal(writeAttempt.status, 405, "Public page snapshots accept reads only");
+
+    const shifted = withMarkdownRouting({
+        routes: [
+            { src: "/download", dest: "/download/" },
+            { handle: "filesystem" },
+            { src: "/.*", dest: "/![-]/catchall" },
+        ],
+    });
+    assert.ok(
+        shifted.routes[1].has,
+        "Negotiation precedes aliases even when the adapter adds no prefix"
+    );
+    assert.equal(shifted.routes[2].dest, "/download/");
 
     const index = JSON.parse(
         await readFile(

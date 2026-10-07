@@ -15,9 +15,12 @@ export function withMarkdownRouting(config) {
     const catchall = routes.find((route) => route.src === "/.*" && route.dest);
     assert.ok(catchall, "Vercel adapter must supply its existing server function");
     const src = `^(?:${publicStaticPages.map((path) => path.replaceAll(".", "\\.")).join("|")})$`;
-    // Before the adapter's static path aliases, which otherwise bypass the hook.
+    // Preserve leading continue:true transforms/headers, then run before the
+    // first terminating rule (including static aliases or filesystem serving).
+    const insertion = routes.findIndex((route) => route.continue !== true);
+    assert.ok(insertion >= 0, "Vercel adapter must supply terminating routing");
     routes.splice(
-        1,
+        insertion,
         0,
         { src, headers: { Vary: "Accept" }, continue: true },
         {
