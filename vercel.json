@@ -1,11 +1,12 @@
 {
+    "buildCommand": "bun run build",
     "headers": [
         {
             "source": "/(.*)",
             "headers": [
                 {
                     "key": "Link",
-                    "value": "<https://www.whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://www.whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"White Noise FAQ and guides\""
+                    "value": "<https://www.whitenoise.chat/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", <https://www.whitenoise.chat/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"White Noise FAQ and guides\", <https://www.whitenoise.chat/.well-known/agent-skills/index.json>; rel=\"agent-skills\", <https://www.whitenoise.chat/.well-known/ai-catalog.json>; rel=\"ai-catalog\""
                 },
                 {
                     "key": "X-Content-Type-Options",
@@ -18,15 +19,23 @@
                 {
                     "key": "X-Frame-Options",
                     "value": "DENY"
+                },
+                {
+                    "key": "Content-Signal",
+                    "value": "ai-train=no, search=yes, ai-input=yes"
                 }
             ]
         },
         {
-            "source": "/docs/marmot/README.md",
+            "source": "/.well-known/(.*)",
             "headers": [
                 {
-                    "key": "Content-Type",
-                    "value": "text/html; charset=utf-8"
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=300"
                 }
             ]
         }

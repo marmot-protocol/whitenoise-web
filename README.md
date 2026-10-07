@@ -2,6 +2,8 @@
 
 Marketing and documentation site for White Noise, built with SvelteKit.
 
+Agent-readable responses, discovery formats, deployment checks and the applicability of service-specific recommendations are documented in [Agent access](docs/agent-access.md).
+
 ## Development
 
 Use Node 22 and Bun 1.4.2, matching CI and the Vercel runtime.
@@ -36,7 +38,7 @@ bun run build
 
 ## Production behavior
 
-Marketing pages, the FAQ, and the Agents, Build and Marmot guides are pre-rendered. The shared docs route uses an explicit Marmot README entry with `prerender = "auto"`; other documentation URLs remain server redirects and do not initialize the guide renderer. The legacy `.md` page URL explicitly serves HTML on Vercel; the preview middleware maps it to the generated `.html` file because SvelteKit preview otherwise infers Markdown MIME from the URL. Blog content, canary attestations and the sitemap also use server routes. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
+Marketing pages, the FAQ, and the Agents, Build and Marmot guides are pre-rendered. The shared docs route uses an explicit Marmot README entry with `prerender = "auto"`; other documentation URLs remain server redirects and do not initialize the guide renderer. The legacy `.md` page URL serves HTML by default through file-specific Build Output MIME metadata, and serves Markdown when explicitly requested; the preview middleware maps it to the generated `.html` file because SvelteKit preview otherwise infers Markdown MIME from the URL. Blog content, canary attestations and the sitemap also use server routes. No relay access is needed to build static pages. The page shell includes a styled error route; content outages return 503 rather than a misleading 404.
 
 Relay transport lives under `src/lib/server`. It verifies signatures, author, kind and filters, chooses the newest replaceable event, and closes requests within ten seconds. Requests retain verified partial results. List and article caches coalesce concurrent reads, expire after five minutes, and allow at most one hour of stale blog content after refresh failures. Expired missing-post results are never served as stale content during an outage. Caches are process-local and bounded; they are not persistent storage. Canary data is cached for one minute with no stale-on-error fallback. The page renders the signed statement verbatim, escaped as text.
 
@@ -47,6 +49,8 @@ The content security policy permits same-origin code and the existing `analytics
 Agent setup prompts live in `agent-setup` fences in `src/lib/content/agents.md`; the guide's visible prompt containers, copy controls and text export share this source. Guide Markdown is rendered once per server instance; page data contains either one article or sections with prompts, without a duplicate full article. Keep the runtime-specific prerequisites and installation-approval step when updating them.
 
 The cookie dependency override applies the upstream 0.7.x validation fix for [GHSA-pxg6-pf52-xh8x](https://github.com/advisories/GHSA-pxg6-pf52-xh8x) while SvelteKit declares the older range. Recheck this override when updating SvelteKit; remove it once the framework resolves a fixed version itself.
+
+The devalue override applies the compatible 5.x fixes for [shared-buffer serialization](https://github.com/advisories/GHSA-j22f-vq7h-c4qm) and related 5.9.2 advisories; source-map-js applies the 1.2.2 [source-map denial-of-service fix](https://github.com/advisories/GHSA-68fv-2mgg-jv7q). Both were required by the dependency audit before agent-access validation could run. Recheck and remove these overrides when upstream dependencies resolve patched versions without them.
 
 Existing `/images/rebuild/` paths are stable public asset URLs retained for compatibility. Site components and styles use durable `site` naming. The design system's documentation catalog is isolated from normal page runtime imports; small generated constants supply breakpoint and copy-feedback behavior.
 

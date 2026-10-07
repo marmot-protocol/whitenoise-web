@@ -38,3 +38,8 @@ const websiteSchema = {
     </main>
     <Footer />
 </div>
+
+<svelte:head>
+    <link rel="agent-skills" href="/.well-known/agent-skills/index.json" />
+    <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
+</svelte:head>
