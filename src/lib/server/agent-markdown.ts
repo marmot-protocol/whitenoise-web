@@ -58,7 +58,8 @@ export function pageMarkdown(html: string, url: URL): string {
         bulletListMarker: "-",
     });
     converter.use(tables);
-    converter.remove(["script", "style", "nav", "button", "svg", "form"]);
+    converter.remove(["script", "style", "nav", "button", "form"]);
+    converter.remove((node) => node.nodeName.toLowerCase() === "svg");
     converter.addRule("absolute-links", {
         filter: "a",
         replacement: (content, node) => {
