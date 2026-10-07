@@ -34,6 +34,15 @@ describe("Markdown negotiation", () => {
 });
 
 describe("page conversion", () => {
+    it("tolerates malformed remote URLs and removes unsafe Markdown destinations", () => {
+        const markdown = pageMarkdown(
+            '<main><h1>Article</h1><a href="https://[invalid">Broken link</a><a href="javascript:alert(1)">Unsafe link</a><img src="https://[invalid" alt="Broken image"></main>',
+            new URL("https://www.whitenoise.chat/blog/article")
+        );
+        expect(markdown).toContain("Broken link");
+        expect(markdown).toContain("Unsafe link");
+        expect(markdown).not.toMatch(/https:\/\/\[invalid|javascript:/);
+    });
     it("retains content, code and tables, resolves links, and removes page controls", () => {
         const markdown = pageMarkdown(
             `<html><head><script>secret()</script></head><body><header>Global navigation</header><main><header><h1>Guide &amp; setup</h1></header><nav>Table of contents</nav><p>Use <a href="../download?ref=guide">Download</a>.</p><pre><code>echo &lt;hello&gt;</code></pre><table><thead><tr><th>Runtime</th><th>Docs</th></tr></thead><tbody><tr><td>Local</td><td>Guide</td></tr></tbody></table><button>Copy</button><svg>icon</svg><img src="/images/cover.png" alt="Article cover"><img src="/decoration.png" alt=""><script>execute()</script></main><footer>Global footer</footer></body></html>`,

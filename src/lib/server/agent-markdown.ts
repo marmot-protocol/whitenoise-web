@@ -31,6 +31,23 @@ export function varyOnAccept(headers: Headers): void {
     }
 }
 
+function contentUrl(value: string, base: URL): string | null {
+    try {
+        const url = new URL(value, base);
+        if (
+            !["http:", "https:", "mailto:", "bitcoin:", "lightning:", "nostr:"].includes(
+                url.protocol
+            )
+        ) {
+            return null;
+        }
+        return url.href.replace(/\(/g, "%28").replace(/\)/g, "%29");
+    } catch {
+        // Signed remote content can still contain an invalid URL.
+        return null;
+    }
+}
+
 export function pageMarkdown(html: string, url: URL): string {
     // The root layout owns one main element; sanitized remote content cannot add one.
     const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
@@ -47,7 +64,8 @@ export function pageMarkdown(html: string, url: URL): string {
         replacement: (content, node) => {
             const href = node.getAttribute("href");
             if (!href) return content;
-            const destination = new URL(href, url).href.replace(/\(/g, "%28").replace(/\)/g, "%29");
+            const destination = contentUrl(href, url);
+            if (!destination) return content;
             return `[${content}](<${destination}>)`;
         },
     });
@@ -57,7 +75,8 @@ export function pageMarkdown(html: string, url: URL): string {
             const alt = node.getAttribute("alt");
             const src = node.getAttribute("src");
             if (!alt || !src) return "";
-            const destination = new URL(src, url).href.replace(/\(/g, "%28").replace(/\)/g, "%29");
+            const destination = contentUrl(src, url);
+            if (!destination) return "";
             return `![${alt.replace(/[[\]]/g, "\\$&")}](<${destination}>)`;
         },
     });
