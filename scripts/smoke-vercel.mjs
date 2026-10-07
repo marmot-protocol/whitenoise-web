@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { cp, mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { withMarkdownRouting } from "./markdown-routing.mjs";
 
 // Keep the function outside the checkout so missing dependencies cannot resolve
 // from the project's node_modules. Run with require(ESM) disabled, as on Vercel.
@@ -36,7 +38,109 @@ try {
         "The policy must be prerendered in the deployment output"
     );
     assert.ok(html.includes("privacy@ipf.dev"), "The policy must include its contact details");
-    console.log("Vercel Markdown function and static privacy smoke tests passed");
+
+    const outputConfig = JSON.parse(
+        await readFile(new URL("../.vercel/output/config.json", import.meta.url), "utf8")
+    );
+    const filesystem = outputConfig.routes.findIndex((route) => route.handle === "filesystem");
+    const markdownRoute = outputConfig.routes.findIndex((route) =>
+        route.has?.some((condition) => condition.key === "accept")
+    );
+    assert.ok(
+        markdownRoute >= 0 && markdownRoute < filesystem,
+        "Markdown negotiation must run before static files"
+    );
+    const route = outputConfig.routes[markdownRoute];
+    assert.equal(route.dest, "/![-]/catchall", "Negotiation must use the existing SSR function");
+    for (const path of [
+        "/",
+        "/download",
+        "/agents",
+        "/privacy",
+        "/terms",
+        "/build",
+        "/faq",
+        "/contribute",
+        "/privacy-matters",
+    ]) {
+        assert.ok(new RegExp(route.src).test(path), `${path} must negotiate before CDN serving`);
+        const markdown = await handler.fetch(
+            new Request(`https://www.whitenoise.chat${path}`, {
+                headers: { Accept: "text/markdown" },
+            })
+        );
+        assert.equal(markdown.status, 200, `${path} must remain in the SSR manifest`);
+        assert.equal(markdown.headers.get("Content-Type"), "text/markdown; charset=utf-8");
+        assert.match(markdown.headers.get("Vary"), /Accept/i);
+        assert.equal(markdown.headers.get("X-Content-Type-Options"), "nosniff");
+        const body = await markdown.text();
+        assert.ok(body.startsWith("# "), `${path} must retain the page heading`);
+        assert.ok(!body.includes("<script"), "Markdown must exclude executable markup");
+    }
+    assert.ok(
+        !new RegExp(route.src).test("/_app/example.js"),
+        "Asset requests must stay on the CDN"
+    );
+    assert.ok(
+        !new RegExp(route.src).test("/agents/__data.json"),
+        "Client navigation data must not be rewritten"
+    );
+    const preferredHtml = await handler.fetch(
+        new Request("https://www.whitenoise.chat/download", {
+            headers: { Accept: "text/html, text/markdown;q=0.2" },
+        })
+    );
+    assert.match(preferredHtml.headers.get("Content-Type"), /text\/html/);
+    const excludedMarkdown = await handler.fetch(
+        new Request("https://www.whitenoise.chat/download", {
+            headers: { Accept: "text/markdown;q=0" },
+        })
+    );
+    assert.match(excludedMarkdown.headers.get("Content-Type"), /text\/html/);
+    const head = await handler.fetch(
+        new Request("https://www.whitenoise.chat/download", {
+            method: "HEAD",
+            headers: { Accept: "text/markdown" },
+        })
+    );
+    assert.equal(head.headers.get("Content-Type"), "text/markdown; charset=utf-8");
+    assert.equal(await head.text(), "");
+
+    const index = JSON.parse(
+        await readFile(
+            new URL(
+                "../.vercel/output/static/.well-known/agent-skills/index.json",
+                import.meta.url
+            ),
+            "utf8"
+        )
+    );
+    const skill = await readFile(
+        new URL(
+            "../.vercel/output/static/.well-known/agent-skills/connect-white-noise/SKILL.md",
+            import.meta.url
+        )
+    );
+    assert.equal(
+        index.skills[0].digest,
+        `sha256:${createHash("sha256").update(skill).digest("hex")}`
+    );
+    const catalog = JSON.parse(
+        await readFile(
+            new URL("../.vercel/output/static/.well-known/ai-catalog.json", import.meta.url),
+            "utf8"
+        )
+    );
+    assert.equal(catalog.entries[0].url, index.skills[0].url);
+    assert.equal(catalog.entries[0].type, "text/markdown");
+    assert.ok(skill.toString().includes("Ask for my approval before making changes"));
+    assert.throws(
+        () => withMarkdownRouting({ routes: [{ handle: "filesystem" }] }),
+        /Vercel adapter/
+    );
+    console.log(
+        "Vercel HTML, Markdown negotiation, static privacy and discovery smoke tests passed"
+    );
 } finally {
     await rm(isolatedBundle, { recursive: true, force: true });
 }

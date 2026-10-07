@@ -2,6 +2,8 @@
 
 Marketing and documentation site for White Noise, built with SvelteKit.
 
+Agent-readable responses, discovery formats, deployment checks and the applicability of service-specific recommendations are documented in [Agent access](docs/agent-access.md).
+
 ## Development
 
 Use Node 22 and Bun 1.4.2, matching CI and the Vercel runtime.

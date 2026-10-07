@@ -19,6 +19,14 @@ White Noise is an open-source messenger for private messages, groups, and connec
 - [Privacy Policy](https://www.whitenoise.chat/privacy): Website and app privacy disclosures
 - [Canary](https://www.whitenoise.chat/canary): Signed transparency statements
 
+## Agent access
+
+Request a public page with `Accept: text/markdown` for its readable Markdown representation. HTML remains the default. The site publishes documentation and setup instructions, not a hosted messaging API or agent service.
+
+- [Agent skill discovery](https://www.whitenoise.chat/.well-known/agent-skills/index.json): Setup skill metadata and SHA-256 digest
+- [Connect White Noise skill](https://www.whitenoise.chat/.well-known/agent-skills/connect-white-noise/SKILL.md): The current Agents guide in skill format
+- [AI catalog](https://www.whitenoise.chat/.well-known/ai-catalog.json): Discovery of published agent resources
+
 ## References
 
 - [FAQ and guides as text](https://www.whitenoise.chat/llms-full.txt)
