@@ -80,7 +80,8 @@ export function pageMarkdown(html: string, url: URL): string | null {
             if (!alt || !src) return "";
             const destination = contentUrl(src, url);
             if (!destination) return "";
-            return `![${alt.replace(/[[\]]/g, "\\$&")}](<${destination}>)`;
+            const label = alt.replace(/\\/g, "\\\\").replace(/[[\]]/g, "\\$&").replace(/\s+/g, " ");
+            return `![${label}](<${destination}>)`;
         },
     });
     return `${converter.turndown(main)}\n\nSource: ${url.href}\n`;

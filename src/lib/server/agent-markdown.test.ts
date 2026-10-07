@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { pageMarkdown, prefersMarkdown, varyOnAccept } from "./agent-markdown";
+import { renderBlogHtml } from "./blog-markdown";
 
 describe("Markdown negotiation", () => {
     it.each([
@@ -34,6 +35,26 @@ describe("Markdown negotiation", () => {
 });
 
 describe("page conversion", () => {
+    it("escapes image descriptions without breaking Markdown syntax", () => {
+        const markdown = pageMarkdown(
+            '<main><img src="/cover.png" alt="A [cover]&#10;ending&#92;"></main>',
+            new URL("https://www.whitenoise.chat/blog/article")
+        );
+        expect(markdown).toContain(
+            String.raw`![A \[cover\] ending\\](<https://www.whitenoise.chat/cover.png>)`
+        );
+    });
+    it("retains content after sanitized nested main tags", () => {
+        const html = renderBlogHtml("<p>Before</p><main><p>Nested</p></main><p>After</p>");
+        expect(html).not.toMatch(/<\/?main/);
+        const markdown = pageMarkdown(
+            `<main>${html}</main>`,
+            new URL("https://www.whitenoise.chat/blog/article")
+        );
+        expect(markdown).toContain("Before");
+        expect(markdown).toContain("Nested");
+        expect(markdown).toContain("After");
+    });
     it("keeps opaque URLs inside their Markdown destination", () => {
         const markdown = pageMarkdown(
             '<main><h1>Article</h1><a href="mailto:x&gt;[y](javascript:alert(1))">Contact</a></main>',
