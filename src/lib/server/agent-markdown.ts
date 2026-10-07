@@ -41,17 +41,20 @@ function contentUrl(value: string, base: URL): string | null {
         ) {
             return null;
         }
-        return url.href.replace(/\(/g, "%28").replace(/\)/g, "%29");
+        return url.href.replace(
+            /[<>\s\\()]/g,
+            (character) => `%${character.charCodeAt(0).toString(16).toUpperCase()}`
+        );
     } catch {
         // Signed remote content can still contain an invalid URL.
         return null;
     }
 }
 
-export function pageMarkdown(html: string, url: URL): string {
+export function pageMarkdown(html: string, url: URL): string | null {
     // The root layout owns one main element; sanitized remote content cannot add one.
     const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
-    if (main === undefined) throw new Error("Page is missing its main content");
+    if (main === undefined) return null;
     const converter = new TurndownService({
         headingStyle: "atx",
         codeBlockStyle: "fenced",

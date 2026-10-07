@@ -34,6 +34,14 @@ describe("Markdown negotiation", () => {
 });
 
 describe("page conversion", () => {
+    it("keeps opaque URLs inside their Markdown destination", () => {
+        const markdown = pageMarkdown(
+            '<main><h1>Article</h1><a href="mailto:x&gt;[y](javascript:alert(1))">Contact</a></main>',
+            new URL("https://www.whitenoise.chat/blog/article")
+        );
+        expect(markdown).toContain("mailto:x%3E[y]%28javascript:alert%281%29%29");
+        expect(markdown).not.toContain("](javascript:");
+    });
     it("tolerates malformed remote URLs and removes unsafe Markdown destinations", () => {
         const markdown = pageMarkdown(
             '<main><h1>Article</h1><a href="https://[invalid">Broken link</a><a href="javascript:alert(1)">Unsafe link</a><img src="https://[invalid" alt="Broken image"></main>',

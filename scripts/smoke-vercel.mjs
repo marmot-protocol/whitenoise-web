@@ -9,12 +9,14 @@ import { withMarkdownRouting } from "./markdown-routing.mjs";
 // Keep the function outside the checkout so missing dependencies cannot resolve
 // from the project's node_modules. Run with require(ESM) disabled, as on Vercel.
 const isolatedBundle = await mkdtemp(join(tmpdir(), "whitenoise-vercel-smoke-"));
+const originalCwd = process.cwd();
 try {
     await cp(
         fileURLToPath(new URL("../.vercel/output/functions/![-]/catchall.func", import.meta.url)),
         isolatedBundle,
         { recursive: true }
     );
+    process.chdir(isolatedBundle);
     const { default: handler } = await import(
         pathToFileURL(join(isolatedBundle, ".svelte-kit/vercel-tmp/index.js")).href
     );
@@ -62,6 +64,7 @@ try {
         "/faq",
         "/contribute",
         "/privacy-matters",
+        "/docs/marmot/README.md",
     ]) {
         assert.ok(new RegExp(route.src).test(path), `${path} must negotiate before CDN serving`);
         const markdown = await handler.fetch(
@@ -69,7 +72,11 @@ try {
                 headers: { Accept: "text/markdown" },
             })
         );
-        assert.equal(markdown.status, 200, `${path} must remain in the SSR manifest`);
+        assert.equal(
+            markdown.status,
+            200,
+            `${path} must support Markdown from the deployed bundle`
+        );
         assert.equal(markdown.headers.get("Content-Type"), "text/markdown; charset=utf-8");
         assert.match(markdown.headers.get("Vary"), /Accept/i);
         assert.equal(markdown.headers.get("X-Content-Type-Options"), "nosniff");
@@ -85,6 +92,29 @@ try {
         !new RegExp(route.src).test("/agents/__data.json"),
         "Client navigation data must not be rewritten"
     );
+    const protocolOverride = Object.entries(outputConfig.overrides).find(
+        ([, override]) => override.path === "docs/marmot/README.md"
+    );
+    assert.equal(
+        protocolOverride?.[1].contentType,
+        "text/html; charset=utf-8",
+        "The static legacy .md URL must retain its HTML type"
+    );
+    const snapshots = JSON.parse(await readFile(join(isolatedBundle, "agent-pages.json"), "utf8"));
+    for (const [path, snapshot] of Object.entries(snapshots)) {
+        const entry = Object.entries(outputConfig.overrides).find(
+            ([file, override]) => file.endsWith(".html") && `/${override.path}` === path
+        );
+        assert.ok(entry);
+        assert.equal(
+            snapshot,
+            await readFile(
+                new URL(`../.vercel/output/static/${entry[0]}`, import.meta.url),
+                "utf8"
+            ),
+            "Markdown input must match the exact static HTML output"
+        );
+    }
     const preferredHtml = await handler.fetch(
         new Request("https://www.whitenoise.chat/download", {
             headers: { Accept: "text/html, text/markdown;q=0.2" },
@@ -142,5 +172,6 @@ try {
         "Vercel HTML, Markdown negotiation, static privacy and discovery smoke tests passed"
     );
 } finally {
+    process.chdir(originalCwd);
     await rm(isolatedBundle, { recursive: true, force: true });
 }

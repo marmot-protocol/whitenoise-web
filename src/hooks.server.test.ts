@@ -18,6 +18,16 @@ async function responseFor(accept: string, response: Response, method = "GET") {
 }
 
 describe("Markdown response handling", () => {
+    it("keeps HTML when a page has no main content element", async () => {
+        const html = "<h1>Standalone page</h1>";
+        const { result } = await responseFor(
+            "text/markdown",
+            new Response(html, { headers: { "Content-Type": "text/html" } })
+        );
+        expect(result.headers.get("Content-Type")).toBe("text/html");
+        expect(result.headers.get("Vary")).toBe("Accept");
+        expect(await result.text()).toBe(html);
+    });
     it("converts successful HTML and retains security/cache headers", async () => {
         const { result, event } = await responseFor(
             "text/markdown",

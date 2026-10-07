@@ -27,21 +27,25 @@ export const handle: Handle = async ({ event, resolve }) => {
         varyOnAccept(response.headers);
         if (markdown && response.status === 200) {
             const content = pageMarkdown(
-                await response.text(),
+                await response.clone().text(),
                 new URL(event.url.pathname, "https://www.whitenoise.chat")
             );
-            const headers = new Headers(response.headers);
-            for (const name of [
-                "Content-Length",
-                "Content-Encoding",
-                "Content-Range",
-                "ETag",
-                "Last-Modified",
-            ]) {
-                headers.delete(name);
+            if (content !== null) {
+                const headers = new Headers(response.headers);
+                for (const name of [
+                    "Content-Length",
+                    "Content-Encoding",
+                    "Content-Range",
+                    "ETag",
+                    "Last-Modified",
+                ]) {
+                    headers.delete(name);
+                }
+                headers.set("Content-Type", "text/markdown; charset=utf-8");
+                response = new Response(event.request.method === "HEAD" ? null : content, {
+                    headers,
+                });
             }
-            headers.set("Content-Type", "text/markdown; charset=utf-8");
-            response = new Response(event.request.method === "HEAD" ? null : content, { headers });
         }
     }
     response.headers.set("Content-Signal", "ai-train=no, search=yes, ai-input=yes");
