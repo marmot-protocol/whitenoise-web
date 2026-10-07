@@ -13,8 +13,7 @@ export function withMarkdownRouting(config) {
     );
     const catchall = routes.find((route) => route.src === "/.*" && route.dest);
     assert.ok(catchall, "Vercel adapter must supply its existing server function");
-    const src =
-        "^(?:" + publicStaticPages.map((path) => path.replaceAll(".", "\\.")).join("|") + ")$";
+    const src = `^(?:${publicStaticPages.map((path) => path.replaceAll(".", "\\.")).join("|")})$`;
     // Before the adapter's static path aliases, which otherwise bypass the hook.
     routes.splice(
         1,

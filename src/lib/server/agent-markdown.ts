@@ -41,9 +41,8 @@ function contentUrl(value: string, base: URL): string | null {
         ) {
             return null;
         }
-        return url.href.replace(
-            /[<>\s\\()]/g,
-            (character) => `%${character.charCodeAt(0).toString(16).toUpperCase()}`
+        return url.href.replace(/[<>\s\\()]/g, (character) =>
+            character === "(" ? "%28" : character === ")" ? "%29" : encodeURIComponent(character)
         );
     } catch {
         // Signed remote content can still contain an invalid URL.
