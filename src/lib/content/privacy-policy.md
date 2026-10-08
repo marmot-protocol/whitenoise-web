@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: September 23, 2026**
+**Last Updated: October 8, 2026**
 
 ---
 
@@ -71,6 +71,8 @@ Media files fall into two categories with respect to privacy. Profile pictures a
 **Blocking and group moderation.** White Noise uses Nostr mute lists to hide messages and invitations from users you block. Blocking does not prevent those users from publishing events to relays or contacting you through another identity or application. In-group message reports, including their reasons and identifiers, remain entirely within the encrypted group and are visible to all group members. Only group administrators can act on those reports through group moderation controls. IPF cannot read these reports or the reported message contents. Administrator deletion hides a message in cooperating clients; it does not remove the encrypted event from relays or guarantee erasure of copies retained by recipients.
 
 **Android dictation and read-aloud.** Dictation is optional. Your selected Android speech-recognition service receives microphone audio and may send it to its provider for transcription, under that provider’s policy. White Noise shows a disclosure before external recognition is enabled and inserts the returned text into your draft; automatic sending is a separate explicit option. Android read-aloud uses installed offline voices and does not select voices marked as requiring a network connection. These optional features are separate from usage analytics and diagnostic-log sharing.
+
+**AI agents you connect (optional).** White Noise does not include, operate, or provide any artificial intelligence (AI) models, AI agents, or AI features, and IPF does not send your messages or other content to any AI service. White Noise may offer setup instructions or a prompt you can copy to connect an agent or agent harness that you already use, such as one running on your own computer. A connected agent takes part in a conversation like any other member: messages in conversations that include the agent are decrypted by the connector you install and passed to that agent or harness, which may in turn send them to the AI provider it uses. Those agents, harnesses, and AI providers are not operated by IPF and handle your information under their own terms and privacy policies. IPF does not receive, review, or store anything you exchange with them. If another member adds an agent to a group you belong to, messages in that group are shared with that agent in the same way.
 
 **Giphy (GIF search, where available).** If you use the GIF picker, the app queries Giphy, a third-party service IPF does not operate. Your search terms and IP address are visible to Giphy and are handled under Giphy's own privacy policy. A GIF you send is delivered inside your encrypted conversation like any other media.
 
@@ -187,7 +189,7 @@ Because the Service operates on Nostr, it is important to understand how differe
 
 **IPF-controlled data:** Information processed or stored on IPF-controlled infrastructure, such as logs, notification tokens, and relay data, is subject to this Policy.
 
-**Third-party data:** The Service may display or link to externally hosted content stored on third-party servers, relays, or storage providers. IPF does not own or control those systems and is not responsible for their data handling practices. For example, GIF search results are provided by Giphy, which receives your search terms and IP address when you use that feature.
+**Third-party data:** The Service may display or link to externally hosted content stored on third-party servers, relays, or storage providers. IPF does not own or control those systems and is not responsible for their data handling practices. For example, GIF search results are provided by Giphy, which receives your search terms and IP address when you use that feature. Similarly, if you connect an AI agent or agent harness, messages it receives are handled by that agent and any AI provider it uses, not by IPF, as described in Section 4.
 
 ---
 

@@ -1,8 +1,8 @@
 # Terms of Service
 
-**Last Updated: September 16, 2026**
+**Last Updated: October 8, 2026**
 
-**Effective Date: September 16, 2026**
+**Effective Date: October 8, 2026**
 
 ---
 
@@ -101,7 +101,7 @@ IPF is not responsible for outages, content loss, message delay, duplicate stora
 
 ## 7. Acceptable Use
 
-White Noise does not tolerate objectionable content or abusive behavior. You must not use the Service to harass, bully, threaten, exploit, or sexually abuse others, distribute child sexual abuse material, incite violence, or distribute other unlawful or abusive content.
+White Noise has zero tolerance for objectionable content or abusive behavior. You must not use the Service to harass, bully, threaten, exploit, or sexually abuse others, distribute child sexual abuse material, incite violence, or distribute other unlawful or abusive content.
 
 You agree to use the Service lawfully and in a way that does not interfere with IPF-controlled infrastructure or other users.
 

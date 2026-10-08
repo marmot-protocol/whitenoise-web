@@ -6,7 +6,7 @@ describe("legal page navigation", () => {
         const data = await load({} as Parameters<typeof load>[0]);
         if (!data) throw new Error("Missing legal page data");
         expect(data.introductionHtml).toContain("<h1>");
-        expect(data.introductionHtml).toContain("September 16, 2026");
+        expect(data.introductionHtml).toContain("October 8, 2026");
         expect(data.sections.length).toBe(20);
         expect(new Set(data.sections.map((section: { id: string }) => section.id)).size).toBe(20);
         for (const section of data.sections) {
