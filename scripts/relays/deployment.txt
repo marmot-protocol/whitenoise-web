@@ -1,0 +1,53 @@
+WHITE NOISE {{REGION}} RELAY — STATIC PAGE HANDOFF
+
+Destination: https://relay.{{region}}.whitenoise.chat/
+Client endpoint (unchanged): wss://relay.{{region}}.whitenoise.chat
+
+WHAT TO UPLOAD
+Upload the contents of public/ to this relay's existing web document root.
+DEPLOY.txt stays outside the web root. No Node, Bun, Svelte or build step is
+needed on the relay server. Serve index.html for an ordinary browser GET /.
+The HTML is complete without JavaScript; JavaScript adds appearance
+switching and address copying. Fonts, scripts, images and CSS are same-origin.
+
+BEFORE DEPLOYING
+Confirm the document root and existing Caddy configuration. Back up both.
+Check that /assets/, /images/, /theme.js and the favicon paths do not conflict
+with existing relay routes. Verify the displayed event kinds, limits, NIP-77
+support, strfry version and source commit against the actual server deployment.
+These values preserve the public relay pages inspected on October 9, 2026;
+they are static information, not live monitoring.
+
+ROUTING MUST STAY IN PLACE
+Keep WebSocket Upgrade requests routed to the existing relay service.
+Keep requests accepting application/nostr+json routed to the existing relay
+information handler. Preserve Vary: Accept and any existing CORS behavior.
+Only ordinary browser requests and these static assets use the web document
+root. Do not replace the relay service, DNS, certificates or reverse proxy
+configuration wholesale. Do not add an SPA fallback that masks relay routes.
+
+CONTENT SECURITY POLICY
+The inspected page policy already allowed same-origin scripts, styles and
+images. Add font-src 'self' so the bundled Manrope fonts can load. Example
+for HTML/static page responses, merged with the existing server configuration:
+
+default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+
+No external assets or analytics are required. No unsafe-inline exception is
+needed. Keep current TLS and security headers. Serve correct MIME types for
+HTML, JavaScript, CSS, SVG and WOFF2. Keep HTML and theme.js revalidated;
+hashed files under assets/ may be cached. Publish assets before index.html,
+or switch document roots atomically. Retain old hashed assets until old HTML
+can no longer reference them.
+
+AFTER DEPLOYING
+1. Open https://relay.{{region}}.whitenoise.chat/ and check that fonts, logo,
+   page content, header appearance toggle and Copy address button load correctly.
+2. Copy the address and confirm it is wss://relay.{{region}}.whitenoise.chat.
+3. Confirm the footer's Visit White Noise button goes to www.whitenoise.chat and the other
+   relay link goes to the other region.
+4. Request / with Accept: application/nostr+json; compare its JSON to the
+   pre-deployment response. It must not return the HTML page.
+5. Verify a client can still connect over WebSocket and perform a read-only
+   relay request. Replacing this page must not change relay behavior.
+6. If checks fail, restore the previous web root and any changed Caddy policy.

@@ -5,6 +5,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite dev --host 0.0.0.0",
+        "relays:dev": "vite --config scripts/relays/vite.config.ts",
+        "relays:build": "bun scripts/relays/build.mjs",
         "build": "vite build",
         "preview": "vite preview --host 0.0.0.0",
         "prepare": "svelte-kit sync",

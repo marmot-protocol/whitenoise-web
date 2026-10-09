@@ -1,0 +1,3 @@
+@import "../app.css";
+/* Include utilities used by shared components outside this standalone Vite root. */
+@source "../lib/components";

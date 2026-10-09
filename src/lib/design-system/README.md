@@ -22,7 +22,7 @@ Use `src/lib/components/system` for new work:
 | TextLink | Shared underlined inline navigation; external destination handling is explicit. |
 | Action | Native link or button; primary and secondary variants; primary colors invert automatically on an ink Surface, optional registry icon, real disabled button. |
 | Icon | One registry, consistent visible geometry, decorative by default. |
-| CopyButton | Accessible 44px target, copy → check immediately, reset after three seconds; screen-reader status without visible extra copy. |
+| CopyButton | Accessible 44px target by default; an optional `buttonLabel` uses the shared primary Action for a prominent text button. Copy → check immediately, reset after three seconds; screen-reader status without visible extra copy. |
 | Disclosure | Native details/summary with keyboard behavior and the shared disclosure icon. |
 | Container | Shared left-aligned content measure and responsive gutters. |
 | Grid | Equal two/three-column grids; stacks at the mobile breakpoint. |
