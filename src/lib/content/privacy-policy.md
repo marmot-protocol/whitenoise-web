@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: October 8, 2026**
+**Last Updated: October 13, 2026**
 
 ---
 
@@ -68,11 +68,15 @@ Media files fall into two categories with respect to privacy. Profile pictures a
 
 **Group diagnostic logs (opt-in only).** Group diagnostic logging is off by default and is a separate choice from usage and telemetry. On iOS, **Share group diagnostic logs** records and automatically uploads logs for every profile on the device, including eligible logs already stored locally. On Android, **Share technical logs** records diagnostic files locally and automatically uploads eligible files, with an additional confirmation before enabling sharing. Both send logs to IPF’s Goggles service; automatic sharing does not require approval for each file. Other clients may offer local recording and a separate manual export; follow the controls and disclosure shown in your client. Group diagnostic logs are more sensitive than usage and telemetry: they record group and message identifiers and the relay addresses involved, though never message content or key material. Section 7 describes this in detail.
 
-**Blocking and group moderation.** White Noise uses Nostr mute lists to hide messages and invitations from users you block. Blocking does not prevent those users from publishing events to relays or contacting you through another identity or application. In-group message reports, including their reasons and identifiers, remain entirely within the encrypted group and are visible to all group members. Only group administrators can act on those reports through group moderation controls. IPF cannot read these reports or the reported message contents. Administrator deletion hides a message in cooperating clients; it does not remove the encrypted event from relays or guarantee erasure of copies retained by recipients.
+**Blocking.** White Noise hides messages and invitations from users you block, and the blocked user is not notified. Your blocks are stored as encrypted entries in your Nostr mute list and published to your relays, so relays and other users can see that you have a mute list but not who is on it. Entries added publicly by other Nostr apps stay public. Blocking does not prevent those users from publishing events to relays or contacting you through another identity or application. Blocking on its own sends nothing to IPF.
+
+**Group moderation.** In-group message reports, including their reasons and identifiers, remain within the encrypted group and are visible to all group members. Only group administrators can act on those reports through group moderation controls. IPF cannot read in-group reports or the reported message contents. Administrator deletion hides a message in cooperating clients; it does not remove the encrypted event from relays or guarantee erasure of copies retained by recipients.
+
+**Reports to White Noise.** When you choose Report in a direct chat, keep "Send to White Noise" on when reporting in a group, or choose Block and Report, White Noise sends IPF a moderation report. It is end-to-end encrypted to IPF and published to IPF-operated relays over a connection that does not sign in as your account. Section 5 lists what a report contains. IPF uses reports only to review abuse and enforce the Terms of Service.
 
 **Android dictation and read-aloud.** Dictation is optional. Your selected Android speech-recognition service receives microphone audio and may send it to its provider for transcription, under that provider’s policy. White Noise shows a disclosure before external recognition is enabled and inserts the returned text into your draft; automatic sending is a separate explicit option. Android read-aloud uses installed offline voices and does not select voices marked as requiring a network connection. These optional features are separate from usage analytics and diagnostic-log sharing.
 
-**AI agents you connect (optional).** White Noise does not include, operate, or provide any artificial intelligence (AI) models, AI agents, or AI features, and IPF does not send your messages or other content to any AI service. White Noise may offer setup instructions or a prompt you can copy to connect an agent or agent harness that you already use, such as one running on your own computer. A connected agent takes part in a conversation like any other member: messages in conversations that include the agent are decrypted by the connector you install and passed to that agent or harness, which may in turn send them to the AI provider it uses. Those agents, harnesses, and AI providers are not operated by IPF and handle your information under their own terms and privacy policies. IPF does not receive, review, or store anything you exchange with them. If another member adds an agent to a group you belong to, messages in that group are shared with that agent in the same way.
+**AI agents you connect (optional).** White Noise does not include, operate, or provide any artificial intelligence (AI) models, AI agents, or AI features, and IPF does not send your messages or other content to any AI service. White Noise may offer setup instructions or a prompt you can copy to connect an agent or agent harness that you already use, such as one running on your own computer. The only personal information in the copied prompt is your public key (npub), and White Noise sends nothing to the agent or to any AI provider itself. A connected agent takes part in a conversation like any other member: messages in conversations that include the agent are decrypted by the connector you install and passed to that agent or harness, which may in turn send them to the AI provider it uses. Those agents, harnesses, and AI providers are not operated by IPF and handle your information under their own terms and privacy policies. IPF does not receive, review, or store anything you exchange with them. If another member adds an agent to a group you belong to, messages in that group are shared with that agent in the same way.
 
 **Giphy (GIF search, where available).** If you use the GIF picker, the app queries Giphy, a third-party service IPF does not operate. Your search terms and IP address are visible to Giphy and are handled under Giphy's own privacy policy. A GIF you send is delivered inside your encrypted conversation like any other media.
 
@@ -88,7 +92,9 @@ IPF cannot read your messages. If you share group diagnostic logs, IPF can see t
 
 IPF may collect and process limited categories of information in connection with the Service.
 
-**Information you provide directly:** Public events you publish to IPF-operated relays, including Nostr profile metadata (such as display name, profile picture, and bio), and communications or support reports you send directly to IPF. In-group message reports are different: their reasons and identifiers remain inside the encrypted group and are not submitted to IPF for review.
+**Information you provide directly:** Public events you publish to IPF-operated relays, including Nostr profile metadata (such as display name, profile picture, and bio), and communications or support reports you send directly to IPF. Moderation reports you send to IPF are described below. In-group message reports are different: their reasons and identifiers remain inside the encrypted group and are not submitted to IPF.
+
+**Moderation reports:** If you report a user to IPF, IPF receives the reported user's public key, the reason you chose, any explanation you add (up to 1,000 characters), whether you also blocked that user, your public key as the reporter, and the time the report arrived. The relay that receives it can see your IP address, as with any relay connection. A report never includes message content, message or conversation identifiers, or information about other group members. A report that cannot be sent right away stays on your device and is retried for up to seven days.
 
 **Information collected automatically:** IPF collects only the minimum information necessary for the Service to function. When you connect to IPF-controlled infrastructure (such as relays or APIs), we collect IP address and connection logs required to operate those systems. Apart from the website analytics described immediately below, this information is not used for tracking or analytics beyond what is necessary to maintain service reliability and security.
 
@@ -201,6 +207,7 @@ IPF processes information as reasonably necessary to operate, secure, maintain, 
 - Delivering push notifications to your device
 - Maintaining the reliability, performance, and security of IPF-controlled infrastructure
 - Detecting and preventing abuse, fraud, or illegal activity
+- Reviewing moderation reports and enforcing our Terms of Service, including removing content from and restricting access to IPF-controlled infrastructure
 - Responding to support inquiries
 - Understanding which features are used and where the app fails or performs poorly, where you have turned on usage and telemetry
 - Investigating delivery or group-state problems from group diagnostic logs you explicitly agree to share
@@ -219,6 +226,7 @@ Where applicable under data protection law, IPF processes personal data on the f
 
 - **To operate and provide the Service,** including transmitting Nostr events and delivering notifications: legitimate interests
 - **To maintain security and prevent abuse:** legitimate interests and legal obligations
+- **To review moderation reports and enforce our Terms of Service:** legitimate interests (keeping users safe and IPF-controlled infrastructure free of abuse) and, where applicable, legal obligations
 - **To process an optional donation you request and provide a receipt:** performance of the donation transaction
 - **To comply with applicable law,** including responding to lawful requests: legal obligations
 - **Where required, based on user consent** (e.g., turning on usage and telemetry, enabling automatic technical-log sharing, or manually sending a group diagnostic log to IPF): consent
@@ -230,6 +238,8 @@ Where IPF relies on legitimate interests, it does so after considering the poten
 ## 11. Disclosure of Information
 
 IPF may disclose information to service providers that process data on our behalf and under our instructions to support the operation of IPF-controlled infrastructure, to comply with legal obligations or lawful requests, or to protect the rights, safety, and integrity of the Service and its users.
+
+IPF may share a moderation report, and the public keys in it, with law enforcement or the National Center for Missing & Exploited Children (NCMEC) where the law requires it. IPF does not otherwise share moderation reports or tell reported users who reported them.
 
 For Apple Pay donations in the iOS app, Stripe processes payments for IPF. Stripe receives payment and transaction information as described in Section 5. Stripe may also use this information for its own security, fraud-prevention, compliance, and dispute-handling purposes, as described in [Stripe's Privacy Policy](https://stripe.com/privacy).
 
@@ -255,6 +265,8 @@ Notification tokens are retained only as long as needed for delivery. Disabling 
 
 Usage analytics records are scheduled for automatic deletion 180 days after collection. Telemetry is retained for 90 days. Uploaded group diagnostic logs are deleted from our servers after 30 days. Clearing local logs or removing a profile from your device does not delete these server-side records; you can request deletion as described in [Section 14](#section-14).
 
+Moderation reports are deleted 60 days after IPF receives them, unless the law requires IPF to keep a report longer. If IPF restricts a user after a report, IPF keeps that user's public key and a record of the action for as long as the restriction stays in place, without the reporter's public key or explanation.
+
 Donation records, including donor contact information, are kept for as long as needed to provide receipts, handle refunds and disputes, maintain financial records, and meet applicable accounting and legal obligations. Deleting the app or a local profile does not delete donation records. You can request deletion as described in [Section 14](#section-14), although we may need to retain records required by law or needed to resolve a payment dispute. Stripe's retention and deletion practices are described in its [Privacy Policy](https://stripe.com/privacy).
 
 IPF has no obligation to retain user content and may remove or cease storing content at its discretion, subject to applicable law.
@@ -271,7 +283,7 @@ To remove an identity from the Android app, open its account settings and choose
 
 To remove an identity from the iOS app, open **Settings → Sign Out**, leave **Wipe Data From This Device** enabled, enter the displayed profile name exactly, and confirm **Sign Out**. This permanently removes that profile and its local data from the device; previous chats will not return when you sign back in. Save any backup you intend to keep first. Signing out with the wipe option disabled keeps the profile and its local data on the device. Local removal does not request deletion of data already uploaded to IPF; use the email process above for that.
 
-A Nostr identity is a cryptographic keypair that can also be used in other apps. Removing it from White Noise does not destroy copies of the key on other devices or erase events and encrypted media held by independent relays, servers, or recipients. IPF cannot guarantee deletion from those independent systems. We can process requests for identifiable records on infrastructure we control, including support correspondence and submitted group diagnostic logs. Usage analytics expires after 180 days; because its records are not linked to your Nostr identity, we generally cannot identify individual records for deletion. Turning usage sharing off stops future collection. Other retention limits are described in Sections 6, 7, and 13.
+A Nostr identity is a cryptographic keypair that can also be used in other apps. Removing it from White Noise does not destroy copies of the key on other devices or erase events and encrypted media held by independent relays, servers, or recipients. IPF cannot guarantee deletion from those independent systems. We can process requests for identifiable records on infrastructure we control, including support correspondence, submitted group diagnostic logs, and moderation reports. You can ask IPF to delete a moderation report you sent. IPF may keep it until its 60-day retention period ends if it is still needed to review the report or enforce our Terms of Service. Usage analytics expires after 180 days; because its records are not linked to your Nostr identity, we generally cannot identify individual records for deletion. Turning usage sharing off stops future collection. Other retention limits are described in Sections 6, 7, and 13.
 
 Depending on your jurisdiction, you may have the right to:
 

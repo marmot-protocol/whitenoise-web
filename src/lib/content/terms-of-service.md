@@ -1,8 +1,8 @@
 # Terms of Service
 
-**Last Updated: October 8, 2026**
+**Last Updated: October 13, 2026**
 
-**Effective Date: October 8, 2026**
+**Effective Date: October 13, 2026**
 
 ---
 
@@ -52,6 +52,8 @@ You must be at least 13 years old to use White Noise. If you are aged 13 through
 
 If you use the Service on behalf of an organization, you represent that you are authorized to bind that organization to these Terms.
 
+White Noise asks you to confirm that you agree to these Terms, including the Acceptable Use rules in Section 7, before you sign in or create a profile.
+
 ---
 
 ## 4. Scope of the Service
@@ -93,6 +95,8 @@ White Noise may interact with both optional IPF-operated services and third-part
 
 **Other third-party features.** Features such as GIF search, web image search, and speech recognition may contact third-party providers when used. Availability varies by client. The Privacy Policy describes these interactions; the providers have their own terms and privacy practices.
 
+**AI agents you connect.** White Noise does not include or operate any AI model, AI agent, or AI feature. The AI Agents screen shows setup instructions you can copy into an agent you already run, such as one on your own computer. The only personal information in the copied text is your public key (npub), and White Noise sends nothing to the agent itself. A connected agent joins conversations as a separate member, and messages in those conversations are passed to it and may be sent to the AI provider it uses, under that provider's terms. IPF does not operate these agents or providers and is not responsible for them. You are responsible for agents you connect, and their messages are your user content under Section 7.
+
 **Third-party relays and Blossom servers.** White Noise is built to work with independently operated relays and media hosts. Those operators may set their own rules, retention periods, technical limits, and terms of use. IPF is not responsible for their availability, security practices, moderation decisions, or data retention.
 
 IPF is not responsible for outages, content loss, message delay, duplicate storage, or deletion caused by third-party infrastructure.
@@ -101,7 +105,7 @@ IPF is not responsible for outages, content loss, message delay, duplicate stora
 
 ## 7. Acceptable Use
 
-White Noise has zero tolerance for objectionable content or abusive behavior. You must not use the Service to harass, bully, threaten, exploit, or sexually abuse others, distribute child sexual abuse material, incite violence, or distribute other unlawful or abusive content.
+White Noise has zero tolerance for objectionable content or abusive behavior. You must not use the Service to harass, bully, threaten, exploit, or sexually abuse others, distribute child sexual abuse material, incite violence, or distribute other unlawful or abusive content. These rules apply equally to automated accounts and AI agents. IPF acts on reported violations as described in Section 8.
 
 You agree to use the Service lawfully and in a way that does not interfere with IPF-controlled infrastructure or other users.
 
@@ -121,13 +125,17 @@ Because White Noise is end-to-end encrypted and decentralized, IPF does not clai
 
 ## 8. Blocking, Reporting, and Group Moderation
 
-**Blocking.** White Noise uses Nostr mute lists to let you block other users. Blocking hides messages and invitations from those users in White Noise. It does not prevent them from publishing events to the Nostr network, using other applications, or contacting you through another identity. Blocking is a personal filtering control, not a network-wide ban.
+**Blocking.** You can block another user from a message, their profile, or a conversation. Blocking takes effect immediately: White Noise hides that user's messages and invitations from you, and the blocked user is not notified. In groups you share with them, their messages are hidden only for you. White Noise stores your blocks as encrypted entries in your Nostr mute list, so relays and other users can see that you have a mute list but not who is on it. Entries added publicly by other Nostr apps stay public. Blocking is a personal filtering control, not a network-wide ban: it does not stop the blocked user from publishing to the Nostr network, using other applications, or contacting you through another identity. Blocking on its own does not notify IPF. Choose Block and Report to also send IPF a report.
 
-**In-group reporting.** You can report a message within its encrypted group for a specified reason. Reports, including their reasons and message identifiers, remain entirely within that encrypted group and are visible to all group members. This reporting mechanism does not send message contents, report reasons, or report identifiers to IPF for review. IPF cannot read these reports or the group conversation.
+**In-group reporting.** You can report a message within its encrypted group for a specified reason. The in-group report, including its reason and message identifier, stays within that encrypted group and is visible to all group members. IPF cannot read in-group reports or the group conversation. When you report in a group, you can also send a separate report to IPF, as described below. This option is on by default and can be turned off for each report.
+
+**Reporting to White Noise.** You can report another user to IPF from a direct chat, from a group, or by choosing Block and Report. A report is sent only when you choose to send it. It is end-to-end encrypted to IPF and contains the reported user's public key, the reason you chose, any explanation you add, and whether you also blocked that user. IPF can see your public key as the reporter. A report does not include message content, message or conversation identifiers, or information about other group members. If your device cannot send a report right away, White Noise keeps it on your device and retries for up to seven days.
+
+**How IPF acts on reports.** IPF reviews reports within 24 hours of receiving them and uses each report as evidence in its investigation. If IPF concludes that a user has violated Section 7, IPF removes events published under that user's public key from IPF-operated relays and blocks that key from IPF-controlled infrastructure, without prior notice. IPF may also share a report with law enforcement or the National Center for Missing & Exploited Children (NCMEC) where the law requires it. Because messages are end-to-end encrypted, IPF cannot read reported messages, and it cannot remove content from relays it does not operate or from other users' devices. Group administrators can remove a user from their own groups.
 
 **Administrator moderation.** Only group administrators can act on reports through group moderation controls and decide what action to take concerning a reported message or a user's participation in the group. Administrator deletion hides a message in cooperating clients. It does not remove the encrypted event from relays, erase copies retained by recipients, or guarantee that other clients will honor the deletion. An in-group report does not identify the corresponding relay event to IPF for removal.
 
-**IPF's role.** IPF does not review or moderate the contents of encrypted group conversations. IPF may enforce these Terms on infrastructure it operates, including restricting relay access or removing stored events where technically possible. Infrastructure enforcement is separate from in-group reporting and does not give IPF access to decrypted messages or control over other relays or recipients' devices.
+**IPF's role.** IPF does not review or moderate the contents of encrypted conversations, and reports do not give IPF access to decrypted messages. IPF enforces these Terms on infrastructure it operates, as described above. This does not give IPF control over other relays or recipients' devices.
 
 ---
 
@@ -230,7 +238,7 @@ IPF may suspend or restrict access to IPF-controlled infrastructure if reasonabl
 - comply with law or a lawful request; or
 - prevent material harm to IPF, users, or third parties.
 
-Where reasonable, IPF will provide notice and an opportunity to address the issue before suspension or restriction. IPF may act without prior notice if immediate action is reasonably necessary.
+Where reasonable, IPF will provide notice and an opportunity to address the issue before suspension or restriction. IPF may act without prior notice if immediate action is reasonably necessary, and always acts without prior notice when it concludes, after reviewing a report, that a user has violated Section 7.
 
 IPF may also discontinue some or all IPF-controlled services at any time. If that happens, IPF will try to provide reasonable notice where practical.
 
