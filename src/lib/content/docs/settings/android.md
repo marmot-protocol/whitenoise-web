@@ -143,6 +143,21 @@ Translation is handled by **Offline Translator**, a separate app that runs trans
 
 > **Privacy:** Offline Translator can write message text and translations to Android system logs. White Noise can't guarantee the security of text handled by another app.
 
+### Set up Offline Translator
+
+1. Install [Offline Translator](https://f-droid.org/packages/dev.davidv.translator/).
+2. Open Offline Translator and install the language packs you need. Install a pack for each language you want to translate from and into.
+3. Return to White Noise and translate a message.
+
+The current reviewed White Noise Android build only works with Offline Translator signed by its original developer, versions 0.8.3, 0.8.4, and 0.8.5. White Noise does not automatically accept newer versions. Each new version must be checked for compatibility before White Noise supports it.
+
+#### Troubleshooting
+
+- **Translator is unverified or unsupported:** White Noise did not send any text to it. Install a supported version from the link above.
+- **The language can't be detected:** Choose the source language yourself, then try again.
+- **The source language pack is missing:** Open Offline Translator, install the pack for that language, then try again.
+- **The translation engine fails:** Open Offline Translator, check that the language packs you need are installed, then try again.
+
 ### Global settings
 
 Open **Settings > Translate**.
@@ -166,6 +181,8 @@ Each chat has its own **Automatically translate messages** dialog, saved separat
 These settings store your choices only. Message text and translations are kept out of them.
 
 ## Dictation
+
+To use dictation, install a speech service first. In Settings, White Noise recommends [Offline Speech to Text](https://zapstore.dev/apps/naddr1qqtkzurs9ehkvenvd9hx2umsv4jkx6r5da6x27r5qyv8wumn8ghj7un9d3shjtn6v9c8xar0wfjjuer9wcpzpys5pkhzxd9dqp4ger8du6p5f6y43tcnzqktjzmwvahq5vumtay4qvzqqqr7pv8t57pf), available on Zapstore. After you install it, open it and follow its setup steps, including any model download. Then go back to White Noise, open **Settings > Dictation**, and select a service listed as available. Which services appear depends on what is installed on your device. The table below shows how each type of service works with White Noise.
 
 | Control | Effect |
 |---|---|

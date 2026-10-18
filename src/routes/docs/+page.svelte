@@ -1,5 +1,5 @@
 <script lang="ts">
-import PageIntro from "$lib/components/site/PageIntro.svelte";
+import Text from "$lib/components/system/Text.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -56,17 +56,16 @@ const matches = $derived(
     <link rel="canonical" href="https://www.whitenoise.chat/docs" />
 </svelte:head>
 <div class="site-width">
-    <PageIntro title="Guides" description="Help with White Noise, from your first message to everyday settings." />
-    <div class="technical-content documentation-body">
-        <p>Send your first message: <a href="/docs/get-started/first-message/android">Android</a> · <a href="/docs/get-started/first-message/ios">iOS</a><br /><a href="/docs/compatibility">Versions and compatibility</a></p>
-        <form role="search" onsubmit={(event) => event.preventDefault()}>
-            <p><label for="docs-search">Find a guide</label><br /><input id="docs-search" class="wn-button secondary" type="search" bind:value={query} oninput={(event) => loadSearch(event.currentTarget.value)} placeholder="Search titles and topics" /></p>
-            <p><label for="docs-platform">Platform</label><br /><select class="wn-button secondary" id="docs-platform" bind:value={platform}><option value="all">All platforms</option><option value="android">Android</option><option value="ios">iOS</option></select></p>
+    <header class="docs-hub-header"><Text as="h1" role="display">Guides</Text></header>
+    <div class="technical-content">
+        <form class="docs-hub-search" role="search" onsubmit={(event) => event.preventDefault()}>
+            <input aria-label="Find a guide" id="docs-search" class="wn-button secondary" type="search" bind:value={query} oninput={(event) => loadSearch(event.currentTarget.value)} placeholder="Find a guide" />
+            <select aria-label="Platform" class="wn-button secondary" id="docs-platform" bind:value={platform}><option value="all">All platforms</option><option value="android">Android</option><option value="ios">iOS</option></select>
         </form>
-        <p>{matches.length} {matches.length === 1 ? "guide" : "guides"}</p>
-        <p role="status" aria-live="polite">{#if searchState === "loading"}Loading full-text search{/if}{#if searchState === "ready"}Full-text search ready.{/if}{#if searchState === "error"}Searching titles and summaries. Full-text search is unavailable.{/if}</p>
+        <p class="docs-hub-results type-small" role="status" aria-live="polite">{matches.length} {matches.length === 1 ? "guide" : "guides"}{#if searchState === "loading"} · Loading full-text search{/if}{#if searchState === "ready"} · Full-text search ready.{/if}{#if searchState === "error"} · Searching titles and summaries. Full-text search is unavailable.{/if}</p>
         {#if searchState === "error"}<button type="button" class="wn-button secondary" onclick={() => { searchState = "idle"; loadSearch(query); }}>Retry full-text search</button>{/if}
         {#if matches.length === 0}<p>Try a shorter search, or choose All platforms.</p>{/if}
+        <div class="documentation-body">
         {#each groups as [category, title]}
                 <section id={category} aria-labelledby={`${category}-title`}>
                     <h2 id={`${category}-title`}>{title}</h2>
@@ -75,5 +74,7 @@ const matches = $derived(
                     {:else}<p>No matching guides in this section.</p>{/if}
                 </section>
         {/each}
+        <p><a href="/docs/compatibility">Versions and compatibility</a></p>
+        </div>
     </div>
 </div>

@@ -1114,3 +1114,26 @@ body {
     text-decoration: underline;
     text-underline-offset: var(--space-4);
 }
+
+/* The guide directory keeps its controls together above the first task. */
+.docs-hub-header {
+    padding-block: var(--space-24);
+}
+.docs-hub-search {
+    display: flex;
+    gap: var(--space-8);
+}
+.docs-hub-search input {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    padding-inline: var(--space-16);
+}
+.docs-hub-search select {
+    max-width: 50%;
+    padding-inline: var(--space-12);
+}
+.docs-hub-results {
+    margin-block: var(--space-8) var(--space-24);
+    color: var(--color-muted);
+}

@@ -50,6 +50,26 @@ Tap **Sounds & notifications**. Under **Notify for**, choose **All messages**, *
 2. Pick a preset or **Custom time**, then tap **Save**. To turn the timer off, pick **Off** and save.
 3. Tap **Set timer** to confirm.
 
+## Export a conversation transcript
+
+You can share or save a copy of a conversation as a JSON file.
+
+> **Warning:** The transcript file is not encrypted. It contains the conversation's message content and identifiers as plain text. Anyone who receives or opens the file can read it. Only share it with, or save it to, a place you trust.
+
+The file contains the conversation's decrypted inner Marmot/Nostr events, including message content, in chronological order. Use it to read or process the conversation. It is not a backup. You can't use it to restore the conversation or the group's encryption state.
+
+**To share the transcript with another app:**
+
+1. Open the conversation details.
+2. Tap **Export Conversation Transcript**.
+3. Choose the app you want to share the file with.
+
+**To save the transcript to a location you choose:**
+
+1. Open the conversation details.
+2. Tap **Save Conversation Transcript**.
+3. In the Android file picker, choose where to save the file.
+
 ## Leave or remove a group
 
 > Leaving removes you, and you need a new invitation to rejoin. If you're the only member, the group is deleted. If you're the only admin, transfer admin first; White Noise can transfer and leave in one step.

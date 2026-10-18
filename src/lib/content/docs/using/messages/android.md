@@ -20,6 +20,30 @@ To add something other than text, tap **Add attachment**. The menu offers **Came
 
 **Dictate text** turns your speech into text that you can review and then **Paste** or **Send**, so it never sends a recording. To send audio, hold the voice control instead, as described in Media and downloads. Dictation options are in [Settings](/docs/settings/android).
 
+### Translate a message
+
+You can translate the text of a message into another language. This feature translates written message text only. It does not transcribe voice messages or other audio.
+
+1. Touch and hold the message, then tap **Translate** to open the translation form.
+2. Choose **Detect language** to let the app identify the original language, or choose a specific **Source language**.
+3. Choose a **Target language**, then tap **Translate**.
+
+When the translation appears, tap **Show original** to see the original text. Tap **Show translation** to switch back.
+
+If translation is unavailable or fails, see [Translate](/docs/settings/android#translate) in the Settings guide to install a translation provider and fix problems.
+
+## Create and vote in a poll
+
+> Polls are not anonymous, and every group member can see who chose each option.
+
+1. In a conversation, tap **Add attachment**, then **Create poll**.
+2. Enter a question and between 2 and 10 options, making each option different.
+3. Choose **Single choice** for one answer or **Multiple choice** for several answers.
+4. Under **Poll closes**, choose **No deadline**, a preset, or **Custom time**. A custom time can be anywhere from 1 second to 30 days.
+5. Tap **Post poll**.
+
+Tap an option in the poll to send your vote right away. In a **Single choice** poll, tapping a different option replaces your previous choice. In a **Multiple choice** poll, tapping an option selects or deselects it, but you can't remove your last remaining choice. Tap **View votes** to see who chose each option. A closed poll no longer accepts votes.
+
 ## Act on a message
 
 Touch and hold a message to open **Message actions**. The list depends on the message type and its state as well as your role, so you only see actions that apply. They can include:

@@ -4,8 +4,9 @@ White Noise for Android runs on Android 11 or later. After you install it, you c
 
 ## Get the app
 
-1. Go to [Download](/download) and follow the Android option listed on that page.
-2. Open White Noise and wait for the welcome screen to appear on your device.
+1. On Android, we recommend installing White Noise from [Zapstore](https://zapstore.dev/apps/dev.ipf.whitenoise.android).
+2. If you'd rather use Google Play or download from GitHub, see [Download](/download) for those options.
+3. Open White Noise. You should see the welcome screen.
 
 **Expected result:** the welcome screen shows **Sign Up** and **Sign In**. If the app reports a connection problem, connect to Wi-Fi or mobile data and tap **Retry**.
 
