@@ -1,4 +1,5 @@
 <script lang="ts">
+import Action from "$lib/components/system/Action.svelte";
 import Text from "$lib/components/system/Text.svelte";
 import type { PageData } from "./$types";
 
@@ -70,7 +71,7 @@ const matches = $derived(
                 <section id={category} aria-labelledby={`${category}-title`}>
                     <h2 id={`${category}-title`}>{title}</h2>
                     {#if matches.some((page) => page.category === category)}
-                    <ul>{#each matches.filter((page) => page.category === category) as page}<li><a href={page.url}>{page.title}</a>{page.platform !== "shared" ? ` — ${page.platform === "ios" ? "iOS" : "Android"}` : ""}<br />{page.description}</li>{/each}</ul>
+                    <ul class="docs-hub-list">{#each matches.filter((page) => page.category === category) as page}<li><Action href={page.url} label={`${page.title}${platform === "all" && page.platform !== "shared" ? ` (${page.platform === "ios" ? "iOS" : "Android"})` : ""}`} variant="secondary" icon="right" /><p class="type-small">{page.description}</p></li>{/each}</ul>
                     {:else}<p>No matching guides in this section.</p>{/if}
                 </section>
         {/each}

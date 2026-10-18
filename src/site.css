@@ -1137,3 +1137,18 @@ body {
     margin-block: var(--space-8) var(--space-24);
     color: var(--color-muted);
 }
+
+.documentation-body .docs-hub-list {
+    list-style: none;
+    padding-left: 0;
+}
+.docs-hub-list .wn-button {
+    text-decoration: none;
+    text-align: left;
+}
+.docs-hub-list p {
+    margin-block: var(--space-8) 0;
+}
+.docs-hub-list li + li {
+    margin-top: var(--space-16);
+}
