@@ -718,5 +718,28 @@
             "https://github.com/marmot-protocol/whitenoise-web/blob/2acf71acc07b3e514e6a50b5094362e66ba46820/src/lib/content/agents.md",
             "https://github.com/marmot-protocol/mdk/blob/d20329e9ac6337294a9b4414a55f97bc76b6581d/integrations/README.md"
         ]
+    },
+    {
+        "slug": "settings/android/translation",
+        "title": "Translate messages",
+        "description": "Install Offline Translator and choose translation languages.",
+        "category": "settings",
+        "platform": "android",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationSettings.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationPreferences.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationEngineDiscovery.kt"
+        ]
+    },
+    {
+        "slug": "settings/android/dictation",
+        "title": "Dictate text",
+        "description": "Set up speech recognition and review dictated text before sending.",
+        "category": "settings",
+        "platform": "android",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationProviderSheet.kt"
+        ]
     }
 ]

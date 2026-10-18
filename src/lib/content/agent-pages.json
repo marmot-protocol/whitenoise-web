@@ -52,5 +52,7 @@
     "/docs/build/state-and-errors",
     "/docs/build/compatibility",
     "/docs/build/contribute",
-    "/docs/compatibility"
+    "/docs/compatibility",
+    "/docs/settings/android/translation",
+    "/docs/settings/android/dictation"
 ]

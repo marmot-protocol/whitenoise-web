@@ -132,6 +132,13 @@ for (const capture of captures) {
         "Capture lacks device cleanup evidence"
     );
     assert(/^\/docs\/android\/[a-z-]+\.png$/.test(capture.url), "Unexpected capture path");
+    for (const slug of capture.guides) {
+        const guide = await readFile(new URL(`src/lib/content/docs/${slug}.md`, root), "utf8");
+        assert(
+            guide.includes(`src="${capture.url}"`),
+            `Screenshot must appear beside its task: ${capture.id}`
+        );
+    }
     const bytes = await readFile(new URL(`static${capture.url}`, root));
     assert.equal(
         createHash("sha256").update(bytes).digest("hex"),

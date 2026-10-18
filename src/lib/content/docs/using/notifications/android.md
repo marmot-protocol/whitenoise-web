@@ -11,6 +11,8 @@ Expected result: under **Device status**, **Notification permission** shows **Al
 
 If you decline, White Noise shows **Notification permission denied**. When the screen shows **Notifications are off**, turn notifications on for White Noise in Android Settings, then return to this screen.
 
+[<img src="/docs/android/notifications.png" alt="White Noise Android Notifications screen" loading="lazy" width="1080" height="2400" />](/docs/android/notifications.png)
+
 ## Choose a delivery method
 
 Under **Delivery**:

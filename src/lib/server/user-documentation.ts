@@ -63,8 +63,29 @@ export function documentationPage(slug: string) {
                       page.platform === "android" ? "/ios" : "/android"
                   )
               );
+    const onboarding = [
+        `get-started/install/${page.platform}`,
+        `get-started/first-message/${page.platform}`,
+        `using/recovery/${page.platform}`,
+    ];
+    const sequence = onboarding.includes(slug)
+        ? onboarding
+        : documentationPages
+              .filter(
+                  (item) =>
+                      item.category === page.category &&
+                      (item.platform === page.platform || item.platform === "shared")
+              )
+              .map((item) => item.slug);
+    const position = sequence.indexOf(slug);
+    const readingLink = (target: string | undefined) => {
+        const item = target ? bySlug.get(target) : undefined;
+        return item ? { title: item.title, url: `/docs/${item.slug}` } : null;
+    };
     return {
         ...metadata,
+        previous: readingLink(position > 0 ? sequence[position - 1] : undefined),
+        next: readingLink(position >= 0 ? sequence[position + 1] : undefined),
         checkedAt: baseline.checkedAt,
         html: rendered.html,
         headings: rendered.headings,

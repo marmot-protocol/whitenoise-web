@@ -42,5 +42,3 @@ White Noise offers two recovery options, and neither one restores earlier conver
 - **Recover setup** appears on a saved profile whose setup needs repair. It signs that profile out and resets its setup checkpoint, so you must sign in again yourself with the profile's private key. Earlier relay publications stay in place, and this step publishes nothing new.
 
 If sign-in stops because of an unexpected account state, White Noise leaves your account unchanged. See [Access problems](/docs/troubleshooting/access) for more help.
-
-Next: [Send a message](/docs/get-started/first-message/android).

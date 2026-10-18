@@ -10,7 +10,7 @@ Keep essential guide content in the article. Navigation and asides are omitted f
 
 Add each guide URL to `agent-pages.json` for deployed Markdown negotiation. The index, full text export, search and documentation sitemap derive from the registry. Preserve existing public URLs and redirects. Run `bun run docs:check`, the required repository checks and `bun run ci` before publication.
 
-The approved Simple rows design uses native input/select controls with underlined edges, and full-row guide links with small arrows and fine separators. It reuses existing typography, color and spacing tokens. Search result counts stay readable as text; the live region announces loading or failure. A failed index keeps title/summary search available and retries through an explicit button.
+The approved Simple rows design uses native input/select controls with underlined edges, and full-row guide links with small arrows and fine separators. It reuses existing typography, color and spacing tokens. Search result counts stay readable as text; the live region announces loading or failure. A failed index keeps title/summary search available and retries through an explicit button. Full-text-only matches appear after the initial matches so they keep their positions during loading. Platform and search terms travel in the index URL; guide links carry a validated return URL and row anchor.
 
 ## Review each application release
 
@@ -25,7 +25,7 @@ The approved Simple rows design uses native input/select controls with underline
 
 Curated Android PNGs live in `static/docs/android/`; `documentation-captures.json` records their source, CI build, image/APK digests and verification level. Keep original device evidence and private operational receipts outside the repository. Capture only synthetic fixtures through the approved device broker. Preserve the existing preview package, signer and data.
 
-The current images establish navigated device UI. Delivery was offline during capture. Keep that limit visible; app delivery qualification requires its own evidence.
+The current images establish navigated device UI. Delivery was offline during capture. Keep that limit on the compatibility page; app delivery qualification requires its own evidence. Place each screenshot beside the relevant instructions as a linked thumbnail and retain its intrinsic dimensions. The integrity check verifies that every capture appears in its assigned guide.
 
 An external contributor owns iOS captures in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14). Keep the text usable independently and display the pending-image note until reviewed images replace it. Check each capture's applicability before replacing a placeholder.
 

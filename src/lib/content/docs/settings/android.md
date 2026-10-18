@@ -6,6 +6,8 @@ Settings has three groups: **Account**, **App** and **Support**. When a setting 
 
 Your profile and avatar appear at the top, with **Edit profile picture**, **Open Share & Connect**, **Add Profile** and **Switch Profile**. **Sign Out** is also on this screen, and the app version is shown at the bottom.
 
+[<img src="/docs/android/settings.png" alt="White Noise Android Settings screen" loading="lazy" width="1080" height="2400" />](/docs/android/settings.png)
+
 ## Account
 
 ### Profile
@@ -54,6 +56,8 @@ This screen controls where your profile publishes information and receives invit
 | Quick account switching | On or off | Shows your other accounts beside your avatar so you can switch with one tap. |
 
 The color picker has Hue, Saturation and Brightness sliders and a Hex color field that takes six hexadecimal digits, for example 1D4ED8 after the # sign.
+
+[<img src="/docs/android/appearance.png" alt="White Noise Android Appearance screen" loading="lazy" width="1080" height="2400" />](/docs/android/appearance.png)
 
 ### Custom emoji
 
@@ -139,60 +143,11 @@ See [Notifications](/docs/using/notifications/android).
 
 ## Translate
 
-Translation is handled by **Offline Translator**, a separate app that runs translation on your device. White Noise passes message text to that app, and you manage language packs inside it.
-
-> **Privacy:** Offline Translator can write message text and translations to Android system logs. White Noise can't guarantee the security of text handled by another app.
-
-### Set up Offline Translator
-
-1. Install [Offline Translator](https://f-droid.org/packages/dev.davidv.translator/).
-2. Open Offline Translator and install the language packs you need. Install a pack for each language you want to translate from and into.
-3. Return to White Noise and translate a message.
-
-The current reviewed White Noise Android build only works with Offline Translator signed by its original developer, versions 0.8.3, 0.8.4, and 0.8.5. White Noise does not automatically accept newer versions. Each new version must be checked for compatibility before White Noise supports it.
-
-#### Troubleshooting
-
-- **Translator is unverified or unsupported:** White Noise did not send any text to it. Install a supported version from the link above.
-- **The language can't be detected:** Choose the source language yourself, then try again.
-- **The source language pack is missing:** Open Offline Translator, install the pack for that language, then try again.
-- **The translation engine fails:** Open Offline Translator, check that the language packs you need are installed, then try again.
-
-### Global settings
-
-Open **Settings > Translate**.
-
-| Control | Effect |
-|---|---|
-| Automatically translate messages | Turns automatic translation on or off for every chat that uses the global setting. It starts off. |
-| Target language | The language messages are translated into. It starts as English. Choosing a language from the list leaves its language pack uninstalled until you add it in Offline Translator. |
-| Open engine | Opens Offline Translator, where you install and manage language packs. |
-
-If you turned on automatic translation in an earlier preview build, White Noise switched it off once, along with any chat set to On, so you can read the logging notice before you turn it back on.
-
-### One chat
-
-Each chat has its own **Automatically translate messages** dialog, saved separately for each profile. Changes apply as soon as you make them, and **Close** dismisses the dialog.
-
-- **Use global setting** follows Settings > Translate. **On** or **Off** overrides it for this chat only.
-- **Use global target language** starts checked. Clear it to pick a different **Target language** for this chat.
-- **Open engine** opens Offline Translator.
-
-These settings store your choices only. Message text and translations are kept out of them.
+Use [Translate messages](/docs/settings/android/translation) to install Offline Translator, choose languages and manage automatic translation.
 
 ## Dictation
 
-To use dictation, install a speech service first. In Settings, White Noise recommends [Offline Speech to Text](https://zapstore.dev/apps/naddr1qqtkzurs9ehkvenvd9hx2umsv4jkx6r5da6x27r5qyv8wumn8ghj7un9d3shjtn6v9c8xar0wfjjuer9wcpzpys5pkhzxd9dqp4ger8du6p5f6y43tcnzqktjzmwvahq5vumtay4qvzqqqr7pv8t57pf), available on Zapstore. After you install it, open it and follow its setup steps, including any model download. Then go back to White Noise, open **Settings > Dictation**, and select a service listed as available. Which services appear depends on what is installed on your device. The table below shows how each type of service works with White Noise.
-
-| Control | Effect |
-|---|---|
-| Get Offline Speech to Text | Opens the Zapstore page for an app that transcribes speech on this device. It is unavailable on Google Play. |
-| Speech provider | Automatic or a specific provider. Android's selected speech service takes priority. If none is selected, White Noise uses the provider you choose here or, when there is only one engine, that engine. Each provider is labeled Works inside White Noise, Opens provider window, Keyboard only, or In-app support not verified. Choosing a provider leaves your audio and draft untouched. After you choose one, tap dictation again to start. |
-| Pause other audio | Pauses music and podcasts while you dictate. White Noise speech and voice messages always pause. |
-| Finish dictation | **When I choose Paste or Send**, or after a set number of seconds of silence. |
-| When finished | **Paste into draft** lets you review the text first. **Send message** sends only if the chat and the draft are unchanged. |
-
-If sending is blocked, any recognized text is put back into the original draft, so review it before you send again. With Offline Speech to Text, audio is processed on this device. Other speech services may send audio to their provider.
+Use [Dictate text](/docs/settings/android/dictation) to set up a speech provider and choose how recognized text enters your draft.
 
 ## Data usage
 

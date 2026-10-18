@@ -92,6 +92,20 @@ describe("user documentation registry", () => {
         );
     });
 
+    it("continues onboarding on the same platform through message and backup guides", () => {
+        for (const platform of ["android", "ios"]) {
+            expect(documentationPage(`get-started/install/${platform}`).next?.url).toBe(
+                `/docs/get-started/first-message/${platform}`
+            );
+            expect(documentationPage(`get-started/first-message/${platform}`).next?.url).toBe(
+                `/docs/using/recovery/${platform}`
+            );
+            expect(documentationPage(`using/recovery/${platform}`).previous?.url).toBe(
+                `/docs/get-started/first-message/${platform}`
+            );
+        }
+    });
+
     it("declares explicit versions and supports full-text lookup without a second content source", () => {
         const page = documentationIndex().find((page) => page.slug === "settings/android");
         expect(page?.searchText).toContain("Appearance");
@@ -138,6 +152,12 @@ describe("user documentation registry", () => {
             for (const match of page.markdown.matchAll(/\]\((\/docs\/[^)\s]+)\)/g)) {
                 const [path, hash] = match[1].split("#");
                 if (path === "/docs/marmot/README.md") continue;
+                if (/^\/docs\/android\/[a-z-]+\.png$/.test(path)) {
+                    expect(
+                        readFileSync(new URL(`../../../static${path}`, import.meta.url)).length
+                    ).toBeGreaterThan(0);
+                    continue;
+                }
                 const target = documentationPage(path.slice("/docs/".length));
                 if (hash) expect(target.headings.some((heading) => heading.id === hash)).toBe(true);
             }

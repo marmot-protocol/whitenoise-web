@@ -76,7 +76,7 @@ export function renderDocumentation(markdown: string) {
             code: ["class"],
             pre: ["tabindex", "role", "aria-label"],
             ol: ["start"],
-            img: ["src", "alt", "title", "loading"],
+            img: ["src", "alt", "title", "loading", "width", "height"],
         },
         allowedSchemes: ["https", "http", "mailto"],
         allowedSchemesByTag: { img: ["https", "http"] },

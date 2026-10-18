@@ -1,5 +1,7 @@
 # Send a message
 
+Both people need White Noise, or another compatible Marmot client, set up and connected. A Nostr public key identifies the person; receiving an invitation also requires their client to publish invitation keys.
+
 You can start a direct chat from **New Message** using the person's Nostr address or npub. Scanning their profile QR code works too.
 
 ## Start a chat

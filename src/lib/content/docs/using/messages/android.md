@@ -18,7 +18,7 @@ If the person isn't on White Noise yet, tap **Invite a friend** and share the in
 
 To add something other than text, tap **Add attachment**. The menu offers **Camera**, **Photos and videos**, **Files**, **Location**, **Contact**, **Device contact**, and **Create poll**. For media, see [Media and downloads](/docs/using/media/android). Location and contact items share those details with everyone in the chat, so check them before you send.
 
-**Dictate text** turns your speech into text that you can review and then **Paste** or **Send**, so it never sends a recording. To send audio, hold the voice control instead, as described in Media and downloads. Dictation options are in [Settings](/docs/settings/android).
+**Dictate text** turns your speech into text that you can review and then **Paste** or **Send**, so it never sends a recording. To send audio, hold the voice control instead, as described in Media and downloads. See [Dictate text](/docs/settings/android/dictation) for provider setup and dictation options.
 
 ### Translate a message
 
@@ -30,7 +30,7 @@ You can translate the text of a message into another language. This feature tran
 
 When the translation appears, tap **Show original** to see the original text. Tap **Show translation** to switch back.
 
-If translation is unavailable or fails, see [Translate](/docs/settings/android#translate) in the Settings guide to install a translation provider and fix problems.
+If translation is unavailable or fails, see [Translate messages](/docs/settings/android/translation) in the Settings guide to install a translation provider and fix problems.
 
 ## Create and vote in a poll
 
