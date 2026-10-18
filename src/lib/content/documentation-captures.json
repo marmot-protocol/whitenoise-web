@@ -327,5 +327,298 @@
             "description": "Device protection includes screen security, keyboard privacy and device authentication. Set a device screen lock before enabling authentication.",
             "alt": "Android device protection controls, with authentication unavailable until a screen lock is set."
         }
+    },
+    {
+        "id": "welcome",
+        "url": "/docs/android/welcome.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/welcome_light.png",
+        "imageSha256": "e96b6afde6c8163e5b38b94e9ebafe5470a1a0bcadab37c27c97726d4887bdcc",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/welcome.svg",
+            "crop": {
+                "x": 0,
+                "y": 620,
+                "width": 360,
+                "height": 160
+            },
+            "highlights": [],
+            "description": "Choose Sign Up for a new profile or Sign In for an existing identity.",
+            "alt": "Welcome screen with Sign In and Sign Up choices."
+        }
+    },
+    {
+        "id": "sign-up",
+        "url": "/docs/android/sign-up.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/signup_empty_name.png",
+        "imageSha256": "0a1ecd08ccc9f4fcbe82c28c07370e2d37f6fdddeaa7bde7a7512aa25dca1d88",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/sign-up.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 365
+            },
+            "highlights": [],
+            "description": "Add a profile photo if you want one, then enter the name people will see.",
+            "alt": "Sign Up form with Add Photo and an empty Name field."
+        }
+    },
+    {
+        "id": "sign-in",
+        "url": "/docs/android/sign-in.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/sign_in_light.png",
+        "imageSha256": "6a728894fa4486b85f9e9cc4dd5c82955149bb92656bfe59c19d9c7853744054",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/sign-in.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 235
+            },
+            "highlights": [],
+            "description": "The private-key field accepts your nsec. The QR button opens the scanner.",
+            "alt": "Sign in form with an empty private-key field and QR scanner button."
+        }
+    },
+    {
+        "id": "setup-checklist",
+        "url": "/docs/android/setup-checklist.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/account_setup_checklist_light.png",
+        "imageSha256": "ec78e469c91d3cd4270d1eb01aa6047426fd25908a953c14c7e343a1b6aede0d",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/setup-checklist.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 650
+            },
+            "highlights": [],
+            "description": "Account setup checks your profile, relays and messaging keys. Open a row that needs attention to review the next step.",
+            "alt": "Account setup checklist with a profile needing attention and later checks waiting."
+        }
+    },
+    {
+        "id": "setup-ready",
+        "url": "/docs/android/setup-ready.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/account_setup_ready.png",
+        "imageSha256": "089a4bc1ce4033d01306eccee8e778fcc1f09a66e7f5d0124b62bac32682d812",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 1000
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/setup-ready.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 550
+            },
+            "highlights": [],
+            "description": "When every required check is Ready, choose Open Chats to continue.",
+            "alt": "Account setup checklist with all six checks marked Ready."
+        }
+    },
+    {
+        "id": "add-profile",
+        "url": "/docs/android/add-profile.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/add_profile_welcome_light.png",
+        "imageSha256": "867a84a4f5a74f2b8f73d3f85ce406d1c6131a99eb48696e008981640e5fe0f7",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/profiles/android"],
+        "presentation": {
+            "url": "/docs/android/add-profile.svg",
+            "crop": {
+                "x": 0,
+                "y": 620,
+                "width": 360,
+                "height": 160
+            },
+            "highlights": [],
+            "description": "Adding another profile offers the same Sign In and Sign Up choices.",
+            "alt": "Add Profile choices for signing in or creating a new identity."
+        }
+    },
+    {
+        "id": "android-download",
+        "url": "/docs/android/android-download.png",
+        "platform": "android",
+        "kind": "browser",
+        "source": "bcdd1a2aaa8e4d698eea150e9bb9229b24bf785c",
+        "sourcePage": "https://github.com/marmot-protocol/whitenoise-web/blob/bcdd1a2aaa8e4d698eea150e9bb9229b24bf785c/src/routes/download/+page.svelte",
+        "imageSha256": "dc61f85022c8c103fd7f6583f8eb5edbb6b9850e489fbdceeb91b9e72e798f6a",
+        "dimensions": {
+            "width": 684,
+            "height": 666
+        },
+        "verification": "Browser capture of the website download choices; no store installation claim",
+        "capturedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/android-download.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 684,
+                "height": 666
+            },
+            "highlights": [],
+            "description": "Choose Zapstore, the recommended Android download option.",
+            "alt": "Android download options with Zapstore first, followed by Google Play and GitHub Release."
+        }
+    },
+    {
+        "id": "ios-download",
+        "url": "/docs/ios/ios-download.png",
+        "platform": "ios",
+        "kind": "browser",
+        "source": "bcdd1a2aaa8e4d698eea150e9bb9229b24bf785c",
+        "sourcePage": "https://github.com/marmot-protocol/whitenoise-web/blob/bcdd1a2aaa8e4d698eea150e9bb9229b24bf785c/src/routes/download/+page.svelte",
+        "imageSha256": "78f425b10d2a367a0ee952365684ab8dcf339ab8e5da77784ccdec716457491b",
+        "dimensions": {
+            "width": 684,
+            "height": 380
+        },
+        "verification": "Browser capture of the website download choices; no store installation claim",
+        "capturedAt": "2026-10-18",
+        "guides": ["get-started/install/ios"],
+        "presentation": {
+            "url": "/docs/ios/ios-download.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 684,
+                "height": 380
+            },
+            "highlights": [],
+            "description": "Choose TestFlight to get the iPhone beta.",
+            "alt": "iPhone download option showing the TestFlight button."
+        }
+    },
+    {
+        "id": "zapstore-download",
+        "platform": "android",
+        "kind": "external-browser",
+        "url": "/docs/android/zapstore-download.png",
+        "sourcePage": "https://zapstore.dev/apps/dev.ipf.whitenoise.android",
+        "capturedAt": "2026-10-18",
+        "imageSha256": "de945699273b8df0abfd1be2b4e23635c9bdf4cd94ed26cffd2a079c1f68b5ec",
+        "dimensions": {
+            "width": 732,
+            "height": 228
+        },
+        "verification": "Observed public storefront header; no app download or installation qualification",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/zapstore-download.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 732,
+                "height": 228
+            },
+            "highlights": [],
+            "description": "The White Noise listing on Zapstore has a Download control beside the app name.",
+            "alt": "White Noise app icon, title and Download button on Zapstore."
+        }
+    },
+    {
+        "id": "setup-relays",
+        "url": "/docs/android/setup-relays.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/account_setup_relay_proposal.png",
+        "imageSha256": "3836ec1964948e58fb2615226143b1dbf0223b4cd53b77ef04d70ae33216b9e3",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 1000
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/setup-relays.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 500
+            },
+            "highlights": [],
+            "description": "Review the proposed read and write relay lists before saving changes. The displayed relay addresses are examples.",
+            "alt": "Account-setup relay proposal with read and write lists and a warning about other Nostr apps."
+        }
     }
 ]

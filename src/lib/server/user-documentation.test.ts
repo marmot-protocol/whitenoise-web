@@ -124,6 +124,25 @@ describe("user documentation registry", () => {
         expect(settings).toContain("confirm that you can recover each key");
     });
 
+    it("illustrates download and each Android account-entry stage beside the instructions", () => {
+        const android = documentationPage("get-started/install/android");
+        for (const image of [
+            "android-download",
+            "welcome",
+            "sign-up",
+            "sign-in",
+            "setup-checklist",
+            "setup-ready",
+        ])
+            expect(android.html).toContain(`/docs/android/${image}.svg`);
+        expect(documentationPage("get-started/install/ios").html).toContain(
+            "/docs/ios/ios-download.svg"
+        );
+        expect(documentationPage("using/profiles/android").html).toContain(
+            "/docs/android/add-profile.svg"
+        );
+    });
+
     it("continues onboarding on the same platform through message and backup guides", () => {
         for (const platform of ["android", "ios"]) {
             expect(documentationPage(`get-started/install/${platform}`).next?.url).toBe(
@@ -184,7 +203,7 @@ describe("user documentation registry", () => {
             for (const match of page.markdown.matchAll(/\]\((\/docs\/[^)\s]+)\)/g)) {
                 const [path, hash] = match[1].split("#");
                 if (path === "/docs/marmot/README.md") continue;
-                if (/^\/docs\/android\/[a-z-]+\.(?:png|svg)$/.test(path)) {
+                if (/^\/docs\/(?:android|ios)\/[a-z-]+\.(?:png|svg)$/.test(path)) {
                     expect(
                         readFileSync(new URL(`../../../static${path}`, import.meta.url)).length
                     ).toBeGreaterThan(0);

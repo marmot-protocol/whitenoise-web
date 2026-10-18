@@ -44,6 +44,8 @@ Open **Share & Connect**:
 
 In **Settings**, tap the profile management row to switch to another signed-in profile or add a new one. Adding a profile lets you create a new identity or sign in with Amber.
 
+<figure><a href="/docs/android/add-profile.svg"><img src="/docs/android/add-profile.svg" alt="Add Profile choices for signing in or creating a new identity." loading="lazy" width="360" height="160" /></a><figcaption class="type-small">Adding another profile offers the same Sign In and Sign Up choices. Select the image to enlarge.</figcaption></figure>
+
 If creating the identity or the Amber sign-in fails, start the step again. When Amber asks for approval, approve the request so sign-in can finish.
 
 For keys, signing out, and what wiping a profile removes, see [Identity settings](/docs/settings/identity).

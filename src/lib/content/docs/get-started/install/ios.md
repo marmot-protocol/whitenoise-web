@@ -9,6 +9,8 @@ White Noise for iOS runs on iOS 18 or later. After you install it, you can creat
 
 **Expected result:** the welcome screen shows **Sign Up** and **Sign In**.
 
+<figure><a href="/docs/ios/ios-download.svg"><img src="/docs/ios/ios-download.svg" alt="iPhone download option showing the TestFlight button." loading="lazy" width="684" height="380" /></a><figcaption class="type-small">Choose TestFlight to get the iPhone beta. Select the image to enlarge.</figcaption></figure>
+
 ## Create a new profile
 
 **Before you sign up, know that your profile is public.** Anyone can see your name and photo along with your bio, including people using other apps on the same network. Photos may stay online even after you remove them, so consider a nickname and an image you are comfortable sharing.

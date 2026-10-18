@@ -135,11 +135,55 @@ for (const capture of captures) {
             ),
             `Unknown capture guide: ${slug}`
         );
+    const kind = capture.kind ?? "device";
     assert(
-        capture.platform === "android" && capture.cleanupVerified,
-        "Capture lacks device cleanup evidence"
+        ["device", "source-render", "browser", "external-browser"].includes(kind),
+        "Unknown image evidence kind"
     );
-    assert(/^\/docs\/android\/[a-z-]+\.png$/.test(capture.url), "Unexpected capture path");
+    if (kind === "device") {
+        assert(
+            capture.platform === "android" && capture.cleanupVerified,
+            "Capture lacks device cleanup evidence"
+        );
+        assert.match(capture.apkSha256, /^[a-f0-9]{64}$/);
+    } else if (kind === "source-render") {
+        assert.equal(capture.platform, "android");
+        assert.equal(capture.source, baseline.android.currentSource);
+        assert(
+            capture.sourceImage.startsWith(
+                `https://github.com/marmot-protocol/whitenoise-android/blob/${capture.source}/app/src/test/snapshots/`
+            ),
+            "Reference image must have pinned app provenance"
+        );
+        assert(capture.sourceImage.endsWith(".png"));
+        assert(
+            !capture.apkSha256 && !capture.cleanupVerified,
+            "Reference renders must not claim device qualification"
+        );
+    } else if (kind === "external-browser") {
+        assert.equal(capture.sourcePage, "https://zapstore.dev/apps/dev.ipf.whitenoise.android");
+        assert.match(capture.capturedAt, /^\d{4}-\d{2}-\d{2}$/);
+        assert(
+            !capture.source && !capture.apkSha256 && !capture.cleanupVerified,
+            "Storefront images must not claim source or device qualification"
+        );
+    } else {
+        assert(
+            capture.sourcePage.startsWith(
+                `https://github.com/marmot-protocol/whitenoise-web/blob/${capture.source}/src/routes/download/`
+            ),
+            "Browser capture must identify its download-page source"
+        );
+        assert(
+            !capture.apkSha256 && !capture.cleanupVerified,
+            "Browser images must not claim device qualification"
+        );
+    }
+    assert(["android", "ios"].includes(capture.platform));
+    assert(
+        new RegExp(`^/docs/${capture.platform}/[a-z-]+\\.png$`).test(capture.url),
+        "Unexpected capture path"
+    );
     for (const slug of capture.guides) {
         const guide = await readFile(new URL(`src/lib/content/docs/${slug}.md`, root), "utf8");
         assert(
@@ -155,7 +199,15 @@ for (const capture of captures) {
     );
     const { crop, highlights, url } = capture.presentation;
     assert.equal(url, capture.url.replace(/\.png$/, ".svg"));
-    assert(crop.y >= 132 && crop.y + crop.height <= 2330, "System bars must be outside the crop");
+    if (kind === "device")
+        assert(
+            crop.y >= 132 && crop.y + crop.height <= 2330,
+            "System bars must be outside the crop"
+        );
+    assert(
+        crop.y >= 0 && crop.y + crop.height <= capture.dimensions.height,
+        "Crop exceeds image height"
+    );
     assert(
         crop.x >= 0 &&
             crop.width > 0 &&
@@ -173,8 +225,7 @@ for (const capture of captures) {
         documentationImage(capture, bytes),
         "Presentation must preserve the original pixels and measured crop"
     );
-    assert.match(capture.source, /^[a-f0-9]{40}$/);
-    assert.match(capture.apkSha256, /^[a-f0-9]{64}$/);
+    if (kind !== "external-browser") assert.match(capture.source, /^[a-f0-9]{40}$/);
 }
 await access(new URL("docs/documentation-maintenance.md", root));
 assert(

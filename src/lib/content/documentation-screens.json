@@ -135,24 +135,24 @@
             "id": "SignInScreen",
             "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignInScreen.kt",
             "guide": "/docs/get-started/install/android#sign-in-with-an-existing-identity",
-            "visual": "text",
-            "reason": "This reference is sufficient without another image."
+            "visual": "sign-in",
+            "reason": "A pinned native app screenshot-test reference illustrates this setup step."
         },
         {
             "platform": "android",
             "id": "SignUpScreen",
             "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreen.kt",
             "guide": "/docs/get-started/install/android#create-a-new-profile",
-            "visual": "text",
-            "reason": "This reference is sufficient without another image."
+            "visual": "sign-up",
+            "reason": "A pinned native app screenshot-test reference illustrates this setup step."
         },
         {
             "platform": "android",
             "id": "WelcomeScreen",
             "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/WelcomeScreen.kt",
             "guide": "/docs/get-started/install/android#get-the-app",
-            "visual": "text",
-            "reason": "This reference is sufficient without another image."
+            "visual": "welcome",
+            "reason": "A pinned native app screenshot-test reference illustrates this setup step."
         },
         {
             "platform": "android",
@@ -838,9 +838,9 @@
             "platform": "android",
             "id": "AccountSetupScreen",
             "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt",
-            "guide": "/docs/get-started/install/android#recover-an-unfinished-setup",
-            "visual": "text",
-            "reason": "No image of key material, account setup or external reporting is needed."
+            "guide": "/docs/get-started/install/android#finish-account-setup",
+            "visual": "setup-checklist",
+            "reason": "A pinned native app screenshot-test reference illustrates this setup step."
         },
         {
             "platform": "android",

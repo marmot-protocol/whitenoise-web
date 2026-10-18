@@ -163,7 +163,9 @@
             "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingSavedAccountUi.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/AddProfileSession.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditContent.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreenshotTest.kt"
         ]
     },
     {
