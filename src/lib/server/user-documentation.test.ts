@@ -78,6 +78,20 @@ describe("user documentation registry", () => {
         }
     });
 
+    it("keeps a usable-key requirement before iOS erasure in text exports", () => {
+        const document = documentationPage("using/privacy/ios");
+        const markdown = pageMarkdown(
+            `<main><h1>${document.title}</h1>${document.html}</main>`,
+            new URL("https://www.whitenoise.chat/docs/using/privacy/ios")
+        );
+        if (markdown === null) throw new Error("Guide export is missing");
+        expect(markdown).toContain("trusted local decryption method");
+        expect(markdown).toContain("/docs/settings/identity#encrypted-backup-import");
+        expect(markdown.indexOf("trusted local decryption method")).toBeLessThan(
+            markdown.indexOf("tap **Erase App Data**")
+        );
+    });
+
     it("declares explicit versions and supports full-text lookup without a second content source", () => {
         const page = documentationIndex().find((page) => page.slug === "settings/android");
         expect(page?.searchText).toContain("Appearance");

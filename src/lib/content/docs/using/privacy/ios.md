@@ -31,7 +31,7 @@ Anyone can see your name, photo, and bio, including people using other apps on t
 
 ## Erase app data
 
-> **Warning:** Erase App Data signs out every profile and permanently removes all White Noise data from this iPhone, including chats, media, drafts, keys, and settings. This is irreversible. Back up each profile’s private key first and confirm each backup is saved.
+> **Warning:** Erase App Data signs out every profile and permanently removes all White Noise data from this iPhone, including chats, media, drafts, keys, and settings. This is irreversible. Back up each profile’s private key first and confirm each backup is saved. The current sign-in screens require a decrypted private key, shown as `nsec` in these guides. Before erasing, follow [Encrypted backup import](/docs/settings/identity#encrypted-backup-import) and confirm a trusted local decryption method produces each profile’s `nsec` while its existing profile stays signed in. Keep each encrypted backup and its passphrase available.
 
 1. In **Privacy & Security**, under **Device Data**, tap **Erase App Data**.
 2. Enter the three words shown, exactly as written.
