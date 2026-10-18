@@ -136,10 +136,7 @@ for (const capture of captures) {
             `Unknown capture guide: ${slug}`
         );
     const kind = capture.kind ?? "device";
-    assert(
-        ["device", "source-render", "browser", "external-browser"].includes(kind),
-        "Unknown image evidence kind"
-    );
+    assert(["device", "source-render"].includes(kind), "Unknown image evidence kind");
     if (kind === "device") {
         assert(
             capture.platform === "android" && capture.cleanupVerified,
@@ -159,24 +156,6 @@ for (const capture of captures) {
         assert(
             !capture.apkSha256 && !capture.cleanupVerified,
             "Reference renders must not claim device qualification"
-        );
-    } else if (kind === "external-browser") {
-        assert.equal(capture.sourcePage, "https://zapstore.dev/apps/dev.ipf.whitenoise.android");
-        assert.match(capture.capturedAt, /^\d{4}-\d{2}-\d{2}$/);
-        assert(
-            !capture.source && !capture.apkSha256 && !capture.cleanupVerified,
-            "Storefront images must not claim source or device qualification"
-        );
-    } else {
-        assert(
-            capture.sourcePage.startsWith(
-                `https://github.com/marmot-protocol/whitenoise-web/blob/${capture.source}/src/routes/download/`
-            ),
-            "Browser capture must identify its download-page source"
-        );
-        assert(
-            !capture.apkSha256 && !capture.cleanupVerified,
-            "Browser images must not claim device qualification"
         );
     }
     assert(["android", "ios"].includes(capture.platform));
@@ -225,7 +204,7 @@ for (const capture of captures) {
         documentationImage(capture, bytes),
         "Presentation must preserve the original pixels and measured crop"
     );
-    if (kind !== "external-browser") assert.match(capture.source, /^[a-f0-9]{40}$/);
+    assert.match(capture.source, /^[a-f0-9]{40}$/);
 }
 await access(new URL("docs/documentation-maintenance.md", root));
 assert(

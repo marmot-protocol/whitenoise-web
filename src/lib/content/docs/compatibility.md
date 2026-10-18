@@ -14,7 +14,7 @@ This page lists the release and source baselines these guides were checked again
 ## What this means
 
 - Android instructions use the current source listed above. Some controls may be unreleased; compare your app version with this table if a control is missing.
-- Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Account-entry and setup images also use the Android project’s checked-in UI reference renders at the current source baseline. They illustrate controls without claiming that sign-in or setup ran on a device. Download images show the website’s download choices.
+- Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Account-entry and setup images also use the Android project’s checked-in UI reference renders at the current source baseline. They illustrate controls without claiming that sign-in or setup ran on a device.
 - The guides were checked against these sources and remain untested end to end on each release.
 - Mixed app versions and mixed clients remain untested together as a whole.
 - Linked devices are still in development. A second installation does not sync your history.

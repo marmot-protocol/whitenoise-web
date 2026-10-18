@@ -124,20 +124,15 @@ describe("user documentation registry", () => {
         expect(settings).toContain("confirm that you can recover each key");
     });
 
-    it("illustrates download and each Android account-entry stage beside the instructions", () => {
+    it("illustrates Android account-entry stages without website download screenshots", () => {
         const android = documentationPage("get-started/install/android");
-        for (const image of [
-            "android-download",
-            "welcome",
-            "sign-up",
-            "sign-in",
-            "setup-checklist",
-            "setup-ready",
-        ])
+        for (const image of ["welcome", "sign-up", "sign-in", "setup-checklist", "setup-ready"])
             expect(android.html).toContain(`/docs/android/${image}.svg`);
-        expect(documentationPage("get-started/install/ios").html).toContain(
-            "/docs/ios/ios-download.svg"
-        );
+        for (const platform of ["android", "ios"]) {
+            expect(documentationPage(`get-started/install/${platform}`).html).not.toMatch(
+                /(?:android-download|ios-download|zapstore-download)\.svg/
+            );
+        }
         expect(documentationPage("using/profiles/android").html).toContain(
             "/docs/android/add-profile.svg"
         );

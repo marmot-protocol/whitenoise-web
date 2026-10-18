@@ -11,10 +11,6 @@ White Noise for Android runs on Android 11 or later. After you install it, you c
 
 **Expected result:** the welcome screen shows **Sign Up** and **Sign In**. If the app reports a connection problem, connect to Wi-Fi or mobile data and tap **Retry**.
 
-<figure><a href="/docs/android/android-download.svg"><img src="/docs/android/android-download.svg" alt="Android download options with Zapstore first, followed by Google Play and GitHub Release." loading="lazy" width="684" height="666" /></a><figcaption class="type-small">Choose Zapstore, the recommended Android download option. Select the image to enlarge.</figcaption></figure>
-
-<figure><a href="/docs/android/zapstore-download.svg"><img src="/docs/android/zapstore-download.svg" alt="White Noise app icon, title and Download button on Zapstore." loading="lazy" width="732" height="228" /></a><figcaption class="type-small">The White Noise listing on Zapstore has a Download control beside the app name. Select the image to enlarge.</figcaption></figure>
-
 <figure><a href="/docs/android/welcome.svg"><img src="/docs/android/welcome.svg" alt="Welcome screen with Sign In and Sign Up choices." loading="lazy" width="360" height="160" /></a><figcaption class="type-small">Choose Sign Up for a new profile or Sign In for an existing identity. Select the image to enlarge.</figcaption></figure>
 
 ## Create a new profile
