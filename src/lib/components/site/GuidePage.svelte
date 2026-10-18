@@ -18,6 +18,22 @@ let {
     document: GuideDocument;
 } = $props();
 const info = $derived(guideInfo[area]);
+const furtherGuides: Partial<Record<GuideArea, { href: string; label: string }[]>> = {
+    agents: [
+        { href: "/docs/agents/access", label: "Permissions and access" },
+        { href: "/docs/agents/routing", label: "Conversations and projects" },
+        { href: "/docs/agents/files", label: "Files and attachments" },
+        { href: "/docs/agents/recovery", label: "Recover interrupted work" },
+        { href: "/docs/agents/stop", label: "Stop an agent" },
+    ],
+    builders: [
+        { href: "/docs/build/quickstart", label: "Run a local source check" },
+        { href: "/docs/build/state-and-errors", label: "State and errors" },
+        { href: "/docs/build/compatibility", label: "Check compatibility" },
+        { href: "/docs/build/contribute", label: "Contribute a change" },
+    ],
+};
+const furtherLinks = $derived(furtherGuides[area] ?? []);
 </script>
 
 <svelte:head>
@@ -47,6 +63,12 @@ const info = $derived(guideInfo[area]);
             {/each}
         {:else}
             {@html document.html}
+        {/if}
+        {#if furtherLinks.length}
+            <section id="more-guides">
+                <h2>More guides</h2>
+                <ul>{#each furtherLinks as link}<li><a href={link.href}>{link.label}</a></li>{/each}</ul>
+            </section>
         {/if}
     </article>
     {#if area === "builders"}

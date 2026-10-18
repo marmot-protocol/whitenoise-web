@@ -1,0 +1,140 @@
+[
+    {
+        "id": "chats",
+        "url": "/docs/android/chats.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "eb41f6ececce08e72ac6ba8a70955d61201af156c85bcd0ca3434840e5aebcee",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["get-started/first-message/android"]
+    },
+    {
+        "id": "new-message",
+        "url": "/docs/android/new-message.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "23da70a4f66976eb7bdd1845608b1d718af14528173a5701df07c7c767a18e71",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["get-started/first-message/android"]
+    },
+    {
+        "id": "conversation",
+        "url": "/docs/android/conversation.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "f7acc626a6ed891cfe1312eddcad1e1212094866dd555b835cb3c8ab1bbf1acf",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["get-started/first-message/android"]
+    },
+    {
+        "id": "settings",
+        "url": "/docs/android/settings.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "78cdffb876ace3fc1de76abcbe1bed01ad2df6f7546189f91a517c1effdb86da",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["settings/android"]
+    },
+    {
+        "id": "appearance",
+        "url": "/docs/android/appearance.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "713572073fc44f51f2729fcd90adf757e0538bb996b9267af18f9614a6144d7e",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["settings/android"]
+    },
+    {
+        "id": "notifications",
+        "url": "/docs/android/notifications.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "1a939b6974a71884fa79a5b3f508306a7ff4e2674dd1161bbc649a35058a2e0d",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["using/notifications/android"]
+    }
+]

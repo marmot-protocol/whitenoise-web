@@ -34,15 +34,28 @@ function escapeMenu(event: KeyboardEvent) {
 function resize() {
     if (window.innerWidth > breakpoints.tablet) open = false;
 }
-const links = $derived(guideLinks[area]);
+const links: { id: string; label: string; href: string }[] = $derived(
+    area === "documentation" && page.data.userDocument
+        ? page.data.userDocument.headings.map((heading: { id: string; text: string }) => ({
+              id: heading.id,
+              label: heading.text,
+              href: `${page.url.pathname}#${heading.id}`,
+          }))
+        : guideLinks[area]
+);
 const navigationLabel = $derived(guideInfo[area].navigationLabel);
 let scrolledGuide = $state<string>();
-const selected = $derived(scrolledGuide ?? activeGuide(area, page.url.pathname, page.url.hash));
+const selected = $derived(
+    scrolledGuide ??
+        (area === "documentation"
+            ? (links.find((link) => page.url.hash === `#${link.id}`)?.id ?? links[0]?.id)
+            : activeGuide(area, page.url.pathname, page.url.hash))
+);
 let sidebar = $state<HTMLElement>();
 $effect(() => {
     const pathname = page.url.pathname;
     scrolledGuide = undefined;
-    if (pathname !== guideInfo[area].path) return;
+    if (pathname !== guideInfo[area].path && area !== "documentation") return;
     const targets = links.flatMap(({ id }) => {
         const element = window.document.getElementById(id);
         return element ? [{ id, element }] : [];
@@ -85,7 +98,9 @@ $effect(() => {
         window.removeEventListener("hashchange", schedule);
     };
 });
-const currentLabel = $derived(links.find((link) => link.id === selected)?.label ?? links[0].label);
+const currentLabel = $derived(
+    links.find((link) => link.id === selected)?.label ?? links[0]?.label ?? "Documentation"
+);
 </script>
 
 <svelte:window onkeydown={escapeMenu} onclick={dismiss} onfocusin={dismiss} onresize={resize} />

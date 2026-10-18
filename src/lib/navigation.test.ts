@@ -14,10 +14,12 @@ describe("site navigation", () => {
     });
 
     it("recognizes legacy documentation destinations and runtime pages", () => {
+        expect(isActiveDestination("/docs/mdk/README.md", "/docs")).toBe(false);
+        expect(isActiveDestination("/docs/settings/android", "/docs")).toBe(true);
         expect(currentPageLabel("/docs/mdk/README.md")).toBe("For developers");
         expect(currentPageLabel("/docs/marmot/features/multi-device.md")).toBe("Marmot Protocol");
         expect(currentPageLabel("/agents/hermes")).toBe("Agents");
-        expect(currentPageLabel("/docs/mdk-other/README.md")).toBe("");
+        expect(currentPageLabel("/docs/mdk-other/README.md")).toBe("Documentation");
     });
 
     it("provides compact labels for non-navigation pages without mislabeling unknown pages", () => {
@@ -27,6 +29,8 @@ describe("site navigation", () => {
     });
 
     it("mounts guide navigation only where its local section targets exist", () => {
+        expect(currentGuideArea("/docs/settings/android")).toBe("documentation");
+        expect(currentGuideArea("/docs/unknown/topic")).toBeUndefined();
         expect(currentGuideArea("/agents")).toBe("agents");
         expect(currentGuideArea("/build")).toBe("builders");
         expect(currentGuideArea("/docs/marmot/README.md")).toBe("marmot");

@@ -1,0 +1,41 @@
+{
+    "checkedAt": "2026-10-18",
+    "android": {
+        "minimumOS": "Android 11",
+        "channel": "GitHub Releases; screenshots use the separate CI preview channel",
+        "releaseSource": "6c7cc4bf70ab0de7eae29e13c5ed75e0d6cd3e09",
+        "evidence": "source-reviewed; selected preview screens navigated on device",
+        "behaviorQualification": "Full end-to-end release validation pending",
+        "currentSource": "63524b750b934d72e0f832805128cd84d3a92155",
+        "releaseVersion": "2026.10.14"
+    },
+    "ios": {
+        "source": "d7186efa4123ba5ad7addd9a964b419e6a2282da",
+        "version": "2026.10.13 (45)",
+        "minimumOS": "iOS 18",
+        "channel": "TestFlight; installed release availability not independently checked",
+        "evidence": "source-reviewed",
+        "screenshots": "Delegated in issue14",
+        "behaviorQualification": "Device validation pending"
+    },
+    "desktop": {
+        "availability": "Unverified; no desktop messenger instructions published",
+        "agentHosts": "Separate from messenger-client availability"
+    },
+    "connector": {
+        "hostOS": ["macOS", "Linux"],
+        "evidence": "source-reviewed runtime setup guides; runtime execution pending",
+        "guideSource": "2acf71acc07b3e514e6a50b5094362e66ba46820",
+        "connectorSource": "d20329e9ac6337294a9b4414a55f97bc76b6581d"
+    },
+    "development": {
+        "mdkSource": "d20329e9ac6337294a9b4414a55f97bc76b6581d",
+        "rustToolchain": "1.97.1",
+        "exampleCommand": "cargo test --locked -p cgka-engine --lib message_processor::store::tests",
+        "exampleResult": "3 passed; 0 failed",
+        "evidence": "local focused storage tests; full suite, network and device qualification pending",
+        "typescript": "marmot-ts alpha; execution qualification pending",
+        "protocolSource": "d181ce1c4661ca985e8fb12a48a962dbe76fec6c",
+        "typescriptSource": "74541744a26aadc1618e0a547ade078584bfa1cd"
+    }
+}

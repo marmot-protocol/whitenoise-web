@@ -1,7 +1,13 @@
 import { agentRuntimes } from "$lib/documentation";
 
-export type GuideArea = "agents" | "builders" | "marmot";
+export type GuideArea = "agents" | "builders" | "marmot" | "documentation";
 export const guideInfo = {
+    documentation: {
+        title: "Documentation",
+        path: "/docs",
+        navigationLabel: "Documentation sections",
+        description: "Task guides, Settings and troubleshooting for White Noise.",
+    },
     agents: {
         title: "Agents",
         path: "/agents",
@@ -25,6 +31,14 @@ export const guideInfo = {
     },
 };
 const sections = {
+    documentation: [
+        ["get-started", "Get started"],
+        ["using", "Using White Noise"],
+        ["settings", "Settings"],
+        ["troubleshooting", "Troubleshooting"],
+        ["agents", "Agents"],
+        ["build", "Build"],
+    ],
     agents: [
         ["getting-started", "Getting started"],
         ["hermes", "Hermes"],
@@ -57,6 +71,7 @@ function linksFor(area: GuideArea) {
     }));
 }
 export const guideLinks = {
+    documentation: linksFor("documentation"),
     agents: linksFor("agents"),
     builders: linksFor("builders"),
     marmot: linksFor("marmot"),

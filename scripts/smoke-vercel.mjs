@@ -45,6 +45,26 @@ try {
         await readFile(new URL("../.vercel/output/config.json", import.meta.url), "utf8")
     );
     const filesystem = outputConfig.routes.findIndex((route) => route.handle === "filesystem");
+    for (const path of ["/docs/index.json", "/docs/baseline.json", "/docs/captures.json"]) {
+        const headerRule = outputConfig.routes
+            .slice(0, filesystem)
+            .find(
+                (rule) =>
+                    rule.src &&
+                    new RegExp(rule.src).test(path) &&
+                    rule.headers?.["Access-Control-Allow-Origin"]
+            );
+        assert.equal(
+            headerRule?.headers["Access-Control-Allow-Origin"],
+            "*",
+            `${path} needs static CORS headers`
+        );
+        assert.equal(
+            headerRule?.headers["Cache-Control"],
+            "public, max-age=300",
+            `${path} needs bounded static caching`
+        );
+    }
     const markdownRoute = outputConfig.routes.findIndex((route) =>
         route.has?.some((condition) => condition.key === "accept")
     );
@@ -183,11 +203,12 @@ try {
             { src: "/.*", dest: "/![-]/catchall" },
         ],
     });
+    const shiftedNegotiation = shifted.routes.findIndex((rule) => rule.has);
+    const shiftedAlias = shifted.routes.findIndex((rule) => rule.dest === "/download/");
     assert.ok(
-        shifted.routes[1].has,
+        shiftedNegotiation >= 0 && shiftedNegotiation < shiftedAlias,
         "Negotiation precedes aliases even when the adapter adds no prefix"
     );
-    assert.equal(shifted.routes[2].dest, "/download/");
 
     const index = JSON.parse(
         await readFile(
