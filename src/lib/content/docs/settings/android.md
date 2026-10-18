@@ -192,7 +192,7 @@ Use these prompts only with an agent you run and trust. **Agent connector docume
 
 | Row | Effect |
 |---|---|
-| Help > Report a bug | Opens the public GitHub issue form in your browser with nothing attached. GitHub issues are public, so check everything you type. |
+| Help > Report a bug | Opens a review screen explaining that nothing is attached. Tap **Open GitHub** to open the public issue form in your browser. See [Report a problem](/docs/troubleshooting/report-problem#android-bug-report-screen). |
 | Help > About & licenses | Shows the version, build and MarmotKit version, open source licenses and the privacy policy. |
 | Chat with support | Starts a chat with White Noise Support. The profile needs a published receiving relay first. If it lacks one, tap **Open Relays**. |
 | Donate | Opens the donation page. |

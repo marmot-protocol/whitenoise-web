@@ -44,6 +44,16 @@ Tapping a link in a message opens a sheet of options, so check where the link go
 
 **Votes** lists who chose each option. It shows **No votes yet** until someone votes, and **Poll unavailable** if the poll was deleted.
 
+## Report a message
+
+Choose **Report** in the message actions. Pick a **Reason** and add an **Explanation (optional)**, then review the destination notice before tapping **Report Message**.
+
+> In a group, members can read your report and explanation. When **Send to White Noise** is available, it starts on: turn it off if you want to leave out the team copy. A team report includes your report and the sender's public key; the message itself is not shared with the team, and the sender is not notified.
+
+The available destinations depend on the conversation and your role. In a direct chat, a report can go to the White Noise team without a group copy. Read the notice on the form. **Saved and waiting to send.** or **Saved; delivery confirmation is pending.** means delivery is unfinished; follow the screen's instructions before submitting again.
+
+Group admins review group reports in [Moderation](/docs/using/groups/ios#review-group-reports). A message's **Reports** section shows the reports you are allowed to read; **Retry** reloads it and **Load more** shows more entries.
+
 ## Delete a message
 
 > **Before you delete:** removing a message for everyone can't erase copies others have already saved or forwarded, or captured. **Older clients may retain this message.** Expiring messages have the same limits.

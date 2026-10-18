@@ -38,3 +38,10 @@ The owner requested release-driven maintenance scheduling later. No timer is ins
 The existing Vercel Git integration supplies PR previews. Verify the exact PR head and CI before sharing its deployment. Current preview protection may require an authorized shareable link. Keep protection secrets private. Test the preview before merging to the production branch. A local HTML attachment supplements visual discussion; the hosted preview exercises routing, assets, headers and server responses.
 
 Screenshot presentation uses measured SVG viewports around the original PNG pixels. Status and navigation bars stay outside each viewport. Keep captions useful without the image, use highlights sparingly, and verify each outlined control against the captured UI. Run `node scripts/documentation-images.mjs --write` after changing a presentation. The integrity check compares the generated SVG with the original capture and rejects crop or highlight bounds outside the reviewed region. Cropping is presentation, not redaction: the embedded original remains recoverable. Use synthetic accounts exclusively. Synthetic conversations should use playful fictional text, with no personal accounts or internal test labels visible.
+
+
+## Screen coverage
+
+`src/lib/content/documentation-screens.json` maps main user-facing screens to guide sections at the recorded source revisions. Internal containers are listed separately. Each screen records whether text is sufficient, an existing capture illustrates it, or an iOS image is delegated. Tests reject missing guide sections, duplicate screen entries and unknown image references. Refresh this inventory when reviewing a new app revision; it does not discover future screens automatically.
+
+The current inventory covers 106 screens. Nine Android images illustrate selected tasks. Profile Keys blocks device screenshots; keep its instructions textual and never disable that protection to capture it. iOS captures remain assigned to issue14, including shared media, group relays, moderation and QR-scanner recovery. Every guide remains usable without images.

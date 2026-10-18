@@ -13,6 +13,8 @@ Relay URLs must start with wss://.
 
 ## Android
 
+<figure><a href="/docs/android/relays.svg"><img src="/docs/android/relays.svg" alt="Published relay lists and Refresh status on Android." loading="lazy" width="1080" height="900" /></a><figcaption class="type-small">Relay lists show where this profile posts and receives invitations. Select the image to enlarge.</figcaption></figure>
+
 Open **Settings > Relays**.
 
 ### Add a relay

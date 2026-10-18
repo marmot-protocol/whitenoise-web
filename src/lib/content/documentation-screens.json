@@ -1,0 +1,904 @@
+{
+    "reviewedAt": "2026-10-18",
+    "definition": "Main user-facing pages and settings destinations. A reference does not require an image; reusable containers and transient frames are excluded explicitly.",
+    "screens": [
+        {
+            "platform": "android",
+            "id": "ChatsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/ChatsScreen.kt",
+            "guide": "/docs/get-started/first-message/android#find-the-person",
+            "visual": "chats",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "ContactPickerScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
+            "guide": "/docs/using/contacts/android#find-someone",
+            "visual": "new-message",
+            "reason": "The first-message guide illustrates the same contact picker."
+        },
+        {
+            "platform": "android",
+            "id": "NewGroupRecipientPickerScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupRecipientPickerScreen.kt",
+            "guide": "/docs/using/groups/android#create-a-group",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "NewGroupSetupScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupSetupScreen.kt",
+            "guide": "/docs/using/groups/android#create-a-group",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "AppLockScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/common/AppLockScreen.kt",
+            "guide": "/docs/using/privacy/android#turn-on-device-authentication",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ConversationScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/ConversationScreen.kt",
+            "guide": "/docs/using/messages/android#type-and-send",
+            "visual": "conversation",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "PhotoEditorScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/editor/PhotoEditorScreen.kt",
+            "guide": "/docs/using/media/android#photo-editing",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "MessageDetailsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageDetailsScreen.kt",
+            "guide": "/docs/using/messages/android#act-on-a-message",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "MessageFullScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageFullScreen.kt",
+            "guide": "/docs/using/messages/android#act-on-a-message",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ContactPreviewScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/share/ContactPreviewScreen.kt",
+            "guide": "/docs/using/messages/android#type-and-send",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "LocationPickerScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/share/LocationPickerScreen.kt",
+            "guide": "/docs/using/messages/android#type-and-send",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ConversationNotificationSettingsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationNotificationSettingsScreen.kt",
+            "guide": "/docs/using/groups/android#notifications-and-disappearing-messages",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "GroupDetailsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDetailsScreen.kt",
+            "guide": "/docs/using/groups/android#open-group-details",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "GroupEditScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupEditScreen.kt",
+            "guide": "/docs/using/groups/android#edit-group-details",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "GroupInfoScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupInfoScreen.kt",
+            "guide": "/docs/using/groups/android#open-group-details",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "GroupMembersScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupMembersScreen.kt",
+            "guide": "/docs/using/groups/android#manage-members-and-admins",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "SignInScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignInScreen.kt",
+            "guide": "/docs/get-started/install/android#sign-in-with-an-existing-identity",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "SignUpScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreen.kt",
+            "guide": "/docs/get-started/install/android#create-a-new-profile",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "WelcomeScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/WelcomeScreen.kt",
+            "guide": "/docs/get-started/install/android#get-the-app",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ProfileEditScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditScreen.kt",
+            "guide": "/docs/using/profiles/android#edit-your-details",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ProfileNotificationOverrideScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileNotificationOverrideScreen.kt",
+            "guide": "/docs/using/contacts/android#set-notifications-for-one-person",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "AccountKeysScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysScreen.kt",
+            "guide": "/docs/settings/identity#android-profile-keys",
+            "visual": "text",
+            "reason": "The app protects this screen from screenshots; describe its controls without exposing key material."
+        },
+        {
+            "platform": "android",
+            "id": "ActionColorScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ActionColorScreen.kt",
+            "guide": "/docs/settings/android#appearance",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "AiAgentsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AiAgentsScreen.kt",
+            "guide": "/docs/settings/android#ai-agents",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "AppearanceScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AppearanceScreen.kt",
+            "guide": "/docs/settings/android#appearance",
+            "visual": "appearance",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "BlockedUsersScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/BlockedUsersScreen.kt",
+            "guide": "/docs/using/privacy/android#blocked-users",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ChatBubbleColorsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatBubbleColorsScreen.kt",
+            "guide": "/docs/settings/android#appearance",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ChatFolderEditScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatFolderEditScreen.kt",
+            "guide": "/docs/settings/android#edit-a-folder",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ChatFoldersScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatFoldersScreen.kt",
+            "guide": "/docs/settings/android#folders",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "CustomEmojiScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/CustomEmojiScreen.kt",
+            "guide": "/docs/settings/android#custom-emoji",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "DataUsageScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DataUsageScreen.kt",
+            "guide": "/docs/using/media/android#data-usage-settings",
+            "visual": "data-usage",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "DeveloperScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DeveloperScreen.kt",
+            "guide": "/docs/settings/android#developer-tools",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "DevicePrivacyScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
+            "guide": "/docs/using/privacy/android#device-protection",
+            "visual": "privacy",
+            "reason": "A verified Android capture illustrates device protection."
+        },
+        {
+            "platform": "android",
+            "id": "DiagnosticsImprovementsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsImprovementsScreen.kt",
+            "guide": "/docs/settings/android/diagnostics#open-the-controls",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "DiagnosticsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsScreen.kt",
+            "guide": "/docs/settings/android/diagnostics#developer-diagnostics",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "DictationSettingsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
+            "guide": "/docs/settings/android/dictation#set-up-a-speech-service",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "DonateScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DonateScreen.kt",
+            "guide": "/docs/settings/android#support",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "GestureSettingsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/GestureSettingsScreen.kt",
+            "guide": "/docs/settings/android#swipe-actions",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "KeyPackagesScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackagesScreen.kt",
+            "guide": "/docs/settings/identity#invitation-keys",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "LanguageScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LanguageScreen.kt",
+            "guide": "/docs/settings/android#appearance",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "NotificationsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationsScreen.kt",
+            "guide": "/docs/using/notifications/android#allow-notifications",
+            "visual": "notifications",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "OpenSourceLicensesScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/OpenSourceLicensesScreen.kt",
+            "guide": "/docs/settings/android#support",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "QuarantinedGroupsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/QuarantinedGroupsScreen.kt",
+            "guide": "/docs/using/groups/android#advanced-recover-a-group",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "RelaysScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelaysScreen.kt",
+            "guide": "/docs/settings/relays#android",
+            "visual": "relays",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "SettingsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SettingsScreen.kt",
+            "guide": "/docs/settings/android#settings-layout",
+            "visual": "settings",
+            "reason": "A verified Android capture illustrates this destination."
+        },
+        {
+            "platform": "android",
+            "id": "ShareConnectScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ShareConnectScreen.kt",
+            "guide": "/docs/using/profiles/android#share-your-profile",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "SupportScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt",
+            "guide": "/docs/settings/android#support",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "TextToSpeechScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TextToSpeechScreen.kt",
+            "guide": "/docs/settings/android#read-aloud",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "TranslationSettingsScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TranslationSettingsScreen.kt",
+            "guide": "/docs/settings/android/translation#global-settings",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "android",
+            "id": "ShareChatPickerFullScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/share/ShareChatPickerFullScreen.kt",
+            "guide": "/docs/using/messages/android#act-on-a-message",
+            "visual": "text",
+            "reason": "This reference is sufficient without another image."
+        },
+        {
+            "platform": "ios",
+            "id": "ChatsListView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/ChatsListView.swift",
+            "guide": "/docs/get-started/first-message/ios#start-a-chat",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "NewChatFlowView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "guide": "/docs/using/contacts/ios#start-a-chat-with-someone",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "NewGroupPickerView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupPickerView.swift",
+            "guide": "/docs/using/groups/ios#create-a-group",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "NewGroupSetupView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupSetupView.swift",
+            "guide": "/docs/using/groups/ios#create-a-group",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AttachmentTransfersView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
+            "guide": "/docs/using/media/ios#manage-a-single-download",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "ConversationView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ConversationView.swift",
+            "guide": "/docs/using/messages/ios#write-and-send",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "GiphySearchView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/GiphySearchView.swift",
+            "guide": "/docs/using/media/ios#add-a-gif-or-other-attachment",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "GroupRecoveryView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/GroupRecoveryView.swift",
+            "guide": "/docs/using/groups/ios#advanced-recover-a-group",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "MessageReportsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageReportsView.swift",
+            "guide": "/docs/using/messages/ios#report-a-message",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "PollComposerView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/PollComposerView.swift",
+            "guide": "/docs/using/messages/ios#create-a-poll",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DiagnosticsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Diagnostics/DiagnosticsView.swift",
+            "guide": "/docs/settings/ios/diagnostics#other-tools",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "ChatDeveloperToolsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
+            "guide": "/docs/using/groups/ios#advanced-recover-a-group",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "ChatNotificationsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatNotificationsView.swift",
+            "guide": "/docs/using/groups/ios#notifications-and-disappearing-messages",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "GroupDetailsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupDetailsView.swift",
+            "guide": "/docs/using/groups/ios#open-group-info",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "GroupModerationView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupModerationView.swift",
+            "guide": "/docs/using/groups/ios#review-group-reports",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "GroupRelaysView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupRelaysView.swift",
+            "guide": "/docs/using/groups/ios#view-group-relays",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "SharedMediaLibraryView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/SharedMediaLibraryView.swift",
+            "guide": "/docs/using/media/ios#browse-shared-media",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "AccountSetupDeviceView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupDeviceView.swift",
+            "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AccountSetupRelayStepView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
+            "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AccountSetupSecureMessagingView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupSecureMessagingView.swift",
+            "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AccountSetupView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupView.swift",
+            "guide": "/docs/get-started/install/ios#recover-an-unfinished-setup",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "CreateIdentityView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/CreateIdentityView.swift",
+            "guide": "/docs/get-started/install/ios#create-a-new-profile",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "ImportIdentityView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/ImportIdentityView.swift",
+            "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "WelcomeView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/WelcomeView.swift",
+            "guide": "/docs/get-started/install/ios#get-the-app",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "ProfileView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Profile/ProfileView.swift",
+            "guide": "/docs/using/profiles/ios#edit-your-details",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "QRScannerUnavailableView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Profile/QRScannerUnavailableView.swift",
+            "guide": "/docs/using/contacts/ios#fix-common-problems",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "QRScannerView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Profile/QRScannerView.swift",
+            "guide": "/docs/using/contacts/ios#start-a-chat-with-someone",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "AIAgentsSettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
+            "guide": "/docs/settings/ios#ai-agents",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AccountsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AccountsView.swift",
+            "guide": "/docs/using/profiles/ios#switch-or-add-profiles",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AppearanceSettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AppearanceSettingsView.swift",
+            "guide": "/docs/settings/ios#appearance",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "AttachmentStorageSettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
+            "guide": "/docs/using/media/ios#download-storage",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "BlockedUsersView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/BlockedUsersView.swift",
+            "guide": "/docs/using/privacy/ios#blocked-users",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DataAndStorageView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DataAndStorageView.swift",
+            "guide": "/docs/using/media/ios#data-usage-settings",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DeveloperToolsSettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "guide": "/docs/settings/ios#developer-tools",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DiagnosticsAndImprovementsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
+            "guide": "/docs/settings/ios/diagnostics#open-the-controls",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DonateView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonateView.swift",
+            "guide": "/docs/settings/ios#support-and-donate",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DonationHistoryView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationHistoryView.swift",
+            "guide": "/docs/settings/ios#support-and-donate",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DonationInvoiceView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationInvoiceView.swift",
+            "guide": "/docs/settings/ios#support-and-donate",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "DonationSuccessView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationSuccessView.swift",
+            "guide": "/docs/settings/ios#support-and-donate",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "EraseAppDataView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "guide": "/docs/using/privacy/ios#erase-app-data",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "IdentityView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/IdentityView.swift",
+            "guide": "/docs/settings/identity#ios-profile-keys",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "KeyPackagesView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/KeyPackagesView.swift",
+            "guide": "/docs/settings/identity#invitation-keys",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "NotificationSettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "guide": "/docs/using/notifications/ios#allow-notifications",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "PrivacySecuritySettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "guide": "/docs/using/privacy/ios#app-security",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "ProfileEditView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ProfileEditView.swift",
+            "guide": "/docs/using/profiles/ios#edit-your-details",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "QuarantinedGroupsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
+            "guide": "/docs/using/groups/ios#advanced-recover-a-group",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "RelaysView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/RelaysView.swift",
+            "guide": "/docs/settings/relays#ios",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "SettingsView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SettingsView.swift",
+            "guide": "/docs/settings/ios#settings-layout",
+            "visual": "delegated",
+            "reason": "iOS capture handoff: issue14."
+        },
+        {
+            "platform": "ios",
+            "id": "ShareAndConnectView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "guide": "/docs/using/profiles/ios#share-your-profile",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "SignOutAndWipeView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SignOutAndWipeView.swift",
+            "guide": "/docs/using/profiles/ios#delete-a-profile",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "ios",
+            "id": "SupportChatView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SupportChatView.swift",
+            "guide": "/docs/settings/ios#support-and-donate",
+            "visual": "text",
+            "reason": "The linked instructions describe this screen; another image is optional."
+        },
+        {
+            "platform": "android",
+            "id": "HelpScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
+            "guide": "/docs/settings/android#support",
+            "visual": "text",
+            "reason": "No image of key material, account setup or external reporting is needed."
+        },
+        {
+            "platform": "android",
+            "id": "BugReportScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
+            "guide": "/docs/troubleshooting/report-problem#android-bug-report-screen",
+            "visual": "text",
+            "reason": "No image of key material, account setup or external reporting is needed."
+        },
+        {
+            "platform": "android",
+            "id": "AboutScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
+            "guide": "/docs/settings/android#support",
+            "visual": "text",
+            "reason": "No image of key material, account setup or external reporting is needed."
+        },
+        {
+            "platform": "android",
+            "id": "AccountSetupScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt",
+            "guide": "/docs/get-started/install/android#recover-an-unfinished-setup",
+            "visual": "text",
+            "reason": "No image of key material, account setup or external reporting is needed."
+        },
+        {
+            "platform": "android",
+            "id": "ProfileSheet",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileSheet.kt",
+            "guide": "/docs/using/contacts/android#use-a-persons-profile",
+            "visual": "text",
+            "reason": "The controls are described without exposing contact data."
+        }
+    ],
+    "excluded": [
+        {
+            "platform": "android",
+            "id": "TtsReturnTransitionScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/navigation/TtsReturnTransitionScreen.kt",
+            "reason": "Non-interactive restoration frame, not a separate reader task."
+        },
+        {
+            "platform": "android",
+            "id": "OnboardingScreen",
+            "source": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
+            "reason": "Container for the onboarding flow; Welcome, Sign Up, Sign In and setup are referenced separately."
+        },
+        {
+            "platform": "ios",
+            "id": "WNZoomScrollView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Components/WNZoomScrollView.swift",
+            "reason": "Reusable media zoom container, covered by Media."
+        },
+        {
+            "platform": "ios",
+            "id": "MarkdownMessageView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MarkdownMessageView.swift",
+            "reason": "Message rendering component, covered by Messages."
+        },
+        {
+            "platform": "ios",
+            "id": "MainView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/MainView.swift",
+            "reason": "App container; destinations are referenced individually."
+        },
+        {
+            "platform": "ios",
+            "id": "LaunchBrandView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/LaunchBrandView.swift",
+            "reason": "Non-interactive launch artwork."
+        },
+        {
+            "platform": "ios",
+            "id": "ProfileContentView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Profile/ProfileContentView.swift",
+            "reason": "Shared profile body, covered by Profile and Profile Edit."
+        },
+        {
+            "platform": "ios",
+            "id": "RootView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/RootView.swift",
+            "reason": "Root state container; destinations are referenced individually."
+        }
+    ]
+}

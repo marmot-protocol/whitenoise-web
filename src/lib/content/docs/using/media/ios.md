@@ -10,7 +10,7 @@ Send photos, videos, voice messages, and GIFs, view what you receive, and contro
 
 ## Take a photo or video
 
-1. Open the camera from the message composer.
+1. Open the camera from the message composer in the conversation where you want to share the capture.
 2. Tap for a photo, or hold for video. Video includes sound when microphone access is allowed. Otherwise, tap **Videos record without sound** to open Settings and allow microphone access. **Switch Camera** changes cameras, and **Close Camera** leaves the camera.
 3. The capture appears in your draft. Tap it to preview it, or tap **Remove attachment** to drop it. Then send.
 
@@ -22,18 +22,22 @@ Use the composer's attachment controls. In GIF search (**Powered by** GIPHY), th
 
 ## Record a voice message
 
-1. Touch and hold **Voice message**. Recording starts after a short hold. A quick tap doesn't start recording.
+1. Touch and hold **Voice message** until recording starts; a quick tap leaves the recorder idle.
 2. Release to add the recording to your draft. For a longer recording, drag up while holding to lock it, then tap **Finish recording** when done.
-3. Review the draft, then send. **Cancel recording** discards a recording in progress. **Remove attachment** drops a finished recording.
+3. Review the draft before sending, or use **Remove attachment** to discard the finished recording. You can also discard a recording in progress with **Cancel recording**.
 
 ## View, play, and save media
 
 - Tap media in a message to open it full screen. Use **Save**, **Go to Message**, or **More** for other actions.
 - Videos and voice messages have a **Playback speed** control.
 - For files, tap **Open attachment**.
-- If media doesn't load, tap **Retry**.
+- If media doesn't load, use its **Retry** action to try loading that item again.
 
-If your message shows **Not delivered. Tap for options.**, tap it and choose **Try Again**. **Delete** discards the unsent message.
+To retry an unsent message, tap its delivery warning and choose **Try Again** from the options. Choose **Delete** to discard that unsent message instead.
+
+## Browse shared media
+
+Open the conversation details and, under **Shared in Chat**, choose **Photos & Videos**, **Links** or **Documents**. The **Shared Media** screen has **Media**, **Voice**, **Files** and **Links** views. Open an item to view or play it. Use **Refresh**, **Retry** after a loading error, or **Load more** when more items are available.
 
 ## Manage a single download
 

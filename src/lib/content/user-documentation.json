@@ -278,7 +278,8 @@
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewChatFlowView.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupPickerView.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ShareAndConnectView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Profile/QRScannerUnavailableView.swift"
         ]
     },
     {
@@ -343,7 +344,9 @@
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupsInCommonSection.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatNotificationsView.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupRetentionEditorSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatDeveloperToolsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupRelaysView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupModerationView.swift"
         ]
     },
     {
@@ -394,7 +397,9 @@
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/PollComposerView.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/PollVotesSheet.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageLinkActionSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/BlockedConversationNotice.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/BlockedConversationNotice.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupModerationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageReportsView.swift"
         ]
     },
     {
@@ -436,7 +441,9 @@
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
             "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DataAndStorageView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/SharedMediaLibraryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupDetailsView.swift"
         ]
     },
     {
@@ -591,7 +598,8 @@
         "platform": "shared",
         "sources": [
             "https://github.com/marmot-protocol/whitenoise-web/blob/2acf71acc07b3e514e6a50b5094362e66ba46820/src/lib/content/faqs.ts",
-            "https://github.com/marmot-protocol/mdk/blob/d20329e9ac6337294a9b4414a55f97bc76b6581d/integrations/README.md"
+            "https://github.com/marmot-protocol/mdk/blob/d20329e9ac6337294a9b4414a55f97bc76b6581d/integrations/README.md",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt"
         ]
     },
     {

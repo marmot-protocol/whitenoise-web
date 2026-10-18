@@ -222,5 +222,110 @@
             "description": "Show notification previews controls whether alerts include names and message content.",
             "alt": "Notification settings with Show notification previews outlined."
         }
+    },
+    {
+        "id": "relays",
+        "url": "/docs/android/relays.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "14a4e01ae40759417c48986f7031ea2a217bde9ba7917843ec097daa4c45e589",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["settings/relays"],
+        "presentation": {
+            "url": "/docs/android/relays.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 900
+            },
+            "highlights": [],
+            "description": "Relay lists show where this profile posts and receives invitations.",
+            "alt": "Published relay lists and Refresh status on Android."
+        }
+    },
+    {
+        "id": "data-usage",
+        "url": "/docs/android/data-usage.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "e9174eeee2cb7e993cfa8be80abfae07b6af9886450d4307d75da82611971a06",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/data-usage.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 1270
+            },
+            "highlights": [],
+            "description": "Choose automatic-download rules for each media type. The displayed values illustrate one profile\u2019s settings.",
+            "alt": "Android Data Usage settings for photos, videos, audio and files."
+        }
+    },
+    {
+        "id": "privacy",
+        "url": "/docs/android/privacy.png",
+        "platform": "android",
+        "build": "CI preview4551",
+        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
+        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
+        "imageSha256": "86b6054ae823c6cf1e3f4ad51d54bf96961d1da0b7ab5d0b4a9128da0cf033d7",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-10-18",
+        "guides": ["using/privacy/android"],
+        "presentation": {
+            "url": "/docs/android/privacy.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 1170
+            },
+            "highlights": [],
+            "description": "Device protection includes screen security, keyboard privacy and device authentication. Set a device screen lock before enabling authentication.",
+            "alt": "Android device protection controls, with authentication unavailable until a screen lock is set."
+        }
     }
 ]

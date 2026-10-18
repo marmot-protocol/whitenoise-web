@@ -13,6 +13,10 @@ Open **Settings > Chat with support** for help inside White Noise. For a reprodu
 - [Agent connector issues](https://github.com/marmot-protocol/mdk/issues)
 - [Website issues](https://github.com/marmot-protocol/whitenoise-web/issues)
 
+## Android bug-report screen
+
+Open **Settings > Help > Report a bug**. First, White Noise shows a review screen explaining that nothing is attached: messages, media, contacts, profile details, keys and logs stay out of the form. Tap **Open GitHub** to open the public issue form, then review anything you add. If no browser is available, return to Help or try again after installing one.
+
 ## Before you report
 
 1. Note your platform and device. Add your White Noise version too; [Compatibility](/docs/compatibility#find-your-version) explains where it appears.

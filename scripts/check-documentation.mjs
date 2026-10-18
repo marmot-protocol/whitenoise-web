@@ -128,7 +128,11 @@ for (const capture of captures) {
     assert(capture.guides.length > 0, "Capture must illustrate a guide");
     for (const slug of capture.guides)
         assert(
-            pages.some((page) => page.slug === slug && page.platform === capture.platform),
+            pages.some(
+                (page) =>
+                    page.slug === slug &&
+                    (page.platform === capture.platform || page.platform === "shared")
+            ),
             `Unknown capture guide: ${slug}`
         );
     assert(
@@ -181,4 +185,31 @@ assert(
 );
 console.log(
     `Documentation integrity: ${pages.length} guides, ${captures.length} verified capture files`
+);
+
+const screenCoverage = await readJson("src/lib/content/documentation-screens.json");
+const screenKeys = new Set();
+for (const screen of screenCoverage.screens) {
+    const key = `${screen.platform}:${screen.id}`;
+    assert(!screenKeys.has(key), `Duplicate screen: ${key}`);
+    screenKeys.add(key);
+    const repository = `whitenoise-${screen.platform}`;
+    assert(
+        screen.source.startsWith(
+            `https://github.com/marmot-protocol/${repository}/blob/${sourceRevisions[repository]}/`
+        ),
+        `Unpinned screen source: ${key}`
+    );
+    assert(
+        pages.some((page) => screen.guide.startsWith(`/docs/${page.slug}#`)),
+        `Missing screen guide: ${key}`
+    );
+    assert(
+        ["text", "delegated", ...captures.map((capture) => capture.id)].includes(screen.visual),
+        `Missing screen capture: ${key}`
+    );
+    assert(screen.reason.length > 10, `Missing visual decision: ${key}`);
+}
+console.log(
+    `Screen coverage: ${screenCoverage.screens.length} references; ${screenCoverage.excluded.length} excluded containers`
 );

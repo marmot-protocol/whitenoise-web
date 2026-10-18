@@ -4,6 +4,8 @@ These controls limit what other people and apps can see on your phone. Open Sett
 
 ## Device protection
 
+<figure><a href="/docs/android/privacy.svg"><img src="/docs/android/privacy.svg" alt="Android device protection controls, with authentication unavailable until a screen lock is set." loading="lazy" width="1080" height="1170" /></a><figcaption class="type-small">Device protection includes screen security, keyboard privacy and device authentication. Set a device screen lock before enabling authentication. Select the image to enlarge.</figcaption></figure>
+
 - **Screen security** blocks screenshots and hides previews in Recents.
 - **Incognito keyboard** asks your keyboard to skip learning from what you type in White Noise. Keyboards may ignore this request, so treat it as best effort.
 - **Require device authentication** asks for your device screen lock when you return to White Noise after the **Auto-lock** period has passed.

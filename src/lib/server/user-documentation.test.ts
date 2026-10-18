@@ -1,9 +1,26 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import screenCoverage from "../content/documentation-screens.json";
 import { pageMarkdown } from "./agent-markdown";
 import { documentationIndex, documentationPage, documentationPages } from "./user-documentation";
 
 describe("user documentation registry", () => {
+    it("gives each inventoried screen a working guide and section", () => {
+        const seen = new Set<string>();
+        for (const screen of screenCoverage.screens) {
+            const key = `${screen.platform}:${screen.id}`;
+            expect(seen.has(key), key).toBe(false);
+            seen.add(key);
+            const [route, anchor] = screen.guide.split("#");
+            const page = documentationPage(route.replace("/docs/", ""));
+            expect(page, key).toBeTruthy();
+            expect(
+                page.headings.map((heading) => heading.id),
+                key
+            ).toContain(anchor);
+        }
+    });
+
     it("publishes unique, directly addressable guides and source references", () => {
         const index = documentationIndex();
         expect(index.length).toBeGreaterThan(25);

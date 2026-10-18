@@ -33,6 +33,8 @@ Open **Share & Connect** to share your profile URL or picture, or to show your Q
 - If a chat fails to start, tap **Retry**.
 - When a chat shows as unavailable, it may still be syncing. Wait a moment, then tap **Retry**.
 
+If **QR Scanning Unavailable** appears, follow its explanation. For denied camera access, tap **Open Settings** and allow camera access for White Noise. For a busy or interrupted camera, close the other camera app or wait, then tap **Try Again**. Use White Noise full screen if requested. Device restrictions or a missing camera require another way to connect, such as a profile URL.
+
 ## Related
 
 - [Your profile on iOS](/docs/using/profiles/ios)

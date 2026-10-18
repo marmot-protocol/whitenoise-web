@@ -37,6 +37,18 @@ To change the picture, tap the group photo. If an update fails, check your conne
 
 Admins are labeled **Admin** and listed first. If an action fails, check your connection and retry it.
 
+## View group relays
+
+In the conversation details, open **Relays** to see the servers used by this conversation. The list is read-only. Changing your account relay list does not change an existing group's routing.
+
+## Review group reports
+
+Active group admins can open **Moderation** from Group Info. Each entry shows the report and the message when it is available. Tap **Dismiss** to close the report without deleting the message, or **Delete** to review the **Delete Message** confirmation.
+
+> Deletion affects members using compatible clients. Older clients may retain the message, and saved copies remain outside your control.
+
+Tap **Retry** if the list fails to load, or **Load more** to see more reports. **Saved; delivery confirmation is pending.** means the action is still waiting for confirmation.
+
 ## Notifications and disappearing messages
 
 Tap **Notifications**. Under **Notify me about**, choose **All messages**, **Only mentions**, or **Nothing**. Tap **Mute** to silence the chat and **Unmute** to restore it. Tap **Retry** when settings fail to load.

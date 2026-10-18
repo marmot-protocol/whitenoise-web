@@ -55,6 +55,8 @@ While a download is running, tap **Cancel download**. After **Download cancelled
 
 ## Data Usage settings
 
+<figure><a href="/docs/android/data-usage.svg"><img src="/docs/android/data-usage.svg" alt="Android Data Usage settings for photos, videos, audio and files." loading="lazy" width="1080" height="1270" /></a><figcaption class="type-small">Choose automatic-download rules for each media type. The displayed values illustrate one profile’s settings. Select the image to enlarge.</figcaption></figure>
+
 Open **Settings**, then **Data Usage**.
 
 - **Automatic downloads**: for **Photos**, **Audio**, **Videos**, and **Files**, choose which networks are allowed (**Wi-Fi**, **Mobile data**, **Roaming**, or **Metered network**), then tap **Done**. A download starts automatically only if every rule that matches your connection allows it. **Reset download settings** restores the default rules for all types.
