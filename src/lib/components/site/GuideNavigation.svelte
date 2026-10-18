@@ -107,7 +107,7 @@ const currentLabel = $derived(
 {#if compact}
     <details class="compact-guide-nav nav-more" bind:this={menu} bind:open={open}>
         <summary class="site-width type-ui" bind:this={trigger} aria-label={`${navigationLabel}: ${currentLabel}`} onclick={() => onopen?.()}>
-            <span>{currentLabel}</span><Icon name="chevron" />
+            <span>{area === "documentation" ? "On this page" : currentLabel}</span><Icon name="chevron" />
         </summary>
         <nav class="nav-more-links guide-menu-links" aria-label={navigationLabel}>
             {#each links as link}
@@ -117,7 +117,7 @@ const currentLabel = $derived(
     </details>
 {:else}
     <aside class="guide-sidebar" bind:this={sidebar}>
-        <p class="guide-sidebar-title type-ui">{guideInfo[area].title}</p>
+        <p class="guide-sidebar-title type-ui">{area === "documentation" ? "On this page" : guideInfo[area].title}</p>
         <nav aria-label={navigationLabel}>
             {#each links as link}
                 <a class="type-ui" href={link.href} aria-current={link.id === selected ? (link.href.includes("#") ? "location" : "page") : undefined}>{link.label}</a>

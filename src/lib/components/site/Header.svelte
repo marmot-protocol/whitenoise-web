@@ -127,5 +127,5 @@ function resized() {
         <ThemeToggle />
     </nav>
     </div>
-    {#if guideArea}<GuideNavigation area={guideArea} compact onopen={closeMenu} />{/if}
+    {#if guideArea && page.url.pathname !== "/docs"}<GuideNavigation area={guideArea} compact onopen={closeMenu} />{/if}
 </header>

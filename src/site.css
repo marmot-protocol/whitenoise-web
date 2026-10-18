@@ -1152,3 +1152,15 @@ body {
 .docs-hub-list li + li {
     margin-top: var(--space-16);
 }
+
+.docs-guide-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-16);
+    margin-bottom: var(--space-24);
+}
+.docs-guide-tools .text-link {
+    margin-top: 0;
+}
