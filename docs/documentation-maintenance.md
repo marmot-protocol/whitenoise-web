@@ -10,7 +10,7 @@ Keep essential guide content in the article. Navigation and asides are omitted f
 
 Add each guide URL to `agent-pages.json` for deployed Markdown negotiation. The index, full text export, search and documentation sitemap derive from the registry. Preserve existing public URLs and redirects. Run `bun run docs:check`, the required repository checks and `bun run ci` before publication.
 
-Search uses native input/select controls with the existing secondary action styles. It adds no CSS values or visual primitives. Guide counts stay readable as text; the live region announces loading or failure. A failed index keeps title/summary search available and retries through an explicit button.
+The approved Simple rows design uses native input/select controls with underlined edges, and full-row guide links with small arrows and fine separators. It reuses existing typography, color and spacing tokens. Search result counts stay readable as text; the live region announces loading or failure. A failed index keeps title/summary search available and retries through an explicit button.
 
 ## Review each application release
 

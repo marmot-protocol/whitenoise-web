@@ -19,7 +19,7 @@ let { document }: { document: ReturnType<typeof documentationPage> } = $props();
         <nav class="docs-guide-tools" aria-label="Guide navigation">
             <TextLink href="/docs">All guides</TextLink>
             {#if document.counterpart}
-                <select class="wn-button secondary" aria-label="Guide platform" value={`/docs/${document.slug}`} onchange={(event) => goto(event.currentTarget.value)}>
+                <select class="docs-platform-select type-ui" aria-label="Guide platform" value={`/docs/${document.slug}`} onchange={(event) => goto(event.currentTarget.value)}>
                     <option value={document.platform === "android" ? `/docs/${document.slug}` : document.counterpart.url}>Android</option>
                     <option value={document.platform === "ios" ? `/docs/${document.slug}` : document.counterpart.url}>iOS</option>
                 </select>
@@ -27,6 +27,7 @@ let { document }: { document: ReturnType<typeof documentationPage> } = $props();
             {/if}
         </nav>
         <PageIntro title={document.title} description={document.description} />
+        <aside class="docs-inline-contents" aria-label="Page contents"><GuideNavigation area="documentation" compact /></aside>
         <article class="technical-content documentation-body">
             {@html document.html}
             {#if document.captures.length}

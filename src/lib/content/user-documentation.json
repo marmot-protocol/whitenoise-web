@@ -150,7 +150,7 @@
     {
         "slug": "get-started/install/android",
         "title": "Install and set up White Noise",
-        "description": "Install White Noise on Android, then create a new profile or sign in with an existing private key.",
+        "description": "Install the app and create a profile.",
         "category": "get-started",
         "platform": "android",
         "sources": [
@@ -169,7 +169,7 @@
     {
         "slug": "get-started/install/ios",
         "title": "Install and set up White Noise",
-        "description": "Install White Noise on iPhone, then create a new profile or sign in with an existing private key.",
+        "description": "Install the app and create a profile.",
         "category": "get-started",
         "platform": "ios",
         "sources": [
@@ -188,7 +188,7 @@
     {
         "slug": "get-started/first-message/android",
         "title": "Send a message",
-        "description": "Find someone from New Message, start an encrypted chat and handle invitations.",
+        "description": "Find someone and start a chat.",
         "category": "get-started",
         "platform": "android",
         "sources": [
@@ -206,7 +206,7 @@
     {
         "slug": "get-started/first-message/ios",
         "title": "Send a message",
-        "description": "Start a chat from New Message, send your first message and handle invitations.",
+        "description": "Find someone and start a chat.",
         "category": "get-started",
         "platform": "ios",
         "sources": [
