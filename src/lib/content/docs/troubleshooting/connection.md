@@ -9,7 +9,7 @@ White Noise cannot guarantee connectivity. Network providers and governments can
 1. Check that the device has internet access by trying another app.
 2. Switch networks, for example from Wi-Fi to mobile data, to see whether one network blocks relays.
 3. If you use a VPN or proxy, test with it on and with it off, but only where that is safe for you. Some VPNs block relay connections, and some networks only work through one.
-4. Review your relay configuration. Messages can travel through several relays, so add a reachable relay that the other participants also use. Your relay choices have to work for the whole group.
+4. Review [relay settings](/docs/settings/relays) if invitations fail. Profile and inbox relay changes help people reach you, while existing conversations keep their current relays. Changing your account list alone does not reroute an existing group.
 5. Running your own compatible Nostr relay gives you control of that server. Copies held on other relays stay outside your control.
 6. For an agent, make sure the computer running the connector has network access and that the connector is running.
 

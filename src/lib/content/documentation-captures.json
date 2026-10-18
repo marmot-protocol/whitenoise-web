@@ -537,5 +537,365 @@
             "description": "Review the proposed read and write relay lists before saving changes. The displayed relay addresses are examples.",
             "alt": "Account-setup relay proposal with read and write lists and a warning about other Nostr apps."
         }
+    },
+    {
+        "id": "backup-dialog",
+        "url": "/docs/android/backup-dialog.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/profile_keys_backup_choices_light.png",
+        "imageSha256": "9a8a337ab296a85534b8619e7ea5699dca2dd6a163c3c3c6be300d2e9fb52955",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 368
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/recovery/android"],
+        "presentation": {
+            "url": "/docs/android/backup-dialog.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 368
+            },
+            "highlights": [],
+            "description": "Use a long, unique password and confirm it before exporting your encrypted private key.",
+            "alt": "Encrypted Private Key dialog with empty password and confirmation fields."
+        }
+    },
+    {
+        "id": "share-qr",
+        "url": "/docs/android/share-qr.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/share_connect_menu_light.png",
+        "imageSha256": "a44c4849e7c08358f417d052426587edce6cadf0af63aec1c3d4de862e3bccf7",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/profiles/android"],
+        "presentation": {
+            "url": "/docs/android/share-qr.svg",
+            "crop": {
+                "x": 16,
+                "y": 340,
+                "width": 328,
+                "height": 440
+            },
+            "highlights": [],
+            "description": "Open your own Share & Connect screen so someone can scan your profile code. This image shows an example code.",
+            "alt": "Example profile QR code and Scan QR Code button."
+        }
+    },
+    {
+        "id": "attachment-menu",
+        "url": "/docs/android/attachment-menu.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/composer_attachment_menu.png",
+        "imageSha256": "061ec188044d4d7ac3e883e13a22155f69977436df30571039aba0a233e1728f",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/attachment-menu.svg",
+            "crop": {
+                "x": 8,
+                "y": 344,
+                "width": 208,
+                "height": 390
+            },
+            "highlights": [],
+            "description": "Add attachment opens choices for media, files, location and contacts, plus Create poll.",
+            "alt": "Attachment menu with Camera, Photos and videos, Files, Location, Contact, Device contact and Create poll."
+        }
+    },
+    {
+        "id": "translation-settings",
+        "url": "/docs/android/translation-settings.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/translation_settings_off_light.png",
+        "imageSha256": "fa6f34d7288648fa8f73d216a2f50a240bc7840f0da023a38a11ae6fceb36271",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 650
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["settings/android/translation"],
+        "presentation": {
+            "url": "/docs/android/translation-settings.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 395
+            },
+            "highlights": [],
+            "description": "Review the privacy notice before enabling automatic translation. The target language shown here is an example.",
+            "alt": "Translation privacy notice, automatic translation switch, target language and Open engine control."
+        }
+    },
+    {
+        "id": "dictation-settings",
+        "url": "/docs/android/dictation-settings.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/dictation_settings_default_light.png",
+        "imageSha256": "5b7ee3545b267aa0f283a36db0e98f15f412e2d9409e9e67842cf8372e01b91b",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["settings/android/dictation"],
+        "presentation": {
+            "url": "/docs/android/dictation-settings.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 610
+            },
+            "highlights": [],
+            "description": "Choose a speech provider and how dictation finishes. The service notice explains where audio may be processed.",
+            "alt": "Dictation settings with provider, pause-other-audio and finish-dictation controls."
+        }
+    },
+    {
+        "id": "read-aloud-settings",
+        "url": "/docs/android/read-aloud-settings.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/tts_voice_media_settings_light.png",
+        "imageSha256": "97bfffd9f3f1257a75c645172b5a43efff2ec80211b1cb12b546fe580632b357",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 308
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["settings/android"],
+        "presentation": {
+            "url": "/docs/android/read-aloud-settings.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 308
+            },
+            "highlights": [],
+            "description": "Automatic reading and audio-mixing preferences are separate controls. Review them before enabling reading by default.",
+            "alt": "Read-aloud defaults, Speak over playing media and speech-over-media volume."
+        }
+    },
+    {
+        "id": "read-aloud-controls",
+        "url": "/docs/android/read-aloud-controls.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/tts_transport_bar_speaking_light.png",
+        "imageSha256": "8483e12326eb52b9f1207538abf816568c642af2c5605817fb01a3d7cac05245",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 72
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/messages/android"],
+        "presentation": {
+            "url": "/docs/android/read-aloud-controls.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 72
+            },
+            "highlights": [],
+            "description": "The controls move between messages or sentences, pause reading, change its rate and stop it.",
+            "alt": "Read-aloud controls showing previous message, previous sentence, pause, next sentence, next message, rate and stop."
+        }
+    },
+    {
+        "id": "chat-folders",
+        "url": "/docs/android/chat-folders.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/chat_folders_screen_light.png",
+        "imageSha256": "2cf38face7b58c7785cbbad8889bead65f49dd5eeeefa280e7b6d2d4c4ab28ad",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["settings/android"],
+        "presentation": {
+            "url": "/docs/android/chat-folders.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 315
+            },
+            "highlights": [],
+            "description": "Folders organize chats. Use the plus button to add one and the row menu to manage it.",
+            "alt": "Folders screen with Unread, Archived and Groups, plus add and row-menu controls."
+        }
+    },
+    {
+        "id": "group-review",
+        "url": "/docs/android/group-review.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/group_setup_light.png",
+        "imageSha256": "13c573a31093975848006826c5bc2b8fc33318ef42c5ec6fbc3ea1d602298c55",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 1000
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/groups/android"],
+        "presentation": {
+            "url": "/docs/android/group-review.svg",
+            "crop": {
+                "x": 0,
+                "y": 520,
+                "width": 360,
+                "height": 480
+            },
+            "highlights": [],
+            "description": "Review the disappearing-message setting and selected members before choosing Create Group.",
+            "alt": "Group setup review with disappearing messages, sample members and Create Group."
+        }
+    },
+    {
+        "id": "composer-voice",
+        "url": "/docs/android/composer-voice.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/composer_dictation_and_voice_note_idle_compact.png",
+        "imageSha256": "c4d01ca1b4d94c7f3538d0d1ffbc7f3f38a9b119c456f9acbe6c149c1257bf24",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 320,
+            "height": 60
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/composer-voice.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 60
+            },
+            "highlights": [],
+            "description": "Tap the microphone to dictate text; hold the waveform control to record a voice message.",
+            "alt": "Message composer with separate microphone and voice-waveform controls."
+        }
+    },
+    {
+        "id": "group-actions",
+        "url": "/docs/android/group-actions.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/group_details_admin_full_light.png",
+        "imageSha256": "f8725fc2d97517a7a81c64651197344b4f4f0d1b01b4bc5aafecd1579db7115c",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/groups/android"],
+        "presentation": {
+            "url": "/docs/android/group-actions.svg",
+            "crop": {
+                "x": 0,
+                "y": 368,
+                "width": 360,
+                "height": 100
+            },
+            "highlights": [],
+            "description": "Mute, Disappearing and Search open controls for this conversation.",
+            "alt": "Group quick actions for muting, disappearing messages and search."
+        }
+    },
+    {
+        "id": "shared-media-entry",
+        "url": "/docs/android/shared-media-entry.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "63524b750b934d72e0f832805128cd84d3a92155",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/shared_content_categories_light.png",
+        "imageSha256": "f08d6ea5ae8a80af000ada7b5f3d4b23252d4a58dca33f6cd51e531a1a40952c",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-10-18",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/shared-media-entry.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 355
+            },
+            "highlights": [],
+            "description": "Open a shared-content category from the conversation details. Links appear when available.",
+            "alt": "Shared in Chat categories for photos and videos, links, documents and voice."
+        }
     }
 ]

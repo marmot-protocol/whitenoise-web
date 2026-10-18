@@ -12,7 +12,7 @@ For an encrypted backup, first follow [Encrypted backup import](/docs/settings/i
 
 1. Start on the device that already has the account. If the app opens but misbehaves, restart it and work through [Connection](/docs/troubleshooting/connection) before you change anything else.
 2. Keep the existing installation. Conversation data lives on the device, so treat reinstalling or clearing storage as a last resort.
-3. Moving to a new device? Import your private key there to keep the same identity, and expect to start fresh. Earlier conversations and their encryption state stay on the old device. Linked-device support is still in development, so each installation holds only its own conversations and works as a separate copy with its own local data.
+3. Moving to a new device? Import your private key there to keep the same identity, and expect to start fresh. Earlier conversations and their encryption state stay on the old device. Use the profile on one device; White Noise does not synchronize conversation history between installations.
 4. If your device or key may have been stolen, treat the identity as compromised and warn your contacts through another trusted channel. Messages already stored on the stolen device remain there, because encryption cannot erase them.
 5. Share only your public key (`npub`). Keep your private key out of chats and support requests, and keep it out of agent prompts as well.
 

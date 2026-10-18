@@ -12,6 +12,8 @@ White Noise exports identity backups as NIP-49 `ncryptsec1` strings protected by
 
 ## Back up your private key
 
+<figure><a href="/docs/android/backup-dialog.svg"><img src="/docs/android/backup-dialog.svg" alt="Encrypted Private Key dialog with empty password and confirmation fields." loading="lazy" width="360" height="368" /></a><figcaption class="type-small">Use a long, unique password and confirm it before exporting your encrypted private key. Select the image to enlarge.</figcaption></figure>
+
 1. Open Settings, then **Profile Keys**.
 2. Under **Export**, tap **Export Encrypted Private Key**.
 3. Enter a **Password** and repeat it in **Confirm password**. Choose a long, unique password; the **Strength** meter rates it from Too short to Strong passphrase.

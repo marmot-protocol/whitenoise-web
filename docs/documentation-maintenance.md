@@ -15,7 +15,7 @@ The approved Simple rows design uses native input/select controls with underline
 ## Review each application release
 
 1. Record the released platform, channel, source revision, version and minimum OS. Confirm artifact/source mapping before changing the supported baseline.
-2. Compare changed screens, labels, actions and permissions with the guide source references and private coverage inventory. Review onboarding, recovery and destructive actions explicitly.
+2. Compare changed screens, labels, actions and permissions with the guide source references and screen inventory. Review onboarding, recovery and destructive actions explicitly.
 3. Update the affected prose from verified evidence. Keep important consequences before the relevant action. Obtain the required substantive prose review and exact-revision prose checks.
 4. Review associated screenshots. Replace images when labels, navigation or appearance change; retain an accurate capture baseline for unchanged images.
 5. Test links, headings, explicit platform selection, keyboard use, mobile layouts, 200% browser zoom and HTML/Markdown representations in production output and the hosted preview.
@@ -42,9 +42,9 @@ Screenshot presentation uses measured SVG viewports around the original PNG pixe
 
 ## Screen coverage
 
-`src/lib/content/documentation-screens.json` maps main user-facing screens to guide sections at the recorded source revisions. Internal containers are listed separately. Each screen records whether text is sufficient, an existing capture illustrates it, or an iOS image is delegated. Tests reject missing guide sections, duplicate screen entries and unknown image references. Refresh this inventory when reviewing a new app revision; it does not discover future screens automatically.
+`src/lib/content/documentation-screens.json` maps main user-facing screens to guide sections at the recorded source revisions. Internal containers are listed separately. Each screen records whether text is sufficient, an existing capture illustrates it, or an iOS image is delegated. Tests reject missing guide sections, duplicate screen entries and unknown image references. Refresh this inventory when reviewing a new app revision; it does not discover future screens automatically. Include navigation destinations as well as files named Screen or View, because a route can live in another file.
 
-The current inventory covers 106 screens. Nine device captures, seven Android UI reference renders illustrate selected tasks. Profile Keys blocks device screenshots; keep its instructions textual and never disable that protection to capture it. iOS captures remain assigned to issue14, including shared media, group relays, moderation and QR-scanner recovery. Every guide remains usable without images.
+The current inventory covers 107 screens. Nine device captures and nineteen Android UI reference renders illustrate selected tasks. Profile Keys blocks device screenshots. Blank-field UI references can illustrate backup controls; keep key material out of images and preserve screenshot protection. iOS captures remain assigned to issue14, including shared media, group relays, moderation and QR-scanner recovery. Every guide remains usable without images.
 
 
 Protected onboarding forms use unchanged PNG references from the Android app’s screenshot tests, pinned by source URL and image digest. Their `source-render` evidence kind carries no APK or device-cleanup claim. The integrity gate keeps these evidence types separate, preserves pixels and validates crop bounds. Device images retain the original cleanup, APK and system-bar requirements. Never bypass an app’s screenshot protection to make documentation images.

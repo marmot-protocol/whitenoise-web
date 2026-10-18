@@ -81,6 +81,8 @@ Each message or chat row still decides whether the chosen action applies to it. 
 
 ## Folders
 
+<figure><a href="/docs/android/chat-folders.svg"><img src="/docs/android/chat-folders.svg" alt="Folders screen with Unread, Archived and Groups, plus add and row-menu controls." loading="lazy" width="360" height="315" /></a><figcaption class="type-small">Folders organize chats. Use the plus button to add one and the row menu to manage it. Select the image to enlarge.</figcaption></figure>
+
 Folders sort your chat list into groups of chats, and deleting a folder leaves your chats where they are.
 
 - **New Folder** creates a folder.
@@ -127,6 +129,15 @@ If notification permission is off, tap **Allow notifications**. You can also tur
 See [Notifications](/docs/using/notifications/android).
 
 ## Read aloud
+
+> **Privacy:** A separate speech engine may send decrypted message text to its provider. For on-device speech, the app recommends [RHVoice](https://f-droid.org/en/packages/com.github.olga_yakovleva.rhvoice.android/) or [eSpeak NG](https://f-droid.org/packages/com.reecedunn.espeak/).
+
+1. Open **Settings > Read Aloud** and choose an **Engine**.
+2. Choose an installed offline **Voice**, or use **Automatic offline voice**. **Open Android Settings** takes you to system speech settings when you need to configure the engine.
+3. Return to a conversation, touch and hold a message and choose **Read Aloud**. See [playback controls](/docs/using/messages/android#read-a-message-aloud).
+
+
+<figure><a href="/docs/android/read-aloud-settings.svg"><img src="/docs/android/read-aloud-settings.svg" alt="Read-aloud defaults, Speak over playing media and speech-over-media volume." loading="lazy" width="360" height="308" /></a><figcaption class="type-small">Automatic reading and audio-mixing preferences are separate controls. Review them before enabling reading by default. Select the image to enlarge.</figcaption></figure>
 
 **Read Aloud** has these controls.
 

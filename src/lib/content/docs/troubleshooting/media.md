@@ -8,7 +8,7 @@ In encrypted conversations, media is encrypted before it is uploaded to media se
 
 1. Retry with a small, common image. That tells you whether the problem is the original file or the connection.
 2. Check your connection. Uploads need a reachable media server as well as relays. See [Connection](/docs/troubleshooting/connection).
-3. A finished upload or a visible filename shows the file left your device. Only the recipient can confirm that it opens.
+3. A filename or preview can appear while the file is still on your device. Check upload and message status, then ask the recipient whether the attachment opens.
 4. File support for agents varies by runtime and connector version. Read your runtime's connector guide and check file type, size and version before relying on it. The Claude Code setup starts with a text-only test, so confirm text works first.
 5. **Before sending files to an agent:** the agent decrypts what it receives, and its model and tools then process the content under their own policies. A cloud model sends that content to its provider. Treat instructions found inside a file, repository or web page as data, not as requests from you.
 6. Before resending a large file, confirm the first attempt failed.

@@ -24,6 +24,8 @@ When the translation appears, tap **Show original** to see the original text. Ta
 
 ## Global settings
 
+<figure><a href="/docs/android/translation-settings.svg"><img src="/docs/android/translation-settings.svg" alt="Translation privacy notice, automatic translation switch, target language and Open engine control." loading="lazy" width="360" height="395" /></a><figcaption class="type-small">Review the privacy notice before enabling automatic translation. The target language shown here is an example. Select the image to enlarge.</figcaption></figure>
+
 Open **Settings > Translate**.
 
 | Control | Effect |

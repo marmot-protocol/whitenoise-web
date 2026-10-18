@@ -6,7 +6,7 @@ Notifications are alerts only. A missing alert does not mean a message failed, a
 
 ## Diagnose
 
-1. Open White Noise. If new messages appear, delivery works and only the alerts need fixing.
+1. Open White Noise and look for the expected message. If it appears, focus on the alert settings below. If it is missing, check [message delivery](/docs/troubleshooting/delivery) too.
 2. Make sure your operating system allows notifications for White Noise. You manage this permission in your device's system settings.
 3. Check background conditions. Battery saving, data saving, focus modes and background app restrictions can delay or hide alerts.
 4. Make sure the device stays connected in the background. VPNs and restrictive networks can block the services that alerts depend on.

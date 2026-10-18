@@ -32,6 +32,8 @@ White Noise shows **Set up your profile** until you add a name. After that it sh
 
 ## Share your profile
 
+<figure><a href="/docs/android/share-qr.svg"><img src="/docs/android/share-qr.svg" alt="Example profile QR code and Scan QR Code button." loading="lazy" width="328" height="440" /></a><figcaption class="type-small">Open your own Share & Connect screen so someone can scan your profile code. This image shows an example code. Select the image to enlarge.</figcaption></figure>
+
 Open **Share & Connect**:
 
 - Let someone scan your **Profile QR code**.

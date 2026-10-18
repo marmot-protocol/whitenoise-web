@@ -12,9 +12,13 @@ Groups let you chat with several people together.
 
 Expected result: **Creating group…** appears, then **Chat created**. When setup fails, check your connection and tap **Retry**. To skip one person who is holding up setup, tap **Remove this person and continue**. A new chat can take a moment to reach your chat list; wait, then tap **Open chat**.
 
+<figure><a href="/docs/android/group-review.svg"><img src="/docs/android/group-review.svg" alt="Group setup review with disappearing messages, sample members and Create Group." loading="lazy" width="360" height="480" /></a><figcaption class="type-small">Review the disappearing-message setting and selected members before choosing Create Group. Select the image to enlarge.</figcaption></figure>
+
 ## Open group details
 
-Open the conversation and tap its header. Group details show **Group · N members** and quick actions for **About**, **Mute**, **Disappearing**, and **Search**. Admins also see management options.
+Open the conversation and tap its header. Group details show **Group · N members** and quick actions for **Mute**, **Disappearing**, and **Search**. Admins also see management options.
+
+<figure><a href="/docs/android/group-actions.svg"><img src="/docs/android/group-actions.svg" alt="Group quick actions for muting, disappearing messages and search." loading="lazy" width="360" height="100" /></a><figcaption class="type-small">Mute, Disappearing and Search open controls for this conversation. Select the image to enlarge.</figcaption></figure>
 
 ## Edit group details
 

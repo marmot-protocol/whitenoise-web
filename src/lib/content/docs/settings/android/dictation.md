@@ -18,6 +18,8 @@ In a conversation, tap **Dictate text**. It turns your speech into text that you
 
 ## Dictation controls
 
+<figure><a href="/docs/android/dictation-settings.svg"><img src="/docs/android/dictation-settings.svg" alt="Dictation settings with provider, pause-other-audio and finish-dictation controls." loading="lazy" width="360" height="610" /></a><figcaption class="type-small">Choose a speech provider and how dictation finishes. The service notice explains where audio may be processed. Select the image to enlarge.</figcaption></figure>
+
 | Control | Effect |
 |---|---|
 | Get Offline Speech to Text | Opens the Zapstore page for an app that transcribes speech on this device. It is unavailable on Google Play. |

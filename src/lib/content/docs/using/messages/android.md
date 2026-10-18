@@ -20,6 +20,14 @@ To add something other than text, tap **Add attachment**. The menu offers **Came
 
 **Dictate text** turns your speech into text that you can review and then **Paste** or **Send**, so it never sends a recording. To send audio, hold the voice control instead, as described in Media and downloads. See [Dictate text](/docs/settings/android/dictation) for provider setup and dictation options.
 
+### Read a message aloud
+
+Touch and hold a text message, then choose **Read Aloud**. Review [speech-engine settings](/docs/settings/android#read-aloud) first: a separate engine may receive decrypted message text.
+
+Use **Pause reading** and **Resume reading** to pause or continue. The sentence arrows and message-skip buttons move between passages; the rate control changes playback speed. **Stop reading** ends playback. Tap the control bar’s body to return to the spoken message when it is still available.
+
+<figure><a href="/docs/android/read-aloud-controls.svg"><img src="/docs/android/read-aloud-controls.svg" alt="Read-aloud controls showing previous message, previous sentence, pause, next sentence, next message, rate and stop." loading="lazy" width="360" height="72" /></a><figcaption class="type-small">The controls move between messages or sentences, pause reading, change its rate and stop it. Select the image to enlarge.</figcaption></figure>
+
 ### Translate a message
 
 You can translate the text of a message into another language. This feature translates written message text only. It does not transcribe voice messages or other audio.

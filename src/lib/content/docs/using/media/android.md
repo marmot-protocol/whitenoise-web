@@ -10,6 +10,8 @@ Send photos, videos, files, and voice messages, view what you receive, and choos
 
 ## Send attachments from the composer
 
+<figure><a href="/docs/android/attachment-menu.svg"><img src="/docs/android/attachment-menu.svg" alt="Attachment menu with Camera, Photos and videos, Files, Location, Contact, Device contact and Create poll." loading="lazy" width="208" height="390" /></a><figcaption class="type-small">Add attachment opens choices for media, files, location and contacts, plus Create poll. Select the image to enlarge.</figcaption></figure>
+
 1. In the composer, tap **Add attachment**, then choose **Camera** to take something new or pick existing items from **Photos and videos** or **Files**.
 2. Review the preview, where you can:
    - Write a caption in **Add a caption…** if you want text alongside the media.
@@ -33,6 +35,8 @@ Tap **Save** when you're finished. Edited photos use High quality, and the origi
 
 ## Voice messages
 
+<figure><a href="/docs/android/composer-voice.svg"><img src="/docs/android/composer-voice.svg" alt="Message composer with separate microphone and voice-waveform controls." loading="lazy" width="320" height="60" /></a><figcaption class="type-small">Tap the microphone to dictate text; hold the waveform control to record a voice message. Select the image to enlarge.</figcaption></figure>
+
 Voice messages send audio, while **Dictate text** sends text instead (see [Messages](/docs/using/messages/android)).
 
 1. Touch and hold **Hold to record voice message** to start recording.
@@ -48,6 +52,14 @@ If you see **Recording unavailable**, tap **Record again**.
 - Files: tap **Open**. If you see **No app installed to open this file**, save the file instead. Text files open in a reader with **Read Aloud**, **Copy text**, **Save**, and **Open in another app**.
 - **Too large to preview**: save or share the file to view it in another app.
 - APK files: only install them from a source you trust. If you see **This build can't install APK attachments.**, save the file and open it from a trusted installer.
+
+## Browse shared media
+
+Open a conversation’s details and find **Shared in Chat**. Choose **Photos and videos**, **Documents** or **Voice**; **Links** appears when links are available. Photos and videos can be filtered by **All**, **Images** or **Videos**.
+
+<figure><a href="/docs/android/shared-media-entry.svg"><img src="/docs/android/shared-media-entry.svg" alt="Shared in Chat categories for photos and videos, links, documents and voice." loading="lazy" width="360" height="355" /></a><figcaption class="type-small">Open a shared-content category from the conversation details. Links appear when available. Select the image to enlarge.</figcaption></figure>
+
+Use **Load more** to browse older attachments when offered, or **Retry** after a loading failure. A partial or loading result means more history may remain. Open an item to view or play it; opening an external link contacts that site.
 
 ## Download controls
 
