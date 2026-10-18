@@ -34,10 +34,11 @@ In **Settings**, tap **Sign Out**. This profile and its local data stay on this 
 
 > **Warning:** **Delete Profile** permanently removes this profile from this device. Signing back in with the same key keeps your identity, but past groups, messages, and media can't be recovered on this device, and you'll need to be re-invited to any groups. White Noise cannot delete encrypted messages already delivered to other members or copies kept by independent relays.
 
-1. Open **Settings** and tap **Delete Profile**.
-2. Read the **What gets destroyed** section.
-3. Under **Enter Profile Name**, type the profile name exactly as shown.
-4. Confirm the deletion.
+1. Back up your private key and confirm the backup is saved. For an encrypted backup, follow [Encrypted backup import](/docs/settings/identity#encrypted-backup-import) and confirm you can recover your key before deleting anything.
+2. Open **Settings** and tap **Delete Profile**.
+3. Read the **What gets destroyed** section.
+4. Under **Enter Profile Name**, type the profile name exactly as shown.
+5. Confirm the deletion.
 
 Expected result: the profile is gone from this device.
 

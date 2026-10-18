@@ -6,11 +6,14 @@ Translation is handled by **Offline Translator**, a separate app that runs trans
 
 ## Set up Offline Translator
 
+The current reviewed White Noise Android build only works with Offline Translator signed by its original developer, versions 0.8.3, 0.8.4, and 0.8.5. White Noise does not automatically accept newer versions. Each new version must be checked for compatibility before White Noise supports it.
+
 1. Install [Offline Translator](https://f-droid.org/packages/dev.davidv.translator/).
 2. Open Offline Translator and install the language packs you need. Install a pack for each language you want to translate from and into.
-3. Return to White Noise and translate a message.
+3. Return to White Noise. Touch and hold a text message, then tap **Translate**.
+4. Choose a **Source language** and **Target language**, then tap **Translate**. You can use **Detect language** for the source.
 
-The current reviewed White Noise Android build only works with Offline Translator signed by its original developer, versions 0.8.3, 0.8.4, and 0.8.5. White Noise does not automatically accept newer versions. Each new version must be checked for compatibility before White Noise supports it.
+When the translation appears, tap **Show original** to see the original text. Tap **Show translation** to switch back. See [Translate a message](/docs/using/messages/android#translate-a-message) for the message controls.
 
 ### Troubleshooting
 

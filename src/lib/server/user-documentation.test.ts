@@ -92,6 +92,21 @@ describe("user documentation registry", () => {
         );
     });
 
+    it("keeps backup checks before profile deletion and qualifies incomplete erasure", () => {
+        const profile =
+            documentationPages.find((page) => page.slug === "using/profiles/ios")?.markdown ?? "";
+        expect(profile).toContain("Back up your private key");
+        const deletion = profile.slice(profile.indexOf("## Delete a profile"));
+        expect(deletion.indexOf("Back up your private key")).toBeLessThan(
+            deletion.indexOf("tap **Delete Profile**")
+        );
+        expect(deletion).toContain("/docs/settings/identity#encrypted-backup-import");
+        const settings =
+            documentationPages.find((page) => page.slug === "settings/ios")?.markdown ?? "";
+        expect(settings).toContain("Use a retry or recovery action only if the app offers one");
+        expect(settings).toContain("confirm that you can recover each key");
+    });
+
     it("continues onboarding on the same platform through message and backup guides", () => {
         for (const platform of ["android", "ios"]) {
             expect(documentationPage(`get-started/install/${platform}`).next?.url).toBe(
@@ -152,7 +167,7 @@ describe("user documentation registry", () => {
             for (const match of page.markdown.matchAll(/\]\((\/docs\/[^)\s]+)\)/g)) {
                 const [path, hash] = match[1].split("#");
                 if (path === "/docs/marmot/README.md") continue;
-                if (/^\/docs\/android\/[a-z-]+\.png$/.test(path)) {
+                if (/^\/docs\/android\/[a-z-]+\.(?:png|svg)$/.test(path)) {
                     expect(
                         readFileSync(new URL(`../../../static${path}`, import.meta.url)).length
                     ).toBeGreaterThan(0);

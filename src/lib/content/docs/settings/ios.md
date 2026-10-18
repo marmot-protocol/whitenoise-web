@@ -32,8 +32,8 @@ The top of Settings shows your profile and up to three other signed-in profiles,
 
 | Preview mode | Example for a group chat message |
 |---|---|
-| Sender and Message | Mom: Good morning! |
-| Sender Only | Mom sent a message |
+| Sender and Message | Captain Acorn: Bring emergency snacks. |
+| Sender Only | Captain Acorn sent a message |
 | Generic | General wording that leaves out the sender and the message |
 
 If notifications are off, tap **Allow Notifications**. You can also tap **Open Settings** and turn them on in iOS Settings. A Developer section has APNS token and registration actions for testing. See [Notifications](/docs/using/notifications/ios).
@@ -59,7 +59,7 @@ See [Media](/docs/using/media/ios).
 | Erase App Data | Signs out every profile and removes all White Noise data from this iPhone. |
 | Privacy Policy | Opens the White Noise privacy policy. |
 
-> **Warning:** Erase App Data is permanent. It removes every profile and all local chats, media, drafts, keys and settings from this iPhone. To continue, you must enter three confirmation words exactly. If erasure stops partway, some data may remain; the app tells you so, and you can try again. Back up any private key you need first.
+> **Warning:** Erase App Data is permanent. It removes every profile and all local chats, media, drafts, keys and settings from this iPhone. To continue, you must enter three confirmation words exactly. Back up each profile’s private key first. Before erasing, follow [Encrypted backup import](/docs/settings/identity#encrypted-backup-import) and confirm that you can recover each key. If erasure stops partway, note the error. Use a retry or recovery action only if the app offers one; otherwise contact support before deleting the app or trying again.
 
 **Blocked Users**: Blocking hides the person's messages and stops you sending to them in direct chats, and existing history is kept. If you unblock someone, their messages appear again and you can send to them. When you block someone from their profile, **Block and Report** also notifies the White Noise team. See [Privacy](/docs/using/privacy/ios).
 

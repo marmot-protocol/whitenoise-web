@@ -15,7 +15,7 @@ Open **Settings > Chat with support** for help inside White Noise. For a reprodu
 
 ## Before you report
 
-1. Note your platform and device. Add your White Noise version too; the compatibility page explains where it appears.
+1. Note your platform and device. Add your White Noise version too; [Compatibility](/docs/compatibility#find-your-version) explains where it appears.
 2. Write down the steps that led to the problem and when it happened. Copy the exact error label as well, if one appeared.
 3. Keep two kinds of status apart. A message marked as sent on your device has a local status that reflects your side only, so confirm receipt or reading by asking the recipient through another channel.
 4. Check your connection with [Connection](/docs/troubleshooting/connection). A relay or VPN can block or delay traffic. Network providers can do the same, and White Noise relies on all of them for connectivity.

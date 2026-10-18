@@ -20,7 +20,19 @@
         },
         "device": "Pixel 6a",
         "capturedAt": "2026-10-18",
-        "guides": ["get-started/first-message/android"]
+        "guides": ["get-started/first-message/android"],
+        "presentation": {
+            "url": "/docs/android/chats.svg",
+            "crop": {
+                "x": 790,
+                "y": 2080,
+                "width": 270,
+                "height": 250
+            },
+            "highlights": [],
+            "description": "On Chats, tap the pencil button in the lower-right corner to start a message.",
+            "alt": "New Message pencil button on the Chats screen."
+        }
     },
     {
         "id": "new-message",
@@ -43,7 +55,26 @@
         },
         "device": "Pixel 6a",
         "capturedAt": "2026-10-18",
-        "guides": ["get-started/first-message/android"]
+        "guides": ["get-started/first-message/android"],
+        "presentation": {
+            "url": "/docs/android/new-message.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 820
+            },
+            "highlights": [
+                {
+                    "x": 42,
+                    "y": 321,
+                    "width": 996,
+                    "height": 147
+                }
+            ],
+            "description": "Search in Name or npub, or choose Connect with QR to scan a profile.",
+            "alt": "New Message screen with Name or npub outlined."
+        }
     },
     {
         "id": "conversation",
@@ -53,10 +84,10 @@
         "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
         "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
         "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "f7acc626a6ed891cfe1312eddcad1e1212094866dd555b835cb3c8ab1bbf1acf",
+        "imageSha256": "8fce8090026b55402847efea571c12f11f7db05fce28347af27a1f1db95e59fb",
         "language": "English",
         "sdk": "37",
-        "fixture": "synthetic accounts",
+        "fixture": "fictional one-member conversation",
         "verification": "navigated-device; delivery not tested during capture",
         "cleanupVerified": true,
         "theme": "light",
@@ -66,7 +97,19 @@
         },
         "device": "Pixel 6a",
         "capturedAt": "2026-10-18",
-        "guides": ["get-started/first-message/android"]
+        "guides": ["get-started/first-message/android"],
+        "presentation": {
+            "url": "/docs/android/conversation.svg",
+            "crop": {
+                "x": 0,
+                "y": 1950,
+                "width": 1080,
+                "height": 380
+            },
+            "highlights": [],
+            "description": "Write in Message, then use Send. The sample conversation uses fictional test data.",
+            "alt": "Message reading: The squirrels ate the meeting agenda."
+        }
     },
     {
         "id": "settings",
@@ -89,7 +132,19 @@
         },
         "device": "Pixel 6a",
         "capturedAt": "2026-10-18",
-        "guides": ["settings/android"]
+        "guides": ["settings/android"],
+        "presentation": {
+            "url": "/docs/android/settings.svg",
+            "crop": {
+                "x": 0,
+                "y": 725,
+                "width": 1080,
+                "height": 630
+            },
+            "highlights": [],
+            "description": "The Account section contains Profile, Profile Keys and Relays.",
+            "alt": "Profile, Profile Keys and Relays in the Account section."
+        }
     },
     {
         "id": "appearance",
@@ -112,7 +167,19 @@
         },
         "device": "Pixel 6a",
         "capturedAt": "2026-10-18",
-        "guides": ["settings/android"]
+        "guides": ["settings/android"],
+        "presentation": {
+            "url": "/docs/android/appearance.svg",
+            "crop": {
+                "x": 0,
+                "y": 550,
+                "width": 1080,
+                "height": 960
+            },
+            "highlights": [],
+            "description": "Choose System default, Light, Dark or AMOLED under Theme.",
+            "alt": "The four Theme options in Android Appearance settings."
+        }
     },
     {
         "id": "notifications",
@@ -135,6 +202,25 @@
         },
         "device": "Pixel 6a",
         "capturedAt": "2026-10-18",
-        "guides": ["using/notifications/android"]
+        "guides": ["using/notifications/android"],
+        "presentation": {
+            "url": "/docs/android/notifications.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 1470
+            },
+            "highlights": [
+                {
+                    "x": 49,
+                    "y": 858,
+                    "width": 982,
+                    "height": 230
+                }
+            ],
+            "description": "Show notification previews controls whether alerts include names and message content.",
+            "alt": "Notification settings with Show notification previews outlined."
+        }
     }
 ]

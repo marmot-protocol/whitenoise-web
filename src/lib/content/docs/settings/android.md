@@ -6,7 +6,7 @@ Settings has three groups: **Account**, **App** and **Support**. When a setting 
 
 Your profile and avatar appear at the top, with **Edit profile picture**, **Open Share & Connect**, **Add Profile** and **Switch Profile**. **Sign Out** is also on this screen, and the app version is shown at the bottom.
 
-[<img src="/docs/android/settings.png" alt="White Noise Android Settings screen" loading="lazy" width="1080" height="2400" />](/docs/android/settings.png)
+<figure><a href="/docs/android/settings.svg"><img src="/docs/android/settings.svg" alt="Profile, Profile Keys and Relays in the Account section." loading="lazy" width="1080" height="630" /></a><figcaption class="type-small">The Account section contains Profile, Profile Keys and Relays. Select the image to enlarge.</figcaption></figure>
 
 ## Account
 
@@ -57,7 +57,7 @@ This screen controls where your profile publishes information and receives invit
 
 The color picker has Hue, Saturation and Brightness sliders and a Hex color field that takes six hexadecimal digits, for example 1D4ED8 after the # sign.
 
-[<img src="/docs/android/appearance.png" alt="White Noise Android Appearance screen" loading="lazy" width="1080" height="2400" />](/docs/android/appearance.png)
+<figure><a href="/docs/android/appearance.svg"><img src="/docs/android/appearance.svg" alt="The four Theme options in Android Appearance settings." loading="lazy" width="1080" height="960" /></a><figcaption class="type-small">Choose System default, Light, Dark or AMOLED under Theme. Select the image to enlarge.</figcaption></figure>
 
 ### Custom emoji
 

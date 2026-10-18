@@ -5,7 +5,8 @@ Most of these controls are in Settings under **Privacy & Security**.
 ## App security
 
 - **Hide Screen in App Switcher** hides app content in the app switcher and while iOS detects screen recording or sharing. Regular screenshots are still possible.
-- **Auto-Lock** sets when White Noise locks.
+- **App lock** asks for Face ID, Touch ID or your iPhone passcode when you return. Set an iPhone passcode first; the toggle names the method available on your phone.
+- **Auto-Lock** sets when White Noise locks. See [iOS settings](/docs/settings/ios#privacy--security) for the available delays.
 
 ## Diagnostics
 

@@ -1,6 +1,6 @@
 # Send a message
 
-Both people need White Noise, or another compatible Marmot client, set up and connected. A Nostr public key identifies the person; receiving an invitation also requires their client to publish invitation keys.
+Both people need White Noise, or another compatible Marmot client, set up and connected. A Nostr public key (an address starting with `npub`) identifies the person. Their app also needs to publish invitation keys so you can start a chat. If that fails, see [Invitation problems](/docs/troubleshooting/invitations).
 
 You can start a direct chat from **New Message** using the person's Nostr address or npub. Scanning their profile QR code works too.
 

@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 
+import { documentationImage } from "./documentation-images.mjs";
+
 const root = new URL("../", import.meta.url);
 const readJson = async (path) => JSON.parse(await readFile(new URL(path, root), "utf8"));
 const pages = await readJson("src/lib/content/user-documentation.json");
@@ -31,6 +33,8 @@ const requiredTasks = [
     "settings/android",
     "settings/ios",
     "settings/android/diagnostics",
+    "settings/android/translation",
+    "settings/android/dictation",
     "settings/ios/diagnostics",
     "settings/relays",
     "settings/identity",
@@ -135,7 +139,7 @@ for (const capture of captures) {
     for (const slug of capture.guides) {
         const guide = await readFile(new URL(`src/lib/content/docs/${slug}.md`, root), "utf8");
         assert(
-            guide.includes(`src="${capture.url}"`),
+            guide.includes(`src="${capture.presentation.url}"`),
             `Screenshot must appear beside its task: ${capture.id}`
         );
     }
@@ -144,6 +148,26 @@ for (const capture of captures) {
         createHash("sha256").update(bytes).digest("hex"),
         capture.imageSha256,
         `Changed capture: ${capture.id}`
+    );
+    const { crop, highlights, url } = capture.presentation;
+    assert.equal(url, capture.url.replace(/\.png$/, ".svg"));
+    assert(crop.y >= 132 && crop.y + crop.height <= 2330, "System bars must be outside the crop");
+    assert(
+        crop.x >= 0 &&
+            crop.width > 0 &&
+            crop.height > 0 &&
+            crop.x + crop.width <= capture.dimensions.width
+    );
+    for (const rectangle of highlights) {
+        assert(rectangle.x >= crop.x && rectangle.y >= crop.y);
+        assert(rectangle.width > 0 && rectangle.height > 0);
+        assert(rectangle.x + rectangle.width <= crop.x + crop.width);
+        assert(rectangle.y + rectangle.height <= crop.y + crop.height);
+    }
+    assert.equal(
+        await readFile(new URL(`static${url}`, root), "utf8"),
+        documentationImage(capture, bytes),
+        "Presentation must preserve the original pixels and measured crop"
     );
     assert.match(capture.source, /^[a-f0-9]{40}$/);
     assert.match(capture.apkSha256, /^[a-f0-9]{64}$/);
