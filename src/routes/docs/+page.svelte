@@ -4,7 +4,7 @@ import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
 let query = $state("");
-let platform = $state("all");
+let platform = $state("android");
 let searchText = $state<Record<string, string>>({});
 let searchState = $state<"idle" | "loading" | "ready" | "error">("idle");
 async function loadSearch(value: string) {
