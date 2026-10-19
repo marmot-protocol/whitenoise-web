@@ -1,3 +1,4 @@
+import publicStaticPages from "$lib/content/agent-pages.json";
 import { type GuideArea, guideInfo } from "$lib/documentation-navigation";
 
 type NavigationLink = { label: string; href: string };
@@ -22,6 +23,11 @@ const pageLinks = [...mainLinks, ...moreMenuLinks, downloadLink];
 
 /** Match a destination and its descendants without matching unrelated path prefixes. */
 export function isActiveDestination(pathname: string, href: string) {
+    if (
+        href === "/docs" &&
+        (pathname.startsWith("/docs/mdk/") || pathname.startsWith("/docs/marmot/"))
+    )
+        return false;
     return (
         pathname === href ||
         pathname.startsWith(`${href}/`) ||
@@ -32,7 +38,9 @@ export function isActiveDestination(pathname: string, href: string) {
 
 export function currentPageLabel(pathname: string) {
     return (
-        pageLinks.find((link) => isActiveDestination(pathname, link.href))?.label ??
+        pageLinks
+            .filter((link) => isActiveDestination(pathname, link.href))
+            .sort((a, b) => b.href.length - a.href.length)[0]?.label ??
         (pathname === "/" ? "Home" : pathname === "/design-system" ? "Design system" : "")
     );
 }
@@ -40,6 +48,12 @@ export function currentPageLabel(pathname: string) {
 /** Only self-contained guide pages mount a section navigation. */
 export function currentGuideArea(pathname: string): GuideArea | undefined {
     return (Object.keys(guideInfo) as GuideArea[]).find(
-        (area) => guideInfo[area].path === pathname
+        (area) =>
+            guideInfo[area].path === pathname ||
+            (area === "documentation" &&
+                publicStaticPages.includes(pathname) &&
+                pathname.startsWith("/docs/") &&
+                !pathname.startsWith("/docs/mdk/") &&
+                !pathname.startsWith("/docs/marmot/"))
     );
 }

@@ -1,9 +1,15 @@
 import { error, redirect } from "@sveltejs/kit";
+import userPages from "$lib/content/user-documentation.json";
 import { docUrl, validDocSource } from "$lib/documentation";
 import type { EntryGenerator, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params, url }) => {
     const { repo, path } = params;
+    const slug = path ? `${repo}/${path}` : repo;
+    if (userPages.some((page) => (page as { slug: string }).slug === slug)) {
+        const { documentationPage } = await import("$lib/server/user-documentation");
+        return { userDocument: documentationPage(slug) };
+    }
     if (!validDocSource(repo, path)) error(404, "Documentation not found");
     if (repo === "marmot" && path === "README.md") {
         const { curatedGuide } = await import("$lib/server/curated-guides");
@@ -17,4 +23,10 @@ export const load: PageServerLoad = async ({ params, url }) => {
 
 // Publish the bundled guide as static HTML/data, while keeping arbitrary legacy redirects.
 export const prerender = "auto";
-export const entries: EntryGenerator = () => [{ repo: "marmot", path: "README.md" }];
+export const entries: EntryGenerator = () => [
+    { repo: "marmot", path: "README.md" },
+    ...userPages.map((page) => {
+        const [repo, ...parts] = (page as { slug: string }).slug.split("/");
+        return { repo, path: parts.join("/") };
+    }),
+];

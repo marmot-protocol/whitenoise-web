@@ -22,7 +22,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Which devices can I use?",
                 featured: true,
-                answer: "White Noise is available as a beta for iPhone through TestFlight and for Android through GitHub Releases.",
+                answer: "White Noise is available as a beta for iPhone through TestFlight and for Android. We recommend Zapstore for Android; Google Play and GitHub downloads are also available.",
                 link: { label: "See download options", href: "/download" },
             },
             {

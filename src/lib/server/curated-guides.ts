@@ -57,12 +57,12 @@ function renderArticle(markdown: string): GuideDocument {
 
 // These bundled sources change only with a new build. Render once per server instance
 // and send only the content the page displays, without a duplicate full Agents article.
-const guides: Record<GuideArea, GuideDocument> = {
+const guides: Record<Exclude<GuideArea, "documentation">, GuideDocument> = {
     agents: renderAgentGuide(),
     builders: renderArticle(builders),
     marmot: renderArticle(marmot),
 };
 
-export function curatedGuide(area: GuideArea): GuideDocument {
+export function curatedGuide(area: Exclude<GuideArea, "documentation">): GuideDocument {
     return guides[area];
 }

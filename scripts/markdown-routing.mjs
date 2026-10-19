@@ -22,6 +22,14 @@ export function withMarkdownRouting(config) {
     routes.splice(
         insertion,
         0,
+        {
+            src: "^/docs/(?:index|baseline|captures)\\.json$",
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Cache-Control": "public, max-age=300",
+            },
+            continue: true,
+        },
         { src, headers: { Vary: "Accept" }, continue: true },
         {
             src,

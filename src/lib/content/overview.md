@@ -6,6 +6,10 @@ White Noise is an open-source messenger for private messages, groups, and connec
 
 ## Pages
 
+- [Documentation](https://www.whitenoise.chat/docs): Task guides, Settings and troubleshooting for Android and iOS
+- [Documentation index](https://www.whitenoise.chat/docs/index.json): Guide URLs and platform applicability
+- [Documentation sitemap](https://www.whitenoise.chat/docs/sitemap.xml): Static documentation URLs independent of blog availability
+
 - [Home](https://www.whitenoise.chat/): Features and project supporters
 - [Download](https://www.whitenoise.chat/download): Current beta installation options
 - [Privacy Matters](https://www.whitenoise.chat/privacy-matters): Why private conversations matter

@@ -8,7 +8,7 @@
         "build": "vite build && node scripts/markdown-routing.mjs",
         "preview": "vite preview --host 0.0.0.0",
         "prepare": "svelte-kit sync",
-        "ci": "biome ci . && bun run test && bun run check && bun run build && bun run test:deployment",
+        "ci": "bun run docs:check && biome ci . && bun run test && bun run check && bun run build && bun run test:deployment",
         "lint": "biome check",
         "lint:write": "biome check --write",
         "format": "biome format --write",
@@ -20,7 +20,8 @@
         "test:coverage": "vitest run --coverage",
         "canary:publish": "./scripts/publish-canary.sh",
         "tokens:generate": "bun scripts/generate-tokens.ts",
-        "artwork:measure": "${ARTWORK_PYTHON:-python3} scripts/measure-artwork.py"
+        "artwork:measure": "${ARTWORK_PYTHON:-python3} scripts/measure-artwork.py",
+        "docs:check": "node scripts/check-documentation.mjs"
     },
     "devDependencies": {
         "@biomejs/biome": "^2.5.10",

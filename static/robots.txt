@@ -3,5 +3,6 @@ Allow: /
 Content-Signal: ai-train=no, search=yes, ai-input=yes
 
 Sitemap: https://www.whitenoise.chat/sitemap.xml
+Sitemap: https://www.whitenoise.chat/docs/sitemap.xml
 
 Agentmap: https://www.whitenoise.chat/.well-known/ai-catalog.json

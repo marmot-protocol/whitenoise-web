@@ -34,15 +34,28 @@ function escapeMenu(event: KeyboardEvent) {
 function resize() {
     if (window.innerWidth > breakpoints.tablet) open = false;
 }
-const links = $derived(guideLinks[area]);
+const links: { id: string; label: string; href: string }[] = $derived(
+    area === "documentation" && page.data.userDocument
+        ? page.data.userDocument.headings.map((heading: { id: string; text: string }) => ({
+              id: heading.id,
+              label: heading.text,
+              href: `${page.url.pathname}#${heading.id}`,
+          }))
+        : guideLinks[area]
+);
 const navigationLabel = $derived(guideInfo[area].navigationLabel);
 let scrolledGuide = $state<string>();
-const selected = $derived(scrolledGuide ?? activeGuide(area, page.url.pathname, page.url.hash));
+const selected = $derived(
+    scrolledGuide ??
+        (area === "documentation"
+            ? (links.find((link) => page.url.hash === `#${link.id}`)?.id ?? links[0]?.id)
+            : activeGuide(area, page.url.pathname, page.url.hash))
+);
 let sidebar = $state<HTMLElement>();
 $effect(() => {
     const pathname = page.url.pathname;
     scrolledGuide = undefined;
-    if (pathname !== guideInfo[area].path) return;
+    if (pathname !== guideInfo[area].path && area !== "documentation") return;
     const targets = links.flatMap(({ id }) => {
         const element = window.document.getElementById(id);
         return element ? [{ id, element }] : [];
@@ -85,14 +98,16 @@ $effect(() => {
         window.removeEventListener("hashchange", schedule);
     };
 });
-const currentLabel = $derived(links.find((link) => link.id === selected)?.label ?? links[0].label);
+const currentLabel = $derived(
+    links.find((link) => link.id === selected)?.label ?? links[0]?.label ?? "Documentation"
+);
 </script>
 
 <svelte:window onkeydown={escapeMenu} onclick={dismiss} onfocusin={dismiss} onresize={resize} />
 {#if compact}
     <details class="compact-guide-nav nav-more" bind:this={menu} bind:open={open}>
         <summary class="site-width type-ui" bind:this={trigger} aria-label={`${navigationLabel}: ${currentLabel}`} onclick={() => onopen?.()}>
-            <span>{currentLabel}</span><Icon name="chevron" />
+            <span>{area === "documentation" ? "On this page" : currentLabel}</span><Icon name="chevron" />
         </summary>
         <nav class="nav-more-links guide-menu-links" aria-label={navigationLabel}>
             {#each links as link}
@@ -102,7 +117,7 @@ const currentLabel = $derived(links.find((link) => link.id === selected)?.label 
     </details>
 {:else}
     <aside class="guide-sidebar" bind:this={sidebar}>
-        <p class="guide-sidebar-title type-ui">{guideInfo[area].title}</p>
+        <p class="guide-sidebar-title type-ui">{area === "documentation" ? "On this page" : guideInfo[area].title}</p>
         <nav aria-label={navigationLabel}>
             {#each links as link}
                 <a class="type-ui" href={link.href} aria-current={link.id === selected ? (link.href.includes("#") ? "location" : "page") : undefined}>{link.label}</a>

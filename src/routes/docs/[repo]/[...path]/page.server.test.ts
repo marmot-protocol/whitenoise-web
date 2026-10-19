@@ -12,6 +12,10 @@ const request = (repo: string, path: string) =>
     } as Parameters<typeof load>[0]);
 
 describe("legacy documentation routes", () => {
+    it("loads a hosted guide without changing the legacy namespace", async () => {
+        const result = await request("settings", "android");
+        expect(result).toHaveProperty("userDocument.slug", "settings/android");
+    });
     it.each([
         ["mdk", "README.md", "/build#mdk"],
         ["mdk", "integrations/README.md", "/agents"],

@@ -25,7 +25,7 @@ export const aiCatalog = {
     host: {
         displayName: "White Noise",
         identifier: "https://www.whitenoise.chat",
-        documentationUrl: "https://www.whitenoise.chat/agents",
+        documentationUrl: "https://www.whitenoise.chat/docs",
     },
     entries: [
         {
@@ -36,6 +36,16 @@ export const aiCatalog = {
             representativeQueries: [
                 "How do I connect my local agent to White Noise?",
                 "How do I set up the Marmot connector for my agent runtime?",
+            ],
+        },
+        {
+            identifier: "urn:air:whitenoise.chat:documentation",
+            displayName: "White Noise documentation",
+            type: "application/json",
+            url: "https://www.whitenoise.chat/docs/index.json",
+            representativeQueries: [
+                "How do I use White Noise on Android or iOS?",
+                "What does this setting do?",
             ],
         },
     ],

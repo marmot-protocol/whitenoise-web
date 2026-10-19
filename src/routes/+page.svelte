@@ -52,6 +52,7 @@ const schema = {
         </div>
         <div class="hero-action" id="hero-download">
             <Action href="/download" label="Download" icon="down" />
+            <TextLink href="/docs">Read the guides</TextLink>
         </div>
     </section>
     <Supporters />
