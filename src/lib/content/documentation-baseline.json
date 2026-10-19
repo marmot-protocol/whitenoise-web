@@ -18,9 +18,15 @@
         "screenshots": "Delegated in issue14",
         "behaviorQualification": "Device validation pending"
     },
-    "desktop": {
-        "availability": "Unverified; no desktop messenger instructions published",
-        "agentHosts": "Separate from messenger-client availability"
+    "linux": {
+        "source": "7d961e3526b534bd7283e5d409677806c5c64f2c",
+        "releaseSource": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "releaseVersion": "v2026.10.6-build.1",
+        "minimumOS": "Linux; portable tarballs require glibc 2.39 or newer",
+        "architectures": ["x86-64", "ARM64 (portable tarball)"],
+        "channel": "GitHub Releases: x86-64 AppImage and Flatpak; x86-64 and ARM64 tarballs",
+        "evidence": "source-reviewed; selected released-app screens rendered and navigated in network isolation",
+        "behaviorQualification": "No cross-client delivery, full recovery, remote-signer or desktop integration qualification; reviewed source can include newer controls"
     },
     "connector": {
         "hostOS": ["macOS", "Linux"],

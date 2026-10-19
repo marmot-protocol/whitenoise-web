@@ -8,18 +8,19 @@ import {
 
 describe("guide browsing context", () => {
     it("roundtrips platform, query and the selected row without changing the destination", () => {
-        const context = guideIndexUrl("ios", "photos & files", "using/media/ios");
+        const context = guideIndexUrl("linux", "photos & files", "using/media/linux");
         const link = new URL(
-            withGuideContext("/docs/using/media/ios", context),
+            withGuideContext("/docs/using/media/linux", context),
             "https://www.whitenoise.chat"
         );
-        expect(link.pathname).toBe("/docs/using/media/ios");
-        expect(guideReturnUrl(link.searchParams.get("guides"), "ios")).toBe(context);
+        expect(link.pathname).toBe("/docs/using/media/linux");
+        expect(guideReturnUrl(link.searchParams.get("guides"), "linux")).toBe(context);
         expect(guideFilters(new URL(context, link))).toEqual({
-            platform: "ios",
+            platform: "linux",
             query: "photos & files",
         });
-        expect(context).toContain("#guide-using-media-ios");
+        expect(context).toContain("#guide-using-media-linux");
+        expect(guideReturnUrl(null, "linux")).toBe("/docs?platform=linux");
     });
     it("rejects external or unrelated return destinations and unexpected fragments", () => {
         for (const value of [
@@ -28,7 +29,7 @@ describe("guide browsing context", () => {
             "/privacy",
             "javascript:alert(1)",
         ])
-            expect(guideReturnUrl(value, "ios")).toBe("/docs?platform=ios");
+            expect(guideReturnUrl(value, "linux")).toBe("/docs?platform=linux");
         expect(guideReturnUrl("/docs?platform=bad&q=help#unknown", "ios")).toBe("/docs?q=help");
     });
     it("defaults to Android and leaves the unfiltered index URL short", () => {

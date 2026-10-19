@@ -4,7 +4,7 @@ import captures from "$lib/content/documentation-captures.json";
 import content from "$lib/content/user-documentation.json";
 import { renderDocumentation } from "./docs-markdown";
 
-export type Platform = "android" | "ios" | "shared";
+export type Platform = "android" | "ios" | "linux" | "shared";
 export type DocumentationPage = {
     slug: string;
     title: string;
@@ -27,11 +27,12 @@ export const documentationPages: DocumentationPage[] = (
     markdown: markdownSources[`/src/lib/content/docs/${page.slug}.md`] as string,
 }));
 const bySlug = new Map(documentationPages.map((page) => [page.slug, page]));
+const platformLabels = { android: "Android", ios: "iOS", linux: "Linux", shared: "All platforms" };
 export function documentationApplicability(page: Pick<DocumentationPage, "category" | "platform">) {
     if (page.category === "agents") return baseline.connector;
     if (page.category === "build") return baseline.development;
     return page.platform === "shared"
-        ? { android: baseline.android, ios: baseline.ios }
+        ? { android: baseline.android, ios: baseline.ios, linux: baseline.linux }
         : baseline[page.platform];
 }
 export function documentationEvidence(page: Pick<DocumentationPage, "platform">) {
@@ -39,6 +40,7 @@ export function documentationEvidence(page: Pick<DocumentationPage, "platform">)
 }
 const pageIndex = documentationPages.map(({ markdown, ...page }) => ({
     ...page,
+    platformLabel: platformLabels[page.platform],
     url: `/docs/${page.slug}`,
     searchText: markdown.replace(/[#*_`>|[\]]/g, " "),
     applicability: documentationApplicability(page),
@@ -54,15 +56,23 @@ export function documentationPage(slug: string) {
     if (!page) error(404, "Documentation not found");
     const { markdown, ...metadata } = page;
     const rendered = renderDocumentation(markdown);
-    const counterpart =
+    const platforms =
         page.platform === "shared"
-            ? undefined
-            : bySlug.get(
-                  slug.replace(
-                      /\/(android|ios)(?=\/|$)/,
-                      page.platform === "android" ? "/ios" : "/android"
-                  )
-              );
+            ? []
+            : (["android", "ios", "linux"] as const).flatMap((platform) => {
+                  const variant = bySlug.get(
+                      slug.replace(/\/(android|ios|linux)(?=\/|$)/, `/${platform}`)
+                  );
+                  return variant
+                      ? [
+                            {
+                                url: `/docs/${variant.slug}`,
+                                platform,
+                                label: platformLabels[platform],
+                            },
+                        ]
+                      : [];
+              });
     const onboarding = [
         `get-started/install/${page.platform}`,
         `get-started/first-message/${page.platform}`,
@@ -90,8 +100,6 @@ export function documentationPage(slug: string) {
         html: rendered.html,
         headings: rendered.headings,
         captures: captures.filter((capture) => capture.guides.includes(page.slug)),
-        counterpart: counterpart
-            ? { url: `/docs/${counterpart.slug}`, platform: counterpart.platform }
-            : null,
+        platforms,
     };
 }
