@@ -1,7 +1,8 @@
 export function guideFilters(url: URL) {
     const selected = url.searchParams.get("platform");
     return {
-        platform: selected === "ios" || selected === "all" ? selected : "android",
+        platform:
+            selected === "ios" || selected === "linux" || selected === "all" ? selected : "android",
         query: url.searchParams.get("q") ?? "",
     };
 }
@@ -27,7 +28,7 @@ export function guideReturnUrl(value: string | null, platform: string) {
             // Invalid navigation context falls back to the current platform.
         }
     }
-    return guideIndexUrl(platform === "ios" ? "ios" : "android", "");
+    return guideIndexUrl(platform === "ios" || platform === "linux" ? platform : "android", "");
 }
 
 export function withGuideContext(destination: string, context: string) {

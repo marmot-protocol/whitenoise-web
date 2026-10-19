@@ -54,5 +54,17 @@
     "/docs/build/contribute",
     "/docs/compatibility",
     "/docs/settings/android/translation",
-    "/docs/settings/android/dictation"
+    "/docs/settings/android/dictation",
+    "/docs/settings/linux",
+    "/docs/settings/linux/diagnostics",
+    "/docs/get-started/install/linux",
+    "/docs/get-started/first-message/linux",
+    "/docs/using/profiles/linux",
+    "/docs/using/contacts/linux",
+    "/docs/using/groups/linux",
+    "/docs/using/messages/linux",
+    "/docs/using/media/linux",
+    "/docs/using/notifications/linux",
+    "/docs/using/recovery/linux",
+    "/docs/using/privacy/linux"
 ]

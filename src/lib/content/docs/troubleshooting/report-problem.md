@@ -6,10 +6,11 @@ A good report describes what happened and where, then compares it with what you 
 
 ## Where to report
 
-Open **Settings > Chat with support** for help inside White Noise. For a reproducible bug, choose the affected project:
+On Android or iOS, open **Settings > Chat with support** for help inside White Noise. For a reproducible bug, choose the affected project:
 
 - [Android issues](https://github.com/marmot-protocol/whitenoise-android/issues)
 - [iOS issues](https://github.com/marmot-protocol/whitenoise-ios/issues)
+- [Linux issues](https://github.com/marmot-protocol/whitenoise-linux/issues)
 - [Agent connector issues](https://github.com/marmot-protocol/mdk/issues)
 - [Website issues](https://github.com/marmot-protocol/whitenoise-web/issues)
 
@@ -18,6 +19,8 @@ Open **Settings > Chat with support** for help inside White Noise. For a reprodu
 Open **Settings > Help > Report a bug**. First, White Noise shows a review screen explaining that nothing is attached: messages, media, contacts, profile details, keys and logs stay out of the form. Tap **Open GitHub** to open the public issue form, then review anything you add. If no browser is available, return to Help or try again after installing one.
 
 ## Before you report
+
+For Linux log controls and their privacy limits, see [Linux diagnostics and local logs](/docs/settings/linux/diagnostics).
 
 1. Note your platform and device. Add your White Noise version too; [Compatibility](/docs/compatibility#find-your-version) explains where it appears.
 2. Write down the steps that led to the problem and when it happened. Copy the exact error label as well, if one appeared.

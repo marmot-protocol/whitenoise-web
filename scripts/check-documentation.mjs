@@ -13,6 +13,7 @@ const baseline = await readJson("src/lib/content/documentation-baseline.json");
 const sourceRevisions = {
     "whitenoise-android": baseline.android.currentSource,
     "whitenoise-ios": baseline.ios.source,
+    "whitenoise-linux": baseline.linux.source,
     "whitenoise-web": baseline.connector.guideSource,
     mdk: baseline.development.mdkSource,
     marmot: baseline.development.protocolSource,
@@ -21,6 +22,7 @@ const sourceRevisions = {
 for (const revision of [
     ...Object.values(sourceRevisions),
     baseline.android.releaseSource,
+    baseline.linux.releaseSource,
     baseline.connector.connectorSource,
 ])
     assert.match(revision, /^[a-f0-9]{40}$/, "Baseline revisions must be immutable commits");
@@ -32,6 +34,8 @@ assert(routes.includes("/docs"), "Documentation index needs Markdown routing");
 const requiredTasks = [
     "settings/android",
     "settings/ios",
+    "settings/linux",
+    "settings/linux/diagnostics",
     "settings/android/diagnostics",
     "settings/android/translation",
     "settings/android/dictation",
@@ -41,24 +45,34 @@ const requiredTasks = [
     "compatibility",
     "get-started/install/android",
     "get-started/install/ios",
+    "get-started/install/linux",
     "get-started/first-message/android",
     "get-started/first-message/ios",
+    "get-started/first-message/linux",
     "using/profiles/android",
     "using/profiles/ios",
+    "using/profiles/linux",
     "using/contacts/android",
     "using/contacts/ios",
+    "using/contacts/linux",
     "using/groups/android",
     "using/groups/ios",
+    "using/groups/linux",
     "using/messages/android",
     "using/messages/ios",
+    "using/messages/linux",
     "using/media/android",
     "using/media/ios",
+    "using/media/linux",
     "using/notifications/android",
     "using/notifications/ios",
+    "using/notifications/linux",
     "using/recovery/android",
     "using/recovery/ios",
+    "using/recovery/linux",
     "using/privacy/android",
     "using/privacy/ios",
+    "using/privacy/linux",
     "troubleshooting/access",
     "troubleshooting/invitations",
     "troubleshooting/delivery",
@@ -92,7 +106,7 @@ for (const page of pages) {
         page.slug === "compatibility" || page.slug.startsWith(`${page.category}/`),
         `Unexpected guide namespace: ${page.slug}`
     );
-    const platform = page.slug.match(/\/(android|ios)(?:\/|$)/)?.[1] ?? "shared";
+    const platform = page.slug.match(/\/(android|ios|linux)(?:\/|$)/)?.[1] ?? "shared";
     assert.equal(page.platform, platform, `Wrong platform: ${page.slug}`);
     assert(/^[a-z0-9-]+(?:\/[a-z0-9-]+)*$/.test(page.slug), "Unsafe documentation slug");
     assert(routes.includes(`/docs/${page.slug}`), `Missing Markdown routing for ${page.slug}`);
