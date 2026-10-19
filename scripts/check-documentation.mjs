@@ -231,7 +231,11 @@ for (const screen of screenCoverage.screens) {
         `Unpinned screen source: ${key}`
     );
     assert(
-        pages.some((page) => screen.guide.startsWith(`/docs/${page.slug}#`)),
+        pages.some(
+            (page) =>
+                screen.guide.startsWith(`/docs/${page.slug}#`) &&
+                (page.platform === screen.platform || page.platform === "shared")
+        ),
         `Missing screen guide: ${key}`
     );
     assert(

@@ -14,6 +14,13 @@ describe("user documentation registry", () => {
             const [route, anchor] = screen.guide.split("#");
             const page = documentationPage(route.replace("/docs/", ""));
             expect(page, key).toBeTruthy();
+            expect([screen.platform, "shared"], key).toContain(page.platform);
+            if (!["text", "delegated"].includes(screen.visual)) {
+                expect(
+                    page.captures.map((capture) => capture.id),
+                    key
+                ).toContain(screen.visual);
+            }
             expect(
                 page.headings.map((heading) => heading.id),
                 key
