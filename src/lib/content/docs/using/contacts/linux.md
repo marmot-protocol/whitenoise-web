@@ -2,7 +2,7 @@
 
 Open **Contacts** to browse the **People** list, start a conversation, or move a contact list between clients.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Open a contact and start a chat
 
@@ -35,6 +35,8 @@ Click **Copy** beside `npub`, or click **Show as QR** to display the person's co
 3. Choose a file destination in the save dialog.
 
 These buttons appear when you have contacts. This is a contact-list export, not a backup of your account, messages, or group encryption state.
+
+<figure><a href="/docs/linux/contacts.svg"><img src="/docs/linux/contacts.svg" alt="Empty People rail with Search contacts and Import contacts controls." loading="lazy" width="365" height="250" /></a><figcaption class="type-small">The People rail contains contact search and Import contacts. Export controls appear after contacts exist. Select the image to enlarge.</figcaption></figure>
 
 ## Import contacts
 

@@ -150,7 +150,7 @@ for (const capture of captures) {
             `Unknown capture guide: ${slug}`
         );
     const kind = capture.kind ?? "device";
-    assert(["device", "source-render"].includes(kind), "Unknown image evidence kind");
+    assert(["device", "source-render", "desktop"].includes(kind), "Unknown image evidence kind");
     if (kind === "device") {
         assert(
             capture.platform === "android" && capture.cleanupVerified,
@@ -171,8 +171,35 @@ for (const capture of captures) {
             !capture.apkSha256 && !capture.cleanupVerified,
             "Reference renders must not claim device qualification"
         );
+    } else if (kind === "desktop") {
+        assert.equal(capture.platform, "linux");
+        assert.equal(capture.source, baseline.linux.releaseSource);
+        assert.equal(capture.build, baseline.linux.releaseVersion);
+        const prefix = `https://github.com/marmot-protocol/whitenoise-linux/releases/download/${capture.build}/WhiteNoise-${capture.build}-`;
+        assert(
+            ["linux-amd64.tar.gz", "linux-arm64.tar.gz", "x86_64.AppImage", "x86_64.flatpak"].some(
+                (suffix) => capture.packageUrl === prefix + suffix
+            ),
+            "Desktop package must be a version-pinned public Linux release asset"
+        );
+        for (const digest of [capture.packageSha256, capture.executableSha256, capture.imageSha256])
+            assert.match(digest, /^[a-f0-9]{64}$/);
+        assert.equal(capture.fixture, "synthetic isolated accounts");
+        assert.equal(capture.runtime, "SDL dummy video driver");
+        assert.equal(capture.cleanupVerified, true);
+        assert(
+            !capture.apkSha256 && !capture.device && !capture.sourceImage,
+            "Desktop captures must not claim Android or source-render evidence"
+        );
+        assert.match(capture.capturedAt, /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z)?$/);
+        assert(!Number.isNaN(Date.parse(capture.capturedAt)), "Invalid desktop capture date");
+        for (const size of [capture.dimensions.width, capture.dimensions.height])
+            assert(
+                Number.isInteger(size) && size > 0,
+                "Desktop image dimensions must be positive pixels"
+            );
     }
-    assert(["android", "ios"].includes(capture.platform));
+    assert(["android", "ios", "linux"].includes(capture.platform));
     assert(
         new RegExp(`^/docs/${capture.platform}/[a-z-]+\\.png$`).test(capture.url),
         "Unexpected capture path"
@@ -190,6 +217,11 @@ for (const capture of captures) {
         capture.imageSha256,
         `Changed capture: ${capture.id}`
     );
+    if (kind === "desktop") {
+        assert.equal(bytes.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
+        assert.equal(bytes.readUInt32BE(16), capture.dimensions.width);
+        assert.equal(bytes.readUInt32BE(20), capture.dimensions.height);
+    }
     const { crop, highlights, url } = capture.presentation;
     assert.equal(url, capture.url.replace(/\.png$/, ".svg"));
     if (kind === "device")

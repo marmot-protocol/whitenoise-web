@@ -2,7 +2,7 @@
 
 Control desktop alerts, sounds, and message previews in White Noise for Linux.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Choose what appears on your desktop
 
@@ -17,6 +17,8 @@ These instructions describe the reviewed Linux source. Packaged releases can dif
 The test button sends an alert even when Desktop notifications is off, so you can inspect the alert before enabling it. Message previews and notification sounds start enabled in a new configuration; review them before using White Noise on a shared screen.
 
 **Interface sounds** is a separate switch for short tones when a message leaves, arrives, or fails to send. Turn it off too if you want those app sounds silenced.
+
+<figure><a href="/docs/linux/notifications.svg"><img src="/docs/linux/notifications.svg" alt="Desktop notification, sound and message-preview switches with the Send test button." loading="lazy" width="1110" height="442" /></a><figcaption class="type-small">Desktop alerts, notification sounds, interface sounds and message previews have separate switches. Select the image to enlarge.</figcaption></figure>
 
 ## Mute one conversation
 

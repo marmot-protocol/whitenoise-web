@@ -2,7 +2,7 @@
 
 Write messages, find local history, and save conversation transcripts in White Noise for Linux.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Write and send
 
@@ -11,6 +11,8 @@ Open a conversation, type in the composer, and press Enter to send. Shift+Enter 
 For a new conversation, see [Send a message](/docs/get-started/first-message/linux). For attachments and recording, see [Photos, files and voice messages](/docs/using/media/linux).
 
 When a transport failure queues a message, it can retry after the connection returns. A queued or sending row is not a delivery confirmation. If a row shows **failed · tap to retry**, click it to retry. The delete control on a pending row lets you discard it when available.
+
+<figure><a href="/docs/linux/composer.svg"><img src="/docs/linux/composer.svg" alt="Message composer containing the fictional draft The squirrels borrowed the meeting agenda, with attachment and microphone controls." loading="lazy" width="692" height="107" /></a><figcaption class="type-small">A fictional draft in the real composer. The paperclip adds attachments; the microphone starts recording. Nothing was sent. Select the image to enlarge.</figcaption></figure>
 
 ## Reply and react
 

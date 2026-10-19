@@ -2,7 +2,7 @@
 
 Edit your public Nostr profile and choose which account you use in White Noise for Linux.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 > Your profile details and picture are public. A profile picture is uploaded publicly to Blossom, not sent as an encrypted chat attachment. Publish only information you want others to see.
 
@@ -15,6 +15,8 @@ These instructions describe the reviewed Linux source. Packaged releases can dif
 5. Click **Publish changes** or press Enter.
 
 Use Tab to move between fields. **Cancel** or Escape leaves text editing without publishing the draft.
+
+<figure><a href="/docs/linux/profile.svg"><img src="/docs/linux/profile.svg" alt="Fictional Tame Badger profile with Edit profile and a public-key QR code." loading="lazy" width="1050" height="758" /></a><figcaption class="type-small">Edit profile and public-key sharing on a fictional, offline account. This does not demonstrate profile publication. Select the image to enlarge.</figcaption></figure>
 
 ## Change your picture
 

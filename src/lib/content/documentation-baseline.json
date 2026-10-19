@@ -25,8 +25,8 @@
         "minimumOS": "Linux; portable tarballs require glibc 2.39 or newer",
         "architectures": ["x86-64", "ARM64 (portable tarball)"],
         "channel": "GitHub Releases: x86-64 AppImage and Flatpak; x86-64 and ARM64 tarballs",
-        "evidence": "source-reviewed; public release artifacts listed on GitHub",
-        "behaviorQualification": "App execution and cross-client delivery not verified; current source may include unreleased controls"
+        "evidence": "source-reviewed; selected released-app screens rendered and navigated in network isolation",
+        "behaviorQualification": "No cross-client delivery, full recovery, remote-signer or desktop integration qualification; reviewed source can include newer controls"
     },
     "connector": {
         "hostOS": ["macOS", "Linux"],
