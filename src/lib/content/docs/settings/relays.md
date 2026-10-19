@@ -9,7 +9,7 @@ Relays let your profile publish information, receive chat invitations and delive
 | Posting | Where I post (Profile) | Account Relays | Publishes your profile and connection information. Edits are published as your NIP-65 relay list. |
 | Receiving | Where I receive (Inbox) | Inbox Relays | Where people send you chat and group invitations. Edits are published as your inbox relay list. |
 
-Relay URLs must start with wss://.
+The Android and iOS relay controls below require wss:// URLs. For Linux relay controls, see [Linux settings](/docs/settings/linux).
 
 ## Android
 
@@ -52,4 +52,4 @@ Open **Settings > Relays**. An empty list shows No relays published.
 
 ## Invitation keys
 
-Invitation keys, also called key packages, are published to relays so others can add you to groups. See [Identity and keys](/docs/settings/identity) and Groups for [Android](/docs/using/groups/android) or [iOS](/docs/using/groups/ios).
+Invitation keys, also called key packages, are published to relays so others can add you to groups. See [Identity and keys](/docs/settings/identity) and Groups for [Android](/docs/using/groups/android), [iOS](/docs/using/groups/ios) or [Linux](/docs/using/groups/linux).

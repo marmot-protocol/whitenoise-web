@@ -4,7 +4,7 @@
 
 The website maintainer owns the documentation registry and publishing checks. Platform contributors verify procedures against the source/build they use. Every guide has immutable public source references. Public baseline details live in `src/lib/content/documentation-baseline.json`; runtime verification remains separate from source review.
 
-Edit guide Markdown under `src/lib/content/docs/`. Its registry entry in `user-documentation.json` supplies the title, description, category, platform and source references. Keep the Markdown H1 and registry title identical. Platform counterparts use matching paths with `android` or `ios`. Use a shared guide for a shared concept and separate procedures for consequential differences.
+Edit guide Markdown under `src/lib/content/docs/`. Its registry entry in `user-documentation.json` supplies the title, description, category, platform and source references. Keep the Markdown H1 and registry title identical. Platform variants use matching paths with `android`, `ios` or `linux`; the guide selector offers only registered variants of the same task. Use a shared guide for a shared concept and separate procedures for consequential differences.
 
 Keep essential guide content in the article. Navigation and asides are omitted from negotiated Markdown.
 
@@ -26,6 +26,8 @@ The approved Simple rows design uses native input/select controls with underline
 Curated Android PNGs live in `static/docs/android/`; `documentation-captures.json` records their source, CI build, image/APK digests and verification level. Keep original device evidence and private operational receipts outside the repository. Capture only synthetic fixtures through the approved device broker. Preserve the existing preview package, signer and data.
 
 The current images establish navigated device UI. Delivery was offline during capture. Keep that limit on the compatibility page; app delivery qualification requires its own evidence. Place each screenshot beside the relevant instructions as a linked thumbnail and retain its intrinsic dimensions. The integrity check verifies that every capture appears in its assigned guide.
+
+Linux guides have source-review evidence only, without app execution or screenshots. Record their reviewed commit separately from the public release: current-source controls may be unreleased. Verify vault recovery, remote-signer behavior and package-specific data paths before changing those instructions.
 
 An external contributor owns iOS captures in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14). Keep the text usable independently and display the pending-image note until reviewed images replace it. Check each capture's applicability before replacing a placeholder.
 

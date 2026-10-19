@@ -1,6 +1,6 @@
 # Compatibility
 
-This page lists the release and source baselines these guides were checked against. Other guides link here to keep version details in one place. To get the app, go to [Download](/download).
+This page lists the release and source baselines these guides were checked against. Other guides link here to keep version details in one place. For mobile apps, go to [Download](/download). For Linux packages, see [Install and set up White Noise](/docs/get-started/install/linux).
 
 ## Platform baselines
 
@@ -8,12 +8,13 @@ This page lists the release and source baselines these guides were checked again
 |---|---|---|---|---|
 | iPhone, iOS 18 or newer | App Store; see [Download](/download) | Version 2026.10.25, build 47, source `481736fa1db5eb320c7d44a80ebe2354bca97027` (release tag `v2026.10.25`) | Source review | Device testing; iOS screenshots are still missing (tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14)) |
 | Android 11 or newer | Zapstore (recommended), Google Play or GitHub; see [Download](/download) | Release `android-v2026.10.27`, build 23, source `b81278afe96bddd4cf05e5f267eee7c656231f3d` | Source review of the release. Screenshots from CI preview 4551, source `81fb0947d51169093ac2d2661a3c2244a1eff8da`, Android SDK 37, synthetic test data, navigated on a device | Full delivery testing; screenshots and illustrations of account setup predate this release |
-| Desktop app | Unconfirmed | Unrecorded | Unrecorded | Whether a desktop app is available |
+| Linux x86-64; ARM64 portable tarball | [GitHub Releases](https://github.com/marmot-protocol/whitenoise-linux/releases): AppImage, Flatpak and portable tarballs | Latest public release `v2026.10.6-build.1`; reviewed source `7d961e3526b534bd7283e5d409677806c5c64f2c`. Portable tarballs require glibc 2.39 or newer | Source review and GitHub artifact listing | App execution, installation, screenshots and cross-client delivery unverified; which current-source controls are in the release |
 | Agent connector computer | Mac or Linux | Current website setup guide | The website lists Mac and Linux | Windows support unknown |
 
 ## What this means
 
-- Instructions match the releases listed above. If a control is missing, compare your app version with this table and update the app.
+- Android and iOS instructions match the releases listed above. If a control is missing, compare your app version with this table and update the app.
+- Linux instructions use the reviewed source above, which may include controls newer than the public release. The Linux app uses a password-encrypted vault and has its own backup procedure; phone recovery instructions do not apply to that vault.
 - Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Additional app illustrations use the Android project’s checked-in UI reference renders at source `63524b750b934d72e0f832805128cd84d3a92155`, before this release. They illustrate controls without claiming that those features ran on a device.
 - The guides were checked against these sources and remain untested end to end on each release.
 - Mixed app versions and mixed clients remain untested together as a whole.
@@ -25,6 +26,8 @@ For the pinned MDK source, Rust toolchain and focused test result, see [Build qu
 ## Find your version
 
 On iPhone, open Settings, then General, then iPhone Storage, and select White Noise to see the version you have installed. On Android, open the system app details for White Noise and compare the version there with the release names on GitHub Releases, such as `android-v2026.10.27`.
+
+On Linux, open **Settings > About** and compare the version with the Linux GitHub release tag.
 
 ## Report a problem
 
