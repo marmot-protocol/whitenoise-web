@@ -2,7 +2,7 @@
 
 Linux privacy controls cover the device vault, notifications, network requests and local contact blocking. Encrypted chats do not make public profile information, downloaded files or every app setting private.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Lock the device vault
 
@@ -27,6 +27,8 @@ Open **Settings > Advanced > Privacy** and turn off **Link previews** if you do 
 Opening a message link can show **Open this link?** with its site and full URL before handing it to your browser. Check both before choosing **Open**. Selecting **Always open links to this site** skips later confirmation for that exact site. Remove a site under **Trusted link sites**, or use **Forget all**, then **Confirm forget all**, to restore confirmation for the list.
 
 The link-opening confirmation does not prevent automatic preview requests. Turn previews off separately if that is your goal.
+
+<figure><a href="/docs/linux/privacy.svg"><img src="/docs/linux/privacy.svg" alt="Privacy tab showing Link previews enabled and Share usage and diagnostics disabled." loading="lazy" width="1036" height="356" /></a><figcaption class="type-small">Link previews and diagnostics sharing are separate controls. Preview hosts can receive your IP address. Select the image to enlarge.</figcaption></figure>
 
 ## Location cards
 

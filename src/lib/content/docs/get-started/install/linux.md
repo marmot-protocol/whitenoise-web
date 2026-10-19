@@ -2,21 +2,17 @@
 
 White Noise for Linux has an x86-64 AppImage and Flatpak bundle, plus portable tarballs for x86-64 and ARM64. Choose the package for your processor, then create a password-protected device vault and add a Nostr account.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Get the app
 
 Open the project's [GitHub releases](https://github.com/marmot-protocol/whitenoise-linux/releases). Download one package, not all three formats.
 
-| Package | Architecture | Requirements |
-|---|---|---|
-| AppImage | x86-64 only | Bundles its libraries, fonts and emoji. Japanese text needs a system Noto Sans CJK font. |
-| Flatpak bundle | x86-64 only | Flatpak, with the GNOME 50 runtime used by the bundle. |
-| Portable tarball | `amd64` (x86-64) or `arm64` | glibc 2.39 or newer. Extract the entire archive and keep its files together. |
-
 ARM64 users should use the ARM64 tarball, not an x86-64 AppImage or Flatpak. The reviewed release instructions do not provide a 32-bit Linux package or a musl/Alpine compatibility guarantee.
 
 ### AppImage
+
+The AppImage is x86-64 only and bundles its libraries, fonts and emoji. Japanese text needs a system Noto Sans CJK font: install `noto-fonts-cjk` on Arch, or `fonts-noto-cjk` on Debian and Ubuntu.
 
 In the folder containing your download, make that AppImage executable and run it. The wildcard commands below assume there is only one matching download in that folder:
 
@@ -25,9 +21,9 @@ chmod +x WhiteNoise-*-x86_64.AppImage
 ./WhiteNoise-*-x86_64.AppImage
 ```
 
-For Japanese text, install `noto-fonts-cjk` on Arch, or `fonts-noto-cjk` on Debian and Ubuntu.
-
 ### Flatpak
+
+The Flatpak bundle is x86-64 only. It requires Flatpak, with the GNOME 50 runtime used by the bundle.
 
 Install the downloaded bundle for your user account, then launch it:
 
@@ -40,7 +36,9 @@ Flatpak keeps its app data under `~/.var/app/dev.ipf.whitenoise/`. The **Launch 
 
 ### Portable tarball
 
-Download `WhiteNoise-<version>-linux-amd64.tar.gz` for x86-64 or `WhiteNoise-<version>-linux-arm64.tar.gz` for ARM64. Extract it with your archive manager, open the extracted folder, and run its top-level `whitenoise` script. Do not launch an internal binary after separating it from the bundled resources.
+The portable tarball requires glibc 2.39 or newer. Download `WhiteNoise-<version>-linux-amd64.tar.gz` for x86-64 or `WhiteNoise-<version>-linux-arm64.tar.gz` for ARM64.
+
+Extract the entire archive with your archive manager and keep its files together. Open the extracted folder and run its top-level `whitenoise` script. Do not launch an internal binary after separating it from the bundled resources.
 
 “Portable” describes the package, not a promise that account data stays beside the executable. **Settings > Storage > Location** shows the app's data directory.
 
@@ -53,6 +51,8 @@ Download `WhiteNoise-<version>-linux-amd64.tar.gz` for x86-64 or `WhiteNoise-<ve
 3. Choose **Continue**. If the strength check rejects it, use unrelated words or a password-manager password.
 
 The password strength check runs offline. It does not require a particular mix of character classes. Later launches show **Unlock**, which needs this device's vault password. The password is separate from your Nostr private key and any password you choose for an exported backup.
+
+<figure><a href="/docs/linux/vault-setup.svg"><img src="/docs/linux/vault-setup.svg" alt="Vault password setup with both password fields empty." loading="lazy" width="990" height="625" /></a><figcaption class="type-small">The vault setup screen. Despite its wording, not every settings file is encrypted; see the <a href="/docs/using/privacy/linux#understand-what-is-stored-locally">privacy guide</a>. Select the image to enlarge.</figcaption></figure>
 
 ## Add an account
 
@@ -68,6 +68,8 @@ A local account keeps its private key in this device's encrypted vault. A remote
 **Import backup** on the sign-in screen imports the Linux settings backup, not an account or message-history backup. For an encrypted `ncryptsec` identity backup, read [Back up and recover your account](/docs/using/recovery/linux) before removing your old installation.
 
 If sign-in fails, read the error and use **Copy error** if you need help. Remote connections may offer **Review signer approval link** or **Cancel connection**. Do not generate another key to recover the identity you already use.
+
+<figure><a href="/docs/linux/sign-in.svg"><img src="/docs/linux/sign-in.svg" alt="Linux sign-in choices for local keys and remote signers." loading="lazy" width="990" height="548" /></a><figcaption class="type-small">Choose a local key or remote signer after unlocking the device vault. Select the image to enlarge.</figcaption></figure>
 
 ## Finish getting connected
 

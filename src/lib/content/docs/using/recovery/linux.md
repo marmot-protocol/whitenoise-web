@@ -2,18 +2,34 @@
 
 Back up each identity before removing an account, deleting a vault, or moving to another computer. Your vault password, an identity export, and the Linux settings backup protect different things.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Know what each backup covers
 
-| Item | What it protects | What it does not restore |
-|---|---|---|
-| Local account's private key, as an nsec or encrypted `ncryptsec` export | The ability to sign in as the same Nostr identity | This device's message history, MLS group state, queued sends or media cache |
-| Remote signer's own backup | The identity managed by that signer, according to its recovery procedure | White Noise's device-local conversation state |
-| Storage's `.wnbk` backup | Settings, drafts, private nicknames and blocked state, hidden-message IDs, custom emoji and user themes | Account private keys, MLS state, message history, the offline send queue, and vault-bound media/sticker/GIF stores |
-| Vault password | Unlocking this device's encrypted vault | Recovery without the vault and its related app data |
+### Local identity export
+
+A local account's private key, as an nsec or encrypted `ncryptsec` export, lets you sign in as the same Nostr identity. It does not restore this device's message history, MLS group state, queued sends or media cache.
+
+### Remote signer backup
+
+The remote signer's own backup protects the identity managed by that signer, according to its recovery procedure. It does not restore White Noise's device-local conversation state.
+
+### Storage settings backup
+
+Storage's `.wnbk` backup includes:
+
+- Settings and drafts.
+- Private nicknames and blocked state.
+- Hidden-message IDs.
+- Custom emoji and user themes.
+
+It does not restore account private keys, MLS state, message history, the offline send queue, or vault-bound media/sticker/GIF stores.
 
 The Storage row is called **Back up everything**, but its implementation is a settings backup, not a whole-vault or account backup. Do not delete the original installation after saving only a `.wnbk` file.
+
+### Vault password
+
+Your vault password unlocks this device's encrypted vault. It does not provide recovery without the vault and its related app data.
 
 A key can recover your identity without recovering your conversations. Keep the old device and its app data until you know what has been recovered. These guides do not provide a verified full-state migration or cross-platform conversation restore. If local group state is lost, ask a group administrator about a fresh invitation rather than assuming old history will return.
 
@@ -31,6 +47,8 @@ A key can recover your identity without recovering your conversations. Keep the 
 Check that your chosen destination saved the complete value. Repeat for every local account; exporting the active account does not back up the others.
 
 **Reveal private key (nsec)** offers **Reveal**, then **Confirm reveal**, followed by **Show/Hide** and **Copy**. Use this only when you need the raw private key, and put it directly into a trusted password manager. Avoid screenshots, chat messages and online key converters.
+
+<figure><a href="/docs/linux/security.svg"><img src="/docs/linux/security.svg" alt="Change vault password, Export encrypted key and Reveal private key controls with no key revealed." loading="lazy" width="1036" height="457" /></a><figcaption class="type-small">Export an encrypted identity separately from the settings backup. No private key is displayed. Select the image to enlarge.</figcaption></figure>
 
 ### Importing an encrypted identity export
 

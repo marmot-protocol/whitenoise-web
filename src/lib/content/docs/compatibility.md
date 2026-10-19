@@ -4,16 +4,41 @@ This page lists the release and source baselines these guides were checked again
 
 ## Platform baselines
 
-| Platform | Channel | Source baseline | Evidence | Missing checks |
-|---|---|---|---|---|
-| iPhone, iOS 18 or newer | App Store; see [Download](/download) | Version 2026.10.25, build 47, source `481736fa1db5eb320c7d44a80ebe2354bca97027` (release tag `v2026.10.25`) | Source review | Device testing; iOS screenshots are still missing (tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14)) |
-| Android 11 or newer | Zapstore (recommended), Google Play or GitHub; see [Download](/download) | Release `android-v2026.10.27`, build 23, source `b81278afe96bddd4cf05e5f267eee7c656231f3d` | Source review of the release. Screenshots from CI preview 4551, source `81fb0947d51169093ac2d2661a3c2244a1eff8da`, Android SDK 37, synthetic test data, navigated on a device | Full delivery testing; screenshots and illustrations of account setup predate this release |
-| Linux x86-64; ARM64 portable tarball | [GitHub Releases](https://github.com/marmot-protocol/whitenoise-linux/releases): AppImage, Flatpak and portable tarballs | Latest public release `v2026.10.6-build.1`; reviewed source `7d961e3526b534bd7283e5d409677806c5c64f2c`. Portable tarballs require glibc 2.39 or newer | Source review and GitHub artifact listing | App execution, installation, screenshots and cross-client delivery unverified; which current-source controls are in the release |
-| Agent connector computer | Mac or Linux | Current website setup guide | The website lists Mac and Linux | Windows support unknown |
+### iPhone
+
+Requires iOS 18 or newer. Get it from the App Store; see [Download](/download).
+
+- Baseline: version 2026.10.25, build 47, source `481736fa1db5eb320c7d44a80ebe2354bca97027` (release tag `v2026.10.25`).
+- Evidence: source review.
+- Missing checks: device testing. iOS screenshots are still missing, tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14).
+
+### Android
+
+Requires Android 11 or newer. Get it from Zapstore (recommended), Google Play or GitHub; see [Download](/download).
+
+- Release: `android-v2026.10.27`, build 23, source `b81278afe96bddd4cf05e5f267eee7c656231f3d`.
+- Evidence: source review of the release. Screenshots from CI preview 4551, source `81fb0947d51169093ac2d2661a3c2244a1eff8da`, Android SDK 37, synthetic test data, navigated on a device.
+- Missing checks: full delivery testing. Screenshots and illustrations of account setup predate this release.
+
+### Linux
+
+Packages are available for x86-64, with a portable tarball for ARM64. [GitHub Releases](https://github.com/marmot-protocol/whitenoise-linux/releases) provides AppImage, Flatpak and portable tarballs. Portable tarballs require glibc 2.39 or newer.
+
+- Latest public release: `v2026.10.6-build.1`.
+- Reviewed source: `7d961e3526b534bd7283e5d409677806c5c64f2c`.
+- Screenshot source: released build `acbc3bb812c4676b550b0b42451c8ec2fcc64ec8`.
+- Evidence: the x86-64 portable tarball was checksum-checked, launched and navigated with SDL's dummy video driver, synthetic accounts and networking disabled. Screenshots preserve the app's rendered pixels; captions distinguish drafts from sent messages.
+- Missing checks: AppImage and Flatpak installation, remote signers, full recovery, desktop notification integration and cross-client delivery. The screenshots do not establish which newer source controls are in the release.
+
+New-chat controls differ between these baselines. The released build opens an address-and-group-name form and permits a group without another member. The reviewed source uses a contact picker, followed by **New group**, and requires a first member. The guides describe the reviewed source; screenshots are placed beside controls present in the captured release.
+
+### Agent connector computer
+
+The current website setup guide lists Mac and Linux. Windows support is unknown.
 
 ## What this means
 
-- Android and iOS instructions match the releases listed above. If a control is missing, compare your app version with this table and update the app.
+- Android and iOS instructions match the releases listed above. If a control is missing, compare your app version with its platform baseline and update the app.
 - Linux instructions use the reviewed source above, which may include controls newer than the public release. The Linux app uses a password-encrypted vault and has its own backup procedure; phone recovery instructions do not apply to that vault.
 - Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Additional app illustrations use the Android project’s checked-in UI reference renders at source `63524b750b934d72e0f832805128cd84d3a92155`, before this release. They illustrate controls without claiming that those features ran on a device.
 - The guides were checked against these sources and remain untested end to end on each release.

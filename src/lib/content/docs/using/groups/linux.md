@@ -2,7 +2,7 @@
 
 Create a group, review invitations, and manage members in White Noise for Linux.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Create a group
 
@@ -23,6 +23,8 @@ Open the pending conversation and review who invited you before clicking **Accep
 Click the conversation name or avatar, or the header's **Settings** control, to open **Group settings**. The separate **Members** control opens the member list.
 
 Members can view the group's name, description, photo, and disappearing-message timer. Only admins see controls for changing group details, inviting people, and managing admin rights.
+
+<figure><a href="/docs/linux/group-settings.svg"><img src="/docs/linux/group-settings.svg" alt="Group settings for the fictional Acorn expedition group, showing its photo, description and Rename control." loading="lazy" width="700" height="610" /></a><figcaption class="type-small">Open Group settings to edit a group you administer. The capture uses a fictional one-member group; invitation delivery was not tested. Select the image to enlarge.</figcaption></figure>
 
 ## Edit group details
 

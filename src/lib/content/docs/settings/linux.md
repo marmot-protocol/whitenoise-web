@@ -2,18 +2,40 @@
 
 Open **Settings** from the navigation rail. The home page offers tasks and categories; a category can have several pages. The paths below use the English labels.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
+
+<figure><a href="/docs/linux/settings-overview.svg"><img src="/docs/linux/settings-overview.svg" alt="Linux settings categories including Appearance, General, Notifications, Keys and identity, Storage and Advanced." loading="lazy" width="1036" height="580" /></a><figcaption class="type-small">Choose a settings category, then a task or page. Select the image to enlarge.</figcaption></figure>
 
 ## General and appearance
 
-| Page | What you can change |
-|---|---|
-| General > Startup | **Launch at login**, **Start minimized to tray**, **Close to tray**, and **Restore last selected chat on launch**. Starting minimized takes effect on the next launch. Closing to tray hides the window instead of quitting. |
-| General > Language | **Interface language**, **Time format**, and **Date format**. English, Italian, German and Japanese are available. |
-| General > Messaging | **One-tap reactions** and **Custom emoji**, including importing Nostr emoji sets. Previewing and importing sets contacts their image hosts. |
-| Appearance > Theme | Browse **Dark** and **Light** themes. Hover previews a theme; leaving it or pressing Escape restores your saved choice. Click to keep a theme. |
-| Appearance > Interface | **Interface zoom**, **Message text size**, **Emoji style**, **Scroll speed**, **Reduce motion**, **Centred conversation**, and **Message line limit**. A line limit of 0 keeps messages expanded. |
-| Appearance > Avatars | Avatar appearance controls. |
+### General > Startup
+
+Choose **Launch at login**, **Start minimized to tray**, **Close to tray**, and **Restore last selected chat on launch**. Starting minimized takes effect on the next launch. Closing to tray hides the window instead of quitting.
+
+### General > Language
+
+Set **Interface language**, **Time format**, and **Date format**. English, Italian, German and Japanese are available.
+
+### General > Messaging
+
+Configure **One-tap reactions** and **Custom emoji**, including importing Nostr emoji sets. Previewing and importing sets contacts their image hosts.
+
+### Appearance > Theme
+
+Browse **Dark** and **Light** themes. Hover previews a theme; leaving it or pressing Escape restores your saved choice. Click to keep a theme.
+
+### Appearance > Interface
+
+Adjust the reading and conversation controls:
+
+- **Interface zoom** and **Message text size**.
+- **Emoji style** and **Scroll speed**.
+- **Reduce motion** and **Centred conversation**.
+- **Message line limit**. A line limit of 0 keeps messages expanded.
+
+### Appearance > Avatars
+
+Change avatar appearance.
 
 **Folders** organizes chats and their automatic filing rules. See [Messages](/docs/using/messages/linux) for everyday chat controls. Enter sends messages and Shift+Enter inserts a new line; these guides do not assume the mobile Enter-key preference exists on Linux.
 
@@ -41,11 +63,9 @@ The **SOCKS5 proxy** controls require **Save** and an app restart. Use a numeric
 
 **Keys & identity** has three pages:
 
-| Page | Controls |
-|---|---|
-| Identity | View and copy your **Public key (npub)**. |
-| Key packages | **Publish**, **Refresh**, and **Rotate** invitation keys. Rotation invalidates the current package; it is not an account backup. |
-| Security | **Change vault password**, plus **Export encrypted key (ncryptsec)** and **Reveal private key (nsec)** for local-key accounts. Remote-signer private keys cannot be revealed or exported here. |
+- **Identity**: view and copy your **Public key (npub)**.
+- **Key packages**: **Publish**, **Refresh**, and **Rotate** invitation keys. Rotation invalidates the current package; it is not an account backup.
+- **Security**: **Change vault password**, plus **Export encrypted key (ncryptsec)** and **Reveal private key (nsec)** for local-key accounts. Remote-signer private keys cannot be revealed or exported here.
 
 Read [Back up and recover your account](/docs/using/recovery/linux) before changing passwords or removing accounts. Account switching and **Sign out** are on the account/profile screens, rather than a mobile Profile Keys page.
 

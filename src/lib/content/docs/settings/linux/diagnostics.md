@@ -2,7 +2,7 @@
 
 Linux has a diagnostics-sharing switch and a separate audit-log recorder. Both are off until you enable them. Turning on one is not the same as turning on the other.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app. The Linux controls and retention information differ from the Android and iOS guides.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified. The Linux controls and retention information differ from the Android and iOS guides.
 
 ## Share usage and diagnostics
 
@@ -29,6 +29,8 @@ Choose **Refresh** to reload **Audit log files**. Each row shows a filename, siz
 The page provides a recording toggle and file deletion, not the mobile **Export Latest Audit Log** or **Share group diagnostic logs** controls. Turning off metrics sharing does not turn off this recorder.
 
 The client also configures an audit-tracker service at `https://goggles.ipf.dev/api/v1/audit-logs/`, unless overridden. The reviewed UI does not establish that service's upload behavior or retention policy. Do not assume the presence of a local log list means logs can never be transmitted, or apply the metrics stream's identifier exclusions to audit logs.
+
+<figure><a href="/docs/linux/audit-logs.svg"><img src="/docs/linux/audit-logs.svg" alt="Audit logs tab with recording off, Refresh and an empty log-file list." loading="lazy" width="1036" height="340" /></a><figcaption class="type-small">Audit recording is separate from diagnostics sharing. This isolated account has no recorded audit files. Select the image to enlarge.</figcaption></figure>
 
 ## Delete a log
 

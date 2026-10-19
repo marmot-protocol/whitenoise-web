@@ -2,7 +2,7 @@
 
 Both people need White Noise or another compatible Marmot client, with a connected account and published invitation keys. A Nostr public key, beginning with `npub`, identifies the person; a Nostr profile alone does not mean they are ready to receive encrypted chat invitations.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Check your setup
 
@@ -40,6 +40,8 @@ If creation fails because the person has no invitation key, ask them to open the
 Expected result: your text appears in the conversation. A local send result does not prove the other person has received or read it. Messages written offline enter the device's send queue for reconnecting; do not delete the vault or remove the account to fix a connection problem.
 
 If you see **You can't send messages to someone you blocked**, check the person's identity and choose **Unblock** only if you want to resume direct messaging. For other failures, keep the error details and see [Delivery problems](/docs/troubleshooting/delivery) and [Linux diagnostics](/docs/settings/linux/diagnostics).
+
+<figure><a href="/docs/linux/composer.svg"><img src="/docs/linux/composer.svg" alt="Message composer containing the fictional draft The squirrels borrowed the meeting agenda, with attachment and microphone controls." loading="lazy" width="692" height="107" /></a><figcaption class="type-small">A fictional draft in the real composer. The paperclip adds attachments; the microphone starts recording. Nothing was sent. Select the image to enlarge.</figcaption></figure>
 
 ## Respond to an invitation
 

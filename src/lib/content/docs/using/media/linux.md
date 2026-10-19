@@ -2,7 +2,7 @@
 
 Attach files, record audio, and open received media in White Noise for Linux.
 
-These instructions describe the reviewed Linux source. Packaged releases can differ; the steps have not been checked in a running app.
+Text follows the [reviewed Linux source](/docs/compatibility#linux). Screenshots show `v2026.10.6-build.1` with synthetic offline data. Controls can differ; cross-client messaging and full recovery have not been verified.
 
 ## Send photos or files
 
@@ -14,6 +14,8 @@ These instructions describe the reviewed Linux source. Packaged releases can dif
 You can also paste a copied image or copied files into the composer with Ctrl+V. A supported clipboard image or file becomes a staged attachment instead of pasted text.
 
 Chat attachments use Marmot's encrypted media path. Profile pictures are different: they are published publicly. See [Your profile](/docs/using/profiles/linux).
+
+<figure><a href="/docs/linux/composer.svg"><img src="/docs/linux/composer.svg" alt="Message composer containing the fictional draft The squirrels borrowed the meeting agenda, with attachment and microphone controls." loading="lazy" width="692" height="107" /></a><figcaption class="type-small">A fictional draft in the real composer. The paperclip adds attachments; the microphone starts recording. Nothing was sent. Select the image to enlarge.</figcaption></figure>
 
 ## Record a voice message
 
