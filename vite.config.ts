@@ -30,7 +30,6 @@ export default defineConfig(({ command }) => ({
             command === "build"
                 ? [
                       "dayjs",
-                      "deepmerge",
                       "dom-serializer",
                       "domelementtype",
                       "domhandler",

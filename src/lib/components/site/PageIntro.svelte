@@ -1,10 +1,7 @@
 <script lang="ts">
 import Text from "$lib/components/system/Text.svelte";
 
-let { title, description } = $props<{
-    title: string;
-    description?: string;
-}>();
+let { title, description }: { title: string; description?: string } = $props();
 </script>
 
 <header class="page-intro">
