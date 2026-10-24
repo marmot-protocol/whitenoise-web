@@ -1,5 +1,5 @@
 <script lang="ts">
-import Surface from "$lib/components/system/Surface.svelte";
+import Surface from "#lib/components/system/Surface.svelte";
 </script>
 <Surface class="supporters" label="Project supporters">
     <p>With support from</p>

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import agents from "$lib/content/agents.md?raw";
-import { agentRuntimes } from "$lib/documentation";
-import { guideLinks } from "$lib/documentation-navigation";
+import agents from "#lib/content/agents.md?raw";
+import { agentRuntimes } from "#lib/documentation.js";
+import { guideLinks } from "#lib/documentation-navigation.js";
 import { curatedGuide } from "./curated-guides";
 
 describe("self-contained guide content", () => {

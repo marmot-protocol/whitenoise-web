@@ -1,8 +1,8 @@
 <script lang="ts">
-import { nestArticleHeadings } from "$lib/article";
-import JsonLd from "$lib/components/JsonLd.svelte";
-import BlogImage from "$lib/components/site/BlogImage.svelte";
-import Icon from "$lib/components/system/Icon.svelte";
+import { nestArticleHeadings } from "#lib/article.js";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import BlogImage from "#lib/components/site/BlogImage.svelte";
+import Icon from "#lib/components/system/Icon.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();

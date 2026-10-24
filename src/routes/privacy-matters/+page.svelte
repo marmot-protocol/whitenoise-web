@@ -1,8 +1,8 @@
 <script lang="ts">
-import JsonLd from "$lib/components/JsonLd.svelte";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import Text from "$lib/components/system/Text.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import Text from "#lib/components/system/Text.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
 
 const schema = {
     "@context": "https://schema.org",

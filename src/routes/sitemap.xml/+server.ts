@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit";
-import { fetchBlogPostsCached } from "$lib/server/nostr";
+import { fetchBlogPostsCached } from "#lib/server/nostr.js";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async () => {

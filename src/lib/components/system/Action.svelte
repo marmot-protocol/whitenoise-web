@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { IconName } from "$lib/design-system/icons";
+import type { IconName } from "#lib/design-system/icons.js";
 import Icon from "./Icon.svelte";
 
 let {

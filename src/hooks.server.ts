@@ -1,27 +1,21 @@
-import { type Handle, redirect } from "@sveltejs/kit";
-import { building } from "$app/environment";
-import { getCanonicalRedirect } from "$lib/canonical-url";
-import { pageMarkdown, prefersMarkdown, varyOnAccept } from "$lib/server/agent-markdown";
+import { redirect } from "@sveltejs/kit";
+import type { Handle } from "@sveltejs/kit/hooks";
+import { getCanonicalRedirect } from "#lib/canonical-url.js";
+import { pageMarkdown, prefersMarkdown, varyOnAccept } from "#lib/server/agent-markdown.js";
+import { building } from "$app/env";
 
 export const handle: Handle = async ({ event, resolve }) => {
     const canonicalRedirect = getCanonicalRedirect(event.url);
 
     if (canonicalRedirect) {
-        redirect(308, canonicalRedirect);
+        // Apex and plain-HTTP requests redirect off-origin, only ever to the canonical origin.
+        redirect(308, canonicalRedirect, { external: ["https://www.whitenoise.chat"] });
     }
 
     const markdown =
         !building &&
         ["GET", "HEAD"].includes(event.request.method) &&
         prefersMarkdown(event.request.headers.get("Accept"));
-    if (markdown) {
-        // HTML validators and byte ranges do not describe the converted body.
-        const headers = new Headers(event.request.headers);
-        for (const name of ["If-None-Match", "If-Modified-Since", "Range", "If-Range"]) {
-            headers.delete(name);
-        }
-        event.request = new Request(event.request, { headers });
-    }
     let response = await resolve(event);
     if (response.headers.get("Content-Type")?.startsWith("text/html")) {
         varyOnAccept(response.headers);
@@ -31,6 +25,8 @@ export const handle: Handle = async ({ event, resolve }) => {
                 new URL(event.url.pathname, "https://www.whitenoise.chat")
             );
             if (content !== null) {
+                // HTML validators and byte ranges do not describe the converted body. Without an
+                // ETag, SvelteKit cannot answer the request's If-None-Match with the HTML's 304.
                 const headers = new Headers(response.headers);
                 for (const name of [
                     "Content-Length",

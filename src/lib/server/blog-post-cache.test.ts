@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import type { BlogPost } from "$lib/nostr";
+import type { BlogPost } from "#lib/nostr.js";
 import { createBlogPostCache } from "./blog-post-cache";
 
 function createPost(overrides: Partial<BlogPost> = {}): BlogPost {

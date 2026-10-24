@@ -4,7 +4,7 @@ const { fetchBlogPostsCachedMock } = vi.hoisted(() => ({
     fetchBlogPostsCachedMock: vi.fn(),
 }));
 
-vi.mock("$lib/server/nostr", () => ({
+vi.mock("#lib/server/nostr.js", () => ({
     fetchBlogPostsCached: fetchBlogPostsCachedMock,
 }));
 

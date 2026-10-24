@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { Snippet } from "svelte";
-import GuideNavigation from "$lib/components/site/GuideNavigation.svelte";
-import type { GuideArea } from "$lib/documentation-navigation";
+import GuideNavigation from "#lib/components/site/GuideNavigation.svelte";
+import type { GuideArea } from "#lib/documentation-navigation.js";
 
 let { area, children }: { area: GuideArea; children: Snippet } = $props();
 </script>

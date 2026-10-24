@@ -1,4 +1,4 @@
-import type { BlogPost } from "$lib/nostr";
+import type { BlogPost } from "#lib/nostr.js";
 import { createAsyncCache } from "./async-cache";
 
 export function createBlogPostCache({

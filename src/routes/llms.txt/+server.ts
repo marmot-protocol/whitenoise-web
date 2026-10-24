@@ -1,4 +1,4 @@
-import overview from "$lib/content/overview.md?raw";
+import overview from "#lib/content/overview.md?raw";
 
 export const prerender = true;
 export function GET() {

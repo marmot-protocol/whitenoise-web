@@ -1,12 +1,12 @@
 <script lang="ts">
-import JsonLd from "$lib/components/JsonLd.svelte";
-import Artwork from "$lib/components/site/Artwork.svelte";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import Action from "$lib/components/system/Action.svelte";
-import Grid from "$lib/components/system/Grid.svelte";
-import Surface from "$lib/components/system/Surface.svelte";
-import Text from "$lib/components/system/Text.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import Artwork from "#lib/components/site/Artwork.svelte";
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import Action from "#lib/components/system/Action.svelte";
+import Grid from "#lib/components/system/Grid.svelte";
+import Surface from "#lib/components/system/Surface.svelte";
+import Text from "#lib/components/system/Text.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
 
 const ways = [
     {

@@ -1,4 +1,5 @@
-import type { RequestEvent, ResolveOptions } from "@sveltejs/kit";
+import type { RequestEvent } from "@sveltejs/kit";
+import type { ResolveOptions } from "@sveltejs/kit/hooks";
 import { describe, expect, it } from "vitest";
 import { handle } from "./hooks.server";
 
@@ -14,7 +15,7 @@ async function responseFor(accept: string, response: Response, method = "GET") {
         event,
         resolve: async (_event: RequestEvent, _options?: ResolveOptions) => response,
     });
-    return { result, event };
+    return { result };
 }
 
 describe("Markdown response handling", () => {
@@ -29,7 +30,7 @@ describe("Markdown response handling", () => {
         expect(await result.text()).toBe(html);
     });
     it("converts successful HTML and retains security/cache headers", async () => {
-        const { result, event } = await responseFor(
+        const { result } = await responseFor(
             "text/markdown",
             new Response("<main><h1>Download</h1></main>", {
                 headers: {
@@ -37,6 +38,7 @@ describe("Markdown response handling", () => {
                     "Content-Security-Policy": "default-src 'self'",
                     Vary: "Accept-Encoding",
                     ETag: '"old"',
+                    "Last-Modified": "Wed, 07 Oct 2026 08:35:38 GMT",
                     "Content-Length": "37",
                     "Cache-Control": "private",
                 },
@@ -47,8 +49,8 @@ describe("Markdown response handling", () => {
         expect(result.headers.get("Cache-Control")).toBe("private");
         expect(result.headers.get("Vary")).toBe("Accept-Encoding, Accept");
         expect(result.headers.get("ETag")).toBeNull();
+        expect(result.headers.get("Last-Modified")).toBeNull();
         expect(result.headers.get("Content-Length")).toBeNull();
-        expect(event.request.headers.has("If-None-Match")).toBe(false);
         expect(await result.text()).toContain("# Download");
     });
     it("keeps error and non-HTML responses intact", async () => {
@@ -80,5 +82,22 @@ describe("Markdown response handling", () => {
         );
         expect(head.result.headers.get("Content-Type")).toContain("text/markdown");
         expect(await head.result.text()).toBe("");
+    });
+});
+
+describe("Canonical redirects", () => {
+    it("allows only the canonical origin as an external destination", async () => {
+        for (const url of [
+            "https://whitenoise.chat/download?utm_source=x",
+            "http://www.whitenoise.chat/download",
+        ]) {
+            const event = { url: new URL(url), request: new Request(url) } as RequestEvent;
+            await expect(
+                handle({ event, resolve: async () => new Response("unexpected") })
+            ).rejects.toMatchObject({
+                status: 308,
+                location: "https://www.whitenoise.chat/download",
+            });
+        }
     });
 });

@@ -1,8 +1,8 @@
 import { error } from "@sveltejs/kit";
-import { BLOG_PUBKEY, decodeNaddr, KIND_LONG_FORM } from "$lib/nostr";
-import { renderBlogHtml } from "$lib/server/blog-markdown";
-import { blogMetadata, formatBlogPresentation } from "$lib/server/blog-presentation";
-import { fetchBlogPostCached } from "$lib/server/nostr";
+import { BLOG_PUBKEY, decodeNaddr, KIND_LONG_FORM } from "#lib/nostr.js";
+import { renderBlogHtml } from "#lib/server/blog-markdown.js";
+import { blogMetadata, formatBlogPresentation } from "#lib/server/blog-presentation.js";
+import { fetchBlogPostCached } from "#lib/server/nostr.js";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params }) => {

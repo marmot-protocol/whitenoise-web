@@ -1,4 +1,4 @@
-import type { BlogPost } from "$lib/nostr";
+import type { BlogPost } from "#lib/nostr.js";
 
 /** Only the fields needed by page UI cross the server/client boundary. */
 export function blogMetadata({ title, summary, image, naddr, publishedAt, createdAt }: BlogPost) {

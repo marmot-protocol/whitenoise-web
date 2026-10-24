@@ -1,12 +1,12 @@
 <script lang="ts">
-import JsonLd from "$lib/components/JsonLd.svelte";
-import Artwork from "$lib/components/site/Artwork.svelte";
-import Supporters from "$lib/components/site/Supporters.svelte";
-import Action from "$lib/components/system/Action.svelte";
-import Disclosure from "$lib/components/system/Disclosure.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
-import { faqSchema, homepageFaqs } from "$lib/content/faqs";
-import { homepageFeatures } from "$lib/content/homepage";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import Artwork from "#lib/components/site/Artwork.svelte";
+import Supporters from "#lib/components/site/Supporters.svelte";
+import Action from "#lib/components/system/Action.svelte";
+import Disclosure from "#lib/components/system/Disclosure.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
+import { faqSchema, homepageFaqs } from "#lib/content/faqs.js";
+import { homepageFeatures } from "#lib/content/homepage.js";
 
 const schema = {
     "@context": "https://schema.org",

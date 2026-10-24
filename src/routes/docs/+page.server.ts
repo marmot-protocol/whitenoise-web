@@ -1,4 +1,4 @@
-import { documentationIndex } from "$lib/server/user-documentation";
+import { documentationIndex } from "#lib/server/user-documentation.js";
 
 export const prerender = true;
 export function load() {

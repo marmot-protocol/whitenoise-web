@@ -1,6 +1,6 @@
 <script lang="ts">
 import type { Snippet } from "svelte";
-import type { TextRole } from "$lib/design-system/typography";
+import type { TextRole } from "#lib/design-system/typography.js";
 
 let {
     as = "p",

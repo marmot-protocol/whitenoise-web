@@ -1,5 +1,5 @@
-import termsMarkdown from "$lib/content/terms-of-service.md?raw";
-import { renderBlogHtml } from "$lib/server/blog-markdown";
+import termsMarkdown from "#lib/content/terms-of-service.md?raw";
+import { renderBlogHtml } from "#lib/server/blog-markdown.js";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {

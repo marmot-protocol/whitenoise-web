@@ -1,5 +1,5 @@
 <script lang="ts">
-import { type IconName, icons } from "$lib/design-system/icons";
+import { type IconName, icons } from "#lib/design-system/icons.js";
 
 let { name }: { name: IconName } = $props();
 const Glyph = $derived(icons[name]);

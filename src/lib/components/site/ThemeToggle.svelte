@@ -1,6 +1,6 @@
 <script lang="ts">
 import { onMount } from "svelte";
-import Icon from "$lib/components/system/Icon.svelte";
+import Icon from "#lib/components/system/Icon.svelte";
 
 let dark = $state(false);
 let ready = $state(false);

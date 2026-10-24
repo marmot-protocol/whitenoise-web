@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { load } from "./+page.server";
 
 // Redirects must remain usable even if the guide renderer cannot initialize at runtime.
-vi.mock("$lib/server/curated-guides", () => {
+vi.mock("#lib/server/curated-guides.js", () => {
     throw new Error("Guide renderer unavailable");
 });
 const request = (repo: string, path: string) =>

@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import agents from "$lib/content/agents.md?raw";
+import agents from "#lib/content/agents.md?raw";
 import { aiCatalog, skillIndex, skillMarkdown } from "./agent-discovery";
 
 describe("agent discovery artifacts", () => {

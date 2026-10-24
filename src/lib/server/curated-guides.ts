@@ -1,9 +1,9 @@
 import { Marked } from "marked";
-import agents from "$lib/content/agents.md?raw";
-import builders from "$lib/content/build.md?raw";
-import type { GuideDocument } from "$lib/content/guide";
-import marmot from "$lib/content/marmot.md?raw";
-import type { GuideArea } from "$lib/documentation-navigation";
+import agents from "#lib/content/agents.md?raw";
+import builders from "#lib/content/build.md?raw";
+import type { GuideDocument } from "#lib/content/guide.js";
+import marmot from "#lib/content/marmot.md?raw";
+import type { GuideArea } from "#lib/documentation-navigation.js";
 import { renderDocumentation } from "./docs-markdown";
 
 // The curated Agents Markdown owns both the guide and its copyable prompts,

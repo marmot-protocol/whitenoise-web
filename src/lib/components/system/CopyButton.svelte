@@ -1,6 +1,6 @@
 <script lang="ts">
 import { onDestroy } from "svelte";
-import { copyFeedbackMs } from "$lib/design-system/runtime";
+import { copyFeedbackMs } from "#lib/design-system/runtime.js";
 import Icon from "./Icon.svelte";
 
 let { value, label }: { value: string; label: string } = $props();

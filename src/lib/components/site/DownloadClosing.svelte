@@ -1,6 +1,6 @@
 <script lang="ts">
-import Action from "$lib/components/system/Action.svelte";
-import Surface from "$lib/components/system/Surface.svelte";
+import Action from "#lib/components/system/Action.svelte";
+import Surface from "#lib/components/system/Surface.svelte";
 </script>
 
 <Surface class="download-closing" tone="ink">

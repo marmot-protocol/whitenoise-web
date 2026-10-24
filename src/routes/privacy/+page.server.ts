@@ -1,5 +1,5 @@
-import privacyPolicyMarkdown from "$lib/content/privacy-policy.md?raw";
-import { renderBlogHtml } from "$lib/server/blog-markdown";
+import privacyPolicyMarkdown from "#lib/content/privacy-policy.md?raw";
+import { renderBlogHtml } from "#lib/server/blog-markdown.js";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {

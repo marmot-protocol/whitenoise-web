@@ -177,11 +177,13 @@ try {
     assert.equal(head.headers.get("Content-Type"), "text/markdown; charset=utf-8");
     assert.equal(await head.text(), "");
 
+    // Browsers send Origin with POST; SvelteKit rejects originless untyped writes as CSRF.
+    const sameOrigin = { Origin: "https://www.whitenoise.chat" };
     for (const method of ["GET", "POST"]) {
         const missing = await handler.fetch(
             new Request("https://www.whitenoise.chat/unknown-agent-page", {
                 method,
-                headers: { Accept: "text/html" },
+                headers: { Accept: "text/html", ...(method === "POST" ? sameOrigin : {}) },
             })
         );
         assert.equal(missing.status, 404, "Unknown paths must retain their 404 status");
@@ -192,9 +194,13 @@ try {
     }
 
     const writeAttempt = await handler.fetch(
-        new Request("https://www.whitenoise.chat/download", { method: "POST" })
+        new Request("https://www.whitenoise.chat/download", { method: "POST", headers: sameOrigin })
     );
     assert.equal(writeAttempt.status, 405, "Public page snapshots accept reads only");
+    const originlessWrite = await handler.fetch(
+        new Request("https://www.whitenoise.chat/download", { method: "POST" })
+    );
+    assert.equal(originlessWrite.status, 403, "Originless untyped writes are rejected as CSRF");
 
     const shifted = withMarkdownRouting({
         routes: [

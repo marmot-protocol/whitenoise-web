@@ -1,12 +1,12 @@
 <script lang="ts">
 import { onMount } from "svelte";
+import GuideNavigation from "#lib/components/site/GuideNavigation.svelte";
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
+import { guideReturnUrl, withGuideContext } from "#lib/documentation-browsing.js";
+import type { documentationPage } from "#lib/server/user-documentation.js";
 import { goto } from "$app/navigation";
 import { page } from "$app/state";
-import GuideNavigation from "$lib/components/site/GuideNavigation.svelte";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
-import { guideReturnUrl, withGuideContext } from "$lib/documentation-browsing";
-import type { documentationPage } from "$lib/server/user-documentation";
 
 let { document }: { document: ReturnType<typeof documentationPage> } = $props();
 let hydrated = $state(false);

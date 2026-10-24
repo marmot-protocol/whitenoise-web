@@ -1,8 +1,8 @@
 <script lang="ts">
-import JsonLd from "$lib/components/JsonLd.svelte";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import Surface from "$lib/components/system/Surface.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import Surface from "#lib/components/system/Surface.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();

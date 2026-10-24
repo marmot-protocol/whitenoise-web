@@ -1,5 +1,5 @@
 <script lang="ts">
-import Text from "$lib/components/system/Text.svelte";
+import Text from "#lib/components/system/Text.svelte";
 
 let { title, description }: { title: string; description?: string } = $props();
 </script>

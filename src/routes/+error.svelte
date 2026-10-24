@@ -1,8 +1,8 @@
 <script lang="ts">
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import Container from "#lib/components/system/Container.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
 import { page } from "$app/state";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import Container from "$lib/components/system/Container.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
 </script>
 
 <svelte:head>

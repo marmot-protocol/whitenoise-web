@@ -1,6 +1,6 @@
 import { error } from "@sveltejs/kit";
 import { nip19 } from "nostr-tools";
-import { fetchCanaryAttestations } from "$lib/server/nostr";
+import { fetchCanaryAttestations } from "#lib/server/nostr.js";
 import type { PageServerLoad } from "./$types";
 
 function formatNostrLink(id: string): string {

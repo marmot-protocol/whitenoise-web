@@ -5,7 +5,7 @@ import {
     artworkCompactOffset,
     artworkSourceSize,
     artworkViewBox,
-} from "$lib/design-system/artwork";
+} from "#lib/design-system/artwork.js";
 
 let {
     name = "smith-chain",

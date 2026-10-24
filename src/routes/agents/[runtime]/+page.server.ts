@@ -1,5 +1,5 @@
 import { error, redirect } from "@sveltejs/kit";
-import { agentRuntimes } from "$lib/documentation";
+import { agentRuntimes } from "#lib/documentation.js";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = ({ params }) => {

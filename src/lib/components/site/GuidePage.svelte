@@ -1,14 +1,14 @@
 <script lang="ts">
-import DocumentationLayout from "$lib/components/site/DocumentationLayout.svelte";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import CopyButton from "$lib/components/system/CopyButton.svelte";
-import Grid from "$lib/components/system/Grid.svelte";
-import Icon from "$lib/components/system/Icon.svelte";
-import Text from "$lib/components/system/Text.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
-import type { GuideDocument } from "$lib/content/guide";
-import { repositoryGroups } from "$lib/documentation";
-import { type GuideArea, guideInfo } from "$lib/documentation-navigation";
+import DocumentationLayout from "#lib/components/site/DocumentationLayout.svelte";
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import CopyButton from "#lib/components/system/CopyButton.svelte";
+import Grid from "#lib/components/system/Grid.svelte";
+import Icon from "#lib/components/system/Icon.svelte";
+import Text from "#lib/components/system/Text.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
+import type { GuideDocument } from "#lib/content/guide.js";
+import { repositoryGroups } from "#lib/documentation.js";
+import { type GuideArea, guideInfo } from "#lib/documentation-navigation.js";
 
 let {
     area,

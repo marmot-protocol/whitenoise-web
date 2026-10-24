@@ -1,16 +1,16 @@
 <script lang="ts">
-import Artwork from "$lib/components/site/Artwork.svelte";
-import PageIntro from "$lib/components/site/PageIntro.svelte";
-import Supporters from "$lib/components/site/Supporters.svelte";
-import Action from "$lib/components/system/Action.svelte";
-import CopyButton from "$lib/components/system/CopyButton.svelte";
-import Disclosure from "$lib/components/system/Disclosure.svelte";
-import Grid from "$lib/components/system/Grid.svelte";
-import Icon from "$lib/components/system/Icon.svelte";
-import Surface from "$lib/components/system/Surface.svelte";
-import Text from "$lib/components/system/Text.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
-import { type IconName, iconMeanings, icons } from "$lib/design-system/icons";
+import Artwork from "#lib/components/site/Artwork.svelte";
+import PageIntro from "#lib/components/site/PageIntro.svelte";
+import Supporters from "#lib/components/site/Supporters.svelte";
+import Action from "#lib/components/system/Action.svelte";
+import CopyButton from "#lib/components/system/CopyButton.svelte";
+import Disclosure from "#lib/components/system/Disclosure.svelte";
+import Grid from "#lib/components/system/Grid.svelte";
+import Icon from "#lib/components/system/Icon.svelte";
+import Surface from "#lib/components/system/Surface.svelte";
+import Text from "#lib/components/system/Text.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
+import { type IconName, iconMeanings, icons } from "#lib/design-system/icons.js";
 import {
     breakpoints,
     contrastRatio,
@@ -18,9 +18,9 @@ import {
     pixels,
     tokenById,
     tokens,
-} from "$lib/design-system/tokens";
-import { type TextRole, textRoles, typography } from "$lib/design-system/typography";
-import "$lib/design-system/reference.css";
+} from "#lib/design-system/tokens.js";
+import { type TextRole, textRoles, typography } from "#lib/design-system/typography.js";
+import "#lib/design-system/reference.css";
 
 let query = $state("");
 let category = $state("All");

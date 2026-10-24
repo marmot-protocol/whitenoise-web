@@ -6,15 +6,15 @@ const { decodeNaddrMock, fetchBlogPostCachedMock, renderBlogHtmlMock } = vi.hois
     renderBlogHtmlMock: vi.fn(),
 }));
 
-vi.mock("$lib/nostr", () => ({
+vi.mock("#lib/nostr.js", () => ({
     BLOG_PUBKEY: "expected-pubkey",
     KIND_LONG_FORM: 30023,
     decodeNaddr: decodeNaddrMock,
 }));
 
-vi.mock("$lib/server/nostr", () => ({ fetchBlogPostCached: fetchBlogPostCachedMock }));
+vi.mock("#lib/server/nostr.js", () => ({ fetchBlogPostCached: fetchBlogPostCachedMock }));
 
-vi.mock("$lib/server/blog-markdown", () => ({
+vi.mock("#lib/server/blog-markdown.js", () => ({
     renderBlogHtml: renderBlogHtmlMock,
 }));
 

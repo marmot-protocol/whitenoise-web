@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit";
-import baseline from "$lib/content/documentation-baseline.json";
-import captures from "$lib/content/documentation-captures.json";
-import content from "$lib/content/user-documentation.json";
+import baseline from "#lib/content/documentation-baseline.json";
+import captures from "#lib/content/documentation-captures.json";
+import content from "#lib/content/user-documentation.json";
 import { renderDocumentation } from "./docs-markdown";
 
 export type Platform = "android" | "ios" | "shared";

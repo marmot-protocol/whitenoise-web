@@ -1,7 +1,7 @@
 <script lang="ts">
-import JsonLd from "$lib/components/JsonLd.svelte";
-import BlogImage from "$lib/components/site/BlogImage.svelte";
-import TextLink from "$lib/components/system/TextLink.svelte";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import BlogImage from "#lib/components/site/BlogImage.svelte";
+import TextLink from "#lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();

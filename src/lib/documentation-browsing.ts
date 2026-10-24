@@ -1,4 +1,4 @@
-export function guideFilters(url: URL) {
+export function guideFilters(url: { readonly searchParams: Pick<URLSearchParams, "get"> }) {
     const selected = url.searchParams.get("platform");
     return {
         platform: selected === "ios" || selected === "all" ? selected : "android",

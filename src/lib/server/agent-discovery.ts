@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import agents from "$lib/content/agents.md?raw";
+import agents from "#lib/content/agents.md?raw";
 
 export const skillName = "connect-white-noise";
 export const skillDescription =

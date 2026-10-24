@@ -1,4 +1,4 @@
-import type { ArtworkName } from "$lib/design-system/artwork";
+import type { ArtworkName } from "#lib/design-system/artwork.js";
 
 type HomepageFeature = {
     title: string[];

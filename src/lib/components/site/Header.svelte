@@ -1,10 +1,8 @@
 <script lang="ts">
-import { afterNavigate } from "$app/navigation";
-import { page } from "$app/state";
-import GuideNavigation from "$lib/components/site/GuideNavigation.svelte";
-import ThemeToggle from "$lib/components/site/ThemeToggle.svelte";
-import Icon from "$lib/components/system/Icon.svelte";
-import { breakpoints } from "$lib/design-system/runtime";
+import GuideNavigation from "#lib/components/site/GuideNavigation.svelte";
+import ThemeToggle from "#lib/components/site/ThemeToggle.svelte";
+import Icon from "#lib/components/system/Icon.svelte";
+import { breakpoints } from "#lib/design-system/runtime.js";
 import {
     currentGuideArea,
     currentPageLabel,
@@ -14,7 +12,9 @@ import {
     mainLinks,
     moreLinks,
     moreMenuLinks,
-} from "$lib/navigation";
+} from "#lib/navigation.js";
+import { afterNavigate } from "$app/navigation";
+import { page } from "$app/state";
 
 let open = $state(false);
 let moreOpen = $state(false);

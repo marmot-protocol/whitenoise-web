@@ -11,7 +11,7 @@ This repository is the production White Noise marketing and documentation site.
 
 ## Stack and structure
 
-SvelteKit 2, Svelte 5, TypeScript, Tailwind 4, Bun, Biome, Vitest and Vercel. Runtime versions are declared in `package.json` and CI. Do not migrate frameworks or introduce a competing UI library.
+SvelteKit 3, Svelte 5, TypeScript, Tailwind 4, Bun, Biome, Vitest and Vercel. Runtime versions are declared in `package.json` and CI. Do not migrate frameworks or introduce a competing UI library.
 
 - `src/routes`: thin page composition, metadata, loaders and endpoints. Static marketing pages are pre-rendered; network-backed content opts into server rendering.
 - `src/lib/components/site`: shared site navigation, page introductions, artwork, blog images and footer composition.

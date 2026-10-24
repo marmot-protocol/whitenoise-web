@@ -1,6 +1,6 @@
 <script lang="ts">
-import JsonLd from "$lib/components/JsonLd.svelte";
-import LegalPage from "$lib/components/site/LegalPage.svelte";
+import JsonLd from "#lib/components/JsonLd.svelte";
+import LegalPage from "#lib/components/site/LegalPage.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();

@@ -1,15 +1,15 @@
 <script lang="ts">
-import { afterNavigate } from "$app/navigation";
-import { page } from "$app/state";
-import Icon from "$lib/components/system/Icon.svelte";
-import { breakpoints } from "$lib/design-system/runtime";
+import Icon from "#lib/components/system/Icon.svelte";
+import { breakpoints } from "#lib/design-system/runtime.js";
 import {
     activeGuide,
     type GuideArea,
     guideAtPosition,
     guideInfo,
     guideLinks,
-} from "$lib/documentation-navigation";
+} from "#lib/documentation-navigation.js";
+import { afterNavigate } from "$app/navigation";
+import { page } from "$app/state";
 
 let {
     area,

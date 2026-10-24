@@ -7,7 +7,7 @@ import {
     KIND_LONG_FORM,
     RELAYS,
     WHITE_NOISE_PUBKEY,
-} from "$lib/nostr";
+} from "#lib/nostr.js";
 import { createAsyncCache } from "./async-cache";
 import { createBlogPostCache } from "./blog-post-cache";
 import { latestReplacements, requestRelayEvents } from "./relay-events";

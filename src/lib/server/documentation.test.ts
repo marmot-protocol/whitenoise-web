@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { docUrl, validDocSource } from "$lib/documentation";
+import { docUrl, validDocSource } from "#lib/documentation.js";
 import { renderDocumentation } from "./docs-markdown";
 
 describe("on-site documentation rendering", () => {

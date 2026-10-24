@@ -1,10 +1,10 @@
 <script lang="ts">
 import { onMount, tick } from "svelte";
+import Icon from "#lib/components/system/Icon.svelte";
+import Text from "#lib/components/system/Text.svelte";
+import { guideFilters, guideIndexUrl, withGuideContext } from "#lib/documentation-browsing.js";
 import { replaceState } from "$app/navigation";
 import { page as currentPage } from "$app/state";
-import Icon from "$lib/components/system/Icon.svelte";
-import Text from "$lib/components/system/Text.svelte";
-import { guideFilters, guideIndexUrl, withGuideContext } from "$lib/documentation-browsing";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();

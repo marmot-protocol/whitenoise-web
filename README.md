@@ -6,7 +6,7 @@ Agent-readable responses, discovery formats, deployment checks and the applicabi
 
 ## Development
 
-Use Node 22 and Bun 1.4.2, matching CI and the Vercel runtime.
+Use Node 22 (22.18 or newer) and Bun 1.4.2, matching CI and the Vercel runtime.
 
 ```bash
 bun install --frozen-lockfile
@@ -48,9 +48,7 @@ The content security policy permits same-origin code and the existing `analytics
 
 Agent setup prompts live in `agent-setup` fences in `src/lib/content/agents.md`; the guide's visible prompt containers, copy controls and text export share this source. Guide Markdown is rendered once per server instance; page data contains either one article or sections with prompts, without a duplicate full article. Keep the runtime-specific prerequisites and installation-approval step when updating them.
 
-The cookie dependency override applies the upstream 0.7.x validation fix for [GHSA-pxg6-pf52-xh8x](https://github.com/advisories/GHSA-pxg6-pf52-xh8x) while SvelteKit declares the older range. Recheck this override when updating SvelteKit; remove it once the framework resolves a fixed version itself.
-
-The devalue override applies the compatible 5.x fixes for [shared-buffer serialization](https://github.com/advisories/GHSA-j22f-vq7h-c4qm) and related 5.9.2 advisories; source-map-js applies the 1.2.2 [source-map denial-of-service fix](https://github.com/advisories/GHSA-68fv-2mgg-jv7q). Both were required by the dependency audit before agent-access validation could run. Recheck and remove these overrides when upstream dependencies resolve patched versions without them.
+The source-map-js override applies the 1.2.2 [source-map denial-of-service fix](https://github.com/advisories/GHSA-68fv-2mgg-jv7q). Recheck and remove it once upstream dependencies resolve the patched version without it. SvelteKit 3 requires patched `cookie` and `devalue` versions itself, so their former overrides were removed.
 
 Existing `/images/rebuild/` paths are stable public asset URLs retained for compatibility. Site components and styles use durable `site` naming. The design system's documentation catalog is isolated from normal page runtime imports; small generated constants supply breakpoint and copy-feedback behavior.
 

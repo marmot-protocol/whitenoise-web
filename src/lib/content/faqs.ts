@@ -1,4 +1,4 @@
-import { guideInfo } from "$lib/documentation-navigation";
+import { guideInfo } from "#lib/documentation-navigation.js";
 
 type Faq = {
     featured?: boolean;

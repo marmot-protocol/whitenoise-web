@@ -1,6 +1,6 @@
 <script lang="ts">
-import GuidePage from "$lib/components/site/GuidePage.svelte";
-import UserGuide from "$lib/components/site/UserGuide.svelte";
+import GuidePage from "#lib/components/site/GuidePage.svelte";
+import UserGuide from "#lib/components/site/UserGuide.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();

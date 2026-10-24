@@ -1,4 +1,4 @@
-import { agentRuntimes } from "$lib/documentation";
+import { agentRuntimes } from "#lib/documentation.js";
 
 export type GuideArea = "agents" | "builders" | "marmot" | "documentation";
 export const guideInfo = {

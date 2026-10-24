@@ -1,5 +1,5 @@
-import publicStaticPages from "$lib/content/agent-pages.json";
-import { type GuideArea, guideInfo } from "$lib/documentation-navigation";
+import publicStaticPages from "#lib/content/agent-pages.json";
+import { type GuideArea, guideInfo } from "#lib/documentation-navigation.js";
 
 type NavigationLink = { label: string; href: string };
 

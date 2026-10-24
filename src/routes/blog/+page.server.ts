@@ -1,6 +1,6 @@
 import { error } from "@sveltejs/kit";
-import { blogMetadata } from "$lib/server/blog-presentation";
-import { fetchBlogPostsCached } from "$lib/server/nostr";
+import { blogMetadata } from "#lib/server/blog-presentation.js";
+import { fetchBlogPostsCached } from "#lib/server/nostr.js";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {

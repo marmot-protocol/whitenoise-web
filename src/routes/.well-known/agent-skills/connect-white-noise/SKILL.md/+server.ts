@@ -1,4 +1,4 @@
-import { discoveryHeaders, skillMarkdown } from "$lib/server/agent-discovery";
+import { discoveryHeaders, skillMarkdown } from "#lib/server/agent-discovery.js";
 
 export const prerender = true;
 export function GET() {
