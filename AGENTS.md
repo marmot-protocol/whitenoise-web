@@ -71,6 +71,8 @@ bun run build
 
 `bun run ci` runs the non-mutating release checks. Run `bun audit` when changing dependencies, and retain the frozen lockfile. Do not suppress failures from preparation or build commands.
 
+`bunfig.toml` delays newly published package versions by three days and `trustedDependencies` stays empty. Bypass the delay only for a reviewed urgent fix the user approves, and trust a dependency's install script only with approval. Pin GitHub Actions to full commit SHAs with a version comment.
+
 - Write meaningful tests for pure helpers, parsing/security boundaries, redirects, cache expiration, concurrency and error behavior. Avoid tests that merely restate CSS or mock away the behavior under review.
 - Verify affected pages at desktop, tablet, mobile and 320px, plus keyboard controls and actual browser 200% zoom. A narrow viewport alone is not a completed browser-zoom check.
 - Check heading hierarchy, focus visibility, navigation, FAQ/menu disclosures, full donation addresses, download links, and content/image failure states. Validate local production output as well as development rendering.

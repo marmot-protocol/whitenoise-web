@@ -1,0 +1,4 @@
+[install]
+# Resolve only package versions published at least three days ago (in seconds).
+# Locked versions still install; README describes overriding this for an urgent fix.
+minimumReleaseAge = 259200

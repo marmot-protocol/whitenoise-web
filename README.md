@@ -13,6 +13,8 @@ bun install --frozen-lockfile
 bun run dev
 ```
 
+Dependency installs are guarded against freshly published compromises. `bunfig.toml` makes Bun skip package versions published within the last three days whenever it resolves a new version; locked versions still install. To take an urgent security fix sooner, review the release and run that one install or update with `--minimum-release-age=0`. `trustedDependencies` is empty, so no dependency install script runs; trust a package only after reviewing its script. CI and Vercel install with `--frozen-lockfile`. CI pins GitHub Actions to full commit SHAs with version comments and checks out without persisted credentials. Dependabot opens weekly pull requests for Bun packages and GitHub Actions after a seven-day cooldown, grouping minor and patch updates; major package updates arrive separately.
+
 Development and production preview servers listen on the local network for phone testing. Open the Network URL printed by Vite on a phone connected to the same Wi-Fi. Keep the server running during review and use the default scripts rather than overriding the host with `127.0.0.1`.
 
 ## Quality checks
