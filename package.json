@@ -43,8 +43,8 @@
     },
     "dependencies": {
         "@fontsource-variable/manrope": "^5.3.0",
-        "applesauce-core": "^6.2.0",
-        "applesauce-relay": "^6.2.1",
+        "applesauce-core": "^7.0.3",
+        "applesauce-relay": "^7.0.0",
         "marked": "^18.0.11",
         "nostr-tools": "^2.25.0",
         "rxjs": "^7.8.2",

@@ -1,4 +1,4 @@
-import type { GroupReqMessage } from "applesauce-relay";
+import { type GroupReqMessage, RelayPool } from "applesauce-relay";
 import { type Filter, matchFilter } from "nostr-tools/filter";
 import { type Event, verifyEvent } from "nostr-tools/pure";
 import { type Observable, Subscription } from "rxjs";
@@ -63,6 +63,20 @@ export function collectRelayEvents(
             })
         );
     });
+}
+
+/** One raw REQ per relay (never retried); every connection is released before the result settles. */
+export async function requestRelayEvents(
+    relays: string[],
+    filter: Filter,
+    poolOptions?: ConstructorParameters<typeof RelayPool>[0]
+): Promise<Event[]> {
+    const pool = new RelayPool(poolOptions);
+    try {
+        return await collectRelayEvents(pool.req(relays, filter), filter, relays.length);
+    } finally {
+        pool.close();
+    }
 }
 
 /** NIP-01: newest replacement wins; equal timestamps use the lowest event id. */

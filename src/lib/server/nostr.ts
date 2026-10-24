@@ -1,5 +1,3 @@
-import { RelayPool } from "applesauce-relay";
-import type { Filter } from "nostr-tools/filter";
 import {
     BLOG_PUBKEY,
     CANARY_RELAYS,
@@ -12,24 +10,11 @@ import {
 } from "$lib/nostr";
 import { createAsyncCache } from "./async-cache";
 import { createBlogPostCache } from "./blog-post-cache";
-import { collectRelayEvents, latestReplacements } from "./relay-events";
-
-async function requestEvents(relays: string[], filter: Filter) {
-    const pool = new RelayPool();
-    try {
-        return await collectRelayEvents(
-            pool.req(relays, filter, { reconnect: false }),
-            filter,
-            relays.length
-        );
-    } finally {
-        pool.close();
-    }
-}
+import { latestReplacements, requestRelayEvents } from "./relay-events";
 
 const blogCache = createBlogPostCache({
     async fetchBlogPosts() {
-        const events = await requestEvents(RELAYS, {
+        const events = await requestRelayEvents(RELAYS, {
             kinds: [KIND_LONG_FORM],
             authors: [BLOG_PUBKEY],
             limit: 500,
@@ -39,7 +24,7 @@ const blogCache = createBlogPostCache({
             .sort((a, b) => (b.publishedAt ?? b.createdAt) - (a.publishedAt ?? a.createdAt));
     },
     async fetchBlogPostByDTag(dTag) {
-        const events = await requestEvents(RELAYS, {
+        const events = await requestRelayEvents(RELAYS, {
             kinds: [KIND_LONG_FORM],
             authors: [BLOG_PUBKEY],
             "#d": [dTag],
@@ -60,7 +45,7 @@ const canaryCache = createAsyncCache<ReturnType<typeof eventToCanaryAttestation>
 });
 export function fetchCanaryAttestations() {
     return canaryCache.get("canary", async () => {
-        const events = await requestEvents(CANARY_RELAYS, {
+        const events = await requestRelayEvents(CANARY_RELAYS, {
             kinds: [KIND_CANARY_ATTESTATION],
             authors: [WHITE_NOISE_PUBKEY],
             limit: 100,
