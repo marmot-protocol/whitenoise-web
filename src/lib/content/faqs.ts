@@ -34,7 +34,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
                 answer: "Linked-device support is still being developed in the Marmot protocol. Importing the same identity key on another device does not by itself transfer your conversations or their encryption state. Do not rely on a second installation as a synchronized backup of your chats.",
                 link: {
                     label: "Read about multi-device development",
-                    href: "/docs/marmot/features/multi-device.md",
+                    href: "/docs/marmot/ideas/multi-device.md",
                 },
             },
         ],
