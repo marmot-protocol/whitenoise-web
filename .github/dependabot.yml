@@ -7,6 +7,11 @@ updates:
       interval: weekly
     cooldown:
       default-days: 7
+    ignore:
+      # Node types follow the Node 22 runtime declared in package.json, CI and Vercel.
+      - dependency-name: "@types/node"
+        update-types:
+          - version-update:semver-major
     groups:
       dependencies:
         applies-to: version-updates
