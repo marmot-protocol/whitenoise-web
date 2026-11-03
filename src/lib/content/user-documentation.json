@@ -734,6 +734,7 @@
         "category": "using",
         "platform": "shared",
         "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md",
             "https://github.com/marmot-protocol/whitenoise-web/blob/2acf71acc07b3e514e6a50b5094362e66ba46820/src/lib/content/faqs.ts",
             "https://github.com/marmot-protocol/whitenoise-web/blob/2acf71acc07b3e514e6a50b5094362e66ba46820/src/lib/content/agents.md",
             "https://github.com/marmot-protocol/mdk/blob/d20329e9ac6337294a9b4414a55f97bc76b6581d/integrations/README.md"
@@ -760,6 +761,203 @@
         "sources": [
             "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationProviderSheet.kt"
+        ]
+    },
+    {
+        "slug": "using/profiles/linux",
+        "title": "Your profile",
+        "description": "Edit and share your public profile, switch or add Linux accounts, and distinguish signing out from removing an account.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/profile_pane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/profilepic.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/panes.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/loginpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/confirm.odin"
+        ]
+    },
+    {
+        "slug": "using/contacts/linux",
+        "title": "Contacts",
+        "description": "Browse and share contacts, save local nicknames, import or export CSV and JSON, and remove or block people on Linux.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/contacts_pane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/rail.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/contact_import_worker.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/export.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/confirm.odin"
+        ]
+    },
+    {
+        "slug": "using/groups/linux",
+        "title": "Groups",
+        "description": "Create and join Linux groups, edit group details, invite members, manage admins, set disappearing messages, and leave safely.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/chatpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/grouphero.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/menus.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/handlers.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/rowactions.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/confirm.odin"
+        ]
+    },
+    {
+        "slug": "using/messages/linux",
+        "title": "Messages",
+        "description": "Send, reply, edit, forward, search local history, export readable transcripts, and delete messages on Linux.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/handlers.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/menus.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/forward.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/gsearch.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/export.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/offline.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/timeline.odin"
+        ]
+    },
+    {
+        "slug": "using/media/linux",
+        "title": "Photos, files and voice messages",
+        "description": "Send files and voice recordings, preview and save attachments, transcribe audio locally, and control link previews on Linux.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/chatpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/handlers.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/voice.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/preview.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/save.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_speech.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/group_files.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/timeline.odin"
+        ]
+    },
+    {
+        "slug": "using/notifications/linux",
+        "title": "Notifications",
+        "description": "Set Linux desktop alerts, preview privacy and sounds, mute chats, and diagnose missing notifications.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/notify.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/rowactions.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/handlers.odin"
+        ]
+    },
+    {
+        "slug": "settings/linux",
+        "title": "Linux settings",
+        "description": "Find Linux startup, appearance, notification, network, identity, storage and privacy settings, with the limits of each backup control.",
+        "category": "settings",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_home.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_speech.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/network.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/keys.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/storage.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/advanced.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/notify.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md"
+        ]
+    },
+    {
+        "slug": "settings/linux/diagnostics",
+        "title": "Linux diagnostics and local logs",
+        "description": "Understand Linux diagnostics sharing, the separate audit-log recorder, file deletion and the limits of the available retention information.",
+        "category": "settings",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/advanced.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/network.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md"
+        ]
+    },
+    {
+        "slug": "get-started/install/linux",
+        "title": "Install and set up White Noise",
+        "description": "Choose a Linux AppImage, Flatpak or portable tarball, create your device vault, and add a local-key or remote-signer account.",
+        "category": "get-started",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/loginpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/vault_gate.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/onboard.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/main.odin"
+        ]
+    },
+    {
+        "slug": "get-started/first-message/linux",
+        "title": "Send a message",
+        "description": "Check relay and invitation-key readiness, start a Linux chat from contacts or create a group, send a message and respond to invitations.",
+        "category": "get-started",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/onboard.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/chatpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/handlers.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/contacts_pane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/keys.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/account_worker.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md"
+        ]
+    },
+    {
+        "slug": "using/recovery/linux",
+        "title": "Back up and recover your account",
+        "description": "Back up local identities or remote signers separately from Linux settings, and understand what password loss, sign-out and removal can lose.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/backup.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/storage.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/keys.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/vault.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/vault_gate.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/vault_pw.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/loginpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/confirm.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/account_worker.odin"
+        ]
+    },
+    {
+        "slug": "using/privacy/linux",
+        "title": "Privacy controls",
+        "description": "Use Linux vault locking, link and map controls, notification previews, contact blocking and proxy settings without assuming full-folder encryption.",
+        "category": "using",
+        "platform": "linux",
+        "sources": [
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/advanced.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/vault_session.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/vault.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/settings_pages.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/linkguard.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/notify.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/contacts_pane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/chatpane.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/confirm.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/app/network.odin",
+            "https://github.com/marmot-protocol/whitenoise-linux/blob/7d961e3526b534bd7283e5d409677806c5c64f2c/README.md"
         ]
     }
 ]

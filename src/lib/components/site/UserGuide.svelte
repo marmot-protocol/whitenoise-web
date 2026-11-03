@@ -17,8 +17,12 @@ const returnUrl = $derived(
     guideReturnUrl(hydrated ? page.url.searchParams.get("guides") : null, document.platform)
 );
 function switchPlatform(target: string) {
+    const selected = document.platforms.find((variant) => variant.url === target);
+    if (!selected) {
+        return;
+    }
     const context = new URL(returnUrl, page.url.origin);
-    context.searchParams.set("platform", target.includes("/ios") ? "ios" : "android");
+    context.searchParams.set("platform", selected.platform);
     context.hash = `guide-${target.slice("/docs/".length).replaceAll("/", "-")}`;
     void goto(withGuideContext(target, context.pathname + context.search + context.hash));
 }
@@ -33,12 +37,11 @@ function switchPlatform(target: string) {
     <div class="docs-main">
         <nav class="docs-guide-tools" aria-label="Guide navigation">
             <TextLink href={returnUrl}>All guides</TextLink>
-            {#if document.counterpart}
+            {#if document.platforms.length > 1}
                 <select class="docs-platform-select type-ui" aria-label="Guide platform" value={`/docs/${document.slug}`} onchange={(event) => switchPlatform(event.currentTarget.value)}>
-                    <option value={document.platform === "android" ? `/docs/${document.slug}` : document.counterpart.url}>Android</option>
-                    <option value={document.platform === "ios" ? `/docs/${document.slug}` : document.counterpart.url}>iOS</option>
+                    {#each document.platforms as variant (variant.platform)}<option value={variant.url}>{variant.label}</option>{/each}
                 </select>
-                <noscript><a href={document.counterpart.url}>Read this guide for {document.counterpart.platform === "ios" ? "iOS" : "Android"}</a></noscript>
+                <noscript><ul>{#each document.platforms.filter((variant) => variant.platform !== document.platform) as variant (variant.platform)}<li><a href={variant.url}>Read this guide for {variant.label}</a></li>{/each}</ul></noscript>
             {/if}
         </nav>
         <PageIntro title={document.title} description={document.description} />

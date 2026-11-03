@@ -2,6 +2,8 @@
 
 Your profile is identified by a key pair. Share your **public key** so people can find and connect with you. Anyone who has your **private key** can use your profile, and White Noise can't recover it for you.
 
+The procedures below cover Android and iOS. On Linux, use [Back up and recover your account](/docs/using/recovery/linux) for vault passwords, identity keys and backup limits, and [Your profile](/docs/using/profiles/linux) for account removal. Do not use the phone backup procedure to recover a Linux vault.
+
 > **Important:** Your private key restores your identity only. After a wipe, past groups, messages and media are gone from that device, even if you sign in again with the same key, and you need new invitations to rejoin groups. See Recovery for [Android](/docs/using/recovery/android) or [iOS](/docs/using/recovery/ios).
 
 ## Encrypted backup import

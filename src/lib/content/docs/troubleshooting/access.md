@@ -6,7 +6,7 @@
 
 **Before you act:** White Noise cannot reset or recover your private key, so keep your backup secure. Your key restores your identity only. Message history and group encryption state live on the device that holds them, and reinstalling the app or clearing its data deletes the conversations stored on that device.
 
-For an encrypted backup, first follow [Encrypted backup import](/docs/settings/identity#encrypted-backup-import).
+For an Android or iOS encrypted identity backup, first follow [Encrypted backup import](/docs/settings/identity#encrypted-backup-import). For Linux vault access and backup limits, use [Back up and recover your account](/docs/using/recovery/linux) before changing or removing any files.
 
 ## Diagnose
 

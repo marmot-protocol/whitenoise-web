@@ -10,8 +10,8 @@ Notifications are alerts only. A missing alert does not mean a message failed, a
 2. Make sure your operating system allows notifications for White Noise. You manage this permission in your device's system settings.
 3. Check background conditions. Battery saving, data saving, focus modes and background app restrictions can delay or hide alerts.
 4. Make sure the device stays connected in the background. VPNs and restrictive networks can block the services that alerts depend on.
-5. Check the chat’s mute and mention settings. See Groups for [Android](/docs/using/groups/android#notifications-and-disappearing-messages) or [iOS](/docs/using/groups/ios#notifications-and-disappearing-messages).
-6. Check the delivery options for [Android](/docs/using/notifications/android) or [iOS](/docs/using/notifications/ios). Push notifications have their own data flows, described in the [privacy policy](/privacy).
+5. Check the chat’s mute and mention settings. See Groups for [Android](/docs/using/groups/android#notifications-and-disappearing-messages), [iOS](/docs/using/groups/ios#notifications-and-disappearing-messages) or [Linux](/docs/using/groups/linux).
+6. Check the delivery options for [Android](/docs/using/notifications/android), [iOS](/docs/using/notifications/ios) or [Linux](/docs/using/notifications/linux). Phone push notifications have their own data flows, described in the [privacy policy](/privacy).
 7. Keep your installation. Reinstalling to fix alerts can delete the conversations stored on the device.
 
 ## Expected result
