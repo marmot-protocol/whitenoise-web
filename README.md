@@ -60,7 +60,7 @@ Every Download button points at a real store destination: the App Store listing 
 
 ## Artwork sources
 
-Manrope is self-hosted through `@fontsource-variable/manrope`. The canonical WN mark, supporter logos, social preview and application icons remain in `static/`.
+Manrope is self-hosted through `@fontsource-variable/manrope`. The Vite build keeps every subset an external file: Vite inlines small assets as data: URIs by default, and the `font-src 'self'` policy in `vite.config.ts` blocks an inlined font, so the cyrillic-ext subset silently failed to load until inlining was disabled for font files. The canonical WN mark, supporter logos, social preview and application icons remain in `static/`.
 
 The IPF supporter lettermark was adapted from the [official IPF favicon](https://ipf.dev/favicon.svg) on September 15, 2026: its straight-edged letter contours were traced into SVG, the square background removed, and the letters made black as requested. Its optical frame and the OpenSats frame are documented in the design-system README; original letter shapes and proportions are preserved.
 

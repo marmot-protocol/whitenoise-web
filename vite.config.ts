@@ -43,6 +43,13 @@ export default defineConfig(({ command }) => ({
             },
         },
     ],
+    build: {
+        // Keep every Manrope subset an external file. Vite inlines small fonts as
+        // data: URIs, which the font-src 'self' policy below blocks, so an inlined
+        // subset silently fails to load. Other asset types keep Vite's default.
+        assetsInlineLimit: (filePath: string) =>
+            /\.(woff2?|ttf|otf|eot)$/i.test(filePath) ? false : undefined,
+    },
     ssr: {
         // Bundle the sanitizer's full dependency tree: Vercel disables require(ESM),
         // and its file tracer cannot follow Rolldown's generated __require calls.
