@@ -27,6 +27,7 @@ const furtherGuides: Partial<Record<GuideArea, { href: string; label: string }[]
         { href: "/docs/agents/stop", label: "Stop an agent" },
     ],
     builders: [
+        { href: "/docs/build/first-chat", label: "Build a two-person chat" },
         { href: "/docs/build/quickstart", label: "Run a local source check" },
         { href: "/docs/build/state-and-errors", label: "State and errors" },
         { href: "/docs/build/compatibility", label: "Check compatibility" },

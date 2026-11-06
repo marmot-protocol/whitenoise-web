@@ -36,6 +36,13 @@
         "evidence": "local focused storage tests; full suite, network and device qualification pending",
         "typescript": "marmot-ts alpha; execution qualification pending",
         "protocolSource": "d181ce1c4661ca985e8fb12a48a962dbe76fec6c",
-        "typescriptSource": "74541744a26aadc1618e0a547ade078584bfa1cd"
+        "typescriptSource": "74541744a26aadc1618e0a547ade078584bfa1cd",
+        "tutorial": {
+            "mdkSource": "4d525102389ea8fc053b4be1e3904fe23eb9b931",
+            "rustToolchain": "1.97.1",
+            "exampleCommand": "cargo run",
+            "exampleResult": "two accounts joined one group; Bob received and stored Alice's message",
+            "evidence": "three local Linux runs against an in-process relay; macOS, Windows, public relays and devices untested"
+        }
     }
 }

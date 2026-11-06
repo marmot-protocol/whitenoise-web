@@ -30,8 +30,8 @@ const blogPostSchema = $derived.by(() => {
         dateModified: new Date(data.post.createdAt * 1000).toISOString(),
         publisher: {
             "@type": "Organization",
-            name: "The Marmot Protocol",
-            url: "https://github.com/marmot-protocol",
+            name: "Internet Privacy Foundation",
+            url: "https://ipf.dev",
         },
         isAccessibleForFree: true,
         inLanguage: "en",

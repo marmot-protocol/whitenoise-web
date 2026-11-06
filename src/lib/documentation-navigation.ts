@@ -50,6 +50,7 @@ const sections = {
     ],
     builders: [
         ["getting-started", "Getting started"],
+        ["choosing-marmot", "Choosing Marmot"],
         ["mdk", "MDK"],
         ["typescript", "TypeScript"],
         ["client-flow", "Client flow"],

@@ -18,8 +18,13 @@ const sourceRevisions = {
     marmot: baseline.development.protocolSource,
     "marmot-ts": baseline.development.typescriptSource,
 };
+// The tutorial was run at its own MDK commit; its MDK sources must cite that commit.
+const pageSourceRevisions = {
+    "build/first-chat": { mdk: baseline.development.tutorial.mdkSource },
+};
 for (const revision of [
     ...Object.values(sourceRevisions),
+    baseline.development.tutorial.mdkSource,
     baseline.android.releaseSource,
     baseline.connector.connectorSource,
 ])
@@ -75,6 +80,7 @@ const requiredTasks = [
     "build/state-and-errors",
     "build/compatibility",
     "build/contribute",
+    "build/first-chat",
 ];
 for (const slug of requiredTasks)
     assert(
@@ -108,7 +114,7 @@ for (const page of pages) {
         );
         assert.equal(
             revision,
-            sourceRevisions[repo],
+            pageSourceRevisions[page.slug]?.[repo] ?? sourceRevisions[repo],
             `Source differs from the recorded baseline: ${page.slug}`
         );
         assert(

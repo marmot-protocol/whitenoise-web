@@ -26,8 +26,8 @@ const blogSchema = $derived.by(() => ({
     inLanguage: "en",
     publisher: {
         "@type": "Organization",
-        name: "The Marmot Protocol",
-        url: "https://github.com/marmot-protocol",
+        name: "Internet Privacy Foundation",
+        url: "https://ipf.dev",
     },
     mainEntity: {
         "@type": "ItemList",
