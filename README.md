@@ -137,7 +137,7 @@ NOSTR_SECRET_KEY=<white-noise-nsec> bun run canary:publish -- "White Noise Canar
 
 The script generates the standard canary text automatically using the current date, publishes a kind `303` event to all configured relays, adds a single `relays` tag listing those relays, and includes the canonical `/canary` page in the `r` tag.
 
-To publish one or more events with historical dates, repeat `--date`. Historical events use noon UTC on the specified date for `created_at`. The script displays the dates and asks for confirmation before signing and publishing them:
+To publish one or more events with historical dates, repeat `--date`. Historical events use noon UTC on the specified date for `created_at`; the script refuses a date until that time has passed, because relays reject future-dated events. It displays the dates and asks for confirmation before signing and publishing them:
 
 ```bash
 NOSTR_SECRET_KEY=<white-noise-nsec> bun run canary:publish -- \

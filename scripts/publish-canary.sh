@@ -125,6 +125,7 @@ for iso_date in "${DATES[@]}"; do
   if [[ "$USE_CURRENT_TIMESTAMP" == "true" ]]; then
     epoch="$(date '+%s')"
   else
+    (( dated_epoch <= $(date '+%s') )) || fail "Dated events use noon UTC, which has not passed yet for $iso_date."
     epoch="$dated_epoch"
   fi
   EPOCHS+=("$epoch")
