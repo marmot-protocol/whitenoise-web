@@ -32,7 +32,12 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Audit dependencies
-        run: bun audit
+        # deepmerge, reached through @sveltejs/vite-plugin-svelte, has no patched
+        # release: 4.3.1 is both the newest version and the last affected one, so
+        # no upgrade or override clears it. Ignore that one advisory by ID rather
+        # than lowering the severity threshold, so every other advisory, low
+        # included, still fails the build. Drop the flag once a fix exists.
+        run: bun audit --ignore=GHSA-gcqx-w48m-w2h4
 
       - name: Run CI checks
         run: bun run ci
