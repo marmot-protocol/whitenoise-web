@@ -227,7 +227,7 @@ async fn run() -> Result<()> {
 cargo run
 ```
 
-The first build compiles MDK and its dependencies and can take several minutes. Later runs start in seconds.
+The first build compiles MDK and its dependencies and can take several minutes. Later runs reuse that build; on our machine the program then finished in about 25 seconds.
 
 ## Expected result
 
@@ -248,7 +248,7 @@ We ran this program at MDK commit `4d525102389ea8fc053b4be1e3904fe23eb9b931` wit
 
 ## What this does not show
 
-- **Key storage.** `AccountHome::open` keeps each private key in a file under the data directory, which is fine for a test. An app should use `AccountHome::open_with_keychain` or its own secret store.
+- **Key storage.** `AccountHome::open` keeps each private key in a file under the data directory, which is fine for a test. Each `secret.json` under `chat-data` holds a private key as plain text, so add `chat-data/` to `.gitignore` and never share that directory. An app should use `AccountHome::open_with_keychain` or its own secret store.
 - **Public relays.** The relay runs inside the program and forgets everything when it stops. A real app chooses relays that both people can reach. The program allows a `127.0.0.1` relay only because it sets `with_allow_loopback_relay_endpoints(true)`; leave that off in an app.
 - **Reconnecting.** After the restart, Bob reads stored data without starting a runtime. To keep receiving messages an app calls `start()` again.
 - **Other features.** Adding or removing members, sending media and delivering to a device that was offline when the message was sent are not covered.
@@ -258,7 +258,7 @@ We ran this program at MDK commit `4d525102389ea8fc053b4be1e3904fe23eb9b931` wit
 1. If a debug build stops with a stack overflow, check that `main` still builds the runtime with 8 MiB thread stacks.
 2. Repeated `WARN MEMORY sqlcipher_mlock` lines mean the `libsqlite3-sys` patch is missing from `Cargo.toml`.
 3. A timeout while waiting for an event means Bob did not receive the invitation or message within 30 seconds. Check that nothing blocks connections to 127.0.0.1.
-4. A compile error in MDK code usually means a dependency resolved to a newer version than the one we tested. Check that the `rev` values still match the commit above.
+4. A compile error in MDK code can mean Cargo picked a newer dependency version than the one we tested. A new project does not reuse MDK's `Cargo.lock`, so Cargo chooses versions on the first build. Check that the `rev` values still match the commit above, and include your `Cargo.lock` if you report the error.
 
 If it still fails, open an issue in the MDK repository with the commit, your Rust version, your operating system and the complete output. The Contribute page lists what to remove before you post.
 
