@@ -52,6 +52,8 @@ Agent setup prompts live in `agent-setup` fences in `src/lib/content/agents.md`;
 
 The source-map-js override applies the 1.2.2 [source-map denial-of-service fix](https://github.com/advisories/GHSA-68fv-2mgg-jv7q). Recheck and remove it once upstream dependencies resolve the patched version without it. SvelteKit 3 requires patched `cookie` and `devalue` versions itself, so their former overrides were removed.
 
+The glob override raises `@vercel/nft`'s transitive glob past the [AbortSignal cancellation bypass](https://github.com/advisories/GHSA-3g3m-2fjr-6pw4), whose only patched version is 14.0.2. `@vercel/nft` still declares `glob@^13`, so this crosses a major boundary deliberately; glob 14 also pulls the minimatch 11 line, which clears the [globparts amplification advisory](https://github.com/advisories/GHSA-g3hv-75wg-m249). The Vercel build output was compared file by file before and after the override and was unchanged. Remove the override once `@vercel/nft` depends on glob 14 itself.
+
 Existing `/images/rebuild/` paths are stable public asset URLs retained for compatibility. Site components and styles use durable `site` naming. The design system's documentation catalog is isolated from normal page runtime imports; small generated constants supply breakpoint and copy-feedback behavior.
 
 Every Download button points at a real store destination: the App Store listing for iPhone, and Zapstore, Google Play or the GitHub release for Android. All of them are included in the structured download URLs. The iPhone link uses the locale-neutral `apps.apple.com/app/id...` form so it resolves to the visitor's own storefront.
@@ -179,6 +181,7 @@ This prints the event through `jq`, including:
 ## Release considerations
 
 - The documented iOS baseline is older than the release currently on the App Store. The compatibility guide records that gap; a source review of the shipping build is still outstanding.
+- `bun audit` reports a low-severity [deepmerge prototype-poisoning advisory](https://github.com/advisories/GHSA-gcqx-w48m-w2h4) reached through `@sveltejs/vite-plugin-svelte`. No patched deepmerge exists: 4.3.1 is both the newest release and the last affected one, so no override can clear it. It is build-time tooling that merges project config rather than untrusted input. Recheck when vite-plugin-svelte drops the dependency or deepmerge ships a fix.
 - The pale hero gray is an accepted exception to large-text AA contrast, recorded in the design system.
 - “Holding Ourselves to It” on Privacy Matters contains absolute privacy/anonymization claims that conflict with the policy's stated limitations. That copy still needs a separate content review; the canonical policy is unchanged.
 - Vercel's build tracer reports the optional `supports-color` dependency of `debug`. Local production builds and tested routes work without it.

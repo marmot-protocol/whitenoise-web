@@ -61,6 +61,7 @@
         "bun": ">=1.4.2"
     },
     "overrides": {
+        "glob": "^14.0.2",
         "source-map-js": "^1.2.2"
     },
     "trustedDependencies": []
