@@ -28,7 +28,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["All your AI", "in a single app"],
         description:
-            "An agent is just another contact. Six work today: Hermes, OpenClaw, Codex, Claude Code, OpenCode and Pi. Run the connector next to your agent on a Mac or Linux computer, then message it from your phone. It sits in the same list as everyone else, and it’s useful before any of your friends join.",
+            "An agent is just another contact. Seven work today: Hermes, OpenClaw, Codex, Claude Code, OpenCode, Pi and Goose. Run the connector next to your agent on a Mac or Linux computer, then message it from your phone. It sits in the same list as everyone else, and it’s useful before any of your friends join.",
         artwork: "agent-contact",
         id: "agents",
         link: {
@@ -56,7 +56,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["Open source.", "Open standards."],
         description:
-            "The iPhone and Android apps and the protocol behind them are public on GitHub. You don’t have to take our word for how White Noise works: anyone can read the code, report a problem or build on it. White Noise is free, carries no ads, and is operated by the Internet Privacy Foundation, a nonprofit.",
+            "White Noise’s code is open for anyone to inspect, improve, or build on. You don’t have to take our word for how it works. Developers can check the code, help fix problems, or use it to create something of their own. Open standards let others build apps that work with it.",
         artwork: "children-plant",
         link: {
             label: "Explore the code",

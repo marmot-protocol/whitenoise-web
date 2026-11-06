@@ -47,6 +47,7 @@ const sections = {
         ["claude", "Claude"],
         ["opencode", "OpenCode"],
         ["pi", "Pi"],
+        ["goose", "Goose"],
     ],
     builders: [
         ["getting-started", "Getting started"],

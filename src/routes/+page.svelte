@@ -54,7 +54,7 @@ const schema = {
         <div class="hero-action" id="hero-download">
             <Action href="/download" label="Download" icon="down" />
             <TextLink href="/docs">Read the guides</TextLink>
-            <Text role="small" tone="muted">Free, open source and ad-free, with usage sharing off by default.</Text>
+            <Text role="small" tone="muted">Free, open source and ad-free.</Text>
         </div>
     </section>
     <Supporters />

@@ -42,7 +42,15 @@ export const repositoryGroups = [
     },
 ];
 
-export const agentRuntimes = ["hermes", "openclaw", "codex", "claude", "opencode", "pi"] as const;
+export const agentRuntimes = [
+    "hermes",
+    "openclaw",
+    "codex",
+    "claude",
+    "opencode",
+    "pi",
+    "goose",
+] as const;
 export type DocsRepo = "mdk" | "marmot";
 export type DocSource = { repo: DocsRepo; path: string };
 

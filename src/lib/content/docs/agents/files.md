@@ -8,7 +8,7 @@ Some connectors handle media, others are best used with text. Check support befo
 
 - Hermes and OpenClaw connectors list media support.
 - Claude Code setup uses a text-only test message.
-- For Codex, OpenCode and Pi, read the runtime's guide in the MDK repository.
+- For Codex, OpenCode, Pi and Goose, read the runtime's guide in the MDK repository.
 
 Support can change between connector versions, so check the guide for the version you installed.
 
