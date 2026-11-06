@@ -6,52 +6,51 @@
         "category": "settings",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SettingsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SettingsLayout.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ShareConnectScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AppearanceScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ActionColorScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatBubbleColorsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/FullSpectrumColorPicker.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/CustomEmojiScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LanguageOption.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LanguageScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/GestureSettingsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatFoldersScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatFolderEditScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LegacyFolderRuleControls.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderEditor.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderRulePanel.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderAddFilter.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderChoice.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationPreviewControlState.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TextToSpeechScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TtsRatePicker.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TtsSettingsLabels.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TranslationSettingsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationSettings.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationPreferences.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationProviderSheet.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DataUsageScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/state/AppLockPreferences.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/BlockedUsersScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AiAgentsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AgentConnector.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/OpenSourceLicensesScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DonateScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DeveloperScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ConversationFixtureSeedDialog.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/QuarantinedGroupsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationEngineDiscovery.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/res/values/translation.xml",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/TtsTransportBar.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TextToSpeechScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/res/values/strings.xml"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SettingsLayout.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ShareConnectScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AppearanceScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ActionColorScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatBubbleColorsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/FullSpectrumColorPicker.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/CustomEmojiScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LanguageOption.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LanguageScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/GestureSettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatFoldersScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ChatFolderEditScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/LegacyFolderRuleControls.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderEditor.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderRulePanel.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderAddFilter.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SmartFolderChoice.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationPreviewControlState.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TextToSpeechScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TtsRatePicker.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TtsSettingsLabels.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TranslationSettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationSettings.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationPreferences.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationProviderSheet.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DataUsageScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/state/AppLockPreferences.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/BlockedUsersScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AiAgentsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AgentConnector.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/OpenSourceLicensesScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DonateScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DeveloperScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ConversationFixtureSeedDialog.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/QuarantinedGroupsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationEngineDiscovery.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/res/values/translation.xml",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/TtsTransportBar.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/res/values/strings.xml"
         ]
     },
     {
@@ -61,31 +60,31 @@
         "category": "settings",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AccountsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ProfileEditView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ShareAndConnectView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ProfileShareCard.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AppearanceSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationPreviewSection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationPreviewModeLabels.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DataAndStorageView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Core/AppLock.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/EraseAppDataView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/BlockedUsersView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/BlockUserSection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SupportChatView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonateView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationHistoryView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationInvoiceView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationMonthlySupportCard.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DonationSuccessView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/QuarantinedGroupsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AccountsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileEditView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileShareCard.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AppearanceSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationPreviewSection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationPreviewModeLabels.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DataAndStorageView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Core/AppLock.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockedUsersView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockUserSection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SupportChatView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonateView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationHistoryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationInvoiceView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationMonthlySupportCard.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationSuccessView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/QuarantinedGroupsView.swift"
         ]
     },
     {
@@ -95,13 +94,13 @@
         "category": "settings",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsImprovementsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/UsageDiagnosticsUi.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsChoiceDetails.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsImprovementsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/UsageDiagnosticsUi.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsChoiceDetails.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DiagnosticsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt"
         ]
     },
     {
@@ -111,10 +110,10 @@
         "category": "settings",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SupportChatView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SupportChatView.swift"
         ]
     },
     {
@@ -124,10 +123,10 @@
         "category": "settings",
         "platform": "shared",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelaysScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelayListModel.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/RelaysView.swift"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelaysScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelayListModel.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/RelaysView.swift"
         ]
     },
     {
@@ -137,17 +136,17 @@
         "category": "settings",
         "platform": "shared",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysIdentityHeader.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackagesScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackageRows.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackageRelayHistory.kt",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/IdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/KeyPackagesView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/EraseAppDataView.swift",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysIdentityHeader.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackagesScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackageRows.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackageRelayHistory.kt",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/IdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/KeyPackagesView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift"
         ]
     },
     {
@@ -157,18 +156,18 @@
         "category": "get-started",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/WelcomeScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpPhotoControls.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignInScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignInKeyField.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/IdentityEntryForm.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingSavedAccountUi.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/AddProfileSession.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreenshotTest.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/WelcomeScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpPhotoControls.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignInScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/SignInKeyField.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/IdentityEntryForm.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingSavedAccountUi.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/AddProfileSession.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/test/java/dev/ipf/whitenoise/android/ui/onboarding/SignUpScreenshotTest.kt"
         ]
     },
     {
@@ -178,16 +177,15 @@
         "category": "get-started",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/WelcomeView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/CreateIdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/ImportIdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/PrivateKeyQRScanner.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupRelayEditor.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupSecureMessagingView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/AccountSetupDeviceView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/WelcomeView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/CreateIdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/PrivateKeyQRScanner.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupRelayEditor.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/OnboardingRecoveryPresentation.swift"
         ]
     },
     {
@@ -197,15 +195,15 @@
         "category": "get-started",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewMessagePresentation.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewChatFlow.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientSearchField.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientAddressLookupFeedback.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/ConversationRows.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/ConversationScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/InvitePreview.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileQrSheet.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewMessagePresentation.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewChatFlow.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientSearchField.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientAddressLookupFeedback.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/ConversationRows.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/ConversationScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/InvitePreview.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileQrSheet.kt"
         ]
     },
     {
@@ -215,11 +213,11 @@
         "category": "get-started",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/ChatsListView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageBubble.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/BlockedConversationNotice.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageBubble.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/BlockedConversationNotice.swift"
         ]
     },
     {
@@ -229,13 +227,13 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileReadiness.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileReadinessChecklist.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ShareConnectScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileQrSheet.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/AddProfileSession.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileEditScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileReadiness.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileReadinessChecklist.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/ShareConnectScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileQrSheet.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/AddProfileSession.kt"
         ]
     },
     {
@@ -245,11 +243,11 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ProfileEditView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ShareAndConnectView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AccountsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileEditView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AccountsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift"
         ]
     },
     {
@@ -259,17 +257,17 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewMessagePresentation.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientSearchField.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientAddressLookupFeedback.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewChatFlow.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/PersonProfileContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileSheet.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ContactPictureControls.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ContactPrivateDetailsFrame.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileNotificationOverrideScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/PersonGroupsInCommonContent.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewMessagePresentation.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientSearchField.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/RecipientAddressLookupFeedback.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewChatFlow.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/PersonProfileContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileSheet.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ContactPictureControls.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ContactPrivateDetailsFrame.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/ProfileNotificationOverrideScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/PersonGroupsInCommonContent.kt"
         ]
     },
     {
@@ -279,12 +277,12 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/ChatsListView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupPickerView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/ShareAndConnectView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Profile/QRScannerUnavailableView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupPickerView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupSetupView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Profile/QRScannerUnavailableView.swift"
         ]
     },
     {
@@ -294,33 +292,33 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupRecipientContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupSetupContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupPhotoMenu.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupRecipientSearchField.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/PendingGroupMembershipRow.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/PersonGroupsInCommonContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/GroupRecoveryCard.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/QuarantinedGroupsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDetailsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ChatInfoOverview.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupEditScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupEmojiImagePicker.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupImageSearch.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupImageFailureDetail.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupMembers.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupRosterLoadStatus.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/LargeGroupInviteWarning.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationNotificationSettingsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationNotifyDialogs.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/MuteDurationDialog.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/DisappearingMessages.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/DisappearingDuration.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupArchiveMenuLabel.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDisbandControls.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDetailsResetControl.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationTranscriptActions.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/core/ConversationTranscriptExport.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupRecipientContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupSetupContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupPhotoMenu.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewGroupRecipientSearchField.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/PendingGroupMembershipRow.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/profile/PersonGroupsInCommonContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/GroupRecoveryCard.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/QuarantinedGroupsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDetailsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ChatInfoOverview.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupEditScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupEmojiImagePicker.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupImageSearch.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupImageFailureDetail.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupMembers.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupRosterLoadStatus.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/LargeGroupInviteWarning.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationNotificationSettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationNotifyDialogs.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/MuteDurationDialog.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/DisappearingMessages.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/DisappearingDuration.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupArchiveMenuLabel.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDisbandControls.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/GroupDetailsResetControl.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/group/ConversationTranscriptActions.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/core/ConversationTranscriptExport.kt"
         ]
     },
     {
@@ -330,28 +328,28 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupPickerView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewGroupSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/ChatsListView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/ChatListLeaveConfirmationSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/ChatRow.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/GroupRecoveryView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupDetailsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupDetailsViewModel.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupInfoEditSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupInfoFormSections.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/AddMembersSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupMemberRow.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupMemberOrdering.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupsInCommonSection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatNotificationsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupRetentionEditorSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupRelaysView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupModerationView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupPickerView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupSetupView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatListLeaveConfirmationSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatRow.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/GroupRecoveryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsViewModel.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupInfoEditSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupInfoFormSections.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/AddMembersSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupMemberRow.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupMemberOrdering.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupsInCommonSection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/ChatNotificationsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupRetentionEditorSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupRelaysView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupModerationView.swift"
         ]
     },
     {
@@ -361,28 +359,28 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewMessagePresentation.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerPills.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerAttachmentMenu.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerEditPill.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageBubble.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageActionKind.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/ForwardMessagePicker.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageDeleteDialog.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageDetailsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/EditHistory.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/KeptMessageCardParts.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/ReportMessageSheet.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/BubbleContentBlocks.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/MessageSelectionBar.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/PollCreateDialog.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/PollDraftValidation.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/MessageTranslationControls.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/MessageTranslationForm.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/TtsTransportBar.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TextToSpeechScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/res/values/strings.xml"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/NewMessagePresentation.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/chats/newchat/ContactPickerScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerPills.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerAttachmentMenu.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerEditPill.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageBubble.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageActionKind.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/ForwardMessagePicker.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageDeleteDialog.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/MessageDetailsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/EditHistory.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/KeptMessageCardParts.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/ReportMessageSheet.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/messages/BubbleContentBlocks.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/MessageSelectionBar.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/PollCreateDialog.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/PollDraftValidation.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/MessageTranslationControls.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/MessageTranslationForm.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/TtsTransportBar.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/TextToSpeechScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/res/values/strings.xml"
         ]
     },
     {
@@ -392,22 +390,22 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ComposerBar.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageBubble.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageActionsMenu.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/EmojiPicker.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageEditHistory.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageMutationSheets.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/PollComposerView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/PollVotesSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageLinkActionSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/BlockedConversationNotice.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupModerationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageReportsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ComposerBar.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageBubble.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageActionsMenu.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/EmojiPicker.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageEditHistory.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageMutationSheets.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/PollComposerView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/PollVotesSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageLinkActionSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/BlockedConversationNotice.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupModerationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageReportsView.swift"
         ]
     },
     {
@@ -417,22 +415,22 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerAttachmentMenu.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaPreviewSendBar.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaPreviewStage.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/editor/PhotoEditorScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaPending.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/VoiceRecorder.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/VoiceReviewComposer.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaViewer.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/FileBubbleContent.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaFileBubble.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/TextAttachmentReader.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/RemoteGiphyMediaBubble.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DataUsageScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/medialibrary/MediaLibrary.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/medialibrary/SharedContentChrome.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/medialibrary/AttachmentLibraryStatus.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/ComposerAttachmentMenu.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaPreviewSendBar.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaPreviewStage.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/editor/PhotoEditorScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaPending.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/VoiceRecorder.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/composer/VoiceReviewComposer.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaViewer.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/FileBubbleContent.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/MediaFileBubble.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/TextAttachmentReader.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/conversation/media/RemoteGiphyMediaBubble.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DataUsageScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/medialibrary/MediaLibrary.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/medialibrary/SharedContentChrome.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/medialibrary/AttachmentLibraryStatus.kt"
         ]
     },
     {
@@ -442,19 +440,19 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MediaComposerViews.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ComposerBar.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/GiphySearchView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageMediaFullscreenGalleryChrome.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageBubble.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DataAndStorageView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/SharedMediaLibraryView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Group/GroupDetailsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MediaComposerViews.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ComposerBar.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/GiphySearchView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageMediaFullscreenGalleryChrome.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageBubble.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DataAndStorageView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/SharedMediaLibraryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsView.swift"
         ]
     },
     {
@@ -464,8 +462,8 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationPreviewControlState.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/NotificationPreviewControlState.kt"
         ]
     },
     {
@@ -475,8 +473,8 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationPreviewSection.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationPreviewSection.swift"
         ]
     },
     {
@@ -486,9 +484,9 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysIdentityHeader.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/AccountKeysIdentityHeader.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt"
         ]
     },
     {
@@ -498,10 +496,10 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/IdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/ImportIdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/IdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift"
         ]
     },
     {
@@ -511,8 +509,8 @@
         "category": "using",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/BlockedUsersScreen.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DevicePrivacyScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/BlockedUsersScreen.kt"
         ]
     },
     {
@@ -522,13 +520,13 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/EraseAppDataView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/BlockedUsersView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/NotificationSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/AppearanceSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/d7186efa4123ba5ad7addd9a964b419e6a2282da/whitenoise-ios/Onboarding/CreateIdentityView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockedUsersView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AppearanceSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/CreateIdentityView.swift"
         ]
     },
     {
@@ -540,7 +538,7 @@
         "sources": [
             "https://github.com/marmot-protocol/whitenoise-web/blob/2acf71acc07b3e514e6a50b5094362e66ba46820/src/lib/content/faqs.ts",
             "https://github.com/marmot-protocol/marmot/blob/d181ce1c4661ca985e8fb12a48a962dbe76fec6c/foundation/identity.md",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/setup/AccountSetupContent.kt"
         ]
     },
     {
@@ -611,7 +609,7 @@
         "sources": [
             "https://github.com/marmot-protocol/whitenoise-web/blob/2acf71acc07b3e514e6a50b5094362e66ba46820/src/lib/content/faqs.ts",
             "https://github.com/marmot-protocol/mdk/blob/d20329e9ac6337294a9b4414a55f97bc76b6581d/integrations/README.md",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/HelpAboutScreens.kt"
         ]
     },
     {
@@ -760,9 +758,9 @@
         "category": "settings",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationSettings.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationPreferences.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationEngineDiscovery.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationSettings.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationPreferences.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/translation/TranslationEngineDiscovery.kt"
         ]
     },
     {
@@ -772,8 +770,8 @@
         "category": "settings",
         "platform": "android",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationProviderSheet.kt"
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationSettingsScreen.kt",
+            "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/DictationProviderSheet.kt"
         ]
     }
 ]

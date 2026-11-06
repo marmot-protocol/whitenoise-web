@@ -1,19 +1,20 @@
 {
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-11-06",
     "android": {
         "minimumOS": "Android 11",
         "channel": "GitHub Releases; screenshots use the separate CI preview channel",
-        "releaseSource": "6c7cc4bf70ab0de7eae29e13c5ed75e0d6cd3e09",
-        "evidence": "source-reviewed; selected preview screens navigated on device",
+        "releaseSource": "b81278afe96bddd4cf05e5f267eee7c656231f3d",
+        "evidence": "source-reviewed against the release; illustrations rendered from an earlier source",
         "behaviorQualification": "Full end-to-end release validation pending",
-        "currentSource": "63524b750b934d72e0f832805128cd84d3a92155",
-        "releaseVersion": "2026.10.14"
+        "currentSource": "b81278afe96bddd4cf05e5f267eee7c656231f3d",
+        "releaseVersion": "2026.10.27",
+        "captureSource": "63524b750b934d72e0f832805128cd84d3a92155"
     },
     "ios": {
-        "source": "d7186efa4123ba5ad7addd9a964b419e6a2282da",
-        "version": "2026.10.13 (45)",
+        "source": "481736fa1db5eb320c7d44a80ebe2354bca97027",
+        "version": "2026.10.25 (47)",
         "minimumOS": "iOS 18",
-        "channel": "App Store; the store release is newer than this source-reviewed baseline",
+        "channel": "App Store",
         "evidence": "source-reviewed",
         "screenshots": "Delegated in issue14",
         "behaviorQualification": "Device validation pending"

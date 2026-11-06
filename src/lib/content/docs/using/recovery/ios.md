@@ -35,20 +35,22 @@ If the app reports the key as invalid, check that you copied the whole key, then
 Two recovery actions can appear here, and they work differently:
 
 - **Recover Identity** covers a legacy case: an earlier sign-in that stopped before setup finished. It removes that incomplete local setup and retries. A KeyPackage from the failed attempt may remain published on relays.
-- **Recover Setup** appears when a saved setup checkpoint can’t be read. It resets that checkpoint and returns you to signing in. Enter your key and tap **Sign In** again yourself to start a fresh setup.
+- **Recover Setup** appears on the **Sign-In Recovery** screen when White Noise can’t restore a profile’s saved sign-in setup. It signs the profile out and resets its setup. Data on relays stays the same. Then tap **Sign In** for that profile and enter its private key to start a fresh setup.
+
+The **Sign-In Recovery** screen also has **Remove Profile from This Device**. It deletes that profile’s saved key and local chats. Published data stays on relays, so keep your private key to sign in again later.
 
 ## Sign out
 
-In Settings, tap **Sign Out**. This profile and its local data stay on this device.
+In Settings, tap **Sign Out**. Leave **Wipe Local Data** off and tap **Sign Out** to keep this profile and its chats on this device. Turning on **Wipe Local Data** erases this profile’s chats and media, plus its secret key, from this device instead, so back up your key first.
 
 ## Delete a profile
 
-> **Warning:** **Delete Profile** permanently removes this profile from this device. Signing back in with the same key restores your identity only: past groups, messages, and media on this device are gone, and you’ll need to be re-invited to groups. Encrypted messages already delivered to other members, and copies kept by independent relays, are beyond White Noise’s reach to delete.
+> **Warning:** **Delete Profile** signs you out and permanently removes this profile’s data from this device. Signing in again with a saved secret key keeps the same Nostr identity only: deleted chats and media won’t be restored, and you’ll need new invitations to rejoin groups. Messages and profile information held by other people or independent relays may remain.
 
 1. Back up your private key and confirm the backup is saved.
 2. In Settings, tap **Delete Profile**.
-3. Review **What gets destroyed**.
-4. Under **Enter Profile Name**, type the profile name exactly, then confirm.
+3. Review the summary of what is deleted.
+4. Under **Profile name**, type the profile name exactly, then tap **Delete Profile**.
 
 Expected result: the profile is signed out and its local data is removed from this iPhone.
 

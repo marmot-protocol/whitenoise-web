@@ -37,6 +37,8 @@ To change the picture, tap the group photo. If an update fails, check your conne
 
 Admins are labeled **Admin** and listed first. If an action fails, check your connection and retry it.
 
+If the chat is still syncing, or the group's last change hasn't reached all of its relays, White Noise warns you before you change the group or invite people. The alert reads **This chat may be out of date** or **Last group change not delivered**. Tap **Wait** and try again later. If you tap **Continue anyway**, the change can split the group, or some members may not be able to follow it.
+
 ## View group relays
 
 In the conversation details, open **Relays** to see the servers used by this conversation. The list is read-only. Changing your account relay list does not change an existing group's routing.

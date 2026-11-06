@@ -18,6 +18,8 @@ Expected result: **Creating group…** appears, then **Chat created**. When setu
 
 Open the conversation and tap its header. Group details show **Group · N members** and quick actions for **Mute**, **Disappearing**, and **Search**. Admins also see management options.
 
+Tap **Group relays** to view and copy the relays this chat is configured to use. The list doesn't show whether each relay is connected right now. Only admins can change these relays, and editing them isn't available in White Noise yet.
+
 <figure><a href="/docs/android/group-actions.svg"><img src="/docs/android/group-actions.svg" alt="Group quick actions for muting, disappearing messages and search." loading="lazy" width="360" height="100" /></a><figcaption class="type-small">Mute, Disappearing and Search open controls for this conversation. Select the image to enlarge.</figcaption></figure>
 
 ## Edit group details
@@ -71,14 +73,14 @@ The file contains the conversation's decrypted inner Marmot/Nostr events, includ
 **To save the transcript to a location you choose:**
 
 1. Open the conversation details.
-2. Tap **Save Conversation Transcript**.
+2. Tap **Save transcript**.
 3. In the Android file picker, choose where to save the file.
 
 ## Leave or remove a group
 
 > Leaving removes you, and you need a new invitation to rejoin. If you're the only member, the group is deleted. If you're the only admin, transfer admin first; White Noise can transfer and leave in one step.
 
-- **Leave:** tap **Leave group**, then **Leave**.
+- **Leave:** tap **Leave group**, then **Leave**. If you're the only admin, choose a new admin if asked, then tap **Transfer admin and leave**. If leaving doesn't finish, you can reset the group on this device instead, as described below.
 - **Archive:** tap **Archive Chat** to hide it. **Unarchive Chat** restores it.
 - **Delete:** tap **Delete group**, then **Delete**. This affects this device only.
 
@@ -101,6 +103,8 @@ Tap **Rejoin group** or **Decline invitation**, and tap **Retry** when the check
 > Reset erases this group's history and encryption state on this device only. Nothing is sent to the group.
 
 In group details, tap **Reset and wait for a new invite**, then **Reset**. You rejoin when an admin sends an invite created after the reset.
+
+For a direct chat, the same control is **Abandon chat on this device**, then **Abandon**. It erases the chat's history and encryption state for this account on this device. Nothing is sent, so the other person may still see you in the chat, and your other devices keep their copy. To talk again, start a new chat or accept a new invite.
 
 **Quarantined groups.** A group is quarantined when its stored encryption state can't load safely. Go to **Settings > Developer Tools > Quarantined groups** and tap **Retry recovery**. Tap **Refresh groups** when the list fails to load. Recovery reruns every check and keeps history; it doesn't rejoin you. On success the group returns to your chat list. If it stays quarantined, history is still kept; try again later.
 

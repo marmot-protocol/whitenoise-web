@@ -32,7 +32,7 @@ Nicknames and notes stay on this device, visible only to you. The private pictur
 
 ## Set notifications for one person
 
-Tap **Notifications**. Choose **Use defaults** or **Mute notifications from this person**, or fine-tune **Sound & system behavior** and **Vibration pattern**. The setting covers messages from this person in every conversation for this account, while delivery and unread counts stay the same. Chat mute and mentions-only rules apply first.
+Tap **Notifications**. Choose **Use defaults** or **Mute notifications from this person**, or fine-tune **Sound & system behavior** and **Vibration pattern**. Custom Android settings cover messages, invitations and group role changes from this person in every conversation for this account. Muting covers only their messages. Delivery and unread counts stay the same. Chat mute and mentions-only rules apply first.
 
 ## Fix common problems
 

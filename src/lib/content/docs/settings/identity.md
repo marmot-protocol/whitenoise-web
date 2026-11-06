@@ -57,8 +57,8 @@ Open **Settings > Profile Keys**. Your public key is shown in Hex and npub forma
 
 Both actions are at the bottom of the main Settings screen and apply to the active profile.
 
-- **Sign Out** keeps this profile and its local data on this device.
-- **Delete Profile** is the iOS counterpart of Android's Sign Out & Wipe. It permanently removes this profile's local message database and MLS group state, together with its key material on this device. Its outstanding key packages on relays are removed too. Enter the profile name exactly to confirm. If it fails, the screen says Couldn't wipe profile.
+- **Sign Out** opens a sheet. With **Wipe Local Data** off, this profile and its local data stay on this device. With it on, this profile's chats, media and secret key are erased from this device and you leave your groups; type the profile name, then tap **Sign Out and Delete Data**.
+- **Delete Profile** is the iOS counterpart of Android's Sign Out & Wipe. It signs you out and permanently removes this profile's chats, media, drafts, secret key and local settings from this device. You leave your groups, and your other profiles are unaffected. Type the profile name exactly to confirm. If it fails, the screen says Couldn't wipe profile.
 
 > **Warning:** If you sign back in with the same key, you keep your identity, but past groups, messages and media are gone from this device and you will need to be re-invited to any groups. Encrypted messages already delivered to other members, and copies kept by independent relays, stay where they are.
 

@@ -2,13 +2,13 @@
 
 ## Settings layout
 
-The top of Settings shows your profile and up to three other signed-in profiles, with a +number badge when you have more. **Switch Profile** and **Add Profile** are here too. The bottom of the screen holds **Sign Out** and **Delete Profile**, and the app version (White Noise · version) appears there as well.
+The top of Settings shows your profile and up to three other signed-in profiles, with a +number badge when you have more. **Switch Profile** and **Add Profile** are here too. The bottom of the screen holds **Delete Profile** and **Sign Out**, and the app version (White Noise · version) appears there as well.
 
 ## Profiles
 
 - **Switch Profile** lets you choose a signed-in profile or add a new one.
-- **Profile** shows your Name and About text, plus a Verified Nostr Address (an address like name@example.com). Tap **Edit** to change them, and tap **Retry** if saving fails. See [Profiles](/docs/using/profiles/ios).
-- **Share & Connect** has a **Mode** picker, **Share Profile URL**, **Share Profile Picture**, **Share Profile**, and a QR code that someone can scan to connect with you. The share card says: On White Noise? Message me here.
+- **Profile** shows your Name and About text, plus a Verified Nostr Address (an address like name@example.com). Tap **Edit** to change them, then **Done** to save. Tap **Retry** if saving fails. See [Profiles](/docs/using/profiles/ios).
+- **Share & Connect** has a **Mode** picker, **Share Profile URL**, **Share Profile Picture**, **Share Profile**, and a QR code that someone can scan to connect with you. The share card says: On White Noise? Message me here. In Connect mode, scan someone's profile QR code to open their profile.
 - **Profile Keys** shows your public key in Hex and npub formats along with the key status. Export options are here too. See [Identity and keys](/docs/settings/identity).
 - **Relays** has Account Relays and Inbox Relays. See [Relays](/docs/settings/relays).
 
@@ -43,7 +43,17 @@ If notifications are off, tap **Allow Notifications**. You can also tap **Open S
 - **Auto-Download**: Media that isn't downloaded automatically shows a download button. **Reset Auto-Download Settings** restores the defaults.
 - **Remote Media**: When on, opening a conversation can tell GIPHY your IP address and which GIF was requested. When off, received GIFs load only when you tap them.
 - **Sent Media > Photos and Videos**: Sets the quality of photos and videos you send. Higher quality uses more data. Identifying photo metadata, such as location, is always removed before sending.
-- **Download Storage**: Sets storage limits for this profile. Downloads pause when storage is full and existing files are kept. You can remove individual downloads from Message info.
+- **Download Storage**: Sets how much free space to keep on this device and the size limit for automatic downloads, for this profile. A download waits when it would leave less free space than your setting, and continues when you free up space.
+
+## Manage storage
+
+**Manage Storage** shows what this profile keeps on this device under **Storage Used**. Other profiles are counted separately.
+
+- **Keep Media**: Keep attachments **Forever**, or for **1 Year**, **6 Months** or **30 Days**. A shorter period removes older attachments now and as they age.
+- **Cache**: **Clear Cache** removes downloaded profile and group pictures. They download again when you need them.
+- **Free Up Space**: **Largest Attachments** lists attachments by size, and **Remove Older Attachments** removes attachments older than the age you choose. Open a chat under **Chats** to tap **Remove All Attachments** or remove older ones from that chat only. Swipe left on an attachment to remove it.
+
+Removed attachments stay in their messages, and you can download them again while they're still available.
 
 See [Media](/docs/using/media/ios).
 
@@ -69,7 +79,7 @@ Your agent runs on your own machine or server as a separate Marmot account, and 
 
 ## Support and donate
 
-- **Chat with support** starts a chat with White Noise Support. If it fails, tap **Try Again**.
+- **Chat with support** opens your chat with White Noise Support. If it fails, tap **Try Again**.
 - **Donate** supports the Internet Privacy Foundation (IPF). You can give **One time** or **Monthly**. The screen can show recent billing activity, all Payments, invoices and **Manage monthly donation**, and it tells you when Apple Pay is unavailable. If donation history access is no longer available on this device, a new donation won't restore earlier payments.
 
 ## Developer tools
@@ -85,8 +95,10 @@ Your agent runs on your own machine or server as a separate Marmot account, and 
 
 Both actions are at the bottom of the main Settings screen and apply to the active profile.
 
-- **Sign Out** keeps this profile and its local data on this device. If it fails, the screen says Couldn't sign out. Try again.
-- **Delete Profile** permanently removes this profile from this device. That covers its local message database and MLS group state, together with its key material on this device. Its outstanding key packages on relays are removed too. Enter the profile name exactly to enable the button. If it fails, the screen says Couldn't wipe profile.
+- **Sign Out** opens a sheet. With **Wipe Local Data** off, your profile and chats stay on this device; tap **Sign Out**. With it on, this profile's chats, media and secret key are erased from this device, and you leave your groups. Type the profile name under **Profile name**, then tap **Sign Out and Delete Data**. If signing out fails, the sheet says Couldn't sign out. Try again.
+- **Delete Profile** signs you out and permanently removes this profile's chats, media, drafts, secret key and local settings from this device. You leave your groups, and your other profiles are unaffected. Type the profile name under **Profile name** to enable the button. If it fails, the screen says Couldn't wipe profile.
+
+Copies of messages and profile information held by other people or independent relays may remain. If other profiles are signed in, you choose one to continue after signing out.
 
 Read [Identity and keys](/docs/settings/identity) before you use either one.
 
@@ -99,6 +111,6 @@ Read [Identity and keys](/docs/settings/identity) before you use either one.
 | Swipe actions, folders, read aloud, dictation, translate, custom emoji | Absent from iOS Settings | Separate settings screens |
 | Screen privacy | Hide Screen in App Switcher, and screenshots still work | Screen security blocks screenshots |
 | App lock | Face ID/Touch ID/passcode, with Auto-Lock delay | Device screen lock, with Auto-lock |
-| Removing data | Sign Out and Delete Profile in Settings, Erase App Data in Privacy & Security | Sign Out and Sign Out & Wipe in Profile Keys |
+| Removing data | Sign Out (with optional Wipe Local Data) and Delete Profile in Settings, Erase App Data in Privacy & Security | Sign Out and Sign Out & Wipe in Profile Keys |
 | Bug reports | Chat with support | Report a bug (public GitHub) and Chat with support |
 | Donations | In-app one-time or monthly | Opens a donation page |

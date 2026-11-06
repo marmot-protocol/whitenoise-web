@@ -5,7 +5,7 @@ White Noise for iOS runs on iOS 18 or later. After you install it, you can creat
 ## Get the app
 
 1. Go to [Download](/download) and follow the iOS option listed on that page.
-2. Open White Noise and review the Terms of Service and Acceptable Use Policy linked from the welcome screen. Using the app means you agree to them.
+2. Open White Noise. The first time, the welcome screen links the Terms of Service and Acceptable Use Policy. Review them, then tap **Agree & Continue** to accept them.
 
 **Expected result:** the welcome screen shows **Sign Up** and **Sign In**.
 
@@ -46,6 +46,6 @@ Setup can stop at a few points:
 White Noise offers two recovery options. Both repair setup only, and earlier conversation history stays unrestored with either one.
 
 - **Recover Identity** appears when an earlier sign-in stopped before setup finished. It removes that incomplete setup from this device and then tries the sign-in again. A KeyPackage from the failed attempt may stay published on relays.
-- **Recover Setup** appears when a saved profile shows “This profile's saved sign-in setup needs recovery”. It signs the profile out and replaces the unreadable setup checkpoint, so you must sign in again yourself with the private key. Earlier relay publications stay in place.
+- **Recover Setup** appears on the **Sign-In Recovery** screen when White Noise can't restore a profile's saved sign-in setup. It signs the profile out and resets its setup, so you must sign in again yourself with the private key. Nothing on relays changes. The same screen has **Remove Profile from This Device**, which deletes the saved key and local chats for that profile.
 
 For more help, see [Access problems](/docs/troubleshooting/access), or follow [Report a problem](/docs/troubleshooting/report-problem) if the issue continues. Once setup is complete, continue to [Send a message](/docs/get-started/first-message/ios).

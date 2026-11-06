@@ -45,6 +45,12 @@ Voice messages send audio, while **Dictate text** sends text instead (see [Messa
 
 If you see **Recording unavailable**, tap **Record again**.
 
+### Transcribe a received voice message
+
+Under a downloaded voice message from someone else, tap **Transcribe**, read the notice, then tap **Transcribe** again. Offline Speech to Text processes the recording on your device. It needs Android 13 or later and Offline Speech to Text 0.21.0 or later with a speech model set up. If it isn’t installed, tap **Get Offline Speech to Text**.
+
+The **Audio transcript** is labeled **Generated transcript · not the sender’s text**. It may be inaccurate, and it is cleared when you close it or leave the screen. White Noise doesn’t record your microphone or send a message.
+
 ## Viewing and saving received media
 
 - Tap **Tap to download** on media that hasn't downloaded yet, then tap it to open. The full-screen viewer shows **Media 1 of 3** and offers **Save**, **Share**, **Forward message**, **Go to message**, and **More options**. Group admins may also see **Set as group picture**.

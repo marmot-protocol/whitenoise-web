@@ -35,7 +35,7 @@ export const repositoryGroups = [
             },
             {
                 name: "Linux",
-                description: "The native Linux app, built in Rust.",
+                description: "The native Linux app, built in Odin.",
                 href: "https://github.com/marmot-protocol/whitenoise-linux",
             },
         ],

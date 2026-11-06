@@ -43,17 +43,19 @@ If White Noise says you entered a public key, replace the npub with your nsec. I
 
 ## Finish account setup
 
-If **Account setup** appears, review the checklist. It checks your profile, follow list, read and write relays, inbox relays, this device and messaging keys. A row marked **Needs attention** opens the explanation and the choices available for that step. Review any proposed change before approving it.
+If **Sign in** stays open after you sign in, White Noise is checking your account in stages. The progress bar shows the current stage, and the page shows one decision at a time. The checks cover your profile, follow list, read and write relays, inbox relays, device use and messaging keys. Tap **Details** to see each check and its status, such as **Ready** or **Needs attention**, along with other options.
 
-<figure><a href="/docs/android/setup-checklist.svg"><img src="/docs/android/setup-checklist.svg" alt="Account setup checklist with a profile needing attention and later checks waiting." loading="lazy" width="360" height="650" /></a><figcaption class="type-small">Account setup checks your profile, relays and messaging keys. Open a row that needs attention to review the next step. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/setup-checklist.svg"><img src="/docs/android/setup-checklist.svg" alt="Account setup checklist with a profile needing attention and later checks waiting." loading="lazy" width="360" height="650" /></a><figcaption class="type-small">Setup checks your profile, relays and messaging keys. This image shows an earlier version of the screen. Select the image to enlarge.</figcaption></figure>
 
-If a relay step needs attention, inspect the proposed read and write lists. Recommendations keep existing relay entries, while a custom list removes entries you leave out. Changes can affect your other Nostr apps, so review the lists before choosing **Save changes**. Use **Finish later** if you want to leave the decision for another time.
+If a relay decision appears, tap **Review suggested changes** or **Edit relays**, then inspect the proposed read and write lists. Recommendations keep existing relay entries, while a custom list removes entries you leave out. Changes can affect your other Nostr apps, so review the lists before choosing **Save**. Choose **Discard changes** if you don’t want to publish them.
 
-<figure><a href="/docs/android/setup-relays.svg"><img src="/docs/android/setup-relays.svg" alt="Account-setup relay proposal with read and write lists and a warning about other Nostr apps." loading="lazy" width="360" height="500" /></a><figcaption class="type-small">Review the proposed read and write relay lists before saving changes. The displayed relay addresses are examples. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/setup-relays.svg"><img src="/docs/android/setup-relays.svg" alt="Account-setup relay proposal with read and write lists and a warning about other Nostr apps." loading="lazy" width="360" height="500" /></a><figcaption class="type-small">Review the proposed read and write relay lists before saving. The displayed relay addresses are examples. Select the image to enlarge.</figcaption></figure>
 
-When all required checks show **Ready**, tap **Open Chats**. **Finish later** saves the unfinished setup so you can return to it; it does not make a waiting step ready.
+A profile decision offers **Add profile** or **Continue without a profile**. The device decision explains that chats don’t sync between phones. Confirm that you understand to go on. If setup stops, tap **Resume checks**.
 
-<figure><a href="/docs/android/setup-ready.svg"><img src="/docs/android/setup-ready.svg" alt="Account setup checklist with all six checks marked Ready." loading="lazy" width="360" height="550" /></a><figcaption class="type-small">When every required check is Ready, choose Open Chats to continue. Select the image to enlarge.</figcaption></figure>
+When every check is ready, tap **Open Chats**. If you go back before then, White Noise keeps what it already published. Sign in again to resume.
+
+<figure><a href="/docs/android/setup-ready.svg"><img src="/docs/android/setup-ready.svg" alt="Account setup checklist with all six checks marked Ready." loading="lazy" width="360" height="550" /></a><figcaption class="type-small">When every check is ready, choose Open Chats to continue. This image shows an earlier version of the screen. Select the image to enlarge.</figcaption></figure>
 
 ## Recover an unfinished setup
 

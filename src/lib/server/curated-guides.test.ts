@@ -6,7 +6,7 @@ import { curatedGuide } from "./curated-guides";
 
 describe("self-contained guide content", () => {
     for (const area of ["agents", "builders", "marmot"] as const) {
-        it(`${area} keeps anchors local and full documentation links on GitHub`, () => {
+        it(`${area} keeps anchors local and full documentation links on source hosts`, () => {
             const document = curatedGuide(area);
             const prose = document.sections
                 ? document.sections.map((section) => section.html + section.afterHtml).join(" ")
@@ -18,7 +18,13 @@ describe("self-contained guide content", () => {
             expect(new Set(ids).size).toBe(ids.length);
             const destinations = [...prose.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
             expect(destinations.length).toBeGreaterThan(0);
-            expect(destinations.every((href) => href.startsWith("https://github.com/"))).toBe(true);
+            expect(
+                destinations.every(
+                    (href) =>
+                        href.startsWith("https://github.com/") ||
+                        href.startsWith("https://gitworkshop.dev/")
+                )
+            ).toBe(true);
             expect(prose).not.toMatch(/href="\/(?:agents|build|docs)/);
             expect(prose.replace(/<[^>]+>/g, " ").split(/\s+/).length).toBeLessThan(650);
         });

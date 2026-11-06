@@ -151,7 +151,7 @@ for (const capture of captures) {
         assert.match(capture.apkSha256, /^[a-f0-9]{64}$/);
     } else if (kind === "source-render") {
         assert.equal(capture.platform, "android");
-        assert.equal(capture.source, baseline.android.currentSource);
+        assert.equal(capture.source, baseline.android.captureSource);
         assert(
             capture.sourceImage.startsWith(
                 `https://github.com/marmot-protocol/whitenoise-android/blob/${capture.source}/app/src/test/snapshots/`

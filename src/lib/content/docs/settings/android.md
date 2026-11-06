@@ -45,7 +45,7 @@ This screen controls where your profile publishes information and receives invit
 
 | Control | Options | Scope and effect |
 |---|---|---|
-| Theme | System default, Light, Dark, AMOLED | System default follows your device. AMOLED uses a pure black background with white outlines. |
+| Theme | System default, Light, Dark, AMOLED | System default follows your device. AMOLED uses pure-black backgrounds with customizable bubble outlines. |
 | Action color | One accent per theme | Applies to the active profile and leaves backgrounds and neutral surfaces as they are. In AMOLED, action buttons are always white. **Reset to default** undoes your change. |
 | Chat bubble colors | Your messages, Other messages | Sets default bubble colors for the current theme. In AMOLED these colors apply to outlines, and bubble interiors stay pure black. A single chat can override these colors in every theme, and **Reset to global colors** removes that override. |
 | Custom emoji | Choose from Photos or Choose from Files | See below. |
@@ -77,7 +77,7 @@ The **Messages** and **Chats** sections each have a **Swipe left** and a **Swipe
 | Messages | Default, Reply, Forward, React, Off |
 | Chats | Read / unread, Mute / unmute, Pin / unpin, Off |
 
-Each message or chat row still decides whether the chosen action applies to it. **Reset to default** restores the defaults.
+Each message or chat row still decides whether the chosen action applies to it. **Pull down to show unread chats** is on by default. When it is on, pull down on the chat list to show only unread chats, and tap **Show all** to return. **Reset to default** restores the defaults.
 
 ## Folders
 
@@ -166,6 +166,7 @@ In **Data Usage**, **Automatic downloads** let you set a separate rule for each 
 
 - **Download queue**: **Stop automatic downloads** clears waiting automatic downloads for this profile while active downloads and downloads you started yourself keep going. **Restart automatic downloads** turns them back on.
 - **Reset download settings** restores the default rule for every media type.
+- **Inline image previews** is off by default. When on, direct Blossom JPEG links in a chat show an image preview. Loading a preview may reveal your IP address to the image host. Previews load only on unmetered Wi-Fi and follow your photo download rules. When off, the link stays an ordinary link.
 - **Media quality** for sent media: Low (about 150 KB per photo), Standard (about 500 KB), High (about 1.5 MB) or Original (full resolution). Quality applies to new photos and voice messages, and videos and audio files are sent as they are.
 
 Photos always have location and device details removed, even at Original. Videos and imported audio keep their original data. See [Media](/docs/using/media/android).

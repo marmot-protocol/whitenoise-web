@@ -8,7 +8,7 @@ Translation is handled by **Offline Translator**, a separate app that runs trans
 
 The current reviewed White Noise Android build only works with Offline Translator signed by its original developer, versions 0.8.3, 0.8.4, and 0.8.5. White Noise does not automatically accept newer versions. Each new version must be checked for compatibility before White Noise supports it.
 
-1. Install [Offline Translator](https://f-droid.org/packages/dev.davidv.translator/).
+1. Install [Offline Translator 0.8.5](https://github.com/DavidVentura/offline-translator/releases/tag/v0.8.5) from the publisher's GitHub release. If Offline Translator isn't installed, **Settings > Translate** shows **Install from GitHub**, which opens the same page. White Noise links to GitHub because Zapstore doesn't offer a version it can use yet.
 2. Open Offline Translator and install the language packs you need. Install a pack for each language you want to translate from and into.
 3. Return to White Noise. Touch and hold a text message, then tap **Translate**.
 4. Choose a **Source language** and **Target language**, then tap **Translate**. You can use **Detect language** for the source.
@@ -20,6 +20,9 @@ When the translation appears, tap **Show original** to see the original text. Ta
 - **Translator is unverified or unsupported:** White Noise did not send any text to it. Install a supported version from the link above.
 - **The language can't be detected:** Choose the source language yourself, then try again.
 - **The source language pack is missing:** Open Offline Translator, install the pack for that language, then try again.
+- **This language needs a newer Offline Translator:** Update Offline Translator to a supported version, then try again.
+- **The saved target language is not available:** Choose another **Target language**.
+- **No app could open Offline Translator or its download page:** Install a web browser, then try again.
 - **The translation engine fails:** Open Offline Translator, check that the language packs you need are installed, then try again.
 
 ## Global settings
@@ -32,7 +35,7 @@ Open **Settings > Translate**.
 |---|---|
 | Automatically translate messages | Turns automatic translation on or off for every chat that uses the global setting. It starts off. |
 | Target language | The language messages are translated into. It starts as English. Choosing a language from the list leaves its language pack uninstalled until you add it in Offline Translator. |
-| Open engine | Opens Offline Translator, where you install and manage language packs. |
+| Open engine | Opens Offline Translator, where you install and manage language packs. If Offline Translator isn't installed, this control shows **Install from GitHub** instead. |
 
 If you turned on automatic translation in an earlier preview build, White Noise switched it off once, along with any chat set to On, so you can read the logging notice before you turn it back on.
 
@@ -42,7 +45,7 @@ Each chat has its own **Automatically translate messages** dialog, saved separat
 
 - **Use global setting** follows Settings > Translate. **On** or **Off** overrides it for this chat only.
 - **Use global target language** starts checked. Clear it to pick a different **Target language** for this chat.
-- **Open engine** opens Offline Translator.
+- **Open engine** opens Offline Translator, or shows **Install from GitHub** if it isn't installed.
 
 These settings store your choices only. Message text and translations are kept out of them.
 

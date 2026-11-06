@@ -47,6 +47,8 @@ Open **Message info** for the message. Under **Downloads**:
 - **Download again** retries it.
 - **Remove download** deletes the downloaded file from this device. It doesn't affect anyone else's copy.
 
+If White Noise shows **Not enough storage**, free up space on this device, then tap the attachment to try again.
+
 ## Data Usage settings
 
 Open **Settings**, then **Data Usage**.
@@ -57,7 +59,19 @@ Open **Settings**, then **Data Usage**.
 
 ## Download storage
 
-On the **Download Storage** screen, set limits for this profile and tap **Save**. When storage is full, downloads pause and existing files are kept. If the screen doesn't load, tap **Retry**.
+On the **Download Storage** screen, set how much free space to keep and the size limit for automatic downloads for this profile, then tap **Save**. A download waits when it would leave less free space than your setting, and continues when you free up space. If the screen doesn't load, tap **Retry**.
+
+## Manage storage
+
+Open **Settings**, then **Manage Storage**. **Storage Used** shows what this profile keeps on this device.
+
+- **Keep Media** sets how long to keep attachments: **Forever**, **1 Year**, **6 Months** or **30 Days**. A shorter period asks you to confirm, then removes older attachments now and as they age.
+- **Clear Cache** removes downloaded profile and group pictures. They download again when you need them.
+- **Largest Attachments** lists attachments by size. Swipe left on one to remove it.
+- **Remove Older Attachments** removes attachments older than the age you choose, in every chat.
+- Open a chat under **Chats** and tap **Remove All Attachments** to remove that chat's attachments.
+
+Removed attachments stay in their messages. You can download them again while they're still available. If the screen shows an error, tap **Try Again**.
 
 ## Related
 

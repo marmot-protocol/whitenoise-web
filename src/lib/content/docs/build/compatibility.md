@@ -17,8 +17,6 @@ You end up with a written record of which flows worked between which versions. C
 
 ## Known limits
 
-- Compatibility testing between MDK, marmot-ts and White Noise releases remains pending for these guides.
-- marmot-ts is in alpha. Check what it currently supports before you rely on it.
 - Linked-device support is still in development. Importing the same identity on another device does not sync history or encryption state.
 
 ## Escalation

@@ -30,7 +30,7 @@ Use **Pause reading** and **Resume reading** to pause or continue. The sentence 
 
 ### Translate a message
 
-You can translate the text of a message into another language. This feature translates written message text only. It does not transcribe voice messages or other audio.
+You can translate the text of a message into another language. This feature translates written message text only. It does not transcribe voice messages or other audio. To transcribe a received voice message, see [Media and downloads](/docs/using/media/android#transcribe-a-received-voice-message).
 
 1. Touch and hold the message, then tap **Translate** to open the translation form.
 2. Choose **Detect language** to let the app identify the original language, or choose a specific **Source language**.
