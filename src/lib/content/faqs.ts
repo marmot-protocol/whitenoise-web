@@ -20,6 +20,12 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
                 answer: "Yes. White Noise is free to download and open source. Running your own relay or choosing a paid relay service can have separate costs, but you do not need to run a server to get started.",
             },
             {
+                question: "Who pays for White Noise?",
+                featured: true,
+                answer: "White Noise is operated by the Internet Privacy Foundation, a nonprofit, with support from OpenSats, the Human Rights Foundation and And Other Stuff. It also accepts donations. The app shows no ads, and IPF does not sell personal information.",
+                link: { label: "Support the project", href: "/contribute" },
+            },
+            {
                 question: "Which devices can I use?",
                 featured: true,
                 answer: "White Noise is available on the App Store for iPhone and for Android. We recommend Zapstore for Android; Google Play and GitHub downloads are also available.",

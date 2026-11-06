@@ -12,7 +12,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["Private messages.", "Private groups."],
         description:
-            "Talk one to one or bring a group together. End-to-end encryption keeps your messages private between the people in the conversation. Even White Noise can’t read what you send.",
+            "Talk one to one or bring a group together. Every message is end-to-end encrypted with MLS, an open internet standard built for group chat. Only the people in the conversation can read it. Even White Noise can’t.",
         artwork: "conversation",
         link: {
             label: "Why privacy matters",
@@ -22,13 +22,13 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["No phone number.", "No email."],
         description:
-            "Choose a name and start connecting. No phone number, email address, or real name required. Create as many identities as you like. Use one for friends, another for work, or start fresh with people you’ve just met. You decide how you’re known.",
+            "Choose a name and start. White Noise doesn’t ask for a phone number, email address or real name. Create as many identities as you like: one for friends, one for work, a new one for people you’ve just met. You decide how you’re known.",
         artwork: "identity-balloon",
     },
     {
         title: ["All your AI", "in a single app"],
         description:
-            "An agent is just another contact. Connect Hermes, OpenClaw, Codex, Claude Code, OpenCode or Pi and talk to them from your phone. They sit in the same list as everyone else, and they work before any of your friends are here.",
+            "An agent is just another contact. Six work today: Hermes, OpenClaw, Codex, Claude Code, OpenCode and Pi. Run the connector next to your agent on a Mac or Linux computer, then message it from your phone. It sits in the same list as everyone else, and it’s useful before any of your friends join.",
         artwork: "agent-contact",
         id: "agents",
         link: {
@@ -39,7 +39,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["No central server."],
         description:
-            "White Noise delivers messages through independent servers called relays. You choose which ones to use, and your identity and contacts stay yours when you change them. You can even run your own relay and choose who you share it with.",
+            "White Noise delivers messages through independent servers called relays. You choose which ones to use, and your identity and contacts stay yours when you change them. A conversation can use several relays, so others can keep carrying messages if one goes offline. You can even run your own.",
         artwork: "network-flower",
     },
     {
@@ -56,7 +56,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["Open source.", "Open standards."],
         description:
-            "White Noise’s code is open for anyone to inspect, improve, or build on. You don’t have to take our word for how it works. Developers can check the code, help fix problems, or use it to create something of their own. Open standards let others build apps that work with it.",
+            "The iPhone and Android apps and the protocol behind them are public on GitHub. You don’t have to take our word for how White Noise works: anyone can read the code, report a problem or build on it. White Noise is free, carries no ads, and is operated by the Internet Privacy Foundation, a nonprofit.",
         artwork: "children-plant",
         link: {
             label: "Explore the code",
