@@ -38,4 +38,4 @@ At this commit, the command ran 3 tests and 0 failed. That result covers a small
 
 ## Next steps
 
-For an app, start with `marmot-app`. Language bindings are in `marmot-uniffi`. For TypeScript there is marmot-ts, which is in alpha; its maintainers advise against using it in production. Read the client flow on the Build page before you choose a library.
+For an app, start with `marmot-app`. Language bindings are in `marmot-uniffi`. For TypeScript there is marmot-ts, which is in alpha; its maintainers advise against using it in production. Read the client flow on the Build page before you choose a library, then follow Build a two-person chat to send a first encrypted message.

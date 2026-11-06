@@ -225,25 +225,31 @@ try {
             "utf8"
         )
     );
-    const skill = await readFile(
-        new URL(
-            "../.vercel/output/static/.well-known/agent-skills/connect-white-noise/SKILL.md",
-            import.meta.url
-        )
-    );
-    assert.equal(
-        index.skills[0].digest,
-        `sha256:${createHash("sha256").update(skill).digest("hex")}`
-    );
     const catalog = JSON.parse(
         await readFile(
             new URL("../.vercel/output/static/.well-known/ai-catalog.json", import.meta.url),
             "utf8"
         )
     );
-    assert.equal(catalog.entries[0].url, index.skills[0].url);
-    assert.equal(catalog.entries[0].type, "text/markdown");
-    assert.ok(skill.toString().includes("Ask for my approval before making changes"));
+    assert.deepEqual(
+        index.skills.map((entry) => entry.name),
+        ["connect-white-noise", "build-with-marmot"]
+    );
+    const skills = {};
+    for (const [position, entry] of index.skills.entries()) {
+        const skill = await readFile(
+            new URL(
+                `../.vercel/output/static/.well-known/agent-skills/${entry.name}/SKILL.md`,
+                import.meta.url
+            )
+        );
+        assert.equal(entry.digest, `sha256:${createHash("sha256").update(skill).digest("hex")}`);
+        assert.equal(catalog.entries[position].url, entry.url);
+        assert.equal(catalog.entries[position].type, "text/markdown");
+        skills[entry.name] = skill.toString();
+    }
+    assert.ok(skills["connect-white-noise"].includes("Ask for my approval before making changes"));
+    assert.ok(skills["build-with-marmot"].includes("# Build a two-person chat"));
     assert.throws(
         () => withMarkdownRouting({ routes: [{ handle: "filesystem" }] }),
         /Vercel adapter/

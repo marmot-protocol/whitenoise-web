@@ -22,7 +22,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Who pays for White Noise?",
                 featured: true,
-                answer: "White Noise is operated by the Internet Privacy Foundation, a nonprofit, with support from OpenSats, the Human Rights Foundation and And Other Stuff. It also accepts donations. The app shows no ads, and IPF does not sell personal information.",
+                answer: "White Noise is supported by the Internet Privacy Foundation, a nonprofit, together with OpenSats, the Human Rights Foundation and And Other Stuff. It also accepts donations. The app shows no ads, and IPF does not sell personal information.",
                 link: { label: "Support the project", href: "/contribute" },
             },
             {
@@ -108,7 +108,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Which agents can I connect?",
                 featured: true,
-                answer: "MDK provides integrations for Hermes, OpenClaw, Codex, Claude Code, OpenCode, and Pi. Run the connector alongside your existing agent on a supported Mac or Linux computer, add its White Noise identity, and invite it to a conversation. The setup guide covers installation and which accounts are allowed to message it.",
+                answer: "MDK provides integrations for Hermes, OpenClaw, Codex, Claude Code, OpenCode, Pi, and Goose. Run the connector alongside your existing agent on a supported Mac or Linux computer, add its White Noise identity, and invite it to a conversation. The setup guide covers installation and which accounts are allowed to message it.",
                 link: { label: "Connect your agent", href: guideInfo.agents.path },
             },
             {

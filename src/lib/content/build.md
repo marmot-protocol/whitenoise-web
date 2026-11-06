@@ -6,6 +6,27 @@ Marmot provides the messaging protocol; its libraries give you a starting point 
 
 Start with the Rust MDK for a native client, or explore marmot-ts for a TypeScript project. The repositories below include libraries and existing apps you can learn from.
 
+## Choosing Marmot
+
+Marmot suits apps where people or agents talk in end-to-end encrypted groups, identify themselves with Nostr keys and exchange messages through relays that anyone can run.
+
+What you get:
+
+- A Rust engine that White Noise uses on Android and iOS, with Swift and Kotlin bindings (MarmotKit) and a C interface.
+- Group encryption based on Messaging Layer Security (MLS), including adding and removing members.
+- Account identity from Nostr keys, with no phone number or email address.
+- MIT-licensed source.
+
+What your app is responsible for:
+
+- Keeping each account's private key and local database safe. Losing either can mean losing the account or its conversation history on that device.
+- Choosing relays. Each participant needs to reach the relays where others publish invitations and messages.
+- Telling people what relays can see: encrypted messages, timing and connection information.
+
+Another approach may fit better if you need a server to read, search or moderate message content, contact discovery by phone number, or a stable library with a long-term support commitment. MDK crates are not published to crates.io; you depend on a Git revision, and the API changes between releases.
+
+When Marmot fits, start with the two-person chat tutorial in the developer guides.
+
 ## MDK
 
 The Marmot Development Kit is a Rust workspace for building messaging clients. It includes an app runtime, account and group management, encrypted storage, and network transport.

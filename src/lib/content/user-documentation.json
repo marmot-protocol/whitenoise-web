@@ -689,6 +689,20 @@
         ]
     },
     {
+        "slug": "build/first-chat",
+        "title": "Build a two-person chat",
+        "description": "Build a small Rust program in which two accounts share an encrypted group and exchange a message through a local relay.",
+        "category": "build",
+        "platform": "shared",
+        "sources": [
+            "https://github.com/marmot-protocol/mdk/blob/4d525102389ea8fc053b4be1e3904fe23eb9b931/README.md",
+            "https://github.com/marmot-protocol/mdk/blob/4d525102389ea8fc053b4be1e3904fe23eb9b931/crates/marmot-app/README.md",
+            "https://github.com/marmot-protocol/mdk/blob/4d525102389ea8fc053b4be1e3904fe23eb9b931/crates/marmot-app/src/config.rs",
+            "https://github.com/marmot-protocol/mdk/blob/4d525102389ea8fc053b4be1e3904fe23eb9b931/crates/marmot-account/src/home.rs",
+            "https://github.com/marmot-protocol/mdk/blob/4d525102389ea8fc053b4be1e3904fe23eb9b931/Cargo.toml"
+        ]
+    },
+    {
         "slug": "build/state-and-errors",
         "title": "State and errors",
         "description": "Protect local client state, track send and receive status separately, and recover from errors safely.",

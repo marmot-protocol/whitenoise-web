@@ -18,6 +18,7 @@ White Noise is an open-source messenger for private messages, groups, and connec
 - [FAQ](https://www.whitenoise.chat/faq): Answers about using White Noise
 - [Agents](https://www.whitenoise.chat/agents): Connect an agent running on your computer
 - [For developers](https://www.whitenoise.chat/build): Build with Marmot
+- [Two-person chat tutorial](https://www.whitenoise.chat/docs/build/first-chat): Send and receive an encrypted message with MDK
 - [Marmot Protocol](https://www.whitenoise.chat/docs/marmot/README.md): Protocol guide
 - [Terms of Service](https://www.whitenoise.chat/terms): Terms for using White Noise
 - [Privacy Policy](https://www.whitenoise.chat/privacy): Website and app privacy disclosures
@@ -29,11 +30,12 @@ Request a public page with `Accept: text/markdown` for its readable Markdown rep
 
 - [Agent skill discovery](https://www.whitenoise.chat/.well-known/agent-skills/index.json): Setup skill metadata and SHA-256 digest
 - [Connect White Noise skill](https://www.whitenoise.chat/.well-known/agent-skills/connect-white-noise/SKILL.md): The current Agents guide in skill format
+- [Build with Marmot skill](https://www.whitenoise.chat/.well-known/agent-skills/build-with-marmot/SKILL.md): Decide whether Marmot fits an app, then build and verify a two-person chat
 - [AI catalog](https://www.whitenoise.chat/.well-known/ai-catalog.json): Discovery of published agent resources
 
 ## References
 
-- [FAQ and guides as text](https://www.whitenoise.chat/llms-full.txt)
+- [FAQ and guides as text](https://www.whitenoise.chat/llms-full.txt): Every guide in one large file. For a single question, fetch the matching guide page instead.
 - [Sitemap](https://www.whitenoise.chat/sitemap.xml)
 - [Marmot repositories](https://github.com/marmot-protocol)
 

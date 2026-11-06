@@ -47,9 +47,11 @@ const sections = {
         ["claude", "Claude"],
         ["opencode", "OpenCode"],
         ["pi", "Pi"],
+        ["goose", "Goose"],
     ],
     builders: [
         ["getting-started", "Getting started"],
+        ["choosing-marmot", "Choosing Marmot"],
         ["mdk", "MDK"],
         ["typescript", "TypeScript"],
         ["client-flow", "Client flow"],

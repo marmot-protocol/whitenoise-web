@@ -85,3 +85,15 @@ Connect this Pi setup to White Noise through Marmot. Read the Pi harness guide a
 ```
 
 [Full Pi documentation on GitHub](https://github.com/marmot-protocol/mdk/blob/master/integrations/pi/marmot/README.md)
+
+## Goose
+
+Use this connector to work with Goose through White Noise. You’ll need Goose CLI 1.53.0 or newer, installed and configured with a model provider on the computer that runs the connector.
+
+Once setup is complete, add the agent in White Noise and send a test message from the account you authorized.
+
+```agent-setup
+Connect this Goose setup to White Noise through Marmot. Read the Goose harness guide at https://github.com/marmot-protocol/mdk/blob/master/integrations/goose/marmot/README.md and the connector guide at https://github.com/marmot-protocol/mdk/blob/master/crates/agent-connector/README.md. Explain how the connector works and what installation will change. Confirm that Goose CLI 1.53.0 or newer is installed and configured with a provider. Ask me for my White Noise public key (npub), then propose setup for that account. Ask for my approval before making changes. After approval, use the documented verified installation flow, reply with your agent public key, and ask me to send a test message.
+```
+
+[Full Goose documentation on GitHub](https://github.com/marmot-protocol/mdk/blob/master/integrations/goose/marmot/README.md)
