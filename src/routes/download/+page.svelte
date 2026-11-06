@@ -17,11 +17,11 @@ const options: {
 }[] = [
     {
         name: "iPhone",
-        description: "Get the beta app for iPhone through TestFlight.",
+        description: "Get White Noise for iPhone from the App Store.",
         downloads: [
             {
-                label: "TestFlight",
-                href: "https://testflight.apple.com/join/KrVBcjpA",
+                label: "App Store",
+                href: "https://apps.apple.com/app/id6773000993",
             },
         ],
     },
@@ -57,7 +57,6 @@ const schema = {
     url: "https://www.whitenoise.chat/download",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     downloadUrl: options.flatMap(({ downloads }) => downloads.map(({ href }) => href)),
-    softwareVersion: "beta",
     isAccessibleForFree: true,
 };
 </script>
@@ -65,14 +64,14 @@ const schema = {
 <svelte:head>
     <title>Download — White Noise</title>
     <link rel="canonical" href="https://www.whitenoise.chat/download" />
-    <meta name="description" content="Download the White Noise beta for iPhone and Android." />
+    <meta name="description" content="Download White Noise for iPhone and Android." />
 </svelte:head>
 
 <JsonLd {schema} />
 <div class="site-width">
     <PageIntro
         title="Download White Noise"
-        description="Get the White Noise beta for iPhone or Android. Choose your download below."
+        description="Get White Noise for iPhone or Android. Choose your download below."
     />
     <Grid columns={2} class="download-options">
         {#each options as option}
@@ -97,8 +96,8 @@ const schema = {
         <div>
             <h2>A work in progress.<br />With you in it.</h2>
             <p>
-                White Noise is in beta. Try it, explore it, and help us make it better. If something
-                feels off, we’d like to hear about it.
+                White Noise is open source and still growing. Try it, explore it, and help us make
+                it better. If something feels off, we’d like to hear about it.
             </p>
             <TextLink href="/contribute">Share feedback or get involved</TextLink>
         </div>

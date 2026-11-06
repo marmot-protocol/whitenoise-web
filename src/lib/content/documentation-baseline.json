@@ -13,7 +13,7 @@
         "source": "d7186efa4123ba5ad7addd9a964b419e6a2282da",
         "version": "2026.10.13 (45)",
         "minimumOS": "iOS 18",
-        "channel": "TestFlight; installed release availability not independently checked",
+        "channel": "App Store; the store release is newer than this source-reviewed baseline",
         "evidence": "source-reviewed",
         "screenshots": "Delegated in issue14",
         "behaviorQualification": "Device validation pending"

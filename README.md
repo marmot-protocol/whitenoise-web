@@ -54,7 +54,7 @@ The source-map-js override applies the 1.2.2 [source-map denial-of-service fix](
 
 Existing `/images/rebuild/` paths are stable public asset URLs retained for compatibility. Site components and styles use durable `site` naming. The design system's documentation catalog is isolated from normal page runtime imports; small generated constants supply breakpoint and copy-feedback behavior.
 
-Public availability copy describes the intended launch state, when both iPhone and Android apps are available. The App Store and Google Play buttons are user-approved active placeholders: clicking stays on the Download page. They are excluded from structured download URLs. Zapstore and the direct APK retain their real destinations. Replace the placeholders only when store URLs are supplied.
+Every Download button points at a real store destination: the App Store listing for iPhone, and Zapstore, Google Play or the GitHub release for Android. All of them are included in the structured download URLs. The iPhone link uses the locale-neutral `apps.apple.com/app/id...` form so it resolves to the visitor's own storefront.
 
 ## Artwork sources
 
@@ -178,7 +178,7 @@ This prints the event through `jq`, including:
 
 ## Release considerations
 
-- App Store and Google Play URLs have not been supplied. The Download page keeps the user-approved active placeholders described above; Zapstore and the APK have real destinations.
+- The documented iOS baseline is older than the release currently on the App Store. The compatibility guide records that gap; a source review of the shipping build is still outstanding.
 - The pale hero gray is an accepted exception to large-text AA contrast, recorded in the design system.
 - “Holding Ourselves to It” on Privacy Matters contains absolute privacy/anonymization claims that conflict with the policy's stated limitations. That copy still needs a separate content review; the canonical policy is unchanged.
 - Vercel's build tracer reports the optional `supports-color` dependency of `debug`. Local production builds and tested routes work without it.

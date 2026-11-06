@@ -6,7 +6,7 @@ This page lists the release and source baselines these guides were checked again
 
 | Platform | Channel | Source baseline | Evidence | Missing checks |
 |---|---|---|---|---|
-| iPhone, iOS 18 or newer | TestFlight beta | Version 2026.10.13, build 45, source `d7186efa4123ba5ad7addd9a964b419e6a2282da` (release commit on the GitHub default branch) | Source review | TestFlight availability of this build is unconfirmed; iOS screenshots are still missing (tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14)) |
+| iPhone, iOS 18 or newer | App Store; see [Download](/download) | Version 2026.10.13, build 45, source `d7186efa4123ba5ad7addd9a964b419e6a2282da` (release commit on the GitHub default branch) | Source review | The App Store currently ships 2026.10.25, which is newer than this source-reviewed baseline; iOS screenshots are still missing (tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14)) |
 | Android 11 or newer | Zapstore (recommended), Google Play or GitHub; see [Download](/download) | Latest public release `android-v2026.10.14`, source `6c7cc4bf70ab0de7eae29e13c5ed75e0d6cd3e09`; current source `63524b750b934d72e0f832805128cd84d3a92155` | Screenshots from CI preview 4551, source `81fb0947d51169093ac2d2661a3c2244a1eff8da`, Android SDK 37, synthetic test data, navigated on a device | Full delivery testing; which current-source features are in the public release |
 | Desktop app | Unconfirmed | Unrecorded | Unrecorded | Whether a desktop app is available |
 | Agent connector computer | Mac or Linux | Current website setup guide | The website lists Mac and Linux | Windows support unknown |
@@ -24,7 +24,7 @@ For the pinned MDK source, Rust toolchain and focused test result, see [Build qu
 
 ## Find your version
 
-On iPhone, TestFlight shows the version and build of the beta you have installed. On Android, open the system app details for White Noise and compare the version there with the release names on GitHub Releases, such as `android-v2026.10.14`.
+On iPhone, open Settings, then General, then iPhone Storage, and select White Noise to see the version you have installed. On Android, open the system app details for White Noise and compare the version there with the release names on GitHub Releases, such as `android-v2026.10.14`.
 
 ## Report a problem
 
