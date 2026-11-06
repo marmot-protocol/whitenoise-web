@@ -67,18 +67,18 @@ const schema = {
                     room for you to help shape it.
                 </p>
             </section>
-<section id="practice">
-        <h2>Holding Ourselves to It</h2>
-        <p>
-            An argument like this one is only worth as much as the practice behind it. White Noise has no accounts and no servers holding your conversations. Your keys are generated and stay on your device, every message is end-to-end encrypted before it leaves, and group messages are published under ephemeral keypairs so that even the relays carrying them cannot tell who sent what. We cannot read your messages, and we cannot see who you talk to.
-        </p>
-        <p>
-            We do want to know whether the app actually works&mdash;which features people use, and where things break. So we ask. Sharing usage and telemetry is off until you turn it on, and declining costs you nothing. Product analytics uses predefined events and bucketed values. Telemetry includes aggregate performance measurements, a resettable installation identifier, app and device information, and relay addresses. Neither stream includes message content, public keys, contacts, or account and group identifiers. We use our own servers for these measurements, and there are no advertising identifiers or trackers in the app. Group diagnostic logs have a separate sharing control; on iOS and Android, enabling sharing automatically uploads eligible logs to IPF. These more detailed logs include group and message identifiers, but never message content or key material.
-        </p>
-        <p>
-            Asking for permission is easy to claim and harder to document, so we wrote down exactly what leaves your device, what our servers can and cannot infer from it, and how long any of it is kept.
-        </p>
-    </section>
+            <section id="practice">
+                <h2>Holding ourselves to it.</h2>
+                <p>
+                    An argument like this one is only worth as much as the practice behind it. White Noise doesn’t ask for a phone number or email, and no central server holds your conversations. Your keys are created and stored on your device. Every message is end-to-end encrypted before it leaves, so the relays that store and forward it hold only encrypted copies. Each group message is signed with a new single-use key, so the relay copy doesn’t carry the sender’s public key. We cannot read your messages. Relays can still see connection details, such as your IP address and which group a message belongs to, and a Nostr contact list you publish is public.
+                </p>
+                <p>
+                    We do want to know whether the app actually works&mdash;which features people use, and where things break. So we ask. Sharing usage and telemetry is off until you turn it on, and declining costs you nothing. Product analytics uses predefined events and bucketed values. Telemetry includes aggregate performance measurements, a resettable installation identifier, app and device information, and relay addresses. Neither stream includes message content, public keys, contacts, or account and group identifiers. We use our own servers for these measurements, and there are no advertising identifiers or trackers in the app. Group diagnostic logs have a separate sharing control; on iOS and Android, enabling sharing automatically uploads eligible logs to IPF. These more detailed logs include group and message identifiers, but never message content or key material.
+                </p>
+                <p>
+                    Asking for permission is easy to claim and harder to document, so we wrote down exactly what leaves your device, what our servers can and cannot infer from it, and how long any of it is kept.
+                </p>
+            </section>
         </article>
         <section class="privacy-resources" aria-labelledby="privacy-policy-link">
             <h2 id="privacy-policy-link">

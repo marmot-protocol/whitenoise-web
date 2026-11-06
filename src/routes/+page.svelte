@@ -4,6 +4,7 @@ import Artwork from "#lib/components/site/Artwork.svelte";
 import Supporters from "#lib/components/site/Supporters.svelte";
 import Action from "#lib/components/system/Action.svelte";
 import Disclosure from "#lib/components/system/Disclosure.svelte";
+import Text from "#lib/components/system/Text.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
 import { faqSchema, homepageFaqs } from "#lib/content/faqs.js";
 import { homepageFeatures } from "#lib/content/homepage.js";
@@ -22,7 +23,7 @@ const schema = {
 </script>
 
 <svelte:head>
-    <title>White Noise — The private messenger you can start using in seconds. No phone number, no email.</title>
+    <title>White Noise — Private messenger. No phone number, no email.</title>
     <link rel="canonical" href="https://www.whitenoise.chat/" />
     <meta
         name="description"
@@ -32,12 +33,12 @@ const schema = {
     <meta property="og:url" content="https://www.whitenoise.chat/" />
     <meta property="og:image" content="https://www.whitenoise.chat/images/og_preview@1x.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="White Noise — The private messenger you can start using in seconds. No phone number, no email." />
+    <meta property="og:title" content="White Noise — Private messenger. No phone number, no email." />
     <meta
         property="og:description"
         content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
     />
-    <meta property="twitter:title" content="White Noise — The private messenger you can start using in seconds. No phone number, no email." />
+    <meta property="twitter:title" content="White Noise — Private messenger. No phone number, no email." />
     <meta
         property="twitter:description"
         content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
@@ -53,6 +54,7 @@ const schema = {
         <div class="hero-action" id="hero-download">
             <Action href="/download" label="Download" icon="down" />
             <TextLink href="/docs">Read the guides</TextLink>
+            <Text role="small" tone="muted">Free, open source and ad-free, with usage sharing off by default.</Text>
         </div>
     </section>
     <Supporters />
