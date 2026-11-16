@@ -2,7 +2,7 @@
     {
         "slug": "settings/android",
         "title": "Android settings",
-        "description": "Find a setting and see what it changes.",
+        "description": "Find a White Noise setting on Android and see what it changes.",
         "category": "settings",
         "platform": "android",
         "sources": [
@@ -56,7 +56,7 @@
     {
         "slug": "settings/ios",
         "title": "iOS settings",
-        "description": "Find a setting and see what it changes.",
+        "description": "Find a White Noise setting on iPhone and see what it changes.",
         "category": "settings",
         "platform": "ios",
         "sources": [
@@ -152,7 +152,7 @@
     {
         "slug": "get-started/install/android",
         "title": "Install and set up White Noise",
-        "description": "Install the app and create a profile.",
+        "description": "Install White Noise on Android and create a profile.",
         "category": "get-started",
         "platform": "android",
         "sources": [
@@ -173,7 +173,7 @@
     {
         "slug": "get-started/install/ios",
         "title": "Install and set up White Noise",
-        "description": "Install the app and create a profile.",
+        "description": "Install White Noise on iPhone and create a profile.",
         "category": "get-started",
         "platform": "ios",
         "sources": [
@@ -191,7 +191,7 @@
     {
         "slug": "get-started/first-message/android",
         "title": "Send a message",
-        "description": "Find someone and start a chat.",
+        "description": "Find someone and start a chat in White Noise on Android.",
         "category": "get-started",
         "platform": "android",
         "sources": [
@@ -209,7 +209,7 @@
     {
         "slug": "get-started/first-message/ios",
         "title": "Send a message",
-        "description": "Find someone and start a chat.",
+        "description": "Find someone and start a chat in White Noise on iPhone.",
         "category": "get-started",
         "platform": "ios",
         "sources": [
@@ -288,7 +288,7 @@
     {
         "slug": "using/groups/android",
         "title": "Groups",
-        "description": "Create a group, manage members and settings, leave or delete it, and recover a group that stops syncing.",
+        "description": "Create a group, manage members and settings, leave or delete it, and recover a group that stops syncing on Android.",
         "category": "using",
         "platform": "android",
         "sources": [
@@ -324,7 +324,7 @@
     {
         "slug": "using/groups/ios",
         "title": "Groups",
-        "description": "Create a group, manage members and settings, leave or delete it, and recover a group that stops syncing.",
+        "description": "Create a group, manage members and settings, leave or delete it, and recover a group that stops syncing on iPhone.",
         "category": "using",
         "platform": "ios",
         "sources": [

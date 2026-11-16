@@ -8,11 +8,11 @@ import type { PageServerLoad } from "./$types";
 export const load: PageServerLoad = async ({ params }) => {
     const { naddr } = params;
 
-    // Decode the naddr to get the d-tag
+    // Malformed or foreign addresses name no post on this site; a 404 lets crawlers drop them.
     const decoded = decodeNaddr(naddr);
 
     if (!decoded) {
-        error(400, "Invalid blog post address");
+        error(404, "Blog post not found");
     }
 
     // Verify it's for the right pubkey and kind
@@ -21,7 +21,7 @@ export const load: PageServerLoad = async ({ params }) => {
     }
 
     if (decoded.kind !== KIND_LONG_FORM) {
-        error(400, "Invalid blog post type");
+        error(404, "Blog post not found");
     }
 
     const post = await fetchBlogPostCached(decoded.dTag).catch((cause: unknown) => {

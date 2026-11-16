@@ -1,17 +1,18 @@
 <script lang="ts">
 import JsonLd from "#lib/components/JsonLd.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Disclosure from "#lib/components/system/Disclosure.svelte";
 import Text from "#lib/components/system/Text.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
 import { faqGroups, faqSchema } from "#lib/content/faqs.js";
 </script>
 
-<svelte:head>
-    <title>Frequently asked questions — White Noise</title>
-    <meta name="description" content="Answers about getting started with White Noise, privacy, identity, groups, relays, and connected agents." />
-    <link rel="canonical" href="https://www.whitenoise.chat/faq" />
-</svelte:head>
+<PageMeta
+    title="Frequently asked questions"
+    description="Answers about getting started with White Noise, privacy, identity, groups, relays, and connected agents."
+    path="/faq"
+/>
 <JsonLd schema={faqSchema(faqGroups.flatMap((group) => group.items))} />
 <div class="site-width faq-page">
     <PageIntro title="Frequently asked questions." description="Getting started, keeping conversations private, and making White Noise your own." />

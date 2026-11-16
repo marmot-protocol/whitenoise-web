@@ -2,7 +2,9 @@
 import { nestArticleHeadings } from "#lib/article.js";
 import JsonLd from "#lib/components/JsonLd.svelte";
 import BlogImage from "#lib/components/site/BlogImage.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Icon from "#lib/components/system/Icon.svelte";
+import { breadcrumbSchema } from "#lib/seo.js";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -44,27 +46,25 @@ const blogPostSchema = $derived.by(() => {
 });
 </script>
 
-<svelte:head>
-    <title>{data.post.title} | White Noise Blog</title>
-    <meta
-        name="description"
-        content={data.post.summary || `Read ${data.post.title} on the White Noise blog`}
-    />
-    <meta property="og:title" content={data.post.title + " | White Noise Blog"} />
-    <meta
-        property="og:description"
-        content={data.post.summary || `Read ${data.post.title} on the White Noise blog`}
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content={`https://www.whitenoise.chat/blog/${data.post.naddr}`} />
-    {#if data.post.image}
-        <meta property="og:image" content={data.post.image} />
-    {/if}
-    <link rel="canonical" href={`https://www.whitenoise.chat/blog/${data.post.naddr}`} />
-</svelte:head>
+<PageMeta
+    title={data.post.title}
+    site="White Noise Blog"
+    description={data.post.summary || `Read ${data.post.title} on the White Noise blog`}
+    path={`/blog/${data.post.naddr}`}
+    type="article"
+    image={data.post.image ? { url: data.post.image, alt: data.post.title } : undefined}
+    publishedTime={new Date((data.post.publishedAt ?? data.post.createdAt) * 1000).toISOString()}
+    modifiedTime={new Date(data.post.createdAt * 1000).toISOString()}
+/>
 
 <JsonLd schema={blogPostSchema} />
+<JsonLd
+    schema={breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+        { name: data.post.title, path: `/blog/${data.post.naddr}` },
+    ])}
+/>
 
 <div class="site-width">
 <article class="blog-article">

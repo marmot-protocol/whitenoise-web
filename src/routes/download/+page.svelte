@@ -2,6 +2,7 @@
 import JsonLd from "#lib/components/JsonLd.svelte";
 import Artwork from "#lib/components/site/Artwork.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Action from "#lib/components/system/Action.svelte";
 import Grid from "#lib/components/system/Grid.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
@@ -61,11 +62,11 @@ const schema = {
 };
 </script>
 
-<svelte:head>
-    <title>Download — White Noise</title>
-    <link rel="canonical" href="https://www.whitenoise.chat/download" />
-    <meta name="description" content="Download White Noise for iPhone and Android." />
-</svelte:head>
+<PageMeta
+    title="Download"
+    description="Download White Noise for iPhone and Android."
+    path="/download"
+/>
 
 <JsonLd {schema} />
 <div class="site-width">
