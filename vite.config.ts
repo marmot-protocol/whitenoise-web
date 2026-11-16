@@ -4,6 +4,11 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 
+// Vercel sets this for the project, and the adapter then adds a deployment cookie that
+// requires split entry chunks, so the build fails with one bundle. One bundle already
+// keeps every page consistent across deploys, which is what the cookie was for.
+delete process.env.VERCEL_SKEW_PROTECTION_ENABLED;
+
 export default defineConfig(({ command }) => ({
     plugins: [
         tailwindcss(),
