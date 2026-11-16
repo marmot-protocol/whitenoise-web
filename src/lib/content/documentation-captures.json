@@ -897,5 +897,401 @@
             "description": "Open a shared-content category from the conversation details. Links appear when available.",
             "alt": "Shared in Chat categories for photos and videos, links, documents and voice."
         }
+    },
+    {
+        "id": "linux-vault-setup",
+        "url": "/docs/linux/vault-setup.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "ee54e6479a967dcb0ef459c59e915e39c49824553bc312b1452448b78384c9c4",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "dark",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["get-started/install/linux"],
+        "presentation": {
+            "url": "/docs/linux/vault-setup.svg",
+            "crop": {
+                "x": 105,
+                "y": 87,
+                "width": 990,
+                "height": 625
+            },
+            "highlights": [],
+            "description": "The vault setup screen. Despite its wording, not every settings file is encrypted; see the privacy guide.",
+            "alt": "Vault password setup with both password fields empty."
+        }
+    },
+    {
+        "id": "linux-sign-in",
+        "url": "/docs/linux/sign-in.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "a278446921f39532c1aea9ad2478de34e16873980a2ef540ce35760e85213b17",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["get-started/install/linux"],
+        "presentation": {
+            "url": "/docs/linux/sign-in.svg",
+            "crop": {
+                "x": 105,
+                "y": 126,
+                "width": 990,
+                "height": 548
+            },
+            "highlights": [],
+            "description": "Choose a local key or remote signer after unlocking the device vault.",
+            "alt": "Linux sign-in choices for local keys and remote signers."
+        }
+    },
+    {
+        "id": "linux-settings-overview",
+        "url": "/docs/linux/settings-overview.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "1e53518c99c1ac0644c34f27e6ac19b7a438430695fe7d2bb37b54dd1bc25941",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["settings/linux"],
+        "presentation": {
+            "url": "/docs/linux/settings-overview.svg",
+            "crop": {
+                "x": 126,
+                "y": 165,
+                "width": 1036,
+                "height": 580
+            },
+            "highlights": [],
+            "description": "Choose a settings category, then a task or page.",
+            "alt": "Linux settings categories including Appearance, General, Notifications, Keys and identity, Storage and Advanced."
+        }
+    },
+    {
+        "id": "linux-notifications",
+        "url": "/docs/linux/notifications.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "91eaa68abbcd3764efe6badd5eea47a6bd553fbeb7fadbec1f2a4a08a78cf80d",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/notifications/linux"],
+        "presentation": {
+            "url": "/docs/linux/notifications.svg",
+            "crop": {
+                "x": 90,
+                "y": 0,
+                "width": 1110,
+                "height": 442
+            },
+            "highlights": [],
+            "description": "Desktop alerts, notification sounds, interface sounds and message previews have separate switches.",
+            "alt": "Desktop notification, sound and message-preview switches with the Send test button."
+        }
+    },
+    {
+        "id": "linux-security",
+        "url": "/docs/linux/security.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "3bc00aa842470259351a5532a90cbef108be3d62ad6a5f53a62049741c18317c",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/recovery/linux"],
+        "presentation": {
+            "url": "/docs/linux/security.svg",
+            "crop": {
+                "x": 126,
+                "y": 75,
+                "width": 1036,
+                "height": 457
+            },
+            "highlights": [],
+            "description": "Export an encrypted identity separately from the settings backup. No private key is displayed.",
+            "alt": "Change vault password, Export encrypted key and Reveal private key controls with no key revealed."
+        }
+    },
+    {
+        "id": "linux-privacy",
+        "url": "/docs/linux/privacy.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "988a939f0182fba0b4beaf2685490dd067387d65ae13924bf3385bf80bb365d1",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/privacy/linux"],
+        "presentation": {
+            "url": "/docs/linux/privacy.svg",
+            "crop": {
+                "x": 126,
+                "y": 349,
+                "width": 1036,
+                "height": 356
+            },
+            "highlights": [],
+            "description": "Link previews and diagnostics sharing are separate controls. Preview hosts can receive your IP address.",
+            "alt": "Privacy tab showing Link previews enabled and Share usage and diagnostics disabled."
+        }
+    },
+    {
+        "id": "linux-audit-logs",
+        "url": "/docs/linux/audit-logs.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "d0251cd0312d06dfcd7b09d6cea527d3edafaa7d0c6f9bd035a40cce8806c840",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["settings/linux/diagnostics"],
+        "presentation": {
+            "url": "/docs/linux/audit-logs.svg",
+            "crop": {
+                "x": 126,
+                "y": 349,
+                "width": 1036,
+                "height": 340
+            },
+            "highlights": [],
+            "description": "Audit recording is separate from diagnostics sharing. This isolated account has no recorded audit files.",
+            "alt": "Audit logs tab with recording off, Refresh and an empty log-file list."
+        }
+    },
+    {
+        "id": "linux-profile",
+        "url": "/docs/linux/profile.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "662258edb0f9be506d45d574cc9d387afc3a543d221fe00abcafe53eb2656c96",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/profiles/linux"],
+        "presentation": {
+            "url": "/docs/linux/profile.svg",
+            "crop": {
+                "x": 120,
+                "y": 0,
+                "width": 1050,
+                "height": 758
+            },
+            "highlights": [],
+            "description": "Edit profile and public-key sharing on a fictional, offline account. This does not demonstrate profile publication.",
+            "alt": "Fictional Tame Badger profile with Edit profile and a public-key QR code."
+        }
+    },
+    {
+        "id": "linux-contacts",
+        "url": "/docs/linux/contacts.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "e0a19b48c15c91c0e5b39943465d3bb298423a1cad7a1503e1f4d36270a0922b",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/contacts/linux"],
+        "presentation": {
+            "url": "/docs/linux/contacts.svg",
+            "crop": {
+                "x": 90,
+                "y": 0,
+                "width": 365,
+                "height": 250
+            },
+            "highlights": [],
+            "description": "The People rail contains contact search and Import contacts. Export controls appear after contacts exist.",
+            "alt": "Empty People rail with Search contacts and Import contacts controls."
+        }
+    },
+    {
+        "id": "linux-composer",
+        "url": "/docs/linux/composer.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "e8491736608348767cdb4a6da1a0ff014943684d0b1e27e2f42a96fd3c1a32a2",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["get-started/first-message/linux", "using/messages/linux", "using/media/linux"],
+        "presentation": {
+            "url": "/docs/linux/composer.svg",
+            "crop": {
+                "x": 483,
+                "y": 626,
+                "width": 692,
+                "height": 107
+            },
+            "highlights": [],
+            "description": "A fictional draft in the real composer. The paperclip adds attachments; the microphone starts recording. Nothing was sent.",
+            "alt": "Message composer containing the fictional draft The squirrels borrowed the meeting agenda, with attachment and microphone controls."
+        }
+    },
+    {
+        "id": "linux-group-settings",
+        "url": "/docs/linux/group-settings.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "d5e7a15000f8dabfee6800fc63e6157d3ce7114f8712c5ffcb74c78de83d441b",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/groups/linux"],
+        "presentation": {
+            "url": "/docs/linux/group-settings.svg",
+            "crop": {
+                "x": 480,
+                "y": 120,
+                "width": 700,
+                "height": 610
+            },
+            "highlights": [],
+            "description": "Open Group settings to edit a group you administer. The capture uses a fictional one-member group; invitation delivery was not tested.",
+            "alt": "Group settings for the fictional Acorn expedition group, showing its photo, description and Rename control."
+        }
     }
 ]

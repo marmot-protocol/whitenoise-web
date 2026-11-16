@@ -68,7 +68,7 @@ export function renderDocumentation(markdown: string) {
             "span",
         ],
         allowedAttributes: {
-            a: ["href", "title", "rel", "id"],
+            a: ["href", "title", "rel", "id", "data-sveltekit-reload"],
             figcaption: ["class"],
             span: ["id"],
             h2: ["id"],
@@ -99,6 +99,11 @@ export function renderDocumentation(markdown: string) {
                               href: attributes.href,
                               rel: "noopener noreferrer",
                           }
+                        : {}),
+                    ...(/^\/docs\/(?:android|ios|linux)\/[a-z-]+\.(?:svg|png)$/.test(
+                        attributes.href ?? ""
+                    )
+                        ? { "data-sveltekit-reload": "" }
                         : {}),
                 },
             }),
