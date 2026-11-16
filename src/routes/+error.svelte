@@ -6,7 +6,11 @@ import TextLink from "#lib/components/system/TextLink.svelte";
 import { page } from "$app/state";
 </script>
 
-<PageMeta title={page.status === 404 ? "Page not found" : "Something went wrong"} robots="noindex" />
+<!-- Only missing pages are noindex: a 5xx stays a retryable outage, not an exclusion. -->
+<PageMeta
+    title={page.status === 404 ? "Page not found" : "Something went wrong"}
+    robots={page.status === 404 ? "noindex" : undefined}
+/>
 <Container>
     <PageIntro title={page.status === 404 ? "Page not found." : "Something went wrong."} description={page.error?.message ?? "Please try again shortly."} />
     <TextLink href="/">Back to home</TextLink>
