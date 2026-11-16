@@ -1,6 +1,8 @@
 <script lang="ts">
+import JsonLd from "#lib/components/JsonLd.svelte";
 import DocumentationLayout from "#lib/components/site/DocumentationLayout.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import CopyButton from "#lib/components/system/CopyButton.svelte";
 import Grid from "#lib/components/system/Grid.svelte";
 import Icon from "#lib/components/system/Icon.svelte";
@@ -9,6 +11,7 @@ import TextLink from "#lib/components/system/TextLink.svelte";
 import type { GuideDocument } from "#lib/content/guide.js";
 import { repositoryGroups } from "#lib/documentation.js";
 import { type GuideArea, guideInfo } from "#lib/documentation-navigation.js";
+import { guideSchema } from "#lib/seo.js";
 
 let {
     area,
@@ -37,11 +40,8 @@ const furtherGuides: Partial<Record<GuideArea, { href: string; label: string }[]
 const furtherLinks = $derived(furtherGuides[area] ?? []);
 </script>
 
-<svelte:head>
-    <title>{document.title} — White Noise</title>
-    <meta name="description" content={info.description} />
-    <link rel="canonical" href={`https://www.whitenoise.chat${info.path}`} />
-</svelte:head>
+<PageMeta title={document.title} description={info.description} path={info.path} type="article" />
+<JsonLd schema={guideSchema({ title: document.title, description: info.description, path: info.path })} />
 
 <DocumentationLayout {area}>
     <PageIntro title={document.title} description={info.description} />

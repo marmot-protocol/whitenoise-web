@@ -1,6 +1,7 @@
 <script lang="ts">
 import JsonLd from "#lib/components/JsonLd.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Text from "#lib/components/system/Text.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
 
@@ -14,15 +15,12 @@ const schema = {
 };
 </script>
 
-<svelte:head
-    ><title>Privacy matters — White Noise</title><link
-        rel="canonical"
-        href="https://www.whitenoise.chat/privacy-matters"
-    /><meta
-        name="description"
-        content="Private conversations give us room to think, connect, and be ourselves. Read about the principles behind White Noise."
-    /></svelte:head
->
+<PageMeta
+    title="Privacy matters"
+    description="Private conversations give us room to think, connect, and be ourselves. Read about the principles behind White Noise."
+    path="/privacy-matters"
+    type="article"
+/>
 <JsonLd {schema} />
 <div class="site-width">
     <PageIntro

@@ -1,5 +1,6 @@
 <script lang="ts">
 import { onMount, tick } from "svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Icon from "#lib/components/system/Icon.svelte";
 import Text from "#lib/components/system/Text.svelte";
 import { guideFilters, guideIndexUrl, withGuideContext } from "#lib/documentation-browsing.js";
@@ -109,11 +110,11 @@ function destination(item: { url: string; slug: string }) {
 }
 </script>
 
-<svelte:head>
-    <title>Documentation — White Noise</title>
-    <meta name="description" content="Guides for using White Noise on Android or iOS, with help for settings and connected agents." />
-    <link rel="canonical" href="https://www.whitenoise.chat/docs" />
-</svelte:head>
+<PageMeta
+    title="Documentation"
+    description="Guides for using White Noise on Android or iOS, with help for settings and connected agents."
+    path="/docs"
+/>
 <div class="site-width">
     <header class="docs-hub-header"><Text as="h1" role="display">Guides</Text><select aria-label="Platform" class="docs-platform-select type-ui" id="docs-platform" value={platform} onchange={(event) => setFilters(event.currentTarget.value, query)}><option value="all">All platforms</option><option value="android">Android</option><option value="ios">iOS</option></select></header>
     <div class="technical-content">

@@ -1,6 +1,7 @@
 <script lang="ts">
 import JsonLd from "#lib/components/JsonLd.svelte";
 import LegalPage from "#lib/components/site/LegalPage.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import type { PageData } from "./$types";
 
 let { data }: { data: PageData } = $props();
@@ -20,11 +21,11 @@ const termsSchema = {
 };
 </script>
 
-<svelte:head>
-    <title>Terms of Service | White Noise</title>
-    <link rel="canonical" href="https://www.whitenoise.chat/terms" />
-    <meta name="description" content="Terms of Service for White Noise and the Internet Privacy Foundation." />
-</svelte:head>
+<PageMeta
+    title="Terms of Service"
+    description="Terms of Service for White Noise and the Internet Privacy Foundation."
+    path="/terms"
+/>
 
 <JsonLd schema={termsSchema} />
 

@@ -46,6 +46,8 @@ Relay transport lives under `src/lib/server`. It verifies signatures, author, ki
 
 The content security policy permits same-origin code and the existing `analytics.ipf.dev` service. Inline style attributes remain allowed for measured artwork and the live design reference; inline executable scripts require SvelteKit's generated hashes/nonces. Blog images may use HTTP(S) origins. Framing is denied, content sniffing is disabled, and cross-origin referrers are limited. Vercel applies the static-asset headers as well. Keep deployment policy in sync with the local server hooks.
 
+Every page sets its title, description, canonical URL and link-preview tags through `src/lib/components/site/PageMeta.svelte`; helpers and guide/breadcrumb structured data live in `src/lib/seo.ts`. Platform guides add the platform to the document title so Android and iOS pages stay distinct. Only the design-system reference and not-found pages are noindex; outage errors stay retryable.
+
 `/llms.txt` and `/llms-full.txt` retain their public URLs and are generated from the overview, FAQ and guide sources. They no longer claim to contain full upstream documentation. The sitemap reports article modification dates and does not invent fresh modification dates for static pages.
 
 Agent setup prompts live in `agent-setup` fences in `src/lib/content/agents.md`; the guide's visible prompt containers, copy controls and text export share this source. Guide Markdown is rendered once per server instance; page data contains either one article or sections with prompts, without a duplicate full article. Keep the runtime-specific prerequisites and installation-approval step when updating them.

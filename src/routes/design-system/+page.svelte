@@ -1,6 +1,7 @@
 <script lang="ts">
 import Artwork from "#lib/components/site/Artwork.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Supporters from "#lib/components/site/Supporters.svelte";
 import Action from "#lib/components/system/Action.svelte";
 import CopyButton from "#lib/components/system/CopyButton.svelte";
@@ -119,11 +120,11 @@ function recipeFor(role: TextRole) {
 }
 </script>
 
-<svelte:head>
-    <title>Design system — White Noise</title>
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="description" content="Internal visual reference for White Noise design tokens, components, and current design decisions." />
-</svelte:head>
+<PageMeta
+    title="Design system"
+    description="Internal visual reference for White Noise design tokens, components, and current design decisions."
+    robots="noindex, nofollow"
+/>
 <div class="site-width design-reference">
     <PageIntro title="White Noise design system." description="One system for every page. Shared typography, a neutral palette, consistent spacing and working components." />
     <div class="ds-introduction article-body">

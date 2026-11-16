@@ -1,9 +1,12 @@
 <script lang="ts">
 import { onMount } from "svelte";
+import JsonLd from "#lib/components/JsonLd.svelte";
 import GuideNavigation from "#lib/components/site/GuideNavigation.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
 import { guideReturnUrl, withGuideContext } from "#lib/documentation-browsing.js";
+import { breadcrumbSchema, guideSchema, guideTitle } from "#lib/seo.js";
 import type { documentationPage } from "#lib/server/user-documentation.js";
 import { goto } from "$app/navigation";
 import { page } from "$app/state";
@@ -22,13 +25,19 @@ function switchPlatform(target: string) {
     context.hash = `guide-${target.slice("/docs/".length).replaceAll("/", "-")}`;
     void goto(withGuideContext(target, context.pathname + context.search + context.hash));
 }
+const path = $derived(`/docs/${document.slug}`);
+const title = $derived(guideTitle(document));
 </script>
 
-<svelte:head>
-    <title>{document.title} — White Noise</title>
-    <meta name="description" content={document.description} />
-    <link rel="canonical" href={`https://www.whitenoise.chat/docs/${document.slug}`} />
-</svelte:head>
+<PageMeta {title} description={document.description} {path} type="article" />
+<JsonLd schema={guideSchema({ title, description: document.description, path })} />
+<JsonLd
+    schema={breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Documentation", path: "/docs" },
+        { name: title, path },
+    ])}
+/>
 <div class="site-width docs-layout">
     <div class="docs-main">
         <nav class="docs-guide-tools" aria-label="Guide navigation">

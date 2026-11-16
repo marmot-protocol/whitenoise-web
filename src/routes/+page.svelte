@@ -1,6 +1,7 @@
 <script lang="ts">
 import JsonLd from "#lib/components/JsonLd.svelte";
 import Artwork from "#lib/components/site/Artwork.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Supporters from "#lib/components/site/Supporters.svelte";
 import Action from "#lib/components/system/Action.svelte";
 import Disclosure from "#lib/components/system/Disclosure.svelte";
@@ -22,28 +23,12 @@ const schema = {
 };
 </script>
 
-<svelte:head>
-    <title>White Noise — Private messenger. No phone number, no email.</title>
-    <link rel="canonical" href="https://www.whitenoise.chat/" />
-    <meta
-        name="description"
-        content="Private messages, groups, and connected agents. White Noise is an open-source messenger with end-to-end encryption. No phone number or email required."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.whitenoise.chat/" />
-    <meta property="og:image" content="https://www.whitenoise.chat/images/og_preview@1x.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="White Noise — Private messenger. No phone number, no email." />
-    <meta
-        property="og:description"
-        content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
-    />
-    <meta property="twitter:title" content="White Noise — Private messenger. No phone number, no email." />
-    <meta
-        property="twitter:description"
-        content="Private messages, groups, and connected agents. End-to-end encrypted. Open source. No phone number or email required."
-    />
-</svelte:head>
+<PageMeta
+    title="White Noise — Private messenger. No phone number, no email."
+    site=""
+    description="Private messages, groups, and connected agents. White Noise is an open-source messenger with end-to-end encryption. No phone number or email required."
+    path="/"
+/>
 <JsonLd {schema} /><JsonLd schema={faqSchema(homepageFaqs)} />
 <div class="homepage site-width">
     <section class="home-hero">
