@@ -40,4 +40,7 @@ jobs:
         run: bun audit --ignore=GHSA-gcqx-w48m-w2h4
 
       - name: Run CI checks
+        # Vercel sets this for the project and the plan cannot turn it off; build the same way.
+        env:
+          VERCEL_SKEW_PROTECTION_ENABLED: "1"
         run: bun run ci
