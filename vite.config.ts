@@ -9,6 +9,9 @@ export default defineConfig(({ command }) => ({
         tailwindcss(),
         sveltekit({
             preprocess: vitePreprocess(),
+            // One client bundle per deploy: a crawler rendering older HTML either hydrates the
+            // whole page or keeps the prerendered HTML, never a missing chunk's error page.
+            output: { bundleStrategy: "single" },
             csp: {
                 mode: "auto",
                 directives: {
