@@ -43,12 +43,18 @@ A relay marked **Needs attention** was imported without a secure wss:// address,
 
 ## iOS
 
+The image shows an earlier local iOS Simulator build, not an App Store binary. See [iPhone capture details](/docs/compatibility#iphone).
+
+<figure><a href="/docs/ios/relays.svg"><img src="/docs/ios/relays.svg" alt="iOS Relays screen showing Account Relays and Inbox Relays with Add Relay controls." loading="lazy" width="1206" height="2120" /></a><figcaption class="type-small">Account Relays and Inbox Relays have separate lists. These are this synthetic profile’s example addresses, not guaranteed defaults. Select the image to enlarge.</figcaption></figure>
+
 Open **Settings > Relays**. An empty list shows No relays published.
 
 1. In **Account Relays** or **Inbox Relays**, tap **Add Relay**.
 2. Enter a relay URL that starts with wss://, then tap **Add**.
 
-**Published Relay Lists** shows whether each list is published. If the screen fails to load, tap **Retry**.
+To remove a relay, swipe it left and delete it, or tap **Edit** and use the delete controls. Each list must keep at least one relay, so White Noise shows **Keep at least one relay.** if you try to remove the last one.
+
+**Published Relay Lists** has expandable **NIP-65** and **Inbox** rows with the relays published in each list and a count. The footer says **All relay lists are published.**, or names the missing lists and asks you to add a relay to publish them. If the screen fails to load, tap **Retry**.
 
 ## Invitation keys
 

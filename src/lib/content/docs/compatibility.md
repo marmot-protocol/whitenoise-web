@@ -8,9 +8,11 @@ This page lists the release and source baselines these guides were checked again
 
 Requires iOS 18 or newer. Get it from the App Store; see [Download](/download).
 
-- Baseline: version 2026.10.25, build 47, source `481736fa1db5eb320c7d44a80ebe2354bca97027` (release tag `v2026.10.25`).
-- Evidence: source review.
-- Missing checks: device testing. iOS screenshots are still missing, tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14).
+- Reviewed source: version 2026.11.16, build 52, commit `c2ee45e980f71f175abba1948022163a9bc11cf1`, checked on November 17, 2026. Availability of this exact build in the App Store has not been verified; some controls may be newer than your installed release.
+- Current-build images: the message composer, custom emoji, stickers, dictation controls, Appearance, Data Usage and diagnostics were captured from an unchanged local Debug-Production build of that source. They show a synthetic profile and a fictional one-member group, not personal conversations.
+- Earlier images: other selected screens use version 2026.11.10 (48), source `9e8e60372b2cbedfd77062342b9bc6c3821b55a7`. The older **Download Storage** image is labelled as historical: that screen was removed from the reviewed source. Each capture retains its own source and build in the image inventory.
+- Capture environment: iPhone 17, iOS 27.2 Simulator, on November 17, 2026. These are not App Store binaries or physical-iPhone captures. Hold-to-dictate requires iOS 26 or later and a supported speech model; the app itself still supports iOS 18.
+- Missing checks: live speech transcription, physical-device and App Store build testing, cross-device message delivery, push notifications, recovery and moderation. Notifications and diagnostic sharing were off during capture. The synthetic profile and one-member group remain in the local production app; cleanup has not been verified. The pre-existing staging app was left untouched. Remaining image coverage is tracked in [issue14](https://github.com/marmot-protocol/whitenoise-web/issues/14).
 
 ### Android
 
@@ -38,7 +40,7 @@ The current website setup guide lists Mac and Linux. Windows support is unknown.
 
 ## What this means
 
-- Android and iOS instructions match the releases listed above. If a control is missing, compare your app version with its platform baseline and update the app.
+- Android instructions use the reviewed release above. iOS instructions use the reviewed upstream source, which may be newer than the App Store release; its screenshots span two separately identified local builds. Compare your app version if a control differs.
 - Linux instructions use the reviewed source above, which may include controls newer than the public release. The Linux app uses a password-encrypted vault and has its own backup procedure; phone recovery instructions do not apply to that vault.
 - Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Additional app illustrations use the Android project’s checked-in UI reference renders at source `63524b750b934d72e0f832805128cd84d3a92155`, before this release. They illustrate controls without claiming that those features ran on a device.
 - The guides were checked against these sources and remain untested end to end on each release.
