@@ -58,7 +58,7 @@ const title = $derived(guideTitle(document));
         <article class="technical-content documentation-body">
             {@html document.html}
 
-        {#if document.platform === "ios"}<p class="type-small">{#if document.captures.length}Images show local iOS Simulator builds, not App Store qualification. Some images predate the reviewed source. See <a href="/docs/compatibility#iphone">iPhone capture details and limitations</a>.{:else}This guide does not yet have iOS screenshots.{/if}</p>{/if}
+        {#if document.platform === "ios"}<p class="type-small">{#if document.captures.length}Images show local iOS Simulator builds, not App Store qualification. Across the iOS guides, some images predate the reviewed source. See <a href="/docs/compatibility#iphone">iPhone capture details and limitations</a>.{:else}This guide does not yet have iOS screenshots.{/if}</p>{/if}
         </article>
         {#if document.previous || document.next}<nav class="docs-reading-nav" aria-label="Continue reading">{#if document.previous}<TextLink href={withGuideContext(document.previous.url, returnUrl)}>Previous: {document.previous.title}</TextLink>{/if}{#if document.next}<TextLink href={withGuideContext(document.next.url, returnUrl)}>Next: {document.next.title}</TextLink>{/if}</nav>{/if}
     </div>
