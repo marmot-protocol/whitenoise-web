@@ -4,7 +4,7 @@ Your profile is how people recognize you in White Noise. The **Profile** screen 
 
 ## Edit your details
 
-1. Open **Profile** and tap **Edit**.
+1. Go to **Settings** > **Account** > **Profile**, or tap your avatar on **Settings**, then tap **Edit**.
 2. Update any of these fields:
    - **Name**: your display name. Tap **Restore saved name** to bring back the last saved name.
    - **NIP-05 address**: a Nostr address in the form name@domain.
@@ -28,29 +28,29 @@ Profile pictures and banners are public. Removing one updates your profile, but 
 
 ## Check profile status
 
-White Noise shows **Set up your profile** until you add a name. After that it shows **Profile ready** or **Profile ready · Optional details available**. Tap **Details** for the checklist, where Display name is marked Recommended and the remaining items (picture, bio, banner, NIP-05 address, Lightning address) are Optional.
+White Noise shows **Set up your profile** until you add a name. After that it shows **Profile ready** or **Profile ready · Optional details available**. Tap **Details** for the checklist, where **Display name** is marked **Recommended** and the remaining items (**Profile picture**, **Bio**, **Banner**, **NIP-05 address**, **Lightning address**) are **Optional**.
 
 ## Share your profile
 
-<figure><a href="/docs/android/share-qr.svg"><img src="/docs/android/share-qr.svg" alt="Example profile QR code and Scan QR Code button." loading="lazy" width="328" height="440" /></a><figcaption class="type-small">Open your own Share & Connect screen so someone can scan your profile code. This image shows an example code. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/share-qr.svg"><img src="/docs/android/share-qr.svg" alt="Share &amp; Connect screen with Share profile URL, Share profile card and Save to Gallery above an example profile QR code and Scan QR Code." loading="lazy" width="360" height="780" /></a><figcaption class="type-small">Share &amp; Connect shows your profile QR code. Its share menu can share a profile link or card, or save the card to your gallery. Select the image to enlarge.</figcaption></figure>
 
-Open **Share & Connect**:
+Open **Share & Connect** by tapping your profile row at the top of **Settings**:
 
 - Let someone scan your **Profile QR code**.
-- Tap **Copy public key** to copy your npub.
+- Tap your shortened public key to copy it, or tap **Copy public key**. White Noise shows **Copied**.
 - Tap **Share profile**, then **Share profile URL** or **Share profile card**. The card reads *On White Noise? Message me here.*
 - Tap **Save to Gallery** to keep the card image. Expected result: **Saved to gallery**.
 - Tap **Scan QR Code** to scan someone else's profile code.
 
 ## Switch or add profiles
 
-In **Settings**, tap the profile management row to switch to another signed-in profile or add a new one. Adding a profile lets you create a new identity or sign in with Amber.
+In **Settings**, tap **Add Profile** if this device has one profile, or **Switch Profile** if it has more than one. **Switch Profile** lets you pick another signed-in profile or add one. Adding a profile offers the same choices as the welcome screen: **Sign In** with a private key or Amber, or **Sign Up** for a new identity. See [Install and set up White Noise](/docs/get-started/install/android) for each step.
 
 <figure><a href="/docs/android/add-profile.svg"><img src="/docs/android/add-profile.svg" alt="Add Profile choices for signing in or creating a new identity." loading="lazy" width="360" height="160" /></a><figcaption class="type-small">Adding another profile offers the same Sign In and Sign Up choices. Select the image to enlarge.</figcaption></figure>
 
 If creating the identity or the Amber sign-in fails, start the step again. When Amber asks for approval, approve the request so sign-in can finish.
 
-For keys, signing out, and what wiping a profile removes, see [Identity settings](/docs/settings/identity).
+**Sign Out** is at the bottom of **Settings** and under **Settings** > **Account** > **Profile Keys**. Signing out keeps your groups, history and drafts on this device. For keys, signing out, and what **Sign Out & Wipe** removes, see [Recover and back up your keys](/docs/using/recovery/android) and [Identity settings](/docs/settings/identity).
 
 ## Fix common problems
 

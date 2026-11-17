@@ -13,9 +13,9 @@ The Android and iOS relay controls below require wss:// URLs. For Linux relay co
 
 ## Android
 
-<figure><a href="/docs/android/relays.svg"><img src="/docs/android/relays.svg" alt="Published relay lists and Refresh status on Android." loading="lazy" width="1080" height="900" /></a><figcaption class="type-small">Relay lists show where this profile posts and receives invitations. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/relays.svg"><img src="/docs/android/relays.svg" alt="Relays screen with published Where I post and Where I receive lists outlined, five profile relays and Add relay." loading="lazy" width="1080" height="2160" /></a><figcaption class="type-small">Relay lists shows whether Where I post and Where I receive are published. Profile relays lists each relay this profile uses. Select the image to enlarge.</figcaption></figure>
 
-Open **Settings > Relays**.
+Open **Settings > Account > Relays**. **Relay lists** shows whether your lists are published, and **Profile relays** lists each relay this profile uses. Tap a relay to open **Relay**, which shows its address and its **Use For** roles.
 
 ### Add a relay
 
@@ -25,13 +25,15 @@ Open **Settings > Relays**.
 
 ### Remove a relay
 
-If this is the only relay for a role, add another relay for that role first. Tap **Remove relay** to stop this profile using it. Existing chats keep their current relays.
+Open the relay and tap **Remove relay**, then confirm. This profile stops using the relay, and existing chats keep their relays. If it is the only relay for a role, **Remove relay** is unavailable and the screen asks you to add another relay for that role first.
 
 ### Relay lists
 
 The status shows Published, Missing or Status unavailable. **Refresh status** checks the status again. **Publish missing lists** publishes the missing lists so people can find where to reach you. If publishing fails, your relay settings are kept.
 
-A relay marked **Needs attention** was imported without a secure wss:// address, with its role assignments kept during import. Add a secure replacement or remove the imported relay.
+A relay marked **Needs attention** was imported with an address that is not a secure wss:// address, or that cannot be used. Its role assignments were kept during import. Add a secure replacement or remove the imported relay.
+
+An imported .onion relay is marked **Needs Tor**. White Noise does not connect through Tor, so it skips that relay. Editing the lists here republishes them without it.
 
 ### Restore defaults
 
@@ -39,7 +41,7 @@ A relay marked **Needs attention** was imported without a secure wss:// address,
 
 ### Support chat
 
-**Chat with support** needs a published receiving relay on the profile. If the support screen says the relays need attention, tap **Open Relays**.
+**Chat with support** (under **Settings > Help & support**) needs a published receiving relay on the profile. If the support screen says **Profile relays need attention**, tap **Open Relays**.
 
 ## iOS
 

@@ -4,10 +4,12 @@
 
 The status on your device tracks local send progress only. Only the recipient can confirm that the message was fetched and decrypted, and the same applies to whether they read it.
 
+On Android, your own messages show **Sending…**, **Sent** or **Failed**, and a pending send can also show **Delivery not confirmed**. **Received** appears on messages from other people: it means the message arrived and was decrypted on your device. It is not a receipt for the messages you send. **Message info** shows a message's status, times and sender.
+
 ## Diagnose
 
-1. Check the status on your device. A message stuck as pending usually points to a connection or relay problem, so work through [Connection](/docs/troubleshooting/connection) first.
-2. Ask the recipient whether it arrived, either in the conversation or through another trusted channel. Delivery slows down while a participant is offline or while the participants lack a relay they can all reach.
+1. Check the status on your device. A message stuck on **Sending…** usually points to a connection or relay problem, so work through [Connection](/docs/troubleshooting/connection) first.
+2. A failed message offers **Discard failed message**, which removes it from the chat. Otherwise, ask the recipient whether it arrived, either in the conversation or through another trusted channel. Delivery slows down while a participant is offline or while the participants lack a relay they can all reach.
 3. Before resending, find out whether the original arrived, since duplicates clutter a group and can make an agent repeat an action. Keep the exact text of the message along with its error label.
 4. Confirm the recipient is still a member of the group. Once a removal takes effect, the removed member loses the ability to decrypt new messages.
 5. For an agent, send a harmless roundtrip, such as asking it to reply with a fixed word. Check that the answer comes from the expected runtime and account, and that it matches the expected group and project. Give each environment a dedicated group of its own.

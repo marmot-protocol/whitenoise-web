@@ -3,11 +3,11 @@
         "id": "chats",
         "url": "/docs/android/chats.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "eb41f6ececce08e72ac6ba8a70955d61201af156c85bcd0ca3434840e5aebcee",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "ca3ebc358fcfa6938d8cccce8c9467ce45641af8277b7e5734d0d1dfc4b77dcb",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -19,7 +19,7 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
+        "capturedAt": "2026-11-17",
         "guides": ["get-started/first-message/android"],
         "presentation": {
             "url": "/docs/android/chats.svg",
@@ -29,20 +29,27 @@
                 "width": 270,
                 "height": 250
             },
-            "highlights": [],
+            "highlights": [
+                {
+                    "x": 912,
+                    "y": 2195,
+                    "width": 126,
+                    "height": 126
+                }
+            ],
             "description": "On Chats, tap the pencil button in the lower-right corner to start a message.",
-            "alt": "New Message pencil button on the Chats screen."
+            "alt": "New Message pencil button outlined on the Chats screen."
         }
     },
     {
         "id": "new-message",
         "url": "/docs/android/new-message.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "23da70a4f66976eb7bdd1845608b1d718af14528173a5701df07c7c767a18e71",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "8d7197d2fa9a0ea45d2fb7df10237b1563a566cc644511fb9dc6f450e8523d97",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -54,15 +61,15 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
-        "guides": ["get-started/first-message/android"],
+        "capturedAt": "2026-11-17",
+        "guides": ["get-started/first-message/android", "using/messages/android"],
         "presentation": {
             "url": "/docs/android/new-message.svg",
             "crop": {
                 "x": 0,
                 "y": 132,
                 "width": 1080,
-                "height": 820
+                "height": 980
             },
             "highlights": [
                 {
@@ -72,22 +79,64 @@
                     "height": 147
                 }
             ],
-            "description": "Search in Name or npub, or choose Connect with QR to scan a profile.",
-            "alt": "New Message screen with Name or npub outlined."
+            "description": "Search in Name or npub, or start a group, connect with QR, invite a friend or talk to your agent.",
+            "alt": "New Message screen with Name or npub outlined above New Group, Connect with QR, Invite a friend and Talk to your agent."
+        }
+    },
+    {
+        "id": "search",
+        "url": "/docs/android/search.png",
+        "platform": "android",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "5a062642443633a29af11aa8142788b53878bdadcb71e9a108e99803b6f7927f",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-11-17",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/search.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 290
+            },
+            "highlights": [
+                {
+                    "x": 30,
+                    "y": 322,
+                    "width": 1050,
+                    "height": 84
+                }
+            ],
+            "description": "Search modes sit under the search bar. Scroll the row sideways for All attachments.",
+            "alt": "Chat search with the By me, All, Photos & videos, Files and Audio choices outlined."
         }
     },
     {
         "id": "conversation",
         "url": "/docs/android/conversation.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "8fce8090026b55402847efea571c12f11f7db05fce28347af27a1f1db95e59fb",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "3722e32e04a25d706331df6c46401f2ec708226d772bba16e2cacfcfcf80242e",
         "language": "English",
         "sdk": "37",
-        "fixture": "fictional one-member conversation",
+        "fixture": "synthetic accounts",
         "verification": "navigated-device; delivery not tested during capture",
         "cleanupVerified": true,
         "theme": "light",
@@ -96,30 +145,30 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
+        "capturedAt": "2026-11-17",
         "guides": ["get-started/first-message/android"],
         "presentation": {
             "url": "/docs/android/conversation.svg",
             "crop": {
                 "x": 0,
-                "y": 1950,
+                "y": 2070,
                 "width": 1080,
-                "height": 380
+                "height": 260
             },
             "highlights": [],
-            "description": "Write in Message, then use Send. The sample conversation uses fictional test data.",
-            "alt": "Message reading: The squirrels ate the meeting agenda."
+            "description": "Write in Message, then tap Send. The draft is fictional test data.",
+            "alt": "Message composer holding the draft: The squirrels ate the meeting agenda."
         }
     },
     {
         "id": "settings",
         "url": "/docs/android/settings.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "78cdffb876ace3fc1de76abcbe1bed01ad2df6f7546189f91a517c1effdb86da",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "f44ae4e1e5479941f90c8809fd3d88e9ad3c85a4a21df5855a9784678c31ddae",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -131,30 +180,37 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
+        "capturedAt": "2026-11-17",
         "guides": ["settings/android"],
         "presentation": {
             "url": "/docs/android/settings.svg",
             "crop": {
                 "x": 0,
-                "y": 725,
+                "y": 520,
                 "width": 1080,
-                "height": 630
+                "height": 1600
             },
-            "highlights": [],
-            "description": "The Account section contains Profile, Profile Keys and Relays.",
-            "alt": "Profile, Profile Keys and Relays in the Account section."
+            "highlights": [
+                {
+                    "x": 42,
+                    "y": 536,
+                    "width": 996,
+                    "height": 147
+                }
+            ],
+            "description": "Settings opens with Account first, then a row for each area.",
+            "alt": "Settings rows from Account and Switch Profile to Help & support, with Account outlined."
         }
     },
     {
-        "id": "appearance",
-        "url": "/docs/android/appearance.png",
+        "id": "settings-account",
+        "url": "/docs/android/settings-account.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "713572073fc44f51f2729fcd90adf757e0538bb996b9267af18f9614a6144d7e",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "93dbd51fd020368779216ef4d637b72f0e07ce2911312c23d9d18614b470b742",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -166,72 +222,30 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
+        "capturedAt": "2026-11-17",
         "guides": ["settings/android"],
         "presentation": {
-            "url": "/docs/android/appearance.svg",
-            "crop": {
-                "x": 0,
-                "y": 550,
-                "width": 1080,
-                "height": 960
-            },
-            "highlights": [],
-            "description": "Choose System default, Light, Dark or AMOLED under Theme.",
-            "alt": "The four Theme options in Android Appearance settings."
-        }
-    },
-    {
-        "id": "notifications",
-        "url": "/docs/android/notifications.png",
-        "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "1a939b6974a71884fa79a5b3f508306a7ff4e2674dd1161bbc649a35058a2e0d",
-        "language": "English",
-        "sdk": "37",
-        "fixture": "synthetic accounts",
-        "verification": "navigated-device; delivery not tested during capture",
-        "cleanupVerified": true,
-        "theme": "light",
-        "dimensions": {
-            "width": 1080,
-            "height": 2400
-        },
-        "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
-        "guides": ["using/notifications/android"],
-        "presentation": {
-            "url": "/docs/android/notifications.svg",
+            "url": "/docs/android/settings-account.svg",
             "crop": {
                 "x": 0,
                 "y": 132,
                 "width": 1080,
-                "height": 1470
+                "height": 700
             },
-            "highlights": [
-                {
-                    "x": 49,
-                    "y": 858,
-                    "width": 982,
-                    "height": 230
-                }
-            ],
-            "description": "Show notification previews controls whether alerts include names and message content.",
-            "alt": "Notification settings with Show notification previews outlined."
+            "highlights": [],
+            "description": "Account contains Profile, Profile Keys and Relays.",
+            "alt": "Account settings with Profile, Profile Keys and Relays."
         }
     },
     {
         "id": "relays",
         "url": "/docs/android/relays.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "14a4e01ae40759417c48986f7031ea2a217bde9ba7917843ec097daa4c45e589",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "42e8a0704f8fd6006957ff14969c0f2eb7fd461ef23302fc9193889d3943d73b",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -243,7 +257,7 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
+        "capturedAt": "2026-11-17",
         "guides": ["settings/relays"],
         "presentation": {
             "url": "/docs/android/relays.svg",
@@ -251,22 +265,29 @@
                 "x": 0,
                 "y": 132,
                 "width": 1080,
-                "height": 900
+                "height": 2160
             },
-            "highlights": [],
-            "description": "Relay lists show where this profile posts and receives invitations.",
-            "alt": "Published relay lists and Refresh status on Android."
+            "highlights": [
+                {
+                    "x": 42,
+                    "y": 432,
+                    "width": 996,
+                    "height": 532
+                }
+            ],
+            "description": "Relay lists shows whether Where I post and Where I receive are published. Profile relays lists each relay this profile uses.",
+            "alt": "Relays screen with published Where I post and Where I receive lists outlined, five profile relays and Add relay."
         }
     },
     {
-        "id": "data-usage",
-        "url": "/docs/android/data-usage.png",
+        "id": "appearance",
+        "url": "/docs/android/appearance.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "e9174eeee2cb7e993cfa8be80abfae07b6af9886450d4307d75da82611971a06",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "fe323b2d2f4e6aeca8d809d2d046a0e2b8b3bc57f5463ed896fa1b4374c31f6e",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -278,30 +299,121 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
-        "guides": ["using/media/android"],
+        "capturedAt": "2026-11-17",
+        "guides": ["settings/android"],
         "presentation": {
-            "url": "/docs/android/data-usage.svg",
+            "url": "/docs/android/appearance.svg",
             "crop": {
                 "x": 0,
                 "y": 132,
                 "width": 1080,
-                "height": 1270
+                "height": 1740
             },
-            "highlights": [],
-            "description": "Choose automatic-download rules for each media type. The displayed values illustrate one profile\u2019s settings.",
-            "alt": "Android Data Usage settings for photos, videos, audio and files."
+            "highlights": [
+                {
+                    "x": 42,
+                    "y": 437,
+                    "width": 996,
+                    "height": 189
+                }
+            ],
+            "description": "Theme opens the choice of System default, Light, Dark or AMOLED.",
+            "alt": "Appearance settings with Theme outlined, then Action color, Chat bubble colors, App font, Font size, Date and time and Readability preview."
+        }
+    },
+    {
+        "id": "notifications",
+        "url": "/docs/android/notifications.png",
+        "platform": "android",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "11ce2cb22f46a20a4a8358bf81f0f3b6acf8ceac242a83f6e9f271bf419a1e60",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-11-17",
+        "guides": ["using/notifications/android"],
+        "presentation": {
+            "url": "/docs/android/notifications.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 1730
+            },
+            "highlights": [
+                {
+                    "x": 42,
+                    "y": 689,
+                    "width": 996,
+                    "height": 577
+                }
+            ],
+            "description": "Notification previews control whether alerts include names and message text.",
+            "alt": "Notifications settings with the Name and message, Name only and Hidden preview choices outlined."
+        }
+    },
+    {
+        "id": "data-storage",
+        "url": "/docs/android/data-storage.png",
+        "platform": "android",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "dcb73254b8e013fac96d959bce862c9a4ae18c15ed0c7bf27c4ed5ace52cf5e5",
+        "language": "English",
+        "sdk": "37",
+        "fixture": "synthetic accounts",
+        "verification": "navigated-device; delivery not tested during capture",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1080,
+            "height": 2400
+        },
+        "device": "Pixel 6a",
+        "capturedAt": "2026-11-17",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/data-storage.svg",
+            "crop": {
+                "x": 0,
+                "y": 132,
+                "width": 1080,
+                "height": 1970
+            },
+            "highlights": [
+                {
+                    "x": 42,
+                    "y": 689,
+                    "width": 996,
+                    "height": 771
+                }
+            ],
+            "description": "Choose the networks allowed for each media type. The values shown are one profile’s settings.",
+            "alt": "Data & storage settings with automatic downloads for Photos, Videos, Audio and Files outlined."
         }
     },
     {
         "id": "privacy",
         "url": "/docs/android/privacy.png",
         "platform": "android",
-        "build": "CI preview4551",
-        "source": "81fb0947d51169093ac2d2661a3c2244a1eff8da",
-        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/38992445240",
-        "apkSha256": "8ed1ff341dcc778d8f1679b5de1b4b1697f840d825e491dbf975d97c282bee3f",
-        "imageSha256": "86b6054ae823c6cf1e3f4ad51d54bf96961d1da0b7ab5d0b4a9128da0cf033d7",
+        "build": "CI preview for PR 3879",
+        "source": "f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221",
+        "workflow": "https://github.com/marmot-protocol/whitenoise-android/actions/runs/44066889046",
+        "apkSha256": "40baa268a360f4516543818f48bacc7efaf5e777940f3e643ad54f08d01cb3b0",
+        "imageSha256": "75a82201588ce909ea8745e561b396ac798d0cb4a741be6e94fe755d1297c82d",
         "language": "English",
         "sdk": "37",
         "fixture": "synthetic accounts",
@@ -313,7 +425,7 @@
             "height": 2400
         },
         "device": "Pixel 6a",
-        "capturedAt": "2026-10-18",
+        "capturedAt": "2026-11-17",
         "guides": ["using/privacy/android"],
         "presentation": {
             "url": "/docs/android/privacy.svg",
@@ -321,11 +433,11 @@
                 "x": 0,
                 "y": 132,
                 "width": 1080,
-                "height": 1170
+                "height": 1870
             },
             "highlights": [],
-            "description": "Device protection includes screen security, keyboard privacy and device authentication. Set a device screen lock before enabling authentication.",
-            "alt": "Android device protection controls, with authentication unavailable until a screen lock is set."
+            "description": "Device protection covers screen security, the incognito keyboard and device authentication, which needs a screen lock first.",
+            "alt": "Privacy & Security settings with device protection, blocked users and default disappearing messages."
         }
     },
     {
@@ -333,8 +445,8 @@
         "url": "/docs/android/welcome.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/welcome_light.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/welcome_light.png",
         "imageSha256": "e96b6afde6c8163e5b38b94e9ebafe5470a1a0bcadab37c27c97726d4887bdcc",
         "language": "English",
         "theme": "light",
@@ -343,7 +455,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["get-started/install/android"],
         "presentation": {
             "url": "/docs/android/welcome.svg",
@@ -363,8 +475,8 @@
         "url": "/docs/android/sign-up.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/signup_empty_name.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/signup_empty_name.png",
         "imageSha256": "0a1ecd08ccc9f4fcbe82c28c07370e2d37f6fdddeaa7bde7a7512aa25dca1d88",
         "language": "English",
         "theme": "light",
@@ -373,7 +485,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["get-started/install/android"],
         "presentation": {
             "url": "/docs/android/sign-up.svg",
@@ -393,8 +505,8 @@
         "url": "/docs/android/sign-in.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/sign_in_light.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/sign_in_light.png",
         "imageSha256": "6a728894fa4486b85f9e9cc4dd5c82955149bb92656bfe59c19d9c7853744054",
         "language": "English",
         "theme": "light",
@@ -403,7 +515,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["get-started/install/android"],
         "presentation": {
             "url": "/docs/android/sign-in.svg",
@@ -423,9 +535,9 @@
         "url": "/docs/android/setup-checklist.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/account_setup_checklist_light.png",
-        "imageSha256": "ec78e469c91d3cd4270d1eb01aa6047426fd25908a953c14c7e343a1b6aede0d",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/account_setup_checklist_light.png",
+        "imageSha256": "fb28295ab9316c782f57c5bb100ef9c25a3f16a5b3bb86ec6764a342a91999d1",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -433,7 +545,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["get-started/install/android"],
         "presentation": {
             "url": "/docs/android/setup-checklist.svg",
@@ -441,11 +553,11 @@
                 "x": 0,
                 "y": 0,
                 "width": 360,
-                "height": 650
+                "height": 380
             },
             "highlights": [],
-            "description": "Account setup checks your profile, relays and messaging keys. Open a row that needs attention to review the next step.",
-            "alt": "Account setup checklist with a profile needing attention and later checks waiting."
+            "description": "Account setup asks whether to add a profile. You can continue without one and add it later.",
+            "alt": "Account setup at stage 1 of 6, Profile, with Continue without a profile and Add profile."
         }
     },
     {
@@ -453,9 +565,9 @@
         "url": "/docs/android/setup-ready.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/account_setup_ready.png",
-        "imageSha256": "089a4bc1ce4033d01306eccee8e778fcc1f09a66e7f5d0124b62bac32682d812",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/account_setup_ready.png",
+        "imageSha256": "e88d3adb0fde1dd0bbc917125d6a0e1930620da508e37f3d7bf5271a8e961ebc",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -463,19 +575,19 @@
             "height": 1000
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["get-started/install/android"],
         "presentation": {
             "url": "/docs/android/setup-ready.svg",
             "crop": {
                 "x": 0,
-                "y": 0,
+                "y": 170,
                 "width": 360,
-                "height": 550
+                "height": 135
             },
             "highlights": [],
-            "description": "When every required check is Ready, choose Open Chats to continue.",
-            "alt": "Account setup checklist with all six checks marked Ready."
+            "description": "After all six stages, setup opens your chats.",
+            "alt": "Opening your chats message with an Open Chats button."
         }
     },
     {
@@ -483,8 +595,8 @@
         "url": "/docs/android/add-profile.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/add_profile_welcome_light.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/add_profile_welcome_light.png",
         "imageSha256": "867a84a4f5a74f2b8f73d3f85ce406d1c6131a99eb48696e008981640e5fe0f7",
         "language": "English",
         "theme": "light",
@@ -493,7 +605,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/profiles/android"],
         "presentation": {
             "url": "/docs/android/add-profile.svg",
@@ -513,9 +625,9 @@
         "url": "/docs/android/setup-relays.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/account_setup_relay_proposal.png",
-        "imageSha256": "3836ec1964948e58fb2615226143b1dbf0223b4cd53b77ef04d70ae33216b9e3",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/account_setup_relay_proposal.png",
+        "imageSha256": "da4799a767a0486104d00a1d603252375fd84e7dba3e44a196e4179e7045d92f",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -523,7 +635,7 @@
             "height": 1000
         },
         "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["get-started/install/android"],
         "presentation": {
             "url": "/docs/android/setup-relays.svg",
@@ -531,11 +643,11 @@
                 "x": 0,
                 "y": 0,
                 "width": 360,
-                "height": 500
+                "height": 665
             },
             "highlights": [],
-            "description": "Review the proposed read and write relay lists before saving changes. The displayed relay addresses are examples.",
-            "alt": "Account-setup relay proposal with read and write lists and a warning about other Nostr apps."
+            "description": "Review the proposed read and write relays, then save them or discard your changes.",
+            "alt": "Account setup stage 3 of 6, Read and write relays, with example relay lists, Save and Discard changes."
         }
     },
     {
@@ -543,17 +655,17 @@
         "url": "/docs/android/backup-dialog.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/profile_keys_backup_choices_light.png",
-        "imageSha256": "9a8a337ab296a85534b8619e7ea5699dca2dd6a163c3c3c6be300d2e9fb52955",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/profile_keys_backup_choices_light.png",
+        "imageSha256": "02096c310e081e4f3a87d5f56f9eda6a2e871e345c5a18fdf2f7e1ab04338265",
         "language": "English",
         "theme": "light",
         "dimensions": {
             "width": 360,
-            "height": 368
+            "height": 416
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/recovery/android"],
         "presentation": {
             "url": "/docs/android/backup-dialog.svg",
@@ -561,7 +673,7 @@
                 "x": 0,
                 "y": 0,
                 "width": 360,
-                "height": 368
+                "height": 416
             },
             "highlights": [],
             "description": "Use a long, unique password and confirm it before exporting your encrypted private key.",
@@ -573,9 +685,9 @@
         "url": "/docs/android/share-qr.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/share_connect_menu_light.png",
-        "imageSha256": "a44c4849e7c08358f417d052426587edce6cadf0af63aec1c3d4de862e3bccf7",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/share_connect_menu_light.png",
+        "imageSha256": "6e8bfae37b87ee8a5da4c46771d1c62f0f1b500b701a6dfa9e92f19e1706e90c",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -583,19 +695,19 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/profiles/android"],
         "presentation": {
             "url": "/docs/android/share-qr.svg",
             "crop": {
-                "x": 16,
-                "y": 340,
-                "width": 328,
-                "height": 440
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 780
             },
             "highlights": [],
-            "description": "Open your own Share & Connect screen so someone can scan your profile code. This image shows an example code.",
-            "alt": "Example profile QR code and Scan QR Code button."
+            "description": "Share & Connect shows your profile QR code. Its share menu can share a profile link or card, or save the card to your gallery.",
+            "alt": "Share & Connect screen with Share profile URL, Share profile card and Save to Gallery above an example profile QR code and Scan QR Code."
         }
     },
     {
@@ -603,8 +715,8 @@
         "url": "/docs/android/attachment-menu.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/composer_attachment_menu.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/composer_attachment_menu.png",
         "imageSha256": "061ec188044d4d7ac3e883e13a22155f69977436df30571039aba0a233e1728f",
         "language": "English",
         "theme": "light",
@@ -613,7 +725,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/media/android"],
         "presentation": {
             "url": "/docs/android/attachment-menu.svg",
@@ -633,9 +745,9 @@
         "url": "/docs/android/translation-settings.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/translation_settings_off_light.png",
-        "imageSha256": "fa6f34d7288648fa8f73d216a2f50a240bc7840f0da023a38a11ae6fceb36271",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/translation_settings_off_light.png",
+        "imageSha256": "fc313e8fd8bdf6295fe970bacfa71edccdd35c143a119ae499ba0d64788bf703",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -643,7 +755,7 @@
             "height": 650
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["settings/android/translation"],
         "presentation": {
             "url": "/docs/android/translation-settings.svg",
@@ -651,11 +763,11 @@
                 "x": 0,
                 "y": 0,
                 "width": 360,
-                "height": 395
+                "height": 440
             },
             "highlights": [],
-            "description": "Review the privacy notice before enabling automatic translation. The target language shown here is an example.",
-            "alt": "Translation privacy notice, automatic translation switch, target language and Open engine control."
+            "description": "Translation names its recommended engine and explains where text is processed before you turn on automatic translation.",
+            "alt": "Translation settings with the Offline Translator notice, Automatically translate messages switched off, Target language and Install from GitHub."
         }
     },
     {
@@ -663,9 +775,9 @@
         "url": "/docs/android/dictation-settings.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/dictation_settings_default_light.png",
-        "imageSha256": "5b7ee3545b267aa0f283a36db0e98f15f412e2d9409e9e67842cf8372e01b91b",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/dictation_settings_default_light.png",
+        "imageSha256": "e3282300a535f3b6b9b8a9c64ff6de9489f7c6c60c2a18b53eabdd16c9ce9842",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -673,7 +785,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["settings/android/dictation"],
         "presentation": {
             "url": "/docs/android/dictation-settings.svg",
@@ -681,11 +793,11 @@
                 "x": 0,
                 "y": 0,
                 "width": 360,
-                "height": 610
+                "height": 570
             },
             "highlights": [],
-            "description": "Choose a speech provider and how dictation finishes. The service notice explains where audio may be processed.",
-            "alt": "Dictation settings with provider, pause-other-audio and finish-dictation controls."
+            "description": "Dictation settings choose the speech provider, whether other audio pauses and when dictation finishes.",
+            "alt": "Dictation settings with Get Offline Speech to Text, Speech provider, Pause other audio, Finish dictation and Open Android Settings."
         }
     },
     {
@@ -693,9 +805,9 @@
         "url": "/docs/android/read-aloud-settings.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/tts_voice_media_settings_light.png",
-        "imageSha256": "97bfffd9f3f1257a75c645172b5a43efff2ec80211b1cb12b546fe580632b357",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/tts_voice_media_settings_light.png",
+        "imageSha256": "51ef2e4f59f2888a60698954662c8dd0803e893edc8e6d91d91ca277a53263f8",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -703,7 +815,7 @@
             "height": 308
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["settings/android"],
         "presentation": {
             "url": "/docs/android/read-aloud-settings.svg",
@@ -723,8 +835,8 @@
         "url": "/docs/android/read-aloud-controls.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/tts_transport_bar_speaking_light.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/tts_transport_bar_speaking_light.png",
         "imageSha256": "8483e12326eb52b9f1207538abf816568c642af2c5605817fb01a3d7cac05245",
         "language": "English",
         "theme": "light",
@@ -733,7 +845,7 @@
             "height": 72
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/messages/android"],
         "presentation": {
             "url": "/docs/android/read-aloud-controls.svg",
@@ -753,9 +865,9 @@
         "url": "/docs/android/chat-folders.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/chat_folders_screen_light.png",
-        "imageSha256": "2cf38face7b58c7785cbbad8889bead65f49dd5eeeefa280e7b6d2d4c4ab28ad",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/chat_folders_screen_light.png",
+        "imageSha256": "6e36f6ccdc82d8fcb9f942c68c3b14dd49cdc03f119ba6ec84b0d395db41927e",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -763,7 +875,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["settings/android"],
         "presentation": {
             "url": "/docs/android/chat-folders.svg",
@@ -771,11 +883,11 @@
                 "x": 0,
                 "y": 0,
                 "width": 360,
-                "height": 315
+                "height": 505
             },
             "highlights": [],
-            "description": "Folders organize chats. Use the plus button to add one and the row menu to manage it.",
-            "alt": "Folders screen with Unread, Archived and Groups, plus add and row-menu controls."
+            "description": "Reorder, edit or add folders. Restore Default Folders brings back missing built-in folders.",
+            "alt": "Folders screen with Unread, Archived, Groups and Work folders, reorder handles, row menus and Restore Default Folders."
         }
     },
     {
@@ -783,9 +895,9 @@
         "url": "/docs/android/group-review.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/group_setup_light.png",
-        "imageSha256": "13c573a31093975848006826c5bc2b8fc33318ef42c5ec6fbc3ea1d602298c55",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/group_setup_light.png",
+        "imageSha256": "6312835ad2268ffd6f1af7abe8e80bafab99547a05f183a0e3ce62475d9e3767",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -793,7 +905,7 @@
             "height": 1000
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/groups/android"],
         "presentation": {
             "url": "/docs/android/group-review.svg",
@@ -813,9 +925,9 @@
         "url": "/docs/android/composer-voice.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/composer_dictation_and_voice_note_idle_compact.png",
-        "imageSha256": "c4d01ca1b4d94c7f3538d0d1ffbc7f3f38a9b119c456f9acbe6c149c1257bf24",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/composer_dictation_and_voice_note_idle_compact.png",
+        "imageSha256": "00d9ba389fa58aa9b09cef895075799427c6f3b0f7baa9e0f0d7e22ffabfc59f",
         "language": "English",
         "theme": "light",
         "dimensions": {
@@ -823,7 +935,7 @@
             "height": 60
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/media/android"],
         "presentation": {
             "url": "/docs/android/composer-voice.svg",
@@ -835,7 +947,7 @@
             },
             "highlights": [],
             "description": "Tap the microphone to dictate text; hold the waveform control to record a voice message.",
-            "alt": "Message composer with separate microphone and voice-waveform controls."
+            "alt": "Message composer with a Message field, a microphone for dictation and a separate waveform control for voice messages."
         }
     },
     {
@@ -843,8 +955,8 @@
         "url": "/docs/android/group-actions.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/group_details_admin_full_light.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/group_details_admin_full_light.png",
         "imageSha256": "f8725fc2d97517a7a81c64651197344b4f4f0d1b01b4bc5aafecd1579db7115c",
         "language": "English",
         "theme": "light",
@@ -853,7 +965,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/groups/android"],
         "presentation": {
             "url": "/docs/android/group-actions.svg",
@@ -873,8 +985,8 @@
         "url": "/docs/android/shared-media-entry.png",
         "platform": "android",
         "kind": "source-render",
-        "source": "63524b750b934d72e0f832805128cd84d3a92155",
-        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/63524b750b934d72e0f832805128cd84d3a92155/app/src/test/snapshots/shared_content_categories_light.png",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/shared_content_categories_light.png",
         "imageSha256": "f08d6ea5ae8a80af000ada7b5f3d4b23252d4a58dca33f6cd51e531a1a40952c",
         "language": "English",
         "theme": "light",
@@ -883,7 +995,7 @@
             "height": 780
         },
         "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
-        "reviewedAt": "2026-10-18",
+        "reviewedAt": "2026-11-17",
         "guides": ["using/media/android"],
         "presentation": {
             "url": "/docs/android/shared-media-entry.svg",
@@ -1292,6 +1404,156 @@
             "highlights": [],
             "description": "Open Group settings to edit a group you administer. The capture uses a fictional one-member group; invitation delivery was not tested.",
             "alt": "Group settings for the fictional Acorn expedition group, showing its photo, description and Rename control."
+        }
+    },
+    {
+        "id": "setup-device",
+        "url": "/docs/android/setup-device.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/account_setup_single_device.png",
+        "imageSha256": "01a78b720e56bb9ba98f75bef9738aa7dcec044139b3a869f2f165129ab18633",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 1000
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or account-setup execution claim",
+        "reviewedAt": "2026-11-17",
+        "guides": ["get-started/install/android"],
+        "presentation": {
+            "url": "/docs/android/setup-device.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 500
+            },
+            "highlights": [],
+            "description": "Setup explains that this device keeps its own chats when the account already has messaging keys from another app or device.",
+            "alt": "Account setup stage 5 of 6, Chats on this device, explaining that chats in the other app stay there, with buttons to confirm and continue or see Details."
+        }
+    },
+    {
+        "id": "settings-search",
+        "url": "/docs/android/settings-search.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/settings_search_results_light.png",
+        "imageSha256": "f534885ea1e345646393c949a39b2bc21f68a8e30221dd36f71d3d71b631f10b",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-11-17",
+        "guides": ["settings/android"],
+        "presentation": {
+            "url": "/docs/android/settings-search.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 235
+            },
+            "highlights": [],
+            "description": "Search settings by name. Each result names the screen it belongs to.",
+            "alt": "Settings search for font showing Font size and App font, both under Appearance."
+        }
+    },
+    {
+        "id": "manage-storage",
+        "url": "/docs/android/manage-storage.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/manage_storage_light.png",
+        "imageSha256": "03ad0eca1621703e0db6136d81685ff382380d047aa3018142df63dab40dd903",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 1500
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-11-17",
+        "guides": ["using/media/android"],
+        "presentation": {
+            "url": "/docs/android/manage-storage.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 930
+            },
+            "highlights": [],
+            "description": "Manage storage shows what this profile uses on this device and where to free up space. The displayed sizes are examples.",
+            "alt": "Manage storage with 2.4 GB used, split into attachments, messages and chat data, unused database space, profile and group pictures and temporary files, then Free up space options and Keep media set to Forever."
+        }
+    },
+    {
+        "id": "audit-delivery",
+        "url": "/docs/android/audit-delivery.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/audit_delivery_paused_light.png",
+        "imageSha256": "2b410fe7ccf65df11cb911433765b31c1922c9e8f844a6173fe1f24284a85a70",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 330
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-11-17",
+        "guides": ["settings/android/diagnostics"],
+        "presentation": {
+            "url": "/docs/android/audit-delivery.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 325
+            },
+            "highlights": [],
+            "description": "Audit log delivery shows whether uploads are paused, the last successful check and how much is waiting. Resume delivery restarts paused uploads.",
+            "alt": "Audit log delivery paused after an HTTP 403 response, last successful check Never, 8.2 kB waiting to upload, with Resume delivery and Refresh."
+        }
+    },
+    {
+        "id": "emoji-sets",
+        "url": "/docs/android/emoji-sets.png",
+        "platform": "android",
+        "kind": "source-render",
+        "source": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
+        "sourceImage": "https://github.com/marmot-protocol/whitenoise-android/blob/2cec9ad494ba7f0a9b3a944ab03c102756e943ae/app/src/test/snapshots/emoji_sets_browser_light.png",
+        "imageSha256": "028916b556aab21cc4f0e2824a4b25f233da2bfcdbb2f7b152a89cba63eb038e",
+        "language": "English",
+        "theme": "light",
+        "dimensions": {
+            "width": 360,
+            "height": 780
+        },
+        "verification": "Checked-in native app screenshot-test reference; no device or feature execution claim",
+        "reviewedAt": "2026-11-17",
+        "guides": ["using/messages/android"],
+        "presentation": {
+            "url": "/docs/android/emoji-sets.svg",
+            "crop": {
+                "x": 0,
+                "y": 0,
+                "width": 360,
+                "height": 300
+            },
+            "highlights": [],
+            "description": "Find emoji sets by search or by pasting a set link. Saved sets show when an update is available.",
+            "alt": "Emoji sets screen with a search or set-link field, Find sets, and a saved set named Forest friends marked Update available."
         }
     }
 ]

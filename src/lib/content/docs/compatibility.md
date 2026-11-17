@@ -17,8 +17,9 @@ Requires iOS 18 or newer. Get it from the App Store; see [Download](/download).
 Requires Android 11 or newer. Get it from Zapstore (recommended), Google Play or GitHub; see [Download](/download).
 
 - Release: `android-v2026.10.27`, build 23, source `b81278afe96bddd4cf05e5f267eee7c656231f3d`.
-- Evidence: source review of the release. Screenshots from CI preview 4551, source `81fb0947d51169093ac2d2661a3c2244a1eff8da`, Android SDK 37, synthetic test data, navigated on a device.
-- Missing checks: full delivery testing. Screenshots and illustrations of account setup predate this release.
+- Reviewed source: `2cec9ad494ba7f0a9b3a944ab03c102756e943ae` on the main branch, newer than the release.
+- Evidence: source review of the main branch. Screenshots from the CI preview build of [pull request 3879](https://github.com/marmot-protocol/whitenoise-android/pull/3879), source `f2e491ccc2350fcc2e5fb0a0fda0d0c70e9a2221`, Android SDK 37, synthetic test data, navigated on a device. That build lacks four later media and picture-loading changes from the main branch, none of which change the screens shown.
+- Missing checks: full delivery testing. The guides describe the reviewed source, so some controls may arrive only in the next release.
 
 ### Linux
 
@@ -38,9 +39,9 @@ The current website setup guide lists Mac and Linux. Windows support is unknown.
 
 ## What this means
 
-- Android and iOS instructions match the releases listed above. If a control is missing, compare your app version with its platform baseline and update the app.
+- iOS instructions match the release listed above. Android instructions follow the reviewed source, which is newer than the Android release. If a control is missing, compare your app version with its platform baseline and update the app when a newer release is available.
 - Linux instructions use the reviewed source above, which may include controls newer than the public release. The Linux app uses a password-encrypted vault and has its own backup procedure; phone recovery instructions do not apply to that vault.
-- Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Additional app illustrations use the Android project’s checked-in UI reference renders at source `63524b750b934d72e0f832805128cd84d3a92155`, before this release. They illustrate controls without claiming that those features ran on a device.
+- Device screenshots use synthetic test data and show how to move through the app. Message delivery between real devices was outside their scope. Additional app illustrations use the Android project’s checked-in UI reference renders at the reviewed source. They illustrate controls without claiming that those features ran on a device.
 - The guides were checked against these sources and remain untested end to end on each release.
 - Mixed app versions and mixed clients remain untested together as a whole.
 - Linked devices are still in development. A second installation does not sync your history.
@@ -50,7 +51,7 @@ For the pinned MDK source, Rust toolchain and focused test result, see [Build qu
 
 ## Find your version
 
-On iPhone, open Settings, then General, then iPhone Storage, and select White Noise to see the version you have installed. On Android, open the system app details for White Noise and compare the version there with the release names on GitHub Releases, such as `android-v2026.10.27`.
+On iPhone, open Settings, then General, then iPhone Storage, and select White Noise to see the version you have installed. On Android, open **Settings > Help & support > Help > About & licenses**. **Version** and **Build** show what is installed. Compare them with the release names on GitHub Releases, such as `android-v2026.10.27`. Android's system app details for White Noise also show the version.
 
 On Linux, open **Settings > About** and compare the version with the Linux GitHub release tag.
 

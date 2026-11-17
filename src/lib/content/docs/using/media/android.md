@@ -1,10 +1,12 @@
 # Media and downloads
 
-Send photos, videos, files, and voice messages, view what you receive, and choose what downloads automatically.
+Send photos, videos, files, and voice messages, view what you receive, and choose what downloads automatically and how long it stays on this device.
 
 ## Before you share
 
-- Photos always have location and device details removed. Videos and files are sent unchanged, along with any location or device details stored in them.
+- Photos always have location and device details removed, even at **Original** quality.
+- Before a video is attached, White Noise removes private details such as location. If it can't, it doesn't attach the video and shows "Couldn't remove private details like location from this video, so it wasn't attached." The same applies to video files.
+- Other files, including imported audio, are sent unchanged, along with any location or device details stored in them.
 - **Share** and **Open in another app** give the content you choose to that app.
 - GIFs marked **via GIPHY** are loaded from GIPHY when you download them.
 
@@ -19,41 +21,44 @@ Send photos, videos, files, and voice messages, view what you receive, and choos
    - Mark each item **Included** or **Excluded**, and check its **Send position**.
    - Play a video with **Play**, **Back 10 seconds**, **Forward 10 seconds**, **Playback Speed**, and **Mute**.
    - Tap **Remove attachment** to drop an item.
-3. Tap **Send** and watch progress move from **Preparing** and **Encrypting** to **Uploading**; if you see **Upload failed**, tap **Retry**.
+3. Tap **Send** and watch progress move from **Preparing** and **Encrypting** to **Uploading**. If you see **Upload failed**, tap **Retry**.
+
+One send holds up to 100 items. Items beyond 100 are left out, and White Noise tells you how many didn't fit. Large selections are sent as several messages of up to 10 items each. If an item can't be prepared, it isn't sent and White Noise reports how many were skipped.
 
 ### Photo editing
 
 In the preview, tap **Edit photo** to open the editor:
 
-- **Crop**: drag the handles, or choose **Free**, **1:1**, **4:3**, **3:4**, **16:9**, or **9:16**. **Adjust crop** lets you set the edges precisely.
+- **Crop**: drag the handles, or choose **Free**, **Original**, **1:1**, **4:3**, **3:4**, **16:9**, or **9:16**. **Adjust crop** sets the edges precisely.
 - **Rotate clockwise 90 degrees**.
-- **Draw**: pick a colour (**Red**, **Yellow**, **Green**, **Blue**, **White**) and a size from **Small** to **Extra large**. **Erase** removes drawing marks only.
+- **Draw**: pick a colour and a size. **Erase** removes drawing marks only. Drawings stop at a limit ("Drawing limit reached. Undo or reset to continue."), and a long stroke may be simplified.
 - **Undo** and **Redo** step through your edits, while **Reset** starts over.
 - **Photo quality**: **Low**, **Standard**, **High**, or **Original**.
 
-Tap **Save** when you're finished. Edited photos use High quality, and the original image is kept for further editing. Closing the editor with unsaved changes asks **Discard changes?**, and **Keep editing** lets you continue. If you see **This image cannot be edited safely.**, send the photo without editing it.
+Tap **Save** when you're finished. Closing the editor with unsaved changes asks **Discard changes?**, and **Keep editing** lets you continue. If saving fails, the previous attachment stays unchanged. If you see **This image cannot be edited safely.**, send the photo without editing it.
 
 ## Voice messages
 
-<figure><a href="/docs/android/composer-voice.svg"><img src="/docs/android/composer-voice.svg" alt="Message composer with separate microphone and voice-waveform controls." loading="lazy" width="320" height="60" /></a><figcaption class="type-small">Tap the microphone to dictate text; hold the waveform control to record a voice message. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/composer-voice.svg"><img src="/docs/android/composer-voice.svg" alt="Message composer with a Message field, a microphone for dictation and a separate waveform control for voice messages." loading="lazy" width="320" height="60" /></a><figcaption class="type-small">Tap the microphone to dictate text; hold the waveform control to record a voice message. Select the image to enlarge.</figcaption></figure>
 
-Voice messages send audio, while **Dictate text** sends text instead (see [Messages](/docs/using/messages/android)).
+Voice messages send audio, while **Dictate text** sends text instead (see [Messages](/docs/using/messages/android)). A recording stops at five minutes, and White Noise warns you 30 seconds before.
 
-1. Touch and hold **Hold to record voice message** to start recording.
-2. Release to review, or slide off to cancel; while the recording is **Locked**, tap **Stop recording** when you're done.
+1. Touch and hold **Hold to record voice message** to start recording. If you release too soon, it asks you to **Hold longer to record**.
+2. Release to review, or slide off to cancel. While the recording is **Locked**, tap **Stop recording** when you're done.
 3. In **Review voice message**, tap **Play voice message** to listen back, then tap **Send** or **Record again**, or **Discard** the recording.
 
-If you see **Recording unavailable**, tap **Record again**.
+When another app is using the microphone, close it there and try again. An interruption that stops the recording still leaves the captured audio to review before sending. **Recording unavailable** means the take couldn't be restored, so tap **Record again**.
 
 ### Transcribe a received voice message
 
-Under a downloaded voice message from someone else, tap **Transcribe**, read the notice, then tap **Transcribe** again. Offline Speech to Text processes the recording on your device. It needs Android 13 or later and Offline Speech to Text 0.21.0 or later with a speech model set up. If it isn’t installed, tap **Get Offline Speech to Text**.
+Under a downloaded voice message from someone else, tap **Transcribe**, read the notice, then tap **Transcribe** again. Offline Speech to Text processes the recording on your device. It needs Android 13 or later and Offline Speech to Text 0.21.0 or later with a speech model set up. If it isn't installed, tap **Get Offline Speech to Text**.
 
-The **Audio transcript** is labeled **Generated transcript · not the sender’s text**. It may be inaccurate, and it is cleared when you close it or leave the screen. White Noise doesn’t record your microphone or send a message.
+The **Audio transcript** is labeled **Generated transcript · not the sender's text**. It may be inaccurate, and it is cleared when you close it or leave the screen. White Noise doesn't record your microphone or send a message.
 
 ## Viewing and saving received media
 
 - Tap **Tap to download** on media that hasn't downloaded yet, then tap it to open. The full-screen viewer shows **Media 1 of 3** and offers **Save**, **Share**, **Forward message**, **Go to message**, and **More options**. Group admins may also see **Set as group picture**.
+- Photos: use **Zoom in**, **Zoom out**, **Fit image**, or **Actual size (1:1)**. **Show or hide controls** toggles the toolbar.
 - Voice messages: **Play voice message**, with an adjustable playback speed.
 - Files: tap **Open**. If you see **No app installed to open this file**, save the file instead. Text files open in a reader with **Read Aloud**, **Copy text**, **Save**, and **Open in another app**.
 - **Too large to preview**: save or share the file to view it in another app.
@@ -61,25 +66,47 @@ The **Audio transcript** is labeled **Generated transcript · not the sender’s
 
 ## Browse shared media
 
-Open a conversation’s details and find **Shared in Chat**. Choose **Photos and videos**, **Documents** or **Voice**; **Links** appears when links are available. Photos and videos can be filtered by **All**, **Images** or **Videos**.
+Open a conversation's details and find **Shared in Chat**. Choose **Photos and videos**, **Documents** or **Voice**; **Links** appears when links are available. Photos and videos can be filtered by **All**, **Images** or **Videos**.
 
 <figure><a href="/docs/android/shared-media-entry.svg"><img src="/docs/android/shared-media-entry.svg" alt="Shared in Chat categories for photos and videos, links, documents and voice." loading="lazy" width="360" height="355" /></a><figcaption class="type-small">Open a shared-content category from the conversation details. Links appear when available. Select the image to enlarge.</figcaption></figure>
 
-Use **Load more** to browse older attachments when offered, or **Retry** after a loading failure. A partial or loading result means more history may remain. Open an item to view or play it; opening an external link contacts that site.
+Only messages already loaded in this chat are shown. Use **Load more** to browse older attachments when offered, or **Retry** after a loading failure. A partial or loading result means more history may remain, and **End of local attachment history** means there is nothing further on this device. Open an item to view or play it, or tap **Go to message** to jump to it. Opening an external link contacts that site.
+
+## Find files and media across all chats
+
+<figure><a href="/docs/android/search.svg"><img src="/docs/android/search.svg" alt="Chat search with the By me, All, Photos &amp; videos, Files and Audio choices outlined." loading="lazy" width="1080" height="290" /></a><figcaption class="type-small">Search modes sit under the search bar. Scroll the row sideways for All attachments. Select the image to enlarge.</figcaption></figure>
+
+On the chat list, open search and choose a mode under the search bar: **Photos & videos**, **Files**, **Audio**, or **All attachments**. Each result shows who sent it and the chat it came from. Choose **All** to return to message search. These modes list attachments only, so some other filters can't be combined with them ("These filters can't be used to browse files and media").
 
 ## Download controls
 
-While a download is running, tap **Cancel download**. After **Download cancelled. Tap to download again** or **Tap to retry**, tap the item again. The labels **Queued for download** and **Download paused** come from your Data Usage settings, as does **Download blocked by policy**.
+While a download is running, tap **Cancel download**. After **Download cancelled. Tap to download again** or **Tap to retry**, tap the item again. The labels **Queued for download** and **Download paused** come from your Data & storage settings, as does **Download blocked by policy**. Manual downloads always work.
 
-## Data Usage settings
+## Data & storage settings
 
-<figure><a href="/docs/android/data-usage.svg"><img src="/docs/android/data-usage.svg" alt="Android Data Usage settings for photos, videos, audio and files." loading="lazy" width="1080" height="1270" /></a><figcaption class="type-small">Choose automatic-download rules for each media type. The displayed values illustrate one profile’s settings. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/data-storage.svg"><img src="/docs/android/data-storage.svg" alt="Data &amp; storage settings with automatic downloads for Photos, Videos, Audio and Files outlined." loading="lazy" width="1080" height="1970" /></a><figcaption class="type-small">Choose the networks allowed for each media type. The values shown are one profile’s settings. Select the image to enlarge.</figcaption></figure>
 
-Open **Settings**, then **Data Usage**.
+Open **Settings**, then **Data & storage**.
 
-- **Automatic downloads**: for **Photos**, **Audio**, **Videos**, and **Files**, choose which networks are allowed (**Wi-Fi**, **Mobile data**, **Roaming**, or **Metered network**), then tap **Done**. A download starts automatically only if every rule that matches your connection allows it. **Reset download settings** restores the default rules for all types.
-- **Download queue**: **Stop automatic downloads** clears waiting automatic downloads for this profile, while downloads you started yourself keep going. **Restart automatic downloads** resumes the queue.
-- **Sent media**: **Media quality** sets the size of new photos and voice notes you record: Low (about 150 KB per photo), Standard (about 500 KB), High (about 1.5 MB), or Original (full resolution).
+- **Automatic downloads**: for **Photos**, **Audio**, **Videos**, and **Files**, choose which networks are allowed (**Wi-Fi**, **Mobile data**, **Roaming**, or **Metered network**), then tap **Done**. A download starts automatically only if every rule that matches your connection allows it. **Reset download settings** restores the default for every media type.
+- **Download queue**: **Stop automatic downloads** clears waiting automatic downloads for this profile, while active and manual downloads keep going. **Restart automatic downloads** resumes the queue.
+- **Sent media**: **Media quality** applies to new photos and voice messages. Videos and audio files are never re-encoded. Photo sizes are **Low** (about 150 KB), **Standard** (about 500 KB), **High** (about 1.5 MB), and **Original** (full resolution, largest files).
+
+## Free up space on this device
+
+<figure><a href="/docs/android/manage-storage.svg"><img src="/docs/android/manage-storage.svg" alt="Manage storage with 2.4 GB used, split into attachments, messages and chat data, unused database space, profile and group pictures and temporary files, then Free up space options and Keep media set to Forever." loading="lazy" width="360" height="930" /></a><figcaption class="type-small">Manage storage shows what this profile uses on this device and where to free up space. The displayed sizes are examples. Select the image to enlarge.</figcaption></figure>
+
+Removing attachments deletes them from this device only. Messages stay in their chats, and you can download an attachment again only while the sender's copy is still available. If it is gone, it can't be recovered.
+
+Open **Settings**, then **Data & storage**, then **Manage storage**. It shows what this profile uses on this device, split into **Attachments**, **Messages and chat data**, **Unused database space**, **Profile and group pictures**, and **Temporary files**. Temporary files are shared by all profiles on the device.
+
+Under **Free up space**:
+
+- **Largest attachments**: pick a chat, then select attachments, largest first, and tap **Remove**. An attachment shared in more than one chat counts in each. In a chat, **Remove all attachments** clears every attachment there.
+- **Remove older attachments**: choose **Older than 1 week**, **1 month**, **3 months**, **6 months**, or **1 year**, and confirm. This applies to every chat.
+- **Clear pictures and temporary files**: frees cache space. Pictures download again when you need them.
+
+Under **Keep media**, choose **30 days**, **6 months**, **1 year**, or **Forever**. Attachments older than that period are removed from this device now and as they age. Downloading one again keeps it for the full period.
 
 ## Related
 

@@ -1,14 +1,14 @@
 {
-    "checkedAt": "2026-11-06",
+    "checkedAt": "2026-11-17",
     "android": {
         "minimumOS": "Android 11",
         "channel": "GitHub Releases; screenshots use the separate CI preview channel",
         "releaseSource": "b81278afe96bddd4cf05e5f267eee7c656231f3d",
-        "evidence": "source-reviewed against the release; illustrations rendered from an earlier source",
+        "evidence": "source-reviewed against main-branch source newer than the release; illustrations from the same source and a preview build of it",
         "behaviorQualification": "Full end-to-end release validation pending",
-        "currentSource": "b81278afe96bddd4cf05e5f267eee7c656231f3d",
+        "currentSource": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae",
         "releaseVersion": "2026.10.27",
-        "captureSource": "63524b750b934d72e0f832805128cd84d3a92155"
+        "captureSource": "2cec9ad494ba7f0a9b3a944ab03c102756e943ae"
     },
     "ios": {
         "source": "481736fa1db5eb320c7d44a80ebe2354bca97027",
