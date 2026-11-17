@@ -1,5 +1,5 @@
 {
-    "checkedAt": "2026-11-06",
+    "checkedAt": "2026-11-17",
     "android": {
         "minimumOS": "Android 11",
         "channel": "GitHub Releases; screenshots use the separate CI preview channel",
@@ -11,13 +11,25 @@
         "captureSource": "63524b750b934d72e0f832805128cd84d3a92155"
     },
     "ios": {
-        "source": "481736fa1db5eb320c7d44a80ebe2354bca97027",
-        "version": "2026.10.25 (47)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "version": "2026.11.16 (52)",
         "minimumOS": "iOS 18",
-        "channel": "App Store",
-        "evidence": "source-reviewed",
-        "screenshots": "Delegated in issue14",
-        "behaviorQualification": "Device validation pending"
+        "channel": "Current upstream source; App Store availability of this build not verified",
+        "evidence": "source-reviewed; selected controls navigated in a local simulator build",
+        "screenshots": "Selected local simulator captures, including custom emoji, stickers and dictation controls; live speech, delivery and recovery unverified",
+        "behaviorQualification": "Physical-device and release validation pending",
+        "captureBuilds": [
+            {
+                "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+                "version": "2026.11.10 (48)"
+            },
+            {
+                "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+                "version": "2026.11.16 (52)"
+            }
+        ],
+        "captureEvidence": "Debug-Production on iPhone 17, iOS 27.2 Simulator; not App Store or physical-device qualification",
+        "capturedAt": "2026-11-17"
     },
     "linux": {
         "source": "7d961e3526b534bd7283e5d409677806c5c64f2c",

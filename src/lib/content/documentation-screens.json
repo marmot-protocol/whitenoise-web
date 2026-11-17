@@ -1,5 +1,5 @@
 {
-    "reviewedAt": "2026-11-06",
+    "reviewedAt": "2026-11-17",
     "definition": "Main user-facing pages and settings destinations. A reference does not require an image; reusable containers and transient frames are excluded explicitly.",
     "screens": [
         {
@@ -405,39 +405,39 @@
         {
             "platform": "ios",
             "id": "ChatsListView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/ChatsListView.swift",
             "guide": "/docs/get-started/first-message/ios#start-a-chat",
-            "visual": "delegated",
-            "reason": "iOS capture handoff: issue14."
+            "visual": "ios-chats",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "NewChatFlowView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewChatFlowView.swift",
             "guide": "/docs/using/contacts/ios#start-a-chat-with-someone",
-            "visual": "delegated",
-            "reason": "iOS capture handoff: issue14."
+            "visual": "ios-new-message",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "NewGroupPickerView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupPickerView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewGroupPickerView.swift",
             "guide": "/docs/using/groups/ios#create-a-group",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-new-group",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "NewGroupSetupView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupSetupView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewGroupSetupView.swift",
             "guide": "/docs/using/groups/ios#create-a-group",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-group-setup",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "AttachmentTransfersView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
             "guide": "/docs/using/media/ios#manage-a-single-download",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -445,15 +445,15 @@
         {
             "platform": "ios",
             "id": "ConversationView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ConversationView.swift",
             "guide": "/docs/using/messages/ios#write-and-send",
-            "visual": "delegated",
-            "reason": "iOS capture handoff: issue14."
+            "visual": "ios-composer",
+            "reason": "Current simulator capture shows the message field and hold-to-dictate affordance, not successful transcription or delivery."
         },
         {
             "platform": "ios",
             "id": "GiphySearchView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/GiphySearchView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/GiphySearchView.swift",
             "guide": "/docs/using/media/ios#add-a-gif-or-other-attachment",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -461,7 +461,7 @@
         {
             "platform": "ios",
             "id": "GroupRecoveryView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/GroupRecoveryView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/GroupRecoveryView.swift",
             "guide": "/docs/using/groups/ios#advanced-recover-a-group",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -469,7 +469,7 @@
         {
             "platform": "ios",
             "id": "MessageReportsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageReportsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageReportsView.swift",
             "guide": "/docs/using/messages/ios#report-a-message",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -477,23 +477,15 @@
         {
             "platform": "ios",
             "id": "PollComposerView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/PollComposerView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/PollComposerView.swift",
             "guide": "/docs/using/messages/ios#create-a-poll",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
         },
         {
             "platform": "ios",
-            "id": "DiagnosticsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Diagnostics/DiagnosticsView.swift",
-            "guide": "/docs/settings/ios/diagnostics#other-tools",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
-        },
-        {
-            "platform": "ios",
             "id": "ChatDeveloperToolsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
             "guide": "/docs/using/groups/ios#advanced-recover-a-group",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -501,7 +493,7 @@
         {
             "platform": "ios",
             "id": "ChatNotificationsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/ChatNotificationsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/ChatNotificationsView.swift",
             "guide": "/docs/using/groups/ios#notifications-and-disappearing-messages",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -509,7 +501,7 @@
         {
             "platform": "ios",
             "id": "GroupDetailsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupDetailsView.swift",
             "guide": "/docs/using/groups/ios#open-group-info",
             "visual": "delegated",
             "reason": "iOS capture handoff: issue14."
@@ -517,7 +509,7 @@
         {
             "platform": "ios",
             "id": "GroupModerationView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupModerationView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupModerationView.swift",
             "guide": "/docs/using/groups/ios#review-group-reports",
             "visual": "delegated",
             "reason": "iOS capture handoff: issue14."
@@ -525,7 +517,7 @@
         {
             "platform": "ios",
             "id": "GroupRelaysView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupRelaysView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupRelaysView.swift",
             "guide": "/docs/using/groups/ios#view-group-relays",
             "visual": "delegated",
             "reason": "iOS capture handoff: issue14."
@@ -533,7 +525,7 @@
         {
             "platform": "ios",
             "id": "SharedMediaLibraryView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/SharedMediaLibraryView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/SharedMediaLibraryView.swift",
             "guide": "/docs/using/media/ios#browse-shared-media",
             "visual": "delegated",
             "reason": "iOS capture handoff: issue14."
@@ -541,7 +533,7 @@
         {
             "platform": "ios",
             "id": "OnboardingRecoverySection",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift",
             "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -549,7 +541,7 @@
         {
             "platform": "ios",
             "id": "AccountSetupRelayStepView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
             "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -557,7 +549,7 @@
         {
             "platform": "ios",
             "id": "AccountSetupView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupView.swift",
             "guide": "/docs/get-started/install/ios#recover-an-unfinished-setup",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -565,39 +557,39 @@
         {
             "platform": "ios",
             "id": "CreateIdentityView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/CreateIdentityView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/CreateIdentityView.swift",
             "guide": "/docs/get-started/install/ios#create-a-new-profile",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-sign-up",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "ImportIdentityView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/ImportIdentityView.swift",
             "guide": "/docs/get-started/install/ios#sign-in-with-an-existing-identity",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-sign-in",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "WelcomeView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/WelcomeView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/WelcomeView.swift",
             "guide": "/docs/get-started/install/ios#get-the-app",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-welcome",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "ProfileView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Profile/ProfileView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Profile/ProfileView.swift",
             "guide": "/docs/using/profiles/ios#edit-your-details",
-            "visual": "delegated",
-            "reason": "iOS capture handoff: issue14."
+            "visual": "ios-profile",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "QRScannerUnavailableView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Profile/QRScannerUnavailableView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Profile/QRScannerUnavailableView.swift",
             "guide": "/docs/using/contacts/ios#fix-common-problems",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -605,7 +597,7 @@
         {
             "platform": "ios",
             "id": "QRScannerView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Profile/QRScannerView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Profile/QRScannerView.swift",
             "guide": "/docs/using/contacts/ios#start-a-chat-with-someone",
             "visual": "delegated",
             "reason": "iOS capture handoff: issue14."
@@ -613,7 +605,7 @@
         {
             "platform": "ios",
             "id": "AIAgentsSettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
             "guide": "/docs/settings/ios#ai-agents",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -621,7 +613,7 @@
         {
             "platform": "ios",
             "id": "AccountsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AccountsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AccountsView.swift",
             "guide": "/docs/using/profiles/ios#switch-or-add-profiles",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -629,23 +621,15 @@
         {
             "platform": "ios",
             "id": "AppearanceSettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AppearanceSettingsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AppearanceSettingsView.swift",
             "guide": "/docs/settings/ios#appearance",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
-        },
-        {
-            "platform": "ios",
-            "id": "AttachmentStorageSettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
-            "guide": "/docs/using/media/ios#download-storage",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-appearance",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "BlockedUsersView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockedUsersView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/BlockedUsersView.swift",
             "guide": "/docs/using/privacy/ios#blocked-users",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -653,15 +637,15 @@
         {
             "platform": "ios",
             "id": "DataAndStorageView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DataAndStorageView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DataAndStorageView.swift",
             "guide": "/docs/using/media/ios#data-usage-settings",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-data-usage",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "DeveloperToolsSettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
             "guide": "/docs/settings/ios#developer-tools",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -669,15 +653,15 @@
         {
             "platform": "ios",
             "id": "DiagnosticsAndImprovementsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
             "guide": "/docs/settings/ios/diagnostics#open-the-controls",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-diagnostics",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "DonateView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonateView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonateView.swift",
             "guide": "/docs/settings/ios#support-and-donate",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -685,7 +669,7 @@
         {
             "platform": "ios",
             "id": "DonationHistoryView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationHistoryView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationHistoryView.swift",
             "guide": "/docs/settings/ios#support-and-donate",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -693,7 +677,7 @@
         {
             "platform": "ios",
             "id": "DonationInvoiceView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationInvoiceView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationInvoiceView.swift",
             "guide": "/docs/settings/ios#support-and-donate",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -701,7 +685,7 @@
         {
             "platform": "ios",
             "id": "DonationSuccessView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationSuccessView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationSuccessView.swift",
             "guide": "/docs/settings/ios#support-and-donate",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -709,7 +693,7 @@
         {
             "platform": "ios",
             "id": "EraseAppDataView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EraseAppDataView.swift",
             "guide": "/docs/using/privacy/ios#erase-app-data",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -717,7 +701,7 @@
         {
             "platform": "ios",
             "id": "IdentityView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/IdentityView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/IdentityView.swift",
             "guide": "/docs/settings/identity#ios-profile-keys",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -725,7 +709,7 @@
         {
             "platform": "ios",
             "id": "KeyPackagesView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/KeyPackagesView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/KeyPackagesView.swift",
             "guide": "/docs/settings/identity#invitation-keys",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -733,31 +717,31 @@
         {
             "platform": "ios",
             "id": "NotificationSettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/NotificationSettingsView.swift",
             "guide": "/docs/using/notifications/ios#allow-notifications",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-notifications",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "PrivacySecuritySettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
             "guide": "/docs/using/privacy/ios#app-security",
-            "visual": "delegated",
-            "reason": "iOS capture handoff: issue14."
+            "visual": "ios-privacy",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "ProfileEditView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileEditView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ProfileEditView.swift",
             "guide": "/docs/using/profiles/ios#edit-your-details",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-edit-profile",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "QuarantinedGroupsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
             "guide": "/docs/using/groups/ios#advanced-recover-a-group",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -765,31 +749,31 @@
         {
             "platform": "ios",
             "id": "RelaysView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/RelaysView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/RelaysView.swift",
             "guide": "/docs/settings/relays#ios",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-relays",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "SettingsView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SettingsView.swift",
             "guide": "/docs/settings/ios#settings-layout",
-            "visual": "delegated",
-            "reason": "iOS capture handoff: issue14."
+            "visual": "ios-settings",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "ShareAndConnectView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ShareAndConnectView.swift",
             "guide": "/docs/using/profiles/ios#share-your-profile",
-            "visual": "text",
-            "reason": "The linked instructions describe this screen; another image is optional."
+            "visual": "ios-share-profile",
+            "reason": "A navigated local iOS Simulator capture illustrates this destination; it does not qualify the reviewed App Store release."
         },
         {
             "platform": "ios",
             "id": "SignOutForm",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SignOutForm.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SignOutForm.swift",
             "guide": "/docs/using/profiles/ios#delete-a-profile",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -797,7 +781,7 @@
         {
             "platform": "ios",
             "id": "SupportChatView",
-            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SupportChatView.swift",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SupportChatView.swift",
             "guide": "/docs/settings/ios#support-and-donate",
             "visual": "text",
             "reason": "The linked instructions describe this screen; another image is optional."
@@ -849,6 +833,46 @@
             "guide": "/docs/using/media/android#browse-shared-media",
             "visual": "shared-media-entry",
             "reason": "The guide describes the media library and illustrates its entry categories in conversation details."
+        },
+        {
+            "platform": "ios",
+            "id": "EmojiPickerSheet",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/EmojiPicker.swift",
+            "guide": "/docs/using/messages/ios#custom-emoji",
+            "visual": "ios-custom-emoji",
+            "reason": "Current simulator capture shows built-in custom emoji and the Emoji Sets button."
+        },
+        {
+            "platform": "ios",
+            "id": "EmojiSetBrowserView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/EmojiSetViews.swift",
+            "guide": "/docs/using/messages/ios#add-an-emoji-set",
+            "visual": "text",
+            "reason": "Set discovery, installation, removal and image-host privacy are explained without claiming a tested installation."
+        },
+        {
+            "platform": "ios",
+            "id": "StickerPickerSheet",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/StickerViews.swift",
+            "guide": "/docs/using/messages/ios#stickers",
+            "visual": "ios-stickers",
+            "reason": "Current simulator capture shows the installed Marmot pack; no sticker was sent."
+        },
+        {
+            "platform": "ios",
+            "id": "StickerPackBrowserView",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/StickerViews.swift",
+            "guide": "/docs/using/messages/ios#stickers",
+            "visual": "text",
+            "reason": "Pack discovery, add-by-link and removal steps are described from source."
+        },
+        {
+            "platform": "ios",
+            "id": "DictationSettingsSection",
+            "source": "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DictationSettingsSection.swift",
+            "guide": "/docs/using/messages/ios#hold-to-dictate",
+            "visual": "ios-dictation",
+            "reason": "Current simulator capture shows Hold to Dictate and actual Speech Model status; microphone transcription is unverified."
         }
     ],
     "excluded": [

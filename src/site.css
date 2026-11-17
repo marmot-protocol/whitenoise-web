@@ -1220,7 +1220,8 @@ body {
     }
 }
 
-.documentation-body img[src^="/docs/android/"] {
+.documentation-body img[src^="/docs/android/"],
+.documentation-body img[src^="/docs/ios/"] {
     max-width: min(100%, var(--size-artwork));
     height: auto;
     margin-block: var(--space-16);

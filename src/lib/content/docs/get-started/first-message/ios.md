@@ -6,11 +6,15 @@ You can start a direct chat from **New Message** using the person's Nostr addres
 
 ## Start a chat
 
+<figure><a href="/docs/ios/chats.svg"><img src="/docs/ios/chats.svg" alt="Chats toolbar with the New Message button at the upper right." loading="lazy" width="1206" height="210" /></a><figcaption class="type-small">On Chats, use the New Message button at the upper right. Select the image to enlarge.</figcaption></figure>
+
 1. In **Chats**, tap **New Message** to open the **New Chat** screen.
 2. Enter the person's Nostr address or npub, or tap **Scan QR Code** to scan their profile code.
 3. Choose the person from the results, where a **Verified** badge means their address has been verified.
 
 If you already have a chat with that person, White Noise asks you to pick an existing conversation or tap **Start new conversation**. If the lookup finds no profile, confirm the address with the person. If the lookup or chat creation fails, check your connection and tap **Retry**.
+
+<figure><a href="/docs/ios/new-message.svg"><img src="/docs/ios/new-message.svg" alt="New Chat screen with New Group, Scan QR Code and a name or npub search field." loading="lazy" width="1206" height="2340" /></a><figcaption class="type-small">Search by name or npub at the bottom, or choose Scan QR Code. This example has no existing contacts. Select the image to enlarge.</figcaption></figure>
 
 ## Send your first message
 

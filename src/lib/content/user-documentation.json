@@ -60,31 +60,33 @@
         "category": "settings",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AccountsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileEditView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileShareCard.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AppearanceSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationPreviewSection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationPreviewModeLabels.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DataAndStorageView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Core/AppLock.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockedUsersView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockUserSection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SupportChatView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonateView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationHistoryView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationInvoiceView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationMonthlySupportCard.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DonationSuccessView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/QuarantinedGroupsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AccountsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ProfileEditView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ProfileShareCard.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AppearanceSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/NotificationPreviewModeLabels.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DataAndStorageView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Core/AppLock.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/BlockedUsersView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/BlockUserSection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AIAgentsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SupportChatView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonateView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationHistoryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationInvoiceView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationMonthlySupportCard.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DonationSuccessView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DictationSettingsSection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EncryptedNsecExportSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DeviceDiagnosticsConsent.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/WipeOutcomeReportView.swift"
         ]
     },
     {
@@ -110,10 +112,12 @@
         "category": "settings",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SupportChatView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DiagnosticsAndImprovementsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SupportChatView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DeviceDiagnosticsConsent.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DiagnosticLogExport.swift"
         ]
     },
     {
@@ -126,7 +130,8 @@
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelaysScreen.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/RelayListModel.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/SupportScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/RelaysView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/RelaysView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/RelaysViewModel.swift"
         ]
     },
     {
@@ -141,12 +146,16 @@
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackagesScreen.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackageRows.kt",
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/settings/KeyPackageRelayHistory.kt",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/IdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/KeyPackagesView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/IdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/KeyPackagesView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EraseAppDataView.swift",
             "https://github.com/marmot-protocol/whitenoise-android/blob/b81278afe96bddd4cf05e5f267eee7c656231f3d/app/src/main/java/dev/ipf/whitenoise/android/ui/onboarding/OnboardingScreen.kt",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/IdentityViewModel.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EncryptedNsecExportSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SignOutForm.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift"
         ]
     },
     {
@@ -177,15 +186,17 @@
         "category": "get-started",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/WelcomeView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/CreateIdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/PrivateKeyQRScanner.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/AccountSetupRelayEditor.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/OnboardingRecoveryPresentation.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/WelcomeView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/CreateIdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/ImportIdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/PrivateKeyQRScanner.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupRelayStepView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupRelayEditor.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/OnboardingRecoveryPresentation.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupDeviceNoticePresentation.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/AccountSetupActions.swift"
         ]
     },
     {
@@ -213,11 +224,11 @@
         "category": "get-started",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageBubble.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/BlockedConversationNotice.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/ChatsListView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageBubble.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/BlockedConversationNotice.swift"
         ]
     },
     {
@@ -243,11 +254,14 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ProfileEditView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AccountsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ProfileEditView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AccountsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SignOutForm.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/WipeOutcomeReportView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift"
         ]
     },
     {
@@ -277,12 +291,12 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupPickerView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/ShareAndConnectView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Profile/QRScannerUnavailableView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/ChatsListView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewGroupPickerView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewGroupSetupView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/ShareAndConnectView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Profile/QRScannerUnavailableView.swift"
         ]
     },
     {
@@ -328,28 +342,30 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupPickerView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewGroupSetupView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatsListView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatListLeaveConfirmationSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/ChatRow.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/GroupRecoveryView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsViewModel.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupInfoEditSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupInfoFormSections.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/AddMembersSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupMemberRow.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupMemberOrdering.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupsInCommonSection.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/ChatNotificationsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupRetentionEditorSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupRelaysView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupModerationView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewGroupPickerView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewGroupSetupView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/ChatsListView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/ChatListLeaveConfirmationSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/ChatRow.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/GroupRecoveryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/QuarantinedGroupsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupDetailsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupDetailsViewModel.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupInfoEditSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupInfoFormSections.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/AddMembersSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupMemberRow.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupMemberOrdering.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupsInCommonSection.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/ChatNotificationsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupRetentionEditorSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/ChatDeveloperToolsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupRelaysView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupModerationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Recipients/GroupMemberOutcomePresentation.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/BlockedLeave.swift"
         ]
     },
     {
@@ -386,26 +402,36 @@
     {
         "slug": "using/messages/ios",
         "title": "Messages",
-        "description": "Start chats, send text, voice messages and polls, and reply, react, edit, forward, or delete messages.",
+        "description": "Send text, dictate a message, and use custom emoji, stickers, voice messages and polls on iPhone.",
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Chats/NewChatFlowView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ComposerBar.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageBubble.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageActionsMenu.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/EmojiPicker.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageEditHistory.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageMutationSheets.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/PollComposerView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/PollVotesSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageLinkActionSheet.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/BlockedConversationNotice.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupModerationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageReportsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Chats/NewChatFlowView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ComposerBar.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageBubble.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageActionsMenu.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/EmojiPicker.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageEditHistory.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageMutationSheets.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/PollComposerView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/PollVotesSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageLinkActionSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/BlockedConversationNotice.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupModerationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageReportsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ComposerDictation.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/SpeechAnalyzerDictation.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/CustomEmojiBuiltins.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/CustomEmojiSending.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/CustomEmojiSendViews.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/CustomEmojiReactions.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/EmojiSetViews.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/StickerViews.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/Stickers.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DictationSettingsSection.swift"
         ]
     },
     {
@@ -440,19 +466,21 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MediaComposerViews.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ComposerBar.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/ConversationView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/GiphySearchView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageMediaFullscreenGalleryChrome.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageBubble.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DataAndStorageView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AttachmentStorageSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/SharedMediaLibraryView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Group/GroupDetailsView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MediaComposerViews.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ComposerBar.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/VoiceMessageRecorder.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ConversationView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/GiphySearchView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageMediaFullscreenGalleryChrome.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageBubble.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/AttachmentTransfersView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/MessageDetailsSheets.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DataAndStorageView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/SharedMediaLibraryView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Group/GroupDetailsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/StickerViews.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/CustomEmojiSending.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Conversation/ComposerAttachmentOption.swift"
         ]
     },
     {
@@ -473,8 +501,7 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationPreviewSection.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/NotificationSettingsView.swift"
         ]
     },
     {
@@ -496,10 +523,14 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/IdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/SettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/IdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/ImportIdentityView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/ImportIdentityViewModel.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EncryptedNsecExportSheet.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/IdentityViewModel.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/SignOutForm.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/OnboardingRecoverySection.swift"
         ]
     },
     {
@@ -520,13 +551,13 @@
         "category": "using",
         "platform": "ios",
         "sources": [
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/EraseAppDataView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/BlockedUsersView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/NotificationSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/AppearanceSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
-            "https://github.com/marmot-protocol/whitenoise-ios/blob/481736fa1db5eb320c7d44a80ebe2354bca97027/whitenoise-ios/Onboarding/CreateIdentityView.swift"
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/PrivacySecuritySettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/EraseAppDataView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/BlockedUsersView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/NotificationSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/AppearanceSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Settings/DeveloperToolsSettingsView.swift",
+            "https://github.com/marmot-protocol/whitenoise-ios/blob/c2ee45e980f71f175abba1948022163a9bc11cf1/whitenoise-ios/Onboarding/CreateIdentityView.swift"
         ]
     },
     {
