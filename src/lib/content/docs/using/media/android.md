@@ -33,7 +33,7 @@ In the preview, tap **Edit photo** to open the editor:
 - **Rotate clockwise 90 degrees**.
 - **Draw**: pick a colour and a size. **Erase** removes drawing marks only. Drawings stop at a limit ("Drawing limit reached. Undo or reset to continue."), and a long stroke may be simplified.
 - **Undo** and **Redo** step through your edits, while **Reset** starts over.
-- **Photo quality**: **Low**, **Standard**, **High**, or **Original**.
+- **Photo quality**: **Low**, **Standard**, **High**, or **Original**. An edited photo set to **Original** is sent at **High**. The original image is kept so you can edit it again.
 
 Tap **Save** when you're finished. Closing the editor with unsaved changes asks **Discard changes?**, and **Keep editing** lets you continue. If saving fails, the previous attachment stays unchanged. If you see **This image cannot be edited safely.**, send the photo without editing it.
 
@@ -74,7 +74,7 @@ Only messages already loaded in this chat are shown. Use **Load more** to browse
 
 ## Find files and media across all chats
 
-<figure><a href="/docs/android/search.svg"><img src="/docs/android/search.svg" alt="Chat search with the By me, All, Photos &amp; videos, Files and Audio choices outlined." loading="lazy" width="1080" height="290" /></a><figcaption class="type-small">Search modes sit under the search bar. Scroll the row sideways for All attachments. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/search.svg"><img src="/docs/android/search.svg" alt="Chat search with the By me, All, Photos &amp; videos and Files choices outlined, and Audio cut off at the edge." loading="lazy" width="1080" height="290" /></a><figcaption class="type-small">Search modes sit under the search bar. Scroll the row sideways for All attachments. Select the image to enlarge.</figcaption></figure>
 
 On the chat list, open search and choose a mode under the search bar: **Photos & videos**, **Files**, **Audio**, or **All attachments**. Each result shows who sent it and the chat it came from. Choose **All** to return to message search. These modes list attachments only, so some other filters can't be combined with them ("These filters can't be used to browse files and media").
 

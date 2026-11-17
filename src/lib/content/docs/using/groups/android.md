@@ -16,7 +16,7 @@ Expected result: **Creating group…** appears, then **Chat created**. When setu
 
 ## Open group details
 
-Open the conversation and tap its header. Group details show **Group · N members** and quick actions for **Mute**, **Disappearing**, and **Search**. Admins also see management options.
+Open the conversation and tap its header. Group details show **Group · N members** and quick actions for **Mute** (**Unmute** once muted), **Disappearing**, and **Search**. Admins also see management options.
 
 Tap **Group relays** to view and copy the relays this chat is configured to use. The list doesn't show whether each relay is connected right now. Only admins can change these relays, and editing them isn't available in White Noise yet.
 

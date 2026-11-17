@@ -4,7 +4,7 @@
 
 The status on your device tracks local send progress only. Only the recipient can confirm that the message was fetched and decrypted, and the same applies to whether they read it.
 
-On Android, your own messages show **Sending…**, **Sent** or **Failed**, and a pending send can also show **Delivery not confirmed**. **Received** appears on messages from other people: it means the message arrived and was decrypted on your device. It is not a receipt for the messages you send. **Message info** shows a message's status, times and sender.
+On Android, your own messages show **Sending…**, **Sent** or **Failed**, and a message that White Noise couldn't confirm was published shows **Delivery not confirmed**. **Received** appears on messages from other people: it means the message arrived and was decrypted on your device. It is not a receipt for the messages you send. **Message Details** shows a message's status, times and sender.
 
 ## Diagnose
 
@@ -23,4 +23,4 @@ The recipient confirms receipt, or you have identified the participant or relay 
 
 Collect your version and platform. Add timestamps and error labels, then follow [Report a problem](/docs/troubleshooting/report-problem).
 
-**Before sharing logs:** group diagnostic logs are opt-in and include group and message identifiers. On iOS and Android, turning on log sharing automatically uploads eligible logs to IPF. Ask other participants for consent before sharing logs or screenshots that reveal them.
+**Before sharing logs:** group diagnostic logs are opt-in and include group and message identifiers. On iOS and Android, turning on log sharing automatically uploads eligible logs to the Internet Privacy Foundation. On Android the switch is **Share group diagnostic logs**. It covers every profile on the device, and logs already stored may upload too. Ask other participants for consent before sharing logs or screenshots that reveal them.

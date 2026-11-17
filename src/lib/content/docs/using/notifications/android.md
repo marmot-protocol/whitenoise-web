@@ -23,7 +23,7 @@ The choice applies to every account on this device. If saving fails, a **Retry**
 
 ## Pictures in notifications
 
-With **Name and message**, a notification can show the contact's or group's picture. It falls back to a letter badge when there is none. A message that is a photo reads "sent a picture". With **Hidden**, a notification shows only the White Noise name and **New notification**.
+With **Name and message** or **Name only**, a notification can show the contact's or group's picture. It falls back to a letter badge when there is none. A photo message reads "sent a picture" under Name and message, and **New message** under Name only. With **Hidden**, a notification shows only the White Noise name and **New notification**.
 
 ## Choose a delivery method
 

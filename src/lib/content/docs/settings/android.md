@@ -16,7 +16,7 @@ Type in **Search settings** to find a setting by name. Choosing a result opens t
 
 ### App updates
 
-The **App updates** row shows **Up to date**, a note that a newer version is available on Zapstore, or **Check for updates**. If a check fails, the row shows **Couldn't check for updates. Tap to retry.** When a newer version is available, the row moves up below your profile group. Otherwise it sits near the version at the bottom.
+On builds installed outside an app store, the **App updates** row shows **Up to date**, a note that a newer version is available on Zapstore, or **Check for updates**. If a check fails, the row shows **Couldn't check for updates. Tap to retry.** When a newer version is available, the row moves up below your profile group. Otherwise it sits near the version at the bottom.
 
 ### Add or switch a profile
 
@@ -51,7 +51,7 @@ Edit your name, picture and other profile details. See [Profiles](/docs/using/pr
 
 ### Profile keys
 
-**Profile Keys** shows your public and private keys together with the account session status.
+**Profile Keys** shows your public and private keys together with the account session status. The private key rows below appear only for a profile that signs with its own key. A profile signed in with Amber keeps its key in Amber.
 
 - **Copy Private Key** puts the key on the clipboard. Any app that reads the clipboard can see it, and the app clears the clipboard after 60 seconds.
 - **Export Encrypted Private Key** and **Export Private Key** save a backup. The plain-text export shows a warning first, because anyone who has the key controls your account.
@@ -65,7 +65,7 @@ This screen controls where your profile publishes information and receives invit
 
 ## Chats
 
-**Chats** contains **Folders**, **Swipe actions**, **Composer**, **Enter key behavior**, **Custom emoji** and **Quick account switching**.
+**Chats** contains **Folders**, **Swipe actions**, **Composer**, **Chat header shortcuts**, **Enter key behavior**, **Custom emoji** and **Quick account switching**.
 
 | Control | Effect |
 |---|---|
@@ -81,6 +81,12 @@ This screen controls where your profile publishes information and receives invit
 - Available shortcuts are Emoji, Paste, Dictation, Translate, Voice note, Camera, Gallery, Files, Location, Person, Contact, Poll and Sticker. Location sends your position once, as a map link.
 - **Voice note** sets where the voice control sits.
 - **Reset to default** restores the layout.
+
+### Chat header shortcuts
+
+**Chat header shortcuts** adds buttons beside the chat name at the top of every chat. None are on at first. Check any of **Search in chat**, **Mute / unmute**, **Read messages aloud**, **Disappearing messages**, **Members** and **Add Members**. The header shows as many as fit beside the chat name, in the order you check them.
+
+A button appears only in chats where it applies. **Members** shows in groups, **Disappearing messages** and **Add Members** show where you're allowed to change them, and **Read messages aloud** needs a speech engine on the device. Muting asks for how long, while unmuting applies right away. The choice applies to this device only.
 
 ### Custom emoji
 
@@ -130,7 +136,7 @@ Some folders use older saved rules. For these, chats that match any person or ke
 
 ## Appearance
 
-**Appearance** has **Colors**, **Text**, **Date and time** and a readability preview.
+**Appearance** has **Theme & colors** and **Text & language** sections, with **Date and time** under Text & language, and a readability preview.
 
 | Control | Options | Scope and effect |
 |---|---|---|

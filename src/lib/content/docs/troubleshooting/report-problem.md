@@ -6,7 +6,7 @@ A good report describes what happened and where, then compares it with what you 
 
 ## Where to report
 
-On Android, open **Settings > Help & support > Chat with support**. On iOS, open **Settings > Chat with support**. Either opens help inside White Noise. For a reproducible bug, choose the affected project:
+On Android, open **Settings > Help & support > Chat with support**, which appears while a profile is active. On iOS, open **Settings > Chat with support**. Either opens help inside White Noise. For a reproducible bug, choose the affected project:
 
 - [Android issues](https://github.com/marmot-protocol/whitenoise-android/issues)
 - [iOS issues](https://github.com/marmot-protocol/whitenoise-ios/issues)

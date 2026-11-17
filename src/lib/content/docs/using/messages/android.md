@@ -133,7 +133,7 @@ Touch and hold a message, then tap a reaction. For others, tap **Open emoji pick
 
 You can edit your own text messages. You can't edit deleted messages, stickers, other people's messages, or messages in a chat where actions are read-only.
 
-1. Touch and hold your message and choose **Edit**, or double-tap your text message. While Read Aloud is active on that message, double-tap is unavailable.
+1. Touch and hold your message and choose **Edit**, or double-tap the text of your own message (not a link in it). While Read Aloud is active on that message, double-tap is unavailable.
 2. The composer shows **Edit message**. Change the text and tap **Send**, or tap **Cancel edit** to stop.
 
 Edited messages show **edited**, or **edited · N** after several edits. **Edit history** lists the **Original** and each **Revision**.
@@ -157,7 +157,7 @@ A deleted message leaves a placeholder that reads **You deleted this message.** 
 
 ### Search in a chat
 
-Tap **Search** in the chat, then type in **Search this chat**. Use **Previous match** and **Next match** to move between results, which show a count such as 2/7. **Clear search** empties the box and **Close search** leaves search. **No matches** means the search found nothing.
+Tap the chat header to open chat details, then tap **Search**. To search from the chat itself, turn on **Search in chat** under **Settings > Chats > Chat header shortcuts**. Type in **Search this chat**. Use **Previous match** and **Next match** to move between results, which show a count such as 2/7. **Clear search** empties the box and **Close search** leaves search. **No matches** means the search found nothing.
 
 The app searches older messages as well as the ones already loaded. While it does, you see **Searching all messages…**. If that fails you see **Couldn't search older messages** and a count of matches in loaded messages only. Tap **Retry search** to try again.
 
