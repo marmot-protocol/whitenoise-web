@@ -138,6 +138,8 @@ For a direct chat, the same control is **Delete from this device**, then **Aband
 
 **Quarantined groups.** A group is quarantined when its stored encryption state can't load safely. Turn on developer mode by tapping **Version** seven times in **Settings > Help & support > Help > About & licenses**. Then go to **Settings > Help & support > Developer Tools > Quarantined groups** and tap **Retry recovery**. Tap **Refresh groups** when the list fails to load. Recovery reruns every check and keeps history; it doesn't rejoin you. On success the group returns to your chat list. If it stays quarantined, history is still kept; try again later.
 
+**Restart White Noise.** This notice appears once per chat when a group could not be restored after reading its earlier state. Force stop White Noise in Android settings or restart your phone, then open White Noise.
+
 ## Related
 
 - [Messages](/docs/using/messages/android)

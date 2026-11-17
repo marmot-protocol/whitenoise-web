@@ -19,7 +19,9 @@ Under **Notification previews**, pick one:
 - **Name only** shows the sender and conversation, and hides the message text and reaction emoji.
 - **Hidden** shows the White Noise name and a generic **New notification** line.
 
-The choice applies to every account on this device. If saving fails, a **Retry** row appears with the note **Changes may be lost after restarting.** Tap **Retry** until it disappears. Hold a notification setting to see a short explanation of it.
+Until you accept a group invitation, only the invitation notifies you. It reads **Invitation to** and the group name, or **Open White Noise to view the invite** when the group has no name, and never names who invited you. Messages, reactions and admin changes in that group stay silent until you accept.
+
+The preview choice applies to every account on this device. If saving fails, a **Retry** row appears with the note **Changes may be lost after restarting.** Tap **Retry** until it disappears. Hold a notification setting to see a short explanation of it.
 
 ## Pictures in notifications
 

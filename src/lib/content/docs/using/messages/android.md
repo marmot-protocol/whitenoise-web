@@ -55,8 +55,8 @@ Open **Settings** > **Chats** > **Custom emoji** to manage them. To add a set, t
 Before you open a sticker picker, know that stickers load from servers each pack's author chose, and those servers can see your IP address. Sticker packs are public, and White Noise leaves their content unreviewed. Your installed packs are listed publicly on your relays.
 
 1. Tap the **Stickers** shortcut in the composer. An empty picker shows **No stickers**, so tap **Browse sticker packs** to find some.
-2. On the sticker packs screen, use **Installed** and **Discover**, **Search sticker packs**, or **Add by link** and **Open link**.
-3. Open a pack, tap **Add** to install it, then tap the sticker you want to send.
+2. On the sticker packs screen, the **White Noise** section at the top offers **White Noise Originals** and **Marmot**. Below it, use **Installed** and **Discover**, **Search sticker packs**, or **Add by link** and **Open link**.
+3. Open a pack, tap **Add** to install it, then tap the sticker you want to send. Nothing installs until you tap **Add**, and an added White Noise pack moves out of that section.
 
 A sticker that has not loaded shows **Tap to load** or **Tap to retry**. A sent sticker stays as sent.
 
@@ -173,6 +173,8 @@ In the chat list, tap the search field (**Search chats**). Use **Filters** to na
 At the end of the list, **End of results** means there is nothing more. Tap **Search older messages** to look further back. A result that shows **This message is no longer available** can't be opened. If you paste an npub, the app shows **Looking up profile…** and then **Open profile**; an invalid one shows "That doesn't look like a valid npub". To find files and media across all chats, see [Media and downloads](/docs/using/media/android).
 
 ## Manage chats in the chat list
+
+On a tablet, an unfolded foldable or another wide window, the chat list stays on the left while a chat is open, and the right side shows **Select a chat** until you pick one. Android's Back gesture leaves the open chat in place there, so use the back arrow in the chat header to close it.
 
 Touch and hold a chat to open its actions. Depending on the chat, they include **Archive** or **Unarchive**, **Mark as read** or **Mark as unread**, **Mute** or **Unmute**, **Pin** or **Unpin**, **Move up** or **Move down**, **Add to folder**, **Exclude from this folder**, and **Select**.
 
