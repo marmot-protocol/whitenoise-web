@@ -20,7 +20,7 @@ If the person is new to White Noise, tap **Invite a friend** and share the invit
 
 To add something other than text, tap **Add attachment**. The menu offers **Camera**, **Photos and videos**, **Files**, **Location**, **Contact**, **Device contact**, and **Create poll**. For media, see [Media and downloads](/docs/using/media/android). Location and contact items share those details with everyone in the chat, so check them before you send. **Location** sends the spot pinned on the map once, as a map link. The pin starts at your current location, and you can move it before sending. Sharing then stops.
 
-**Dictate text** turns your speech into text that you can review and then **Paste** or **Send**, so a recording is never involved. To send audio, hold the voice control instead, as described in Media and downloads. See [Dictate text](/docs/settings/android/dictation) for provider setup and dictation options.
+**Dictate text** turns your speech into text that you can review and then **Paste** or **Send**. Only the text goes into the chat, and the speech service you pick handles the audio. To send audio, hold the voice control instead, as described in Media and downloads. See [Dictate text](/docs/settings/android/dictation) for provider setup and dictation options.
 
 ### Customize the composer
 

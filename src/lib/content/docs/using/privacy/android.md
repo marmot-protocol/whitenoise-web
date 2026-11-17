@@ -36,7 +36,7 @@ Under **Message privacy**, **Default disappearing messages** sets how long messa
 
 ## Diagnostics
 
-Sharing is off until you choose it. Open **Privacy & Security** > **Diagnostics** > **Diagnostics & Improvements**. The row summary shows On, Usage, Logs, or Off. Both switches cover all profiles on this device.
+Sharing is off until you choose it. Open **Privacy & Security** and, under the **Diagnostics** heading, tap **Diagnostics & Improvements**. The row summary shows On, Usage, Logs, or Off. Both switches cover all profiles on this device.
 
 - **Share usage and telemetry** shares feature use and app performance, with a temporary session ID and an installation ID you can reset. It never includes account or group IDs.
 - **Share group diagnostic logs** uploads technical logs about groups to the White Noise audit collector, run by the Internet Privacy Foundation. Turning it on may also upload logs already stored on this device. Logs can include group and message IDs, relay addresses, timestamps, pseudonymous account references, an installation ID, device model and app version. They never include message contents or private keys.

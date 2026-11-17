@@ -53,7 +53,7 @@ Edit your name, picture and other profile details. See [Profiles](/docs/using/pr
 
 **Profile Keys** shows your public and private keys together with the account session status. The private key rows below appear only for a profile that signs with its own key. A profile signed in with Amber keeps its key in Amber.
 
-- **Copy Private Key** puts the key on the clipboard. Any app that reads the clipboard can see it, and the app clears the clipboard after 60 seconds.
+- **Copy Private Key** puts the key on the clipboard. Any app that reads the clipboard can see it, and the app clears the clipboard after about 60 seconds, though Android may run the clear late.
 - **Export Encrypted Private Key** and **Export Private Key** save a backup. The plain-text export shows a warning first, because anyone who has the key controls your account.
 - **Sign Out** and **Sign Out & Wipe**, described under [Sign Out](#sign-out).
 
