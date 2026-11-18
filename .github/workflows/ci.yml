@@ -32,12 +32,15 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Audit dependencies
-        # deepmerge, reached through @sveltejs/vite-plugin-svelte, has no patched
-        # release: 4.3.1 is both the newest version and the last affected one, so
-        # no upgrade or override clears it. Ignore that one advisory by ID rather
-        # than lowering the severity threshold, so every other advisory, low
-        # included, still fails the build. Drop the flag once a fix exists.
-        run: bun audit --ignore=GHSA-gcqx-w48m-w2h4
+        # Two advisories have no patched release, so no upgrade or override
+        # clears them: deepmerge (GHSA-gcqx-w48m-w2h4, 4.3.1 is the newest and
+        # last affected version) through @sveltejs/vite-plugin-svelte, and
+        # picomatch (GHSA-fc5q-39xc-vjpf, every release up to 4.0.7, the newest)
+        # through build and test tooling that only matches globs from project
+        # config. Ignore them by ID rather than lowering the severity threshold,
+        # so every advisory outside this list, low included, still fails the
+        # build. Drop each flag once a fix exists.
+        run: bun audit --ignore=GHSA-gcqx-w48m-w2h4 --ignore=GHSA-fc5q-39xc-vjpf
 
       - name: Run CI checks
         # Vercel sets this for the project and the plan cannot turn it off; build the same way.
