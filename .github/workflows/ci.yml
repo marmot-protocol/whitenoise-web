@@ -37,7 +37,10 @@ jobs:
         # no upgrade or override clears it. Ignore that one advisory by ID rather
         # than lowering the severity threshold, so every other advisory, low
         # included, still fails the build. Drop the flag once a fix exists.
-        run: bun audit --ignore=GHSA-gcqx-w48m-w2h4
+        # picomatch (GHSA-fc5q-39xc-vjpf) is the same case: every release up to
+        # 4.0.7, the newest, is affected, and only build tools reach it with
+        # globs from project config.
+        run: bun audit --ignore=GHSA-gcqx-w48m-w2h4 --ignore=GHSA-fc5q-39xc-vjpf
 
       - name: Run CI checks
         # Vercel sets this for the project and the plan cannot turn it off; build the same way.
