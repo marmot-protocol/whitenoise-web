@@ -13,6 +13,7 @@ const baseline = await readJson("src/lib/content/documentation-baseline.json");
 const sourceRevisions = {
     "whitenoise-android": baseline.android.currentSource,
     "whitenoise-ios": baseline.ios.source,
+    "whitenoise-linux": baseline.linux.source,
     "whitenoise-web": baseline.connector.guideSource,
     mdk: baseline.development.mdkSource,
     marmot: baseline.development.protocolSource,
@@ -26,6 +27,8 @@ for (const revision of [
     ...Object.values(sourceRevisions),
     baseline.development.tutorial.mdkSource,
     baseline.android.releaseSource,
+    baseline.linux.releaseSource,
+    ...baseline.ios.captureBuilds.map((build) => build.source),
     baseline.connector.connectorSource,
 ])
     assert.match(revision, /^[a-f0-9]{40}$/, "Baseline revisions must be immutable commits");
@@ -37,6 +40,8 @@ assert(routes.includes("/docs"), "Documentation index needs Markdown routing");
 const requiredTasks = [
     "settings/android",
     "settings/ios",
+    "settings/linux",
+    "settings/linux/diagnostics",
     "settings/android/diagnostics",
     "settings/android/translation",
     "settings/android/dictation",
@@ -46,24 +51,34 @@ const requiredTasks = [
     "compatibility",
     "get-started/install/android",
     "get-started/install/ios",
+    "get-started/install/linux",
     "get-started/first-message/android",
     "get-started/first-message/ios",
+    "get-started/first-message/linux",
     "using/profiles/android",
     "using/profiles/ios",
+    "using/profiles/linux",
     "using/contacts/android",
     "using/contacts/ios",
+    "using/contacts/linux",
     "using/groups/android",
     "using/groups/ios",
+    "using/groups/linux",
     "using/messages/android",
     "using/messages/ios",
+    "using/messages/linux",
     "using/media/android",
     "using/media/ios",
+    "using/media/linux",
     "using/notifications/android",
     "using/notifications/ios",
+    "using/notifications/linux",
     "using/recovery/android",
     "using/recovery/ios",
+    "using/recovery/linux",
     "using/privacy/android",
     "using/privacy/ios",
+    "using/privacy/linux",
     "troubleshooting/access",
     "troubleshooting/invitations",
     "troubleshooting/delivery",
@@ -98,7 +113,7 @@ for (const page of pages) {
         page.slug === "compatibility" || page.slug.startsWith(`${page.category}/`),
         `Unexpected guide namespace: ${page.slug}`
     );
-    const platform = page.slug.match(/\/(android|ios)(?:\/|$)/)?.[1] ?? "shared";
+    const platform = page.slug.match(/\/(android|ios|linux)(?:\/|$)/)?.[1] ?? "shared";
     assert.equal(page.platform, platform, `Wrong platform: ${page.slug}`);
     assert(/^[a-z0-9-]+(?:\/[a-z0-9-]+)*$/.test(page.slug), "Unsafe documentation slug");
     assert(routes.includes(`/docs/${page.slug}`), `Missing Markdown routing for ${page.slug}`);
@@ -130,6 +145,7 @@ assert.deepEqual(
     ["/docs", "/docs/marmot/README.md", ...pages.map((page) => `/docs/${page.slug}`)].sort(),
     "Published documentation routes must match the registry and preserved legacy page"
 );
+assert.equal(new Set(captures.map((capture) => capture.id)).size, captures.length);
 for (const capture of captures) {
     assert(capture.guides.length > 0, "Capture must illustrate a guide");
     for (const slug of capture.guides)
@@ -142,7 +158,10 @@ for (const capture of captures) {
             `Unknown capture guide: ${slug}`
         );
     const kind = capture.kind ?? "device";
-    assert(["device", "source-render"].includes(kind), "Unknown image evidence kind");
+    assert(
+        ["device", "source-render", "desktop", "simulator"].includes(kind),
+        "Unknown image evidence kind"
+    );
     if (kind === "device") {
         assert(
             capture.platform === "android" && capture.cleanupVerified,
@@ -163,8 +182,78 @@ for (const capture of captures) {
             !capture.apkSha256 && !capture.cleanupVerified,
             "Reference renders must not claim device qualification"
         );
+    } else if (kind === "simulator") {
+        assert.equal(capture.platform, "ios");
+        assert(
+            baseline.ios.captureBuilds.some(
+                (build) => build.source === capture.source && build.version === capture.build
+            ),
+            "Simulator capture source and build must match a reviewed capture build"
+        );
+        assert.equal(capture.configuration, "Debug-Production");
+        assert.equal(capture.bundleId, "dev.ipf.whitenoise.ios");
+        assert.equal(capture.runtime, "iOS Simulator");
+        assert.match(capture.os, /^iOS \d+\.\d+(?:\.\d+)?$/);
+        assert.match(capture.device, /^iPhone /);
+        assert(
+            [
+                "synthetic profile; no conversations",
+                "synthetic profile; fictional one-member conversation",
+            ].includes(capture.fixture),
+            "Simulator captures require synthetic fixtures"
+        );
+        assert.equal(
+            capture.verification,
+            "navigated-simulator; delivery not tested during capture"
+        );
+        assert.equal(typeof capture.cleanupVerified, "boolean");
+        assert(capture.cleanup.length > 10, "Record simulator cleanup limitations");
+        assert(
+            !capture.apkSha256 && !capture.packageUrl && !capture.sourceImage,
+            "Simulator captures must not claim release, Android or source-render evidence"
+        );
+        for (const digest of [
+            capture.executableSha256,
+            capture.debugDylibSha256,
+            capture.imageSha256,
+        ])
+            assert.match(digest, /^[a-f0-9]{64}$/);
+        assert.match(capture.capturedAt, /^\d{4}-\d{2}-\d{2}$/);
+        assert(!Number.isNaN(Date.parse(capture.capturedAt)), "Invalid simulator capture date");
+        for (const size of [capture.dimensions.width, capture.dimensions.height])
+            assert(
+                Number.isInteger(size) && size > 0,
+                "Simulator dimensions must be positive pixels"
+            );
+    } else if (kind === "desktop") {
+        assert.equal(capture.platform, "linux");
+        assert.equal(capture.source, baseline.linux.releaseSource);
+        assert.equal(capture.build, baseline.linux.releaseVersion);
+        const prefix = `https://github.com/marmot-protocol/whitenoise-linux/releases/download/${capture.build}/WhiteNoise-${capture.build}-`;
+        assert(
+            ["linux-amd64.tar.gz", "linux-arm64.tar.gz", "x86_64.AppImage", "x86_64.flatpak"].some(
+                (suffix) => capture.packageUrl === prefix + suffix
+            ),
+            "Desktop package must be a version-pinned public Linux release asset"
+        );
+        for (const digest of [capture.packageSha256, capture.executableSha256, capture.imageSha256])
+            assert.match(digest, /^[a-f0-9]{64}$/);
+        assert.equal(capture.fixture, "synthetic isolated accounts");
+        assert.equal(capture.runtime, "SDL dummy video driver");
+        assert.equal(capture.cleanupVerified, true);
+        assert(
+            !capture.apkSha256 && !capture.device && !capture.sourceImage,
+            "Desktop captures must not claim Android or source-render evidence"
+        );
+        assert.match(capture.capturedAt, /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z)?$/);
+        assert(!Number.isNaN(Date.parse(capture.capturedAt)), "Invalid desktop capture date");
+        for (const size of [capture.dimensions.width, capture.dimensions.height])
+            assert(
+                Number.isInteger(size) && size > 0,
+                "Desktop image dimensions must be positive pixels"
+            );
     }
-    assert(["android", "ios"].includes(capture.platform));
+    assert(["android", "ios", "linux"].includes(capture.platform));
     assert(
         new RegExp(`^/docs/${capture.platform}/[a-z-]+\\.png$`).test(capture.url),
         "Unexpected capture path"
@@ -182,6 +271,11 @@ for (const capture of captures) {
         capture.imageSha256,
         `Changed capture: ${capture.id}`
     );
+    if (kind === "desktop" || kind === "simulator") {
+        assert.equal(bytes.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
+        assert.equal(bytes.readUInt32BE(16), capture.dimensions.width);
+        assert.equal(bytes.readUInt32BE(20), capture.dimensions.height);
+    }
     const { crop, highlights, url } = capture.presentation;
     assert.equal(url, capture.url.replace(/\.png$/, ".svg"));
     if (kind === "device")

@@ -12,16 +12,23 @@ White Noise exports identity backups as NIP-49 `ncryptsec1` strings protected by
 
 ## Back up your private key
 
-1. Open Settings, then **Profile Keys**.
-2. Under **Export**, tap **Export Encrypted Private Key**.
-3. Enter a passphrase and tap **Export**.
-4. The share sheet opens with your encrypted backup as ncryptsec1 text. Pick a safe destination, such as a password manager, and finish saving it there.
+Open **Settings > Profile Keys**. Under **Back Up Your Private Key**, choose how to back up.
 
-Expected result: the ncryptsec1 text is stored in the place you picked. Tapping **Export** only hands the text to the share sheet, so open the destination and check the backup arrived. Marmot never stores the passphrase. Keep it safe and separate from the backup, because you need both to restore.
+**With a password (recommended)**
 
-> **Warning:** **Export Private Key** reveals your private key in plaintext and permanently marks it as handled insecurely. Use the encrypted export unless you need the raw nsec.
+1. Tap **Back Up With a Password**.
+2. In the **Encrypted Private Key** sheet, enter a **Password** and **Confirm Password**, then tap **Export**.
+3. The share sheet opens with your encrypted backup as ncryptsec1 text. Pick a safe destination, such as a password manager, and finish saving it there.
 
-Profile Keys also shows your **Public Key** as Hex and npub. Share it so people can find and connect with you. Under **Key Status**, Online means this account’s runtime worker is active and subscribed to its relays; it reflects relay activity, separate from key access.
+Expected result: the ncryptsec1 text is stored in the place you picked. Tapping **Export** only hands the text to the share sheet, so open the destination and check the backup arrived. White Noise never stores the password. Use a long, unique one, and keep it safe and separate from the backup, because you need both to restore.
+
+**Without a password**
+
+> **Warning:** **Back Up Without a Password** reveals your private key in plaintext and permanently marks it as handled insecurely. Anyone with the exported key can use your profile. Use the password backup unless you need the raw nsec.
+
+Tap **Back Up Without a Password**, then confirm **Export Without a Password?** with **Export Key**. The share sheet opens with your nsec.
+
+Profile Keys shows your **Public Key** as an npub. Share it so people can find and connect with you. The **Private Key** row has **Show private key** and **Copy Private Key**. Each asks you to confirm first, and each reveals the plaintext key and marks it as handled insecurely, so use them only when you need to. If a profile can't export its private key, the screen says **This account cannot export a private key.**
 
 ## Sign in with your key
 
@@ -41,7 +48,7 @@ The **Sign-In Recovery** screen also has **Remove Profile from This Device**. It
 
 ## Sign out
 
-In Settings, tap **Sign Out**. Leave **Wipe Local Data** off and tap **Sign Out** to keep this profile and its chats on this device. Turning on **Wipe Local Data** erases this profile’s chats and media, plus its secret key, from this device instead, so back up your key first.
+In Settings, tap **Sign Out**. Leave **Wipe Local Data** off and tap **Sign Out** to keep this profile and its chats on this device. Afterward, the profile appears under **Ready to sign in**, and its **Sign In** button still asks for the private key. Tap **Sign In with Another Account** to use a different key. Turning on **Wipe Local Data** erases this profile’s chats and media, plus its secret key, from this device instead, so back up your key first. Wiping can take up to a minute; keep White Noise open. If **Cleanup Details** appears, some cleanup failed and it shows what may remain.
 
 ## Delete a profile
 
@@ -50,9 +57,9 @@ In Settings, tap **Sign Out**. Leave **Wipe Local Data** off and tap **Sign Out*
 1. Back up your private key and confirm the backup is saved.
 2. In Settings, tap **Delete Profile**.
 3. Review the summary of what is deleted.
-4. Under **Profile name**, type the profile name exactly, then tap **Delete Profile**.
+4. Under **Profile name**, type the profile name exactly, then tap **Delete Profile**. This can take up to a minute, so keep White Noise open.
 
-Expected result: the profile is signed out and its local data is removed from this iPhone.
+Expected result: the profile is signed out and its local data is removed from this iPhone. If **Cleanup Details** appears, some cleanup failed and it shows what may remain.
 
 To remove every profile and all White Noise data at once, use **Erase App Data**, described in Privacy and security settings.
 

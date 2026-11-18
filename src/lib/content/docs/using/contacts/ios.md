@@ -4,6 +4,8 @@ On iOS you find people and start conversations from the chat list. Search or sca
 
 ## Start a chat with someone
 
+<figure><a href="/docs/ios/new-message.svg"><img src="/docs/ios/new-message.svg" alt="New Chat screen with New Group, Scan QR Code and a name or npub search field." loading="lazy" width="1206" height="2340" /></a><figcaption class="type-small">Search by name or npub at the bottom, or choose Scan QR Code. This example has no existing contacts. Select the image to enlarge.</figcaption></figure>
+
 1. In the chat list, tap **New Message** to open the **New Chat** screen.
 2. Search for the person, or tap **Scan QR Code** and scan their profile code, then select them.
 3. If you already have a conversation with this person, White Noise asks which one to continue. Tap it, or tap **Start new conversation**.
@@ -24,7 +26,7 @@ A group that starts with just you needs a name. Unnamed groups display their mem
 
 ## Help others find you
 
-Open **Share & Connect** to share your profile URL or picture, or to show your QR code. See [Your profile on iOS](/docs/using/profiles/ios).
+Tap the profile card at the top of **Settings** to open **Share & Connect**, where you can share your profile URL or picture, or show your QR code. See [Your profile on iOS](/docs/using/profiles/ios).
 
 ## Fix common problems
 

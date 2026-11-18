@@ -1,6 +1,7 @@
 <script lang="ts">
 import JsonLd from "#lib/components/JsonLd.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Surface from "#lib/components/system/Surface.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
@@ -38,14 +39,11 @@ const canarySchema = {
 };
 </script>
 
-<svelte:head>
-    <title>Canary | White Noise</title>
-    <link rel="canonical" href="https://www.whitenoise.chat/canary" />
-    <meta
-        name="description"
-        content="Warrant canary and transparency statement for White Noise and the Internet Privacy Foundation."
-    />
-</svelte:head>
+<PageMeta
+    title="Warrant canary"
+    description="Warrant canary and transparency statement for White Noise and the Internet Privacy Foundation."
+    path="/canary"
+/>
 
 <JsonLd schema={canarySchema} />
 

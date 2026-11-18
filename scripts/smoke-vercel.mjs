@@ -40,6 +40,12 @@ try {
         "The policy must be prerendered in the deployment output"
     );
     assert.ok(html.includes("privacy@ipf.dev"), "The policy must include its contact details");
+    // Pages that load many chunks can lose one to a newer deploy while crawlers render older
+    // HTML; SvelteKit then replaces the prerendered page with its error page. A single bundle
+    // either hydrates the page or leaves the prerendered HTML in place.
+    const clientScripts = [...new Set(html.match(/_app\/immutable\/[^"']+\.js/g))];
+    assert.equal(clientScripts.length, 1, "Prerendered pages must load one client bundle");
+    await readFile(new URL(`../.vercel/output/static/${clientScripts[0]}`, import.meta.url));
 
     const outputConfig = JSON.parse(
         await readFile(new URL("../.vercel/output/config.json", import.meta.url), "utf8")

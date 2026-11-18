@@ -4,20 +4,23 @@ Most of these controls are in Settings under **Privacy & Security**.
 
 ## App security
 
-- **Hide Screen in App Switcher** hides app content in the app switcher and while iOS detects screen recording or sharing. Regular screenshots are still possible.
-- **App lock** asks for Face ID, Touch ID or your iPhone passcode when you return. Set an iPhone passcode first; the toggle names the method available on your phone.
-- **Auto-Lock** sets when White Noise locks. See [iOS settings](/docs/settings/ios#privacy--security) for the available delays.
+- **Hide Sensitive Content** hides app content in the app switcher and while iOS detects screen recording or sharing. Regular screenshots are still possible.
+- **Require Face ID**, **Require Touch ID**, **Require Optic ID** or **Require passcode** locks White Noise when you leave it. The toggle names the method your iPhone has, and your iPhone passcode is the fallback. Set an iPhone passcode first, or the toggle is unavailable.
+- **Auto-Lock** appears once the lock is on and sets when White Noise locks. See [iOS settings](/docs/settings/ios#privacy--security) for the available delays.
+
+<figure><a href="/docs/ios/privacy.svg"><img src="/docs/ios/privacy.svg" alt="Privacy & Security with Hide Sensitive Content and Require Face ID off, plus diagnostics and Erase App Data." loading="lazy" width="1206" height="2160" /></a><figcaption class="type-small">Neither Hide Sensitive Content nor the app lock is enabled in this example. Select the image to enlarge.</figcaption></figure>
 
 ## Diagnostics
 
-Open **Diagnostics & Improvements** to configure or clear diagnostic logs on this device.
+Open **Diagnostics & Improvements** to choose what you share, set how long logs are kept, or clear diagnostic logs on this device. Until a choice is recorded, a **Help Improve White Noise** sheet appears on the chat list. Both choices start off, and tapping **Done** without changing them doesn't opt you in. See [iOS diagnostics and local logs](/docs/settings/ios/diagnostics).
 
 ## Blocked users
 
 Blocking hides a person’s messages and stops you sending to them in direct chats. Existing history is kept.
 
-1. On **Blocked Users**, tap **Unblock** next to the person.
-2. Confirm **Unblock this user?**
+1. Open **Blocked Users** from **Privacy & Security**.
+2. Swipe the person's row and tap **Unblock**.
+3. Confirm **Unblock this user?** with **Unblock User**.
 
 Expected result: their messages appear again and you can send to them.
 

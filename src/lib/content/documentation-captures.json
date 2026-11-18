@@ -289,7 +289,7 @@
                 "height": 1270
             },
             "highlights": [],
-            "description": "Choose automatic-download rules for each media type. The displayed values illustrate one profile\u2019s settings.",
+            "description": "Choose automatic-download rules for each media type. The displayed values illustrate one profile’s settings.",
             "alt": "Android Data Usage settings for photos, videos, audio and files."
         }
     },
@@ -896,6 +896,1322 @@
             "highlights": [],
             "description": "Open a shared-content category from the conversation details. Links appear when available.",
             "alt": "Shared in Chat categories for photos and videos, links, documents and voice."
+        }
+    },
+    {
+        "id": "linux-vault-setup",
+        "url": "/docs/linux/vault-setup.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "ee54e6479a967dcb0ef459c59e915e39c49824553bc312b1452448b78384c9c4",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "dark",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["get-started/install/linux"],
+        "presentation": {
+            "url": "/docs/linux/vault-setup.svg",
+            "crop": {
+                "x": 105,
+                "y": 87,
+                "width": 990,
+                "height": 625
+            },
+            "highlights": [],
+            "description": "The vault setup screen. Despite its wording, not every settings file is encrypted; see the privacy guide.",
+            "alt": "Vault password setup with both password fields empty."
+        }
+    },
+    {
+        "id": "linux-sign-in",
+        "url": "/docs/linux/sign-in.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "a278446921f39532c1aea9ad2478de34e16873980a2ef540ce35760e85213b17",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["get-started/install/linux"],
+        "presentation": {
+            "url": "/docs/linux/sign-in.svg",
+            "crop": {
+                "x": 105,
+                "y": 126,
+                "width": 990,
+                "height": 548
+            },
+            "highlights": [],
+            "description": "Choose a local key or remote signer after unlocking the device vault.",
+            "alt": "Linux sign-in choices for local keys and remote signers."
+        }
+    },
+    {
+        "id": "linux-settings-overview",
+        "url": "/docs/linux/settings-overview.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "1e53518c99c1ac0644c34f27e6ac19b7a438430695fe7d2bb37b54dd1bc25941",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["settings/linux"],
+        "presentation": {
+            "url": "/docs/linux/settings-overview.svg",
+            "crop": {
+                "x": 126,
+                "y": 165,
+                "width": 1036,
+                "height": 580
+            },
+            "highlights": [],
+            "description": "Choose a settings category, then a task or page.",
+            "alt": "Linux settings categories including Appearance, General, Notifications, Keys and identity, Storage and Advanced."
+        }
+    },
+    {
+        "id": "linux-notifications",
+        "url": "/docs/linux/notifications.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "91eaa68abbcd3764efe6badd5eea47a6bd553fbeb7fadbec1f2a4a08a78cf80d",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/notifications/linux"],
+        "presentation": {
+            "url": "/docs/linux/notifications.svg",
+            "crop": {
+                "x": 90,
+                "y": 0,
+                "width": 1110,
+                "height": 442
+            },
+            "highlights": [],
+            "description": "Desktop alerts, notification sounds, interface sounds and message previews have separate switches.",
+            "alt": "Desktop notification, sound and message-preview switches with the Send test button."
+        }
+    },
+    {
+        "id": "linux-security",
+        "url": "/docs/linux/security.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "3bc00aa842470259351a5532a90cbef108be3d62ad6a5f53a62049741c18317c",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/recovery/linux"],
+        "presentation": {
+            "url": "/docs/linux/security.svg",
+            "crop": {
+                "x": 126,
+                "y": 75,
+                "width": 1036,
+                "height": 457
+            },
+            "highlights": [],
+            "description": "Export an encrypted identity separately from the settings backup. No private key is displayed.",
+            "alt": "Change vault password, Export encrypted key and Reveal private key controls with no key revealed."
+        }
+    },
+    {
+        "id": "linux-privacy",
+        "url": "/docs/linux/privacy.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "988a939f0182fba0b4beaf2685490dd067387d65ae13924bf3385bf80bb365d1",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/privacy/linux"],
+        "presentation": {
+            "url": "/docs/linux/privacy.svg",
+            "crop": {
+                "x": 126,
+                "y": 349,
+                "width": 1036,
+                "height": 356
+            },
+            "highlights": [],
+            "description": "Link previews and diagnostics sharing are separate controls. Preview hosts can receive your IP address.",
+            "alt": "Privacy tab showing Link previews enabled and Share usage and diagnostics disabled."
+        }
+    },
+    {
+        "id": "linux-audit-logs",
+        "url": "/docs/linux/audit-logs.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "d0251cd0312d06dfcd7b09d6cea527d3edafaa7d0c6f9bd035a40cce8806c840",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["settings/linux/diagnostics"],
+        "presentation": {
+            "url": "/docs/linux/audit-logs.svg",
+            "crop": {
+                "x": 126,
+                "y": 349,
+                "width": 1036,
+                "height": 340
+            },
+            "highlights": [],
+            "description": "Audit recording is separate from diagnostics sharing. This isolated account has no recorded audit files.",
+            "alt": "Audit logs tab with recording off, Refresh and an empty log-file list."
+        }
+    },
+    {
+        "id": "linux-profile",
+        "url": "/docs/linux/profile.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "662258edb0f9be506d45d574cc9d387afc3a543d221fe00abcafe53eb2656c96",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/profiles/linux"],
+        "presentation": {
+            "url": "/docs/linux/profile.svg",
+            "crop": {
+                "x": 120,
+                "y": 0,
+                "width": 1050,
+                "height": 758
+            },
+            "highlights": [],
+            "description": "Edit profile and public-key sharing on a fictional, offline account. This does not demonstrate profile publication.",
+            "alt": "Fictional Tame Badger profile with Edit profile and a public-key QR code."
+        }
+    },
+    {
+        "id": "linux-contacts",
+        "url": "/docs/linux/contacts.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "e0a19b48c15c91c0e5b39943465d3bb298423a1cad7a1503e1f4d36270a0922b",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/contacts/linux"],
+        "presentation": {
+            "url": "/docs/linux/contacts.svg",
+            "crop": {
+                "x": 90,
+                "y": 0,
+                "width": 365,
+                "height": 250
+            },
+            "highlights": [],
+            "description": "The People rail contains contact search and Import contacts. Export controls appear after contacts exist.",
+            "alt": "Empty People rail with Search contacts and Import contacts controls."
+        }
+    },
+    {
+        "id": "linux-composer",
+        "url": "/docs/linux/composer.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "e8491736608348767cdb4a6da1a0ff014943684d0b1e27e2f42a96fd3c1a32a2",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["get-started/first-message/linux", "using/messages/linux", "using/media/linux"],
+        "presentation": {
+            "url": "/docs/linux/composer.svg",
+            "crop": {
+                "x": 483,
+                "y": 626,
+                "width": 692,
+                "height": 107
+            },
+            "highlights": [],
+            "description": "A fictional draft in the real composer. The paperclip adds attachments; the microphone starts recording. Nothing was sent.",
+            "alt": "Message composer containing the fictional draft The squirrels borrowed the meeting agenda, with attachment and microphone controls."
+        }
+    },
+    {
+        "id": "linux-group-settings",
+        "url": "/docs/linux/group-settings.png",
+        "platform": "linux",
+        "kind": "desktop",
+        "build": "v2026.10.6-build.1",
+        "source": "acbc3bb812c4676b550b0b42451c8ec2fcc64ec8",
+        "packageUrl": "https://github.com/marmot-protocol/whitenoise-linux/releases/download/v2026.10.6-build.1/WhiteNoise-v2026.10.6-build.1-linux-amd64.tar.gz",
+        "packageSha256": "88ad73a9b4866b2d8e9df096b6b4adf918a95e633f24776c31fd833cbd965a87",
+        "executableSha256": "0b935100d5a3653ca3a493636ee76dddf4cc8c3d92dbfea78874871f28a52b2d",
+        "imageSha256": "d5e7a15000f8dabfee6800fc63e6157d3ce7114f8712c5ffcb74c78de83d441b",
+        "language": "English",
+        "fixture": "synthetic isolated accounts",
+        "runtime": "SDL dummy video driver",
+        "verification": "Actual packaged app rendered and navigated without network access; no cross-client delivery or full recovery qualification",
+        "cleanupVerified": true,
+        "theme": "light",
+        "dimensions": {
+            "width": 1200,
+            "height": 800
+        },
+        "capturedAt": "2026-10-19",
+        "guides": ["using/groups/linux"],
+        "presentation": {
+            "url": "/docs/linux/group-settings.svg",
+            "crop": {
+                "x": 480,
+                "y": 120,
+                "width": 700,
+                "height": 610
+            },
+            "highlights": [],
+            "description": "Open Group settings to edit a group you administer. The capture uses a fictional one-member group; invitation delivery was not tested.",
+            "alt": "Group settings for the fictional Acorn expedition group, showing its photo, description and Rename control."
+        }
+    },
+    {
+        "id": "ios-welcome",
+        "kind": "simulator",
+        "url": "/docs/ios/welcome.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "f49971fbed93bfd7424f0d34ed4c690e6de4890dbfb1aec8926b23409c80dd58",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["get-started/install/ios"],
+        "presentation": {
+            "url": "/docs/ios/welcome.svg",
+            "crop": {
+                "x": 0,
+                "y": 900,
+                "width": 1206,
+                "height": 1620
+            },
+            "highlights": [],
+            "description": "Review the linked terms before choosing Agree & Continue.",
+            "alt": "Welcome to White Noise with Agree & Continue."
+        }
+    },
+    {
+        "id": "ios-sign-up",
+        "kind": "simulator",
+        "url": "/docs/ios/sign-up.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "fb3c74deede13905c60d2ffdff9535406296ee9a73c0b850bce7d51c4f1ea6ec",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["get-started/install/ios"],
+        "presentation": {
+            "url": "/docs/ios/sign-up.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "A nickname is enough. This local build submits the form with Sign Up; your name, photo and bio are public.",
+            "alt": "Sign Up form with the fictional name Emerald Flounder and blank About field."
+        }
+    },
+    {
+        "id": "ios-sign-in",
+        "kind": "simulator",
+        "url": "/docs/ios/sign-in.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "f5233179a6b528097b6ffd9b16d74ee51953f13f618491a036f242bef3c5e393",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["get-started/install/ios"],
+        "presentation": {
+            "url": "/docs/ios/sign-in.svg",
+            "crop": {
+                "x": 24,
+                "y": 1260,
+                "width": 1158,
+                "height": 780
+            },
+            "highlights": [],
+            "description": "The private-key field is blank in this example. Never share a screenshot containing your private key.",
+            "alt": "Sign In sheet with an empty private-key field and QR scan control."
+        }
+    },
+    {
+        "id": "ios-chats",
+        "kind": "simulator",
+        "url": "/docs/ios/chats.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "b104c149c287e1749131958054f5ec1b3eeb081edf76e0c0135c0ca9b54f2624",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["get-started/first-message/ios"],
+        "presentation": {
+            "url": "/docs/ios/chats.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 210
+            },
+            "highlights": [],
+            "description": "On Chats, use the New Message button at the upper right.",
+            "alt": "Chats toolbar with the New Message button at the upper right."
+        }
+    },
+    {
+        "id": "ios-new-message",
+        "kind": "simulator",
+        "url": "/docs/ios/new-message.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "1ee4980f39b43003760a681d9688aeaff374ebbbe2f2638e5d28887203eb0b73",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["get-started/first-message/ios", "using/contacts/ios"],
+        "presentation": {
+            "url": "/docs/ios/new-message.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "Search by name or npub at the bottom, or choose Scan QR Code. This example has no existing contacts.",
+            "alt": "New Chat screen with New Group, Scan QR Code and a name or npub search field."
+        }
+    },
+    {
+        "id": "ios-settings",
+        "kind": "simulator",
+        "url": "/docs/ios/settings.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "f2f45767579a452a36f511365d0210652c52086c28c128025a2055cefc1867c7",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["settings/ios"],
+        "presentation": {
+            "url": "/docs/ios/settings.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2240
+            },
+            "highlights": [],
+            "description": "Your profile and Add Profile appear above the main settings. This example has one signed-in profile.",
+            "alt": "iOS Settings showing the synthetic profile and the main settings destinations."
+        }
+    },
+    {
+        "id": "ios-appearance",
+        "kind": "simulator",
+        "url": "/docs/ios/appearance.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "94bf709c2d30d6401b6f3b719f6001cf7257ccbd4fcf9d7307525097dd080baa",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["settings/ios"],
+        "presentation": {
+            "url": "/docs/ios/appearance.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2280
+            },
+            "highlights": [],
+            "description": "Choose theme, density and language here. Link previews are off; the Dictation section follows below.",
+            "alt": "Appearance settings with System theme, Standard density, Language and Show Link Previews off."
+        }
+    },
+    {
+        "id": "ios-notifications",
+        "kind": "simulator",
+        "url": "/docs/ios/notifications.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "8617d679e30029f5c4289b6f2df6e8bc9efac37ed6eb081c662b8c22b5ef127a",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/notifications/ios"],
+        "presentation": {
+            "url": "/docs/ios/notifications.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "When iOS notifications are off, use Open Settings to allow them. This image does not demonstrate push delivery.",
+            "alt": "Notifications are off, with Open Settings and disabled notification controls."
+        }
+    },
+    {
+        "id": "ios-privacy",
+        "kind": "simulator",
+        "url": "/docs/ios/privacy.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "c7f334ae89db20014e277c9eca828a09cf65cee32fc9e5b99364d759d84083b6",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/privacy/ios"],
+        "presentation": {
+            "url": "/docs/ios/privacy.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2160
+            },
+            "highlights": [],
+            "description": "This local build calls screen privacy Hide Sensitive Content. Neither screen privacy nor app lock is enabled in this example.",
+            "alt": "Privacy & Security with Hide Sensitive Content and Require Face ID off, plus diagnostics and Erase App Data."
+        }
+    },
+    {
+        "id": "ios-diagnostics",
+        "kind": "simulator",
+        "url": "/docs/ios/diagnostics.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "9ab59d5840a910de06cb030c4f2980aac3046b11f76a1720e2cb3ec8f14accda",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["settings/ios/diagnostics"],
+        "presentation": {
+            "url": "/docs/ios/diagnostics.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 1600
+            },
+            "highlights": [],
+            "description": "Both sharing choices are off. Keep Logs For is shown at 30 days; no diagnostic logs are stored in this example.",
+            "alt": "Diagnostics & Improvements with both sharing options off, Keep Logs For set to 30 days and no stored diagnostic logs."
+        }
+    },
+    {
+        "id": "ios-data-usage",
+        "kind": "simulator",
+        "url": "/docs/ios/data-usage.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "a4fbc21a26b0a7538d937e42d41e86b3141f962e5430b5430e9704117bfe06d2",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/media/ios"],
+        "presentation": {
+            "url": "/docs/ios/data-usage.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 1950
+            },
+            "highlights": [],
+            "description": "Current Data Usage controls: automatic downloads, remote GIF loading off and Sent Media Quality. The older Download Storage row is gone.",
+            "alt": "Data Usage with Photos, Audio, Videos and Files auto-download choices, remote GIF loading off and Standard Sent Media Quality."
+        }
+    },
+    {
+        "id": "ios-download-storage",
+        "kind": "simulator",
+        "url": "/docs/ios/download-storage.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "bd03ce6c3a33a11be7930b770236afe70fe6b0bfbfa59c02021135f7745cc729",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/media/ios"],
+        "presentation": {
+            "url": "/docs/ios/download-storage.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 1300
+            },
+            "highlights": [],
+            "description": "Earlier build 2026.11.10 (48) only: this screen was removed in the reviewed build.",
+            "alt": "Older iOS build's Download Storage screen with free-space and automatic-download limits."
+        }
+    },
+    {
+        "id": "ios-manage-storage",
+        "kind": "simulator",
+        "url": "/docs/ios/manage-storage.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "b402a7a5c374c75fc0b2d15010c04db63028a75c9918ea51fdb0182bdfadde6d",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/media/ios"],
+        "presentation": {
+            "url": "/docs/ios/manage-storage.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "Storage is counted per profile. This profile has no attachments; no removal action was used for the capture.",
+            "alt": "Manage Storage with no attachments, Keep Media set to Forever and empty cache controls."
+        }
+    },
+    {
+        "id": "ios-relays",
+        "kind": "simulator",
+        "url": "/docs/ios/relays.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "efc51a12630251b6b26735ca23cf6fe6baf9ed4fee01fed13e420d6b4bd9c582",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["settings/relays"],
+        "presentation": {
+            "url": "/docs/ios/relays.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2120
+            },
+            "highlights": [],
+            "description": "Account Relays and Inbox Relays have separate lists. These are this synthetic profile’s example addresses, not guaranteed defaults.",
+            "alt": "iOS Relays screen showing Account Relays and Inbox Relays with Add Relay controls."
+        }
+    },
+    {
+        "id": "ios-profile",
+        "kind": "simulator",
+        "url": "/docs/ios/profile.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "2d72673d989a84b0fc068598322f6118b3d17e3fd658fdb5ceff855d79a2d3df",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/profiles/ios"],
+        "presentation": {
+            "url": "/docs/ios/profile.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2100
+            },
+            "highlights": [],
+            "description": "The Profile screen shows your public details. This example uses a fictional name.",
+            "alt": "Profile for Emerald Flounder with Name, blank Verified Nostr Address and blank About."
+        }
+    },
+    {
+        "id": "ios-edit-profile",
+        "kind": "simulator",
+        "url": "/docs/ios/edit-profile.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "d0b6c5c6a5c8bcc0f7de75172655fbdb3673aec180a55e07e7a3449a785ebdf7",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/profiles/ios"],
+        "presentation": {
+            "url": "/docs/ios/edit-profile.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "Edit your public details, then choose Done to save or Cancel to discard.",
+            "alt": "Editable Profile form with Cancel, Done, Add Photo and the public-profile notice."
+        }
+    },
+    {
+        "id": "ios-share-profile",
+        "kind": "simulator",
+        "url": "/docs/ios/share-profile.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "0132c448e7e29410d3c2eafa7d508fb10ecfeafffbe28c477f6eb7c8a8fa0be6",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/profiles/ios"],
+        "presentation": {
+            "url": "/docs/ios/share-profile.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "Show your public profile QR code to connect. This local build uses Share and Connect tabs; the pictured identity is only an example.",
+            "alt": "Share tab with the synthetic profile’s public npub and Scan to connect QR code."
+        }
+    },
+    {
+        "id": "ios-new-group",
+        "kind": "simulator",
+        "url": "/docs/ios/new-group.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "a0d72d2e3a242c02ff26250da5bd53bc20515291b7b9185f44e0155e64fd4b66",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/groups/ios"],
+        "presentation": {
+            "url": "/docs/ios/new-group.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "Choose people before Continue. This synthetic profile has no contacts, so the picker is empty.",
+            "alt": "New Group member picker with no people yet, search field and Continue."
+        }
+    },
+    {
+        "id": "ios-group-setup",
+        "kind": "simulator",
+        "url": "/docs/ios/group-setup.png",
+        "platform": "ios",
+        "build": "2026.11.10 (48)",
+        "source": "9e8e60372b2cbedfd77062342b9bc6c3821b55a7",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "8fb37c1322e371ec39e5eff0c4fedaf22c6d52a838335300b253d213462a051a",
+        "debugDylibSha256": "807d26ed366b4e763c3078d0aa78d956f19a37c9aed4e23016aad2f0cde8c18c",
+        "imageSha256": "956c889ea12613a79d0750dd025444c388092d2f16d0ae3aba884cf5e5f11119",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; no conversations",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/groups/ios"],
+        "presentation": {
+            "url": "/docs/ios/group-setup.svg",
+            "crop": {
+                "x": 0,
+                "y": 180,
+                "width": 1206,
+                "height": 2340
+            },
+            "highlights": [],
+            "description": "Set Up Group is an unfinished form here. A group started alone needs a name; no group was created during capture.",
+            "alt": "Set Up Group with empty name and description, disappearing messages off and Create disabled."
+        }
+    },
+    {
+        "id": "ios-composer",
+        "kind": "simulator",
+        "url": "/docs/ios/composer.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "aeb6d2a32340875c0963a679aa89ee6cc1e558dd522c4221b013450ad9c2ea62",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/messages/ios"],
+        "presentation": {
+            "url": "/docs/ios/composer.svg",
+            "crop": {
+                "x": 0,
+                "y": 2320,
+                "width": 1206,
+                "height": 220
+            },
+            "highlights": [],
+            "description": "Tap the message field to type, or hold it with the keyboard hidden to dictate. Releasing a completed dictation sends it. This image shows the idle control, not a transcription.",
+            "alt": "iOS message composer with plus, Tap to type, hold to dictate, and the voice-message waveform."
+        }
+    },
+    {
+        "id": "ios-custom-emoji",
+        "kind": "simulator",
+        "url": "/docs/ios/custom-emoji.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "bae4a5d2f4c7e628ae45946d5285a02981b4dfe5397ffbb41e5a30338ca185ae",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/messages/ios"],
+        "presentation": {
+            "url": "/docs/ios/custom-emoji.svg",
+            "crop": {
+                "x": 0,
+                "y": 1250,
+                "width": 1206,
+                "height": 550
+            },
+            "highlights": [],
+            "description": "Custom Emoji opens this picker. Choosing an emoji inserts its shortcode into your draft; the grid button beside search opens Emoji Sets.",
+            "alt": "Custom emoji picker with built-in marmots, White Noise logo, search and the Emoji Sets button."
+        }
+    },
+    {
+        "id": "ios-stickers",
+        "kind": "simulator",
+        "url": "/docs/ios/stickers.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "74ce558310d083a3c803b9c5f9a51a87f0773691b97cbf6ae404b4cadc2666cb",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/messages/ios"],
+        "presentation": {
+            "url": "/docs/ios/stickers.svg",
+            "crop": {
+                "x": 0,
+                "y": 1250,
+                "width": 1206,
+                "height": 1350
+            },
+            "highlights": [],
+            "description": "The installed Marmot sticker pack. Tapping a sticker sends immediately; the plus opens Sticker Packs. No sticker was sent for this capture.",
+            "alt": "iOS Stickers picker showing the Marmot pack, Cancel, add-pack button and image-server privacy notice."
+        }
+    },
+    {
+        "id": "ios-dictation",
+        "kind": "simulator",
+        "url": "/docs/ios/dictation.png",
+        "platform": "ios",
+        "build": "2026.11.16 (52)",
+        "source": "c2ee45e980f71f175abba1948022163a9bc11cf1",
+        "configuration": "Debug-Production",
+        "bundleId": "dev.ipf.whitenoise.ios",
+        "executableSha256": "b1d3d4c6a0c5d6442f01b3d1fe5b03fda6c8ddf47e683a11bcff586af788534d",
+        "debugDylibSha256": "5623b81c623628abca6ee824e4770e37f59ca8b7e0821393ef0f01b135df6ce1",
+        "imageSha256": "457ab614c1dde3949a0f01893dce7d37d04fa4a79106f548015d3bec268ebb1a",
+        "language": "English",
+        "theme": "light",
+        "runtime": "iOS Simulator",
+        "device": "iPhone 17",
+        "os": "iOS 27.2",
+        "fixture": "synthetic profile; fictional one-member conversation",
+        "verification": "navigated-simulator; delivery not tested during capture",
+        "cleanupVerified": false,
+        "cleanup": "Synthetic production profile and fictional one-member group retained locally; cleanup not verified. Existing staging app data was not changed.",
+        "capturedAt": "2026-11-17",
+        "dimensions": {
+            "width": 1206,
+            "height": 2622
+        },
+        "guides": ["using/messages/ios", "settings/ios"],
+        "presentation": {
+            "url": "/docs/ios/dictation.svg",
+            "crop": {
+                "x": 0,
+                "y": 1785,
+                "width": 1206,
+                "height": 780
+            },
+            "highlights": [],
+            "description": "Appearance includes Hold to Dictate and Speech Model on iOS 26 or later. Ready is the simulator’s reported model status, not a verified speech transcription.",
+            "alt": "Dictation settings with Hold to Dictate on, Speech Model Ready and instructions to release to send, slide up to lock or left to cancel."
         }
     }
 ]

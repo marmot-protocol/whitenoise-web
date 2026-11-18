@@ -36,7 +36,7 @@ describe("user documentation registry", () => {
             expect(page.slug).toMatch(/^[a-z0-9-]+(?:\/[a-z0-9-]+)*$/);
             expect(page.title.length).toBeGreaterThan(3);
             expect(page.markdown).toContain(`# ${page.title}`);
-            expect(["android", "ios", "shared"]).toContain(page.platform);
+            expect(["android", "ios", "linux", "shared"]).toContain(page.platform);
             expect(page.sources.length).toBeGreaterThan(0);
             for (const source of page.sources)
                 expect(source).toMatch(/^https:\/\/github.com\/marmot-protocol\//);
@@ -146,7 +146,7 @@ describe("user documentation registry", () => {
     });
 
     it("continues onboarding on the same platform through message and backup guides", () => {
-        for (const platform of ["android", "ios"]) {
+        for (const platform of ["android", "ios", "linux"]) {
             expect(documentationPage(`get-started/install/${platform}`).next?.url).toBe(
                 `/docs/get-started/first-message/${platform}`
             );
@@ -186,13 +186,23 @@ describe("user documentation registry", () => {
     });
 
     it("switches the same task rather than sending readers to a platform homepage", () => {
-        expect(documentationPage("get-started/first-message/android").counterpart?.url).toBe(
-            "/docs/get-started/first-message/ios"
-        );
-        expect(documentationPage("get-started/first-message/ios").counterpart?.url).toBe(
-            "/docs/get-started/first-message/android"
-        );
-        expect(documentationPage("compatibility").counterpart).toBeNull();
+        for (const platform of ["android", "ios", "linux"]) {
+            expect(
+                documentationPage(`get-started/first-message/${platform}`).platforms.map(
+                    (variant) => variant.url
+                )
+            ).toEqual([
+                "/docs/get-started/first-message/android",
+                "/docs/get-started/first-message/ios",
+                "/docs/get-started/first-message/linux",
+            ]);
+        }
+        expect(documentationPage("compatibility").platforms).toEqual([]);
+        expect(
+            documentationPage("settings/android/translation").platforms.map(
+                (variant) => variant.platform
+            )
+        ).toEqual(["android"]);
     });
 
     it("rejects unknown and traversal-like documentation paths", () => {

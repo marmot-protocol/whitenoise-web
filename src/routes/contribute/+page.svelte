@@ -2,6 +2,7 @@
 import JsonLd from "#lib/components/JsonLd.svelte";
 import Artwork from "#lib/components/site/Artwork.svelte";
 import PageIntro from "#lib/components/site/PageIntro.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Action from "#lib/components/system/Action.svelte";
 import Grid from "#lib/components/system/Grid.svelte";
 import Surface from "#lib/components/system/Surface.svelte";
@@ -34,15 +35,11 @@ const schema = {
 };
 </script>
 
-<svelte:head
-    ><title>Contribute — White Noise</title><link
-        rel="canonical"
-        href="https://www.whitenoise.chat/contribute"
-    /><meta
-        name="description"
-        content="Help build White Noise. Contribute code, design, translations, feedback, or financial support."
-    /></svelte:head
->
+<PageMeta
+    title="Contribute and donate"
+    description="Help build White Noise. Contribute code, design, translations, feedback, or financial support."
+    path="/contribute"
+/>
 <JsonLd {schema} />
 <div class="site-width">
     <div class="contribute-hero">

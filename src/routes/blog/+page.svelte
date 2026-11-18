@@ -1,6 +1,7 @@
 <script lang="ts">
 import JsonLd from "#lib/components/JsonLd.svelte";
 import BlogImage from "#lib/components/site/BlogImage.svelte";
+import PageMeta from "#lib/components/site/PageMeta.svelte";
 import TextLink from "#lib/components/system/TextLink.svelte";
 import type { PageData } from "./$types";
 
@@ -41,14 +42,11 @@ const blogSchema = $derived.by(() => ({
 }));
 </script>
 
-<svelte:head>
-    <title>Blog | White Noise</title>
-    <link rel="canonical" href="https://www.whitenoise.chat/blog" />
-    <meta
-        name="description"
-        content="Latest updates and articles from the White Noise team about secure messaging, privacy, and the Nostr protocol."
-    />
-</svelte:head>
+<PageMeta
+    title="Blog"
+    description="Latest updates and articles from the White Noise team about secure messaging, privacy, and the Nostr protocol."
+    path="/blog"
+/>
 
 <JsonLd schema={blogSchema} />
 

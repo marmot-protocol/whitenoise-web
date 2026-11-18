@@ -35,11 +35,11 @@ describe("blog post page load", () => {
         vi.resetAllMocks();
     });
 
-    it("rejects invalid naddr values", async () => {
+    it("treats invalid naddr values as missing pages", async () => {
         decodeNaddrMock.mockReturnValue(null);
 
         await expect(load(createLoadEvent())).rejects.toMatchObject({
-            status: 400,
+            status: 404,
         });
     });
 
@@ -55,7 +55,7 @@ describe("blog post page load", () => {
         });
     });
 
-    it("rejects the wrong event kind", async () => {
+    it("treats the wrong event kind as a missing page", async () => {
         decodeNaddrMock.mockReturnValue({
             dTag: "post",
             kind: 1,
@@ -63,7 +63,7 @@ describe("blog post page load", () => {
         });
 
         await expect(load(createLoadEvent())).rejects.toMatchObject({
-            status: 400,
+            status: 404,
         });
     });
 
