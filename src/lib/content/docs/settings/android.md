@@ -95,7 +95,7 @@ Images you add here become :shortcode: emoji that you can use in messages and re
 1. Open **Settings > Chats > Custom emoji**, then tap **Choose from Photos** or **Choose from Files** to pick the image you want to add.
 2. Enter a shortcode made of letters, numbers and the _ symbol, then tap **Save**. If the shortcode is already in use, the app warns that the new image will replace your current one. Built-in emoji take precedence for their own shortcodes.
 
-The image must be PNG, GIF, WebP or JPEG and 1 MB or smaller. When a new message (not a reply) uses a custom emoji, the image is encrypted and uploaded to that chat so its members can see it. Reactions, replies and edits send only the shortcode. Removing an emoji deletes it from this device, while messages you already sent keep the image that was uploaded with them. An emoji marked **Display only, can't be sent** can be tapped to remove.
+The image must be PNG, GIF, WebP or JPEG and 1 MB or smaller. When a message, reply or reaction uses a custom emoji, the image is encrypted and uploaded to that chat so its members can see it. An edit sends only the shortcode. Removing an emoji deletes it from this device, while messages you already sent keep the image that was uploaded with them. An emoji marked **Display only, can't be sent** can be tapped to remove.
 
 Emoji sets can add many emoji at once. Loading a set preview or installing a set shares your IP address with the servers that host the images. Use **Install set**, **Update set** and **Check for update** to manage them.
 

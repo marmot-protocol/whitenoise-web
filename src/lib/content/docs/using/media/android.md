@@ -82,7 +82,7 @@ On the chat list, open search and choose a mode under the search bar: **Photos &
 
 ## Download controls
 
-While a download is running, tap **Cancel download**. After **Download cancelled. Tap to download again** or **Tap to retry**, tap the item again. The labels **Queued for download** and **Download paused** come from your Data & storage settings, as does **Download blocked by policy**. Manual downloads always work.
+While a download is running, tap **Cancel download**. After **Download cancelled. Tap to download again** or **Tap to retry**, tap the item again. The labels **Queued for download** and **Download paused** come from your Data & storage settings, as does **Download blocked by policy**. Tapping an item downloads it even when automatic downloads are off, as long as the sender's copy is still available.
 
 ## Data & storage settings
 

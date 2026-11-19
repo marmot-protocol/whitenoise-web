@@ -37,7 +37,7 @@ Open **Settings** > **Account** > **Profile Keys**. The header shows whether the
 
 - **Stays on this device:** Your groups and message history are kept, and so are your drafts. The profile stays available on this device, so you can sign back in from the account picker.
 - **What changes:** Notifications for this account stop and temporary app data is cleared.
-- **Remove invitation keys from relays**: On by default. Stops new group invitations while you are signed out. Turn it off to leave them published.
+- **Remove invitation keys from relays**: On by default. Tries to remove them so you don't receive new group invitations while you are signed out. Turn it off to leave them published.
 
 If the app says some invitation keys may still be on relays, you are signed out but those keys may still be published.
 
