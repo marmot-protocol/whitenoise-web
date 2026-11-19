@@ -12,7 +12,7 @@ White Noise exports identity backups as NIP-49 `ncryptsec1` strings protected by
 
 ## Invitation keys
 
-Invitation keys, also called key packages, are published to your relays so others can add you to groups. You need at least one published to receive new group invitations. On iOS, **Developer Tools > Key Packages** has **Publish New Key Package**. On Android, under **Settings** > **Help & support** > **Developer Tools** > **Key Packages**, **Publish New Key Package** publishes a new one, **Republish** publishes the current key package again without replacing it, and **Delete key package** publishes a deletion event and clears that package from the local cache. See Groups for [Android](/docs/using/groups/android) or [iOS](/docs/using/groups/ios).
+Invitation keys, also called key packages, are published to your relays so others can add you to groups. You need at least one published to receive new group invitations. On both platforms, **Developer Tools > Key Packages** has **Publish New Key Package**. On iOS, turn on **Developer Tools** first. On Android, it is under **Settings** > **Help & support** > **Developer Tools** > **Key Packages**; **Republish** publishes the current key package again without replacing it, and **Delete key package** publishes a deletion event and clears that package from the local cache. See Groups for [Android](/docs/using/groups/android) or [iOS](/docs/using/groups/ios).
 
 ## Android: profile keys
 
@@ -53,19 +53,23 @@ If the result is **Local data wipe incomplete**, some data may remain on the dev
 
 ## iOS: profile keys
 
-Open **Settings > Profile Keys**. Your public key is shown in Hex and npub formats. **Key Status** shows Online when this account's runtime is active and subscribed to its relays. That status describes the runtime only, so it says nothing about whether the key itself is accessible.
+Open **Settings > Profile Keys**. **Public Key** shows your npub only, with a copy button. Under **Private Key**, **Show private key** and **Copy Private Key** each ask for confirmation, then reveal or copy the plaintext key. Doing so permanently marks the key as handled insecurely.
 
-- **Export Encrypted Private Key** creates an ncryptsec1 backup protected by your passphrase. Marmot never stores the passphrase.
-- **Export Private Key** asks you to confirm before it reveals the key in plaintext, and that key is then permanently marked as handled insecurely.
+Under **Back Up Your Private Key**:
+
+- **Back Up With a Password** opens the **Encrypted Private Key** sheet. Enter a **Password** and **Confirm Password**, then tap **Export** to share an ncryptsec1 backup. White Noise never stores the password.
+- **Back Up Without a Password** asks **Export Without a Password?**. Tap **Export Key** to share the plaintext key and permanently mark it as handled insecurely.
 
 ## iOS: sign out and delete profile
 
 Both actions are at the bottom of the main Settings screen and apply to the active profile.
 
-- **Sign Out** opens a sheet. With **Wipe Local Data** off, this profile and its local data stay on this device. With it on, this profile's chats, media and secret key are erased from this device and you leave your groups; type the profile name, then tap **Sign Out and Delete Data**.
+- **Sign Out** opens a sheet. With **Wipe Local Data** off, this profile and its local data stay on this device, and its **Sign In** button on the welcome screen's **Ready to sign in** list still requires its private key. **Sign In with Another Account** uses a different key. With **Wipe Local Data** on, this profile's chats, media and secret key are erased from this device and you leave your groups; type the profile name, then tap **Sign Out and Delete Data**.
 - **Delete Profile** is the iOS counterpart of Android's Sign Out & Wipe. It signs you out and permanently removes this profile's chats, media, drafts, secret key and local settings from this device. You leave your groups, and your other profiles are unaffected. Type the profile name exactly to confirm. If it fails, the screen says Couldn't wipe profile.
 
-> **Warning:** If you sign back in with the same key, you keep your identity, but past groups, messages and media are gone from this device and you will need to be re-invited to any groups. Encrypted messages already delivered to other members, and copies kept by independent relays, stay where they are.
+Leaving chats can take up to a minute, so keep White Noise open until it finishes. If **Cleanup Details** appears, some cleanup didn't finish and the screen lists what was removed and what may remain.
+
+> **Warning:** After deleting a profile or wiping its local data, signing back in with the same key keeps your identity, but doesn't restore past groups, messages or media. You will need new group invitations. Encrypted messages already delivered to other members, and copies kept by independent relays, stay where they are.
 
 > **Warning:** Back up the private key of every profile and confirm a working local recovery method for each encrypted backup before erasing all app data.
 

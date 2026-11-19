@@ -4,12 +4,18 @@ Groups let you chat with several people together.
 
 ## Create a group
 
+<figure><a href="/docs/ios/new-group.svg"><img src="/docs/ios/new-group.svg" alt="New Group member picker with no people yet, search field and Continue." loading="lazy" width="1206" height="2340" /></a><figcaption class="type-small">Choose people before Continue. This synthetic profile has no contacts, so the picker is empty. Select the image to enlarge.</figcaption></figure>
+
 1. In the chat list, tap **New Message**, then **New Group**.
 2. Choose the people you want, then tap **Continue**. Your picks appear under **Selected**.
-3. On **Set Up Group**, name the group and set **Disappearing messages**. A name is required when you start alone; unnamed groups show their members.
+3. On **Set Up Group**, you can add a group photo, a name and a description, and set **Disappearing messages**. The photo and description are optional. A name is required when you start alone; with members selected, an unnamed group shows its members instead.
 4. Tap **Create**.
 
-Expected result: the group opens. A group with only you shows **Only you are here**; tap **Add members** to invite people. Tap **Retry** when the chat fails to start. **Chat unavailable** may mean the chat is still syncing, so wait a moment and tap **Retry**.
+If White Noise can't invite someone, for example because they haven't set up White Noise, or their app needs an update, the group is still created for the others and a **Couldn't add** warning names the people it left out. If none of the people you chose can be added, no group is created and **Couldn't create chat** explains why.
+
+Expected result: the new group appears in your chats. Tap it to open it. A group with only you shows **Only you are here**; tap **Add members** to invite people. Tap **Retry** when the chat fails to start. **Chat unavailable** may mean the chat is still syncing, so wait a moment and tap **Retry**.
+
+<figure><a href="/docs/ios/group-setup.svg"><img src="/docs/ios/group-setup.svg" alt="Set Up Group with empty name and description, disappearing messages off and Create disabled." loading="lazy" width="1206" height="2340" /></a><figcaption class="type-small">Set Up Group is an unfinished form here. A group started alone needs a name; no group was created during capture. Select the image to enlarge.</figcaption></figure>
 
 ## Open group info
 
@@ -32,7 +38,7 @@ To change the picture, tap the group photo. If an update fails, check your conne
 - **Add:** tap **Add People**, then tap **Invite** after selecting people.
 - **Remove:** open a member's actions and choose **Remove**.
 - **Change roles:** in the same actions, choose **Make Admin** or **Remove Admin**.
-- **Step down:** tap **Step Down as Admin**. If you're the last admin, make someone else admin first.
+- **Step down:** tap **Step Down as Admin**. If you're the only admin, make someone else admin first.
 - **From a profile:** under **Groups in Common**, tap **Add to Group**. It lists groups you administer that the person has yet to join.
 
 Admins are labeled **Admin** and listed first. If an action fails, check your connection and retry it.
@@ -65,12 +71,12 @@ Tap **Notifications**. Under **Notify me about**, choose **All messages**, **Onl
 
 > Leaving stops new messages. History stays on this device until you delete it.
 
-- **Leave:** in Group Info, choose the leave action and confirm at **Leave this group?** In the chat list, you can also choose **Leave Chat**. The row then shows **Left chat**, or **Removed from chat** if someone removed you. **Filter** finds these chats.
+- **Leave:** in Group Info, tap **Leave Group**, then confirm with **Leave** at **Leave this group?** If you're the only admin, leaving is blocked until you make another member an admin; if a leave is already stuck for that reason, tap **Cancel Leaving**. In the chat list, you can also choose **Leave Chat**. The row then shows **Left chat**, or **Removed from chat** if someone removed you. **Filter** finds these chats.
 - **Archive:** tap **Archive**. It hides the chat from your main list and doesn't notify anyone.
 
 > Deleting permanently removes the chat and its messages from this device. Signing in again won't restore them.
 
-- **Delete:** tap **Delete Local Copy**. In the chat list, choose **Delete Chat**. To delete several, tap **Select chat** and choose **Delete Chats**.
+- **Delete:** after you have left, were removed, or the group has ended, Group Info offers **Delete Local Copy**; it doesn't send a leave request. In the chat list, choose **Delete Chat**. To delete several, tap **Select chat** and choose **Delete Chats**.
 
 > Ending a group removes everyone permanently. No one can send messages or make changes afterward.
 
@@ -92,7 +98,7 @@ Tap **Rejoin Group** or **Decline Invitation**, or **Cancel** to decide later. I
 
 In Group Info, open **Chat Developer Tools**, tap **Delete Local Group**, and confirm.
 
-**Quarantined groups.** White Noise quarantines a stored group when it can't safely load the encryption state. Go to **Settings > Developer Tools > Quarantined Groups** and tap **Retry Recovery**. Tap **Retry Loading** when **Load Failed** appears. A retry keeps your history. Validation and membership also stay as they are. If **Recovery retry failed** appears, try later. The screen reports when every stored group loads.
+**Quarantined groups.** White Noise quarantines a stored group when it can't safely load the encryption state. Open **Settings > Developer Tools**, turn on **Developer Tools**, then open **Quarantined Groups**. For most reasons, tap **Retry Recovery**. Tap **Retry Loading** when **Load Failed** appears. A retry keeps your history, and validation and membership stay as they are. If **Recovery retry failed** appears, try later. For **Rewind restore failed**, there is no retry. Restart the app to restore the group. The screen reports when every stored group loads.
 
 ## Related
 

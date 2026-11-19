@@ -4,12 +4,14 @@
 
 The top of Settings shows your profile and up to three other signed-in profiles, with a +number badge when you have more. **Switch Profile** and **Add Profile** are here too. The bottom of the screen holds **Delete Profile** and **Sign Out**, and the app version (White Noise · version) appears there as well.
 
+<figure><a href="/docs/ios/settings.svg"><img src="/docs/ios/settings.svg" alt="iOS Settings showing the synthetic profile and the main settings destinations." loading="lazy" width="1206" height="2240" /></a><figcaption class="type-small">Your profile and Add Profile appear above the main settings. This example has one signed-in profile. Select the image to enlarge.</figcaption></figure>
+
 ## Profiles
 
 - **Switch Profile** lets you choose a signed-in profile or add a new one.
 - **Profile** shows your Name and About text, plus a Verified Nostr Address (an address like name@example.com). Tap **Edit** to change them, then **Done** to save. Tap **Retry** if saving fails. See [Profiles](/docs/using/profiles/ios).
-- **Share & Connect** has a **Mode** picker, **Share Profile URL**, **Share Profile Picture**, **Share Profile**, and a QR code that someone can scan to connect with you. The share card says: On White Noise? Message me here. In Connect mode, scan someone's profile QR code to open their profile.
-- **Profile Keys** shows your public key in Hex and npub formats along with the key status. Export options are here too. See [Identity and keys](/docs/settings/identity).
+- Tap your **profile card at the top of Settings** to open **Share & Connect**. **Share** shows your QR code and sharing actions; **Connect** scans someone else's profile QR code. This isn't a separate Settings row.
+- **Profile Keys** shows your public `npub` and private-key backup controls: **Back Up With a Password** or **Back Up Without a Password**. Showing or copying the private key requires confirmation. See [Identity and keys](/docs/settings/identity).
 - **Relays** has Account Relays and Inbox Relays. See [Relays](/docs/settings/relays).
 
 ## Appearance
@@ -17,18 +19,25 @@ The top of Settings shows your profile and up to three other signed-in profiles,
 | Control | Effect |
 |---|---|
 | Theme | Follow your device appearance, or always use a light or dark theme. |
+| Density | Choose **Compact**, **Standard** or **Comfortable** spacing. |
 | Language | **System** follows your device language. Other choices update White Noise immediately. |
-| Return Key Sends | When on, the Return key sends your message. When off, it starts a new line. |
 | Show Link Previews | Shows the title and image of links in chats. Loading a preview reveals your IP address to the linked website and to the site that hosts its image. |
+| Hold to Dictate | On iOS 26 or later, hold the message field with the keyboard hidden and release to send recognized text. On by default; the **Dictation** section also shows **Speech Model** status and **Download Speech Model** when needed. |
+
+Return adds a new line; there is no **Return Key Sends** toggle in this build. Dictation transcribes speech on this device without saving or sending its audio, but iOS may download a speech model from Apple. See [Hold to dictate](/docs/using/messages/ios#hold-to-dictate) for cancellation, locking, supported languages and release-to-send behavior.
+
+<figure><a href="/docs/ios/appearance.svg"><img src="/docs/ios/appearance.svg" alt="Appearance settings with System theme, Standard density, Language and Show Link Previews off." loading="lazy" width="1206" height="2280" /></a><figcaption class="type-small">Choose theme, density and language here. Link previews are off; the Dictation section follows below. Select the image to enlarge.</figcaption></figure>
+
+<figure><a href="/docs/ios/dictation.svg"><img src="/docs/ios/dictation.svg" alt="Dictation settings with Hold to Dictate on, Speech Model Ready and instructions to release to send, slide up to lock or left to cancel." loading="lazy" width="1206" height="780" /></a><figcaption class="type-small">Appearance includes Hold to Dictate and Speech Model on iOS 26 or later. Ready is the simulator’s reported model status, not a verified speech transcription. Select the image to enlarge.</figcaption></figure>
 
 ## Notifications
 
 | Control | Effect |
 |---|---|
-| Local Notifications | Creates message notifications on this iPhone. Without Native Push, they may arrive only when White Noise is active. |
-| Native Push | Uses a generic wake-up signal to check for new messages in the background. Message details stay on this iPhone. |
+| Local Notifications | Under **Current Profile**, creates message notifications on this iPhone for this profile. Without Native Push, they may arrive only when White Noise is active. |
+| Native Push | Under **Current Profile**, uses a generic wake-up signal to check for new messages in the background. Message details stay on this iPhone. |
 | Mentions in Muted Chats | Mentions of you still notify in muted chats, including chats set to Nothing. Applies to all profiles on this device. |
-| Notification Preview | Controls how much message information a notification shows. See the modes below. |
+| Notification Preview | Under **All Profiles on This Device**, controls how much message information a notification shows. See the modes below. |
 
 | Preview mode | Example for a group chat message |
 |---|---|
@@ -36,14 +45,15 @@ The top of Settings shows your profile and up to three other signed-in profiles,
 | Sender Only | Captain Acorn sent a message |
 | Generic | General wording that leaves out the sender and the message |
 
-If notifications are off, tap **Allow Notifications**. You can also tap **Open Settings** and turn them on in iOS Settings. A Developer section has APNS token and registration actions for testing. See [Notifications](/docs/using/notifications/ios).
+If notifications are off, tap **Allow Notifications** or **Open Settings**, as offered, and allow them in iOS Settings. Preview and mention controls need Local Notifications enabled and authorized. **Try Again** under Native Push retries incomplete push setup. A Developer section appears with Developer Tools enabled. See [Notifications](/docs/using/notifications/ios).
 
 ## Data usage
 
-- **Auto-Download**: Media that isn't downloaded automatically shows a download button. **Reset Auto-Download Settings** restores the defaults.
-- **Remote Media**: When on, opening a conversation can tell GIPHY your IP address and which GIF was requested. When off, received GIFs load only when you tap them.
-- **Sent Media > Photos and Videos**: Sets the quality of photos and videos you send. Higher quality uses more data. Identifying photo metadata, such as location, is always removed before sending.
-- **Download Storage**: Sets how much free space to keep on this device and the size limit for automatic downloads, for this profile. A download waits when it would leave less free space than your setting, and continues when you free up space.
+- **Auto-Download**: Set Photos, Audio, Videos and Files to **Never**, **Wi-Fi Only** or **Wi-Fi and Cellular**. Wi-Fi Only excludes personal hotspots and Low Data Mode. **Reset Auto-Download Settings** appears after changing the defaults.
+- **Automatically Load Remote GIFs**: When on, opening a conversation can tell GIPHY your IP address and which GIF was requested. When off, received GIFs load only when you tap them.
+- **Sent Media Quality**: Choose **Standard** or **High** for **Photos and Voice Notes**. Identifying photo metadata is removed at both levels. Videos are sent unchanged; check them for identifying details yourself.
+
+The reviewed build no longer offers the older **Download Storage** settings screen.
 
 ## Manage storage
 
@@ -61,8 +71,8 @@ See [Media](/docs/using/media/ios).
 
 | Control | Effect |
 |---|---|
-| Hide Screen in App Switcher | Hides app content in the app switcher, and while iOS detects screen recording or sharing. Regular screenshots still work. |
-| App lock toggle (Face ID/Touch ID/passcode) | Locks White Noise when you leave. The toggle label names the method available on this iPhone, and your iPhone passcode works when biometric authentication is unavailable. The toggle needs an iPhone passcode; until you set one, it is disabled and the screen says Set an iPhone passcode to lock White Noise. |
+| Hide Sensitive Content | Hides app content in the app switcher, and while iOS detects screen recording or sharing. Regular screenshots still work. |
+| Require Face ID / Touch ID / Optic ID / passcode | Locks White Noise when you leave. The toggle label names the available method, and your device passcode works when biometric authentication is unavailable. Set a device passcode first. |
 | Auto-Lock | Appears while the lock is on. Choose immediately, after 1 minute, after 5 minutes or after 15 minutes. |
 | Diagnostics & Improvements | Shows a summary of your sharing choice and opens the diagnostics controls. See [iOS diagnostics](/docs/settings/ios/diagnostics). |
 | Blocked Users | Lists the people you have blocked. See below. |
@@ -98,7 +108,7 @@ Both actions are at the bottom of the main Settings screen and apply to the acti
 - **Sign Out** opens a sheet. With **Wipe Local Data** off, your profile and chats stay on this device; tap **Sign Out**. With it on, this profile's chats, media and secret key are erased from this device, and you leave your groups. Type the profile name under **Profile name**, then tap **Sign Out and Delete Data**. If signing out fails, the sheet says Couldn't sign out. Try again.
 - **Delete Profile** signs you out and permanently removes this profile's chats, media, drafts, secret key and local settings from this device. You leave your groups, and your other profiles are unaffected. Type the profile name under **Profile name** to enable the button. If it fails, the screen says Couldn't wipe profile.
 
-Copies of messages and profile information held by other people or independent relays may remain. If other profiles are signed in, you choose one to continue after signing out.
+Copies of messages and profile information held by other people or independent relays may remain. Cleanup can take up to a minute: keep White Noise open until it finishes. Check **Cleanup Details** if some cleanup couldn't finish. If other profiles are signed in, choose one to continue; otherwise use **Sign In**. A saved profile under **Ready to sign in** still needs its private key.
 
 Read [Identity and keys](/docs/settings/identity) before you use either one.
 
@@ -107,9 +117,11 @@ Read [Identity and keys](/docs/settings/identity) before you use either one.
 | Topic | iOS | Android |
 |---|---|---|
 | Theme | Device, light or dark | Adds AMOLED, action color and chat bubble colors |
-| Enter key | Return Key Sends toggle | Enter key behavior choice, and Shift+Enter always adds a new line |
-| Swipe actions, folders, read aloud, dictation, translate, custom emoji | Absent from iOS Settings | Separate settings screens |
-| Screen privacy | Hide Screen in App Switcher, and screenshots still work | Screen security blocks screenshots |
+| Enter key | Return adds a new line | Enter key behavior choice, and Shift+Enter always adds a new line |
+| Dictation | Hold the message field on iOS 26+; switch and model status in Appearance | Separate dictation settings |
+| Custom emoji and stickers | Composer **+** menu, with emoji sets and sticker packs | Separate controls and settings |
+| Folders, read aloud and translate | No corresponding iOS settings | Separate settings screens |
+| Screen privacy | Hide Sensitive Content, and screenshots still work | Screen security blocks screenshots |
 | App lock | Face ID/Touch ID/passcode, with Auto-Lock delay | Device screen lock, with Auto-lock |
 | Removing data | Sign Out (with optional Wipe Local Data) and Delete Profile in Settings, Erase App Data in Privacy & Security | Sign Out and Sign Out & Wipe in Profile Keys |
 | Bug reports | Chat with support | Report a bug (public GitHub) and Chat with support |

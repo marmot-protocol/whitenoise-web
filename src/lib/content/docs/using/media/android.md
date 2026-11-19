@@ -21,6 +21,7 @@ Send photos, videos, files, and voice messages, view what you receive, and choos
    - Mark each item **Included** or **Excluded**, and check its **Send position**.
    - Play a video with **Play**, **Back 10 seconds**, **Forward 10 seconds**, **Playback Speed**, and **Mute**.
    - Tap **Remove attachment** to drop an item.
+   - Tap a PDF, HTML, Markdown or text file to read it before sending. This preview has no share or save actions, and it closes when you remove or send the file.
 3. Tap **Send** and watch progress move from **Preparing** and **Encrypting** to **Uploading**. If you see **Upload failed**, tap **Retry**.
 
 One send holds up to 100 items. Items beyond 100 are left out, and White Noise tells you how many didn't fit. Large selections are sent as several messages of up to 10 items each. If an item can't be prepared, it isn't sent and White Noise reports how many were skipped.
@@ -61,6 +62,7 @@ The **Audio transcript** is labeled **Generated transcript · not the sender's t
 - Photos: use **Zoom in**, **Zoom out**, **Fit image**, or **Actual size (1:1)**. **Show or hide controls** toggles the toolbar.
 - Voice messages: **Play voice message**, with an adjustable playback speed.
 - Files: tap **Open**. If you see **No app installed to open this file**, save the file instead. Text files open in a reader with **Read Aloud**, **Copy text**, **Save**, and **Open in another app**.
+- PDF and HTML files open in White Noise's own reader. Tap **Share**, or open **More options** for **Save** and **Open in another app**. Pinch or double-tap a PDF page to zoom. HTML opens on **Rendered**, without images, styles or embedded content, and **Source** shows the file's code. A link in the file asks for confirmation before it opens. If a file can't be previewed, tap **Retry** or **Open in another app**.
 - **Too large to preview**: save or share the file to view it in another app.
 - APK files: only install them from a source you trust. If you see **This build can't install APK attachments.**, save the file and open it from a trusted installer.
 
