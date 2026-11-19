@@ -10,17 +10,19 @@ Contacts help you find people and start conversations with them. You can also ke
 
 Results appear in four groups: **People in chats**, **Following**, **Network results**, and **On this device**. A **You follow** tag marks people you already follow. An address tagged **Address not verified** is still waiting for White Noise to confirm it, and if that check fails, tap **Retry** to run it again.
 
-To bring in someone new, tap **Invite a friend** and share the invitation. It includes the download link.
+To bring in someone new, tap **Invite a friend** and share the invitation. It includes the download link. **Talk to your agent** opens the AI agents settings, where you set up an agent you can message like a contact.
 
 ## Use a person's profile
 
-The **User Profile** screen shows the person's name, pictures, any **Verified Nostr address**, and Lightning address. Tap **Message** to chat or **Copy public key** to copy their key. Under **Profile Actions**:
+The **User Profile** screen shows the person's name, pictures, any **Verified Nostr address**, and Lightning address. Tap **Message** to chat. Tap their public key to copy the full key; it shows **Copied**. Under **Profile Actions**:
 
 - **Add Contact** follows the person, and **Remove Contact** unfollows them.
 - **Start group** creates a group with them. **Add to a group** lists the groups you administer that they can still join; select groups and tap **Add to groups**.
 - **Groups in Common** lists the groups you share.
 - **Make admin in groups** promotes them in groups you administer where they are already a member.
+- **Mute in this group** and **Unmute in this group** appear when you open the profile from a group, and apply to that group.
 - **Block** and **Unblock** switch blocking on or off for this person.
+- **Report to White Noise team** appears for other people once White Noise confirms the team can receive reports. Add optional details and tap **Send report**. Your report and their public key are sent privately to the team. No messages are shared and the person isn’t notified. If sending fails, the app says so; try again later, since there is a limit on reports from one account.
 
 ## Add a nickname and notes
 

@@ -12,29 +12,41 @@ White Noise exports identity backups as NIP-49 `ncryptsec1` strings protected by
 
 ## Back up your private key
 
-<figure><a href="/docs/android/backup-dialog.svg"><img src="/docs/android/backup-dialog.svg" alt="Encrypted Private Key dialog with empty password and confirmation fields." loading="lazy" width="360" height="368" /></a><figcaption class="type-small">Use a long, unique password and confirm it before exporting your encrypted private key. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/backup-dialog.svg"><img src="/docs/android/backup-dialog.svg" alt="Encrypted Private Key dialog with empty password and confirmation fields." loading="lazy" width="360" height="416" /></a><figcaption class="type-small">Use a long, unique password and confirm it before exporting your encrypted private key. Select the image to enlarge.</figcaption></figure>
 
-1. Open Settings, then **Profile Keys**.
+1. Go to **Settings** > **Account** > **Profile Keys**.
 2. Under **Export**, tap **Export Encrypted Private Key**.
-3. Enter a **Password** and repeat it in **Confirm password**. Choose a long, unique password; the **Strength** meter rates it from Too short to Strong passphrase.
-4. Tap **Export** to save the backup, or tap **View backup** to see it first.
-5. Finish the save in the file location or sharing app you picked.
+3. Enter a **Password** and repeat it in **Confirm password**. Choose a long, unique password; the **Strength** meter rates it from **Too short** to **Strong passphrase**. You need this password to open the file.
+4. Tap **Export** to save the backup to a file you choose, or tap **View backup** to see it first.
+5. Finish the save in the file location you picked.
 
-Expected result: an encrypted backup stored in the destination you chose. Tapping **Export** starts the process, and your backup exists only once that destination has saved it, so check it’s there. Keep the password somewhere separate from the backup, because you need both to restore. The **Your encrypted backup** preview hides after 30 seconds or when you leave the screen.
+Expected result: an encrypted backup file in the location you chose. Your backup exists only once that location has saved it, so check it’s there. Keep the password somewhere separate from the backup, because you need both to restore.
 
-**Export Private Key** produces the unencrypted key. Anyone who has it can use your profile, and sharing it exposes it to the app you choose. Use the encrypted backup, or keep the raw key only in a trusted password manager.
+**View backup** opens **Your encrypted backup** with **Copy** and **Export**. The preview hides after 30 seconds or when you leave the screen. A copied backup is cleared from the clipboard after about a minute.
+
+### Copy or export the raw private key
+
+Anyone who has your private key controls your profile, and it can’t be recovered or reset. Use the encrypted backup, or keep the raw key only in a trusted password manager.
+
+- **Show private key** reveals the key on this screen. It doesn’t copy or share it.
+- **Copy Private Key** copies it to the clipboard, marked as sensitive. White Noise clears it after about 60 seconds, even if you leave the screen. The clear is skipped if you copy something else in the meantime. Android may run it a little late, so paste the key right away and don’t rely on the timer.
+- **Export Private Key** opens **Keep Your Private Key Safe**. Choose **Share** to send the plain-text key to an app you pick, or **Export Private Key** to save it as a plain-text file with no password. Sharing exposes the key to the app you choose.
+
+You can use the same private key to sign in to other Nostr apps as the same identity, with the same public key. Give it only to apps you trust to hold it, or keep it in a signer app like Amber, which signs for other apps without handing them the key.
 
 If Profile Keys shows **Signed in with Amber**, Amber holds this profile’s private key. Manage backups in Amber.
 
 ### If an export stops
 
-- **Export expired**: return to Profile Keys and start again. The export ended before any key data was written.
-- If saving to a file fails, pick another location and try again.
-- If sharing fails to open, choose another app or save the backup to a file instead.
+- **Export expired**: return to Profile Keys and start again. No key data was written.
+- **Couldn’t Save File**: choose another location and try again.
+- **Couldn’t open sharing**: choose another app or save the key to a file instead.
 
 ## Sign out
 
-On Profile Keys, under **Account session**, tap **Sign Out**. Sign-out keeps this account’s local data on the device, including groups, message history, drafts, and this profile's saved sign-in information. Notifications for this account stop while you’re signed out. To block new group invitations as well, turn on **Remove invitation keys from relays**. Sign back in from the account picker to return.
+Back up your private key first if you haven’t. On **Settings**, or on Profile Keys under **Account session**, tap **Sign Out**. Sign-out keeps this account’s local data on the device, including groups, message history and drafts, along with the saved sign-in. Notifications for this account stop and temporary data is cleared while you’re signed out. Sign back in from the account picker to return.
+
+The sign-out sheet has a **Remove invitation keys from relays** switch, which starts on. While it is on, signing out removes your published invitation keys from relays, so nobody can invite you to new groups until you sign in again. Turn it off to leave them published.
 
 A notice that some invitation keys may still be on relays means sign-out finished while relay cleanup is incomplete.
 

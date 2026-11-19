@@ -1,14 +1,36 @@
 # Android settings
 
-Settings has three groups: **Account**, **App** and **Support**. When a setting applies to the active profile or to every profile on the device, its section says so.
+Open **Settings** from the main screen. Its rows sit in three unlabeled groups. The first holds **Account**, the second **Notifications**, **Chats**, **Appearance**, **Voice & language**, **Privacy & Security** and **Data & storage**, and the third **AI Agents** and **Help & support**. Each setting says whether it applies to the active profile or to every profile on this device.
 
 ## Settings layout
 
-Your profile and avatar appear at the top, with **Edit profile picture**, **Open Share & Connect**, **Add Profile** and **Switch Profile**. **Sign Out** is also on this screen, and the app version is shown at the bottom.
+Your profile and avatar appear at the top, with **Edit profile picture** and **Open Share & Connect**. The same group holds **Account** and **Add Profile**, which becomes **Switch Profile** once you have two or more profiles. The other settings follow in groups, then **Sign Out** and the app version. Search is the **Search settings** icon in the toolbar.
 
-<figure><a href="/docs/android/settings.svg"><img src="/docs/android/settings.svg" alt="Profile, Profile Keys and Relays in the Account section." loading="lazy" width="1080" height="630" /></a><figcaption class="type-small">The Account section contains Profile, Profile Keys and Relays. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/settings.svg"><img src="/docs/android/settings.svg" alt="Settings rows from Account and Switch Profile to Help &amp; support, with Account outlined." loading="lazy" width="1080" height="1600" /></a><figcaption class="type-small">Settings opens with Account first, then a row for each area. Select the image to enlarge.</figcaption></figure>
+
+### Search settings
+
+<figure><a href="/docs/android/settings-search.svg"><img src="/docs/android/settings-search.svg" alt="Settings search for font showing Font size and App font, both under Appearance." loading="lazy" width="360" height="235" /></a><figcaption class="type-small">Search settings by name. Each result names the screen it belongs to. Select the image to enlarge.</figcaption></figure>
+
+Type in **Search settings** to find a setting by name. Choosing a result opens that screen. If nothing matches, the app shows **No settings found. Try another word.**
+
+### App updates
+
+On builds installed outside an app store, the **App updates** row shows **Up to date**, a note that a newer version is available on Zapstore, or **Check for updates**. If a check fails, the row shows **Couldn't check for updates. Tap to retry.** When a newer version is available, the row moves up below your profile group. Otherwise it sits near the version at the bottom.
+
+### Add or switch a profile
+
+**Add Profile** signs in another profile on this device. With two or more profiles, the row becomes **Switch Profile**, which changes the active profile. See [Profiles](/docs/using/profiles/android).
+
+### Sign Out
+
+Signing out keeps your groups, message history and drafts on this device. **Sign Out & Wipe** is different. It permanently deletes this profile's messages and group encryption data and removes its key from this device. It also removes its invitation keys from relays. Back up your private key first. See [Identity and keys](/docs/settings/identity).
 
 ## Account
+
+<figure><a href="/docs/android/settings-account.svg"><img src="/docs/android/settings-account.svg" alt="Account settings with Profile, Profile Keys and Relays." loading="lazy" width="1080" height="700" /></a><figcaption class="type-small">Account contains Profile, Profile Keys and Relays. Select the image to enlarge.</figcaption></figure>
+
+**Account** contains **Profile**, **Profile Keys** and **Relays**.
 
 ### Profile
 
@@ -29,11 +51,11 @@ Edit your name, picture and other profile details. See [Profiles](/docs/using/pr
 
 ### Profile keys
 
-**Profile Keys** shows your public and private keys together with the account session status. It also holds these actions:
+**Profile Keys** shows your public and private keys together with the account session status. The private key rows below appear only for a profile that signs with its own key. A profile signed in with Amber keeps its key in Amber.
 
-- **Export**, for backing up your private key.
-- **Sign Out**.
-- **Sign Out & Wipe**.
+- **Copy Private Key** puts the key on the clipboard. Any app that reads the clipboard can see it, and the app clears the clipboard after about 60 seconds, though Android may run the clear late.
+- **Export Encrypted Private Key** and **Export Private Key** save a backup. The plain-text export shows a warning first, because anyone who has the key controls your account.
+- **Sign Out** and **Sign Out & Wipe**, described under [Sign Out](#sign-out).
 
 Some of these actions are permanent, so read [Identity and keys](/docs/settings/identity) before you use them.
 
@@ -41,47 +63,51 @@ Some of these actions are permanent, so read [Identity and keys](/docs/settings/
 
 This screen controls where your profile publishes information and receives invitations. See [Relays](/docs/settings/relays).
 
-## Appearance
+## Chats
 
-| Control | Options | Scope and effect |
-|---|---|---|
-| Theme | System default, Light, Dark, AMOLED | System default follows your device. AMOLED uses pure-black backgrounds with customizable bubble outlines. |
-| Action color | One accent per theme | Applies to the active profile and leaves backgrounds and neutral surfaces as they are. In AMOLED, action buttons are always white. **Reset to default** undoes your change. |
-| Chat bubble colors | Your messages, Other messages | Sets default bubble colors for the current theme. In AMOLED these colors apply to outlines, and bubble interiors stay pure black. A single chat can override these colors in every theme, and **Reset to global colors** removes that override. |
-| Custom emoji | Choose from Photos or Choose from Files | See below. |
-| Language | System default, English, Deutsch, Español, Français, Italiano, Português, Русский, Türkçe, 简体中文, 繁體中文 | Sets the app language. |
-| App font | System and other fonts | Sets the app font. |
-| Font size | Small, Default, Large, Extra large | Applied on top of your device font-size setting. |
-| Enter key behavior | Send message, New line | On a hardware keyboard, Shift+Enter always inserts a new line. |
-| Quick account switching | On or off | Shows your other accounts beside your avatar so you can switch with one tap. |
+**Chats** contains **Folders**, **Swipe actions**, **Composer**, **Chat header shortcuts**, **Enter key behavior**, **Custom emoji** and **Quick account switching**.
 
-The color picker has Hue, Saturation and Brightness sliders and a Hex color field that takes six hexadecimal digits, for example 1D4ED8 after the # sign.
+| Control | Effect |
+|---|---|
+| Enter key behavior | **Send message** or **New line**. On a hardware keyboard, Shift+Enter always inserts a new line. |
+| Quick account switching | Shows your other profiles beside your avatar so you can switch with one tap. |
 
-<figure><a href="/docs/android/appearance.svg"><img src="/docs/android/appearance.svg" alt="The four Theme options in Android Appearance settings." loading="lazy" width="1080" height="960" /></a><figcaption class="type-small">Choose System default, Light, Dark or AMOLED under Theme. Select the image to enlarge.</figcaption></figure>
+### Composer
+
+**Composer** is described as "Shortcuts, order and layout". It sets what the buttons beside the message box do.
+
+- **Layout** is **Automatic** or **Always expanded**.
+- Each side has its own shortcuts. Use **Move earlier**, **Move later**, **Add shortcut** and **Remove shortcut** to arrange them.
+- Available shortcuts are Emoji, Paste, Dictation, Translate, Voice note, Camera, Gallery, Files, Location, Person, Contact, Poll and Sticker. Location sends your position once, as a map link.
+- **Voice note** sets where the voice control sits.
+- **Reset to default** restores the layout.
+
+### Chat header shortcuts
+
+**Chat header shortcuts** adds buttons beside the chat name at the top of every chat. None are on at first. Check any of **Search in chat**, **Mute / unmute**, **Read messages aloud**, **Disappearing messages**, **Members** and **Add Members**. The header shows as many as fit beside the chat name, in the order you check them.
+
+A button appears only in chats where it applies. **Members** shows in groups, **Disappearing messages** and **Add Members** show where you're allowed to change them, and **Read messages aloud** needs a speech engine on the device. Muting asks for how long, while unmuting applies right away. The choice applies to this device only.
 
 ### Custom emoji
 
 Images you add here become :shortcode: emoji that you can use in messages and reactions, and they are stored on this device.
 
-1. Open **Settings > Appearance > Custom emoji**, then tap **Choose from Photos** or **Choose from Files** to pick the image you want to add.
-2. Enter a shortcode made of letters, numbers and the _ symbol, then tap **Save**. If the shortcode is already in use, the app warns that the new image will replace your current one.
+1. Open **Settings > Chats > Custom emoji**, then tap **Choose from Photos** or **Choose from Files** to pick the image you want to add.
+2. Enter a shortcode made of letters, numbers and the _ symbol, then tap **Save**. If the shortcode is already in use, the app warns that the new image will replace your current one. Built-in emoji take precedence for their own shortcodes.
 
-The image must be PNG, GIF, WebP or JPEG and 1 MB or smaller. When a new message (not a reply) uses a custom emoji, the image is encrypted and uploaded to that chat so its members can see it. Reactions, replies and edits send only the shortcode. Removing an emoji deletes it from this device, while messages you already sent keep the image that was uploaded with them. An emoji marked **Display only, can't be sent** can be tapped to remove it.
+The image must be PNG, GIF, WebP or JPEG and 1 MB or smaller. When a message, reply or reaction uses a custom emoji, the image is encrypted and uploaded to that chat so its members can see it. An edit sends only the shortcode. Removing an emoji deletes it from this device, while messages you already sent keep the image that was uploaded with them. An emoji marked **Display only, can't be sent** can be tapped to remove.
 
-## Swipe actions
+Emoji sets can add many emoji at once. Loading a set preview or installing a set shares your IP address with the servers that host the images. Use **Install set**, **Update set** and **Check for update** to manage them.
+
+### Swipe actions
 
 The **Messages** and **Chats** sections each have a **Swipe left** and a **Swipe right** row. Left and right describe the direction your finger moves, so an explicit choice stays the same when you change the app language. **Default** follows the reply direction for your language, and the row shows the action it currently resolves to, such as Default: Reply. Chat swipes are off by default.
 
-| Section | Actions shown in Settings |
-|---|---|
-| Messages | Default, Reply, Forward, React, Off |
-| Chats | Read / unread, Mute / unmute, Pin / unpin, Off |
+Choices are Default, Off, Reply, React, Forward, Mute / unmute, Pin / unpin and Read / unread. Each message or chat row still decides whether the chosen action applies to it. **Pull down to show unread chats** is on by default. When it is on, pulling down on the chat list shows only unread chats, and **Show all** returns to the full list. **Reset to default** restores the defaults.
 
-Each message or chat row still decides whether the chosen action applies to it. **Pull down to show unread chats** is on by default. When it is on, pull down on the chat list to show only unread chats, and tap **Show all** to return. **Reset to default** restores the defaults.
+### Folders
 
-## Folders
-
-<figure><a href="/docs/android/chat-folders.svg"><img src="/docs/android/chat-folders.svg" alt="Folders screen with Unread, Archived and Groups, plus add and row-menu controls." loading="lazy" width="360" height="315" /></a><figcaption class="type-small">Folders organize chats. Use the plus button to add one and the row menu to manage it. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/chat-folders.svg"><img src="/docs/android/chat-folders.svg" alt="Folders screen with Unread, Archived, Groups and Work folders, reorder handles, row menus and Restore Default Folders." loading="lazy" width="360" height="505" /></a><figcaption class="type-small">Reorder, edit or add folders. Restore Default Folders brings back missing built-in folders. Select the image to enlarge.</figcaption></figure>
 
 Folders sort your chat list into groups of chats, and deleting a folder leaves your chats where they are.
 
@@ -108,34 +134,40 @@ If you leave with unsaved changes, the app asks whether to **Discard Changes** o
 
 Some folders use older saved rules. For these, chats that match any person or keyword must also meet every selected category, and a removed chat that still matches comes back. If a rule set can't be read, automatic matching is turned off until you replace the rules. **Replace rules** keeps the folder name and included chats.
 
-## Notifications
+## Appearance
 
-If notification permission is off, tap **Allow notifications**. You can also turn notifications on in Android Settings.
+**Appearance** has **Theme & colors** and **Text & language** sections, with **Date and time** under Text & language, and a readability preview.
 
-| Control | Effect |
-|---|---|
-| Push notifications | When new activity may be available, the app wakes briefly and checks securely for messages. See below for when this option is unavailable. |
-| Local notifications | Keeps a persistent connection open while notifications are on. |
-| Device status | Shows whether notification permission is Allowed or Blocked, and the battery policy: Optimized, Unrestricted, Restricted or Unavailable. Battery policy can delay background delivery with either option. The status updates when you come back to this screen. |
-| Notification categories | Direct messages, Group messages, Mentions, Reactions, Invites, Group membership changes, Agent activity, App updates and Notification summary. Android controls the sound, vibration and importance of each category. |
-| Show notification previews | When off, names and message content are hidden. Applies to all accounts. If the app shows Changes may be lost after restarting, tap **Retry**. |
+| Control | Options | Scope and effect |
+|---|---|---|
+| Theme | System default, Light, Dark, AMOLED | System default follows your device. AMOLED uses pure-black backgrounds with customizable bubble outlines. |
+| Action color | One accent per theme | Applies to the active profile and leaves backgrounds and neutral surfaces as they are. It is hidden in AMOLED, where action buttons are always white. **Reset to default** undoes your change. |
+| Chat bubble colors | Your messages, Other messages | Applies to the active profile and sets default bubble colors for the current theme. In AMOLED these colors apply to outlines, and bubble interiors stay pure black. A single chat can override these colors in every theme, and **Reset to global colors** removes that override. |
+| App font | System and other fonts | Sets the app font. |
+| Font size | Small, Default, Large, Extra large | Applied on top of your device font-size setting. |
+| Date and time | Automatic, Date, Time; 12-hour or 24-hour | **Automatic follows the app language and your region.** |
 
-**Push notifications** is unavailable in these cases:
+The color picker has Hue, Saturation and Brightness sliders and a Hex color field that takes six hexadecimal digits, for example 1D4ED8 after the # sign.
 
-- The build has no push server configured.
-- Firebase isn't configured or can't start.
-- The device lacks compatible Google Play services.
+The readability preview shows sample text. Its switches for right-to-left layout and larger text change only the preview, and **Reset preview** clears them.
 
-See [Notifications](/docs/using/notifications/android).
+<figure><a href="/docs/android/appearance.svg"><img src="/docs/android/appearance.svg" alt="Appearance settings with Theme outlined, then Action color, Chat bubble colors, App font, Font size, Date and time and Readability preview." loading="lazy" width="1080" height="1740" /></a><figcaption class="type-small">Theme opens the choice of System default, Light, Dark or AMOLED. Select the image to enlarge.</figcaption></figure>
 
-## Read aloud
+## Voice & language
+
+**Voice & language** contains **Language**, **Read Aloud**, **Dictation** and **Translate**.
+
+### Language
+
+**Language** switches White Noise on this device, and the change applies immediately. **System** follows the language set in your Android settings.
+
+### Read aloud
 
 > **Privacy:** A separate speech engine may send decrypted message text to its provider. For on-device speech, the app recommends [RHVoice](https://f-droid.org/en/packages/com.github.olga_yakovleva.rhvoice.android/) or [eSpeak NG](https://f-droid.org/packages/com.reecedunn.espeak/).
 
-1. Open **Settings > Read Aloud** and choose an **Engine**.
+1. Open **Settings > Voice & language > Read Aloud** and choose an **Engine**.
 2. Choose an installed offline **Voice**, or use **Automatic offline voice**. **Open Android Settings** takes you to system speech settings when you need to configure the engine.
 3. Return to a conversation, touch and hold a message and choose **Read Aloud**. See [playback controls](/docs/using/messages/android#read-a-message-aloud).
-
 
 <figure><a href="/docs/android/read-aloud-settings.svg"><img src="/docs/android/read-aloud-settings.svg" alt="Read-aloud defaults, Speak over playing media and speech-over-media volume." loading="lazy" width="360" height="308" /></a><figcaption class="type-small">Automatic reading and audio-mixing preferences are separate controls. Review them before enabling reading by default. Select the image to enlarge.</figcaption></figure>
 
@@ -144,81 +176,101 @@ See [Notifications](/docs/using/notifications/android).
 | Control | Effect |
 |---|---|
 | Engine | The installed speech engine, labeled **On-device engine** or **May use network speech**. |
-| Voice | **Automatic offline voice** uses the best installed offline voice for the message language. You can select a voice when it is installed and works offline. Each selectable voice also has a name of its own that no other voice shares. If your saved voice is unavailable, the app tells you which voice it is using instead. |
+| Voice | **Automatic offline voice** uses the best installed offline voice for the message language. You can select a voice when it is installed and works offline. If your saved voice is unavailable, the app tells you which voice it is using instead. |
 | Speech rate | **System** follows your device setting. You can also pick a preset, or choose **Custom** and enter a rate from 0.1× to 10.0×. |
 | Read messages aloud by default | When a chat opens, unread messages are read aloud unless that chat has its own setting. |
 | Speak over playing media | Speech plays over other audio that is playing. |
-| Speech-over-media volume | Quiet, Medium or Loud: 35, 60 or 85 percent of the speech engine volume. |
+| Speech-over-media volume | Available only while **Speak over playing media** is on. Quiet, Medium or Loud: 35, 60 or 85 percent of the speech engine volume. |
+| Refresh | Looks for engines and voices again. |
 
-**Open Android Settings** opens the system speech settings.
-
-## Translate
+### Translate
 
 Use [Translate messages](/docs/settings/android/translation) to install Offline Translator, choose languages and manage automatic translation.
 
-## Dictation
+### Dictation
 
 Use [Dictate text](/docs/settings/android/dictation) to set up a speech provider and choose how recognized text enters your draft.
 
-## Data usage
+## Notifications
 
-In **Data Usage**, **Automatic downloads** let you set a separate rule for each media type: Photos, Audio, Videos and Files. Each rule covers Wi-Fi, Mobile data, Roaming and Metered network, or you can choose Never. A download starts only if every network rule that applies allows it, and you can always download media yourself.
+If notification permission is off, tap **Allow notifications**. You can also turn notifications on in Android Settings.
 
-- **Download queue**: **Stop automatic downloads** clears waiting automatic downloads for this profile while active downloads and downloads you started yourself keep going. **Restart automatic downloads** turns them back on.
-- **Reset download settings** restores the default rule for every media type.
-- **Inline image previews** is off by default. When on, direct Blossom JPEG links in a chat show an image preview. Loading a preview may reveal your IP address to the image host. Previews load only on unmetered Wi-Fi and follow your photo download rules. When off, the link stays an ordinary link.
-- **Media quality** for sent media: Low (about 150 KB per photo), Standard (about 500 KB), High (about 1.5 MB) or Original (full resolution). Quality applies to new photos and voice messages, and videos and audio files are sent as they are.
+- **Delivery & battery** chooses **Push notifications** or **Local notifications**. Push uses Google servers (Firebase Cloud Messaging) to briefly wake White Noise, which then checks securely for messages. Local keeps a persistent connection open while notifications are on. Battery policy (Optimized, Unrestricted, Restricted or Unavailable) can delay delivery with either option. Push is unavailable when the build has no push server, when Firebase isn't configured or can't start, and on devices without compatible Google Play services.
+- **Sounds & vibration** previews the **White Noise Ding** and **White Noise Pulse** tones and has **Add to Android sounds**. Choose the sound for each category in Android. **Quiet during podcasts** starts off on new installs, and your saved choice is kept. When it is on, messages arrive silently while a podcast or audiobook plays. Mentions still alert you.
+- **Notification categories** are Direct messages, Group messages, Mentions, Reactions, Invites, Group membership changes, Agent activity, App updates and Notification summary. Android controls the sound, vibration and importance of each one. **Android notification settings** opens them.
 
-Photos always have location and device details removed, even at Original. Videos and imported audio keep their original data. See [Media](/docs/using/media/android).
+Message previews and the other notification options are covered in [Notifications](/docs/using/notifications/android).
 
-## Privacy & security
+## Privacy & Security
 
 **Privacy & Security** has these controls.
 
 | Control | Effect |
 |---|---|
-| Screen security | Blocks screenshots and hides White Noise previews in Recents. |
-| Incognito keyboard | Asks your keyboard to stop learning from what you type in White Noise. Your keyboard may ignore this request. |
-| Require device authentication | Asks for your device screen lock when you return to White Noise. Set up a device screen lock first, using **Open Android security settings**. |
-| Auto-lock | Controls when the app lock takes effect. |
-| Blocked users | Blocked people can't message you directly. Groups you share with them keep working, and their message history stays on this device. You can **Unblock** them from this list. |
-| Default disappearing messages | Applies to new chats and groups that this profile starts. Existing conversations keep their setting, and you can change each conversation later. |
-| Diagnostics & Improvements | Optional usage sharing and diagnostic logs. See [Android diagnostics](/docs/settings/android/diagnostics). |
+| Screen security | Blocks screenshots and Recents previews. Turn it off to allow screenshots. |
+| Incognito keyboard | Asks your keyboard not to learn from what you type. Some keyboards ignore this, so it can't be guaranteed. |
+| Require device authentication | Asks for your device screen lock when you return to White Noise. Set up a screen lock first, using **Open Android security settings**. |
+| Auto-lock | Sets how long White Noise can stay in the background before it asks for your screen lock again, from immediately to 15 minutes. |
+| Blocked users | Lists people you blocked. You can unblock them there. |
+| Default disappearing messages | Applies to new chats and groups this profile starts. Existing conversations keep their setting, and you can change each one later. |
+| Diagnostics & Improvements | Optional usage sharing and technical logs. See [Android diagnostics](/docs/settings/android/diagnostics). |
 
-White Noise stores the time you last passed your screen lock in storage protected by Android Keystore. If that record becomes unreadable, the app asks for your screen lock again on the next open.
+Screen security, Incognito keyboard and device authentication are device settings. See [Privacy](/docs/using/privacy/android).
 
-If the app shows **White Noise saved your request but couldn't confirm it yet**, repeat the same block or unblock action to finish it. See [Privacy](/docs/using/privacy/android).
+## Data & storage
 
-## AI agents
+**Data & storage** controls downloads, sent media quality and the space attachments use on this device.
 
-AI agents run on a computer or server you control. Each agent has its own account, and you chat with it like any other end-to-end encrypted chat. The available connectors are Hermes, OpenClaw, OpenCode, Codex, Claude Code and Goose.
+### Manage storage
 
-1. Choose the connector for your agent, then tap **Copy prompt** to copy its setup prompt.
-2. Paste the prompt into that agent. The prompt includes your public npub; your private key stays out of it.
-3. The agent explains how the connector works and must ask for your approval before it installs anything.
-4. When the agent gives you its npub, add it as a contact from **New Message** and start a chat.
+**Manage storage** shows how much space each kind of data uses and has a **Free up space** section.
 
-Use these prompts only with an agent you run and trust. **Agent connector documentation** has install scripts and health checks, and it also covers troubleshooting. Use a separate group for each project, and expect session controls to vary by connector.
+- **Largest attachments** lists the biggest files so you can remove them.
+- **Remove older attachments** removes attachments older than 1 week, 1 month, 3 months, 6 months or 1 year.
+- **Clear pictures and temporary files** removes cached copies.
+- **Keep media** is **Forever**, **1 year**, **6 months** or **30 days**. Choosing a shorter period asks you to confirm first.
+- Each chat has **Remove all attachments**. An attachment shared in several chats counts in each.
 
-## Support
+Removed attachments stay in their messages, and you can download them again while the sender's copy is still available.
+
+### Downloads and media
+
+**Automatic downloads** let you set a separate rule for each media type: Photos, Audio, Videos and Files. Each rule covers Wi-Fi, Mobile data, Roaming and Metered network, or you can choose Never. A download starts only if every network rule that applies allows it, and you can always download media yourself.
+
+- **Download queue**: **Stop automatic downloads** clears waiting automatic downloads for this profile while active downloads and downloads you started yourself keep going. **Restart automatic downloads** turns them back on.
+- **Reset download settings** restores the default rule for every media type.
+- **Inline image previews** is off by default. When on, direct Blossom JPEG links in a chat show an image preview. Loading a preview may reveal your IP address to the image host. When off, the link stays an ordinary link.
+- **Media quality** for sent media: Low (about 150 KB per photo), Standard (about 500 KB), High (about 1.5 MB) or Original. Quality applies to new photos and voice messages.
+
+Photos always have location and device details removed, even at Original. Videos lose file tags, and imported audio is sent unchanged. See [Media](/docs/using/media/android).
+
+## AI Agents
+
+Use **AI Agents** to connect an assistant that runs on a computer or server you control. Each agent has its own account, and you chat with it like any other end-to-end encrypted chat. **Connectors** lists the options.
+
+1. Choose a connector, then tap **Copy prompt**. Nothing is copied until you tap it.
+2. Paste the prompt into that agent. It shares only your public key and asks the agent to get your approval before installing. Use it only with an agent you trust.
+3. When the agent gives you its npub, add it as a contact and start a chat. **Copy public key** copies yours.
+
+**Agent connector documentation** opens install scripts, health checks and troubleshooting in your browser. Use a separate group for each project.
+
+## Help & support
 
 | Row | Effect |
 |---|---|
-| Help > Report a bug | Opens a review screen explaining that nothing is attached. Tap **Open GitHub** to open the public issue form in your browser. See [Report a problem](/docs/troubleshooting/report-problem#android-bug-report-screen). |
+| Help > Report a bug | Opens a review screen. Nothing is attached, and GitHub issues are public, so review what you add. Tap **Open GitHub** to open the issue form in your browser. See [Report a problem](/docs/troubleshooting/report-problem#android-bug-report-screen). |
 | Help > About & licenses | Shows the version, build and MarmotKit version, open source licenses and the privacy policy. |
-| Chat with support | Starts a chat with White Noise Support. The profile needs a published receiving relay first. If it lacks one, tap **Open Relays**. |
-| Donate | Opens the donation page. |
-| App updates | Shows **Up to date** or tells you that a new version is available on Zapstore. It may instead offer **Check for updates**; if the check fails, tap to retry. |
+| Chat with support | Starts a chat with White Noise Support. It appears only while a profile is active, and that profile needs a published receiving relay first. If it lacks one, tap **Open Relays**. |
+| Donate | Opens the donation page in your browser. Donating is optional, and the app sends no data to that page. |
+| Developer Tools | See below. |
 
 ## Developer tools
 
-**Developer Tools** are for development and testing only, because they can expose technical information and change how the app behaves. Turn them on from **About & licenses**, and the app confirms that they are enabled.
+**Developer Tools** are for development and testing only, because they can expose technical information and change how the app behaves. Open **Settings > Help & support > Developer Tools**. To show the **Developer** row in **About & licenses**, tap **Version** seven times. The app confirms that the tools are unlocked.
 
-- **Developer mode** shows diagnostics and MLS internals.
-- **Key Packages** shows your published invitation keys. See [Identity and keys](/docs/settings/identity).
+- **Developer mode** is a switch. Turning it on adds **Quarantined groups**, **Streaming debug** and **Diagnostics**.
+- **Key Packages** is always shown. It lists your published invitation keys. See [Identity and keys](/docs/settings/identity).
 - **Quarantined groups** lists groups that couldn't be loaded safely. **Retry recovery** keeps your history and leaves your group membership unchanged.
 - **Streaming debug** shows agent-stream and MLS signaling events inside conversations.
-- **Diagnostics** shows relay health and performance logs.
-- **Review environment** creates Johnny Appleseed as a second profile. It then publishes real events to your relays: profile, key package, group and message events. **Clear saved demo setup** only removes the local resume record.
+- **Diagnostics** shows relay health and performance logs. See [Android diagnostics](/docs/settings/android/diagnostics).
 
-> **Warning:** **Seed conversation fixture** sends numbered real messages from this account to the chat you choose, and every member of that chat receives all of them. Use it only in a private test group.

@@ -4,12 +4,12 @@ These controls limit what other people and apps can see on your phone. Open Sett
 
 ## Device protection
 
-<figure><a href="/docs/android/privacy.svg"><img src="/docs/android/privacy.svg" alt="Android device protection controls, with authentication unavailable until a screen lock is set." loading="lazy" width="1080" height="1170" /></a><figcaption class="type-small">Device protection includes screen security, keyboard privacy and device authentication. Set a device screen lock before enabling authentication. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/android/privacy.svg"><img src="/docs/android/privacy.svg" alt="Privacy &amp; Security settings with device protection, blocked users and default disappearing messages." loading="lazy" width="1080" height="1870" /></a><figcaption class="type-small">Device protection covers screen security, the incognito keyboard and device authentication, which needs a screen lock first. Select the image to enlarge.</figcaption></figure>
 
-- **Screen security** blocks screenshots and hides previews in Recents.
+- **Screen security** blocks screenshots and hides White Noise from the preview in Android’s recent apps list. Turn it off if you want to allow screenshots. This is a device setting.
 - **Incognito keyboard** asks your keyboard to skip learning from what you type in White Noise. Keyboards may ignore this request, so treat it as best effort.
 - **Require device authentication** asks for your device screen lock when you return to White Noise after the **Auto-lock** period has passed.
-- **Auto-lock** sets the grace period before White Noise locks.
+- **Auto-lock** sets how long White Noise can stay in the background before it asks again: **Immediately**, **After 1 minute**, **After 5 minutes** or **After 15 minutes**; the option appears once device authentication is on.
 
 ### Turn on device authentication
 
@@ -36,7 +36,16 @@ Under **Message privacy**, **Default disappearing messages** sets how long messa
 
 ## Diagnostics
 
-Under **Diagnostics**, open **Diagnostics & Improvements** to control optional usage sharing and technical logs for this device. The row summary shows On, Usage, Logs, or Off.
+Sharing is off until you choose it. Open **Privacy & Security** and, under the **Diagnostics** heading, tap **Diagnostics & Improvements**. The row summary shows On, Usage, Logs, or Off. Both switches cover all profiles on this device.
+
+- **Share usage and telemetry** shares feature use and app performance, with a temporary session ID and an installation ID you can reset. It never includes account or group IDs.
+- **Share group diagnostic logs** uploads technical logs about groups to the White Noise audit collector, run by the Internet Privacy Foundation. Turning it on may also upload logs already stored on this device. Logs can include group and message IDs, relay addresses, timestamps, pseudonymous account references, an installation ID, device model and app version. They never include message contents or private keys.
+
+The servers delete group logs after 30 days, telemetry after 90 days and analytics after 180 days.
+
+Turning a switch off stops new recording and uploads, though one already in progress may finish. It does not delete logs already on this device or on the servers. To remove the copies on this device, tap **Clear Diagnostic Logs** under **Stored Diagnostic Logs**, then confirm with **Clear Logs**. This permanently deletes every profile’s diagnostic logs from the device and leaves your sharing choices unchanged.
+
+The choice you make during setup is saved without a confirmation popup. See [Install White Noise on Android](/docs/get-started/install/android).
 
 ## Related
 

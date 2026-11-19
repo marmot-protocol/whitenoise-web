@@ -12,29 +12,32 @@ White Noise exports identity backups as NIP-49 `ncryptsec1` strings protected by
 
 ## Invitation keys
 
-Invitation keys, also called key packages, are published to your relays so others can add you to groups. You need at least one published to receive new group invitations. On both platforms, **Developer Tools > Key Packages** has **Publish New Key Package**. On iOS, turn on **Developer Tools** first. On Android, **Republish** publishes the current key package again without replacing it, and **Delete key package** publishes a deletion event and clears that package from the local cache. See Groups for [Android](/docs/using/groups/android) or [iOS](/docs/using/groups/ios).
+Invitation keys, also called key packages, are published to your relays so others can add you to groups. You need at least one published to receive new group invitations. On both platforms, **Developer Tools > Key Packages** has **Publish New Key Package**. On iOS, turn on **Developer Tools** first. On Android, it is under **Settings** > **Help & support** > **Developer Tools** > **Key Packages**; **Republish** publishes the current key package again without replacing it, and **Delete key package** publishes a deletion event and clears that package from the local cache. See Groups for [Android](/docs/using/groups/android) or [iOS](/docs/using/groups/ios).
 
 ## Android: profile keys
 
-Open **Settings > Profile Keys**. The header shows whether the profile uses **Local signing** or an **External signer**. It also shows whether the account session is running, along with the connection status.
+Open **Settings** > **Account** > **Profile Keys**. The header shows whether the profile uses **Local signing** or an **External signer**. It also shows whether the account session is running, along with the connection status.
 
-- **Copy public key** copies your public key.
-- **Show private key** and **Copy Private Key** reveal and copy your private key.
+- **Public key**: **Copy public key** copies your public key.
+- **Private key** (local signing only): **Show private key** reveals the key without copying it, and **Copy Private Key** copies it. White Noise clears that copy from the clipboard after about 60 seconds unless you copy something else first, and Android may run the clear late.
 - If you signed in with Amber, Amber holds the private key, so manage backups in Amber.
 
 ### Export the private key
 
-1. On the **Profile Keys** screen, tap **Export** to begin backing up the private key for this profile.
-2. For an encrypted backup, choose **Export Encrypted Private Key** and enter a long, unique password twice. The app shows its strength, and you need this password to open the encrypted file.
-3. Tap **View backup**, then copy or export it to a secure place. The backup hides after 30 seconds or when you leave the screen.
+1. Under **Export** on the **Profile Keys** screen, tap **Export Encrypted Private Key**.
+2. Enter a long, unique password twice. The app shows its strength, and you need this password to open the encrypted file.
+3. Tap **Export** to save a file, or **View backup** to copy or export it. The preview hides after 30 seconds or when you leave the screen.
 
-**Export Private Key** shares the raw key and exposes it to whichever app you choose. An encrypted backup or a trusted password manager is safer. If the export expires, return to Profile Keys and start again; no key data was written.
+**Export Private Key** opens **Keep Your Private Key Safe**, where you share or save the raw key as an unprotected plain-text file. It exposes the key to whichever app you choose. An encrypted backup or a trusted password manager is safer. If the export expires, return to Profile Keys and start again; no key data was written. See [Back up and recover your account](/docs/using/recovery/android).
 
 ### Sign out
 
+**Sign Out** is at the bottom of **Settings** and under **Account session** in Profile Keys.
+
+
 - **Stays on this device:** Your groups and message history are kept, and so are your drafts. The profile stays available on this device, so you can sign back in from the account picker.
 - **What changes:** Notifications for this account stop and temporary app data is cleared.
-- **Remove invitation keys from relays** (optional): Stops new group invitations while you are signed out.
+- **Remove invitation keys from relays**: On by default. Tries to remove them so you don't receive new group invitations while you are signed out. Turn it off to leave them published.
 
 If the app says some invitation keys may still be on relays, you are signed out but those keys may still be published.
 
@@ -42,7 +45,7 @@ If the app says some invitation keys may still be on relays, you are signed out 
 
 > **Warning:** This permanently deletes this account's messages and group encryption data and removes its sign-in key from this device. Its published invitation keys are removed from relays as well. You can sign in again with the same key, but past groups, messages and media are gone from this device. Back up your private key first.
 
-1. In **Profile Keys**, tap **Sign Out & Wipe** once your private key is safely backed up.
+1. Under **Account session** in **Profile Keys**, tap **Sign Out & Wipe** once your private key is safely backed up.
 2. Type WIPE in the confirmation field, then tap **Wipe**.
 3. The app leaves your groups and removes your invitation keys. It then wipes local data and reports how many groups were left and how many keys were removed.
 
