@@ -416,9 +416,18 @@ body {
     color: var(--color-muted);
     margin-top: var(--gap-heading-body);
 }
-.download-help p .text-link {
+.download-help :where(p) .text-link {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.download-help-links {
+    display: grid;
+    justify-items: start;
+    margin-top: var(--gap-copy-action);
+}
+.download-help-links .text-link {
     margin-top: 0;
-    padding-block: 0;
 }
 
 .privacy-resources {

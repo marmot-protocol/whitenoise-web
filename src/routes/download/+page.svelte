@@ -102,12 +102,15 @@ const schema = {
             </p>
             <p>
                 If a friend sent you a download link, create a profile and send them your public profile link.
-                In Settings, tap your profile, then choose Share Profile URL from the share menu.
-                When their invitation appears in Chats, open it and tap Accept.
+                In <strong>Settings</strong>, tap your profile, then <strong>Share Profile</strong> and
+                <strong>Share Profile URL</strong>. When their invitation appears in <strong>Chats</strong>,
+                open it and tap <strong>Accept</strong>.
             </p>
-            <TextLink href="/docs/get-started/first-message/ios">First chat on iPhone</TextLink><br />
-            <TextLink href="/docs/get-started/first-message/android">First chat on Android</TextLink><br />
-            <TextLink href="/faq">See all questions</TextLink>
+            <div class="download-help-links">
+                <TextLink href="/docs/get-started/first-message/ios">First chat on iPhone</TextLink>
+                <TextLink href="/docs/get-started/first-message/android">First chat on Android</TextLink>
+                <TextLink href="/faq">See all questions</TextLink>
+            </div>
         </div>
         <Artwork name="smith-chain" />
     </section>
