@@ -10,11 +10,14 @@ const pairs = Array.from(
 );
 const advanceDelay = 12000;
 const visibleRatio = 0.9;
+const manualScrollThreshold = 12;
 let viewport = $state<HTMLDivElement>();
 
 onMount(() => {
     if (!viewport || pairs.length < 2) return;
     const rail = viewport;
+    const openingPair = rail.firstElementChild;
+    if (!openingPair) return;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const listeners = new AbortController();
     const { signal } = listeners;
@@ -35,7 +38,7 @@ onMount(() => {
             document.hidden ||
             reducedMotion.matches ||
             heldPointer !== undefined ||
-            rail.scrollLeft ||
+            Math.abs(rail.scrollLeft) >= 1 ||
             rail.matches(":hover, :focus-within")
         );
     }
@@ -63,9 +66,14 @@ onMount(() => {
         schedule();
     }
 
+    function handleScroll() {
+        if (Math.abs(rail.scrollLeft) >= manualScrollThreshold) stop();
+        else schedule();
+    }
+
     const observer = new IntersectionObserver(
-        ([entry]) => {
-            inView = entry.intersectionRatio >= visibleRatio;
+        (entries) => {
+            inView = (entries.at(-1)?.intersectionRatio ?? 0) >= visibleRatio;
             schedule();
         },
         { threshold: visibleRatio }
@@ -76,18 +84,20 @@ onMount(() => {
     rail.addEventListener("pointerenter", schedule, { signal });
     rail.addEventListener("pointerleave", schedule, { signal });
     rail.addEventListener("pointerdown", hold, { signal });
-    rail.addEventListener("scroll", stop, { signal, passive: true });
+    rail.addEventListener("scroll", handleScroll, { signal, passive: true });
     document.addEventListener("pointerup", release, { signal });
     document.addEventListener("pointercancel", release, { signal });
     document.addEventListener("visibilitychange", schedule, { signal });
     reducedMotion.addEventListener("change", schedule, { signal });
-    observer.observe(rail);
+    window.addEventListener("scroll", schedule, { signal, passive: true });
+    observer.observe(openingPair);
     return stop;
 });
 </script>
 
 <section class="testimonials" id="testimonials">
     <h2 id="testimonials-heading" class="type-section">What people are saying</h2>
+    <p class="hint type-caption tone-muted" id="testimonials-hint">Scroll sideways or use arrow keys to browse quotes.</p>
     <!-- svelte-ignore a11y_no_noninteractive_tabindex (The scroll container needs focus for native keyboard scrolling.) -->
     <div class="quotes" role="region" aria-labelledby="testimonials-heading" aria-describedby="testimonials-hint" tabindex="0" bind:this={viewport}>
         {#each pairs as pair (pair[0].source)}
@@ -100,13 +110,13 @@ onMount(() => {
                         <figcaption>
                             <a href={source}>
                                 <img class="avatar" src={`/images/testimonials/${avatar}.webp`} alt="" width="48" height="48" />
-                                <div>
+                                <span>
                                     <span class="author type-ui underline">{name}</span>
                                     {#if context}
-                                        <p class="type-caption tone-muted">{context}</p>
+                                        <span class="context type-caption tone-muted">{context}</span>
                                     {/if}
-                                    <span class="sr-only">Read original source</span>
-                                </div>
+                                    <span class="sr-only"> — read original source</span>
+                                </span>
                             </a>
                         </figcaption>
                     </figure>
@@ -114,7 +124,6 @@ onMount(() => {
             </div>
         {/each}
     </div>
-    <p class="hint type-caption tone-muted" id="testimonials-hint">Scroll sideways for more quotes</p>
 </section>
 
 <style>
@@ -123,7 +132,7 @@ onMount(() => {
     }
 
     h2 {
-        margin-bottom: var(--space-24);
+        margin-bottom: var(--space-8);
     }
 
     .quotes {
@@ -142,7 +151,7 @@ onMount(() => {
     }
 
     .hint {
-        margin-block-start: var(--space-8);
+        margin-block-end: var(--space-24);
     }
 
     @supports selector(::-webkit-scrollbar) {
@@ -153,10 +162,11 @@ onMount(() => {
 
             .quotes::-webkit-scrollbar {
                 height: var(--space-24);
+                background: transparent;
             }
 
             .quotes::-webkit-scrollbar-track {
-                background: var(--color-surface);
+                background: var(--color-rule);
                 border-block: var(--space-8) solid transparent;
                 background-clip: padding-box;
             }
@@ -165,6 +175,10 @@ onMount(() => {
                 background: var(--color-muted);
                 border-block: var(--space-8) solid transparent;
                 background-clip: padding-box;
+            }
+
+            .quotes::-webkit-scrollbar-thumb:hover {
+                background-color: var(--color-ink);
             }
 
             .quotes::-webkit-scrollbar-button {
@@ -177,6 +191,7 @@ onMount(() => {
         display: grid;
         grid-template-columns: var(--grid-equal-pair);
         column-gap: var(--gap-columns);
+        align-self: start;
         align-content: start;
         scroll-snap-align: start;
         scroll-snap-stop: always;
@@ -204,6 +219,7 @@ onMount(() => {
         align-items: center;
         gap: var(--space-12);
         width: fit-content;
+        padding: var(--space-4);
     }
 
     figcaption a:focus-visible {
@@ -212,6 +228,10 @@ onMount(() => {
 
     .author {
         text-underline-offset: var(--space-4);
+    }
+
+    .context {
+        display: block;
     }
 
     .avatar {
