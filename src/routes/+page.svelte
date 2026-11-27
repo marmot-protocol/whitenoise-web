@@ -3,6 +3,7 @@ import JsonLd from "#lib/components/JsonLd.svelte";
 import Artwork from "#lib/components/site/Artwork.svelte";
 import PageMeta from "#lib/components/site/PageMeta.svelte";
 import Supporters from "#lib/components/site/Supporters.svelte";
+import Testimonials from "#lib/components/site/Testimonials.svelte";
 import Action from "#lib/components/system/Action.svelte";
 import Disclosure from "#lib/components/system/Disclosure.svelte";
 import Text from "#lib/components/system/Text.svelte";
@@ -55,6 +56,7 @@ const schema = {
             </section>
         {/each}
     </div>
+    <Testimonials />
     <section class="faq-section" id="faqs">
         <h2>Few things<br />you might ask.</h2>
         <div>

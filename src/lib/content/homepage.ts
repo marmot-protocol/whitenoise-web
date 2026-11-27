@@ -74,3 +74,74 @@ export const homepageFeatures: HomepageFeature[] = [
         },
     },
 ];
+
+type HomepageTestimonial = {
+    name: string;
+    context?: string;
+    quote: string;
+    source: string;
+    avatar: string;
+};
+
+export const homepageTestimonials: HomepageTestimonial[] = [
+    {
+        name: "Guy Swann",
+        avatar: "guy-swann",
+        context: "Host of Bitcoin Audible",
+        quote: "Just switched to White Noise for my agent conversation … This is so cool",
+        source: "https://x.com/TheGuySwann/status/2103592338451013740",
+    },
+    {
+        name: "GIGAZINE",
+        avatar: "gigazine",
+        context: "Hands-on review",
+        quote: "White Noise is free to use and does not require an email address or phone number to register",
+        source: "https://gigazine.net/gsc_news/en/20250714-whitenoise-chat-secure-messaging-nostr/",
+    },
+    {
+        name: "Forever Laura",
+        avatar: "forever-laura",
+        context: "@Laurastacksats",
+        quote: "You’ll be amazed at how much it’s improved in just a few months. Private messaging is here, folks.",
+        source: "https://x.com/Laurastacksats/status/2052682296843461109",
+    },
+    {
+        name: "Juraj Bednár",
+        avatar: "juraj-bednar",
+        context: "Creator of Third Ear",
+        quote: "I now use White Noise primarily and SimpleX secondarily, and I talk to my Hermes agent over White Noise too.",
+        source: "https://primal.net/e/2efa11b75832b86256eaec439bc9031f4de1ffeffa925e306d06dd78c7b8b0ea",
+    },
+    {
+        name: "GG",
+        avatar: "gg",
+        context: "@UnruggableGG",
+        quote: "it's getting super close to the Signal UX.",
+        source: "https://x.com/UnruggableGG/status/2118729627677991058",
+    },
+    {
+        name: "Alien Investor",
+        avatar: "alien-investor",
+        quote: "I’m an active White Noise Messenger user and I genuinely love it — the app feels solid, clean, and reliable.",
+        source: "https://primal.net/e/5db2836f29392ec286ccc860e08f9da85fc4024d4c712ed6223fa2af65d3d9fa",
+    },
+    {
+        name: "FBO Developments Sàrl",
+        avatar: "fbo",
+        quote: "Very nice. Good candidate to replace some of my Signal groups!",
+        source: "https://primal.net/e/00005ab65cd0613068d19bc4bedad09dda00b474d409abd4dab4e70f87adc27c",
+    },
+    {
+        name: "Felipe Fenton",
+        avatar: "felipe-fenton",
+        quote: "I've been using it to control my Hermes agent, and I absolutely love it so far. Great job, guys!",
+        source: "https://primal.net/e/f243f4e8fdd2ce0d4841e6dec4942ec9151e6802ab9badeee0e5eb3064f91633",
+    },
+    {
+        name: "pyYTn9",
+        avatar: "pyytn9",
+        context: "@tn9_py",
+        quote: "@whitenoisechat works so well with my agents - thanks for getting this working so well. UX is brill!",
+        source: "https://x.com/tn9_py/status/2119788919327772748",
+    },
+];
