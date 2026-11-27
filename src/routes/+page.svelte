@@ -24,9 +24,9 @@ const schema = {
 </script>
 
 <PageMeta
-    title="White Noise — Private messenger. No phone number, no email."
+    title="White Noise | Private chat without a phone number"
     site=""
-    description="Private messages, groups, and connected agents. White Noise is an open-source messenger with end-to-end encryption. No phone number or email required."
+    description="Message one person or start a private group chat. White Noise is free and open source. No phone number or email required."
     path="/"
 />
 <JsonLd {schema} /><JsonLd schema={faqSchema(homepageFaqs)} />
@@ -34,11 +34,12 @@ const schema = {
     <section class="home-hero">
         <div class="hero-title">
             <h1>White Noise</h1>
-            <p class="hero-tagline">The private messenger you can start using in seconds. No phone number, no email.</p>
+            <p class="hero-tagline">Chat privately. No phone number required.</p>
         </div>
         <div class="hero-action" id="hero-download">
+            <Text role="lead">Message one person or start a group chat. No email needed.</Text>
             <Action href="/download" label="Download" icon="down" />
-            <TextLink href="/docs">Read the guides</TextLink>
+            <TextLink href="/download#first-message">See how to start a chat</TextLink>
             <Text role="small" tone="muted">Free, open source and ad-free.</Text>
         </div>
     </section>

@@ -16,10 +16,10 @@ White Noise for iOS runs on iOS 18 or later. After you install it, you can creat
 **Before you sign up, know that your profile is public.** Anyone can see your name and photo along with your bio, including people using other apps on the same network. Photos may stay online even after you remove them, so consider a nickname and an image you are comfortable sharing.
 
 1. Tap **Sign Up** on the welcome screen to open the profile form.
-2. Enter the **Name** people will see. A name is required. **About** text and a photo are optional.
+2. Keep the suggested **Name** or enter your own. **About** text and a photo are optional.
 3. Tap **Sign Up** to create your profile.
 
-<figure><a href="/docs/ios/sign-up.svg"><img src="/docs/ios/sign-up.svg" alt="Sign Up form with the fictional name Emerald Flounder and blank About field." loading="lazy" width="1206" height="2340" /></a><figcaption class="type-small">A nickname is enough. The Sign Up button stays unavailable until you enter a name; your name, photo and bio are public. Select the image to enlarge.</figcaption></figure>
+<figure><a href="/docs/ios/sign-up.svg"><img src="/docs/ios/sign-up.svg" alt="Sign Up form with the fictional name Emerald Flounder and blank About field." loading="lazy" width="1206" height="2340" /></a><figcaption class="type-small">A nickname is enough. The Sign Up button requires a name. Your name, photo and bio are public. Select the image to enlarge.</figcaption></figure>
 
 If saving your sign-up progress fails, free up storage on your device and try again. When restoring an unfinished sign-up fails, tap **Retry** or **Discard draft**. Discarding removes only the saved sign-up form from this device and keeps your accounts, along with anything already uploaded or published.
 

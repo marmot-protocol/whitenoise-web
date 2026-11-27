@@ -12,7 +12,7 @@ export const homepageFeatures: HomepageFeature[] = [
     {
         title: ["Private messages.", "Private groups."],
         description:
-            "Talk one to one or bring a group together. Every message is end-to-end encrypted with MLS, an open internet standard built for group chat. Only the people in the conversation can read it. Even White Noise can’t.",
+            "Your messages leave your device encrypted. The servers that deliver them can’t read the contents.",
         artwork: "conversation",
         link: {
             label: "Why privacy matters",
@@ -20,15 +20,15 @@ export const homepageFeatures: HomepageFeature[] = [
         },
     },
     {
-        title: ["No phone number.", "No email."],
+        title: ["Find people by profile."],
         description:
-            "Choose a name and start. White Noise doesn’t ask for a phone number, email address or real name. Create as many identities as you like: one for friends, one for work, a new one for people you’ve just met. You decide how you’re known.",
+            "Open someone’s profile link or scan their QR code to find them in White Noise.",
         artwork: "identity-balloon",
     },
     {
-        title: ["All your AI", "in a single app"],
+        title: ["Message your AI agent."],
         description:
-            "An agent is just another contact. Seven work today: Hermes, OpenClaw, Codex, Claude Code, OpenCode, Pi and Goose. Run the connector next to your agent on a Mac or Linux computer, then message it from your phone. It sits in the same list as everyone else, and it’s useful before any of your friends join.",
+            "Connect an agent like Codex, Claude Code or OpenClaw running on your Mac or Linux computer. Then message it from White Noise on your phone.",
         artwork: "agent-contact",
         id: "agents",
         link: {

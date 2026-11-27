@@ -174,7 +174,7 @@ function recipeFor(role: TextRole) {
         {/each}
         <article class="ds-type-specimen">
             <div class="ds-meta"><h3>Hero tagline</h3><code>hero-tagline-fit</code></div>
-            <div class="hero-title"><p class="hero-tagline">The private messenger you can start using in seconds. No phone number, no email.</p></div>
+            <div class="hero-title"><p class="hero-tagline">Chat privately. No phone number required.</p></div>
             <p class="ds-note">Desktop retains its display size and natural wrapping. At 900px and below, the tagline retains its fluid size, capped at 48px. The updated copy wraps naturally at every width. The mobile title stays 48px. The pale gray is the accepted September 11 contrast exception.</p>
         </article>
         <details class="ds-details"><summary>All shared recipes and responsive rules ({typography.length})</summary>

@@ -44,14 +44,13 @@ const schema = {
             <section id="encryption">
                 <h2>Privacy, built into the conversation.</h2>
                 <p>
-                    White Noise uses end-to-end encryption through the Marmot Protocol. Messages are
-                    encrypted for the people in the conversation, rather than made readable to the
-                    relays that carry them.
+                    White Noise uses end-to-end encryption for individual and group chats. People
+                    in the chat can copy or share what they receive. An AI agent in the chat may
+                    pass messages to its model provider or connected tools.
                 </p>
                 <p>
-                    You don’t need a phone number or email to create an identity. And because the
-                    software is open source, its approach is there for people to inspect and
-                    improve.
+                    You can create a profile without a phone number or email. The name, photo and
+                    bio you add to your profile are public.
                 </p>
             </section>
             <section id="choice">
@@ -68,7 +67,7 @@ const schema = {
             <section id="practice">
                 <h2>Holding ourselves to it.</h2>
                 <p>
-                    An argument like this one is only worth as much as the practice behind it. White Noise doesn’t ask for a phone number or email, and no central server holds your conversations. Your keys are created and stored on your device. Every message is end-to-end encrypted before it leaves, so the relays that store and forward it hold only encrypted copies. Each group message is signed with a new single-use key, so the relay copy doesn’t carry the sender’s public key. We cannot read your messages. Relays can still see connection details, such as your IP address and which group a message belongs to, and a Nostr contact list you publish is public.
+                    Your keys and chat history are stored on your device. Servers called relays store and forward encrypted copies of your messages. Each group message uses a single-use signing key. The encrypted copy on a relay carries that one-time public key. Whoever runs a relay can see your IP address and which encrypted messages belong to the same group. This includes the Internet Privacy Foundation on relays it runs. Any Nostr contact list you publish is public.
                 </p>
                 <p>
                     We do want to know whether the app actually works&mdash;which features people use, and where things break. So we ask. Sharing usage and telemetry is off until you turn it on, and declining costs you nothing. Product analytics uses predefined events and bucketed values. Telemetry includes aggregate performance measurements, a resettable installation identifier, app and device information, and relay addresses. Neither stream includes message content, public keys, contacts, or account and group identifiers. We use our own servers for these measurements, and there are no advertising identifiers or trackers in the app. Group diagnostic logs have a separate sharing control; on iOS and Android, enabling sharing automatically uploads eligible logs to IPF. These more detailed logs include group and message identifiers, but never message content or key material.
