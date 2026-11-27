@@ -161,6 +161,7 @@ body {
     font-weight: var(--weight-semibold);
     line-height: inherit;
     letter-spacing: inherit;
+    text-wrap: balance;
 }
 .hero-action {
     display: flex;
