@@ -2,7 +2,7 @@
 
 ## Getting started
 
-A connector lets you talk to an agent from a White Noise conversation. The agent runs on your computer, using the tools and accounts you already have set up.
+Your agent can install the connector after you approve the changes. The agent keeps running on your computer with the tools and accounts you’ve set up.
 
 You’ll need White Noise on your phone, a working agent runtime on your Mac or Linux computer, and your White Noise account’s public key (`npub`).
 

@@ -13,7 +13,7 @@ export const guideInfo = {
         path: "/agents",
         navigationLabel: "Agent guide sections",
         description:
-            "Bring your agent into a White Noise conversation. Choose your runtime and get started.",
+            "Connect a supported agent you run on a Mac or Linux computer, then message it from White Noise on your phone.",
     },
     builders: {
         title: "For developers",

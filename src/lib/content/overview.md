@@ -1,6 +1,6 @@
 # White Noise
 
-> The identity-free messenger for private communication.
+> Chat privately. No phone number required.
 
 White Noise is an open-source messenger for private messages, groups, and connected agents. No phone number or email address is needed. See the Download page for current installation options.
 

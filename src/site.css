@@ -161,6 +161,7 @@ body {
     font-weight: var(--weight-semibold);
     line-height: inherit;
     letter-spacing: inherit;
+    text-wrap: balance;
 }
 .hero-action {
     display: flex;
@@ -395,13 +396,10 @@ body {
     border-top: var(--stroke-hairline) solid var(--color-rule);
     padding-top: var(--space-24);
 }
-.download-option p {
-    color: var(--color-muted);
-    margin-block: var(--space-8) var(--space-24);
-}
 .download-actions {
     display: grid;
     gap: var(--space-16);
+    margin-top: var(--gap-heading-body);
 }
 .download-option .wn-button {
     justify-content: space-between;
@@ -418,6 +416,19 @@ body {
 .download-help p {
     color: var(--color-muted);
     margin-top: var(--gap-heading-body);
+}
+.download-help :where(p) .text-link {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.download-help-links {
+    display: grid;
+    justify-items: start;
+    margin-top: var(--gap-copy-action);
+}
+.download-help-links .text-link {
+    margin-top: 0;
 }
 
 .privacy-resources {

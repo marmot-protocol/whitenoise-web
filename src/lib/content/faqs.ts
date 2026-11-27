@@ -32,8 +32,22 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
                 link: { label: "See download options", href: "/download" },
             },
             {
-                question: "How do I find and add someone?",
-                answer: "Exchange White Noise profiles using a profile link, QR code, or public key, then start a conversation in the app. Your public key identifies you and is safe to share. Your private key controls your identity: keep it secret and never send it to a contact.",
+                question: "How do I start or join a chat?",
+                featured: true,
+                answer: "To start a chat, use the other person’s profile link or QR code. If a friend sent you a download link, set up White Noise and send them your public profile link. Open their invitation in Chats and tap Accept.",
+                link: { label: "See how to start a chat", href: "/download#first-message" },
+            },
+            {
+                question: "What if my invitation didn’t arrive?",
+                answer: "Open White Noise while online and check Chats. If it’s missing, give the sender your public profile link so they can check they invited the right profile. If you use the same profile on another device or in a compatible app, check there too.",
+                link: {
+                    label: "Troubleshoot a chat invitation",
+                    href: "/docs/troubleshooting/invitations",
+                },
+            },
+            {
+                question: "Do I need a Nostr account?",
+                answer: "No. You can create a profile directly in White Noise. If you already have a Nostr account, you can sign in with it. Your chats from other apps stay where they are. Share your public profile link with contacts and keep your private sign-in key secret.",
             },
             {
                 question: "Can I use the same identity on multiple devices?",
@@ -52,7 +66,7 @@ export const faqGroups: { id: string; title: string; items: Faq[] }[] = [
             {
                 question: "Who can read my messages?",
                 featured: true,
-                answer: "Messages are end-to-end encrypted for the participants in your conversation. White Noise and the relays carrying those messages cannot read their content. Participants can still copy or share what they receive, and someone with access to an unlocked or compromised device may be able to read messages on it.",
+                answer: "The app decrypts messages on participants’ devices. Delivery servers handle encrypted copies. Participants can still copy or share what they receive. Someone with access to an unlocked or compromised device may be able to read messages there.",
             },
             {
                 question: "Does using White Noise make me anonymous?",

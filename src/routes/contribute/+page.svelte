@@ -13,14 +13,14 @@ const ways = [
     {
         title: "Build with us.",
         description:
-            "There’s plenty to work on in White Noise and Marmot, and we’d love your help. Fix a bug, contribute a feature, improve the libraries, or build your own app on the protocol. Explore the repositories and developer documentation and start.",
+            "Fix an app bug, improve the Marmot libraries, or build your own messaging app.",
         label: "For developers",
         href: "/build",
     },
     {
         title: "Join the community.",
         description:
-            "Help by testing new releases, sharing feedback, or contributing design, illustration, writing, or translation. You don’t need technical skills to make a difference. Bring your perspective to the things people use every day.",
+            "Test a release, share feedback, translate the app, or help with design and writing.",
         label: "Join on Signal",
         href: "https://signal.group/#CjQKICPlUduq29DjYD_EJQEBwu1EcEMR5QMZqcMlde026LBaEhCGS-kIM7uhNqtwtby57yQ1",
     },
